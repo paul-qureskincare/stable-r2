@@ -1,0 +1,62 @@
+@use "@root/mixins" as *;
+
+.c-testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 16px;
+    font-size: 14px;
+    line-height: 1.25;
+    border-radius: 20px;
+    background: #fff;
+
+    hr {
+        margin: 0;
+        opacity: 1;
+        border-top-color: #dfe0e0;
+    }
+
+    // .c-testimonial-card__header
+    &__header {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    // .c-testimonial-card__header-name
+    &__header-name {
+
+    }
+
+    // .c-testimonial-card__header-verified
+    &__header-verified {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-self: end;
+    }
+
+    // .c-testimonial-card__header-date
+    &__header-date {
+        color: #8b8c8e;
+        font-size: 12px;
+    }
+
+    // .c-testimonial-card__content
+    &__content {
+        font-size: 16px;
+    }
+
+    // .c-testimonial-card__content-title
+    &__content-title {
+        margin: 6px 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    // .c-testimonial-card__footer
+    &__footer {
+        p {
+            margin: 0;
+        }
+    }
+}

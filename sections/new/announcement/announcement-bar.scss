@@ -1,0 +1,153 @@
+@use "@root/mixins" as *;
+@use "@elements/e-countdown" as *;
+
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    font-family: 'TT Commons', system-ui, sans-serif;
+    font-size: var(--ans-bar-font-size, 16px);
+    font-weight: var(--anc-bar-font-weight, 400);
+    background: #fff;
+
+    @include md {
+        padding: 9px 0;
+        font-size: var(--ans-bar-font-size-mob, 14px);
+        font-weight: var(--anc-bar-font-weight-mob, 400)
+    }
+
+    // .announcement-bar-content
+    &-content {
+        @include md {
+            font-size: 12px;
+        }
+
+        & > a {
+            margin: 0 10px;
+            padding: 1px 6px;
+            color: var(--white-color);
+            font-size: 14px;
+            text-transform: var(--anc-link-transform, uppercase);
+            border-radius: 20px;
+            background: #ff5429;
+        }
+    }
+
+    // .announcement-bar-offer-countdown
+    &-offer-countdown {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        width: 100%;
+        min-height: 22px;
+
+        @include md {
+            min-height: 38px;
+            font-size: 14px;
+        }
+
+        @include sm {
+            flex-direction: column;
+            justify-content: center;
+            min-height: 54px;
+        }
+
+        p {
+            color: var(--colorize-color, inherit);
+            line-height: 1;
+            text-align: left;
+
+            @include sm {
+                line-height: 0.95;
+            }
+        }
+
+        a {
+            color: inherit;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .e-countdown {
+            margin-left: auto;
+            color: var(--colorize-color, inherit);
+            font-size: 18px;
+
+            @include sm {
+                margin-left: unset;
+                font-size: inherit;
+            }
+
+            & > div {
+                gap: 2px;
+                line-height: 10px;
+                letter-spacing: 0;
+
+                @include sm {
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 42px;
+                    text-align: center;
+                }
+
+                &::after {
+                    @include sm {
+                        font-size: 14px;
+                    }
+                }
+
+                &[data-key="days"] {
+                    &::after {
+                        @include sm {
+                            content: "D";
+                        }
+                    }
+                }
+
+                &[data-key="hours"] {
+                    &::after {
+                        @include sm {
+                            content: "H";
+                        }
+                    }
+                }
+
+                &[data-key="minutes"] {
+                    &::after {
+                        @include sm {
+                            content: "M";
+                        }
+                    }
+                }
+
+                &[data-key="seconds"] {
+                    &::after {
+                        @include sm {
+                            content: "S";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root body:has(.announcement-bar-offer-countdown) {
+        --height-bar: 50px;
+
+        @include sm {
+            --height-bar: 66px;
+        }
+    }
+}
+
+.announcement-bar.scroll-hiding,
+.announcement-bar-rotating.scroll-hiding {
+    transform: translateY(-100px);
+}

@@ -1,0 +1,850 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
+.e-icon-trustpilot:before{
+  content:"\e922";
+}
+
+.e-icon-pm:before{
+  content:"\e923";
+}
+
+.e-icon-am:before{
+  content:"\e924";
+}
+
+.e-icon-watch:before{
+  content:"\e925";
+}
+
+.e-icon-cart:before{
+  content:"\e926";
+}
+
+.e-icon-user:before{
+  content:"\e927";
+}
+
+.e-icon-gift:before{
+  content:"\e928";
+}
+
+.e-icon-shipping:before{
+  content:"\e92b";
+}
+
+.e-icon-faq:before{
+  content:"\e92a";
+}
+
+.e-icon-letter:before{
+  content:"\e929";
+}
+
+.e-icon-pillow:before{
+  content:"\e92c";
+}
+
+.e-icon-patches:before{
+  content:"\e92d";
+}
+
+.e-icon-mist:before{
+  content:"\e92e";
+}
+
+.e-icon-lock:before{
+  content:"\e92f";
+}
+
+.e-icon-guarantee:before{
+  content:"\e930";
+}
+
+.e-icon-top:before{
+  content:"\e931";
+}
+
+.e-icon-proven:before{
+  content:"\e932";
+}
+
+.e-icon-pay-later:before{
+  content:"\e933";
+}
+
+.e-icon-reviewed:before{
+  content:"\e934";
+}
+
+.e-icon-verified-shield:before{
+  content:"\e93b";
+}
+
+.e-icon-checkmark-fill:before{
+  content:"\e944";
+}
+
+.e-icon-cross-fill:before{
+  content:"\e945";
+}
+
+.e-icon-clock:before{
+  content:"\e94b";
+}
+
+.e-icon-blemishes:before{
+  content:"\e951";
+}
+
+.e-icon-dark-spots:before{
+  content:"\e952";
+}
+
+.e-icon-fine-lines:before{
+  content:"\e953";
+}
+
+.e-icon-rough-texture:before{
+  content:"\e954";
+}
+
+.e-icon-puffiness:before{
+  content:"\e955";
+}
+
+.e-icon-eye-bags:before{
+  content:"\e956";
+}
+
+.e-icon-wrinkles:before{
+  content:"\e957";
+}
+
+.e-icon-call-us:before{
+  content:"\e95f";
+}
+
+.e-icon-chat:before{
+  content:"\e960";
+}
+
+.e-icon-email:before{
+  content:"\e961";
+}
+
+.e-icon-email-fill:before{
+  content:"\e962";
+}
+
+.e-icon-pinterest:before{
+  content:"\e963";
+}
+
+.e-icon-whatsapp:before{
+  content:"\e964";
+}
+
+.e-icon-access-creatives:before{
+  content:"\e965";
+}
+
+.e-icon-ambassador-manager:before{
+  content:"\e966";
+}
+
+.e-icon-earn-money:before{
+  content:"\e967";
+}
+
+.e-icon-exclusive-perks:before{
+  content:"\e968";
+}
+
+.e-icon-social-collabs:before{
+  content:"\e969";
+}
+
+.e-icon-special-discounts:before{
+  content:"\e96a";
+}
+
+.e-icon-clinic-results:before{
+  content:"\e96b";
+}
+
+.e-icon-incredibly-convenient:before{
+  content:"\e96c";
+}
+
+.e-icon-one-time-money:before{
+  content:"\e96d";
+}
+
+.e-icon-balances:before{
+  content:"\e96e";
+}
+
+.e-icon-hydration:before{
+  content:"\e96f";
+}
+
+.e-icon-no-chlorine:before{
+  content:"\e970";
+}
+
+.e-icon-shine:before{
+  content:"\e971";
+}
+
+.e-icon-unclogs-pores:before{
+  content:"\e972";
+}
+
+.e-icon-watering-can:before{
+  content:"\e973";
+}
+
+.e-icon-easy-washing:before{
+  content:"\e974";
+}
+
+.e-icon-faucet:before{
+  content:"\e975";
+}
+
+.e-icon-rotation:before{
+  content:"\e976";
+}
+
+.e-icon-one-year:before{
+  content:"\e977";
+}
+
+.e-icon-hand:before{
+  content:"\e978";
+}
+
+.e-icon-calendar:before{
+  content:"\e979";
+}
+
+.e-icon-certificate:before{
+  content:"\e97a";
+}
+
+.e-icon-charge:before{
+  content:"\e97b";
+}
+
+.e-icon-leds:before{
+  content:"\e97c";
+}
+
+.e-icon-switcher:before{
+  content:"\e97d";
+}
+
+.e-icon-wave:before{
+  content:"\e97e";
+}
+
+.e-icon-treatment-time:before{
+  content:"\e97f";
+}
+
+.e-icon-eye:before{
+  content:"\e980";
+}
+
+.e-icon-share:before{
+  content:"\e981";
+}
+
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
+
+.e-icon-benefits-headphone:before{
+  content:"\e940";
+}
+
+.e-icon-benefits-gift:before{
+  content:"\e941";
+}
+
+.e-icon-benefits-restart:before{
+  content:"\e942";
+}
+
+.e-icon-benefits-box:before{
+  content:"\e943";
+}
+
+.e-icon-pp-filter:before{
+  content:"\e93f";
+}
+
+.e-icon-nok-filter:before{
+  content:"\e93e";
+}
+
+.e-icon-carbon:before{
+  content:"\e93d";
+}
+
+.e-icon-asp-descaler:before{
+  content:"\e93c";
+}
+
+.e-icon-mi-painless:before{
+  content:"\e946";
+}
+
+.e-icon-perfect-transforming:before{
+  content:"\e947";
+}
+
+.e-icon-save-money:before{
+  content:"\e948";
+}
+
+.e-icon-mi-seamless:before{
+  content:"\e949";
+}
+
+.e-icon-mi-quick:before{
+  content:"\e94a";
+}
+
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
+.e-icon-deeply-hydrates:before{
+  content:"\e94d";
+}
+
+.e-icon-calms-redness:before{
+  content:"\e94e";
+}
+
+.e-icon-even-looking:before{
+  content:"\e94f";
+}
+
+.e-icon-smooths:before{
+  content:"\e950";
+}
+
+.e-icon-skin-firming:before{
+  content:"\e958";
+}
+
+.e-icon-smooth-skin:before{
+  content:"\e959";
+}
+
+.e-icon-tone-balance:before{
+  content:"\e95a";
+}
+
+.e-icon-neck-even-tone:before{
+  content:"\e95b";
+}
+
+.e-icon-neck-anti-wrinkle:before{
+  content:"\e95c";
+}
+
+.e-icon-neck-firming:before{
+  content:"\e95d";
+}
+
+.e-icon-neck-radiance:before{
+  content:"\e95e";
+}
+
+.qure__sticky-atc{
+  position:fixed;
+  bottom:0;
+  z-index:99;
+  background:#fff;
+  width:100%;
+  border-top:1px solid var(--Charcoal-10, #dfe0e0);
+}
+
+.qure__sticky-atc .btn_wrap{
+  max-width:400px;
+  width:100%;
+}
+
+.qure__sticky-atc .btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+}
+.qure__sticky-atc .btn .e-icon{
+  font-size:16px;
+}
+.patch__value-pack>input{
+  display:none;
+}
+
+.patch__value-pack .vp-pack-cta{
+  padding:12px 0 24px;
+  width:100%;
+  border-radius:10px;
+  position:relative;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.patch__value-pack>input:checked+.vp-pack-cta{
+  border:2px solid var(--qure-charcoal);
+  background-color:#f6f6f7;
+}
+
+.mi-patches-sticky-cta .vp-img img{
+  height:40px;
+}
+
+.dropdown-wrapper{
+  flex-direction:column;
+  align-items:stretch;
+  position:absolute;
+  left:15px;
+  bottom:47px;
+  max-width:155px;
+  padding:5.787px 7.233px;
+  border-radius:7.233px;
+  border:.723px solid var(--Charcoal-50, #8b8c8e);
+}
+
+.dropdown-button,.dropdown-wrapper{
+  width:100%;
+  display:flex;
+  background:#fff;
+}
+
+.dropdown-button{
+  font-size:16px;
+  border:none;
+  text-align:left;
+  cursor:pointer;
+  align-items:center;
+  gap:10px;
+  z-index:1;
+}
+
+.dropdown-inner-container{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:max-height .3s ease;
+  max-height:0;
+}
+
+.dropdown-wrapper.open .dropdown-inner-container{
+  max-height:500px;
+}
+
+.dropdown-wrapper .fa-angle-down{
+  transition:transform .2s ease;
+}
+
+.dropdown-wrapper.open .fa-angle-down{
+  transform:rotate(180deg);
+}
+
+.dropdown-option{
+  display:flex;
+  align-items:center;
+  padding:10px 15px;
+  gap:10px;
+  cursor:pointer;
+  background-color:#fff;
+}
+
+.dropdown-option:hover{
+  background-color:#f0f0f0;
+}
+
+.dropdown-option img{
+  width:20px;
+}
+
+.dropdown-button img{
+  height:30px;
+}
+.skincare_plan_cta .qure__accordion-header:after{
+  content:"\f106";
+}
+.bundle-progress{
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:320px;
+  gap:24px;
+}
+
+.subtotal_cta .compare_price{
+  color:#b5b6b7;
+  text-decoration:line-through;
+}
+
+.subtotal_cta .discounted_price{
+  font-size:18px;
+  font-style:normal;
+  font-weight:600;
+}
+
+.bundle-item{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.item-box{
+  width:60px;
+  height:60px;
+  border:1px solid #000;
+  border-radius:6px;
+  background:#fff;
+  position:relative;
+}
+.item-box .remove-item{
+  position:absolute;
+  top:-4px;
+  right:-4px;
+  background:#000;
+  color:#fff;
+  font-size:6px;
+  padding:6px;
+  border:0;
+  border-radius:10px;
+  line-height:1;
+}
+.item-box .remove-item:hover{
+  color:#212426;
+  background:#c8e6dc;
+}
+.item-box .remove-item .e-icon{
+  vertical-align:top;
+}
+
+.item-box img{
+  width:100%;
+  height:auto;
+  border-radius:6px;
+}
+
+.add-btn{
+  margin-top:8px;
+  padding:6px 12px;
+  background:#007aff;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.discount-box{
+  width:60px;
+  height:60px;
+  border:1px dotted;
+  border-radius:6px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:500;
+  color:#b5b6b7;
+  background:#fafafa;
+  font-size:22px;
+}
+.discount-box .plus{
+  font-size:30px;
+}
+.progress-line{
+  position:absolute;
+  top:50%;
+  left:60px;
+  right:60px;
+  height:2px;
+  background:#dfe0e0;
+  z-index:1;
+  transform:translateY(-50%);
+  border-radius:3px;
+}
+
+.progress-fill{
+  height:100%;
+  width:0;
+  background:#91baec;
+  border-radius:3px;
+  transition:width .4s ease;
+}
+
+.subtotal_cta p{
+  margin:0;
+}
+
+.skincare_plan_cta .accordion-button{
+  background:#c7e5db;
+  margin-bottom:20px;
+  padding:16px 12px;
+}
+
+.qure__sticky-atc{
+  opacity:0;
+  transition:all .4s ease-in;
+}
+
+.show_cta{
+  opacity:1;
+}
+.qure__sticky-atc .countdown{
+  display:flex;
+  gap:12px;
+  font-size:2em;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+}
+
+.qure__sticky-atc .countdown div{
+  display:flex;
+  text-shadow:0 0 9.836px #0586ff;
+  font-weight:600;
+  line-height:44.709px;
+  flex-direction:row;
+  align-items:center;
+  gap:3px;
+}
+
+.qure__sticky-atc .countdown div,.qure__sticky-atc .countdown div span{
+  color:var(--White, #fff);
+  text-align:center;
+  font-family:TT Commons;
+  font-size:18px;
+  font-style:normal;
+}
+
+.qure__sticky-atc .countdown div span{
+  font-weight:400;
+  line-height:46px;
+  text-shadow:none;
+}
+
+.qure__sticky-atc .extra_entries{
+  color:var(--White, #fff);
+  text-align:center;
+  text-shadow:0 0 8px #0586ff;
+  font-family:TT Commons;
+  font-size:24px;
+  font-style:normal;
+  font-weight:600;
+  line-height:28px;
+  text-transform:uppercase;
+  margin-bottom:0;
+}
+@media (min-width:992px){
+  .skincare_plan_cta .accordion-collapse{
+    display:block !important;
+    visibility:visible !important;
+    height:auto !important;
+  }
+  .skincare_plan_cta .qure__accordion-header:after{
+    display:none;
+  }
+  .skincare_plan_cta .accordion-button{
+    justify-content:center;
+  }
+}
+@media (max-width:991px){
+  .qure__sticky-atc .btn{
+    font-size:18px;
+    padding:10px 40px;
+  }
+}
+@media (max-width:767px){
+  .qure__sticky-atc .countdown{
+    gap:10px;
+  }
+  .qure__sticky-atc .countdown div,.qure__sticky-atc .countdown div span,.qure__sticky-atc .extra_entries{
+    font-size:16px;
+  }
+}

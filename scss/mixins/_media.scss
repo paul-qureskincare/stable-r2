@@ -1,0 +1,31 @@
+@mixin sm {
+    @media screen and (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width:991px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width:1120px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (max-width:1199px) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover:hover) {
+        &:hover {
+            @content;
+        }
+    }
+}

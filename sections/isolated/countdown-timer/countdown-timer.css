@@ -1,0 +1,107 @@
+.countdown {
+    display: flex;
+    gap: 24px;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+}
+.countdown_cart {
+    gap: 10px;
+}
+  .countdown div {
+    display: flex;
+    flex-direction: column;
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0 0 9.836px #0586FF;
+    font-family: "TT Commons";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44.709px; 
+  }
+.countdown_cart div {
+    display: flex;
+    flex-direction: column;
+    color: #FF5429;
+    text-align: center;
+    text-shadow: 0 0 0;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10.709px;
+    align-items: center;
+    justify-content: center;
+}
+  .countdown div span {
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-shadow: none;
+  }
+  .countdown_cart div span {
+    color: #FF5429;
+    text-align: center;
+    font-family: "TT Commons";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-shadow: none;
+  }
+  .extra_entries{
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0 0 8px #0586FF;
+    font-family: "TT Commons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .extra_entries_cart{
+    color: #FF5429;
+    text-align: center;
+    text-shadow: 0 0 0;
+    font-family: "TT Commons";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+.countdown_cart img {
+    filter: invert(31%) sepia(91%) saturate(6796%) hue-rotate(3deg) brightness(100%) contrast(102%);
+    height: 30px;
+}
+.cart_counter_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+  @media(max-width:767px){
+    .countdown{
+        gap: 10px;
+    }
+    .countdown div {
+        font-size: 36px;
+    }
+    .countdown_cart div {
+        font-size: 18px;
+    }
+    .countdown_cart{
+      gap: 7px;
+    }
+    .countdown div span{
+        font-size: 14px;
+    }
+}

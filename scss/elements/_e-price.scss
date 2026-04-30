@@ -1,0 +1,70 @@
+@use "@root/mixins" as *;
+
+.e-price {
+    $root: &;
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    line-height: 1.25;
+
+    // .e-price__current
+    &__current {
+        &.highlight-price {
+            color: var(--discount-color);
+        }
+
+        &.savings-price {
+            color: #0fa847;
+        }
+    }
+
+    // .e-price__main
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 8px;
+        align-items: center;
+    }
+
+    // .e-price__old
+    &__old {
+        color: #8b8c8e;
+        text-decoration: line-through;
+    }
+
+    &--highlight {
+        #{$root}__current {
+            color: var(--discount-color);
+        }
+    }
+
+    &--profit {
+        #{$root}__current {
+            color: #0fa847;
+        }
+    }
+
+    &--strikethrough {
+        position: relative;
+
+        #{$root}__main {
+            position: relative;
+            flex-wrap: nowrap;
+
+            &::before {
+                position: absolute;
+                top: 10px;
+                width: 100%;
+                height: 2px;
+                background: #ff5429;
+                transform: rotate(5deg);
+                content: "";
+            }
+        }
+    }
+
+    &--special {
+
+    }
+}

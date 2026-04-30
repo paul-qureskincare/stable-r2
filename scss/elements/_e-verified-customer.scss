@@ -1,0 +1,18 @@
+@use "@root/mixins" as *;
+@use "@elements/e-checkmark" as *;
+
+.e-verified-customer {
+    --e-verified-customer-bg: rgb(199 229 219 / 30%);
+
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background: var(--e-verified-customer-bg);
+
+    .e-checkmark {
+        vertical-align: top;
+    }
+}

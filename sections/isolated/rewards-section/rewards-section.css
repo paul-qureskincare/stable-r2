@@ -1,0 +1,18 @@
+.reward-card p{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px; 
+    margin-bottom: 10px !important;
+}
+.reward-card p + p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; 
+    margin-bottom: 0 !important;
+}
+.swiper-slide > div{
+    height: auto !important;
+}
+.reward-section .reward-card img {
+    max-height: 61px;
+}

@@ -1,0 +1,66 @@
+@use "@root/mixins" as *;
+@use "@components/c-trusted-review-card" as *;
+
+.trusted-reviews {
+    $root: &;
+
+    &:not(.trusted-reviews--light) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 36px;
+        text-align: center;
+
+        @include md {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .trusted-reviews--light
+    &--light {
+        .c-trusted-review-card {
+            border: 1px solid #dfe0e0;
+        }
+    }
+
+    .c-trusted-review-card {
+        height: 100%;
+    }
+
+    .btn {
+        display: block;
+        max-width: 350px;
+        margin: 40px auto 0;
+        text-transform: uppercase;
+
+        @include sm {
+            margin-top: 24px;
+        }
+    }
+
+    &:has(.e-features-list) {
+        .btn {
+            max-width: 500px;
+        }
+    }
+
+    .e-features-list {
+        margin-top: 12px;
+
+        li {
+            &:first-child {
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<div class="
+        c-wistia
+        {{#if custom }}c-wistia--custom{{/if }}
+        {{#if autoplay }}c-wistia--is-playing{{/if }}
+    "
+>
+    <wistia-player
+        media-id="{{ id }}"
+        {{#unless inline }}wistia-popover="true"{{/unless }}
+        {{#if custom }}popover-content="link"{{/if }}
+        {{#if poster }}poster="{{ poster }}"{{/if }}
+        {{#if aspect }}aspect="{{ aspect }}"{{/if }}
+        {{#if autoplay }}autoplay="true"{{/if }}
+        end-video-behavior="loop"
+        controls-visible-on-load="false"
+        play-button="false"
+    >
+        {{#if custom }}
+            <div class="c-wistia__custom">{{{ custom }}}</div>
+        {{/if }}
+    </wistia-player>
+    {{#unless custom }}
+        <div class="c-wistia__play">{{{ play-content }}}</div>
+    {{/unless }}
+</div>

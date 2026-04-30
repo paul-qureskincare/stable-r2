@@ -1,0 +1,59 @@
+<!-- ACHIEVE GOALS -->
+<link rel="stylesheet" href="sections/new/achieve-goals/achieve-goals.css" />
+<section class="achieve-goals {{ classes }}" >
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="c-swiper c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 1.8,
+                "spaceBetween": 8,
+                "breakpoints": {
+                    "992": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 12
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                {{#eachList list }}
+                    <div class="swiper-slide">
+                        <div class="btn btn--secondary btn--md" type="button">{{ this }}</div>
+                    </div>
+                {{/eachList}}
+            </div>
+        </div>
+        <div
+            class="c-swiper"
+            data-swiper-thumbs=".achieve-goals .c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 1,
+                "spaceBetween": 16,
+                "loop": true,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                {{> @partial-block }}
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('swiper', 'assets/js-new/swiper.js');
+    });
+</script>
+<!-- ACHIEVE GOALS END -->

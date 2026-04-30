@@ -1,0 +1,55 @@
+<!-- COMPARISON TABLE -->
+<link rel="stylesheet" href="sections/new/comparison-table/comparison-table.css" />
+<section class="comparison-table {{ classes }}" >
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="comparison-table__content">
+            <ul>
+                {{#parseJson labels }}
+                    <li {{#if colorize }}class="colorize"{{/if}}>{{ name }}</li>
+                {{/parseJson}}
+            </ul>
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 0,
+                    "pagination": {
+                        "el": ".comparison-table .c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".comparison-table .c-swiper-button-prev",
+                        "nextEl": ".comparison-table .c-swiper-button-next"
+                    },
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2
+                        },
+                        "1200": {
+                            "slidesPerView": 3
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    {{> @partial-block }}
+                </div>
+            </div>
+        </div>
+        <div class="c-swiper-nav">
+            <button class="c-swiper-button-prev"></button>
+            <div class="c-swiper-pagination"></div>
+            <button class="c-swiper-button-next"></button>
+        </div>
+        {{#if declaimer }}
+            <small class="e-declaimer">{{ declaimer }}</small>
+        {{/if}}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('swiper', 'assets/js-new/swiper.js');
+    });
+</script>
+<!-- COMPARISON TABLE END -->

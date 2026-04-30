@@ -1,0 +1,25 @@
+@use "media" as *;
+@use "icon" as *;
+
+@mixin play-icon {
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 0.155em;
+        color: #fff;
+        @include icon;
+        font-size: 52px;
+        border-radius: 50%;
+        background: rgb(0 0 0 / 35%);
+        transform: translate(-50%, -50%);
+        content: "\e90d";
+    }
+}
+
+@mixin play {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @include play-icon;
+}

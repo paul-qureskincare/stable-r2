@@ -1,0 +1,46 @@
+@use "@root/mixins" as *;
+
+.base-form {
+    $root: &;
+
+    // .apply-to-join__form
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 24px;
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+    }
+
+    // .apply-to-join__form-success
+    &__form-success {
+        grid-column: 1 / -1;
+        margin-bottom: 16px;
+        color: #0a0;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+
+        @include sm {
+            grid-column: auto;
+        }
+    }
+
+    // .apply-to-join__form-field
+    &__form-field {
+        &:has(textarea) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    // .apply-to-join___form-submit
+    &__form-submit {
+        margin-top: 12px;
+
+        .btn {
+            min-width: 150px;
+        }
+    }
+}

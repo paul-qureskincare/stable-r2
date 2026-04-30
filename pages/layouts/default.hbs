@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} - Qure</title>
+    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+    {{> css-vars }}
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <link rel="stylesheet" href="assets/css/spacings.css" />
+    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+    <link href="assets/css/base.css" rel="stylesheet" />
+    <link href="assets/css/general.css" rel="stylesheet" />
+    {{#if page-css }}
+        <link href="assets/css/{{ body-class }}.css" rel="stylesheet" />
+    {{/if}}
+    <!-- Loading HTML Files -->
+   <script src="assets/js/fileloader.js"></script>
+</head>
+
+<body class="{{ body-class }}">
+    <!-- PAGE HEADER -->
+    <div id="site-header"></div>
+    <!-- PAGE HEADER END -->
+
+    {{#unless hide-def-announcement }}
+        {{#> announcement-bar }}{{/announcement-bar}}
+    {{/unless}}
+
+    {{> @partial-block}}
+
+    {{#unless hide-benefits }}
+        {{> footer-benefits }}
+    {{/unless}}
+    <!-- CART AND FOOTER -->
+    <div id="site-footer"></div>
+    <div id="site-cart-drawer"></div>
+
+    <!-- Reusable modal for all the wistia videos for all the tab contents -->
+    <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+        <div class="c-dialog__content">
+            <form action="#">
+                <i class="e-icon e-icon-qure"></i>
+                <img src="assets/images/notify.gif" alt="" />
+                <h5>Get Notified When It's Back In Stock</h5>
+                <p>Enter your email address below</p>
+                <input type="text" class="form-control" placeholder="Enter your email address">
+                <button class="btn btn--primary" type="button">Notify Me</button>
+            </form>
+        </div>
+    </dialog>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadScriptOnce('cart-counter', 'assets/js/cart-counter.js');
+        });
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/vendor.js" defer="defer"></script>
+    <script src="sections/new/header/header.js" defer="defer"></script>
+    <script src="sections/new/footer/footer.js" defer="defer"></script>
+</body>
+
+</html>

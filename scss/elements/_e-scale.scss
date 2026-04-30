@@ -1,0 +1,41 @@
+@use "@root/mixins" as *;
+
+.e-scale {
+    display: flex;
+    width: 100%;
+
+    li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: var(--graduation-color, #212428);
+        font-size: 16px;
+        line-height: 1.1;
+        text-align: center;
+
+        &::before {
+            display: block;
+            width: 100%;
+            height: 12px;
+            margin-bottom: 10px;
+            background: currentColor;
+            content: '';
+        }
+
+        &:first-child {
+            &::before {
+                border-end-start-radius: 10px;
+                border-start-start-radius: 10px;
+            }
+        }
+
+        &:last-child {
+            &::before {
+                border-end-end-radius: 10px;
+                border-start-end-radius: 10px;
+            }
+        }
+    }
+}

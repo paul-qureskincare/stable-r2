@@ -1,0 +1,31 @@
+.skincare-routine .nav-tabs .nav-item.show .nav-link, .skincare-routine .nav-tabs .nav-link.active{
+    border: 0;
+}
+.skincare-routine .nav-tabs .nav-link{
+    width: 100%;
+    border: 0;
+}
+.skincare-routine .nav-item{
+    width: 100%;
+    max-width: 200px;
+}
+.skincare-routine .nav-tabs{
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+.skincare-routine .nav-link.active{
+    border-bottom: 3px solid var(--Ice, #91BAEC)!important; 
+    font-weight: 600;
+} 
+.skincare-routine .nav-link{
+    color: #212428;
+}
+.benefits_ul{
+    padding-left: 20px;
+}
+.benefits_ul li {
+    list-style: disc;
+}
+.benefits_ul li::marker {
+    color: #91BAEC;
+}

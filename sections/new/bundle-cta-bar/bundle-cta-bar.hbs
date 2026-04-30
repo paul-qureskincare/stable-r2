@@ -1,0 +1,47 @@
+<!-- BUNDLE CTA BAR -->
+<link rel="stylesheet" href="sections/new/bundle-cta-bar/bundle-cta-bar.css" />
+<section class="bundle-cta-bar">
+    <details class="bundle-cta-bar__content" open>
+        <summary class="bundle-cta-bar__summary">
+            Bundle &amp; Save up to 30%
+            {{> e-icon icon="chevron" }}
+        </summary>
+        <div class="bundle-cta-bar__container container">
+            <ul class="bundle-cta-bar__progress" style="--bundle-progress: 50%;">
+                <li>
+                    <img src="sections/isolated/sticky-cta/images/build-your-own-1.webp" alt="Product 1">
+                    <button type="button"><i class="e-icon e-icon-cross"></i></button>
+                </li>
+                <li>
+                    <img src="sections/isolated/sticky-cta/images/build-your-own-2.webp" alt="Product 2">
+                    <button type="button"><i class="e-icon e-icon-cross"></i></button>
+                </li>
+                <li>
+                    <span>25%</span>
+                </li>
+                <li>
+                    <span>30%</span>
+                </li>
+            </ul>
+            <div class="bundle-cta-bar__amount">
+                Subtotal:
+                {{> e-price current="{$dyn}" old="{$dyn}" }}
+            </div>
+            <div class="bundle-cta-bar__button">
+                <button
+                    class="btn btn--primary"
+                    type="button"
+                >
+                    CHECKOUT
+                    {{> e-icon icon="lock" }}
+                </button>
+            </div>
+        </div>
+    </details>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('bundle-cta-bar', 'sections/new/bundle-cta-bar/bundle-cta-bar.js');
+    });
+</script>
+<!-- BUNDLE CTA BAR END -->

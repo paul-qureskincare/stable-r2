@@ -1,0 +1,274 @@
+@media (max-width: 991px) {
+    .faucet-tab-content>.tab-pane {
+        display: block;
+        opacity: 1;
+    }
+}
+.qure__faucet-body h2 {
+    margin-bottom: 30px;
+}
+
+.qure__faucet-tabs .qure__faucet-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.qure__faucet-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 22px 6px;
+    border-bottom: 1.5px solid #DFE0E0;
+    font-size: 20px;
+    padding-right: 20px;
+    position: relative;
+    color: #212428;
+}
+
+.title_content {
+    font-family: "TT Commons";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.qure__faucet-button.active,
+.qure__faucet-button[aria-expanded="true"] {
+    font-weight: 600;
+}
+
+.qure__faucet-button.active:after {
+    transform: rotate(270deg);
+}
+
+.qure__faucet-button:after {
+    content: "\f107";
+    font-family: Font Awesome\ 6 Pro;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    transform: rotate(360deg);
+}
+
+.qure__faucet-tag {
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--base-color);
+    padding: 3px 8px;
+    margin-left: 4px;
+}
+
+.qure__faucet-body ol {
+    counter-reset: item;
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+}
+
+.qure__faucet-body ol li {
+    counter-increment: item;
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 25px 1fr;
+    gap: 0 10px;
+}
+
+.qure__faucet-body ol li::before {
+    content: counter(item);
+    border: 1px solid var(--qure-charcoal);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.step_card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+    border: 1px solid #DFE0E0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.step_card .step_body {
+    padding: 20px;
+}
+
+.step_card-main {
+    padding-right: 1px;
+}
+
+.include_in-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+}
+
+.include_in-box .guide_item {
+    min-height: 80px;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    align-items: center;
+}
+
+.mi_details {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+.mi_target-area {
+    display: grid;
+    grid-template-columns: 1fr 264px;
+    column-gap: 50px;
+}
+
+.serum_ingredients {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    align-items: center;
+    border: 1px solid #DFE0E0;
+    border-radius: 10px;
+    padding: 24px;
+    height: 100%;
+}
+
+.ingredient_modal .nav-link {
+    border-width: 0 0 1px;
+    border-color: #B5B6B7;
+    color: #212428;
+    padding: 5px 20px;
+}
+
+.ingredient_modal .nav-link.active {
+    border-width: 0 0 2px;
+    border-color: #212428;
+    color: #212428;
+    font-weight: 600;
+}
+
+.ingredient_modal .nav-tabs {
+    border: 0;
+}
+
+.qure__accordion-header,
+.qure__accordion-header:not(.collapsed) {
+    font-size: 16px;
+}
+
+/* .step_card-main .step_card{
+    height: 100%;
+} */
+.custom-dropdown {
+    position: relative;
+}
+
+.dropdown-selected {
+    padding: 18px 16px;
+    border-bottom: 1px solid #DFE0E0;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #DFE0E0;
+    background: #fff;
+    z-index: 100;
+    padding: 10px 16px;
+}
+
+.dropdown-options div {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.dropdown-options div:hover {
+    background: #f0f0f0;
+}
+
+.dropdown-open .dropdown-options {
+    display: block;
+}
+
+.custom_dropdown-main {
+    position: fixed;
+    top: calc(var(--height-bar) + var(--height-header));
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    z-index: 9;
+}
+
+body.page\.microinfusion-safety-guide-v15 .qure__accordion-content .accordion-body{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+@media(max-width:991px) {
+    .tab-pane {
+        border-bottom: 1.5px solid #DFE0E0;
+    }
+
+    .qure__faucet-button {
+        border-bottom: none;
+    }
+
+    .qure__faucet-button[aria-expanded="true"]:after {
+        transform: rotate(180deg);
+    }
+}
+
+@media(max-width: 767px) {
+    .serum_ingredients {
+        padding: 16px;
+    }
+    .step_card {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .step_card .step_body {
+        padding: 24px;
+    }
+
+    .include_in-box {
+        grid-template-columns: 1fr;
+    }
+
+    .mi_details,
+    .mi_target-area {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .step_card-main .step_body {
+        min-height: 270px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .has-accordion-dropdown {
+    padding-top: calc(var(--height-bar) + var(--height-header) + 59px);
+}
+}

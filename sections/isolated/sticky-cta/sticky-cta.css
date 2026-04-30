@@ -1,0 +1,131 @@
+.qure__sticky-atc {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background: #FFF;
+    width: 100%;
+    border-top: 1px solid var(--Charcoal-10, #DFE0E0);
+}
+.qure__sticky-atc .btn {
+    max-width: 400px;
+    width: 100%;
+}
+/* product-mi-patches cta  */
+.patch__value-pack > input {
+    display: none;
+}
+.patch__value-pack .vp-pack-cta {
+    padding: 12px 0 24px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.patch__value-pack > input:checked + .vp-pack-cta {
+    border: 2px solid var(--qure-charcoal);
+    background-color: #F6F6F7;
+}
+.mi-patches-sticky-cta .vp-img img{
+    height: 40px;
+}
+.dropdown-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    left: 15px;
+    bottom: 47px;
+    max-width: 155px;
+    padding: 5.787px 7.233px;
+    border-radius: 7.233px;
+    border: 0.723px solid var(--Charcoal-50, #8B8C8E);
+    background: #FFF;
+}
+
+  .dropdown-button {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    z-index: 1;
+    background: #fff;
+  }
+
+  .dropdown-inner-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+  }
+  .dropdown-wrapper.open
+  .dropdown-inner-container {
+    max-height: 500px; /* animate open */
+  }
+.dropdown-wrapper .fa-angle-down {
+  transition: transform 0.2s ease;
+}
+.dropdown-wrapper.open .fa-angle-down {
+  transform: rotate(180deg);
+}
+  .dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .dropdown-option:hover {
+    background-color: #f0f0f0;
+  }
+  .dropdown-option img {
+    width: 20px;
+  }
+  .dropdown-button img {
+    height: 30px;
+}
+.qure__sticky-atc{
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  height: 0;
+}
+.show_cta{
+  opacity: 1;
+  height: auto;
+}
+/* product-mi-patches cta  */
+
+
+@media(max-width:991px){
+    .qure__sticky-atc .btn {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+}
+
+
+/* HARDCODE, need to delete in future */
+.page\.exclusive-holiday-bundle-deal .qure__sticky-atc .py-16 {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+.page\.exclusive-holiday-bundle-deal .qure__sticky-atc .py-6 {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+@media(max-width:991px){
+  .page\.exclusive-holiday-bundle-deal .qure__sticky-atc .justify-content-between {
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+  .page\.exclusive-holiday-bundle-deal .qure__sticky-atc .fs-16 {
+    font-size: 14px !important;
+  }
+}

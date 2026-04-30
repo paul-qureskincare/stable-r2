@@ -1,0 +1,189 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@elements/e-features-list" as *;
+
+.qa-section {
+    $root: &;
+
+    .container {
+        max-width: 1072px;
+
+        @include sm {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+    }
+
+    article {
+        h2 {
+            margin-bottom: 24px;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        picture {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        img {
+            border-radius: 10px;
+            @include img-fluid;
+
+            @include sm {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+
+        a:not(.btn) {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        ol {
+            counter-reset: item;
+
+            li {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                margin-bottom: 24px;
+                counter-increment: item;
+
+                &::before {
+                    padding: 7px 14px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    background: #c7e5db;
+                    content: "Step " counters(item, "");
+                }
+            }
+        }
+    }
+
+    .cta-box {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        width: 100%;
+        max-width: 900px;
+        margin: 40px auto 0;
+        border: 2px dashed;
+        border-radius: 10px;
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+
+        // .cta-box__image
+        &__image {
+            margin-bottom: 0;
+
+            img {
+                vertical-align: top;
+                border-radius: 10px 0 0 10px;
+
+                @include sm {
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+
+        // .cta-box__content
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 24px 32px;
+            text-align: center;
+
+            @include sm {
+                padding: 24px;
+            }
+
+            .e-pill-badge {
+                margin-right: auto;
+                margin-left: auto;
+                border-radius: 5px;
+
+                @include sm {
+                    position: absolute;
+                    top: -21px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            h5 {
+                margin-bottom: 0;
+                font-family: inherit;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .updated-info {
+        padding: 24px 32px;
+        border: 2px dashed;
+        border-radius: 5px;
+        background: #fefcef;
+
+        h6 {
+            color: #ff5429;
+            font-family: inherit;
+            font-weight: 600;
+        }
+    }
+
+    // .qa-section--img-to-left
+    &--img-to-left {
+        picture {
+            float: left;
+            width: min(410px, 45%);
+            margin-right: 60px;
+            margin-bottom: 0;
+
+            @include md {
+                margin-right: 40px;
+            }
+
+            @include sm {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // .qa-section--img-to-top
+    &--img-to-top {
+        article {
+            @include sm {
+                display: grid;
+            }
+
+            picture {
+                @include sm {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

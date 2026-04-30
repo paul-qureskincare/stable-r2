@@ -1,0 +1,14 @@
+.detailed_guide_btn img{
+    filter: invert(1);
+}
+.detailed_guide_btn:hover img {
+    filter: invert(0);
+}
+.detailed_guide_content h3{
+    color: var(--Charcoal, #212428);
+    font-family: "TT Commons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; 
+}

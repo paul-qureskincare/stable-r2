@@ -1,0 +1,33 @@
+.qure-scroll-tabs {
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto hidden;
+    gap: 0px 16px;
+    width: max-content;
+    max-width:100%;
+    margin: 0 auto;
+}
+.qure-scroll-tabs::-webkit-scrollbar {
+    display: none;
+}
+.qure-scroll-tabs .qure-scroll-link {
+    background: transparent;
+    border-radius: 100px;
+    border: 1px solid var(--qure-charcoal);
+    padding: 5px 20px;
+    transition: 0.3s;
+    color: #212428;
+}
+.qure-scroll-tabs .qure-scroll-link.active,
+.qure-scroll-tabs .qure-scroll-link:hover{
+    background: var(--qure-charcoal);
+    color:var(--white-color);
+}
+.qure-scroll-tabs li.qure-scroll-item {
+    color: #000 !important;
+}
+@media(max-width:991px){
+   
+}

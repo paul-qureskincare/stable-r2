@@ -1,0 +1,8 @@
+<div class="c-jump-to">
+    <div class="c-jump-to__title">Jump To</div>
+    <ul class="c-jump-to__buttons">
+        {{#parseJson list }}
+            <li><a href="#{{ id }}">{{ name }} {{>e-icon icon="arrow"}}</a></li>
+        {{/parseJson}}
+    </ul>
+</div>

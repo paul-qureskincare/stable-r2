@@ -1,0 +1,105 @@
+{{#> default
+    title="Qure Skincare App"
+    body-class="page.qure-skincare-app"
+}}
+
+{{#> section-stack }}
+    {{#> across-image-banner
+        classes="across-image-banner--hero"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/isolated/page-banner/images/hero-app.webp" />
+            <img src="sections/isolated/page-banner/images/hero-app-mob.webp" />
+        </picture>
+        <div class="container">
+            <article>
+                <h1>The only FDA-cleared LED&nbsp;light therapy mask with&nbsp;an&nbsp;app.</h1>
+                {{> c-app-stores row=true }}
+            </article>
+        </div>
+    {{/across-image-banner}}
+
+    {{#> text-section }}
+        <h2>An app for out-of-this world skincare</h2>
+        <p>Your skin is unique, and your treatment should reflect that. The Qure Skincare App gives you full control of your clinical-grade LED sessions, all from home. </p>
+        <p>No clinics, no waiting rooms, just personalized treatment when you need it.</p>
+    {{/text-section}}
+
+    {{> app-features }}
+
+    {{#> press-reviews }}
+        <div
+            class="c-swiper"
+            data-swiper-thumbs=".press-reviews .c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 1,
+                "spaceBetween": 16,
+                "loop": true,
+                "autoplay": {
+                    "delay": 5000
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h4>“The professional grade is the perfect addition to any at-home skincare routine.”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>“My skin actually seems considerable brighter and smoother! It’s simple, fast, and effective enough to become a daily habit.”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>“The results are blatant — my glow after using the treatment speaks for itself. You'll notice hydrated, radiant, and healthy-looking skin.”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4> “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</h4>
+                </div>
+            </div>
+        </div>
+        <div class="c-swiper c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 3,
+                "spaceBetween": 30,
+                "breakpoints": {
+                    "992": {
+                        "slidesPerView": 5,
+                        "spaceBetween": 50
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/vogue-black.svg" alt="Vogue" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/women-health.svg" alt="Women Health" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/popsugar.svg" alt="Popsugar" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/cosmopolitan.svg" alt="Cosmopolitan" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/gq.svg" alt="QG" />
+                </div>
+            </div>
+        </div>
+    {{/press-reviews}}
+
+    {{#> base-section
+        classes="base-section--simple-grid base-section--reverse"
+        title="Personalized skincare awaits"
+        wistia="xdk9firq7i"
+    }}
+        {{> c-app-stores row=true }}
+    {{/base-section }}
+
+
+
+{{/section-stack }}
+
+{{/default }}

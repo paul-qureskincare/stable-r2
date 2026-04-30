@@ -1,0 +1,50 @@
+// Global vars list
+:root{
+    --height-bar: 50px;
+    --height-header: 60px;
+    --base-font-family: 'TT Commons';
+    --heading-font-family: 'Canela';
+    --heading-font-weight: 300;
+    --heading-letter-spacing:normal;
+    --heading-color:#212428;
+    --heading-uppercase:initial;
+    --menu-font: 'TT Commons';
+    --base-font-size:18px;
+    --small-font-size:14px;
+    --base-line-height: 1.25;
+    --base-font-weight: 400;
+    --base-body-bg-color:#fff;
+    --base-color:#c8e6dc;
+    --white-color:#fff;
+    --qure-transition: all .4s;
+    --quer-transform: scale(1.05);
+    --qure-charcoal:#212428;
+    --input-padding:16px 24px;
+    --input-bg: var(--white-color);
+    --input-border-color:#dfe0e0;
+    --input-font-size:16px;
+    --input-border-radius:10px;
+    --input-color:#8b8c8e;
+    --border-color:#8b8c8e;
+    --color-green:#008763;
+    --color-orange:#ff5429;
+    --color-ice:#91baec;
+    --bg-light:#f6f6f7;
+    --charcoal-light:#8b8c8e;
+    --bs-primary-rgb:199, 229, 219;
+
+    // Buttons
+    --btn-primary-bg:#212428;
+    --btn-primary-color:#fff;
+    --btn-primary-bg-hover:#C8E6DC;
+    --btn-primary-color-hover:#000;
+
+    @media(max-width:991px){
+        --height-header: 56px;
+        --height-bar: 34px;
+    }
+
+    @media(max-width:767px){
+        --input-font-size:18px;
+    }
+}

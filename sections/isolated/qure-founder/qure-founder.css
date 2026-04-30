@@ -1,0 +1,25 @@
+
+/* car giveway qure founder section  */
+.founder_img img{
+    max-width: 120px;
+    display: block;
+}
+.qure_founder {
+    background: #C7E5DB;
+    gap: 18px;
+}
+.founder_content h3 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+}
+.founder_content p {
+    color: var(--Charcoal, #212428);
+    font-family: "TT Commons";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+/* car giveway qure founder section end */

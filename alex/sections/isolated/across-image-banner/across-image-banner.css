@@ -1,0 +1,176 @@
+.across-image-banner{
+  position:relative;
+  z-index:1;
+  padding-top:clamp(100px, 10%, 125px);
+  padding-bottom:clamp(100px, 10%, 125px);
+  color:#fff;
+}
+.across-image-banner__image{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  filter:brightness(.5);
+}
+.across-image-banner__image img{
+  display:block;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:100%;
+}
+.across-image-banner__content{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.across-image-banner__content h2{
+  margin-bottom:0;
+  color:inherit;
+}
+.across-image-banner__content .btn{
+  display:flex;
+  gap:12px;
+  align-self:flex-start;
+  justify-content:center;
+  min-width:300px;
+  margin-top:5px;
+}
+
+.hemlet-tech-modal{
+  background:rgba(0,0,0,.5);
+  -webkit-backdrop-filter:blur(10px);
+          backdrop-filter:blur(10px);
+}
+.hemlet-tech-modal .modal-dialog{
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  width:450px;
+  max-width:none;
+  height:100vh;
+  margin:0;
+}
+.hemlet-tech-modal .btn-close{
+  position:absolute;
+  top:24px;
+  left:-66px;
+  z-index:100;
+  width:50px;
+  height:50px;
+  padding:0;
+  border-radius:100px;
+  background:hsla(0,0%,100%,.8);
+}
+.hemlet-tech-modal .btn-close img{
+  vertical-align:top;
+}
+.hemlet-tech-modal__content{
+  display:flex;
+  flex-grow:1;
+  min-height:1px;
+  border:0;
+  border-radius:0;
+  background:#fff;
+}
+.hemlet-tech-modal__text{
+  overflow:auto;
+  padding:32px 24px;
+}
+.hemlet-tech-modal__text hr{
+  margin-top:24px;
+  margin-bottom:24px;
+}
+.hemlet-tech-modal__text h6{
+  margin-bottom:10px;
+  font-family:inherit;
+  font-weight:600;
+}
+.hemlet-tech-modal__text>strong{
+  display:block;
+}
+
+.tech-popup{
+  overflow:auto;
+  padding:24px;
+}
+.tech-popup__carousel{
+  margin-bottom:24px;
+}
+.tech-popup__carousel .swiper-slide img{
+  display:block;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:250px;
+  border-radius:10px;
+}
+.tech-popup__carousel .swiper-arrows-with-pagination{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  justify-content:center;
+  margin-top:16px;
+}
+.tech-popup__carousel .swiper-pagination{
+  position:static;
+  width:auto;
+}
+.tech-popup__icons{
+  display:flex;
+  gap:12px;
+  margin-bottom:24px;
+}
+.tech-popup__icons li{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+  width:100%;
+  padding:12px;
+  font-size:14px;
+  line-height:1;
+  text-align:center;
+  border-radius:5px;
+  background:#f6f6f7;
+}
+.tech-popup__icons span{
+  max-width:90px;
+}
+.tech-popup__text h6{
+  margin-bottom:10px;
+  font-family:inherit;
+  font-weight:600;
+}
+.tech-popup__text ul{
+  padding-left:2rem;
+}
+.tech-popup__text li{
+  list-style:initial;
+}
+@media screen and (max-width:991px){
+  .hemlet-tech-modal .btn-close{
+    top:-25px;
+    right:16px;
+    left:auto;
+  }
+}
+@media screen and (max-width:767px){
+  .across-image-banner{
+    padding-top:150px;
+    padding-bottom:150px;
+  }
+  .across-image-banner__content .btn{
+    width:100%;
+  }
+  .hemlet-tech-modal .modal-dialog{
+    width:100vw;
+    padding-top:100px;
+  }
+  .tech-popup{
+    padding-right:16px;
+    padding-left:16px;
+  }
+}

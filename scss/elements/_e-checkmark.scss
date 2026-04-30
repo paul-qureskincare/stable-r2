@@ -1,0 +1,19 @@
+@use "@root/mixins" as *;
+
+.e-checkmark {
+    width: 1em;
+    height: 1em;
+    color: #212428;
+    line-height: 1em;
+    text-align: center;
+    border-radius: 50%;
+    background: #c7e5db;
+
+    &::before {
+        @include icon;
+        font-size: 0.35em;
+        line-height: inherit;
+        vertical-align: top;
+        content: "\e901";
+    }
+}

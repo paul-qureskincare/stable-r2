@@ -1,0 +1,49 @@
+.klaviyo-form-YpweK2 input[name="email"] {
+    height: 56px !important;
+    border-radius: 50rem 0 0 50rem !important;
+    border: 0 !important;
+    outline: none;
+}
+.klaviyo-form-YpweK2 button.needsclick.go300628013.kl-private-reset-css-Xuajs1 {
+    height: 56px !important;
+    border-radius: 0 50rem 50rem 0 !important;
+    position: relative;
+    background: #fff !important;
+    margin-left: -2px;
+    padding: 0 !important;
+}
+.klaviyo-form-YpweK2 button.needsclick.go300628013.kl-private-reset-css-Xuajs1:before {
+    content: "\f061";
+    font-family: "Font Awesome 6 Pro"; 
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    display: block;
+} 
+.klaviyo-form-version-cid_7 button.needsclick.go300628013.kl-private-reset-css-Xuajs1 {
+    border-radius: 50rem !important;
+    background: #212428 !important;
+    margin-left: 0;
+}
+.klaviyo-form-version-cid_7 button.needsclick.go300628013.kl-private-reset-css-Xuajs1:before {
+    display: none;
+} 
+.klaviyo-form-version-cid_5 button.needsclick.go300628013.kl-private-reset-css-Xuajs1 {
+    border-radius: 50rem !important;
+    background: #212428 !important;
+    margin-left: 0;
+}
+.klaviyo-form-version-cid_5 button.needsclick.go300628013.kl-private-reset-css-Xuajs1:before {
+    display: none;
+} 
+.klaviyo-form-version-cid_3 button.needsclick.go300628013.kl-private-reset-css-Xuajs1 {
+    border-radius: 50rem !important;
+    background: #212428 !important;
+    margin-left: 0;
+}
+.klaviyo-form-version-cid_3 button.needsclick.go300628013.kl-private-reset-css-Xuajs1:before {
+    display: none;
+} 

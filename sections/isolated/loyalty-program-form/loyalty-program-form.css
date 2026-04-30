@@ -1,0 +1,26 @@
+.redeem_input input{
+    width: 100%;
+    border: 1px solid #212121;
+}
+.redeem_input input:hover{
+    border: 1px solid #212121;
+}
+.redeem_content ul li{
+    list-style: disc;
+}
+.redeem_content ul{
+    padding-left: 30px;
+}
+.redeem_input input[type=email]:focus, .redeem_input input[type=password]:focus{
+    border: 1px solid;
+}
+
+
+
+@media(max-width:767px){
+    .qure__product-item img {
+        height: 164px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}

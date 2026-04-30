@@ -1,0 +1,77 @@
+<!-- APP FEATURES -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/app-features/app-features.css" />
+{{/unless}}
+<section class="app-features {{ classes }}">
+    <div class="container">
+        <div class="c-swiper"
+            data-swiper-thumbs=".c-swiper-texts"
+            data-swiper='{
+                "slidesPerView": 3,
+                "spaceBetween": 0,
+                "centeredSlides": true,
+                "pagination": {
+                    "el": ".app-features .c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".app-features .c-swiper-button-prev",
+                    "nextEl": ".app-features .c-swiper-button-next"
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="sections/new/app-features/images/app-features-screen-1.webp" alt="Customize Your Treatments" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/new/app-features/images/app-features-screen-2.webp" alt="Plan and Schedule Your Routine" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/new/app-features/images/app-features-screen-3.webp" alt="Get Reminders" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/new/app-features/images/app-features-screen-4.webp" alt="Track Your Progress" />
+                </div>
+            </div>
+        </div>
+        <div
+            class="c-swiper c-swiper-texts"
+            data-swiper='{
+                "slidesPerView": 1,
+                "spaceBetween": 16,
+                "allowTouchMove": false
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h6>Customize Your Treatments</h6>
+                    <p>Customize your LED treatments for a personalized program that’s unique to your skin’s profile.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h6>Plan and Schedule Your Routine</h6>
+                    <p>The Qure planner shows your treatment history and scheduled treatments in a monthly calendar.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h6>Get Reminders</h6>
+                    <p>Schedule in your treatments on your own time. Get reminders straight to your phone so you never miss a treatment.</p>
+                </div>
+                <div class="swiper-slide">
+                    <h6>Track Your Progress</h6>
+                    <p>See your skin change over time with progress photos, notes, and treatment history in one place.</p>
+                </div>
+            </div>
+        </div>
+        <div class="c-swiper-nav">
+            <button class="c-swiper-button-prev"></button>
+            <div class="c-swiper-pagination"></div>
+            <button class="c-swiper-button-next"></button>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('swiper', 'assets/js-new/swiper.js');
+    });
+</script>
+<!-- APP FEATURES END -->

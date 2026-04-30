@@ -1,0 +1,43 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pill-tabs" as *;
+
+.c-pill-tabs {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+    @include sm {
+        gap: 20px;
+    }
+
+    h6 {
+        margin-bottom: -10px;
+        font-family: inherit;
+        font-weight: 500;
+    }
+
+    // .c-pill-tabs__buttons
+    &__buttons {
+        min-width: 210px;
+
+        @include sm {
+            min-width: 0;
+        }
+    }
+
+    // .c-pill-tabs__pane
+    &__pane {
+        transition: opacity 600ms linear;
+
+        &:not(.show) {
+            @include hide-pane;
+        }
+
+        img {
+            @include img-fluid;
+        }
+    }
+}

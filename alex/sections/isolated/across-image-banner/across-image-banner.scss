@@ -1,0 +1,209 @@
+.across-image-banner {
+    position: relative;
+    z-index: 1;
+    padding-top: clamp(100px, 10%, 125px);
+    padding-bottom: clamp(100px, 10%, 125px);
+    color: #fff;
+
+    @include sm {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    // .across-image-banner__image
+    &__image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        filter: brightness(0.5);
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // .across-image-banner__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h2 {
+            margin-bottom: 0;
+            color: inherit;
+        }
+
+        .btn {
+            display: flex;
+            gap: 12px;
+            align-self: flex-start;
+            justify-content: center;
+            min-width: 300px;
+            margin-top: 5px;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.hemlet-tech-modal {
+    background: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(10px);
+
+    .modal-dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        max-width: none;
+        height: 100vh;
+        margin: 0;
+
+        @include sm {
+            width: 100vw;
+            padding-top: 100px;
+        }
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 24px;
+        left: -66px;
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 100px;
+        background: rgb(255 255 255 / 80%);
+
+        @include md {
+            top: -25px;
+            right: 16px;
+            left: auto;
+        }
+
+        img {
+            vertical-align: top;
+        }
+    }
+
+    // .hemlet-tech-modal__content
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        min-height: 1px;
+        border: 0;
+        border-radius: 0;
+        background: #fff;
+    }
+    
+    // .hemlet-tech-modal__text
+    &__text {
+        overflow: auto;
+        padding: 32px 24px;
+
+        hr {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        h6 {
+            margin-bottom: 10px;
+            font-family: inherit;
+            font-weight: 600;
+        }
+    
+        & > strong {
+            display: block;
+        }
+    }
+}
+
+.tech-popup {
+    overflow: auto;
+    padding: 24px;
+
+    @include sm {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    // .tech-popup__carousel
+    &__carousel {
+        margin-bottom: 24px;
+
+        .swiper-slide {
+            img {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                height: 250px;
+                border-radius: 10px;
+            }
+        }
+
+        .swiper-arrows-with-pagination {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 16px;
+        }
+    
+        .swiper-pagination {
+            position: static;
+            width: auto;
+        }
+        
+    }
+
+    // .tech-popup__icons
+    &__icons {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 24px;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            line-height: 1;
+            text-align: center;
+            border-radius: 5px;
+            background: #f6f6f7;
+        }
+
+        span {
+            max-width: 90px;
+        }
+    }
+
+    // .tech-popup__text
+    &__text {
+        h6 {
+            margin-bottom: 10px;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 2rem;
+        }
+
+        li {
+            list-style: initial;
+        }
+    }
+}

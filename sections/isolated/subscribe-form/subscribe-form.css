@@ -1,0 +1,6 @@
+/*=================================== Subscribe form ======================*/
+.qure__subcribe-submit .qure__subcribe-input{border-top-right-radius:0!important;border-bottom-right-radius:0!important;padding-left:30px;border:none;}
+.qure__subcribe-submit .qure__subcribe-button,.qure__subcribe-submit .qure__subcribe-button:active{background:#fff;color:#212428;    border-radius: 0 50px 50px 0px;padding-right:30px;font-size:20px;border:none}
+.quer__social{gap:0 20px}
+.quer__social .social-link{color:var(--white-color);font-size:32px;text-decoration:none}
+.quer__social .social-link:hover{color:var(--base-color)}

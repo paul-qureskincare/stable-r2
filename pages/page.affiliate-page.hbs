@@ -1,0 +1,124 @@
+{{#> default
+    title="Affiliate"
+    body-class="page.affiliate-page"
+}}
+
+{{#> section-stack }}
+    {{> content-creator }}
+
+    {{#> how-to-use
+        classes="how-to-use--center"
+        title="How does it work?"
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.1,
+                "spaceBetween": 16,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 32
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <picture data-index="1">
+                        <img src="sections/isolated/quick-and-easy/images/w-1.webp" alt="Apply" />
+                    </picture>
+                    <article>
+                        <h6>Apply</h6>
+                        <p>If we're the perfect match, we'll send you an email packed with all the deets on how to make the most out of the Qure Creator Program.</p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="2">
+                        <img src="sections/isolated/quick-and-easy/images/w-2.webp" alt="Claim your gift" />
+                    </picture>
+                    <article>
+                        <h6>Claim your gift</h6>
+                        <p>Inside our partner app, Social Snowball, you can snag your first Qure product and be one step closer to the glowiest skin.</p>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-index="3">
+                        <img src="sections/isolated/quick-and-easy/images/w-3.webp" alt="Share your content" />
+                    </picture>
+                    <article>
+                        <h6>Share your content</h6>
+                        <p>Time to share the secret to that radiant glow! Create your Qure review and share it with your audience on social media.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    {{/how-to-use }}
+
+    {{#> why-should-join
+        title="Why should you join?"
+    }}
+        <ul>
+            {{#parseJson
+                '[
+                    {
+                        "icon": "earn-money",
+                        "title": "Earn Money",
+                        "text": "A competitive % commission per sale"
+                    },
+                    {
+                        "icon": "access-creatives",
+                        "title": "Access to Creatives",
+                        "text": "Shared creatives and graphics so you are set up for success"
+                    },
+                    {
+                        "icon": "exclusive-perks",
+                        "title": "Exclusive Perks",
+                        "text": "Receive free products, bonuses, and first access to new products, promotions and VIP campaigns"
+                    },
+                    {
+                        "icon": "social-collabs",
+                        "title": "Social Collabs",
+                        "text": "Opportunity to be featured on Qure Skincare social media channels and boost your exposure"
+                    },
+                    {
+                        "icon": "special-discounts",
+                        "title": "Special Discounts",
+                        "text": "Exclusive discounts & offers to share with your friends, family, and followers"
+                    },
+                    {
+                        "icon": "ambassador-manager",
+                        "title": "Dedicated Ambassador Manager",
+                        "text": "To help you understand how to grow your following, get the most out of the program and progress at an individual level"
+                    }
+                ]'
+            }}
+                <li>
+                    <div>{{> e-icon icon=icon }}</div>
+                    <strong>{{ title }}</strong>
+                    <small>{{ text }}</small>
+                </li>
+            {{/parseJson}}
+        </ul>
+    {{/why-should-join }}
+
+    {{> apply-to-join
+        title="Apply to Join the Qure Creator Program"
+    }}
+{{/section-stack }}
+
+{{/default }}

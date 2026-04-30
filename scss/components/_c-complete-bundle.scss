@@ -1,0 +1,78 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@elements/e-progress" as *;
+
+.c-complete-bundle {
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr 43px 1fr;
+    gap: 8px 24px;
+    align-items: center;
+    width: min(414px, 100%);
+    margin: 0 auto;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+
+    @include sm {
+        row-gap: 4px;
+    }
+
+    img {
+        @include img-fluid;
+    }
+
+    p,
+    .e-progress {
+        grid-column: 1 / -1;
+    }
+
+    p {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 16px;
+        line-height: 1.25;
+
+        @include sm {
+            gap: 8px;
+        }
+    }
+
+    figure {
+        position: relative;
+        padding: 16px;
+
+        @include sm {
+            padding: 12px;
+        }
+    }
+
+    .e-pill-badge {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        gap: 4px;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #ff5429;
+        text-transform: uppercase;
+        border-radius: 5px;
+        // background: #ffeeea;
+    }
+
+    .e-icon {
+        width: 42px;
+        height: 42px;
+        padding: 11px;
+        color: #8b8c8e;
+        font-size: 20px;
+        border-radius: 50%;
+        background: #f6f6f7;
+    }
+
+    .e-progress {
+        margin-top: 16px;
+    }
+}

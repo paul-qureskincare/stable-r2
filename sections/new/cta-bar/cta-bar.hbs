@@ -1,0 +1,53 @@
+<!-- CTA BAR -->
+<link rel="stylesheet" href="sections/new/cta-bar/cta-bar.css" />
+<section class="cta-bar {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        {{#if name }}
+            <h6 class="cta-bar__title">{{ name }}</h6>
+        {{/if}}
+        {{#if color-selector }}
+            <div class="cta-bar__content">
+                <div class="cta-bar__selector" data-label="Select Option">
+                    <button type="button">White</button>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" name="cta-color" value="white" checked />
+                                <span>White</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="cta-color" value="black" />
+                                <span>Black</span>
+                            </label>
+                        </li>
+                        {{#unless hide-silver }}
+                            <li>
+                                <label>
+                                    <input type="radio" name="cta-color" value="silver" />
+                                    <span>Silver</span>
+                                </label>
+                            </li>
+                        {{/unless}}
+                    </ul>
+                </div>
+            </div>
+        {{/if}}
+        {{#if qty-selector }}
+            <div class="cta-bar__content">
+                {{> @partial-block }}
+            </div>
+        {{/if}}
+        <div class="cta-bar__button">
+            <button class="btn btn--primary" type="button">{{ button }}</button>
+        </div>
+    </div>
+    <div class="cta-bar__bottom">580 Units Reserved in last 48 hours</div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('cta-bar', 'sections/new/cta-bar/cta-bar.js');
+    });
+</script>
+<!-- CTA BAR END -->

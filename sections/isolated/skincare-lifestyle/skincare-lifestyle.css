@@ -1,0 +1,32 @@
+.skincare_lifestyle .stepper {
+  align-items: center;
+}
+.skincare_lifestyle .step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #8B8C8E;
+  color: #000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 36px;
+}
+.skincare_lifestyle .line {
+  width: 1%;
+  background: #8B8C8E;
+  height: 73px;
+}
+.skincare_lifestyle .nav-pills .nav-link.active, .skincare_lifestyle .nav-pills .show>.nav-link {
+    background-color: #C7E5DB;
+    color: #212428;
+}
+.skin_life_content p{
+    margin-bottom: 0;
+}
+.active_mob{
+    background: #C7E5DB;
+}

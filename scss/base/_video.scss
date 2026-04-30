@@ -1,0 +1,114 @@
+@use "@root/mixins" as *;
+
+/* stylelint-disable */
+.lvideo-wrap {
+    position: fixed;
+    height: 100dvh;
+    z-index: 9991;
+    opacity: 0;
+    visibility: hidden;
+    background: rgb(0 0 0 / 15%);
+}
+.lvideo-wrap, .lvideo-wrap:after,
+.lvideo-wrap .lvideo-overlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+.lvideo-wrap:after,
+.lvideo-wrap .lvideo-overlay {
+    height: 100%;
+    position: absolute;
+}
+.lvideo-wrap:after {
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    opacity: 0;
+    z-index: -1;
+}
+.lvideo-wrap .lvideo-container {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lvideo-wrap video,
+.lvideo-wrap iframe {
+    border-radius: 12px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #000;
+    z-index: 10;
+    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);
+    display: block;
+    max-width: 1280px;
+    height: auto;
+    width: 90%;
+    aspect-ratio: 16/9;
+}
+.lvideo-wrap video {
+    object-fit: cover;
+}
+.lvideo-wrap .lvideo-close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    z-index: 150;
+}
+
+.lvideo-wrap .lvideo-close:focus {
+    outline: none;
+}
+.lvideo-active  .lvideo-wrap {
+    opacity: 1;
+    visibility: visible;
+}
+.lvideo-active .lvideo-wrap:after {
+    opacity: 0.5;
+}
+
+/* -------------------- Wistia Video start --------------------  */
+[id$=".big_play_button_graphic"] {
+    top: 50% !important;
+    left: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68' viewBox='0 0 68 68' fill='none'%3E%3Crect x='0.75' y='0.565918' width='67' height='67' rx='33.5' fill='black' fill-opacity='0.35'/%3E%3Cpath d='M34.016 7.56592C19.5408 7.56592 7.75 19.2861 7.75 33.6745C7.75 48.0629 19.5408 59.7831 34.016 59.7831C48.4912 59.7831 60.282 48.0629 60.282 33.6745C60.282 19.2861 48.4912 7.56592 34.016 7.56592ZM34.016 12.7876C45.6522 12.7876 55.0288 22.1081 55.0288 33.6745C55.0288 45.2409 45.6522 54.5614 34.016 54.5614C22.3799 54.5614 13.0032 45.2409 13.0032 33.6745C13.0032 22.1081 22.3799 12.7876 34.016 12.7876ZM28.7628 24.6283V42.7207L44.5224 33.6745L28.7628 24.6283Z' fill='white'/%3E%3C/svg%3E") !important;
+    background-position: center center;
+    background-size: cover !important;
+    background-repeat: no-repeat no-repeat;
+    transform: translate(-50%, -50%) !important;
+}
+
+.w-css-reset-tree .w-big-play-button {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68' viewBox='0 0 68 68' fill='none'%3E%3Crect x='0.75' y='0.565918' width='67' height='67' rx='33.5' fill='black' fill-opacity='0.35'/%3E%3Cpath d='M34.016 7.56592C19.5408 7.56592 7.75 19.2861 7.75 33.6745C7.75 48.0629 19.5408 59.7831 34.016 59.7831C48.4912 59.7831 60.282 48.0629 60.282 33.6745C60.282 19.2861 48.4912 7.56592 34.016 7.56592ZM34.016 12.7876C45.6522 12.7876 55.0288 22.1081 55.0288 33.6745C55.0288 45.2409 45.6522 54.5614 34.016 54.5614C22.3799 54.5614 13.0032 45.2409 13.0032 33.6745C13.0032 22.1081 22.3799 12.7876 34.016 12.7876ZM28.7628 24.6283V42.7207L44.5224 33.6745L28.7628 24.6283Z' fill='white'/%3E%3C/svg%3E") !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat no-repeat !important;
+}
+
+[id$=".big_play_button_background"] {
+    width: 60px !important;
+    height: 60px !important;
+    background-color: transparent !important;
+}
+
+.w-css-reset-tree div {
+    background-color: transparent !important;
+}
+
+.w-css-reset-tree  svg path {
+    fill: transparent !important;
+}

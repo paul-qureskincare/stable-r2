@@ -1,0 +1,15 @@
+@mixin pulse {
+    animation: pulse 2s infinite;
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgb(255 84 41 / 70%);
+            transform: scale(1);
+        }
+
+        100% {
+            box-shadow: 0 0 0 8px rgb(255 84 41 / 0%);
+            transform: scale(1.1);
+        }
+    }
+}

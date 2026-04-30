@@ -1,0 +1,32 @@
+/* ====================== Section column slider with text ====================== */
+.card.skin-card {
+    --bs-card-inner-border-radius: 8px;
+    --bs-card-border-radius: 8px;
+    --bs-card-spacer-y:20px;
+    --bs-card-spacer-x:20px;
+    border:none;
+} 
+.card-body.skin-card-body {
+    padding: var(--bs-card-spacer-y, 20px) var(--bs-card-spacer-x, 20px);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.card-body.skin-card-body .card-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.cause__list span {
+    background: #F6F6F7;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.cause__list span + span {
+    margin-left: 8px;
+}
+
+
+
+/*====================Section qure logo =========================*/

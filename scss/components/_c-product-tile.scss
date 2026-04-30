@@ -1,0 +1,128 @@
+@use "@root/mixins" as *;
+@use "@elements/e-rating-stars" as *;
+@use "@elements/e-pill-badge" as *;
+
+.c-product-tile {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include sm {
+        gap: 8px;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
+        }
+    }
+
+    // .c-product-tile__image
+    &__image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            @include img-fluid;
+        }
+
+        @include hover {
+            &::after {
+                visibility: visible;
+                transform: scale(1.02);
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            visibility: hidden;
+            background: var(--image-on-hover);
+            background-size: cover;
+            opacity: 0;
+            content: '';
+            @include transition;
+        }
+
+        & > .e-pill-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            text-decoration: none;
+
+            &:not(.e-pill-badge--fill) {
+                background: hsl(from currentcolor h s calc(l + 35));
+            }
+        }
+    }
+
+    // .c-product-tile__time
+    &__time {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        z-index: 2;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        .e-pill-badge {
+            gap: 4px;
+            padding: 0 8px;
+            color: #212428;
+            font-size: 12px;
+            text-transform: uppercase;
+            background: #f6f6f7;
+        }
+    }
+
+    // .c-product-tile__rating
+    &__rating {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    &__name {
+        font-family: inherit;
+        font-weight: 600;
+    }
+
+    // .c-product-tile__desc
+    &__desc {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    // .c-product-tile__price
+    &__price {
+        margin-top: auto;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    // .c-product-tile__button
+    &__button {
+        .btn {
+            width: 100%;
+
+            @include sm {
+                display: none;
+            }
+        }
+    }
+}

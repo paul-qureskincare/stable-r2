@@ -1,0 +1,170 @@
+.qure__policies h2 {
+    text-transform: capitalize;
+}
+
+.qure__policies p {
+    font-size: 18px;
+    line-height: 24px;
+}
+.qure__policies .subscriptions_header {
+    max-width: 714px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.qure__policies .subscriptions_header .subscription_subheadline {
+    font-family: 'Canela Web';
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 0.36px;
+    margin-bottom: 30px;
+}
+
+.qure__policies .subscriptions_header .subscription_subtext {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.qure__policies .subscriptions_header .subscription_subtext:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.qure__policies .subscriptions_content p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.qure__policies .cancel_section p:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.qure__policies .subscriptions_content {
+    padding-bottom: 23px;
+    padding-top:12px;
+}
+
+/* .qure__policies .cancel_section {
+    padding: 12px 0;
+} */
+.qure__policies .cancel_section:last-child{
+    padding-bottom: 0;
+}
+.qure__policies .cancel_section h2, .qure__policies .cancel_section h3, .qure__policies .cancel_section h4, 
+.qure__policies .cancel_section h5, .qure__policies .cancel_section h6 { 
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-family: var(--base-font-family);
+}
+
+.qure__policies a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.qure__policies ul li {
+    list-style: disc;
+    word-break: break-word;
+}
+
+.qure__policies .nested_li li {
+    padding-top: 20px;
+    list-style-type: disc;
+}
+
+.qure__policies ._abc ul li {
+    list-style: lower-alpha;
+    padding-bottom: 10px;
+}
+
+.qure__policies ul,
+.qure__policies ol {
+    padding-left: 20px;
+    /* margin-bottom: 25px; */
+}
+.qure__policies ul li, .qure__policies ol li {
+    list-style: none;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom:10px;
+    font-family: var(--base-font-family);
+}
+.qure__policies ul li:before, .qure__policies ol li:before {
+    content: '';
+    content: '';
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    background: #212428;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    border-radius: 10px;
+}
+.qure__policies .header_content {
+    font-weight: bold;
+}
+p:not(:only-of-type){
+    margin-bottom: 1.5;
+}
+body.page .cancel_section{
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .qure__policies {
+        /* margin: 40px 0; */
+        margin-bottom: 70px;
+    }
+
+    .qure__policies .subscriptions_header {
+        text-align: start !important;
+        margin-bottom: 00px;
+    }
+
+    .qure__policies .subscriptions_header .subscription_subheadline {
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 0.28px;
+    }
+
+    .qure__policies .subscriptions_header .subscription_subtext {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.16px;
+        font-weight: 600;
+    }
+
+    .qure__policies .header_content {
+        font-weight: normal;
+    }
+
+    .qure__policies ul {
+        padding-left: 30px;
+    }
+
+    .qure__policies ol {
+        padding-left: 1rem;
+    }
+
+    .qure__policies ul li {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .qure__policies .cancel_section h6,
+    .qure__policies ul li:not(:last-child) {
+        margin-bottom: 22px;
+    }
+
+    .qure__policies .cancel_section p:not(:last-child),
+    .qure__policies ul:not(:last-child) {
+        margin-bottom: 22px;
+    }
+
+    .cancel_section ul li{
+    font-size: 18px;
+}
+}

@@ -1,0 +1,200 @@
+.how-compares{
+  --section-padding-top:60px;
+  --section-padding-top-mob:30px;
+  --section-padding-bottom:60px;
+  --section-padding-bottom-mob:30px;
+  background:#f6f6f7;
+}
+.how-compares__header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:32px;
+}
+.how-compares__title{
+  margin-bottom:0;
+}
+.how-compares__select{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.how-compares__select span{
+  color:#8b8c8e;
+}
+.how-compares__select select{
+  padding:10px 42px 10px 16px;
+  color:#212428;
+  border-radius:40px;
+  background:#fff url(/assets/images/arrow_down.svg) calc(100% - 16px) 50% no-repeat;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+}
+.how-compares__select select:focus{
+  border-color:#dfe0e0;
+}
+.how-compares__data-content{
+  display:grid;
+  grid-template-columns:44% 1fr;
+  gap:clamp(40px, 7%, 60px);
+  align-items:center;
+}
+.how-compares__parameters,.how-compares__parameters ul{
+  display:flex;
+  flex-direction:column;
+}
+.how-compares__parameters ul{
+  gap:30px;
+}
+.how-compares__parameters li{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.how-compares__parameters span{
+  color:#8b8c8e;
+}
+.how-compares__parameters h3{
+  margin-bottom:0;
+  color:transparent;
+  font-family:inherit;
+  font-weight:600;
+  background:linear-gradient(90deg, #ff5f37, #ab0605);
+  -webkit-background-clip:text;
+          background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.how-compares__parameters p{
+  font-size:20px;
+}
+.how-compares__parameters small{
+  margin-top:30px;
+  color:#8b8c8e;
+  font-size:14px;
+  line-height:1.25;
+}
+.how-compares__table{
+  display:grid;
+  grid-template:auto/115px repeat(2, 1fr);
+  gap:14px 16px;
+  align-items:center;
+}
+.how-compares__table .table-header{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+  margin-bottom:20px;
+}
+.how-compares__table .table-header-image{
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:auto;
+  height:60px;
+}
+.how-compares__table .table-header-name{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  align-items:center;
+}
+.how-compares__table .table-header-name img{
+  width:auto;
+  height:22px;
+  vertical-align:top;
+}
+.how-compares__table .table-label{
+  font-size:16px;
+}
+.how-compares__table .table-label+.table-data .fa{
+  color:#ff5429;
+}
+.how-compares__table .table-data-benefit{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:12px;
+  border:1px solid #dfe0e0;
+  border-radius:5px;
+  background:#fff;
+}
+.how-compares__table .table-data-benefit .fa{
+  color:#8b8c8e;
+  font-size:20px;
+  line-height:1;
+  vertical-align:top;
+}
+.how-compares__declaimer{
+  display:none;
+  margin-top:20px;
+  color:#8b8c8e;
+  font-size:14px;
+  line-height:1.25;
+}
+@media screen and (max-width:1120px){
+  .how-compares__data-content{
+    grid-template-columns:34% 1fr;
+  }
+}
+@media screen and (max-width:991px){
+  .how-compares__parameters h3{
+    font-size:32px;
+  }
+  .how-compares__table{
+    grid-template-columns:repeat(2, 1fr);
+    row-gap:12px;
+  }
+  .how-compares__table .table-header{
+    margin-bottom:0;
+  }
+  .how-compares__table .table-header:first-child{
+    display:none;
+  }
+  .how-compares__table .table-label{
+    grid-column:1 /  -1;
+    margin-bottom:-8px;
+    padding:0 6px;
+    font-size:14px;
+    border:1px solid #dfe0e0;
+    border-radius:3px;
+    background:#fff;
+  }
+  .how-compares__table .table-data-benefit{
+    font-size:16px;
+  }
+}
+@media screen and (max-width:767px){
+  .how-compares__header{
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  .how-compares__select{
+    flex-direction:column;
+    gap:8px;
+    align-items:flex-start;
+  }
+  .how-compares__select select{
+    width:100%;
+  }
+  .how-compares__data-content{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .how-compares__parameters{
+    padding-bottom:18px;
+    border-bottom:1px solid #dfe0e0;
+  }
+  .how-compares__parameters small{
+    display:none;
+  }
+  .how-compares__table .table-header-name{
+    font-size:16px;
+  }
+  .how-compares__table .table-data-benefit .fa{
+    font-size:18px;
+  }
+  .how-compares__declaimer{
+    display:block;
+  }
+}

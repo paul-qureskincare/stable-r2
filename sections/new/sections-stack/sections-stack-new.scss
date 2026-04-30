@@ -1,0 +1,247 @@
+@use "@root/mixins" as *;
+
+@mixin sections-stack {
+    .sections-stack {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        &,
+        // .sections-stack__sub-stack
+        &__sub-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+
+            @include md {
+                gap: 40px;
+            }
+        }
+
+        &:has(.guide-menu, .faqs-menu) {
+            flex-flow: row wrap;
+
+            .across-image-banner,
+            .base-section,
+            .shopify-section {
+                width: 100%;
+            }
+        }
+
+        &:has(.guide-menu) {
+            .intro-section {
+                @include md {
+                    margin-bottom: -40px;
+                }
+            }
+        }
+    }
+}
+
+/* stylelint-disable selector-class-pattern */
+body[class="collection"],
+.collection\.best-sellers,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.collection\.acne-breakouts,
+.collection\.acne-breakouts,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.page\.derm-reviews,
+.page\.q-rejuvalight-pro-reviews,
+.page\.neck-decolletage-led-reviews,
+.page\.neck-decolletage-led-pro-content-guide,
+.page\.face-serum-reviews,
+.page\.micro-infusion-targeted-patches-reviews,
+.page\.micro-infusion-brief,
+.page\.microinfusion-safety-guide,
+.page\.q-rejuvalight-pro-led-mask-guide,
+.page\.q-rejuvalight-pro-welcome,
+.page\.q-rejuvalight-pro-content-guide,
+.page\.n-d-quickstart-guide,
+.page\.micro-infusion-patches-content-guide,
+.page\.microinfusion-safety-guide-v15,
+.page\.shower-creative-brief,
+.page\.faucet-creative-brief,
+.page\.dermal-mist-brief,
+.page\.all-in-one-face-serum-creative-content-guide,
+.page\.faucet-online-guide,
+.page\.shower-filter-online-guide,
+.page\.hairgrowth-helmet-brief,
+.page\.hairgrowth-helmet-guide,
+.page\.hairgrowth-helmet-welcome,
+.page\.faqs,
+.page\.qure-microinfusion-offer-listicle,
+.page\.reviews,
+.page\.q-rejuvalight-pro-customer-reviews,
+.page\.neck-decolletage-led-customer-reviews,
+.page\.all-in-one-serum-customer-reviews,
+.page\.micro-infusion-targeted-patches-customer-reviews,
+.page\.qure-microinfusion-pro-offer,
+.page\.qure-microinfusion-offer-men,
+.page\.qure-microinfusion-offer,
+.page\.micro-infusion-acne,
+.page\.micro-infusion-dark-spots,
+.page\.microinfusion,
+.page\.affiliate-page,
+.page\.products-guide-page,
+.page\.contact-us,
+.page\.become-stockist,
+.page\.our-story,
+.page\.qure-skincare-app,
+.page\.personalized-skin-care-plan,
+.page\.personalized-skin-care-plan-dark-spots,
+.page\.personalized-skin-care-plan-acne,
+.page\.exclusive-holiday-bundle-deal,
+.page\.exclusive-holiday-bundle-deal-v2,
+.page\.qure-filters-offer,
+.page\.led-mask-offer,
+.page\.led-mask-offer-2,
+.page\.micro-infusion-faq-page,
+.page\.micro-infusion-faq-page-2,
+.page\.returns-exchanges,
+.page\.hair-growth-helmet-red-light,
+.page\.hair-growth-helmet-alopecia,
+.page\.hair-growth-helmet-menopause,
+body[class="product"],
+.product\.silk-pillowcase,
+.product\.faucet-filter,
+.product\.faucet-filter-replacement,
+.product\.shower-filter,
+.product\.shower-filter-replacement,
+.product\.dermal-mist,
+.product\.face-serum,
+.product\.micro-infusion-targeted-patches,
+.product\.q-rejuvalight-pro-facewear,
+.product\.neck-decolletage-led,
+.product\.hair-growth-helmet,
+.product\.bundle-red-light,
+.product\.gift-card,
+.product\.bundle-mi,
+.product\.bundle-preorder-mi,
+.product\.bundle,
+.product\.cleanser,
+.article,
+.blog,
+.index,
+.cart,
+.page,
+body[class*="404"] {
+    @include sections-stack;
+}
+
+.collection\.best-sellers,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.collection\.acne-breakouts,
+.page\.derm-reviews,
+.page\.q-rejuvalight-pro-reviews,
+.page\.neck-decolletage-led-reviews,
+.page\.neck-decolletage-led-pro-content-guide,
+.page\.face-serum-reviews,
+.page\.micro-infusion-targeted-patches-reviews,
+.page\.q-rejuvalight-pro-content-guide,
+.page\.microinfusion-safety-guide,
+.page\.micro-infusion-brief,
+.page\.q-rejuvalight-pro-led-mask-guide,
+.page\.n-d-quickstart-guide,
+.page\.micro-infusion-patches-content-guide,
+.page\.microinfusion-safety-guide-v15,
+.page\.shower-creative-brief,
+.page\.faucet-creative-brief,
+.page\.dermal-mist-brief,
+.page\.all-in-one-face-serum-creative-content-guide,
+.page\.faucet-online-guide,
+.page\.shower-filter-online-guide,
+.page\.hairgrowth-helmet-brief,
+.page\.hairgrowth-helmet-guide,
+.page\.qure-microinfusion-offer-listicle,
+.page\.qure-microinfusion-offer:has(.hero-section),
+.page\.reviews,
+.page\.q-rejuvalight-pro-customer-reviews,
+.page\.neck-decolletage-led-customer-reviews,
+.page\.all-in-one-serum-customer-reviews,
+.page\.micro-infusion-targeted-patches-customer-reviews,
+.page\.qure-microinfusion-pro-offer,
+.page\.affiliate-page,
+.page\.become-stockist,
+.page\.our-story,
+.page\.qure-skincare-app,
+.page\.returns-exchanges,
+.index {
+    .sections-stack {
+        padding-top: 0;
+
+        @include sm {
+            padding-top: 0;
+        }
+    }
+}
+
+.collection\.best-sellers,
+.collection\.dark-spots-uneven-skin,
+.collection\.fine-lines-wrinkles,
+.collection\.acne-breakouts,
+.page\.neck-decolletage-led-pro-content-guide,
+.page\.micro-infusion-brief,
+.page\.q-rejuvalight-pro-content-guide,
+.page\.q-rejuvalight-pro-welcome,
+.page\.shower-creative-brief,
+.page\.faucet-creative-brief,
+.page\.dermal-mist-brief,
+.page\.all-in-one-face-serum-creative-content-guide,
+.page\.hairgrowth-helmet-welcome,
+.page\.qure-microinfusion-offer-listicle,
+.page\.qure-microinfusion-pro-offer,
+.page\.qure-microinfusion-offer-men,
+.page\.qure-microinfusion-offer,
+.page\.micro-infusion-acne,
+.page\.micro-infusion-dark-spots,
+.page\.microinfusion,
+.page\.contact-us,
+.page\.personalized-skin-care-plan,
+.page\.personalized-skin-care-plan-dark-spots,
+.page\.personalized-skin-care-plan-acne,
+.page\.exclusive-holiday-bundle-deal,
+.page\.exclusive-holiday-bundle-deal-v2,
+.page\.qure-filters-offer,
+.page\.returns-exchanges,
+.page\.led-mask-offer,
+.page\.led-mask-offer-2,
+.page\.hair-growth-helmet-red-light,
+.page\.hair-growth-helmet-alopecia,
+.page\.hair-growth-helmet-menopause,
+.product\.silk-pillowcase,
+.product\.faucet-filter,
+.product\.faucet-filter-replacement,
+.product\.shower-filter,
+.product\.shower-filter-replacement,
+.product\.dermal-mist,
+.product\.face-serum,
+.product\.micro-infusion-targeted-patches,
+.product\.q-rejuvalight-pro-facewear,
+.product\.neck-decolletage-led,
+.product\.hair-growth-helmet,
+.product\.bundle-red-light,
+.product\.cleanser {
+    .sections-stack {
+        padding-bottom: 0;
+
+        @include sm {
+            padding-bottom: 0;
+        }
+    }
+}
+
+// Fix bug with CTA section
+.shopify-section {
+    &:has(.qure__sticky-atc),
+    &:has(.cta-bar),
+    &:has(.bundle-cta-bar) {
+        position: absolute;
+    }
+}

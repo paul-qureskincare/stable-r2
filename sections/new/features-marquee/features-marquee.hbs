@@ -1,0 +1,30 @@
+<!-- FEATURES MARQUEE -->
+<link rel="stylesheet" href="sections/new/features-marquee/features-marquee.css" />
+<div class="features-marquee">
+    <div class="container" id="features-marquee-container">
+        <ul class="features-marquee__list">
+            <li>
+                {{> e-icon icon="shipping-order" }}
+                Free Shipping On<br /> Orders Over {$dyn}
+            </li>
+            <li>
+                {{> e-icon icon="reviewed" }}
+                Dermatologist<br /> Reviewed
+            </li>
+            <li>
+                {{> e-icon icon="pay-later" }}
+                Buy Now, Pay Later<br /> Options Available
+            </li>
+            <li>
+                {{> e-icon icon="proven" }}
+                Proven Results,<br /> Backed By Science
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('features-marquee', 'sections/new/features-marquee/features-marquee.js');
+    });
+</script>
+<!-- FEATURES MARQUEE END -->

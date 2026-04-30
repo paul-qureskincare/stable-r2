@@ -1,0 +1,19 @@
+<!-- ANNOUNCEMENT BAR -->
+<link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
+<div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
+    <div class="container">
+        <div class="announcement-bar-content text-center">
+            {{#if @partial-block}}
+                {{> @partial-block}}
+            {{else}}
+                FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('countdown', 'assets/js-new/countdown.js');
+    });
+</script>
+<!-- ANNOUNCEMENT BAR END -->

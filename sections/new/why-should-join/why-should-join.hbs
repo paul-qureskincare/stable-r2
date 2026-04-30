@@ -1,0 +1,15 @@
+<!-- WHY SHOULD JOIN -->
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/why-should-join/why-should-join.css" />
+{{/unless}}
+<section class="why-should-join {{ classes }}">
+    <div class="container">
+        <article>
+            {{#if title }}
+                <h2>{{ title }}</h2>
+            {{/if}}
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<!-- WHY SHOULD JOIN END -->

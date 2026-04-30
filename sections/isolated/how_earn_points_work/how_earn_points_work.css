@@ -1,0 +1,22 @@
+.how_earn_heading p:first-child{
+    color: var(--Charcoal, #212428);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; 
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.how_earn_heading p+p{
+    color: var(--Charcoal, #212428);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; 
+}
+.one_usd_one_point {
+    padding: 6px 12px;
+    border-radius: 100px;
+    background: var(--Mist, #F6F6F7);
+    max-width: 111px;
+    font-size: 14px !important;
+}

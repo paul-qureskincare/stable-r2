@@ -1,0 +1,120 @@
+@use "@root/mixins" as *;
+
+.c-step-by-step {
+    $root: &;
+
+    &__title {
+        margin-bottom: 28px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    &__list {
+        ol {
+            @include numeric-list;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        min-height: 165px;
+        border: 1px solid #dfe0e0;
+        border-radius: 10px;
+
+        &:has(picture) {
+            min-height: 224px;
+        }
+
+        @include sm {
+            flex-direction: column;
+        }
+
+        &[data-index] {
+            &::before {
+                top: 12px;
+                left: 12px;
+                font-size: 20px;
+                @include index-number;
+                content: attr(data-index);
+            }
+        }
+
+        picture {
+            position: relative;
+            flex: 0 0 250px;
+            align-self: stretch;
+
+            @include sm {
+                flex-basis: 180px;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+
+        article {
+            padding: 28px 32px;
+
+            @include sm {
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                padding: 20px 24px;
+            }
+        }
+
+        h6 {
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        a {
+            color: #91baec;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .c-note {
+            margin-top: 15px;
+
+            @include sm {
+                margin-top: auto;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        flex-direction: column;
+        gap: 16px;
+
+        @include sm {
+            flex-direction: row;
+            gap: 0;
+        }
+    }
+
+    .swiper-slide {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .c-swiper-nav {
+        display: none;
+
+        @include sm {
+            display: flex;
+        }
+    }
+}

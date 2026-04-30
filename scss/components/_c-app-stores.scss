@@ -1,0 +1,24 @@
+@use "@root/mixins" as *;
+
+.c-app-stores {
+    $root: &;
+
+    display: inline-flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+
+    // .c-app-stores--row
+    &--row {
+        flex-direction: row;
+    }
+}

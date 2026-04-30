@@ -1,0 +1,134 @@
+// TODO: Can to remove, when bundles page will be updated
+
+@use "@root/mixins" as *;
+@use "@elements/e-rating-stars" as *;
+@use "@elements/e-price" as *;
+@use "@elements/e-pay-options" as *;
+@use "@elements/e-pill-save" as *;
+
+.c-bundle-card {
+    position: relative;
+    border: 1px solid #dfe0e0;
+    border-radius: 10px;
+
+    // .c-bundle-card__discount
+    &__discount {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+
+        @include sm {
+            top: 4px;
+            right: 6px;
+            font-size: 12px;
+        }
+    }
+
+    // .c-bundle-card__picture
+    &__picture {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+
+        img {
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    // .c-bundle-card__content
+    &__content {
+        padding: 16px;
+
+        @include sm {
+            padding: 12px;
+        }
+    }
+
+    // .c-bundle-card__details
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+
+        @include sm {
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+    }
+
+    // .c-bundle-card__rating
+    &__rating {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-size: 16px;
+        line-height: 1;
+
+        @include sm {
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        small {
+            font-size: max(0.875em, 12px);
+        }
+    }
+
+    // .c-bundle-card__name
+    &__name {
+        font-size: 20px;
+        line-height: 1.2;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    // .c-bundle-card__price
+    &__price {
+        font-size: 20px;
+        line-height: 1;
+
+        @include sm {
+            font-size: 14px;
+        }
+    }
+
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 6px;
+        align-items: center;
+
+        .e-pill-badge {
+            color: #227d5f;
+        }
+    }
+
+    // .c-bundle-card__button
+    &__button {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .btn {
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+
+            @include sm {
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 14px;
+            }
+        }
+
+        .e-pay-options {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}

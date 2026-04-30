@@ -1,0 +1,101 @@
+.why-carousel{
+  --section-padding-top:50px;
+  --section-padding-top-mob:30px;
+  --section-padding-bottom:30px;
+  --section-padding-bottom-mob:10px;
+}
+.why-carousel__content{
+  display:grid;
+  grid-template:repeat(2, auto)/repeat(2, 1fr);
+  grid-template-areas:"title button" "carousel carousel";
+  gap:32px;
+  align-items:center;
+}
+.why-carousel__title{
+  -ms-grid-row:1;
+  -ms-grid-column:1;
+  grid-area:title;
+  margin:0;
+}
+.why-carousel__carousel{
+  -ms-grid-row:3;
+  -ms-grid-column:1;
+  -ms-grid-column-span:3;
+  grid-area:carousel;
+  min-width:0;
+  margin-right:-15px;
+  margin-left:-15px;
+}
+.why-carousel__carousel .swiper-slide{
+  padding-right:15px;
+  padding-left:15px;
+}
+.why-carousel__carousel .swiper-arrows-with-pagination{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  justify-content:center;
+  margin-top:30px;
+}
+.why-carousel__carousel .swiper-arrows-with-pagination .swiper-pagination{
+  position:static;
+  width:auto;
+}
+.why-carousel__item{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:center;
+  padding:32px;
+  text-align:left;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.why-carousel__item img{
+  max-width:250px;
+  height:auto;
+  margin-bottom:4px;
+}
+.why-carousel__item h6{
+  width:100%;
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:600;
+}
+.why-carousel__button{
+  -ms-grid-row:1;
+  -ms-grid-column:3;
+  grid-area:button;
+  min-width:300px;
+  margin-left:auto;
+}
+@media screen and (min-width:1200px){
+  .why-carousel__carousel .swiper-arrows-with-pagination{
+    display:none;
+  }
+}
+@media screen and (max-width:767px){
+  .why-carousel__content{
+    grid-template:auto/auto;
+    grid-template-areas:"title" "carousel" "button";
+    gap:14px;
+  }
+  .why-carousel__carousel .swiper-arrows-with-pagination{
+    margin-top:20px;
+    margin-bottom:10px;
+  }
+  .why-carousel__title{
+    -ms-grid-row:1;
+    -ms-grid-column:1;
+  }
+  .why-carousel__carousel{
+    -ms-grid-row:3;
+    -ms-grid-column:1;
+    -ms-grid-column-span:1;
+  }
+  .why-carousel__button{
+    -ms-grid-row:5;
+    -ms-grid-column:1;
+    margin-left:0;
+  }
+}

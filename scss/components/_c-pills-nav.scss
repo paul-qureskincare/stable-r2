@@ -1,0 +1,30 @@
+@use "@root/mixins" as *;
+
+.c-pills-nav {
+    display: flex;
+    gap: 16px;
+    overflow: auto hidden;
+    max-width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @include md {
+        gap: 8px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    a, button {
+        @include pill-button;
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "@root/mixins" as *;
+
+.e-bundle-tag {
+    position: relative;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 16px;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+    strong {
+        padding: 4px 16px;
+        color: #fff;
+        background: var(--e-bundle-tag-color, #ff5429);
+    }
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: var(--e-bundle-tag-color, #ff5429);
+        opacity: 0.2;
+        content: '';
+    }
+}

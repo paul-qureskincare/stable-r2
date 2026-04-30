@@ -1,0 +1,52 @@
+@use "@root/mixins" as *;
+
+.c-trusted-video-card {
+    overflow: hidden;
+    border: 1px solid #dfe0e0;
+    border-radius: 10px;
+
+    picture {
+        display: block;
+
+        &[data-video-id],
+        &[data-url], {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    p  {
+        margin: 0;
+
+        &:has(.e-checkmark) {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-height: 200px;
+        padding: 24px;
+        font-size: 20px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            font-size: 16px;
+        }
+    }
+
+    .e-checkmark {
+        font-size: 14px;
+    }
+}

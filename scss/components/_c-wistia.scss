@@ -1,0 +1,71 @@
+@use "@root/mixins" as *;
+
+.c-wistia {
+    $root: &;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    wistia-player {
+        cursor: pointer;
+    }
+
+    // .c-wistia__play
+    &__play {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+        cursor: pointer;
+
+        .c-wistia--is-playing:not(:has([wistia-popover="true"])) & {
+            display: none;
+        }
+
+        &:empty {
+            @include play-icon;
+        }
+
+        &:has(.e-pill-badge) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 16px;
+        }
+
+        .e-pill-badge {
+            color: #212428;
+            background: rgb(255 255 255 / 70%);
+            @include transition;
+
+            &:hover {
+                background: #fff;
+            }
+        }
+    }
+
+    // .c-wistia__custom
+    &__custom {
+        a {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            color: inherit;
+
+            &:hover {
+                span {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        picture {
+            @include play-icon;
+
+            img {
+                @include img-fluid;
+                vertical-align: top;
+            }
+        }
+    }
+}

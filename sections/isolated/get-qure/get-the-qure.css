@@ -1,0 +1,15 @@
+.get-qure-img img {
+    width:100%;
+}
+@media(min-width:767px){
+    .get-qure-img{
+    height: var(--child-height);
+    }
+    .get-qure-img img {
+        height: var(--child-height);
+        border-radius: 10px;
+        width: 100%;
+        object-fit: cover;
+        object-position: left top;
+    }
+}

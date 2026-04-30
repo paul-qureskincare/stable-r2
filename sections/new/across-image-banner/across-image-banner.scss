@@ -1,0 +1,638 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@elements/e-discount-badge" as *;
+@use "@elements/e-features-list" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@components/c-certified-box" as *;
+@use "@components/c-app-stores" as *;
+@use "@components/c-buy-block" as *;
+@use "@components/c-marked-list" as *;
+@use "@components/c-dialog" as *;
+
+@mixin banner-height($height, $width) {
+    height: calc(100vw * $height / $width);
+    max-height: calc($height * 1px);
+}
+
+.across-image-banner {
+    $root: &;
+
+    position: relative;
+    z-index: 1;
+
+    body[class*="page.exclusive-holiday-bundle-deal"] & {
+        margin-bottom: -60px;
+
+        @include sm {
+            margin-bottom: -40px;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: min-content;
+        @include banner-height(500, 1440);
+
+        @include sm {
+            @include banner-height(500, 375);
+        }
+    }
+
+    // .across-image-banner__image
+    picture {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // .across-image-banner__content
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        max-width: 550px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @include sm {
+            max-width: none;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-bottom: 0;
+            color: inherit;
+        }
+
+        .btn {
+            margin-top: 5px;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+
+        small {
+            width: 100%;
+            max-width: 450px;
+            margin-top: -2px;
+            font-size: 16px;
+            line-height: 1;
+            text-align: center;
+
+            @include sm {
+                display: none;
+            }
+        }
+    }
+
+    // .across-image-banner--hero
+    &--hero {
+        &:has(.c-inline-product-box) {
+            margin-bottom: -60px;
+
+            @include sm {
+                margin-bottom: -40px;
+            }
+        }
+
+        .container {
+            @include sm {
+                justify-content: flex-start;
+            }
+
+            body[class*="index"] & {
+                @include sm {
+                    justify-content: center;
+                }
+            }
+        }
+
+        &:has(.c-buy-block) {
+            article {
+                @include sm {
+                    text-align: left;
+                }
+            }
+        }
+
+        article {
+            .btn {
+                max-width: 450px;
+
+                @include sm {
+                    margin: 0 auto;
+                }
+
+                body[class*="index"] & {
+                    @include sm {
+                        max-width: 265px;
+                    }
+                }
+            }
+
+            &:has(.c-inline-product-box) {
+                max-width: 565px;
+            }
+        }
+
+        .c-certified-box {
+            background: #fff;
+
+            @include sm {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .c-app-stores {
+            max-width: 300px;
+
+            @include sm {
+                align-self: center;
+            }
+        }
+
+        .c-inline-product-box {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 32px;
+            border-radius: 10px;
+            background: #fff;
+
+            @include sm {
+                margin-bottom: 200px;
+                padding: 24px 16px;
+            }
+
+            .e-price {
+                font-size: inherit;
+            }
+
+            .e-pill-save {
+                font-size: 16px;
+                background: #ff5429;
+            }
+
+            ul {
+                @include c-marked-list;
+                gap: 16px;
+            }
+
+            .c-buy-block {
+                max-width: none;
+            }
+
+            .btn {
+                padding-right: 16px;
+                padding-left: 16px;
+
+                @include sm {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .c-buy-block {
+            gap: 12px;
+            width: 100%;
+            max-width: 450px;
+            margin-top: 12px;
+
+            @include sm {
+                margin: 6px auto 0;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: none;
+                margin-top: 0;
+            }
+        }
+
+        body[class*="index"] & {
+            @include sm {
+                color: #fff;
+
+                .btn {
+                    --btn-primary-bg: #fff;
+                    --btn-primary-color: #212428;
+                }
+            }
+        }
+
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.q-rejuvalight-pro-customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.neck-decolletage-led-customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.all-in-one-serum-customer-reviews &,
+        /* stylelint-disable-next-line selector-class-pattern */
+        .page\.micro-infusion-targeted-patches-customer-reviews & {
+            .container {
+                @include banner-height(550, 1440);
+
+                @include sm {
+                    @include banner-height(400, 375);
+                }
+
+                align-items: center;
+                justify-content: start;
+            }
+
+            article {
+                flex-direction: column-reverse;
+                gap: 32px;
+                align-items: center;
+
+                @include sm {
+                    gap: 24px;
+                    padding-top: 50px;
+                }
+            }
+
+            .trustpilot-rating {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                ul {
+                    display: flex;
+                    gap: 2px;
+                    font-size: 24px;
+
+                    li {
+                        color: #dcdce6;
+                        line-height: 1;
+                        background: #fff;
+
+                        &:not(:last-child) {
+                            color: #73cf11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .across-image-banner--reverse
+    &--reverse {
+        .container {
+            align-items: flex-end;
+            @include banner-height(400, 1440);
+
+            @include sm {
+                justify-content: flex-end;
+                @include banner-height(400, 375);
+            }
+
+            article {
+                max-width: 605px;
+                font-size: 16px;
+
+                @include sm {
+                    color: #fff;
+                    text-align: left;
+                }
+
+                h6 {
+                    margin-bottom: 0;
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: inherit;
+                    font-weight: 600;
+
+                    & + p {
+                        margin-top: -16px;
+                    }
+                }
+            }
+
+            @at-root
+            .page\.micro-infusion-brief #{$root}--reverse,
+            .page\.shower-creative-brief #{$root}--reverse,
+            .page\.faucet-creative-brief #{$root}--reverse,
+            .page\.dermal-mist-brief #{$root}--reverse {
+                article {
+                    max-width: 440px;
+
+                    @include sm {
+                        max-width: none;
+                    }
+                }
+            }
+
+            @at-root
+            .page\.microinfusion-safety-guide #{$root}--reverse,
+            .page\.microinfusion-safety-guide-v15 #{$root}--reverse {
+                .container {
+                    position: relative;
+                }
+
+                article {
+                    max-width: 480px;
+
+                    @include xl {
+                        max-width: 540px;
+                    }
+
+                    @include sm {
+                        max-width: none;
+                    }
+
+                    h1, p {
+                        max-width: 340px;
+
+                        @include sm {
+                            max-width: 210px;
+                        }
+                    }
+                }
+
+                figure {
+                    position: absolute;
+                    right: -40px;
+                    bottom: -60px;
+                    width: 210px;
+
+                    @include xl {
+                        right: 16px;
+                    }
+
+                    @include lg {
+                        bottom: -40px;
+                    }
+
+                    @include md {
+                        width: 120px;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            @at-root
+            .page\.q-rejuvalight-pro-led-mask-guide #{$root}--reverse,
+            .page\.all-in-one-face-serum-creative-content-guide #{$root}--reverse,
+            .page\.hairgrowth-helmet-brief #{$root}--reverse {
+                article {
+                    max-width: 480px;
+
+                    @include md {
+                        max-width: 340px;
+                    }
+
+                    @include sm {
+                        max-width: none;
+                    }
+                }
+            }
+
+            @at-root .page\.q-rejuvalight-pro-led-mask-guide #{$root}--reverse {
+                article {
+                    @include md {
+                        max-width: 440px;
+                    }
+                }
+            }
+        }
+    }
+
+    &--text {
+        .container {
+            @include sm {
+                height: auto;
+                max-height: none;
+            }
+        }
+
+        picture {
+            @include sm {
+                position: static;
+            }
+        }
+
+        article {
+            display: block;
+
+            @include sm {
+                padding-top: 24px;
+                padding-bottom: 0;
+                text-align: left;
+            }
+
+            h2 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &--sm {
+        .container {
+            @include banner-height(270, 1440);
+
+            @include sm {
+                justify-content: flex-start;
+                @include banner-height(375, 563);
+            }
+        }
+    }
+
+    // .across-image-banner--holidays
+    &--holidays {
+        background: #f3f4f2;
+
+        .container {
+            @include banner-height(500, 1440);
+
+            @include sm {
+                height: auto;
+            }
+        }
+
+        picture {
+            @include sm {
+                position: static;
+            }
+        }
+
+        img {
+            @include sm {
+                object-position: top center;
+            }
+        }
+
+        article {
+            display: flex;
+            width: min(500px, 50%);
+            margin-left: auto;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            @include md {
+                gap: 10px;
+            }
+
+            @include sm {
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+
+            .e-pill-badge {
+                --badge-base-color: #ff5429;
+
+                padding: 4px 20px 2px;
+                text-transform: uppercase;
+
+                @include sm {
+                    margin: -55px auto 20px;
+                }
+            }
+
+            h1 {
+                font-size: 38px;
+                line-height: 1.1;
+
+                @include md {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                margin-bottom: 14px;
+
+                @include md {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 450px;
+                margin: 0;
+
+                @include sm {
+                    max-width: none;
+                }
+            }
+
+            small {
+                color: #707172;
+                font-size: 12px;
+            }
+        }
+
+        /* .e-discount-badge {
+            position: absolute;
+            top: 65px;
+            right: 38px;
+            font-size: 140px;
+
+            @include lg {
+                top: 40px;
+                right: 16px;
+                font-size: 90px;
+            }
+
+            @include sm {
+                display: none;
+            }
+        } */
+    }
+
+    // .across-image-banner--holidays-secondary
+    &--holidays-secondary {
+        article {
+            margin-left: 0;
+
+            @include sm {
+                text-align: left;
+            }
+
+            .e-pill-badge {
+                --badge-base-color: #212428;
+
+                padding: 4px 20px 2px;
+                text-transform: uppercase;
+                background: #c7e5db;
+
+                @include sm {
+                    margin: -55px 0 20px;
+                }
+            }
+
+            small {
+                color: #707172;
+                font-size: 16px;
+
+                @include sm {
+                    font-size: 14px;
+                }
+
+                em {
+                    color: #ff5429;
+                }
+
+                @include sm {
+                    display: block;
+                }
+            }
+        }
+
+
+    }
+
+    &--light-tech {
+        color: #fff;
+
+        .btn {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            max-width: 300px;
+
+            @include sm {
+                max-width: none;
+            }
+
+            .e-icon {
+                width: 18px;
+                height: 18px;
+                padding: 3px;
+                font-size: 8px;
+                border: 2px solid;
+                border-radius: 50%;
+                -webkit-text-stroke: 1px;
+            }
+        }
+
+        picture {
+            img {
+                filter: brightness(.5);
+            }
+        }
+    }
+
+
+}

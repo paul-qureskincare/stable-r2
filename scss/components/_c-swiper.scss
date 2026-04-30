@@ -1,0 +1,122 @@
+@use "@root/mixins" as *;
+
+.c-swiper {
+    $root: &;
+
+    overflow: hidden;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    .swiper-slide {
+        height: auto;
+
+        picture {
+            &[data-video-id],
+            &[data-url] {
+                cursor: pointer;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        &.swiper-slide-thumb-active {
+
+        }
+    }
+
+    // .c-swiper-nav
+    &-nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+
+        @include sm {
+            margin-top: 16px;
+        }
+
+        // .c-swiper-nav-disabled .c-swiper-nav
+        #{$root}-nav-disabled & {
+            display: none;
+        }
+    }
+
+    // .c-swiper-pagination
+    &-pagination {
+        display: flex;
+        gap: 10px;
+        width: auto;
+    }
+
+    // .c-swiper-thumbs-nav
+    &-thumbs-nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        overflow: unset;
+        width: auto;
+
+        .swiper-slide {
+            overflow: hidden;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.5;
+            @include transition(opacity);
+
+            &.swiper-slide-thumb-active {
+                border: 1px solid #212428;
+                cursor: default;
+                opacity: 1;
+            }
+        }
+    }
+
+    // .c-swiper-button-prev
+    // .c-swiper-button-next
+    &-button-prev,
+    &-button-next {
+        display: flex;
+        flex: 0 0 40px;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        color: #212428;
+        font-size: 12px;
+        border: 1px solid;
+        border-radius: 50px;
+        background: #fff;
+        cursor: pointer;
+        transition: .3s;
+
+        &::after {
+            @include icon;
+            content: "\e900";
+        }
+
+        &:hover {
+            border-color: #c8e6dc;
+            background: #c8e6dc;
+        }
+
+        &.swiper-button-disabled {
+            color: #8b8c8e;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    }
+
+    // .c-swiper-button-prev
+    &-button-prev {
+        &::after {
+            transform: rotate(-180deg);
+        }
+    }
+}

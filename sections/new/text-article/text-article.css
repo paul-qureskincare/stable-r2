@@ -1,0 +1,135 @@
+.article{
+  width:100%;
+}
+.article article h2{
+  text-transform:capitalize;
+}
+.article article p{
+  font-size:18px;
+  line-height:24px;
+}
+.article article .subscriptions_header{
+  max-width:714px;
+  margin:0 auto;
+  margin-bottom:70px;
+}
+.article article .subscriptions_header .subscription_subheadline{
+  margin-bottom:30px;
+  font-family:Canela Web;
+  font-size:36px;
+  font-weight:500;
+  line-height:55px;
+  letter-spacing:.36px;
+}
+.article article .subscriptions_header .subscription_subtext{
+  font-size:18px;
+  font-weight:500;
+  line-height:22px;
+}
+.article article .subscriptions_content p:not(:last-child),.article article .subscriptions_header .subscription_subtext:not(:last-child){
+  margin-bottom:30px;
+}
+.article article .cancel_section p:not(:last-child){
+  margin-bottom:25px;
+}
+.article article .subscriptions_content{
+  padding-top:12px;
+  padding-bottom:23px;
+}
+.article article .cancel_section:not(:first-child,.pt-30){
+  margin-top:30px;
+}
+.article article .cancel_section h2,.article article .cancel_section h3,.article article .cancel_section h4,.article article .cancel_section h5,.article article .cancel_section h6{
+  margin-bottom:25px;
+  font-family:var(--base-font-family);
+  font-size:20px;
+  font-weight:600;
+  line-height:26px;
+}
+.article article a{
+  color:#000;
+  text-decoration:underline;
+}
+.article article ul li{
+  word-break:break-word;
+  list-style:disc;
+}
+.article article .nested_li li{
+  padding-top:20px;
+  list-style-type:disc;
+}
+.article article ._abc ul li{
+  padding-bottom:10px;
+  list-style:lower-alpha;
+}
+.article article ol,.article article ul{
+  padding-left:20px;
+}
+.article article ol:not(:last-child),.article article ul:not(:last-child){
+  margin-bottom:25px;
+}
+.article article ol li,.article article ul li{
+  position:relative;
+  margin-bottom:10px;
+  padding-left:12px;
+  font-family:var(--base-font-family);
+  list-style:none;
+}
+.article article ol li:before,.article article ul li:before{
+  position:absolute;
+  top:10px;
+  left:0;
+  display:inline-block;
+  width:4px;
+  height:4px;
+  border-radius:10px;
+  background:#212428;
+  content:"";
+}
+.article article .header_content{
+  font-weight:700;
+}
+.article article body.page .cancel_section,.article article p:not(:only-of-type){
+  margin-bottom:1.5rem;
+}
+@media screen and (max-width:768px){
+  .article article .subscriptions_header{
+    margin-bottom:0;
+    text-align:start !important;
+  }
+  .article article .subscriptions_header .subscription_subheadline{
+    font-size:28px;
+    line-height:38px;
+    letter-spacing:.28px;
+  }
+  .article article .subscriptions_header .subscription_subtext{
+    font-size:16px;
+    font-weight:600;
+    line-height:26px;
+    letter-spacing:.16px;
+  }
+  .article article .header_content{
+    font-weight:400;
+  }
+  .article article ul{
+    padding-left:30px;
+  }
+  .article article ol{
+    padding-left:1rem;
+  }
+  .article article ul li{
+    font-size:13px;
+    line-height:22px;
+  }
+  .article article .cancel_section h6,.article article .cancel_section p:not(:last-child),.article article ul li:not(:last-child),.article article ul:not(:last-child){
+    margin-bottom:22px;
+  }
+  .article article .cancel_section ul li{
+    font-size:18px;
+  }
+}
+@media screen and (max-width:767px){
+  .article article{
+    margin-bottom:70px;
+  }
+}

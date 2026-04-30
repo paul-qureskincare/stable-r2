@@ -1,0 +1,20 @@
+<!-- WHY USING -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/tiles-group/tiles-group.css" />
+{{/unless}}
+<section class="tiles-group {{ classes }}" >
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            <ul>
+                {{#parseJson list }}
+                    <li>
+                        <img src="{{ img }}" alt="{{ name }}" />
+                        <a class="btn btn--primary-white" href="#">{{ name }}</a>
+                    </li>
+                {{/parseJson}}
+            </ul>
+        </article>
+    </div>
+</section>
+<!-- WHY USING END -->

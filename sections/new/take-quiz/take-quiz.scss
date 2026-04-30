@@ -1,0 +1,143 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.take-quiz {
+    $root: &;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f6f6f7;
+
+    @include sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    article {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, 1fr);
+        gap: 20px 60px;
+
+        @include md {
+            column-gap: 40px;
+        }
+
+        @include sm {
+            grid-template: auto / auto;
+        }
+    }
+
+    h2 {
+        align-self: end;
+        margin-bottom: 0;
+    }
+
+    ol {
+        grid-row: 1 / -1;
+        grid-column: 2;
+        counter-reset: item;
+
+        @include sm {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+
+    li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 12px;
+        padding-left: 63px;
+        counter-increment: item;
+
+        @include sm {
+            padding-top: 6px;
+            padding-left: 51px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 47px;
+            height: 47px;
+            font-size: 24px;
+            font-weight: 500;
+            border: 2px solid;
+            border-radius: 50%;
+            background: #fff;
+            content: counters(item, "");
+
+            @include sm {
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+            }
+        }
+
+        &:first-child {
+            padding-bottom: 32px;
+
+            @include sm {
+                padding-bottom: 24px;
+            }
+
+            &::before {
+                color: #fff;
+                border-color: #212428;
+                background: #212428;
+            }
+
+            &::after {
+                position: absolute;
+                top: 10px;
+                bottom: 0;
+                left: 23px;
+                z-index: 1;
+                width: 2px;
+                background: linear-gradient(to bottom, #212428, #dfe0e0);
+                content: '';
+
+                @include sm {
+                    left: 17px;
+                }
+            }
+        }
+
+        &:last-child {
+            color: #b5b6b7;
+
+            &::before {
+                color: #dfe0e0;
+            }
+        }
+    }
+
+    h5 {
+        margin-bottom: 0;
+        font-family: inherit;
+        font-weight: 600;
+        line-height: unset;
+    }
+
+    .btn,
+    small {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    small {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        margin-top: -10px;
+        font-size: 16px;
+    }
+}

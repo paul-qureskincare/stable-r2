@@ -1,0 +1,31 @@
+@use "@root/mixins" as *;
+
+.e-countdown {
+    $root: &;
+
+    display: flex;
+    justify-content: center;
+
+    [data-key] {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        width: 60px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 2px;
+
+        &::after {
+            font-size: .6em;
+            font-weight: 400;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            content: attr(data-key);
+        }
+
+        &:not(:first-child) {
+            border-left: 1px solid;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@use "@root/mixins" as *;
+
+@mixin e-declaimer {
+    display: block;
+    color: #8b8c8e;
+    font-size: 16px;
+    line-height: 1.25;
+
+    @include sm {
+        font-size: 14px;
+    }
+}
+
+.e-declaimer {
+    @include e-declaimer;
+}

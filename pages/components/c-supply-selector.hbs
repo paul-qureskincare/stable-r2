@@ -1,0 +1,88 @@
+<div class="c-supply-selector {{ classes }}">
+     {{#if title }}
+        <p class="c-supply-selector__title">
+            {{ title }}:
+            {{#if small }}<small>{{ small }}</small>{{/if}}
+        </p>
+     {{/if}}
+    <ul class="c-supply-selector__list">
+        {{#parseJson list }}
+            <li class="c-supply-selector__item">
+                <label class="c-supply-selector__label">
+                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <div class="c-supply-selector__main">
+                        {{#if image }}
+                            <picture class="c-supply-selector__image">
+                                <img src="{{ image }}" alt="{{ name }}" />
+                            </picture>
+                        {{/if}}
+                        <div class="c-supply-selector__name">{{ name }}</div>
+                        <div class="c-supply-selector__price">
+                            {{> e-price
+                                current="{$dyn}"
+                                old=price-old
+                                highlight=price-highlight
+                                strikethrough=price-strikethrough
+                            }}
+                        </div>
+                        <div class="c-supply-selector__desc">{{{ desc }}}</div>
+                        {{#if save-value }}
+                            <div class="c-supply-selector__save">
+                                {{#if price-in-save }}
+                                    <del>{{ price-in-save }}</del>
+                                {{/if}}
+                                {{#if save-pill }}
+                                    <div class="e-pill-save {{#if save-pill-light }}e-pill-save--light{{/if}}">{{ save-value }}</div>
+                                {{ else }}
+                                    {{ save-value }}
+                                {{/if}}
+                            </div>
+                        {{/if}}
+                        {{#if price-final }}
+                            <div class="c-supply-selector__final-price">
+                                {{> e-price current="{$dyn}" }}
+                            </div>
+                        {{/if}}
+                    </div>
+                    {{#if tag-name }}
+                        <div class="c-supply-selector__tag">
+                            {{#if tag-up }}
+                                <div class="selector-tag-up">{{{ tag-name }}}</div>
+                            {{ else }}
+                                <div class="selector-tag-down">{{{ tag-name }}}</div>
+                            {{/if}}
+                        </div>
+                    {{/if}}
+                    {{#if kits-left-hot }}
+                        <div class="c-supply-selector__kits-left">
+                            <div class="kits-left kits-left--hot">
+                                <div class="kits-left__name">🔥 Only $14.91 per treatment</div>
+                                <div class="kits-left__items">
+                                    {{> e-icon icon="clock"}}
+                                     164 kits left
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if kits-left-normal }}
+                        <div class="c-supply-selector__kits-left">
+                            <div class="kits-left">
+                                <div class="kits-left__name">Only $37.25 per treatment</div>
+                                <div class="kits-left__items">
+                                    {{> e-icon icon="clock"}}
+                                    201 kits left
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                </label>
+                {{#if notify-row }}
+                    <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+                {{/if}}
+            </li>
+        {{/parseJson}}
+    </ul>
+    {{#if notify-tiles }}
+        <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+    {{/if}}
+</div>

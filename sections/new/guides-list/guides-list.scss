@@ -1,0 +1,62 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.guides-list {
+    $root: &;
+
+    @include sm {
+        text-align: center;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 32px;
+
+        @include sm {
+            grid-template-columns: auto;
+            margin-top: 24px;
+        }
+
+        a {
+            display: grid;
+            grid-template-columns: 90px 1fr auto;
+            gap: 24px;
+            align-items: center;
+            padding: 12px 24px;
+            color: inherit;
+            text-align: left;
+            border: 1px solid #dfe0e0;
+            border-radius: 10px;
+
+            @include sm {
+                gap: 12px;
+                padding: 12px;
+            }
+
+            &:hover {
+                .e-icon {
+                    border-color: #c7e5db;
+                    background-color: #c7e5db;
+                }
+            }
+        }
+
+        img {
+            @include img-fluid;
+        }
+
+        .e-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            font-size: 12px;
+            border: 1px solid;
+            border-radius: 50%;
+            @include transition;
+        }
+    }
+}

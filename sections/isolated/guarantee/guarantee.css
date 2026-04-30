@@ -1,0 +1,11 @@
+.qure__guarantee-container {
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+}
+.qure__guarantee-container .guarantee-title span {
+    display: block;
+}
+@media(max-width:767px){
+    .guarantee-title{font-size:28px;}
+}

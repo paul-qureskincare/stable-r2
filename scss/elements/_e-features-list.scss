@@ -1,0 +1,56 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.e-features-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    font-size: 14px;
+
+    @include sm {
+        gap: 8px;
+    }
+
+    li {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        line-height: 1.1;
+
+        @include sm {
+            gap: 4px;
+        }
+    }
+
+    .e-icon-guarantee {
+        font-size: 30px;
+
+        @include sm {
+            font-size: 24px;
+        }
+    }
+
+    .e-icon-shipping-order {
+        font-size: 22px;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    .e-icon-proven {
+        font-size: 28px;
+    }
+
+    .e-icon-checkmark {
+        font-size: 10px;
+    }
+
+    .e-icon-one-year {
+        font-size: 24px;
+
+        @include sm {
+            font-size: 18px;
+        }
+    }
+}

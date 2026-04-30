@@ -1,0 +1,19 @@
+@use "media" as *;
+
+@mixin swiper-arrows {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    @include sm {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-pagination {
+        position: static;
+        width: auto;
+    }
+}

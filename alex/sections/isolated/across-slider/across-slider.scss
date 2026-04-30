@@ -1,0 +1,195 @@
+.across-slider {
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 28px;
+
+        @include sm {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    &__carousel {
+        .swiper-slide {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .swiper-arrows-with-pagination {
+            @include swiper-arrows;
+        }
+    }
+}
+
+// MODIFICATORS
+.steps-to-use {
+    padding: 60px 0;
+    
+    @include md {
+        padding: 25px 0;
+    }
+    
+    .across-slider__header {
+        @include sm {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        a {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin-left: auto;
+            color: #ff5429;
+            font-size: 20px;
+            font-weight: 600;
+
+            @include sm {
+                margin-left: 0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            img {
+                vertical-align: top;
+            }
+        }
+    }
+    
+    .across-slider__carousel {
+        margin-left: auto;
+
+        @media screen and (min-width: 1200px) {
+            @include max-width(1172px);
+        }
+        
+        @media screen and (min-width: 1400px) {
+            @include max-width(1232px);
+        }
+
+        .swiper-arrows-with-pagination {
+            margin-top: 40px;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            @media screen and (min-width: 1200px) {
+                max-width: 1172px;
+            }
+
+            @media screen and (min-width: 1400px) {
+                max-width: 1232px;
+            }
+
+            @include sm {
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            font-size: 26px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 40px;
+            background: #fff;
+            content: attr(data-number);
+
+            @include sm {
+                top: 10px;
+                left: 10px;
+                width: 24px;
+                height: 24px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 20px;
+
+            @include sm {
+                object-fit: cover;
+                height: 300px;
+            }
+        }
+
+        h6 {
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+    }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.product\.hairgrowth-helmet {
+    .lvideo-wrap {
+        .lvideo-overlay {
+            background: rgb(0 0 0 / 50%);
+            backdrop-filter: blur(10px);
+        }
+
+        iframe {
+            max-width: 900px;
+            border: 20px solid #fff;
+            border-radius: 0;
+
+            @include sm {
+                border-width: 2px;
+            }
+        }
+
+        .lvideo-close {
+            top: 50%;
+            right: 50%;
+            width: 50px;
+            height: 50px;
+            margin-top: -250px;
+            margin-right: -520px;
+            border: 0;
+            background: rgb(255 255 255 / 80%) url("/assets/images/cross_black.svg") 50% 50% no-repeat;
+
+            @include lg {
+                top: 20px;
+                right: 20px;
+                margin-top: 0;
+                margin-right: 0;
+            }
+
+            @include sm {
+                width: 35px;
+                height: 35px;
+                background-size: 15px;
+            }
+
+            &:hover {
+                background-color: #c8e6dc;
+            }
+
+            .fa-solid {
+                display: none;
+            }
+        }
+    }
+}

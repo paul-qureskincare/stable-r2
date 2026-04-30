@@ -1,0 +1,15 @@
+@mixin pulse-green {
+    animation: pulse-green 2s infinite;
+
+    @keyframes pulse-green {
+        0% {
+            box-shadow: 0 0 0 0 rgb(0 135 99 / 70%);
+            transform: scale(1);
+        }
+
+        100% {
+            box-shadow: 0 0 0 8px rgb(0 135 99 / 0%);
+            transform: scale(1.1);
+        }
+    }
+}

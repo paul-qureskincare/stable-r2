@@ -1,0 +1,134 @@
+<div
+    class="
+        c-accordion
+        {{#if type }}c-accordion--{{ type }}{{/if}}
+        {{#if arrow-icon }}c-accordion--arrow-icon{{/if}}
+    ">
+    <div class="c-accordion__list">
+        {{#if devices-technical }}
+            <details class="c-accordion__item">
+                <summary class="c-accordion__summary">
+                    Technical specifications
+                </summary>
+                <article class="c-accordion__content">
+                    <div class="devices-technical">
+                        <ul class="devices-technical__buttons" role="tablist">
+                            <li>
+                                <button
+                                    class="active"
+                                    type="button"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#device-mask"
+                                >
+                                    Q-Rejuvalight Pro LED Mask
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#device-decolletage"
+                                >
+                                    Neck &amp; Décolletage LED
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="devices-technical__pane show" id="device-mask">
+                            <div class="devices-technical__section">
+                                <p>Treatment details</p>
+                                <ul>
+                                    <li>
+                                        {{> e-icon icon="treatment-time"}}
+                                        <div><strong>TREATMENT TIME:</strong> 3 minutes</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="switcher"}}
+                                        <div><strong>TREATMENT MODES:</strong> Skin Rejuvenating, Skin Clearing, customized treatment</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="calendar"}}
+                                        <div><strong>USE:</strong> Use daily after cleansing, before topical skincare</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="hand"}}
+                                        <div><strong>OPERATION:</strong> Wireless, hands-free app (Android and iOS)</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr />
+                            <div class="devices-technical__section">
+                                <p>Tech specs</p>
+                                <ul>
+                                    <li>
+                                        {{> e-icon icon="wave"}}
+                                        <div><strong>WAVELENGTH:</strong> 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="leds"}}
+                                        <div><strong>LEDs:</strong> 160 dual core</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="certificate"}}
+                                        <div><strong>CERTIFICATES:</strong> FDA, TGA, CE, UKCA</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="hand"}}
+                                        <div><strong>CHARGING TIME:</strong> 2 hours</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="devices-technical__pane" id="device-decolletage">
+                            <div class="devices-technical__section">
+                                <p>Treatment details</p>
+                                <ul>
+                                    <li>
+                                        {{> e-icon icon="treatment-time"}}
+                                        <div><strong>TREATMENT TIME:</strong> 10 minutes</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="calendar"}}
+                                        <div><strong>USE:</strong> Use 5-7 times per week after on cleansed, dry skin</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="hand"}}
+                                        <div><strong>OPERATION:</strong> Wireless, hands-free with controller</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr />
+                            <div class="devices-technical__section">
+                                <p>Tech specs</p>
+                                <ul>
+                                    <li>
+                                        {{> e-icon icon="wave"}}
+                                        <div><strong>WAVELENGTH:</strong> 633nm (Red), 830nm (Near-Infrared)</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="leds"}}
+                                        <div><strong>LEDs:</strong> 55 dual core</div>
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="hand"}}
+                                        <div><strong>CHARGING TIME:</strong> 4 hours</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </details>
+        {{/if }}
+        {{#parseJson list }}
+            <details class="c-accordion__item">
+                <summary class="c-accordion__summary">
+                    {{#if icon }}{{> e-icon icon=icon }}{{/if}}{{ summary }}
+                </summary>
+                <article class="c-accordion__content">
+                    {{{ text }}}
+                </article>
+            </details>
+        {{/parseJson}}
+    </div>
+    {{#if button}}<div class="c-accordion__ask-us">Don't see your question? <a href="#" class="btn btn-sm btn--secondary">Ask us <i class="e-icon e-icon-arrow"></i></a></div>{{/if}}
+</div>

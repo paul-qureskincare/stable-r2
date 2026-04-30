@@ -1,0 +1,10 @@
+.fastest_growing_item h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.fastest_growing_item span {
+    display: inline-block;
+    margin-bottom: 10px;
+}

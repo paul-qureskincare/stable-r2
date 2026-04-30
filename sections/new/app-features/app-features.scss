@@ -1,0 +1,63 @@
+@use "@root/mixins" as *;
+@use "@components/c-swiper" as *;
+
+.app-features {
+    $root: &;
+
+    .container {
+        max-width: 630px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .c-swiper {
+        &:not(.c-swiper-texts) {
+            margin-bottom: 32px;
+            padding-right: 0;
+            padding-left: 0;
+
+            @include sm {
+                margin: 0 -64px 24px;
+            }
+
+            .swiper-slide {
+                img {
+                    @include transition;
+                    opacity: 0.5;
+                    scale: 0.8;
+                }
+
+                &.swiper-slide-active {
+                    img {
+                        opacity: 1;
+                        scale: 1;
+                    }
+                }
+            }
+        }
+
+        &.c-swiper-texts {
+            .swiper-slide {
+                text-align: center;
+
+                h6 {
+                    font-family: inherit;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    /* .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        text-align: center;
+    } */
+
+    img {
+        @include img-fluid;
+    }
+
+
+}

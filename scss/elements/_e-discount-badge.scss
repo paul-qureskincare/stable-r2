@@ -1,0 +1,39 @@
+@use "@root/mixins" as *;
+
+.e-discount-badge {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 100px;
+    background: var(--discount-color, #212428);
+        
+    span {
+        font-size: 0.41em;
+        line-height: 0.8;
+    }
+
+    &::before,
+    &::after {
+        font-size: 0.145em;
+        text-transform: uppercase;
+
+        @include md {
+            font-size: 14px;
+        }
+    }
+
+    &::before {
+        content: attr(data-text-top);
+    }
+    
+    &::after {
+        content: attr(data-text-bottom);
+    }
+}

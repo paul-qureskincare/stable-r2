@@ -1,0 +1,15 @@
+<!-- BASE FORM -->
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/base-form/base-form.css" />
+{{/unless}}
+<section class="base-form {{ classes }}">
+    <div class="container">
+        {{#if title }}
+            <h2>{{ title }}</h2>
+        {{/if}}
+        <form class="base-form__form" action="#">
+            {{> @partial-block }}
+        </form>
+    </div>
+</section>
+<!-- BASE FORM END -->

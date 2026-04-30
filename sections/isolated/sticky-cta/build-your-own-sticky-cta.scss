@@ -1,0 +1,350 @@
+/* stylelint-disable */
+
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.qure__sticky-atc {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background: #FFF;
+    width: 100%;
+    border-top: 1px solid var(--Charcoal-10, #DFE0E0);
+}
+.qure__sticky-atc .btn_wrap {
+    max-width: 400px;
+    width: 100%;
+}
+
+.qure__sticky-atc .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+
+    .e-icon {
+        font-size: 16px;
+    }
+}
+/* product-mi-patches cta  */
+.patch__value-pack > input {
+    display: none;
+}
+.patch__value-pack .vp-pack-cta {
+    padding: 12px 0 24px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.patch__value-pack > input:checked + .vp-pack-cta {
+    border: 2px solid var(--qure-charcoal);
+    background-color: #F6F6F7;
+}
+.mi-patches-sticky-cta .vp-img img{
+    height: 40px;
+}
+.dropdown-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    left: 15px;
+    bottom: 47px;
+    max-width: 155px;
+    padding: 5.787px 7.233px;
+    border-radius: 7.233px;
+    border: 0.723px solid var(--Charcoal-50, #8B8C8E);
+    background: #FFF;
+}
+
+.dropdown-button {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+    background: #fff;
+}
+
+.dropdown-inner-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+}
+.dropdown-wrapper.open
+.dropdown-inner-container {
+    max-height: 500px; /* animate open */
+}
+.dropdown-wrapper .fa-angle-down {
+    transition: transform 0.2s ease;
+}
+.dropdown-wrapper.open .fa-angle-down {
+    transform: rotate(180deg);
+}
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+.dropdown-option img {
+    width: 20px;
+}
+.dropdown-button img {
+    height: 30px;
+}
+/* product-mi-patches cta  */
+
+/* css for skincare plan pages sticky cta start */
+.skincare_plan_cta .qure__accordion-header::after{
+    content: '\f106';
+}
+/* .qure__accordion-header:not(.collapsed)::after{
+content: '\f107';
+} */
+
+.bundle-progress {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 320px;
+    gap: 24px;
+}
+.subtotal_cta .compare_price{
+    color: #B5B6B7;
+    text-decoration: line-through;
+}
+.subtotal_cta .discounted_price{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}
+.bundle-item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.item-box {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background: #fff;
+    position: relative;
+
+    .remove-item {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: #000;
+        color: #fff;
+        font-size: 6px;
+        padding: 6px;
+        border: 0;
+        border-radius: 10px;
+        line-height: 1;
+
+        &:hover {
+            color: #212426;
+            background: #c8e6dc;
+        }
+
+        .e-icon {
+            vertical-align: top;
+        }
+    }
+}
+
+.item-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.add-btn {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.discount-box {
+    width: 60px;
+    height: 60px;
+    border: 1px dotted;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #B5B6B7;
+    background: #fafafa;
+    font-size: 22px;
+
+    .plus {
+        font-size: 30px;
+    }
+}
+
+/* Progress line */
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    right: 60px;
+    height: 2px;
+    background: #dfe0e0;
+    z-index: 1;
+    transform: translateY(-50%);
+    border-radius: 3px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #91baec;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+.subtotal_cta p{
+    margin: 0   ;
+}
+.skincare_plan_cta .accordion-button {
+    background: #C7E5DB;
+    margin-bottom: 20px;
+    padding: 16px 12px;
+}
+.qure__sticky-atc{
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+.show_cta{
+    opacity: 1;
+}
+
+/* css for skincare plan pages sticky cta end */
+
+
+
+
+
+@media (min-width: 992px) {
+    /* disable toggle button */
+    /* .accordion-button {
+    pointer-events: none;
+    } */
+    /* keep accordion always expanded */
+    .skincare_plan_cta .accordion-collapse {
+        display: block !important;
+        visibility: visible !important;
+        height: auto !important;
+    }
+    .skincare_plan_cta .qure__accordion-header::after{
+        display: none;
+    }
+    .skincare_plan_cta .accordion-button {
+        justify-content: center;
+    }
+}
+
+@media(max-width:991px){
+    .qure__sticky-atc .btn {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+}
+
+
+/* countdown timer css  */
+.qure__sticky-atc .countdown {
+    display: flex;
+    gap: 12px;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.qure__sticky-atc .countdown div {
+    display: flex;
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0 0 9.836px #0586FF;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44.709px;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+.qure__sticky-atc .countdown div span {
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    text-shadow: none;
+}
+.qure__sticky-atc .extra_entries{
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0 0 8px #0586FF;
+    font-family: "TT Commons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+@media(max-width:767px){
+    .qure__sticky-atc .countdown{
+        gap: 10px;
+    }
+    .qure__sticky-atc .countdown div {
+        font-size: 16px;
+    }
+    .qure__sticky-atc .countdown div span{
+        font-size: 16px;
+    }
+    .qure__sticky-atc .extra_entries {
+        font-size: 16px;
+    }
+}
+/* countdown timer css end */
+
+
+
+
+
+
+
+
+
+
+
+
+

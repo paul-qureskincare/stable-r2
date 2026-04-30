@@ -1,0 +1,88 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.skin-deserves {
+    $root: &;
+
+    .container {
+        max-width: 900px;
+    }
+
+    article {
+        text-align: center;
+
+        @include sm {
+            text-align: left;
+        }
+    }
+
+    h2 {
+        margin-bottom: 24px;
+
+        @include sm {
+            margin-bottom: 16px;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 32px;
+        text-align: center;
+
+        @include sm {
+            margin-top: 24px;
+            font-size: 16px;
+        }
+    }
+
+    tr {
+        &:nth-child(even) {
+            background: #f6f6f7;
+        }
+    }
+
+    th {
+        padding-bottom: 20px;
+        font-size: 20px;
+        vertical-align: middle;
+
+        @include sm {
+            padding-bottom: 12px;
+            font-size: inherit;
+        }
+    }
+
+    td {
+        padding: 24px 5px;
+        vertical-align: middle;
+
+        @include sm {
+            padding: 16px 5px;
+        }
+    }
+
+    .e-icon {
+        font-size: 20px;
+        vertical-align: top;
+
+        @include sm {
+            font-size: inherit;
+        }
+    }
+
+    .e-icon-qure {
+        font-size: 24px;
+
+        @include sm {
+            font-size: inherit;
+        }
+    }
+
+    .e-icon-checkmark-fill {
+        color: #008763;
+    }
+
+    .e-icon-cross-fill {
+        color: #8b8c8e;
+    }
+}

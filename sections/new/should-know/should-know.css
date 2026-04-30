@@ -1,0 +1,263 @@
+.c-note{
+  display:block;
+  padding:10px 12px;
+  font-size:16px;
+  line-height:1.25;
+  border-radius:10px;
+  background:var(--note-bg, #eef7f4);
+  max-width:500px;
+}
+.c-note p{
+  margin:0;
+}
+.c-note p+p{
+  margin-top:15px;
+}
+.c-note p+ul{
+  margin-top:5px;
+}
+.c-note strong{
+  font-weight:600;
+}
+.c-note ul{
+  padding-left:24px;
+}
+.c-note ul li{
+  padding-left:4px;
+  list-style:disc;
+}
+.c-note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-note a:hover{
+  text-decoration:none;
+}
+.c-note--info,.c-note--warning{
+  position:relative;
+  padding-left:36px;
+}
+.c-note--info:before,.c-note--warning:before{
+  position:absolute;
+  top:12px;
+  left:12px;
+  width:16px;
+  height:16px;
+  color:#fff;
+  font-size:8px;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  line-height:16px;
+  text-align:center;
+  border-radius:16px;
+  content:"\e90c";
+}
+.c-note--info{
+  background:#f4f8fd;
+}
+.c-note--info:before{
+  background:#91baec;
+}
+.c-note--warning{
+  background:#ffeeea;
+}
+.c-note--warning:before{
+  background:#ff5429;
+}
+.page\.qure-microinfusion-offer-listicle .c-note{
+  max-width:none;
+  padding:12px 16px;
+  color:#008763;
+  font-size:18px;
+  background:#e5fff7;
+}
+
+.c-swiper{
+  overflow:hidden;
+  margin-right:-16px;
+  margin-left:-16px;
+  padding-right:16px;
+  padding-left:16px;
+}
+.c-swiper .swiper-slide{
+  height:auto;
+}
+.c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
+  cursor:pointer;
+}
+.c-swiper .swiper-slide img{
+  width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-swiper-nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  margin-top:32px;
+}
+.c-swiper-nav-disabled .c-swiper-nav{
+  display:none;
+}
+.c-swiper-pagination{
+  display:flex;
+  gap:10px;
+  width:auto;
+}
+.c-swiper-thumbs-nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  overflow:unset;
+  width:auto;
+}
+.c-swiper-thumbs-nav .swiper-slide{
+  overflow:hidden;
+  border-radius:5px;
+  cursor:pointer;
+  opacity:.5;
+  transition:opacity .2s linear;
+}
+.c-swiper-thumbs-nav .swiper-slide.swiper-slide-thumb-active{
+  border:1px solid #212428;
+  cursor:default;
+  opacity:1;
+}
+.c-swiper-button-next,.c-swiper-button-prev{
+  display:flex;
+  flex:0 0 40px;
+  align-items:center;
+  justify-content:center;
+  height:40px;
+  color:#212428;
+  font-size:12px;
+  border:1px solid;
+  border-radius:50px;
+  background:#fff;
+  cursor:pointer;
+  transition:.3s;
+}
+.c-swiper-button-next:after,.c-swiper-button-prev:after{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  content:"\e900";
+}
+.c-swiper-button-next:hover,.c-swiper-button-prev:hover{
+  border-color:#c8e6dc;
+  background:#c8e6dc;
+}
+.c-swiper-button-next.swiper-button-disabled,.c-swiper-button-prev.swiper-button-disabled{
+  color:#8b8c8e;
+  pointer-events:none;
+  opacity:.3;
+}
+.c-swiper-button-prev:after{
+  transform:rotate(-180deg);
+}
+
+.should-know{
+  min-width:0;
+}
+.should-know .container{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  align-items:center;
+}
+.should-know article{
+  max-width:750px;
+  text-align:center;
+}
+.should-know article h2{
+  margin-bottom:24px;
+}
+.should-know .c-swiper{
+  max-width:100%;
+}
+.should-know .swiper-slide{
+  padding:32px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.should-know .swiper-slide ol{
+  counter-reset:item;
+}
+.should-know .swiper-slide ol:not(:last-child){
+  margin-bottom:15px;
+}
+.should-know .swiper-slide ol li{
+  position:relative;
+  min-height:24px;
+  padding-left:36px;
+  counter-increment:item;
+}
+.should-know .swiper-slide ol li:before{
+  position:absolute;
+  top:0;
+  left:0;
+  width:24px;
+  height:24px;
+  line-height:24px;
+  text-align:center;
+  border:1px solid;
+  border-radius:24px;
+  background:#fff;
+  content:counters(item, "");
+}
+.should-know .swiper-slide ol li:not(:last-child){
+  margin-bottom:12px;
+}
+.should-know .swiper-slide p:not(:last-child){
+  margin-bottom:15px;
+}
+.should-know .swiper-slide:last-child{
+  border-color:transparent;
+  background:#f6f6f7;
+}
+.should-know .btn{
+  display:inline-flex;
+  gap:12px;
+  align-items:center;
+}
+.should-know .btn .e-icon{
+  font-size:15px;
+  -webkit-text-stroke:1px;
+}
+@media screen and (max-width:767px){
+  .page\.qure-microinfusion-offer-listicle .c-note{
+    font-size:16px;
+  }
+  .c-swiper-nav{
+    margin-top:16px;
+  }
+  .should-know .c-swiper{
+    max-width:100vw;
+  }
+  .should-know .swiper-slide{
+    padding:24px;
+  }
+  .should-know .btn{
+    justify-content:center;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+  }
+}

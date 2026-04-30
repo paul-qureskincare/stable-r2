@@ -1,0 +1,24 @@
+@use "@root/mixins" as *;
+
+.e-get-free-shipping {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 24px;
+    border-radius: 10px;
+    background: #eef7f4;
+
+    @include sm {
+        padding: 14px 16px;
+    }
+
+    &::before {
+        flex: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 10px;
+        background: #008763;
+        @include pulse-green;
+        content: '';
+    }
+}

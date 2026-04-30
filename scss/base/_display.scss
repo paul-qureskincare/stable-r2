@@ -1,0 +1,31 @@
+$displays: (
+    none,
+    inline,
+    inline-block,
+    block,
+    flex,
+    grid,
+    inline-flex
+);
+
+@each $value in $displays {
+    .d-#{$value} {
+        display: #{$value} !important;
+    }
+}
+
+$breakpoints: (
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        @each $value in $displays {
+            .d-#{$breakpoint}-#{$value} {
+                display: #{$value} !important;
+            }
+        }
+    }
+}

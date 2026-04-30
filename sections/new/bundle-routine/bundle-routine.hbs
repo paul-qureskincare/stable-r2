@@ -1,0 +1,14 @@
+<!-- BUNDLE ROUTINE -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/bundle-routine/bundle-routine.css" />
+{{/unless}}
+<section class="bundle-routine {{ classes }}">
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            <p>{{ text }}</p>
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<!-- BUNDLE ROUTINE END -->

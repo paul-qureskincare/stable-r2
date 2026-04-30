@@ -1,0 +1,80 @@
+.filter_points .point_column .p_line {
+    display: inline-block;
+    height: 1px;
+    background: #91BAEC;
+}
+.filter_points .point_column .collapsed .p_line{
+    background: #91baec;
+    opacity: .5;
+}
+.filter_points .point_column .collapsed .p_text{
+    font-weight: 400;
+}
+.filter_points .point_column .p_text{
+font-weight: 600;
+}
+/* .filter_points .point_column.p_one .p_line{
+    width: 78px;
+}
+.filter_points .point_column.p_two .p_line {
+    width: 117px;
+}
+.filter_points .point_column.p_three .p_line{
+    width: 97px;
+}
+.filter_points .point_column.p_four .p_line {
+    width: 50px;
+    transform: rotate(90deg);
+} */
+.filter_points .point_column .p_line{
+width: 100%;
+}
+.filter_points .point_column .p_line-verticle{
+height: 100%;
+width: 1px;
+display: inline-block;
+    height: 1px;
+    background: #91BAEC;
+}
+.filter_points .point_column .p_dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    outline: 8px solid;
+    outline-color: #91BAEC;
+}
+.filter_points .point_column .collapsed .p_dot{
+outline-color: #797d7c24;
+}
+.filter_points .point_column {
+    position: absolute;
+}
+/* .filter_points img {
+    max-width: 410px;
+    width: 100%;
+} */
+.filter_points .accordion-button.collapsed {
+    opacity: 0.5;
+}
+@media(max-width: 767px){
+    /* .filter_points .point_column.p_two .p_line {
+    width: 56px;
+}
+.filter_points .point_column.p_one .p_line {
+    width: 52px;
+}
+.filter_points .point_column.p_three .p_line {
+    width: 40px;
+} */
+.point_column.p_one .p_text,
+.point_column.p_two .p_text,
+.point_column.p_three .p_text {
+    width: 70px;
+}
+.filter_points .point_column .p_text{
+    font-size: 14px;
+    line-height: 18px;
+}
+}

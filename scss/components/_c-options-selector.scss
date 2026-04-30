@@ -1,0 +1,104 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@components/c-dialog" as *;
+
+.c-options-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+
+    @include sm {
+        max-width: none;
+    }
+
+    .btn--secondary {
+        --btn-secondary-bg: #f5f5f6;
+
+        width: 100%;
+        margin-top: -4px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    p,
+    &__title {
+        margin: 0;
+    }
+
+    ul,
+    &__list {
+        display: flex;
+        gap: 12px;
+
+        li {
+            width: 100%;
+
+            &:first-child:last-child {
+                max-width: calc(100% / 3);
+            }
+        }
+
+        label {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+            justify-content: center;
+            min-height: 132px;
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 0 1px #dfe0e0;
+            cursor: pointer;
+
+            &:has(input:checked) {
+                box-shadow: inset 0 0 0 1px currentcolor, 0 0 0 1px currentcolor;
+                background: #f6f6f7;
+            }
+        }
+
+        input {
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            max-width: 80px;
+            height: auto;
+            aspect-ratio: 30/23;
+            vertical-align: top;
+        }
+
+        .bundle {
+            display: flex;
+            align-items: center;
+
+            figure {
+                position: relative;
+                padding: 0 8px 8px;
+
+                @include sm {
+                    padding: 0 4px 12px;
+                }
+            }
+
+            .e-pill-badge {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: #ff5429;
+                text-transform: uppercase;
+                border-radius: 5px;
+
+                @include sm {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

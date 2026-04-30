@@ -1,0 +1,20 @@
+@use "@root/mixins" as *;
+
+.e-pill-save {
+    --e-pill-save-color: #ff5429;
+
+    display: inline-block;
+    padding: 0.15em 0.6em;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background: var(--e-pill-save-color);
+
+    // .e-pill-save--light
+    &--light {
+        color: var(--e-pill-save-color);
+        background: hsl(from var(--e-pill-save-color) h s calc(l + 37));
+    }
+}

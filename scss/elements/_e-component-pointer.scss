@@ -1,0 +1,91 @@
+@use "@root/mixins" as *;
+
+.e-component-pointer {
+    --top: 0;
+    --left: 0;
+    --line-size: 0;
+
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+
+    &:has(.active) {
+        opacity: 1;
+
+        &::before {
+            border-color: #91baec;
+        }
+    }
+
+    &::before {
+        flex: none;
+        width: 24px;
+        height: 24px;
+        border: 7px solid rgb(121 125 124 / 40%);
+        border-radius: 50%;
+        background: #212428;
+        background-clip: content-box;
+        content: '';
+    }
+
+    hr {
+        flex-grow: 1;
+        width: var(--line-size);
+        margin: 0 10px 0 0;
+        opacity: 1;
+        border-top-color: #91baec;
+    }
+
+    a {
+        color: inherit;
+        line-height: 1;
+
+        @include sm {
+            font-size: 14px;
+        }
+    }
+
+    // .e-component-pointer--vertical
+    &--vertical {
+        flex-direction: column;
+
+        hr {
+            margin-bottom: 5px;
+        }
+    }
+
+    // .e-component-pointer--reverse
+    &--reverse {
+        flex-direction: row-reverse;
+
+        hr {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+
+    // .e-component-pointer--vertical-reverse
+    &--vertical-reverse {
+        flex-direction: column-reverse;
+
+        hr {
+            margin-top: 5px;
+        }
+    }
+
+    // .e-component-pointer--vertical
+    // .e-component-pointer--vertical-reverse
+    &--vertical,
+    &--vertical-reverse {
+        hr {
+            width: auto;
+            height: var(--line-size);
+            margin-right: 0;
+            border-top: 0;
+            border-left: 1px solid #91baec;
+        }
+    }
+}

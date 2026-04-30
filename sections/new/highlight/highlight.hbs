@@ -1,0 +1,15 @@
+<!-- HIGHLIGHT -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/highlight/highlight.css" />
+{{/unless}}
+<section class="highlight {{ classes }}">
+    <div class="container">
+        {{#if mobile }}
+            <div class="highlight__desktop">{{ text }}</div>
+            <div class="highlight__mobile">{{ mobile }}</div>
+        {{ else }}
+            <div class="highlight__text">{{ text }}</div>
+        {{/if }}
+    </div>
+</section>
+<!-- HIGHLIGHT END -->

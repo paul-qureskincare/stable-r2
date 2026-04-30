@@ -1,0 +1,13 @@
+<!-- ACROSS IMAGE BANNER -->
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/across-image-banner/across-image-banner.css" />
+{{/unless}}
+<section class="across-image-banner {{ classes }}">
+    {{> @partial-block }}
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('dialog', 'assets/js-new/dialog.js');
+    });
+</script>
+<!-- ACROSS IMAGE BANNER END -->

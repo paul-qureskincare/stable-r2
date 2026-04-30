@@ -1,0 +1,66 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.why-should-join {
+    $root: &;
+
+    h2 {
+        margin-bottom: 32px;
+        text-align: center;
+
+        @include sm {
+            margin-bottom: 24px;
+        }
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 16px;
+        }
+    }
+
+    li {
+        display: grid;
+        grid-template: repeat(2, auto) / 60px 1fr;
+        gap: 12px 24px;
+        align-items: center;
+        padding: 24px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding: 16px 24px;
+        }
+
+        div {
+            grid-row: 1 / -1;
+            padding: 8px;
+            font-size: 24px;
+            border: 1px solid #b5b6b7;
+            border-radius: 50%;
+        }
+
+        .e-icon {
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            vertical-align: top;
+            border: 1px solid;
+            border-radius: 50%;
+
+            &::before {
+                line-height: 40px;
+                vertical-align: top;
+            }
+        }
+
+        .e-icon-special-discounts {
+            font-size: 18px;
+        }
+    }
+}

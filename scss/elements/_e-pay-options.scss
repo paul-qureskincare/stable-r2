@@ -1,0 +1,28 @@
+@use "@root/mixins" as *;
+
+.e-pay-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    color: #757677;
+    font-size: 14px;
+    line-height: 1;
+
+    @include sm {
+        font-size: 12px;
+    }
+
+    ul {
+        display: flex;
+        gap: 6px;
+        align-self: center;
+        justify-content: center;
+        line-height: 1;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+}

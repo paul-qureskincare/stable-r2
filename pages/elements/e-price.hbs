@@ -1,0 +1,16 @@
+<div
+    class="e-price
+    {{#if highlight }}e-price--highlight{{/if}}
+    {{#if strikethrough }}e-price--strikethrough{{/if}}
+    {{#if special }}e-price--special{{/if}}"
+>
+    <div class="e-price__main">
+        <div class="e-price__current">{{ current }}</div>
+        {{#if old }}
+            <div class="e-price__old">{$dyn}</div>
+        {{/if}}
+    </div>
+    {{#if final }}
+        <div class="e-price__final">{$dyn}</div>
+    {{/if}}
+</div>

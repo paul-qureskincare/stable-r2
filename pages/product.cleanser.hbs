@@ -1,0 +1,512 @@
+{{#> default
+    title="Cleanser"
+    body-class="product.cleanser"
+}}
+
+{{#> section-stack }}
+    {{#> hero-product }}
+        <div class="hero-product__gallery">
+            <div
+                class="c-swiper"
+                data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 16,
+                    "navigation": {
+                        "prevEl": "#hero-product .c-swiper-button-prev",
+                        "nextEl": "#hero-product .c-swiper-button-next"
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-1.webp" alt="Qure Cleanser" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-2.webp" alt="Qure Cleanser" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-3.webp" alt="Qure Cleanser" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-4.webp" alt="Qure Cleanser" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-5.webp" alt="Qure Cleanser" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-6.webp" alt="Qure Cleanser" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/cleanser/cleanser-7.webp" alt="Qure Cleanser" />
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-thumbs-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div
+                    class="c-swiper c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": "auto",
+                        "spaceBetween": 12
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-1.webp" alt="Qure Cleanser" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-2.webp" alt="Qure Cleanser" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-3.webp" alt="Qure Cleanser" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-4.webp" alt="Qure Cleanser" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-5.webp" alt="Qure Cleanser" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-6.webp" alt="Qure Cleanser" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/cleanser/cleanser-7.webp" alt="Qure Cleanser" />
+                        </div>
+                    </div>
+                </div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+        <div class="hero-product__main">
+            {{> c-approved-by }}
+            <p>HYDRATING FACE CLEANSER – 50% GLYCERIN FORMULA</p>
+            <h1>Daily Cleansing Gel</h1>
+            <article>
+                <p>The cleanser that doesn’t steal your moisture. Formulated with 50% glycerin instead of water, it cleanses in a way that leaves skin feeling hydrated, calm, and never tight.</p>
+            </article>
+            {{> c-supply-selector
+                title="Select Your Supply"
+                list='[
+                    {
+                        "image": "assets/images/cleanser/cleanser-selector-trio.webp",
+                        "name": "6 Months Supply",
+                        "desc": "3 bottles",
+                        "price-old": true,
+                        "save-value": "{dyn}% off",
+                        "tag-up": true,
+                        "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
+                        "option": "supply",
+                        "checked": true
+                    },
+                    {
+                        "image": "assets/images/cleanser/cleanser-selector-duo.webp",
+                        "name": "4 Months Supply",
+                        "desc": "2 bottles",
+                        "price-old": true,
+                        "save-value": "{dyn}% off",
+                        "option": "supply"
+                    },
+                    {
+                        "image": "assets/images/cleanser/cleanser-selector-uno.webp",
+                        "name": "2 Months Supply",
+                        "desc": "1 bottles",
+                        "option": "supply"
+                    }
+                ]'
+            }}
+            <div class="c-buy-block">
+                {{> c-order-button
+                    button="Buy Now & Save 38%"
+                }}
+                <ul class="e-features-list">
+                    <li>
+                        <i class="e-icon e-icon-guarantee"></i>
+                        30-Day Money-Back Guarantee
+                    </li>
+                    <li>
+                        <i class="e-icon e-icon-shipping-order"></i>
+                        Free Shipping over {$dyn}
+                    </li>
+                </ul>
+            </div>
+            {{> c-clinic-metrics
+                title="Based on a 6 week consumer study"
+                list='[
+                    {
+                        "value": "100%",
+                        "text": "said their skin felt hydrated after use"
+                    },
+                    {
+                        "value": "83%",
+                        "text": "agree skin feels smoother after use"
+                    },
+                    {
+                        "value": "83%",
+                        "text": "agree cleanser feels gentle and soothing"
+                    }
+                ]'
+            }}
+        </div>
+        <div class="hero-product__extra">
+            <div class="hero-product__best-with">
+                <h6>Get The Best Results With</h6>
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": "1.25",
+                        "spaceBetween": 12,
+                        "breakpoints": {
+                            "992": {
+                                "slidesPerView": 2
+                            }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="sections/isolated/n&d-slider/images/q_rejuvalight_led.webp" alt="Q-Rejuvalight Pro LED Face Mask" /></a>
+                            <a href="#">Q-Rejuvalight Pro LED Face Mask</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="sections/isolated/targeted-patches/images/result-1.webp" alt="All-In One Face Serum" /></a>
+                            <a href="#">All-In One Face Serum</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "Key Benefits",
+                        "text": "
+                            <p>Treatment-first cleanser designed to care for skin — not just clean it. Cleanses without the tight, dry after-feel thanks to a 50% glycerin base and squalene that helps skin hold onto moisture. Non-stripping and suitable for sensitive skin.</p>
+                            <p>Visible benefits include:</p>
+                            <ul>
+                                <li>Smoother looking texture over time</li>
+                                <li>Healthier, calmer-looking complexion</li>
+                                <li>Hydrated skin that feels comfortable and balanced</li>
+                                <li>Fresh looking skin after every cleanse</li>
+                                <li>No tight or stripped feeling after washing</li>
+                            </ul>
+                        "
+                    },
+                    {
+                        "summary": "How To Use",
+                        "text": "
+                            <ul>
+                                <li>Apply a small amount to damp skin. </li>
+                                <li>Massage gently using circular motions, then rinse with lukewarm water. </li>
+                                <li>Use morning and night as your daily cleanser.</li>
+                            </ul>
+                            <p>For makeup or sunscreen removal, use a pre-cleanse first. This formula is best suited as a second cleanse or a morning cleanse when your skin needs care — not stripping.</p>
+                        "
+                    },
+                    {
+                        "summary": "Why We Love It",
+                        "text": "
+                            <p>Ever cleansed your skin and felt like you needed moisturizer immediately after?</p>
+                            <p>That tight feeling is often a sign your cleanser took too much with it.</p>
+                            <p>Most cleansers are water-based. his one replaces water with 50% glycerin — a moisture-loving ingredient that helps skin stay comfortable while you cleanse.</p>
+                            <p>The result? Skin that feels clean, soft, and balanced — never dry or over-stripped. It’s cleansing that respects your skin barrier, not works against it.</p>
+                        "
+                    },
+                    {
+                        "summary": "Clean Ingredients",
+                        "text": "
+                            <p>
+                                <strong>Glycerin</strong><br />
+                                A moisture-loving ingredient that helps skin stay hydrated and comfortable during cleansing.
+                            </p>
+
+                            <p>
+                                <strong>Lactic Acid</strong><br />
+                                A gentle exfoliant that helps refine the look of skin texture for a smoother, fresher complexion.
+                            </p>
+
+                            <p>
+                                <strong>Panthenol</strong><br />
+                                Helps calm the feeling of post-cleanse dryness and supports lasting hydration.
+                            </p>
+
+                            <p>
+                                <strong>Squalane</strong><br />
+                                A skin-compatible lipid that helps soften, smooth, and support a healthy skin barrier.
+                            </p>
+                            <hr />
+                            <ul class=\"c-marked-list\">
+                                <li>Suitable for sensitive skin</li>
+                                <li>Hypoallergenic and allergy tested</li>
+                                <li>Free from fragrance, parabens, and PEG</li>
+                                <li>Vegan and cruelty-free</li>
+                            </ul>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+    {{/hero-product }}
+
+    {{#> across-image-banner
+        classes="across-image-banner--text"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="assets/images/cleanser/cleanser-bg-image-1.webp" />
+            <img src="assets/images/cleanser/cleanser-bg-image-1-mob.webp" alt="A cleanser that restores what others remove" />
+        </picture>
+        <div class="container">
+            <article>
+                <h2>A cleanser that restores what others remove</h2>
+                <p>Most cleansers leave skin feeling tight.</p>
+                <p>That feeling isn’t clean — it’s moisture loss.</p>
+                <p>Many cleansers rely on strong surfactants to create a foamy, squeaky clean feel, often at the expense of your skin barrier. </p>
+                <p>Our cleanser is different. Instead of relying on water alone, the formula is powered by 50% glycerin, a moisture loving ingredient that helps skin hold onto hydration while you cleanse.</p>
+            </article>
+        </div>
+    {{/across-image-banner}}
+
+    {{> board-advisors
+        title="Trusted and Recommended by Skin Experts"
+        advisory-1="I like that they put a lot of R&D into their products - Ultimately, I think that they care a lot about the products they are putting out"
+        advisory-2="Qure do studies on this, taking a look at how effective it is, so you can have confidence it’s going to help what you’re doing for your skincare routine"
+        advisory-3="I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures."
+        advisory-4="What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create"
+    }}
+
+    {{#> base-section
+        classes="base-section--reverse"
+        title="Clinically tested, barrier approved"
+        picture="assets/images/cleanser/cleanser-text-image-1.webp"
+        custom-block='<a href="javascript:;" onclick="readStudyDetails.showModal()">Read study details</a>'
+        readStudyDetails=true
+    }}
+        {{> c-accordion
+            type="lines"
+            arrow-icon="true"
+            list='[
+                {
+                    "summary": "Boosts hydration",
+                    "text": "
+                        <p>Our glycerin-first formula draws moisture into skin as it cleanses, so you finish feeling hydrated rather than stripped.</p>
+                        <ul class=\"c-percent-list\">
+                            <li>
+                                <div class=\"e-circle-percent\" style=\"--percent-value: 100\"><span>100%</span></div>
+                                <span>agreed that skin felt hydrated after cleansing</span>
+                            </li>
+                            <li>
+                                <div class=\"e-circle-percent\" style=\"--percent-value: 80\"><span>80%</span></div>
+                                <span>said skin did not feel dry or tight after cleansing</span>
+                            </li>
+                        </ul>
+                    "
+                },
+                {
+                    "summary": "Improves texture",
+                    "text": "
+                        <p>A gentle 1.75% lactic acid refines skin over time without irritation, while 50% glycerin ensures skin stays comfortable throughout.</p>
+                        <ul class=\"c-percent-list\">
+                            <li>
+                                <div class=\"e-circle-percent\" style=\"--percent-value: 93\"><span>93%</span></div>
+                                <span>said their skin felt soft and clean</span>
+                            </li>
+                            <li>
+                                <div class=\"e-circle-percent\" style=\"--percent-value: 83\"><span>83%</span></div>
+                                <span>reported smoother-feeling skin</span>
+                            </li>
+                        </ul>
+                    "
+                },
+                {
+                    "summary": "Soothes and calms",
+                    "text": "
+                        <p>Tested on 106 volunteers and confirmed to be non-irritating and soothing for sensitive skin.</p>
+                        <ul class=\"c-percent-list\">
+                            <li>
+                                <div class=\"e-circle-percent\" style=\"--percent-value: 83\"><span>83%</span></div>
+                                <span>agreed cleanser felt gentle and soothing on first use</span>
+                            </li>
+                            <li>
+                                <div class=\"e-circle-percent\" style=\"--percent-value: 80\"><span>80%</span></div>
+                                <span>said skin looked healthy after cleansing</span>
+                            </li>
+                        </ul>
+                    "
+                }
+            ]'
+        }}
+    {{/base-section }}
+
+    {{> features-marquee }}
+
+    {{#> accordion-tiles
+        title="Made gentle for all skin types"
+        square=true
+        list='[
+            {
+                "image": "glycerin-tile",
+                "summary": "Glycerin",
+                "text": "A proven humectant that attracts and holds moisture in the skin, leaving skin feeling hydrated, comfortable, and balanced after rinse off."
+            },
+            {
+                "image": "lactic-acid-tile",
+                "summary": "Lactic Acid",
+                "text": "A gentle exfoliating acid that helps refine the look of skin texture and boost radiance over time. Used at a skin friendly level, lactic acid supports smoother looking skin without the harsh feel of traditional exfoliating cleansers."
+            },
+            {
+                "image": "aloe-vera-tile",
+                "summary": "Aloe Vera & Green Tea",
+                "text": "Natural calming agents with antioxidant benefits. They soothe and protect, making this cleanser gentle enough for daily use on sensitive skin."
+            }
+        ]'
+    }}
+        <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>
+        {{#> c-dialog
+            id="fullIngredient"
+        }}
+            <p><strong>Cleanser Ingredients</strong></p>
+            <p>Glycerin, Aqua (Water), Sodium Cocoyl Glutamate, Disodium Cocoamphodiacetate, Lactic Acid, Sodium Chloride, Squalane, Aloe Barbadensis Leaf Juice Powder, Panthenol, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Xanthan Gum, Sodium Phytate, Caprylhydroxamic Acid, Glyceryl Caprylate</p>
+            <hr />
+            <ul class="c-marked-list c-marked-list--fill">
+                <li>Fragrance-free</li>
+                <li>Silicone-free</li>
+                <li>Cruelty-free</li>
+                <li>Non-drying</li>
+                <li>Hypoallergenic</li>
+                <li>Safe for sensitive skin</li>
+            </ul>
+        {{/c-dialog }}
+    {{/accordion-tiles}}
+
+    {{#> complete-system
+        title="Complete the Qure system"
+    }}
+        <ol class="complete-system__scale c-swiper-steps">
+            <li><span>Restrict</span></li>
+            <li><span>Revive</span></li>
+            <li><span>Ready</span></li>
+            <li><span>Rejuvenate</span></li>
+        </ol>
+        <div class="complete-system__items">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.4,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "steps-selector": ".c-swiper-steps",
+                    "watchSlidesProgress": true,
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 24
+                        },
+                        "992": {
+                            "slidesPerView": 4
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/new/complete-system/images/faucet-filter.webp"
+                            image-hover="/sections/new/complete-system/images/faucet-filter-hover.webp"
+                            reviews="28"
+                            name="Faucet Filter"
+                            desc="Wash with filtered water to help boost hydration and reduce the look of irritation."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/new/complete-system/images/cleanser.webp"
+                            image-hover="/sections/new/complete-system/images/cleanser-hover.webp"
+                            reviews="31"
+                            name="Daily Gel Cleanser"
+                            desc="Cleanses thoroughly while helping skin stay calm and balanced."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/new/complete-system/images/blue-face-serum.webp"
+                            image-hover="/sections/new/complete-system/images/blue-face-serum-hover.webp"
+                            reviews="32"
+                            name="Blue+ Face Serum"
+                            desc="Prepares skin for a more effective LED session."
+                            day=false
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/new/complete-system/images/led-mask.webp"
+                            image-hover="/sections/new/complete-system/images/led-mask-hover.webp"
+                            reviews="283"
+                            name="Q-Rejuvalight Pro LED Mask"
+                            desc="Daily multi wavelength LED treatment for clearer, firmer-looking skin."
+                            day=false
+                            night=true
+                        }}
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/complete-system }}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "Is this cleanser suitable for sensitive skin?",
+                "text": "
+                    <p>Yes. This cleanser is gentle, non-stripping, and dermatologically tested to be suitable for sensitive skin. It is clinically tested, hypoallergenic, non-irritating, and allergy tested. As with any skincare product, we recommend patch testing before first use, especially if you have highly reactive skin.</p>
+                "
+            },
+            {
+                "summary": "Will this cleanser dry out my skin?",
+                "text": "
+                    <p>No. The formula is glycerin based rather than water based, which helps maintain moisture while cleansing. Most users reported their skin felt hydrated, soft, and comfortable after washing, not tight or stripped.</p>
+                "
+            },
+            {
+                "summary": "Can I use this cleanser every day?",
+                "text": "
+                    <p>Yes, this cleanser is designed for daily use, morning and night. The formula is pH balanced and suitable for consistent use without disrupting your skin barrier.</p>
+                    <p>For makeup or sunscreen removal, use a pre-cleanse first. This formula is best suited as a second cleanse or a morning cleanse when your skin needs care — not stripping.</p>
+                "
+            },
+            {
+                "summary": "Can I use this with retinol, vitamin C, or exfoliating acids?",
+                "text": "
+                    <p>Yes. This cleanser was formulated to work alongside active routines. By supporting the skin barrier, it helps make actives feel more comfortable over time rather than adding extra stress to the skin.</p>
+                "
+            },
+            {
+                "summary": "Will this cleanser exfoliate my skin?",
+                "text": "
+                    <p>It contains a gentle level of lactic acid that helps refine the look of skin texture over time. It is not a harsh exfoliant and does not replace dedicated exfoliating treatments.</p>
+                "
+            }
+        ]'
+    }}
+{{/section-stack }}
+
+{{/default }}

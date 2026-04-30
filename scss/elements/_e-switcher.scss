@@ -1,0 +1,51 @@
+@use "@root/mixins" as *;
+
+.e-switcher {
+    $root: &;
+
+    position: relative;
+    display: inline-block;
+
+    input {
+        position: absolute;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+
+        &:checked {
+            & + span {
+                background: #34c759;
+
+                &::before {
+                    left: calc(100% - 22px);
+                }
+            }
+        }
+    }
+
+    span {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 24px;
+        border-radius: 20px;
+        background: rgb(120 120 128 / 16%);
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            bottom: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 1px rgb(0 0 0 / 3%),
+                0 3px 6px 0 rgb(0 0 0 / 15%),
+                0 3px 1px 0 rgb(0 0 0 / 6%);
+            background: #fff;
+            content: '';
+            @include transition;
+        }
+    }
+}

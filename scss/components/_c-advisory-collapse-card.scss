@@ -1,0 +1,94 @@
+@use "@root/mixins" as *;
+
+.c-advisory-collapse-card {
+    overflow: hidden;
+
+    picture {
+        display: block;
+        transition: opacity 300ms;
+        opacity: 0.55;
+    }
+
+    img {
+        width: 100%;
+        @include img-fluid;
+        border-radius: 10px;
+    }
+
+    article, // TODO: article is old code, need to remove in future
+    summary {
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 30px;
+            height: 30px;
+            @include icon;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            background: #fff;
+            content: "\e903";
+        }
+
+        &:hover,
+        &[aria-expanded="true"] {
+            picture {
+                opacity: 1;
+            }
+        }
+
+        &[aria-expanded="true"] {
+            &::after {
+                content: "\e902";
+            }
+        }
+
+        p {
+            position: absolute;
+            right: 65px;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 16px;
+
+            &::first-line {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &[open] {
+        summary {
+            &::after {
+                content: "\e902";
+            }
+
+            & + p {
+                padding: 20px 10px 10px;
+            }
+        }
+    }
+
+
+    // TODO: Old code, need to remove in future
+    .collapse {
+        transition: none;
+
+        &:not(.show) {
+            display: none;
+        }
+
+        p {
+            width: 100%;
+            margin: 0;
+            padding: 20px 10px 10px;
+        }
+    }
+
+
+}

@@ -1,0 +1,18 @@
+<!-- SKINCARE ROUTINE -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/skincare-routine/skincare-routine.css" />
+{{/unless}}
+<section class="skincare-routine {{ classes }}">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <article class="skincare-routine__content">
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('skincare-routine', 'sections/new/skincare-routine/skincare-routine.js');
+    });
+</script>
+<!-- SKINCARE ROUTINE END -->

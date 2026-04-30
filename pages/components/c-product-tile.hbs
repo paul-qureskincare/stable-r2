@@ -1,0 +1,50 @@
+<div class="c-product-tile">
+    <a
+        class="c-product-tile__image"
+        style="--image-on-hover: url({{ image-hover }})"
+        href="#"
+    >
+        <img src="{{ image }}" alt="{{ title }}" />
+        {{#if (or day night) }}
+            <div class="c-product-tile__time">
+                {{#if day }}
+                    <div class="e-pill-badge e-pill-badge--sm">
+                        <i class="e-icon e-icon-am"></i>
+                        Day
+                    </div>
+                {{/if}}
+                {{#if night }}
+                    <div class="e-pill-badge e-pill-badge--sm">
+                        <i class="e-icon e-icon-pm"></i>
+                        Night
+                    </div>
+                {{/if}}
+            </div>
+        {{/if}}
+        {{#if bestseller }}
+            <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">Bestseller</div>
+        {{/if}}
+        {{#if badge }}
+            <div class="e-pill-badge e-pill-badge--xs" style="--badge-base-color: #ff5429">{{ badge }}</div>
+        {{/if}}
+        {{#if badge-blue }}
+            <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill" style="--badge-fill-color: #91baec">{{ badge-blue }}</div>
+        {{/if}}
+    </a>
+    <div class="c-product-tile__rating">
+        <div class="e-rating-stars" style="--rating: {{ rating-value }};"></div>
+        <a href="#">{{ reviews }} Reviews</a>
+    </div>
+    <a class="c-product-tile__name" href="#">{{ name }}</a>
+    {{#if desc }}
+        <p class="c-product-tile__desc">{{ desc }}</p>
+    {{/if}}
+    <div class="c-product-tile__price">
+        {{> e-price current="{$dyn}" }}
+    </div>
+    {{#if button }}
+        <form class="c-product-tile__button" action="#">
+            <button class="btn btn--primary">{{ button }}</button>
+        </form>
+    {{/if}}
+</div>

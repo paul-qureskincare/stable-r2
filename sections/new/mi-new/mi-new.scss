@@ -1,0 +1,165 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.mi-new {
+    $root: &;
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .btn {
+        display: none;
+        width: 100%;
+        margin-top: 24px;
+
+        @include sm {
+            display: block;
+        }
+    }
+
+    // .mi-new__content
+    &__content {
+        display: grid;
+        grid-template: repeat(4, auto) / repeat(2, auto);
+        gap: 12px 0;
+        align-items: center;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media screen and (min-width: 768px) {
+            grid-template: repeat(2, auto) / 1fr 230px 1fr;
+            gap: 0;
+        }
+    }
+
+    // .mi-new__pointer
+    &__pointer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-right: -40px;
+
+        @media screen and (min-width: 768px) {
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+            }
+
+            &::before {
+                top: 14px;
+                right: 0;
+                z-index: 1;
+                width: 10px;
+                height: 10px;
+                border: 1px dotted #91baec;
+                border-radius: 10px;
+                background: #fff;
+            }
+
+            &::after {
+                top: 19px;
+                right: 0;
+                left: 0;
+                height: 1px;
+                background: #91baec;
+            }
+        }
+
+        &:first-child {
+            @media screen and (min-width: 768px) {
+                margin-right: -70px;
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-last-child(2) {
+            @media screen and (min-width: 768px) {
+                align-items: flex-end;
+                margin-right: 0;
+                margin-left: -40px;
+                text-align: right;
+
+                &::before {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            @media screen and (min-width: 768px) {
+                grid-row: 1;
+                grid-column: 3;
+            }
+        }
+
+        &:nth-last-child(2) {
+            @media screen and (min-width: 768px) {
+                margin-left: -60px;
+            }
+        }
+
+
+
+        .e-pill-badge {
+            position: relative;
+            z-index: 2;
+            padding: 6px 12px;
+            color: #212428;
+            font-weight: 500;
+            letter-spacing: 0;
+            background: #f6f6f7;
+
+            @media screen and (min-width: 768px) {
+                box-shadow: 0 0 0 12px #fff;
+            }
+
+            @include sm {
+                gap: 6px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                font-size: 16px;
+            }
+        }
+
+        .e-checkmark {
+            color: #91baec;
+            box-shadow: 0 0 0 1px #91baec;
+            background: none;
+
+            @include sm {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            max-width: 220px;
+            font-size: 14px;
+            line-height: 1.25;
+        }
+    }
+
+    // .mi-new__image
+    &__image {
+        grid-row: 1 / -1;
+        grid-column: 2;
+
+        @media screen and (min-width: 768px) {
+            grid-row: 1 / span 2;
+        }
+
+        img {
+            @include img-fluid;
+
+            @include sm {
+                max-width: none;
+                height: 400px;
+            }
+        }
+    }
+}
