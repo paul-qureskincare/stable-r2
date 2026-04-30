@@ -1,7 +1,7 @@
 @use "@root/mixins" as *;
-@use "@elements/e-icon" as *;
+
 @use "@elements/e-hamburger" as *;
-@use "@components/c-swiper" as *;
+
 
 .header {
     $root: &;
