@@ -1,0 +1,35 @@
+<!-- QUICK LINKS -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/quick-links/quick-links.css" />
+{{/unless}}
+<section class="quick-links {{ classes }}">
+    <div class="container">
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": "4",
+                "spaceBetween": 10,
+                "breakpoints": {
+                    "480": {
+                        "slidesPerView": 6
+                    },
+                    "600": {
+                        "slidesPerView": 7
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                {{#parseJson list }}
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="{{ img }}" alt="{{ name }}" />
+                            <span>{{ name }}</span>
+                        </a>
+                    </div>
+                {{/parseJson}}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- QUICK LINKS END -->

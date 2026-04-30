@@ -1,0 +1,37 @@
+@use "@root/mixins" as *;
+
+.c-save-up {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    max-width: 500px;
+    padding: 16px 10px;
+    border-radius: 10px;
+    background: #ffeeea;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    .e-icon-gift {
+        flex: none;
+        padding: 5px;
+        color: #fff;
+        font-size: 30px;
+        border-radius: 30px;
+        background: var(--discount-color);
+    }
+
+    .e-icon-arrow {
+        font-size: 12px;
+        vertical-align: top;
+        -webkit-text-stroke: 1px;
+    }
+
+    .btn {
+        display: flex;
+        flex: none;
+        gap: 8px;
+        align-items: center;
+    }
+}

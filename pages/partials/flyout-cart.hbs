@@ -1,0 +1,242 @@
+<!-- FLYOUT CART -->
+<link rel="stylesheet" href="sections/new/cart/cart.css" />
+<dialog class="flyout-cart" id="cartCanvas">
+    <div id="cart-dynamic-content" class="flyout-cart__dynamic">
+        <div class="cart-countdown-time" data-countdown-time="15" data-timeout-message="Time is up!">
+            <span><strong>IN HIGH DEMAND</strong> | Items reserved for:</span>
+            <span class="cart-counter">
+                <span class="cart-counter-block countdown-timer-minute">00</span>
+                <span class="cart-counter-block countdown-timer-sec">00</span>
+            </span>
+            <span class="countdown-message"></span>
+        </div>
+        <div class="flyout-cart__wrapper">
+            <div class="flyout-cart__header">
+                <div>Your Cart (2)</div>
+                <button
+                    class="btn-close"
+                    type="button"
+                    onclick="cartCanvas.close()"
+                >
+                    <i class="e-icon e-icon-cross"></i>
+                </button>
+            </div>
+            <div class="flyout-cart__content">
+                <div class="flyout-cart__gifts">
+                    <p>You're $21 way from a FREE Silk Pillowcase (worth $79)</p>
+                    <ul style="--gifts-progress: 40%;">
+                        <li class="active" style="--gifts-icon-pos: 20%">
+                            <i class="e-icon e-icon-checkmark"></i>
+                            <span>$100</span>
+                        </li>
+                        <li style="--gifts-icon-pos: 50%">
+                            <i class="e-icon e-icon-gift"></i>
+                            <span>$100</span>
+                        </li>
+                        <li style="--gifts-icon-pos: 80%">
+                            <i class="e-icon e-icon-pillow"></i>
+                            <!-- <i class="e-icon e-icon-patches"></i> -->
+                            <!-- <i class="e-icon e-icon-mist"></i> -->
+                            <span>$400</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flyout-cart__body">
+                    <div class="flyout-cart__placeholder _d-none">
+                        <div class="flyout-cart__placeholder-header">
+                            <h4>Your cart is empty.</h4>
+                            <p>Fill it with amazing skincare.</p>
+                        </div>
+                        <div class="flyout-cart__placeholder-wrapper">
+                            <div class="flyout-cart__placeholder-content">
+                                <img src="sections/new/cart/images/flyout-cart-placeholder.webp" alt="" />
+                                <h6>Save up to 55% on our exclusive bundles</h6>
+                                <ul>
+                                    <li>Shop our devices & skincare at our best prices.</li>
+                                    <li>Target your skin concerns in one simple routine.</li>
+                                    <li>Get clinical results at home - no downtime.</li>
+                                </ul>
+                                <a class="btn btn--primary" href="#">Shop Bundles</a>
+                            </div>
+                            <div class="flyout-cart__placeholder-footer">
+                                <div class="e-rating-stars" style="--rating: 4.5;"></div>
+                                <strong>“Even my esthetician is hooked!</strong>
+                                <p>And I can now visit beauty clinics less often.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flyout-cart__list">
+                        <div class="flyout-cart__item">
+                            <div class="c-cart-tile">
+                                <a href="#" class="c-cart-tile__image">
+                                    <img src="assets/images/pd-2.webp" alt="Micro-Infusion 1 Month Bundle (Hydra-Soothing)" />
+                                </a>
+                                <h2 class="c-cart-tile__name"><a href="#">Micro-Infusion 1 Month Bundle (Hydra-Soothing)</a></h2>
+                                <div class="c-cart-tile__reviews">
+                                    <div class="e-rating-stars" style="--rating: 4.5;"></div>
+                                    <a href="#">78 Reviews</a>
+                                </div>
+                                <div class="c-cart-tile__available">
+                                    <span class="e-checkmark"></span>
+                                    In stock. Shipped within 2 days
+                                </div>
+                                <div class="c-cart-tile__footer">
+                                    <div class="c-cart-tile__price">
+                                        <div class="e-price">
+                                            <div class="e-price__main">
+                                                <div class="e-price__old">{$dyn}</div>
+                                                <div class="e-price__current">{$dyn}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-cart-tile__pcs">
+                                        <div class="e-quantity">
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-minus"></i></button></form>
+                                            <input type="number" name="qty" value="1" min="0" />
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-plus"></i></button></form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="c-cart-tile__remove">
+                                    <i class="e-icon e-icon-cross"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flyout-cart__item">
+                            <div class="c-cart-tile">
+                                <a href="#" class="c-cart-tile__image">
+                                    <img src="assets/images/pd-2.webp" alt="Micro-Infusion 1 Month Bundle (Hydra-Soothing)" />
+                                </a>
+                                <h2 class="c-cart-tile__name"><a href="#">Micro-Infusion 1 Month Bundle (Hydra-Soothing)</a></h2>
+                                <div class="c-cart-tile__reviews">
+                                    <div class="e-rating-stars" style="--rating: 4.5;"></div>
+                                    <a href="#">78 Reviews</a>
+                                </div>
+                                <div class="c-cart-tile__pre-order">
+                                    <i class="e-icon e-icon-i"></i>
+                                    <div><strong>Pre-order.</strong> Ships April 23.</div>
+                                </div>
+                                <div class="c-cart-tile__footer">
+                                    <div class="c-cart-tile__price">
+                                        <div class="e-price">
+                                            <div class="e-price__main">
+                                                <div class="e-price__old">{$dyn}</div>
+                                                <div class="e-price__current">{$dyn}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-cart-tile__pcs">
+                                        <div class="e-quantity">
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-minus"></i></button></form>
+                                            <input type="number" name="qty" value="1" min="0" />
+                                            <form action="#"><button type="button"><i class="e-icon e-icon-plus"></i></button></form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="c-cart-tile__remove">
+                                    <i class="e-icon e-icon-cross"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flyout-cart__upsells">
+                        <p>Get The Best Results With</p>
+                        <div
+                            class="c-swiper"
+                            data-swiper='{
+                                "slidesPerView": 1.1,
+                                "spaceBetween": 12,
+                                "loop": false
+                            }'
+                        >
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="sections/global/drawer/images/upsell-1.webp" alt="Micro-Infusion Targeted Patches" />
+                                    <p>
+                                        Micro-Infusion Targeted Patches <br />
+                                        $79
+                                    </p>
+                                    <a href="#" class="btn btn--md btn--primary-white">Add</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="sections/global/drawer/images/upsell-2.webp" alt="Dermal Mist Duo" />
+                                    <p>
+                                        Dermal Mist Duo <br />
+                                        $29
+                                    </p>
+                                    <a href="#" class="btn btn--md btn--primary-white">Add</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="sections/global/drawer/images/upsell-3.webp" alt="All-In One Face Serum" />
+                                    <p>
+                                        All-In One Face Serum <br />
+                                        $79
+                                    </p>
+                                    <a href="#" class="btn btn--md btn--primary-white">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flyout-cart__footer">
+                <div class="cart-footer">
+                    <div class="cart-footer__secure-ship">
+                        <img src="sections/global/drawer/images/secure-ship.svg" alt="Secure Ship" />
+                        <p>Protect your order from lost, damage and theft + <strong>$4.20</strong></p>
+                        <label class="e-switcher">
+                            <input type="checkbox" name="insurance" />
+                            <span></span>
+                        </label>
+                    </div>
+                    <ul class="cart-footer__summary">
+                        <li>
+                            <div><div class="e-pill-save">Exclusive savings</div></div>
+                            <div class="e-price e-price--highlight">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">$187</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Savings:</div>
+                            <div class="e-price e-price--profit">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">$87</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Shipping:</div>
+                            <div class="e-price">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">Free</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Subtotal:</div>
+                            <div class="e-price">
+                                <div class="e-price__main">
+                                    <div class="e-price__old">$375</div>
+                                    <div class="e-price__current">$188</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="cart-footer__checkout">
+                        <button class="btn btn--primary">
+                            Checkout
+                            <i class="e-icon e-icon-lock"></i>
+                        </button>
+                        <p>
+                            <i class="e-icon e-icon-guarantee"></i>
+                            Backed by our 30-Day Money-Back Guarantee
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+<!-- FLYOUT CART END -->

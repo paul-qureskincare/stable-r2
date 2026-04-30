@@ -1,0 +1,30 @@
+.user_guide .guide_content span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #212428;
+    padding: 0;
+    border-radius: 50%;
+    transition: .2s ease-in;
+}
+.user_guide .guide_content {
+    border: 1px solid #DFE0E0;
+    border-radius: 10px;
+    padding: 12px 24px;
+    display: grid;
+    grid-template-columns: 90px 1fr 40px;
+    gap: 0 24px;
+    align-items: center;
+}
+.guide_content-main:hover .guide_content span{
+    background-color: #C7E5DB;
+    border-color: #C7E5DB;
+}
+@media(max-width: 575px){
+    .user_guide .guide_content{
+        padding: 12px;
+        gap: 0 12px;
+    }
+}

@@ -1,0 +1,176 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@components/c-swiper" as *;
+
+.peek-cards-slider {
+    $root: &;
+
+    .container {
+        margin-right: 0;
+        padding-right: 0;
+
+        @media screen and (min-width: 1200px) {
+            @include max-width(1172px);
+        }
+
+        @media screen and (min-width: 1400px) {
+            @include max-width(1232px);
+        }
+
+        @include sm {
+            padding-right: 15px;
+        }
+    }
+
+    // .peek-cards-slider__content
+    &__content {
+        display: grid;
+        grid-template: repeat(2, auto) / 1fr 50vw;
+        gap: 20px 60px;
+        align-items: center;
+
+        @include md {
+            column-gap: 40px;
+        }
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+    }
+
+    h2 {
+        align-self: end;
+        margin-bottom: 0;
+
+        @include sm {
+            align-self: start;
+        }
+
+        & + div {
+            align-self: start;
+        }
+    }
+
+    .c-swiper {
+        grid-row: 1 / -1;
+        grid-column: 2;
+
+        @include sm {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #8b8c8e;
+        border-radius: 10px;
+
+        img {
+            object-fit: cover;
+            max-height: 220px;
+
+            @include sm {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+
+        article {
+            padding: 20px;
+        }
+
+        h6 {
+            margin-bottom: 8px;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        hr {
+            margin: 16px 0;
+        }
+
+        small {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+        }
+
+        .e-pill-badge {
+            color: currentColor;
+        }
+    }
+
+    // .peek-cards-slider--changes
+    &--changes {
+        #{$root}__content {
+            grid-template: auto auto 1fr / 1fr 65vw;
+
+            @include sm {
+                grid-template-columns: auto;
+            }
+        }
+
+        .btn {
+            align-self: start;
+
+            @include sm {
+                order: 10;
+            }
+        }
+
+        .swiper-slide {
+            border: 0;
+        }
+
+        .changes-tile {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            padding: 24px;
+            border-radius: 10px;
+            background: #f6f6f7;
+
+            @include sm {
+                gap: 16px;
+                padding: 16px;
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                max-height: none;
+                border-radius: 5px;
+            }
+
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                align-items: center;
+                font-size: 16px;
+
+                span {
+                    padding: 4px 18px;
+                    border: 1px solid #8b8c8e;
+                    border-radius: 50px;
+                    background: #fff;
+
+                    @include sm {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use "@root/mixins" as *;
+@use "@elements/e-rating-stars" as *;
+@use "@elements/e-pill-badge" as *;
+
+.c-post-tile {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1px #dfe0e0;
+
+    // .c-post-tile__image
+    &__image {
+        position: relative;
+        color: inherit;
+
+        img {
+            width: 100%;
+            @include img-fluid;
+            vertical-align: top;
+            border-radius: 5px;
+        }
+
+        .e-pill-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            color: inherit;
+            text-decoration: none;
+            background: #f6f6f7;
+        }
+    }
+
+    // .c-post-tile__content
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 24px;
+
+        .btn {
+            margin-top: auto;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    // .c-post-tile__time
+    &__time {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    // .c-post-tile__title
+    &__title {
+        margin-bottom: 16px;
+        // min-height: 72px;
+        font-family: inherit;
+        font-weight: 500;
+    }
+}

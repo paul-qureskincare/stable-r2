@@ -1,0 +1,18 @@
+.moneyback_guarantee {
+    border-radius: 10px;
+    background: var(--Mist, #F6F6F7);
+    padding: 32px 24px;
+}
+.ctm_grid {
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
+    place-items: center;
+}
+.moneyback_guarantee_content p {
+    margin-bottom: 0;
+}
+@media(max-width:767px){
+    .moneyback_guarantee{
+        padding: 24px 16px;
+    }
+}

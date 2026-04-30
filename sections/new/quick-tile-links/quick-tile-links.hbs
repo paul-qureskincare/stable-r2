@@ -1,0 +1,22 @@
+<!-- QUICK TILE LINKS -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/quick-tile-links/quick-tile-links.css" />
+{{/unless}}
+<section class="quick-tile-links {{ classes }}">
+    <div class="container">
+        <article>
+            {{#if title }}
+                <h2>{{ title }}</h2>
+            {{/if}}
+            <ul>
+                {{#parseJson list }}
+                    <a href="#" {{#if badge }} data-badge="{{ badge }}" {{/if}}>
+                        <img src="{{ img }}" alt="{{ name }}" />
+                        <span>{{ name }}</span>
+                    </a>
+                {{/parseJson}}
+            </ul>
+        </article>
+    </div>
+</section>
+<!-- QUICK TILE LINKS END -->

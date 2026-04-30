@@ -1,0 +1,28 @@
+.qure_cookie{position:fixed;top:0;bottom:0;width:100%;height:auto;background:hsl(0deg 0% 0% / 40%);z-index:999;display:flex;align-items:flex-end}
+.qure_cookie-inner{padding:24px 48px 32px 16px;background-color:#fff;width:100%;position:relative} 
+.cookie-message-card{font-size:14px;line-height:18px} 
+.cookie-message-card a{text-decoration:underline;color:inherit}
+.qure_cookie-inner .cookie-btn{position:absolute;right:32px;top:24px;font-size:22px}
+.cookies__input .switch{position:relative;display:inline-block;width:40px;height:24px}
+.cookies__input .switch input{opacity:0;width:0;height:0}
+.cookies__input .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s}
+.cookies__input .slider:before{position:absolute;content:"";height:20.22px;width:20.22px;left:2px;bottom:2px;-webkit-transition:.4s;transition:.4s;background:#FFF;box-shadow:0 0 0 .774px #0000000a 0 2.323px 6.194px 0 #00000026 0 2.323px .774px 0 #0000000f}
+.cookies__input input:checked+.slider{background-color:#34C759}
+.cookies__input input:focus+.slider{box-shadow:0 0 1px #2196f3}
+.cookies__input input:checked+.slider:before{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px)}
+.cookies__input .slider.round{border-radius:34px}
+.cookies__input .slider.round:before{border-radius:50%}
+.cookies-item{border-bottom:1px solid #DFE0E0}
+.cookies-item:last-child{border:none}
+.cookies-button-header{display:flex;align-items:center;justify-content:space-between;position:relative;padding-top:12px;padding-bottom:12px}
+.cookies-item:first-child .cookies-button-header{padding-top:0}
+.cookies-button-header .cookies-button{position:relative;width:100%;background:transparent;border:none;text-align:left;padding:5px 50px 5px 0;font-weight:600;font-size:14px;line-height:18px}
+.cookies-button-header .cookies__input{position:absolute;right:30px}
+.cookies-button-header .cookies-button:after{content:'';background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8' fill='none'%3E%3Cpath d='M15 7L8 1L1 7' stroke='%23212428' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat no-repeat;background-position:center center;background-size:contain;width:14px;display:block;position:absolute;right:0;top:0;bottom:0;height:100%;transition:.3s}
+.cookies-button-header .cookies-button[aria-expanded="true"]:after{transform:rotate(180deg)}
+.cookies-body{padding-bottom:12px;font-size:14px;line-height:18px}
+.manage_pref{text-decoration-skip-ink: none;}
+@media(max-width:991px) {
+.qure_cookie-inner .cookie-btn{right:16px;top:16px}
+.qure_cookie-inner{padding:16px 16px 16px 0}
+}

@@ -1,0 +1,64 @@
+<!-- RESULTS SHOWCASE -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/results-showcase/results-showcase.css" />
+{{/unless}}
+<section class="results-showcase {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        <article class="results-showcase__text">
+            <div class="e-rating-stars" style="--rating: 4.5;"></div>
+            <small>200,000+ Confident Customers</small>
+            <h2>{{ title }}</h2>
+            <ul>
+                <li>
+                    {{> e-icon icon="one-time-money" }}
+                    One-time investment
+                </li>
+                <li>
+                    {{> e-icon icon="incredibly-convenient" }}
+                    Incredibly convenient
+                </li>
+                <li>
+                    {{> e-icon icon="deeply-hydrates" }}
+                    Incredibly convenient
+                </li>
+                <li>
+                    {{> e-icon icon="clinic-results" }}
+                    Clinic-level results
+                </li>
+            </ul>
+        </article>
+        <div
+            class="c-swiper results-showcase__swiper"
+            data-swiper='{
+                "slidesPerView": 1.2,
+                "spaceBetween": 6,
+                "centeredSlides": true,
+                "loop": true,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 2.5,
+                        "spaceBetween": 12
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                {{> @partial-block }}
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- RESULTS SHOWCASE END -->

@@ -1,0 +1,116 @@
+.qure__product-item .qr__bundle-price-inner strong,
+.qure__product-rating strong {
+    font-weight: 600
+}
+
+.qure__product-rating {
+    padding: 8px 20px;
+    background: #f6f6f7;
+    border-radius: 5px
+}
+
+.qure-bundles {
+    border-radius: 10px;
+    border: 1px solid #8B8C8E;
+    padding: 20px;
+    max-width: var(--bundle-width, 450px);
+    margin: 0 auto
+}
+
+.qure-bundles .qure-bundle-title {
+    font-weight: 600;
+    font-size: 16px
+}
+
+.qure__product-bundle {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0 30px;
+    justify-content: center
+}
+
+.qure__product-bundle .qr-bundle-icon {
+    background: #f6f6f7;
+    color: #8b8c8e;
+    height: 43px;
+    min-width: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 24px
+}
+
+.qure__product-item {
+    padding-right: 10px
+}
+
+.qure__product-item>img {
+    border-radius: 5px;
+    max-width: 100px
+}
+
+.qure__product-item .qr__bundle-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -10px;
+    margin-top: -10px
+}
+
+.qure__product-item .qr__bundle-price-inner {
+    display: inline-block;
+    background: #ffeeea;
+    color: #ff5429;
+    font-weight: 500;
+    padding: 5px 10px;
+    line-height: normal;
+    border-radius: 5px
+}
+
+.qure__bundle-offer {
+    background: var(--bg-color)
+}
+
+.qure__progress {
+    border: 1px solid var(--progress-border-color, #8b8c8e);
+    border-radius: 50px;
+    font-size: 16px;
+    color: var(--progress-color, #ff5429);
+    position: relative;
+    height: 24px
+}
+
+.qure__progress .qure__progress-bar {
+    background: var(--progress-bg-color, #ff5429);
+    height: 22px;
+    border-radius: inherit
+}
+
+.qure__progress .qure__progress-sold {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center
+}
+
+@media (max-width:991px) {
+    .qure__product-bundle {
+        gap: 0 6px;
+        justify-content: space-between
+    }
+
+    .qure__product-bundle .qr-bundle-icon {
+        height: 30px;
+        min-width: 30px;
+        font-size: 16px
+    }
+}
+
+@media (max-width:767px) {
+    .qure__product-title {
+        font-size: 32px
+    }
+}

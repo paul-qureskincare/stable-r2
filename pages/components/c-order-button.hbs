@@ -1,0 +1,15 @@
+<div class="c-order-button">
+    <button class="btn btn--primary" type="button" {{#if on-click }}onclick="{{ on-click }}"{{/if }}>
+        {{#if button }}
+           {{ button }}
+        {{ else }}
+            Buy Now
+        {{/if}}
+        {{#if arrow }} {{> e-icon icon="arrow" }} {{/if }}
+    </button>
+    {{#unless hide-pay }}
+        {{> e-pay-options
+            pay-options-label=pay-options-label
+        }}
+    {{/unless}}
+</div>

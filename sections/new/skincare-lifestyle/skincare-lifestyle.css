@@ -1,0 +1,132 @@
+.skincare-lifestyle{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
+.skincare-lifestyle .container{
+  display:grid;
+  grid-template:repeat(2, auto)/repeat(2, 1fr);
+  gap:40px 80px;
+  align-items:center;
+}
+.skincare-lifestyle article{
+  grid-column:1 /  -1;
+  max-width:740px;
+  margin:0 auto;
+  text-align:center;
+}
+.skincare-lifestyle h2{
+  margin-bottom:24px;
+}
+.skincare-lifestyle picture{
+  display:none;
+}
+.skincare-lifestyle picture.show{
+  display:block;
+}
+.skincare-lifestyle picture img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+}
+.skincare-lifestyle ul{
+  padding-left:16px;
+}
+.skincare-lifestyle ul li{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding-top:6px;
+  padding-left:34px;
+}
+.skincare-lifestyle ul li:not(:last-child){
+  padding-bottom:40px;
+}
+.skincare-lifestyle ul li:not(:last-child):before{
+  position:absolute;
+  top:0;
+  left:0;
+  width:1px;
+  height:100%;
+  background:#212428;
+  content:"";
+}
+.skincare-lifestyle ul button{
+  position:absolute;
+  top:0;
+  left:-18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  font-weight:600;
+  border:1px solid;
+  border-radius:50%;
+}
+.skincare-lifestyle ul button.active{
+  background:#c7e5db;
+}
+.skincare-lifestyle ul h6{
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:600;
+}
+.skincare-lifestyle ul img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  display:none;
+  margin-top:8px;
+  border-radius:5px;
+}
+.skincare-lifestyle ul a{
+  color:inherit;
+  text-decoration:underline;
+}
+.skincare-lifestyle ul a:hover{
+  text-decoration:none;
+}
+@media screen and (max-width:991px){
+  .skincare-lifestyle{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+  .skincare-lifestyle .container{
+    -moz-column-gap:40px;
+         column-gap:40px;
+  }
+}
+@media screen and (max-width:767px){
+  .skincare-lifestyle .container{
+    grid-template:auto/auto;
+    -moz-column-gap:32px;
+         column-gap:32px;
+  }
+  .skincare-lifestyle article{
+    grid-column:auto;
+    text-align:left;
+  }
+  .skincare-lifestyle h2{
+    margin-bottom:16px;
+  }
+  .skincare-lifestyle picture,.skincare-lifestyle picture.show{
+    display:none;
+  }
+  .skincare-lifestyle ul li:not(:last-child){
+    padding-bottom:24px;
+  }
+  .skincare-lifestyle ul li:not(:last-child):before{
+    display:none;
+  }
+  .skincare-lifestyle ul img{
+    display:block;
+  }
+}
+@media (hover:hover){
+  .skincare-lifestyle ul button:hover{
+    background:#fff;
+  }
+}

@@ -1,0 +1,94 @@
+@use "@root/mixins" as *;
+
+.c-bundle-included {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 500px;
+
+    @include sm {
+        max-width: none;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        li {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            @include sm {
+                font-size: 16px;
+            }
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            img {
+                width: 100px;
+                height: auto;
+                vertical-align: top;
+                border-radius: 5px;
+
+                @include sm {
+                    width: 80px;
+                }
+            }
+
+            & > div {
+                display: grid;
+                grid-template: repeat(2, auto) / 1fr auto;
+                gap: 10px 16px;
+                align-items: start;
+            }
+
+            .e-price {
+                grid-row: 1 / -1;
+                grid-column: 2;
+            }
+
+            .e-price__main {
+                flex-direction: row-reverse;
+
+                @include sm {
+                    flex-direction: column-reverse;
+                }
+            }
+
+            small {
+                color: #8b8c8e;
+                font-size: 16px;
+                line-height: 1.2;
+
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &__amount {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            color: #008763;
+        }
+
+        .e-price__main {
+            flex-direction: row-reverse;
+        }
+    }
+}

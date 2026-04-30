@@ -1,0 +1,17 @@
+<!-- WE SUGGEST -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/we-suggest/we-suggest.css" />
+{{/unless}}
+<section class="we-suggest {{ classes }}">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        {{> @partial-block }}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('we-suggest', 'sections/new/we-suggest/we-suggest.js');
+        loadScriptOnce('dialog', 'assets/js-new/dialog.js');
+    });
+</script>
+<!-- WE SUGGEST END -->

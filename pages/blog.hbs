@@ -1,0 +1,202 @@
+{{#> default
+    title="Blog"
+    body-class="blog"
+}}
+
+{{#> section-stack }}
+    {{#> breadcrumb }}
+        <a href="#">Home</a>
+        {{> e-icon icon="chevron" }}
+        <strong>All Posts</strong>
+    {{/breadcrumb}}
+
+    {{#> blog-section }}
+        <div class="blog-section__sections">
+            <h2>Choose your topic</h2>
+            <ul>
+                {{#parseJson
+                    '[
+                        {
+                            "img": "choose_blog_1",
+                            "name": "LED Light Therapy"
+                        },
+                        {
+                            "img": "choose_blog_2",
+                            "name": "Skin"
+                        },
+                        {
+                            "img": "choose_blog_3",
+                            "name": "Skincare"
+                        }
+                    ]'
+                }}
+                    <li>
+                        <a href="#">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="sections/isolated/blogs/images/{{ img }}.webp">
+                                <img src="sections/isolated/blogs/images/{{ img }}_mob.webp" alt="{{ name }}">
+                            </picture>
+                            <h6>{{ name }}</h6>
+                        </a>
+                    </li>
+                {{/parseJson}}
+            </ul>
+        </div>
+        <div class="blog-section__posts">
+            <h2>Articles</h2>
+            <ul>
+                {{#parseJson
+                    '[
+                        {
+                            "image": "sections/isolated/blogs/images/article_1.webp",
+                            "tag": "#all",
+                            "date": "July 04, 2025",
+                            "read": "6 min read",
+                            "title": "The Skin Microbiome. Everything You Need to Know!"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_2.webp",
+                            "tag": "#all",
+                            "date": "July 12, 2025",
+                            "read": "6 min read",
+                            "title": "What to Do After Microneedling Your Scalp"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_3.webp",
+                            "tag": "#all",
+                            "date": "July 12, 2025",
+                            "read": "6 min read",
+                            "title": "How to Clean a Derma Roller"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_4.webp",
+                            "tag": "#all",
+                            "date": "July 06, 2025",
+                            "read": "6 min read",
+                            "title": "Microchanneling vs Microneedling"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_5.webp",
+                            "tag": "#all",
+                            "date": "July 06, 2025",
+                            "read": "6 min read",
+                            "title": "Microneedling vs Chemical Peel"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_6.webp",
+                            "tag": "#all",
+                            "date": "July 06, 2025",
+                            "read": "6 min read",
+                            "title": "Does a Derma Roller Hurt?"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_7.webp",
+                            "tag": "#all",
+                            "date": "November 05, 2025",
+                            "read": "6 min read",
+                            "title": "Microneedling vs PRP"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_8.webp",
+                            "tag": "#all",
+                            "date": "November 05, 2025",
+                            "read": "6 min read",
+                            "title": "Are Derma Rollers Safe?"
+                        },
+                        {
+                            "image": "sections/isolated/blogs/images/article_9.webp",
+                            "tag": "#all",
+                            "date": "November 12, 2025",
+                            "read": "6 min read",
+                            "title": "Microneedling vs Botox"
+                        }
+                    ]'
+                }}
+                    <li>
+                        {{> c-post-tile
+                            image=image
+                            tag=tag
+                            date=date
+                            read=read
+                            title=title
+                        }}
+                    </li>
+                {{/parseJson}}
+            </ul>
+            <div>
+                <button type="button" disabled>{{> e-icon icon="chevron"}}</button>
+                <div><strong>1</strong> / 12</div>
+                <button type="button">{{> e-icon icon="chevron"}}</button>
+            </div>
+        </div>
+        <div class="blog-section__top-list">
+            <h6>Most Popular Posts</h6>
+            <ul class="e-top-posts">
+                {{#parseJson
+                    '[
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_1.webp",
+                            "title": "Does Drinking Water Help Clear Your Skin?",
+                            "hash": "#skin"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_2.webp",
+                            "title": "Benefits of Peptides for the Skin",
+                            "hash": "#skincare"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_3.webp",
+                            "title": "How LED Therapy Can Transform Your Skin",
+                            "hash": "#LEDlighttherapy"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_4.webp",
+                            "title": "21 Best Skin-Care Tips, According to Der...",
+                            "hash": "#skin"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_5.webp",
+                            "title": "Retinol/Retinoids - What are they and...",
+                            "hash": "#skincare"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_6.webp",
+                            "title": "Can Vitamin C Help With Anti-Skin Aging?",
+                            "hash": "#skincare"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_7.webp",
+                            "title": "How to Treat Acne Using Light Therapy...",
+                            "hash": "#LEDlighttherapy"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_8.webp",
+                            "title": "Skincare Questions You’re Too Afraid To...",
+                            "hash": "#LEDlighttherapy"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_9.webp",
+                            "title": "How Cortisol Affects the Skin: The St...",
+                            "hash": "#skin"
+                        },
+                        {
+                            "img": "sections/isolated/blogs/images/pop_post_10.webp",
+                            "title": "Beta-Glucan: The Saint Grail of Skin Hy...",
+                            "hash": "#skin"
+                        }
+                    ]'
+                }}
+                    <li>
+                        <a href="#">
+                            <img src="{{ img }}" alt="{{ title }}" />
+                            <span>{{ hash }}</span>
+                            <p>{{ title }}</p>
+                        </a>
+                    </li>
+                {{/parseJson}}
+            </ul>
+        </div>
+    {{/blog-section }}
+{{/section-stack }}
+
+{{/default }}

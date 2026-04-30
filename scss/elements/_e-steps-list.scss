@@ -1,0 +1,50 @@
+@use "@root/mixins" as *;
+
+.e-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    counter-reset: number;
+
+    li {
+        position: relative;
+        padding-top: 2px;
+        padding-left: 50px;
+        counter-increment: number;
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: calc(26px / 2);
+            z-index: -1;
+            width: 1px;
+            height: calc(100% + 30px);
+            background: #8b8c8e;
+            content: '';
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            color: #212428;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #8b8c8e;
+            border-radius: 40px;
+            background: #fff;
+            content: counter(number)"";
+        }
+    }
+}

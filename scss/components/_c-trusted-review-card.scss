@@ -1,0 +1,129 @@
+@use "@root/mixins" as *;
+@use "@elements/e-author" as *;
+@use "@elements/e-verified-customer" as *;
+
+.c-trusted-review-card {
+    $root: &;
+
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    gap: 24px;
+    align-content: start;
+    overflow: hidden;
+    padding-bottom: 24px;
+    border-radius: 10px;
+    background: #fff;
+
+    @include sm {
+        gap: 16px;
+        padding-bottom: 16px;
+    }
+
+    &:has(a) {
+        grid-template-rows: repeat(3, auto) 1fr;
+    }
+
+    picture,
+    article {
+        grid-column: 1 / -1;
+    }
+
+    article {
+        padding: 0 24px;
+        line-height: 1.25;
+
+        @include sm {
+            padding: 0 16px;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h6 {
+        margin-bottom: 20px;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    a {
+        display: grid;
+        grid-template: repeat(2, auto) / 45px 1fr;
+        grid-column: 1 / -1;
+        gap: 0 12px;
+        align-self: end;
+        margin: 0 24px;
+        padding: 12px;
+        color: inherit;
+        font-size: 16px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        @include sm {
+            margin: 0 16px;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: #c8e6dc;
+        }
+
+        img {
+            grid-row: 1 / -1;
+        }
+
+        small {
+            font-size: 0.875em;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    .e-author {
+        align-self: center;
+        margin-left: 24px;
+
+        @include sm {
+            margin-left: 16px;
+        }
+    }
+
+    .e-verified-customer {
+        margin-right: 24px;
+        margin-left: auto;
+
+        @include sm {
+            margin-right: 16px;
+        }
+    }
+
+    // .c-trusted-review-card--short
+    &--short {
+        gap: 10px 24px;
+        background: #f6f6f7;
+
+        @include sm {
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        .e-verified-customer {
+            gap: 8px;
+            font-size: 18px;
+            background: none;
+
+            @include sm {
+                font-size: inherit;
+            }
+        }
+    }
+}

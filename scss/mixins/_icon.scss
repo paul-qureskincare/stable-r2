@@ -1,0 +1,13 @@
+@mixin icon {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: icomoon;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    vertical-align: top;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    speak: never;
+}

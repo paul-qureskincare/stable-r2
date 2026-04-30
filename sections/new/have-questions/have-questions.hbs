@@ -1,0 +1,19 @@
+<!-- HAVE QUESTIONS -->
+<link rel="stylesheet" href="sections/new/have-questions/have-questions.css" />
+<div class="have-questions" id="faq">
+    <div class="container">
+        <h2>Have questions?</h2>
+        {{#if text }}
+            <article>
+                {{{ text }}}
+            </article>
+        {{/if }}
+        {{> c-accordion
+            list=list
+            type="lines"
+            button=true
+            devices-technical=devices-technical
+        }}
+    </div>
+</div>
+<!-- HAVE QUESTIONS END -->

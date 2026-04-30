@@ -1,0 +1,93 @@
+/* ====================== Section column slider with text ====================== */
+.card.skin-card {
+    --bs-card-inner-border-radius: 8px;
+    --bs-card-border-radius: 8px;
+    --bs-card-spacer-y:20px;
+    --bs-card-spacer-x:20px;
+    border:none;
+} 
+.card-body.skin-card-body {
+    padding: var(--bs-card-spacer-y, 20px) var(--bs-card-spacer-x, 20px);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.card-body.skin-card-body .card-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.cause__list span {
+    background: #F6F6F7;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.cause__list span + span {
+    margin-left: 8px;
+}
+.p-ing-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+.p-ing-card img{
+    max-width: 100%;
+}
+.rev_slide-prd {
+    color: inherit;
+}
+.rev-prd-img img{
+    max-width:45px;
+}
+.rev_slide-prd:hover {
+    background: var(--base-color) !important;
+}
+
+/* -----Centered-Slide------- */
+.centered_scale .swiper-slide.swiper-slide-active .skin-card {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.centered_scale .swiper-slide .skin-card {
+    transition: all 200ms linear;
+    transform: scale(0.93);
+    opacity: .4;
+}    
+.card-body.skin-card-body .icon-with-text img {
+    height: auto;
+}
+.page\.micro-infusion-faq-page-second .card.skin-card {
+    border: 1px solid #DFE0E0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.qure__trusted-reviews .tr__reviews {
+    margin-bottom: 12px;
+}
+.trusted_video_content .drs_rev p {
+    font-size: 16px;
+}
+.icon-with-text{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+@media(max-width:767px){
+    .centered_scale .swiper-slide .skin-card {
+    transform: scale(0.94);
+    }
+}
+/* -----Centered-Slide------- */
+/*====================Section qure logo =========================*/
+
+/* @media(min-width:768px){
+    .qure__trusted-reviews .swiper-arrows-with-pagination {
+        display: none !important;
+    }
+} */

@@ -1,0 +1,295 @@
+@use "@root/mixins" as *;
+
+.c-accordion {
+    $root: &;
+
+    // .c-accordion__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    // .c-accordion__item
+    &__item {
+        overflow: hidden;
+        font-size: 16px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        &[open] {
+            #{$root}__summary {
+                font-weight: 600;
+
+                &::after {
+                    content: "\e902";
+                }
+            }
+        }
+    }
+
+    // .c-accordion__summary
+    &__summary {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        min-height: 63px;
+        padding: 12px 24px;
+        color: #212428;
+        text-align: left;
+        border: 0;
+        background: none;
+
+        @include sm {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        &::after {
+            margin-left: auto;
+            @include icon;
+            font-size: 14px;
+            content: "\e903";
+        }
+    }
+
+    // .c-accordion__content
+    &__content {
+        padding: 0 24px 24px;
+
+        @include sm {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        picture {
+            float: right;
+            width: min(300px, 40%);
+            margin-bottom: 25px;
+            margin-left: 40px;
+
+            @include sm {
+                float: none;
+                display: block;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        p {
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        ul {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &[href^="mailto:"] {
+                color: #91baec;
+            }
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        ul {
+            &:not(.c-marked-list, .c-percent-list) {
+                padding-left: 24px;
+
+                li {
+                    padding-left: 4px;
+                    list-style: disc;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        ol {
+            @include numeric-list;
+        }
+
+        hr {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            opacity: 0.1;
+        }
+    }
+
+    // .c-accordion__ask-us
+    &__ask-us {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        font-weight: 500;
+
+        @include sm {
+            margin-top: 32px;
+            margin-bottom: 4px;
+        }
+
+        a {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-weight: inherit;
+
+            .e-icon {
+                font-size: 14px;
+                vertical-align: top;
+                -webkit-text-stroke: 0.4px;
+            }
+        }
+    }
+
+    .devices-technical {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        ul:not(.c-marked-list) {
+            margin-bottom: 0;
+            padding-left: 0;
+
+            li {
+                padding-left: 0;
+                list-style: none;
+            }
+        }
+
+        // .devices-technical__buttons
+        &__buttons {
+            display: flex;
+            gap: 30px;
+
+            button {
+                padding: 0;
+                color: #b5b6b7;
+                text-align: left;
+                border: 0;
+                background: none;
+
+                &.active {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        // .devices-technical__pane
+        &__pane {
+            transition: opacity 600ms linear;
+
+            &:not(.show) {
+                @include hide-pane;
+            }
+
+            hr {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+        }
+
+        &__section {
+            display: grid;
+            grid-template-columns: 125px 1fr;
+            gap: 32px;
+
+            @include sm {
+                grid-template-columns: auto;
+                gap: 24px;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                font-size: 16px;
+                line-height: 1.2;
+            }
+
+            li {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+            }
+
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+
+    // .c-accordion--lines
+    &--lines {
+        // .c-accordion--lines .c-accordion__list
+        #{$root}__list {
+            gap: 0;
+        }
+
+        // .c-accordion--lines .c-accordion__item
+        #{$root}__item {
+            border-bottom: 1px solid #8b8c8e;
+            border-radius: 0;
+            background: none;
+        }
+
+        // .c-accordion--lines .c-accordion__summary
+        #{$root}__summary {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        // .c-accordion--lines .c-accordion__content
+        #{$root}__content {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &--arrow-icon {
+        #{$root}__item[open] {
+            #{$root}__summary {
+                &::after {
+                    content: "\e905";
+                }
+            }
+        }
+
+        #{$root}__summary {
+            &::after {
+                transform: rotate(90deg);
+                content: "\e905";
+            }
+        }
+    }
+}

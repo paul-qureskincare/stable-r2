@@ -1,0 +1,25 @@
+.guarantee article{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  align-items:center;
+  max-width:740px;
+  margin:0 auto;
+  text-align:center;
+}
+.guarantee h2{
+  margin-bottom:0;
+}
+.guarantee img{
+  max-width:172px;
+  height:auto;
+  vertical-align:top;
+}
+@media screen and (max-width:767px){
+  .guarantee article{
+    gap:24px;
+  }
+  .guarantee img{
+    width:100px;
+  }
+}

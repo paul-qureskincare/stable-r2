@@ -1,0 +1,107 @@
+<div class="c-suggest-card">
+    <div class="c-suggest-card__media">
+        <div class="c-suggest-card__media-content show">
+            <a
+                class="c-suggest-card__media-link"
+                style="--image-on-hover: url({{ image-hover }})"
+                href="#"
+            >
+                <img src="{{ image }}" alt="{{ title }}" />
+            </a>
+        </div>
+        {{#if results }}
+            <div class="c-suggest-card__media-content">
+                <img src="{{ results }}" alt="{{ title }}" />
+            </div>
+        {{/if }}
+        <div class="c-suggest-card__media-content">
+            <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/{{ video }}?autoplay=1&mute=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <ul class="c-suggest-card__media-switcher">
+            <li><button class="active" type="button">Product</button></li>
+            {{#if results }}
+                <li><button type="button">Results</button></li>
+            {{/if }}
+            <li><button type="button">Review</button></li>
+        </ul>
+    </div>
+    <h4 class="c-suggest-card__title">{{ title }}</h4>
+    <div class="c-suggest-card__price">{{> e-price current="{$dyn}" }}</div>
+    <p class="c-suggest-card__desc">{{ desc }} <button type="button" onclick="{{ id }}.showModal()">Read more.</button></p>
+    <div class="c-suggest-card__features">
+        {{> @partial-block }}
+    </div>
+    <form class="c-suggest-card__submit" action="#">
+        <button
+            class="btn btn--primary {{#if added }}btn--added{{/if }}"
+            type="button"
+        >
+            {{#if added }}Added!{{ else }}Add to Bundle{{/if }}
+        </button>
+    </form>
+    <div class="c-suggest-card__quot">
+        {{#if doctor-review }}
+            <strong>“{{ quot-strong }}</strong>
+            <small>{{ quot-small }}”</small>
+            <span>– Dr. Muneeb Shah, Dermatologist</span>
+            <img src="sections/isolated/targeted-patches/images/crt-1.webp" alt="– Dr. Muneeb Shah, Dermatologist" />
+        {{ else }}
+        <div class="e-rating-stars" style="--rating: 4.5;"></div>
+        <strong>“{{ quot-strong }}</strong>
+        <small>{{ quot-small }}”</small>
+        {{/if }}
+    </div>
+    <dialog class="c-dialog c-suggest-card__popup" id="{{ id }}">
+        <div class="c-dialog__content">
+            <div class="c-suggest-card__media">
+                <div class="c-suggest-card__media-content show">
+                    <a class="c-suggest-card__media-link" href="#">
+                        <img src="{{ image }}" alt="{{ title }}" />
+                    </a>
+                </div>
+                {{#if results }}
+                    <div class="c-suggest-card__media-content">
+                        <img src="{{ results }}" alt="{{ title }}" />
+                    </div>
+                {{/if }}
+                <div class="c-suggest-card__media-content">
+                    <iframe width="100%" height="315"
+                        src="https://www.youtube.com/embed/{{ video }}?autoplay=1&mute=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <ul class="c-suggest-card__media-switcher">
+                    <li><button class="active" type="button">Product</button></li>
+                    {{#if results }}
+                        <li><button type="button">Results</button></li>
+                    {{/if }}
+                    <li><button type="button">Review</button></li>
+                </ul>
+            </div>
+            <h4 class="c-suggest-card__title">{{ title }}</h4>
+            <div class="c-suggest-card__price">{{> e-price current="{$dyn}" }}</div>
+            <div class="c-suggest-card__features">
+                {{> @partial-block }}
+            </div>
+            <form class="c-suggest-card__submit" action="#">
+                <button
+                    class="btn btn--primary {{#if added }}btn--added{{/if }}"
+                    type="button"
+                >
+                    {{#if added }}Added!{{ else }}Add to Bundle{{/if }}
+                </button>
+            </form>
+        </div>
+        <button type="button" class="c-dialog__close" onclick="{{ id }}.close()">
+            {{> e-icon icon="cross"}}
+        </button>
+    </dialog>
+</div>
+

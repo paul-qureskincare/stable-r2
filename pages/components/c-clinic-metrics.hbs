@@ -1,0 +1,8 @@
+<ul
+    class="c-clinic-metrics"
+    data-label="{{ title }}"
+>
+    {{#parseJson list }}
+        <li data-value="{{ value }}">{{ text }}</li>
+    {{/parseJson}}
+</ul>

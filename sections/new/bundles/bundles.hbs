@@ -1,0 +1,19 @@
+<!-- BUNDLES -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/bundles/bundles.css" />
+{{/unless}}
+<section class="bundles {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="bundles__content">
+            {{> @partial-block }}
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('dialog', 'assets/js-new/dialog.js');
+        loadScriptOnce('bundles', 'sections/new/bundles/bundles.js');
+    });
+</script>
+<!-- BUNDLES END -->

@@ -1,0 +1,42 @@
+@use "@root/mixins" as *;
+
+.quick-links {
+    $root: &;
+
+    display: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include sm {
+        display: block;
+        margin-bottom: -40px;
+    }
+
+    .c-swiper {
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-slide {
+        a {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            color: inherit;
+            font-size: 12px;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        span {
+            margin-right: -4px;
+            margin-left: -4px;
+        }
+
+        img {
+            @include img-fluid;
+            max-width: 70px;
+        }
+    }
+}

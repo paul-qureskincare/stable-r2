@@ -1,0 +1,33 @@
+@use "@root/mixins" as *;
+@use "@elements/e-circle-percent" as *;
+
+.c-percent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    & + p {
+        margin-top: 18px;
+        color: #8b8c8e;
+        font-size: 16px;
+
+        @include sm {
+            margin-top: 12px;
+            text-align: center;
+        }
+    }
+
+    // .c-percent-list--columns
+    &--columns {
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

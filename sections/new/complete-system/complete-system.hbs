@@ -1,0 +1,20 @@
+<!-- COMPLETE SYSTEM WORK -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/complete-system/complete-system.css" />
+{{/unless}}
+<section class="complete-system {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        <article class="complete-system__content">
+            <h2>{{ title }}</h2>
+            {{> @partial-block }}
+            <div class="c-buy-block">
+                {{> c-order-button
+                    button="Add Full System to Cart"
+                    hide-pay=true
+                }}
+                <small>30-Day Money-Back Guarantee &bull; Free US Shipping</small>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- COMPLETE SYSTEM WORK END -->

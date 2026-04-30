@@ -1,0 +1,85 @@
+@use "@root/mixins" as *;
+
+.c-visual-compare-card {
+    --c-visual-compare-card-pill-color: #c8e6dc;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px solid #dfe0e0;
+    border-radius: 10px;
+
+    @include md {
+        gap: 16px;
+        padding: 16px;
+    }
+
+    picture {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        align-items: center;
+        justify-content: center;
+
+        @include md {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        & > span {
+            padding: 6px 20px;
+            border-radius: 30px;
+            background: var(--c-visual-compare-card-pill-color);
+        }
+
+        &:has(a) {
+            display: grid;
+            grid-template: repeat(2, auto) / auto 1fr;
+            gap: 24px 12px;
+
+            p {
+                display: flex;
+            }
+
+            a {
+                display: flex;
+                grid-column: 1 / -1;
+                gap: 12px;
+                align-items: center;
+                padding: 12px 16px;
+                color: inherit;
+                border-radius: 10px;
+                background: #f6f6f7;
+
+                &:hover {
+                    background: #c8e6dc;
+                }
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            img {
+                @include img-fluid;
+                max-width: 55px;
+            }
+
+            .e-icon {
+                margin-left: auto;
+                font-size: 14px;
+            }
+
+        }
+    }
+}

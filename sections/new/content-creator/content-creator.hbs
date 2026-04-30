@@ -1,0 +1,93 @@
+<!-- CONTENT CREATOR -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/content-creator/content-creator.css" />
+{{/unless}}
+<section class="content-creator {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        <article class="content-creator__text">
+            <h1>Are you a Content Creator?</h1>
+            <div>
+                <p>Qure is proud to support creators on their journey to sharing innovative, science-backed skincare solutions. Because everyone deserves to feel beautiful in their skin.</p>
+                <p>Join the numerous faces that help shape the future of skincare.</p>
+                <p>I'm a:</p>
+            </div>
+            <ul>
+                <li><button class="btn btn--primary" type="button" onclick="ugcCreator.showModal()">UGC Creator</button></li>
+                <li><a class="btn btn--primary" href="#">Influencer</a></li>
+            </ul>
+            <dialog class="c-dialog" id="ugcCreator">
+                <div class="c-dialog__content">
+                    <h5>Thank you for your interest in creating UGC content for Qure Skincare.</h5>
+                    <p>Please contact ugc@qureskincare.com with your portfolio and we will be in touch if we have any collaboration opportunities available.</p>
+                </div>
+                <button type="button" class="c-dialog__close" onclick="ugcCreator.close()">
+                    {{> e-icon icon="cross"}}
+                </button>
+            </dialog>
+        </article>
+        <ul class="content-creator__videos">
+            <li>
+                {{#eachList '["hh6opekser", "zs3ddb0qly", "0yzue0kewq"]' }}
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/eachList}}
+            </li>
+            <li>
+                {{#eachList '["trdbfz6uid", "4cq20l8zpw", "0e33y0v0ek"]' }}
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/eachList}}
+            </li>
+            <li>
+                {{#eachList '["d9qtjnq5y2", "ruvuftcy1z", "1c3i00qlvo"]' }}
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/eachList}}
+            </li>
+            <li>
+                {{#eachList '["vqqgjovm3v", "7wu0u1d3gk", "ivb0vcg2v8"]' }}
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/eachList}}
+            </li>
+            <li>
+                {{#eachList '["4tx5o3wtrv", "vwtoin6sax"]' }}
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
+                            </div>
+                        </div>
+                    </div>
+                {{/eachList}}
+            </li>
+        </ul>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('dialog', 'assets/js-new/dialog.js');
+        loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+    });
+</script>
+<!-- CONTENT CREATOR END -->

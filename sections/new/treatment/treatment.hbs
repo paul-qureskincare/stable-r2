@@ -1,0 +1,55 @@
+<!-- TREATMENT -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/treatment/treatment.css" />
+{{/unless}}
+<section
+    class="treatment {{ classes }}"
+    {{#if id }}id="{{ id }}"{{/if}}
+    {{#if announcement }}data-announcement="{{ announcement }}"{{/if}}
+>
+    <div class="container">
+        <article class="treatment__content">
+            {{#if title }}<h2>{{ title }}</h2>{{/if}}
+            {{{ text }}}
+            <picture>
+                <img src="{{ picture }}" alt="{{ title }}" />
+            </picture>
+        </article>
+        <div class="treatment__form">
+            <div class="treatment__box">
+                {{> @partial-block }}
+                <div class="treatment__buy">
+                    <div class="c-buy-block">
+                        {{> c-order-button }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="treatment__extra">
+            <ul class="e-features-list">
+                {{#parseJson features-list }}
+                    <li>
+                        {{> e-icon icon=icon }}
+                        {{ text }}
+                    </li>
+                {{/parseJson}}
+            </ul>
+            <div class="treatment__questions">
+                Have questions about {$dyn}? <a href="#" class="btn btn--md btn--secondary">Chat with us!</a>
+            </div>
+            {{#if accordion-list }}
+                {{> c-accordion
+                    type="lines"
+                    list=accordion-list
+                }}
+            {{/if}}
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('treatment-new', 'sections/new/treatment/treatment.js');
+        loadScriptOnce('dialog', 'assets/js-new/dialog.js');
+    });
+</script>
+<!-- TREATMENT END -->

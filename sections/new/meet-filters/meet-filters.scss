@@ -1,0 +1,139 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@components/c-pill-tabs" as *;
+@use "@components/c-wistia-embed-video" as *;
+
+.meet-filters {
+    $root: &;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(270deg, #f6f6f7 0%, #e2e2e3 45%);
+
+
+    @include sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: linear-gradient(0deg, #f6f6f7 0%, #e2e2e3 45%);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr min(450px, 40%);
+        gap: 24px 60px;
+        align-items: center;
+
+        @include md {
+            gap: 40px;
+        }
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 24px;
+        }
+    }
+
+    article {
+        img {
+            @include img-fluid;
+
+            @include md {
+                display: none;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    .c-pill-tabs {
+        & > img {
+            display: none;
+            width: calc(100% + 32px);
+            height: auto;
+            margin: -24px -16px;
+
+            @include sm {
+                display: block;
+            }
+        }
+    }
+
+    .c-pill-tabs__pane {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(2, 1fr);
+        gap: 30px 20px;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 10px;
+        background: #fff;
+
+        @include md {
+            column-gap: 8px;
+        }
+
+        h6 {
+            grid-column: 1 / -1;
+            font-family: inherit;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column: 1 / -1;
+            gap: 20px;
+            padding: 20px 35px;
+            font-size: 16px;
+            line-height: 1.2;
+            border-radius: 10px;
+            background: #f6f6f7;
+
+            @include md {
+                gap: 20px 8px;
+                padding: 20px;
+            }
+
+            li {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                @include md {
+                    flex-direction: column;
+                    gap: 6px;
+                    align-items: start;
+                }
+            }
+        }
+
+        img {
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            @include img-fluid;
+            border-radius: 10px;
+        }
+
+        .c-wistia-embed-video {
+            overflow: hidden;
+            border-radius: 10px;
+
+            .wistia_responsive_padding {
+                max-height: 100%;
+                padding-top: 0 !important;
+            }
+        }
+    }
+
+    .e-pill-tabs {
+        background: #fff;
+
+        li {
+            button.active {
+                background: #91baec;
+            }
+        }
+    }
+}

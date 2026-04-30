@@ -1,0 +1,532 @@
+.e-declaimer{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+
+.e-circle-percent{
+  position:relative;
+  width:62px;
+  height:62px;
+  padding:6px;
+  border-radius:100px;
+  background:conic-gradient(#c7e5db 0deg calc(var(--percent-value) * 3.6deg), transparent calc(var(--percent-value) * 3.6deg) 1turn);
+}
+.e-circle-percent:before{
+  position:absolute;
+  inset:3px;
+  z-index:-1;
+  border:1px solid #8b8c8e;
+  border-radius:100px;
+  content:"";
+}
+.e-circle-percent span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  font-size:20px;
+  font-weight:500;
+  border-radius:100px;
+  background:#fff;
+}
+
+.c-percent-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.c-percent-list li{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.c-percent-list+p{
+  margin-top:18px;
+  color:#8b8c8e;
+  font-size:16px;
+}
+
+.e-pill-tabs{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  padding:7px 11px;
+  border:1px solid #8b8c8e;
+  border-radius:100px;
+}
+.e-pill-tabs li{
+  flex-grow:1;
+}
+.e-pill-tabs button,.e-pill-tabs label{
+  width:100%;
+  padding:7px 16px;
+  color:#b5b6b7;
+  font-size:18px;
+  border:0;
+  border-radius:100px;
+  background:none;
+  cursor:pointer;
+  transition:all .2s linear;
+}
+.e-pill-tabs button:hover,.e-pill-tabs label:hover{
+  color:#212428;
+  background-color:#eee;
+}
+.e-pill-tabs button.active,.e-pill-tabs label.active{
+  color:#212428;
+  background-color:#c7e5db;
+  pointer-events:none;
+}
+.e-pill-tabs--selector label{
+  position:relative;
+  text-align:center;
+}
+.e-pill-tabs--selector label input{
+  position:absolute;
+  z-index:-1;
+  opacity:0;
+}
+.e-pill-tabs--selector label:has(input:checked){
+  color:#212428;
+  background:#91baec;
+}
+
+.c-pill-tabs{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  align-items:center;
+}
+.c-pill-tabs h6{
+  margin-bottom:-10px;
+  font-family:inherit;
+  font-weight:500;
+}
+.c-pill-tabs__buttons{
+  min-width:210px;
+}
+.c-pill-tabs__pane{
+  transition:opacity .6s linear;
+}
+.c-pill-tabs__pane:not(.show){
+  position:absolute;
+  left:-300vw;
+  z-index:-10;
+  visibility:hidden;
+  max-width:100vw;
+  opacity:0;
+}
+.c-pill-tabs__pane img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.c-swiper{
+  overflow:hidden;
+  margin-right:-16px;
+  margin-left:-16px;
+  padding-right:16px;
+  padding-left:16px;
+}
+.c-swiper .swiper-slide{
+  height:auto;
+}
+.c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
+  cursor:pointer;
+}
+.c-swiper .swiper-slide img{
+  width:100%;
+  height:auto;
+  vertical-align:top;
+}
+.c-swiper-nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  margin-top:32px;
+}
+.c-swiper-nav-disabled .c-swiper-nav{
+  display:none;
+}
+.c-swiper-pagination{
+  display:flex;
+  gap:10px;
+  width:auto;
+}
+.c-swiper-thumbs-nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  overflow:unset;
+  width:auto;
+}
+.c-swiper-thumbs-nav .swiper-slide{
+  overflow:hidden;
+  border-radius:5px;
+  cursor:pointer;
+  opacity:.5;
+  transition:opacity .2s linear;
+}
+.c-swiper-thumbs-nav .swiper-slide.swiper-slide-thumb-active{
+  border:1px solid #212428;
+  cursor:default;
+  opacity:1;
+}
+.c-swiper-button-next,.c-swiper-button-prev{
+  display:flex;
+  flex:0 0 40px;
+  align-items:center;
+  justify-content:center;
+  height:40px;
+  color:#212428;
+  font-size:12px;
+  border:1px solid;
+  border-radius:50px;
+  background:#fff;
+  cursor:pointer;
+  transition:.3s;
+}
+.c-swiper-button-next:after,.c-swiper-button-prev:after{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  content:"\e900";
+}
+.c-swiper-button-next:hover,.c-swiper-button-prev:hover{
+  border-color:#c8e6dc;
+  background:#c8e6dc;
+}
+.c-swiper-button-next.swiper-button-disabled,.c-swiper-button-prev.swiper-button-disabled{
+  color:#8b8c8e;
+  pointer-events:none;
+  opacity:.3;
+}
+.c-swiper-button-prev:after{
+  transform:rotate(-180deg);
+}
+
+.c-visual-compare-card{
+  --c-visual-compare-card-pill-color:#c8e6dc;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  overflow:hidden;
+  padding:24px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.c-visual-compare-card picture img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.c-visual-compare-card article{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 16px;
+  align-items:center;
+  justify-content:center;
+}
+.c-visual-compare-card article>span{
+  padding:6px 20px;
+  border-radius:30px;
+  background:var(--c-visual-compare-card-pill-color);
+}
+.c-visual-compare-card article:has(a){
+  display:grid;
+  grid-template:repeat(2, auto)/auto 1fr;
+  gap:24px 12px;
+}
+.c-visual-compare-card article:has(a) p{
+  display:flex;
+}
+.c-visual-compare-card article:has(a) a{
+  display:flex;
+  grid-column:1 /  -1;
+  gap:12px;
+  align-items:center;
+  padding:12px 16px;
+  color:inherit;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.c-visual-compare-card article:has(a) a:hover{
+  background:#c8e6dc;
+}
+.c-visual-compare-card article:has(a) a span{
+  text-decoration:underline;
+}
+.c-visual-compare-card article:has(a) img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  max-width:55px;
+}
+.c-visual-compare-card article:has(a) .e-icon{
+  margin-left:auto;
+  font-size:14px;
+}
+
+.c-note{
+  display:block;
+  padding:10px 12px;
+  font-size:16px;
+  line-height:1.25;
+  border-radius:10px;
+  background:var(--note-bg, #eef7f4);
+  max-width:500px;
+}
+.c-note p{
+  margin:0;
+}
+.c-note p+p{
+  margin-top:15px;
+}
+.c-note p+ul{
+  margin-top:5px;
+}
+.c-note strong{
+  font-weight:600;
+}
+.c-note ul{
+  padding-left:24px;
+}
+.c-note ul li{
+  padding-left:4px;
+  list-style:disc;
+}
+.c-note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-note a:hover{
+  text-decoration:none;
+}
+.c-note--info,.c-note--warning{
+  position:relative;
+  padding-left:36px;
+}
+.c-note--info:before,.c-note--warning:before{
+  position:absolute;
+  top:12px;
+  left:12px;
+  width:16px;
+  height:16px;
+  color:#fff;
+  font-size:8px;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  line-height:16px;
+  text-align:center;
+  border-radius:16px;
+  content:"\e90c";
+}
+.c-note--info{
+  background:#f4f8fd;
+}
+.c-note--info:before{
+  background:#91baec;
+}
+.c-note--warning{
+  background:#ffeeea;
+}
+.c-note--warning:before{
+  background:#ff5429;
+}
+.page\.qure-microinfusion-offer-listicle .c-note{
+  max-width:none;
+  padding:12px 16px;
+  color:#008763;
+  font-size:18px;
+  background:#e5fff7;
+}
+
+.progress-metrics .container{
+  display:grid;
+  grid-template:auto 1fr/1fr min(472px, 50%);
+  gap:20px 60px;
+}
+.progress-metrics h2,.progress-metrics h6{
+  margin-bottom:0;
+}
+.progress-metrics h2:not(:last-child),.progress-metrics h6:not(:last-child){
+  margin-bottom:15px;
+}
+.progress-metrics h6{
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:600;
+}
+.progress-metrics .c-pill-tabs,.progress-metrics .c-swiper{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+.progress-metrics .e-pill-tabs li:first-child button.active{
+  background:#dfe0e0;
+}
+.progress-metrics .c-swiper{
+  align-self:center;
+  margin:0;
+  padding:0;
+}
+.progress-metrics .c-visual-compare-card{
+  height:auto;
+}
+.progress-metrics .c-note,.progress-metrics small{
+  display:inline-block;
+  margin-top:20px;
+}
+.progress-metrics small{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list{
+  flex-direction:row;
+  max-width:500px;
+}
+body[class*="page.qure-filters-offer"] .progress-metrics .c-percent-list li{
+  flex-direction:column;
+  width:100%;
+  text-align:center;
+}
+body[class*="page.qure-filters-offer"] .progress-metrics small{
+  max-width:500px;
+  text-align:center;
+}
+body[class*="page.led-mask-offer"] .progress-metrics .container{
+  grid-template-rows:repeat(2, auto);
+  gap:40px;
+  align-items:center;
+}
+body[class*="page.led-mask-offer"] .progress-metrics article{
+  align-self:end;
+}
+body[class*="page.led-mask-offer"] .progress-metrics div:has(.c-percent-list){
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+body[class*="page.led-mask-offer"] .progress-metrics .c-note{
+  align-self:start;
+  margin-top:0;
+  margin-right:auto;
+}
+.progress-metrics .c-dialog{
+  width:min(100% - 48px, 1040px);
+}
+.progress-metrics .c-dialog__content{
+  padding:60px;
+}
+.progress-metrics .c-dialog__tabs-buttons button{
+  min-width:120px;
+}
+.progress-metrics .c-dialog__tabs-pane{
+  font-size:16px;
+  line-height:1.2;
+}
+.progress-metrics .c-dialog__tabs-pane hr{
+  margin-top:15px;
+  margin-bottom:15px;
+}
+.progress-metrics .c-dialog__tabs-pane .e-pill-badge--fill{
+  --badge-base-color:#212428;
+  --badge-fill-color:#c7e5db;
+  margin-bottom:24px;
+}
+.progress-metrics .c-dialog__tabs-pane span:last-child{
+  font-size:14px;
+}
+@media screen and (min-width:768px){
+  .c-percent-list--columns{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:991px){
+  .c-visual-compare-card{
+    gap:16px;
+    padding:16px;
+  }
+  .c-visual-compare-card article{
+    flex-direction:column;
+    gap:10px;
+  }
+  .progress-metrics .container{
+    -moz-column-gap:40px;
+         column-gap:40px;
+  }
+}
+@media screen and (max-width:767px){
+  .e-declaimer{
+    font-size:14px;
+  }
+  .c-percent-list+p{
+    margin-top:12px;
+    text-align:center;
+  }
+  .e-pill-tabs button,.e-pill-tabs label{
+    font-size:16px;
+  }
+  .c-pill-tabs{
+    gap:20px;
+  }
+  .c-pill-tabs__buttons{
+    min-width:0;
+  }
+  .c-swiper-nav{
+    margin-top:16px;
+  }
+  .page\.qure-microinfusion-offer-listicle .c-note{
+    font-size:16px;
+  }
+  .progress-metrics .container{
+    grid-template-rows:auto;
+    grid-template-columns:auto;
+  }
+  .progress-metrics .c-pill-tabs,.progress-metrics .c-swiper{
+    grid-area:auto;
+    grid-column:1;
+  }
+  .progress-metrics small{
+    font-size:14px;
+  }
+  body[class*="page.qure-filters-offer"] .progress-metrics .container div:has(.c-percent-list){
+    display:none;
+  }
+  body[class*="page.led-mask-offer"] .progress-metrics .container{
+    gap:20px;
+  }
+  body[class*="page.led-mask-offer"] .progress-metrics div:has(.c-percent-list){
+    grid-row:auto;
+    grid-column:auto;
+  }
+  .progress-metrics .c-dialog__content{
+    padding:40px 24px;
+  }
+  .progress-metrics .c-dialog__tabs-buttons button{
+    min-width:0;
+  }
+}

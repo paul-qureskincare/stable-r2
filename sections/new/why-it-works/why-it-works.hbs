@@ -1,0 +1,13 @@
+<!-- WHY IT WORKS -->
+<link rel="stylesheet" href="sections/new/why-it-works/why-it-works.css" />
+<section class="why-it-works {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        {{> @partial-block }}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('why-it-works', 'sections/new/why-it-works/why-it-works.js');
+    });
+</script>
+<!-- WHY IT WORKS END -->

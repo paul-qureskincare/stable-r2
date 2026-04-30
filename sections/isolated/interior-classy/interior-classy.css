@@ -1,0 +1,50 @@
+.interior_img {
+    background: #000;
+}
+p.interior {
+    color: #000;
+    background: #fff;
+    max-width: max-content;
+    padding: 4px 20px;
+    border-radius: 50rem;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+h3.classy{
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "Canela Web";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 42px; 
+}
+.interior_classy ul li {
+    list-style: disc;
+    max-width: max-content;
+    margin: 0 auto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.interior_img, .interior_img img {
+    height: 100%;
+}
+@media(max-width:767px){
+    h3.classy {
+        font-size: 28px;
+    }
+    p.interior {
+        margin-bottom: 10px; 
+}
+.interior_img img {
+    height: 300px;
+    object-fit: cover;
+}
+.email_icon{
+    height: 80px !important;
+}
+}

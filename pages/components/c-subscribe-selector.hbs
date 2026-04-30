@@ -1,0 +1,28 @@
+<div class="c-subscribe-selector">
+    <p class="c-subscribe-selector__title">{{ title }}:</p>
+    <ul class="c-subscribe-selector__list">
+        {{#parseJson list }}
+            <li class="c-subscribe-selector__item">
+                <label class="c-subscribe-selector__label">
+                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <div class="c-subscribe-selector__name">
+                        {{ name }} {{#if save }}<div class="e-pill-save">Save {{ save }}</div>{{/if}}
+                    </div>
+                    <div class="c-subscribe-selector__price">
+                        {{> e-price
+                            current="{$dyn}"
+                            old=price-old
+                            highlight=price-old
+                            strikethrough=price-strikethrough
+                            final=price-final
+                        }}
+                    </div>
+                    <div class="c-subscribe-selector__text">
+                        {{{ text }}}
+                    </div>
+                    {{#if tag }}<div class="c-subscribe-selector__tag">{{{ tag }}}</div>{{/if}}
+                </label>
+            </li>
+        {{/parseJson}}
+    </ul>
+</div>

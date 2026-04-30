@@ -1,0 +1,93 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.our-community {
+    $root: &;
+
+    article {
+        display: grid;
+        grid-template: auto minmax(min-content, 0) auto / 1fr calc(50% - 8px);
+        gap: 20px 60px;
+        align-items: center;
+
+        @include md {
+            column-gap: 40px;
+        }
+
+        @include sm {
+            grid-template: auto / auto;
+        }
+    }
+
+    h2 {
+        align-self: end;
+        margin-bottom: 0;
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    p {
+        @include sm {
+            display: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        grid-row: 1 / -1;
+        grid-column: 2;
+        gap: 12px;
+
+        @include sm {
+            grid-row: auto;
+            grid-column: auto;
+        }
+
+        a {
+            display: grid;
+            grid-template: repeat(2, auto) / 80px 1fr;
+            gap: 10px 12px;
+            align-items: center;
+            padding: 16px 20px;
+            color: inherit;
+            border-radius: 10px;
+            background: #f6f6f7;
+
+            &:hover {
+                text-decoration: none;
+                background: #c8e6dc;
+            }
+        }
+
+        img {
+            grid-row: 1 / -1;
+            border-radius: 5px;
+        }
+
+        span {
+            align-self: end;
+            color: #8b8c8e;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        h6 {
+            align-self: start;
+            font-family: inherit;
+            font-weight: 500;
+        }
+    }
+
+    .btn {
+        align-self: start;
+        max-width: 270px;
+
+        @include sm {
+            order: 10;
+            margin: 0 auto;
+        }
+    }
+}

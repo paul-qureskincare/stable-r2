@@ -1,0 +1,7 @@
+@media(min-width:575px){
+    .ct-banner-img  img {
+        height: calc(var(--cp__height) + 120px);
+        object-fit: cover;
+        object-position: right;
+    }
+}

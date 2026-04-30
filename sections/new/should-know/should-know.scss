@@ -1,0 +1,75 @@
+@use "@root/mixins" as *;
+@use "@components/c-note" as *;
+@use "@components/c-swiper" as *;
+
+.should-know {
+    $root: &;
+    min-width: 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    article {
+        max-width: 750px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 24px;
+        }
+    }
+
+    .c-swiper {
+        max-width: 100%;
+
+        @include sm {
+            max-width: 100vw;
+        }
+    }
+
+    .swiper-slide {
+        padding: 32px;
+        border: 1px solid #dfe0e0;
+        border-radius: 10px;
+
+        @include sm {
+            padding: 24px;
+        }
+
+        ol {
+            @include numeric-list;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &:last-child {
+            border-color: transparent;
+            background: #f6f6f7;
+        }
+    }
+
+    .btn {
+        display: inline-flex;
+        gap: 12px;
+        align-items: center;
+
+        @include sm {
+            justify-content: center;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .e-icon {
+            font-size: 15px;
+            -webkit-text-stroke: 1px;
+        }
+    }
+}

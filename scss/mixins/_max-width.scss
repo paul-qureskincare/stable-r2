@@ -1,0 +1,3 @@
+@mixin max-width($width) {
+    max-width: calc(100% - (100vw - $width) / 2);
+}

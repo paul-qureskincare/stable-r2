@@ -1,0 +1,146 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pill-tabs" as *;
+@use "@elements/e-circle-percent" as *;
+@use "@elements/e-scale" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-visual-compare-card" as *;
+
+.why-it-work {
+    $root: &;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f6f6f7;
+
+    @include md {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    // .why-it-work__header
+    &__header,
+    // .why-it-work__content
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr min(50%, 450px);
+        gap: 100px;
+
+        @include md {
+            gap: 40px;
+        }
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 24px;
+        }
+    }
+
+    // .why-it-work__header
+    &__header {
+        margin-bottom: 24px;
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+
+        h2 {
+            align-self: center;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .e-pill-tabs {
+            margin-right: auto;
+            margin-left: auto;
+
+            button.active {
+                background: #91baec;
+            }
+        }
+    }
+
+    // .why-it-work__content
+    &__content {
+        align-items: start;
+        transition: opacity 600ms linear;
+
+        @include sm {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &:not(.show) {
+            position: absolute;
+            left: -300vw;
+            z-index: -10;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            max-width: 316px;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 24px;
+            border-radius: 10px;
+            background: #fff;
+
+            @include sm {
+                padding-right: 16px;
+                padding-left: 16px;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 600;
+        }
+    }
+
+    // .why-it-work__accordion
+    &__accordion {
+        margin-top: 32px;
+
+        @include sm {
+            margin-top: 24px;
+        }
+
+        hr {
+            display: none;
+            margin: 0 0 24px;
+
+            @include sm {
+                display: block;
+            }
+        }
+
+        .c-accordion__list {
+            flex-direction: row;
+            gap: 32px;
+            align-items: flex-start;
+
+            @include sm {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        .c-accordion__item {
+            width: 100%;
+            background: #fff;
+        }
+    }
+}

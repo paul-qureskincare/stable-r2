@@ -1,0 +1,30 @@
+@use "media" as *;
+
+@mixin button {
+    
+}
+
+@mixin pill-button {
+    display: inline-block;
+    padding: 5px 20px;
+    color: #212428;
+    border: 1px solid currentcolor;
+    border-radius: 100px;
+    background: transparent;
+    transition: 0.3s;
+
+    @include sm {
+        font-size: 16px;
+    }
+
+    &:hover,
+    &.active {
+        color: #fff;
+        border-color: #212428;
+        background-color: #212428;
+    }
+
+    &.active {
+        pointer-events: none;
+    }
+}

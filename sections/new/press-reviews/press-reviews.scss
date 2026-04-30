@@ -1,0 +1,78 @@
+@use "@root/mixins" as *;
+
+.press-reviews {
+    $root: &;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f6f6f7;
+
+    @include sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-self: center;
+        max-width: 920px;
+        text-align: center;
+
+        @include md {
+            gap: 24px;
+        }
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+
+    h6 {
+        margin-bottom: 0;
+        color: #8b8c8e;
+        font-family: inherit;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .c-swiper {
+        margin: 0;
+        padding: 0;
+    }
+
+    .c-swiper-thumbs {
+        align-self: center;
+        max-width: 100%;
+
+        @include sm {
+            width: 100%;
+            max-width: none;
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                @include img-fluid;
+                max-height: 25px;
+                opacity: 0.5;
+
+                @include md {
+                    height: 20px;
+                }
+            }
+
+            &.swiper-slide-thumb-active {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@media (max-width:767px) {
+    .swiper-offset-mobile {
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+    .swiper-offset-mobile .swiper {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+    .qe__card-m-block {
+    border-radius: var(--bs-border-radius);
+    overflow: hidden;
+    }
+    .qe__card-m-block .qe__content {
+        padding: 18px;
+        border: 1px solid #DFE0E0;
+        border-top: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: #fff;
+    }
+    .rounded-mobil-0{
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}

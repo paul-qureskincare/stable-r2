@@ -1,0 +1,24 @@
+<!-- BASE SLIDER -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/base-slider/base-slider.css" />
+{{/unless}}
+<section class="base-slider {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        {{#if title }}
+            <h2>{{ title }}</h2>
+        {{/if}}
+        {{> @partial-block }}
+        {{#if button }}
+            <a class="btn btn--primary" href="#">{{ button }}</a>
+        {{/if}}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('base-slider', 'sections/new/base-slider/base-slider.js');
+        loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
+        loadScriptOnce('youtube-popup', 'assets/js-new/yt-popup.js');
+        loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+    });
+</script>
+<!-- BASE SLIDER END -->

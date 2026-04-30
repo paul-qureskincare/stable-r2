@@ -1,0 +1,7 @@
+// Sections styles on current page
+@use "@sections/hero-section/hero-section" as *;
+@use "@sections/text-section/text-section" as *;
+@use "@sections/base-section/base-section" as *;
+@use "@sections/testimonials/testimonials" as *;
+
+// Styles for current page only

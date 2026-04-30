@@ -1,0 +1,24 @@
+@use "@root/mixins" as *;
+@use "@elements/e-countdown" as *;
+
+.c-limited-offer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    max-width: 500px;
+    padding: 14px 10px;
+    font-weight: 600;
+    border: 1px solid var(--discount-color);
+    border-radius: 10px;
+    background: #f6f6f7;
+
+    p {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .e-countdown {
+        color: var(--discount-color);
+    }
+}

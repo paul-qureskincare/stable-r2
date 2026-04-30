@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>UI Guide - Qure</title>
+    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png">
+    {{> css-vars }}
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/spacings.css">
+    <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+    <link href="assets/css/base.css" rel="stylesheet" />
+    <link href="assets/css/helper.ui-guide.css" rel="stylesheet" />
+</head>
+
+<body class="helper.ui-guide">
+   <div class="container">
+        <h1>QURE UI Guide</h1>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" href="#typography" data-bs-toggle="tab">Typography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#icons" data-bs-toggle="tab">Icons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#elements" data-bs-toggle="tab">Elements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#buttons" data-bs-toggle="tab">Buttons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#components" data-bs-toggle="tab">Components</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="typography">
+                <h1>H1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <h2>H2Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h3>H3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <h4>H4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <h5>H5 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                <h6>H6 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos accusantium earum asperiores suscipit facilis quas aliquam, iusto, laudantium repudiandae, quam nostrum repellendus eligendi in cumque dignissimos commodi tempore quo culpa rem voluptate? Soluta nam repellendus alias? Dolore placeat, tempora amet fugiat iste dolores quasi maiores repudiandae suscipit incidunt, cupiditate, nulla a enim! Eveniet odit atque quibusdam incidunt placeat eum impedit aliquid voluptatem sequi eligendi doloribus qui quam veniam minima, quae expedita! Ipsum laboriosam accusamus ex mollitia repellendus facilis omnis quam porro! Itaque ex quidem blanditiis aperiam perferendis cupiditate nesciunt assumenda temporibus veritatis. Architecto necessitatibus ab deserunt vel reprehenderit perferendis.</p>
+            </div>
+            <div class="tab-pane" id="icons">
+                <p><strong>Base icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["chevron", "checkmark", "plus", "minus", "cross", "arrow", "qure", "q", "youtube", "instagram", "facebook", "tiktok", "i", "play", "stars", "rating-fill", "trustpilot", "pm", "am", "watch", "cart", "user", "gift", "shipping", "faq", "letter", "pillow", "patches", "mist", "lock", "guarantee", "top", "proven", "pay-later", "reviewed", "verified-shield", "clock", "blemishes", "dark-spots", "fine-lines", "rough-texture", "wrinkles", "email", "chat", "call-us", "email-fill", "whatsapp", "pinterest", "special-discounts", "access-creatives", "ambassador-manager", "earn-money", "exclusive-perks", "social-collabs", "balances", "hydration", "no-chlorine", "shine", "unclogs-pores", "​watering-can", "easy-washing", "faucet", "rotation", "calendar", "certificate", "charge", "hand", "leds", "switcher", "wave", "treatment-time", "eye", "share"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>FAQs icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["shipping-order", "shipping-order-hvr", "rejuvalight-pro-facewear", "rejuvalight-pro-facewear-hvr", "micro-infusion-system", "micro-infusion-system-hvr", "renew-lllt-helmet", "renew-lllt-helmet-hvr", "returns-exchanges", "returns-exchanges-hvr", "billing-payment", "billing-payment-hvr", "warranty", "warranty-hvr", "qure-app", "qure-app-hvr", "troubleshooting", "troubleshooting-hvr"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>Water icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["chlorine", "copper", "metals", "limescale", "micro-organisms", "micro-plastics"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>MI icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["mi-painless", "perfect-transforming", "save-money", "mi-seamless", "mi-quick", "two-in-one", "deeply-hydrates", "calms-redness", "even-looking", "smooths"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>LED Face Mask icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["smooth-skin", "tone-balance", "calms-redness", "skin-firming", "perfect-transforming"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+                <br /><br />
+                <p><strong>LED Neck System icons</strong></p>
+                <ul class="icons-list">
+                    {{#eachList '["neck-even-tone", "neck-anti-wrinkle", "neck-firming", "neck-radiance"]' }}
+                        <li>
+                            {{> e-icon icon=this }}
+                            <span>{{ this }}</span>
+                        </li>
+                    {{/eachList}}
+                </ul>
+            </div>
+            <div class="tab-pane" id="elements">
+                <div class="e-checkmark"></div>
+                <div class="e-pill-save">Save 52%</div>
+                <div class="e-pill-badge">
+                    <span class="e-checkmark"></span>
+                    Dermatologist Reviewed
+                </div>
+                <div class="e-pill-badge e-pill-badge--sm">
+                    <i class="e-icon e-icon-pm"></i>
+                    PM Routine
+                </div>
+                <div class="e-pill-badge e-pill-badge--xs" style="color: #227d5f;">
+                    <i class="e-icon e-icon-checkmark"></i>
+                    Complete routine
+                </div>
+                <ul class="e-pill-tabs" role="tablist">
+                    <li>
+                        <button
+                            type="button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#[id]"
+                        >
+                            User Results
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            class="active"
+                            type="button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#[id]"
+                        >
+                            Clinical Data
+                        </button>
+                    </li>
+                </ul>
+                <br />
+                Price: {{> e-price current="{$dyn}" }}
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Kim L." />
+                    Kim L.
+                </div>
+                <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
+                <div class="e-quantity" data-e-quantity>
+                    <button type="button" data-e-quantity-action="decrement">
+                        <i class="e-icon e-icon-minus"></i>
+                    </button>
+                    <input type="number" name="qty" value="1" min="1" readonly />
+                    <button type="button" data-e-quantity-action="increment">
+                        <i class="e-icon e-icon-plus"></i>
+                    </button>
+                </div>
+                <div class="e-quantity e-quantity--pill-xl" data-e-quantity style="width: 200px">
+                    <button type="button" data-e-quantity-action="decrement">
+                        <i class="e-icon e-icon-minus"></i>
+                    </button>
+                    <input type="number" name="qty" value="1" min="1" readonly />
+                    <button type="button" data-e-quantity-action="increment">
+                        <i class="e-icon e-icon-plus"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="buttons">
+                Buttons
+            </div>
+            <div class="tab-pane fade show active" id="components">
+                {{> c-accordion
+                    list='[
+                        {
+                            "summary": "Question title 1",
+                            "text": "<p>Answer text to question 1</p>"
+                        },
+                        {
+                            "summary": "Question title 2",
+                            "text": "<p>Answer text to question 1</p>"
+                        },
+                        {
+                            "summary": "Question title 3",
+                            "text": "<p>Answer text to question 1</p>"
+                        }
+                    ]'
+                }}
+                {{> c-accordion
+                    type="lines"
+                    list='[
+                        {
+                            "summary": "Question title 1",
+                            "text": "<p>Answer text to question 1</p>"
+                        },
+                        {
+                            "summary": "Question title 2",
+                            "text": "<p>Answer text to question 1</p>"
+                        },
+                        {
+                            "summary": "Question title 3",
+                            "text": "<p>Answer text to question 1</p>"
+                        }
+                    ]'
+                }}
+                <br />
+                {{> c-rating value="4.7" }}
+                <br />
+                {{> c-order-button }}
+                <br />
+                {{> c-certified-box }}
+                <br />
+                {{> c-next-batch }}
+                <br />
+                {{> c-percent-list
+                    list='[
+                        {
+                            "value": 100,
+                            "text": "experienced visibly thicker hair strands after 16 weeks"
+                        },
+                        {
+                            "value": 90,
+                            "text": "showed improvements in hair density and thickness"
+                        },
+                        {
+                            "value": 90,
+                            "text": "saw a visible increase in active growth-phase hairs"
+                        }
+                    ]'
+                }}
+                <br />
+                {{> c-special-offer }}
+                <br />
+                {{> c-limited-offer }}
+                <br />
+                {{> c-save-up }}
+                <br />
+                {{> c-exclusive-offer }}
+                <br />
+                {{> c-clinic-metrics
+                    title="Clinically Proven Results"
+                    list='[
+                        {
+                            "value": "90%",
+                            "text": "agree skin feels hydrated"
+                        },
+                        {
+                            "value": "83%",
+                            "text": "agree skin feels softer"
+                        },
+                        {
+                            "value": "70%",
+                            "text": "agree hair feels less frizzy"
+                        }
+                    ]'
+                }}
+                <br />
+                {{> c-moneyback }}
+                <br />
+                {{> c-lifetime-warranty }}
+                <br />
+                <h4>Videos wistia</h4>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="jlz3itwzrb"
+                        inline=true
+                    }}
+                </div>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="jlz3itwzrb"
+                        inline=true
+                        autoplay=true
+                    }}
+                </div>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="jlz3itwzrb"
+                    }}
+                </div>
+                <br />
+                <div style="display: inline-block; width: 604px;">
+                    {{> c-wistia
+                        id="8kldazu7xg"
+                        play-content='
+                            <div class="e-pill-badge e-pill-badge--sm">
+                                <i class="e-icon e-icon-watch"></i>
+                                <div><strong>Watch:</strong> Doctorly</div>
+                            </div>
+                        '
+                    }}
+                </div>
+                <div style="display: inline-block; width: 300px;">
+                    {{> c-wistia
+                        id="rehxqby0fq"
+                        custom='
+                            <picture>
+                                <img src="sections/isolated/trusted-video/images/home-trusted_img_1.webp" alt="Video thumbnaul text" />
+                            </picture>
+                        '
+                        _poster="sections/isolated/trusted-video/images/home-trusted_img_1.webp"
+                        _aspect="1.6"
+                    }}
+                </div>
+                <div style="display: inline-block; width: 604px;">
+                    {{> c-wistia
+                        id="wvoucso35j"
+                        custom='
+                            <a class="c-wistia__link" href="javascript:;">
+                                <span>Watch the video</span>
+                                <i class="e-icon e-icon-watch"></i>
+                            </a>
+                        '
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="assets/js/vendor.js" defer="defer"></script>
+    <script src="assets/js-new/countdown.js" defer="defer"></script>
+    <script src="assets/js-new/quantity.js" defer="defer"></script>
+    <script src="https://fast.wistia.com/player.js" defer="defer"></script>
+    <script src="assets/js-new/wistia.js" defer="defer"></script>
+</body>
+</html>

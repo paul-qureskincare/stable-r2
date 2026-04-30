@@ -1,0 +1,274 @@
+@use "@root/mixins" as *;
+
+.text-section {
+    width: 100%;
+
+    article {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+
+        @include sm {
+            text-align: left;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        em {
+            font-style: normal;
+            background: #c7e5db;
+        }
+
+        img {
+            &[alt*="Newsweek"] {
+                width: 150px;
+                height: auto;
+                // margin-top: 16px;
+            }
+        }
+    }
+
+    // .text-section--bg
+    &--bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        article {
+            @include sm {
+                text-align: center;
+            }
+        }
+    }
+
+    .real-problems {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        margin-top: 32px;
+        text-align: center;
+
+        @include sm {
+            flex-direction: column;
+        }
+
+        li {
+            display: grid;
+            gap: 16px;
+            justify-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f6f6f7;
+
+            @include sm {
+                grid-template: repeat(2, auto) / 72px 1fr;
+                gap: 10px 16px;
+                place-items: center start;
+                text-align: left;
+            }
+        }
+
+        img {
+            max-width: 72px;
+            height: auto;
+            margin-bottom: 8px;
+
+            @include sm {
+                grid-row: 1 / -1;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 500;
+        }
+    }
+
+    // .text-section--guide
+    &--guide {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        article {
+            display: grid;
+            grid-template: repeat(2, auto) / 1fr 350px;
+            gap: 4px 16px;
+            align-items: center;
+            max-width: none;
+            text-align: left;
+
+            @include sm {
+                grid-template: auto /auto;
+            }
+        }
+
+        h5 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: flex;
+            grid-row: 1 / -1;
+            grid-column: 2;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+
+            @include sm {
+                grid-row: auto;
+                grid-column: auto;
+                margin-top: 12px;
+            }
+        }
+
+        .e-icon {
+            font-size: 0.8em;
+            -webkit-text-stroke: 0.85px
+        }
+    }
+
+    // .text-section--stats
+    &--stats {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: #f6f6f7;
+
+        article {
+            max-width: none;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            justify-content: center;
+
+            @include sm {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 24px;
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                max-width: 210px;
+                text-align: center;
+            }
+
+            span {
+                font-family: var(--heading-font-family);
+                font-size: 46px;
+                line-height: 1.2;
+
+                @include sm {
+                    font-size: 32px;
+                }
+
+                @at-root body.page\.our-story & {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        hr {
+            margin: 32px 0 24px;
+            opacity: 0.1;
+        }
+
+        .footnote {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+
+            @include sm {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.exclusive-holiday-bundle-deal & {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        article {
+            text-align: left;
+        }
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.contact-us & {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: #f6f6f7;
+
+        article {
+            display: flex;
+            gap: 24px;
+            max-width: 670px;
+            font-size: 16px;
+
+            @include sm {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+            }
+
+            strong {
+                margin-right: auto;
+
+                @include sm {
+                    margin-right: 0;
+                }
+            }
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            span {
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+    }
+}

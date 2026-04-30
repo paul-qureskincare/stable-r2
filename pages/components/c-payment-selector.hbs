@@ -1,0 +1,22 @@
+<div class="c-payment-selector">
+    <p class="c-payment-selector__title">{{ title }}:</p>
+    <ul class="c-payment-selector__list">
+        {{#parseJson list }}
+            <li class="c-payment-selector__item">
+                <label class="c-payment-selector__label">
+                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <div class="c-payment-selector__name">{{ name }}</div>
+                    <div class="c-payment-selector__price">
+                        {{> e-price current="{$dyn}" old=old-price highlight=price-highlight }}
+                    </div>
+                    <div class="c-payment-selector__text">
+                        {{ text }}
+                        {{#if image }}
+                            <img src="{{ image }}" alt="{{ name }}" />
+                        {{/if}}
+                    </div>
+                </label>
+            </li>
+        {{/parseJson}}
+    </ul>
+</div>

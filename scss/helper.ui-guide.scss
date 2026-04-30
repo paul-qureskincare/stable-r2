@@ -1,0 +1,64 @@
+// Elements
+@use "@elements/e-icon" as *;
+@use "@elements/e-checkmark" as *;
+@use "@elements/e-pill-save" as *;
+@use "@elements/e-pill-badge" as *;
+@use "@elements/e-pill-tabs" as *;
+@use "@elements/e-verified-customer" as *;
+@use "@elements/e-author" as *;
+@use "@elements/e-double-tag" as *;
+@use "@elements/e-quantity" as *;
+
+// Components
+@use "@components/c-swiper" as *;
+@use "@components/c-accordion" as *;
+@use "@components/c-rating" as *;
+@use "@components/c-order-button" as *;
+@use "@components/c-certified-box" as *;
+@use "@components/c-next-batch" as *;
+@use "@components/c-percent-list" as *;
+@use "@components/c-special-offer" as *;
+@use "@components/c-limited-offer" as *;
+@use "@components/c-save-up" as *;
+@use "@components/c-exclusive-offer" as *;
+@use "@components/c-clinic-metrics" as *;
+@use "@components/c-moneyback" as *;
+@use "@components/c-lifetime-warranty" as *;
+@use "@components/c-wistia" as *;
+
+.ui-guide {
+    padding: 30px 0 50vh;
+}
+
+.nav-link {
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+.tab-pane {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.icons-list {
+    max-width: 1000px;
+    columns: 3;
+
+    li {
+        padding-bottom: 10px;
+    }
+
+    .e-icon {
+        font-size: 20px;
+    }
+}
+
+
+#elements {
+    &.show {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+    }
+}

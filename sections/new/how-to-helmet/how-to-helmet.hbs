@@ -1,0 +1,32 @@
+<!-- HOW TO HELMET -->
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/how-to-helmet/how-to-helmet.css" />
+{{/unless}}
+<section class="how-to-helmet {{ classes }}">
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            {{#if video }}
+                {{#> c-wistia-embed-video
+                    classes=""
+                    id=video
+                    custom=true
+                }}
+                    <div class="c-wistia-embed-video__link">
+                        <span>Watch the video</span>
+                        {{> e-icon icon="watch" }}
+                    </div>
+                {{/c-wistia-embed-video}}
+            {{/if }}
+        </article>
+    </div>
+    <div class="container">
+        {{> @partial-block}}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+    });
+</script>
+<!-- HOW TO HELMET END -->

@@ -1,0 +1,60 @@
+@use "@root/mixins" as *;
+
+.c-next-batch {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    padding: 14px 10px 20px;
+    border: 1px solid #dfe0e0;
+    border-radius: 10px;
+
+    p {
+        font-size: 14px;
+        line-height: 1.25;
+
+        &::first-line {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        border: 1px solid;
+        border-radius: 20px;
+
+        &:first-child {
+            border-color: #8b8c8e;
+            background: #dfe0e0;
+            opacity: 0.6;
+        }
+
+        &:last-child {
+            position: relative;
+            z-index: 1;
+            border-color: #91baec;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                width: var(--data-reserved);
+                border-radius: 20px;
+                background: #91baec;
+                content: '';
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<!-- COMPARISON -->
+<link rel="stylesheet" href="sections/new/comparison/comparison.css" />
+<div class="comparison">
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            {{> @partial-block }}
+        </article>
+        <div class="comparison__table">
+            <div class="comparison__product">
+                <img src="{{ picture-first }}" alt="{{ name-first }}" />
+                <h4>{{ name-first }}</h4>
+                <ul>
+                    {{#eachList list-first }}
+                        <li>{{> e-icon icon="checkmark" }} {{{ this }}}</li>
+                    {{/eachList }}
+                </ul>
+            </div>
+            <div class="comparison__versus">vs</div>
+            <div class="comparison__product">
+                <img src="{{ picture-second }}" alt="{{ name-second }}" />
+                <h4>{{ name-second }}</h4>
+                <ul>
+                    {{#eachList list-second }}
+                        <li>{{> e-icon icon="cross" }} {{{ this }}}</li>
+                    {{/eachList }}
+                </ul>
+            </div>
+        </div>
+        {{#if declaimer }}
+            <div class="comparison__declaimer">{{ declaimer }}</div>
+        {{/if}}
+    </div>
+</div>
+<!-- COMPARISON END -->

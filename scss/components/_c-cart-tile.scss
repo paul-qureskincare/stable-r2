@@ -1,0 +1,113 @@
+@use "@root/mixins" as *;
+@use "@elements/e-checkmark" as *;
+@use "@elements/e-price" as *;
+@use "@elements/e-quantity" as *;
+
+.c-cart-tile {
+    position: relative;
+    display: grid;
+    grid-template: repeat(4, auto) / 80px 1fr;
+    gap: 2px 16px;
+    padding: 14px 12px;
+    border: 1px solid #dfe0e0;
+    border-radius: 10px;
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // .c-cart-tile__image
+    &__image {
+         grid-row: span 4;
+
+         img {
+            @include img-fluid;
+         }
+    }
+
+    // .c-cart-tile__name
+    &__name {
+        margin-bottom: 0;
+        padding-right: 30px;
+        font-size: 16px;
+    }
+
+    // .c-cart-tile__reviews
+    &__reviews,
+    // .c-cart-tile__available
+    &__available,
+    // .c-cart-tile__pre-order
+    &__pre-order {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        font-size: 12px;
+        line-height: 1.2;
+
+        .e-rating-stars,
+        .e-checkmark {
+            font-size: 10px;
+        }
+    }
+
+    // .c-cart-tile__pre-order
+    &__pre-order {
+        .e-icon-i {
+            width: 10px;
+            height: 10px;
+            color: #fff;
+            font-size: 6px;
+            line-height: 9px;
+            text-align: center;
+            border-radius: 10px;
+            background: #ff5429;
+
+            &::before {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    // .c-cart-tile__footer
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+        padding-top: 10px;
+        border-top: 1px solid #dfe0e0;
+
+        .e-price {
+            font-weight: 600;
+        }
+    }
+
+    // .c-cart-tile__remove
+    &__remove {
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        padding: 4px;
+        color: #8b8c8e;
+        font-size: 6px;
+        line-height: 1;
+        border: 1px solid;
+        border-radius: 50%;
+        background: none;
+        @include transition;
+
+        &:hover {
+            color: #fff;
+            border-color: #212428;
+            background: #212428;
+        }
+
+        .e-icon {
+            vertical-align: top;
+        }
+    }
+}

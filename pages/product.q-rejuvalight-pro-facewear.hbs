@@ -1,0 +1,1353 @@
+{{#> default
+    title="Q-Rejuvalight Pro LED Face Mask"
+    body-class="product.q-rejuvalight-pro-facewear"
+}}
+
+{{#> section-stack }}
+    {{#> hero-product }}
+        <div class="hero-product__gallery">
+            <div
+                class="c-swiper"
+                data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 16,
+                    "navigation": {
+                        "prevEl": "#hero-product .c-swiper-button-prev",
+                        "nextEl": "#hero-product .c-swiper-button-next"
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_1.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            class="lvideo"
+                            src="sections/isolated/n&d-slider/images/q_rejuv_pro_2.webp" alt="Q-Rejuvalight Pro LED Face Mask"
+                            data-url="https://www.youtube.com/watch?v=I2Fe-kP-2Jg"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_3.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_4.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_5.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_6.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_7.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_8.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-thumbs-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div
+                    class="c-swiper c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": "auto",
+                        "spaceBetween": 12
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_1.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_2.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_3.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_4.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_5.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_6.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_7.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/n&d-slider/images/q_rejuv_pro_8.webp" alt="Q-Rejuvalight Pro LED Face Mask" />
+                        </div>
+                    </div>
+                </div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+            {{> e-sticky-thumb-video link="https://embed-ssl.wistia.com/deliveries/8f6d91b28ba7df92bcbcb43c882f0bf62e778bc5.bin?disposition=attachment&filename=led-mask-pdp-video.mp4" type="video/mp4" }}
+        </div>
+        <div class="hero-product__main">
+            {{> c-rating value="4.8" }}
+            <p>RED LIGHT MASK Q-REJUVALIGHT PRO</p>
+            <h1>Unlock your best skin yet with our LED Face Mask</h1>
+            {{> e-price current="{$dyn}" }}
+            <article>
+                <ul>
+                    <li>FDA-cleared device designed to treat wrinkles and mild-to-moderate inflammatory acne</li>
+                    <li>Customizable treatment on 5 facial areas for your specific skin concerns.</li>
+                    <li>Quick 3 minute, wireless daily treatments with convenient hands-free operation,</li>
+                </ul>
+            </article>
+            <div class="c-buy-block">
+                {{> c-order-button
+                    on-click="upsellPopup.showModal()"
+                }}
+                {{#> c-dialog
+                    classes="c-dialog--column"
+                    id="upsellPopup"
+                    message="<p><strong>Q-Rejuvalight Pro Facewear</strong> added to cart.</p>"
+                }}
+                    <div class="upsell-popup">
+                        <div class="upsell-popup__header">
+                            <h5>Keep Your Mask and Skin — Clean</h5>
+                            <p><em>save 20%</em> when added to your treatment</p>
+                        </div>
+                        <div class="upsell-popup__content">
+                            <img src="sections/isolated/micro-infusion-pdp/images/upsell-popup-image.webp" alt="Hypochlorous Acid Dermal Mist" />
+                            <p>Wipe the inside surface of your mask with Hypochlorous Acid Dermal Mist - safe for both skin and LED devices.</p>
+                            <ul>
+                                <li>Sanitizes your mask surface between uses</li>
+                                <li>Reducing skin bacteria before treatment</li>
+                                <li>Calming visible redness &amp; supporting skin barrier </li>
+                            </ul>
+                            <p>Includes full-size (100ml) + travel (15ml).</p>
+                        </div>
+                        <form class="upsell-popup__footer" action="#">
+                            <button class="btn btn--primary" type="button">Add to Cart &ndash; <span>{$dyn}</span> {$dyn}</button>
+                            <a href="#">Continue to Cart</a>
+                        </form>
+                    </div>
+                {{/c-dialog}}
+                {{> c-certified-box }}
+                <ul class="e-features-list">
+                    <li>
+                        {{> e-icon icon="guarantee" }}
+                        30-Day Money-Back Guarantee
+                    </li>
+                    <li>
+                        {{> e-icon icon="shipping-order" }}
+                        Free Shipping over {$dyn}
+                    </li>
+                </ul>
+            </div>
+            {{> c-next-batch }}
+            {{> c-limited-offer }}
+        </div>
+        <div class="hero-product__extra">
+            <div class="hero-product__best-with">
+                <h6>Get The Best Results With</h6>
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": "1.25",
+                        "spaceBetween": 12,
+                        "breakpoints": {
+                            "992": {
+                                "slidesPerView": 2
+                            }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="sections/isolated/n&d-slider/images/q_rejuv_n&d.webp" alt="Neck & Décolletage LED Device" /></a>
+                            <a href="#">Neck &amp; Décolletage LED Device</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="sections/isolated/targeted-patches/images/result-1.webp" alt="All-In One Face Serum" /></a>
+                            <a href="#">All-In One Face Serum</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "Key Benefits",
+                        "text": "
+                            <p>The Q-Rejuvalight Pro is designed to deliver powerful, clinically-backed light therapy from the comfort of home. It combines 5 clinically-proven wavelengths to treat multiple skin concerns with just one device. No downtime, no irritation, and no ongoing cost.</p>
+                            <p>By using it just 3 minutes a day, you’re targeting the root causes of skin concerns like breakouts, pigmentation, fine lines, and redness.</p>
+                            <p>Visible benefits include:</p>
+                            <ul>
+                                <li>Fewer breakouts and reduced inflammation</li>
+                                <li>Smoother fine lines and wrinkles</li>
+                                <li>Brighter, more even skin tone</li>
+                                <li>Faded dark spots and sun damage</li>
+                                <li>Firmer, plumper-looking skin</li>
+                                <li>Calmer, less reactive skin</li>
+                            </ul>
+                            <p>With consistent use, Qure supports long-term skin health and helps you maintain a radiant, balanced complexion, all without needing to layer on multiple products or book clinic appointments.</p>
+                        "
+                    },
+                    {
+                        "summary": "How To Use",
+                        "text": "
+                            <p>It’s simple and only takes 3 minutes a day:</p>
+                            <ol>
+                                <li>Start with clean, dry skin.</li>
+                                <li>Put on the mask and adjust the strap</li>
+                                <li>Press and hold the power button for 3 seconds to turn on</li>
+                                <li>Press the power button once to activate Pro-Aging mode, or press it twice for Anti-Breakout mode. You can also customize your treatment completely and target specific facial zones via the Qure app.</li>
+                            </ol>
+                            <p>The mask will automatically shut off after the session. Follow with your regular skincare routine for best results.</p>
+                        "
+                    },
+                    {
+                        "summary": "What’s Included In The Box",
+                        "text": "
+                            <p>Inside the box, you’ll find:</p>
+                            <ul>
+                                <li>Q-Rejuvalight Pro LED Face Mask</li>
+                                <li>Adjustable head strap for a secure, comfortable fit</li>
+                                <li>USB-C charging cable</li>
+                                <li>Portable luxury storage pouch</li>
+                                <li>Clear setup instructions and user manual</li>
+                            </ul>
+                        "
+                    }
+                ]'
+            }}
+            {{> c-jump-to
+                list='[
+                    {
+                        "id": "improve_skin",
+                        "name": "The Results"
+                    },
+                    {
+                        "id": "how_it_works",
+                        "name": "How It Works"
+                    },
+                    {
+                        "id": "reviews",
+                        "name": "Reviews"
+                    },
+                    {
+                        "id": "easy_steps",
+                        "name": "How To Use"
+                    },
+                    {
+                        "id": "how_it_works",
+                        "name": "Tech Specs"
+                    },
+                    {
+                        "id": "faq",
+                        "name": "FAQs"
+                    }
+                ]'
+            }}
+        </div>
+    {{/hero-product}}
+
+    {{#> press-reviews }}
+        <div
+            class="c-swiper"
+            data-swiper-thumbs=".press-reviews .c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 1,
+                "spaceBetween": 16,
+                "loop": true,
+                "autoplay": {
+                    "delay": 5000
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h4>“The professional grade is the perfect addition to any at-home skincare routine.”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>"Treatment time is only three minutes—among the fastest of all devices."</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>“A multi-use LED mask with five different light setting options to plump, smooth, and rejuvenate all skin types.”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin... ”</h4>
+                </div>
+                <div class="swiper-slide">
+                    <h4>“Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</h4>
+                </div>
+            </div>
+        </div>
+        <div class="c-swiper c-swiper-thumbs"
+            data-swiper='{
+                "slidesPerView": 3,
+                "spaceBetween": 30,
+                "breakpoints": {
+                    "992": {
+                        "slidesPerView": 5
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/vogue-black.svg" alt="Vogue" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/women-health.svg" alt="Women Health" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/elle-black.svg" alt="Elle" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/cosmopolitan.svg" alt="Cosmopolitan" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/isolated/press_slider/images/gq.svg" alt="GQ" />
+                </div>
+            </div>
+        </div>
+    {{/press-reviews}}
+
+    {{#> base-section
+        classes="base-section--reverse"
+        title="Helps address multiple skin concerns with just one device"
+        picture="sections/global/banner-with-text/images/skin_firming.webp"
+        button="Shop Now"
+    }}
+        <p>A portable, FDA-cleared, at-home LED light therapy device that is <em>clinically validated</em> to <em>improve the appearance of wrinkles</em> and mild to moderate inflammatory acne.</p>
+        <p>Q-Rejuvalight Pro uses five clinically backed light wavelengths to deliver light energy designed to <em>target multiple visible skin concerns</em>, supporting clearer-looking, smoother-looking skin where topical care can’t reach.</p>
+    {{/base-section }}
+
+    {{> why-using
+        classes="why-using--bg"
+        title="5 reasons why you’ll love LED Light Therapy"
+        list='[
+            {
+                "icon": "smooth-skin",
+                "name": "Reduce the look of fine lines and wrinkles"
+            },
+            {
+                "icon": "tone-balance",
+                "name": "Helps improve the look of uneven tone"
+            },
+            {
+                "icon": "calms-redness",
+                "name": "Helps visibly calm and balance the look of skin"
+            },
+            {
+                "icon": "skin-firming",
+                "name": "Helps skin appear firmer and smoother"
+            },
+            {
+                "icon": "perfect-transforming",
+                "name": "Helps promote a healthy-looking, radiant complexion"
+            }
+        ]'
+        hide-button=true
+    }}
+
+    {{#> progress-metrics id="improve_skin" }}
+        <article>
+            <h2>Combines clinically-studied wavelengths</h2>
+        </article>
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1,
+                "spaceBetween": 16,
+                "loop": false,
+                "pagination": {
+                    "el": ".progress-metrics .c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".progress-metrics .c-swiper-button-prev",
+                    "nextEl": ".progress-metrics .c-swiper-button-next"
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="c-visual-compare-card">
+                        <picture>
+                            <img src="sections/isolated/after-before/images/q_rejuv_ab_1.webp" alt="Proven to visually improve" />
+                        </picture>
+                        <article>
+                            <p>Proven to visually improve</p>
+                            <span>Fine Lines &amp; Wrinkles</span>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-visual-compare-card">
+                        <picture>
+                            <img src="sections/isolated/after-before/images/q_rejuv_ab_2.webp" alt="Proven to visually improve" />
+                        </picture>
+                        <article>
+                            <p>Proven to visually improve</p>
+                            <span>Dark Spots</span>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-visual-compare-card">
+                        <picture>
+                            <img src="sections/isolated/after-before/images/q_rejuv_ab_3.webp" alt="Proven to visually improve" />
+                        </picture>
+                        <article>
+                            <p>Proven to visually improve</p>
+                            <span>Acne &amp; Breakouts</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+        <div>
+            <h6>Results supported by light therapy studies:</h6>
+            {{> c-percent-list
+                list='[
+                    {
+                        "value": 70,
+                        "text": "of participants say their fine lines looked smoother."
+                    },
+                    {
+                        "value": 93,
+                        "text": "noticed results the next day after their first Micro-Infusion treatment."
+                    },
+                    {
+                        "value": 70,
+                        "text": "of participants say their skin looked brighter and more even toned."
+                    }
+                ]'
+            }}
+            <div class="c-note c-note--info"><a href="#">Explore the research behind LED light therapy</a></div>
+        </div>
+    {{/progress-metrics }}
+
+    {{#> trusted-reviews
+        id="reviews"
+        title="Results you’ll see with your own eyes"
+    }}
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/anton-m.webp" alt="My skin returned to life!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/australia_f.webp" alt="Anton M." />
+                    Anton M.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Can’t go a day without it</h6>
+                    <p>“I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. I really see the change in my skin. Outstanding job QURE!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/terry-p.webp" alt="Wish I started years ago!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Terri P." />
+                    Terri P.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Wish I started years ago</h6>
+                    <p>“After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age…. I wish this technology had been available when I was younger.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/ana.webp" alt="Amazing products!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/colombia_f.webp" alt="Ana L." />
+                    Ana L.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Amazing products</h6>
+                    <p>“I'm so happy, l've been using the products for 2 months and they have made such a difference in my skin. I had tried a lot of products before but with just one bottle of the serum, staying consistent with the Mask, and doing a few treatments of the micro infusion for scaring. l've seen a huge change in my skin.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Jessica_rejuv.webp" alt="Thrilled with the results!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Jessica K." />
+                    Jessica K.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Thrilled with the results!</h6>
+                    <p>"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment."</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Michelle.webp" alt="No breakouts for 8 weeks!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Michelle S." />
+                    Michelle S.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>No breakouts for 8 weeks</h6>
+                    <p>“I originally thought it was just helping with my breakouts but the real surprise came when I looked at my before and after photos. Even I was shocked. My friends had been commenting on how good my skin looked, and now I see what they meant. The changes are noticeable!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Tiffany.webp" alt="Renewed skin!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Tiffany L." />
+                    Tiffany L.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Renewed skin</h6>
+                    <p>“My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I can now feel comfortable without any makeup. I’m very happy with this product!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/BJN.webp" alt="Cured my acne!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/canada_f.webp" alt="BJ N." />
+                    BJ N.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Cured my acne</h6>
+                    <p>“This is the first time in TWO YEARS that I don’t have active acne on my face. I’ve been using my Qure for 1 month now and it has completely qured my acne. It’s gone AND it’s healing all my scars and pox marks. This device SAVED MY LIFE!!!.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Sophie.webp" alt="Amazing!!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/australia_f.webp" alt="Sophie R." />
+                    Sophie R.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Amazing!!</h6>
+                    <p>“Amazing! Has made such a massive on my acne. Still getting breakouts but they disappear way quicker. Took maybe 2 days to start working. Pics are about 3 weeks difference.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Saskia.webp" alt="Best investment for my skin!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/england_f.webp" alt="Saskia Z." />
+                    Saskia Z.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Best investment for my skin</h6>
+                    <p>“It has been amazing, so easy to use for a start. And I am already noticing massive improvements, the texture of my skin has gone from rough and bumpy to silky smooth and I have stopped breaking out since using the blue light feature. I love it, couldn’t recommend it highly enough!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Jovana.webp" alt="Saw a difference within 3 days!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/canada_f.webp" alt="Jovana S." />
+                    Jovana S.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Saw a difference within 3 days</h6>
+                    <p>“Incredible! The item is so well made, I had cystic acne on my jaw that went away within a week of use and my skin felt very soft. I have gotten 3 other people to purchase this product and will continue to rave about it!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Carey.webp" alt="Just wow!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Carey C." />
+                    Carey C.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Just wow!</h6>
+                    <p>“Easy to use. I’ve used it three times this far and the changes in my skin are amazing. Skin is glowing, pores minimized. And my wrinkles what wrinkles this 53 year old happy skin. Well worth the $$$.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Diane.webp" alt="Amazing!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/canada_f.webp" alt="Diane F." />
+                    Diane F.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Amazing</h6>
+                    <p>“I love my mask, I use it everyday! Just 3 min and we go on. I have been using it for 1 month and feel my skin is smoother and the tone is more uniform. I am very satisfied!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="sections/isolated/review-slider/images/Rita.webp" alt="Amazing!" />
+                </picture>
+                <div class="e-author">
+                    <img src="sections/isolated/review-slider/images/america_f.webp" alt="Rita W." />
+                    Rita W.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Amazing</h6>
+                    <p>“I am very pleased with the mask. I got struck with adult acne. Using the mask daily, and using adalapene gel before bed was the only thing that worked to bring my skin almost back to normal. I am so thankful. And it’s my daily 3 minute spa where I just sit and relax, after working all day, and absorb the rays.”</p>
+                </article>
+            </div>
+        </div>
+    {{/trusted-reviews }}
+
+    {{#> base-section
+        classes="base-section--small-media"
+        title="Trusted and Recommended by Experts"
+        video='[
+            {
+                "url": "https://www.youtube.com/watch?v=jwKN4SH4yz8",
+                "picture": "sections/isolated/experts/images/doctor_img_clean.webp",
+                "label-main": "Dr. Shah & Dr. Maxfield",
+                "label-secondary": "Board Certified Dermatologists"
+            }
+        ]'
+        pill-badge=true
+    }}
+        <p>“Of all the LED masks we’ve tried, this is <em>the best on the market right now...</em> It didn’t lose in any category...</p>
+        <p>There’s real science behind LED therapy, and <em>Qure makes it easy</em> to be consistent—which is what really drives results.”</p>
+    {{/base-section }}
+
+    {{#> base-slider
+        classes="base-slider--tree-cards"
+        title=""
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.1,
+                "spaceBetween": 13,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 2
+                    },
+                    "1200": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 16
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            class="filter-card-video"
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="qnxqysx3sg"
+                        >
+                            <img src="sections/isolated/trusted-video/images/lmv-1.webp" alt="Dr. Prem Tripathi" />
+                        </picture>
+                        <article>
+                            <p>"Qure has a fully customized mask which has 5 clinical-grade wavelength for aging and acne."</p>
+                            <div>
+                                <p>Dr. Prem Tripathi</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=1iXBgh7WPOY">
+                            <img src="sections/isolated/trusted-video/images/lmv-2.webp" alt="Dr. Dylan Greeney" />
+                        </picture>
+                        <article>
+                            <p>"Qure's anti-aging treatment gets down deep into your skin to stimulate collagen & makes a big difference..."</p>
+                            <div>
+                                <p>Dr. Dylan Greeney</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=AeksxRPZyrA">
+                            <img src="sections/isolated/trusted-video/images/lmv-3.webp" alt="Dr. Luke Maxfield" />
+                        </picture>
+                        <article>
+                            <p>"This is one of my faves from @qureskincare. It's a high quality mask and personalizable."</p>
+                            <div>
+                                <p>Dr. Luke Maxfield</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=XtgmSadah48">
+                            <img src="sections/isolated/trusted-video/images/lmv-4.webp" alt="Dr. Anthony Youn" />
+                        </picture>
+                        <article>
+                            <p>"This mask actively treats the entire face for clearer and more beautiful skin."</p>
+                            <div>
+                                <p>Dr. Anthony Youn</p>
+                                <p><span class="e-checkmark"></span> Plastic Surgeon</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=lLkM7Q7It2A&t=154s">
+                            <img src="sections/isolated/trusted-video/images/lmv-5.webp" alt="Dr. Yaseen Arsalan" />
+                        </picture>
+                        <article>
+                            <p>"These wavelengths trigger cells to create even more collagen... helping reduce common signs of aging."</p>
+                            <div>
+                                <p>Dr. Yaseen Arsalan</p>
+                                <p><span class="e-checkmark"></span> Doctor of Pharmacy</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture data-url="https://www.youtube.com/watch?v=7nQcleLpPnk">
+                            <img src="sections/isolated/trusted-video/images/lmv-6.webp" alt="Dr. Davin Lim" />
+                        </picture>
+                        <article>
+                            <p>"Not your average LED mask... this is a deeper, more effective way to achieve healthy, radiant skin."</p>
+                            <div>
+                                <p>Dr. Davin Lim</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    {{/base-slider }}
+
+    {{#> why-it-work id="how_it_works" }}
+        <div class="why-it-work__header">
+            <h2>How It Works</h2>
+            <ul class="e-pill-tabs" role="tablist">
+                <li>
+                    <button
+                        class="active"
+                        type="button"
+                        data-bs-toggle="tab"
+                        data-bs-target="#why-it-work-rejuvenating"
+                    >
+                        Skin Rejuvenating
+                    </button>
+                </li>
+                <li>
+                    <button
+                        type="button"
+                        data-bs-toggle="tab"
+                        data-bs-target="#why-it-work-clearing"
+                    >
+                        Skin Clearing
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="why-it-work__content show" id="why-it-work-rejuvenating">
+            <figure>
+                <figcaption>The Q-Rejuvalight Pro LED mask uses 5 light wavelengths and two modes for customizable skincare. Our FDA-cleared device targets your skin's needs.</figcaption>
+                <img src="sections/isolated/how-it-works/images/mask_aging.webp" alt="Q-Rejuvalight Pro LED mask" />
+            </figure>
+            <article>
+                <h6>Skin Rejuvenating Mode</h6>
+                <div>
+                    <p>On Skin Rejuvenating Mode, red and infrared wavelengths work together to help improve the appearance of skin texture and firmness. </p>
+                    <p>Red light helps improve the look of skin smoothness and radiance. Deep red and infrared light work at different depths of the skin’s surface to help improve the look of wrinkles over time.</p>
+                </div>
+                <ul class="e-scale">
+                    <li style="--graduation-color: #840d43">Infrared <span>(880 nm)</span></li>
+                    <li style="--graduation-color: #b80e0d">Deep Red <span>(660 nm)</span></li>
+                    <li style="--graduation-color: #f5181e">Red <span>(630 nm)</span></li>
+                    <li style="--graduation-color: #fd8e15">Amber <span>(605 nm)</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="why-it-work__content" id="why-it-work-clearing">
+            <figure>
+                <figcaption>The Q-Rejuvalight Pro LED mask uses 5 light wavelengths and two modes for customizable skincare. Our FDA-cleared device targets your skin's needs.</figcaption>
+                <img src="sections/isolated/how-it-works/images/mask_breakout.webp" alt="Q-Rejuvalight Pro LED mask" />
+            </figure>
+            <article>
+                <h6>Skin Clearing Mode</h6>
+                <div>
+                    <p>Our Skin Clearing Mode combines blue and red light wavelengths. Blue (415 nm) helps with mild-to-moderate acne, while red (630 nm) helps calm and soothe the appearance of irritated skin.</p>
+                    <p>Together, these wavelengths help improve the appearance of breakouts, support clearer-looking skin, and promote a balanced, healthier-looking complexion.</p>
+                </div>
+                <ul class="e-scale">
+                    <li style="--graduation-color: #2b5aa2">Blue <span>(415 nm)</span></li>
+                    <li style="--graduation-color: #f5181e">Red <span>(630 nm)</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="why-it-work__accordion">
+            <hr />
+            {{> c-accordion
+                list='[
+                    {
+                        "summary": "Technical specifications",
+                        "text": "
+                            <p>
+                                <strong>TREATMENT TIME: </strong> 3 minutes<br />
+                                <strong>CERTIFICATES: </strong> FDA, TGA, CE, UKCA<br />
+                                <strong>OPERATION: </strong>Wireless, hands-free<br />
+                                <strong>WAVELENGTH: </strong>415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<br />
+                                <strong>TREATMENT TIME: </strong> 2 hours<br />
+                                <strong>CHARGING TIME: </strong> 3 minutes<br />
+                                <strong>LEDs: </strong> 160 dual core
+                            </p>
+                        "
+                    },
+                    {
+                        "summary": "Treatment details",
+                        "text": "
+                            <p>
+                                <strong>USE: </strong> Use daily after cleansing, before topical skincare<br />
+                                <strong>PRO-AGING TREATMENT: </strong> 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<br />
+                                <strong>ANTI-BREAKOUT TREATMENT: </strong> 415nm (Blue), 630nm (Red)<br />
+                                <strong>CUSTOMIZED TREATMENT: </strong> Choose treatment modes for each facial area via app<br />
+                                <strong>Skin Type: </strong>Most suitable for Fitzpatrick Skin Types I-IV
+                            </p>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+    {{/why-it-work }}
+
+    {{#> base-slider
+        title="Confident skin starts here"
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.2,
+                "spaceBetween": 16,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "480": {
+                        "slidesPerView": 2.2
+                    },
+                    "768": {
+                        "slidesPerView": 4
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_oofgzce5um popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/oofgzce5um/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_gw1rne236n popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/gw1rne236n/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_vkd8so2clv popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/vkd8so2clv/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_ltv3wi7ayy popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/ltv3wi7ayy/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_3dk53o20xw popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/3dk53o20xw/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_i688q7ywip popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/i688q7ywip/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_v955rlnldn popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/v955rlnldn/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_5vgchvxn6l popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/5vgchvxn6l/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wistia-embed-video">
+                        <div class="wistia_responsive_padding">
+                            <div class="wistia_responsive_wrapper">
+                                <div class="wistia_embed wistia_async_wl5y3puch1 popover=true seo=false videoFoam=true">
+                                    <div class="wistia_swatch">
+                                        <img
+                                            src="https://fast.wistia.com/embed/medias/wl5y3puch1/swatch"
+                                            alt="Wistia video thumbnail"
+                                            style="filter: blur(5px);"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    {{/base-slider }}
+
+    {{> features-marquee }}
+
+    {{#> set-up id="easy_steps" }}
+        <picture
+            data-bs-toggle="modal"
+            data-bs-target="#reusableWistiaModal"
+            data-video-id="jlz3itwzrb"
+        >
+            <source media="(min-width:768px)" srcset="sections/new/set-up/images/mask-use-video.webp" />
+            <img src="sections/new/set-up/images/mask-use-video-mob.webp" alt="See how quick and easy it is to use" />
+        </picture>
+        <h2>See how quick and easy it is to use</h2>
+        <ol>
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/new/set-up/images/mask-use-step-1.webp" />
+                    <img src="sections/new/set-up/images/mask-use-step-1-mob.webp" alt="Prepare" />
+                </picture>
+                <h6>Prepare</h6>
+                <p>Start with clean, dry skin—no serums or moisturizers before treatment.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:767px)" srcset="sections/new/set-up/images/mask-use-step-2.webp" />
+                    <img src="sections/new/set-up/images/mask-use-step-2-mob.webp" alt="Treatment" />
+                </picture>
+                <h6>Treatment</h6>
+                <p>Open the Qure app to customize your or use the pre-set routines on the device.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:767px)" srcset="sections/new/set-up/images/mask-use-step-3.webp">
+                    <img src="sections/new/set-up/images/mask-use-step-3-mob.webp" alt="Aftercare" />
+                </picture>
+                <h6>Aftercare</h6>
+                <p>Relax while the mask runs its 3-minute session. Afterward, follow with your usual skincare routine.</p>
+            </li>
+        </ol>
+    {{/set-up}}
+
+    {{#> base-section
+        classes="base-section--simple-grid"
+        title="Qure mobile app"
+        picture="assets/images/qure_mobile_app.webp"
+    }}
+        <p><strong>The only FDA-cleared LED light therapy mask with an app.</strong></p>
+        <p>Your skin is unique, so your treatment should be too.</p>
+        <p>Choose between <em>three treatment modes</em> - “Skin Rejuvenating”, “Skin Clearing” or custom treatment zones. Select a treatment mode on five different facial areas to <em>treat and target what your skin needs</em> today.</p>
+        <p>Never miss a treatment with Qure mobile app planner and phone reminders.</p>
+    {{/base-section }}
+
+    {{#> comparison-table
+        title="How Q-Rejuvalight compares"
+        labels='[
+            {
+                "name": "Treatment Time",
+                "colorize": false
+            },
+            {
+                "name": "Customized",
+                "colorize": false
+            },
+            {
+                "name": "Cordless",
+                "colorize": false
+            },
+            {
+                "name": "Wavelengths",
+                "colorize": true
+            },
+            {
+                "name": "Cost",
+                "colorize": false
+            }
+        ]'
+        declaimer="Based on publicly available information. For general comparison only."
+    }}
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="sections/isolated/serum-compare/images/q_rejuv_comp_1.webp" alt="Qure Q-Rejuvalight Pro" />
+                </picture>
+                <h5>Qure<br /> Q-Rejuvalight Pro</h5>
+                <ul>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Quick - just 3 minutes</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Customizable via Qure app</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Wireless &amp; battery-powered</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>5 wavelengths</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Mid-range – <strong>$399</strong></span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="sections/isolated/serum-compare/images/q_rejuv_comp_2.webp" alt="Omnilux Clear & Contour Masks" />
+                </picture>
+                <h5>Omnilux<br /> Clear &amp; Contour Masks</h5>
+                <ul>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Slow - 10+ minutes</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>One mode for full face</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Wired &amp; corded controller</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>2 basic wavelengths</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Mid-range – <strong>$395</strong></span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="sections/isolated/serum-compare/images/q_rejuv_comp_3.webp" alt="Dr Dennis Gross Spectrum Lite Face Wear" />
+                </picture>
+                <h5>Dr Dennis Gross<br /> Spectrum Lite Face Wear</h5>
+                <ul>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Quick - 3 minutes</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Two treatment modes</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Wireless &amp; cordfree</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>4 basic wavelengths</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Premium – <strong>$455</strong></span></li>
+                </ul>
+            </article>
+        </div>
+    {{/comparison-table }}
+
+    {{#> comparison
+        title="The beauty of clinical results from home - without the ‘clinical’ costs"
+        picture-first="sections/isolated/eye-patches/images/rejuv_vs_1.webp"
+        picture-second="sections/isolated/eye-patches/images/rejuv_vs_2.webp"
+        name-first="Q-Rejuvalight Pro"
+        name-second="Derm/Clinic Treatments"
+        list-first='[
+            "<strong>One-time</strong> investment",
+            "No appointments - use anytime at home",
+            "Saves time with only 3 minutes a day",
+            "Better results with more frequent treatments",
+            "Customized approach with clinical backing"
+        ]'
+        list-second='[
+            "<strong>Ongoing cost</strong> per session ",
+            "Completed according to clinic\'s availability",
+            "Requires 20-30 mins per session, plus travel time",
+            "Less treatments = less consistent results",
+            "Customized approach with clinical backing"
+        ]'
+        declaimer="*Based on laboratory testing under controlled conditions. Performance may vary depending on water quality and usage."
+    }}
+        <p>It’s like going to a clinic, minus the on-going costs, the time commitment, the overpromises, the upselling and the hassle.</p>
+    {{/comparison }}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "What color wavelengths does Q-Rejuvalight Pro have?",
+                "text": "
+                    <p>The Q-Rejuvalight Pro has a total of 5 clinically-proven wavelengths of lights:</p>
+                    <ul>
+                        <li>Infrared light (880 nm): Increases circulation, protects existing collagen and enhances product absorption.</li>
+                        <li>Deep Red (660 nm): Accelerates skin healing to fade and prevent scarring. Builds collagen to help reduce wrinkles.</li>
+                        <li>Red (630 nm): Stimulates collagen and elastin production, firms and plumps skin, repairs skin cells and promotes hydration to help reduce inflammation, redness and rosacea.</li>
+                        <li>Amber (605 nm): Reduces appearance of dark spots. Soothes skin and calms swelling and inflammation.</li>
+                        <li>Blue (415 nm): Anti-bacterial, eliminates and prevents acne breakouts. Soothes and calms skin.</li>
+                    </ul>
+                    <p>There are two treatment modes:</p>
+                    <ul>
+                        <li>The Pro-Aging Treatment combines red, deep red, infrared and amber wavelengths which is why the LED lights appear to be an orange color. This combination stimulates collagen, help reduce redness, fine lines, dark spots while encouraging the skin to heal and rejuvenate itself, for visibly smoother, firmer, younger-looking skin.</li>
+                        <li>The Anti-Breakout Treatment combines red and blue wavelengths to destroy the bacteria that causes acne, regulate oil production, reduce redness and other symptoms when a flare-up occurs for clearer skin.</li>
+                    </ul>
+                "
+            },
+            {
+                "summary": "How quickly will I see results?",
+                "text": "
+                    <p>Every individual may respond differently to specific wavelengths of lights and results will depend on the goal you want to achieve.</p>
+                    <p>Most users see a reduction of acne breakouts and redness quicker than they expect. Smoother lines, improved skin tone and firmness can take longer.</p>
+                    <p>The day-to-day changes will be subtle, so be sure to take \"before and after\" pictures to document progress. The most important thing to remember is that results are cumulative, so consistent daily treatment is key.</p>
+                "
+            },
+            {
+                "summary": "Is it safe for all skin types?",
+                "text": "
+                    <p>It\'s crucial to note that skin types V and VI (on the Fitzpatrick Scale) are more sensitive for light therapy as they can absorb more light than other skin types. The reason is that skin type V and VI have higher levels of melanin in the skin. Melanin in the epidermis allows higher absorption of energy which increases the risk of adverse events from epidermal injury in people with skin type V and VI. This is why the FDA recommends caution for individuals with these skin types.</p>
+                    <p>Based on our experience, numerous customers with skin types V and VI have successfully treated their skin with our Q-Rejuvalight Pro Facewear, reporting positive results.</p>
+                    <p>For customers with skin types V and VI, we highly recommend consulting with your dermatologist before using our Q-Rejuvalight Pro Facewear. This step is crucial as skin reactions can vary from person to person, and what works well for one individual may not be suitable for another.</p>
+                "
+            },
+            {
+                "summary": "How often can I use the treatment?",
+                "text": "
+                    <p>You can use the mask daily. In fact, consistent daily use is recommended for best results.</p>
+                    <p>Each session takes just 3 minutes, and the more regularly you use it, the more noticeable the improvements in skin tone, texture, and clarity over time.</p>
+                "
+            },
+            {
+                "summary": "When is the best time to use this mask?",
+                "text": "
+                    <p>The Q-Rejuvalight Pro Facewear can be used day or night, ideally after cleaning and/or exfoliation.</p>
+                    <p>After the treatment is complete, follow with your topical skincare products of choice.</p>
+                "
+            },
+            {
+                "summary": "Do I need to use eye protection?",
+                "text": "
+                    <p>The Q-Rejuvalight Pro has been tested and cleared for eye safety. It has successfully passed the IEC62471 evaluation for eye safety test, which is used to determine whether a device\'s light output is safe for the eyes or not.</p>
+                    <p>Regardless, we recommend closing your eyes and wearing protective eyewear during treatment. The light can be bright when powered on and some users may experience sensitivity, even when closing their eyes.</p>
+                    <p>As part of our unwavering commitment to your safety, we decided to take the initiative to include FREE light blocking protective eyewear with our Q-Rejuvalight Pro LED mask that works seamlessly during your treatment.</p>
+                "
+            },
+            {
+                "summary": "Does Q-Rejuvalight Pro come with a warranty?",
+                "text": "
+                    <p>Q-Rejuvalight Pro Facewear comes with one (1) year warranty covering any manufacturer related problems resulting from everyday use of the product. However, this device is designed to last years! Proudly designed in Australia.</p>
+                "
+            },
+            {
+                "summary": "Is Q-Rejuvalight Pro FDA-cleared?",
+                "text": "
+                    <p>Yes! Our Q-Rejuvalight Pro LED mask is the world\'s first customizable, FDA-cleared at-home LED mask that is proven to be an effective and safe treatment for acne, and aging skin issues. You may find more details on the FDA website (K230042).</p>
+                "
+            }
+        ]'
+    }}
+{{/section-stack }}
+
+{{#> cta-bar
+    name="Q-Rejuvalight Pro LED Mask"
+    button="Buy Now"
+}}
+{{/cta-bar}}
+
+{{/default }}

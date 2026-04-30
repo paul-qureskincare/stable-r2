@@ -1,0 +1,21 @@
+@mixin small-bf-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 100px;
+    background: #ff5429;
+
+    &::after {
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+        content: attr(data-text-bottom);
+    }
+}

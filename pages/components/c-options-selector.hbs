@@ -1,0 +1,28 @@
+<div class="c-options-selector">
+    <p class="c-options-selector__title">{{ title }}:</p>
+    <ul class="c-options-selector__list">
+        {{#parseJson list }}
+            <li>
+                <label>
+                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    {{#if img2 }}
+                        <div class="bundle">
+                            <figure>
+                                <img src="{{ img }}" alt="{{ name }}" />
+                            </figure>
+                            {{> e-icon icon="plus" }}
+                            <figure>
+                                <img src="{{ img2 }}" alt="{{ name }}" />
+                                <figcaption class="e-pill-badge e-pill-badge--xxs">Free</figcaption>
+                            </figure>
+                        </div>
+                    {{ else }}
+                        <img src="{{ img }}" alt="{{ name }}" />
+                    {{/if }}
+                    <span>{{ name }}</span>
+                </label>
+            </li>
+        {{/parseJson}}
+    </ul>
+    <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+</div>

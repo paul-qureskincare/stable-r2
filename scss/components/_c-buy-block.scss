@@ -1,0 +1,56 @@
+@use "@root/mixins" as *;
+@use "@elements/e-features-list" as *;
+@use "@components/c-order-button" as *;
+@use "@components/c-certified-box" as *;
+
+.c-buy-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+
+    @include sm {
+        max-width: none;
+    }
+
+    .c-certified-box {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    & > p {
+        &:has(a) {
+            font-size: 16px;
+            line-height: 1.2;
+            text-align: center;
+
+            strong {
+                display: block;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .e-get-free-shipping {
+        margin-bottom: 8px;
+    }
+
+    // .c-buy-block__payment-logos
+    &__payment-logos {
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 256px;
+            vertical-align: top;
+        }
+    }
+}

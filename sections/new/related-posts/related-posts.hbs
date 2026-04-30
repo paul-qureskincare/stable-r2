@@ -1,0 +1,47 @@
+<!-- RELATED POSTS -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/related-posts/related-posts.css" />
+{{/unless}}
+<section class="related-posts {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        {{#if title }}
+            <h2>{{ title }}</h2>
+        {{/if}}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.2,
+                "spaceBetween": 16,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 3
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                {{> @partial-block }}
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('wistia-popup', 'assets/js-new/swiper.js');
+    });
+</script>
+<!-- RELATED POSTS END -->

@@ -1,0 +1,15 @@
+@use "@root/mixins" as *;
+
+.e-author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    img {
+        width: 100%;
+        max-width: 25px;
+        height: auto;
+        vertical-align: top;
+        border-radius: 50%;
+    }
+}

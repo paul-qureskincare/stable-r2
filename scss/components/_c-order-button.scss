@@ -1,0 +1,22 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pay-options" as *;
+
+.c-order-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .btn {
+        width: 100%;
+
+        .e-icon-arrow {
+            margin-left: 4px;
+            font-size: 16px;
+            -webkit-text-stroke: 0.7px;
+        }
+    }
+
+    .e-pay-options {
+        justify-content: center;
+    }
+}

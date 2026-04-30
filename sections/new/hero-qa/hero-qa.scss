@@ -1,0 +1,82 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+
+.hero-qa {
+    $root: &;
+
+    .container {
+        max-width: 1072px;
+
+        @include sm {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include sm {
+            gap: 24px;
+        }
+
+        h1 {
+            margin-bottom: -10px;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        div {
+            display: flex;
+            gap: 20px;
+            padding: 24px 12px;
+            line-height: 1.2;
+            border-top: 1px solid #dfe0e0;
+            border-bottom: 1px solid #dfe0e0;
+
+            @include sm {
+                padding: 12px 6px;
+                font-size: 14px;
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 12px;
+            margin-left: auto;
+
+            li {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+            }
+        }
+
+        .e-icon {
+            font-size: 14px;
+            vertical-align: top;
+
+            @include sm {
+                font-size: 12px;
+            }
+        }
+
+        picture {
+            @include sm {
+                margin-right: -24px;
+                margin-left: -24px;
+            }
+        }
+
+        img {
+            border-radius: 10px;
+            @include img-fluid;
+
+            @include sm {
+                border-radius: 0;
+            }
+        }
+    }
+}

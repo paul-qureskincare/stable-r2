@@ -1,0 +1,15 @@
+<!-- QA SECTION -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/qa-section/qa-section.css" />
+{{/unless}}
+<section class="qa-section {{ classes }}">
+    <div class="container">
+        <article>
+            {{#if title }}
+                <h2>{{ title }}</h2>
+            {{/if }}
+            {{> @partial-block}}
+        </article>
+    </div>
+</section>
+<!-- QA SECTION END -->

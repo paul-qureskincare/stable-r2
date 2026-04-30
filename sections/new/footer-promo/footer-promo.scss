@@ -1,0 +1,28 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@components/c-subscribe-form" as *;
+@use "@components/c-follow-us" as *;
+
+.footer-promo {
+    padding-top: 30px;
+    padding-bottom: 35px;
+    color: #fff;
+    background: #212428;
+
+    // .footer-promo__content
+    &__content {
+        display: flex;
+        gap: 32px;
+        max-width: 980px;
+        margin-left: auto;
+
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .c-follow-us {
+        align-content: center;
+    }
+}

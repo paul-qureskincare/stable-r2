@@ -1,0 +1,193 @@
+@use "@root/mixins" as *;
+
+.c-faq-accordion {
+    $root: &;
+
+    // .c-faq-accordion__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    // .c-faq-accordion__item
+    &__item {
+        overflow: hidden;
+        font-size: 16px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        &[open] {
+            #{$root}__summary {
+                font-weight: 600;
+
+                &::after {
+                    content: "\e902";
+                }
+            }
+        }
+    }
+
+    // .c-faq-accordion__header
+    &__header button, // Old version
+    &__summary {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        min-height: 63px;
+        padding: 12px 24px;
+        color: #212428;
+        text-align: left;
+        border: 0;
+        background: none;
+
+        @include sm {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        &::after {
+            margin-left: auto;
+            @include icon;
+            font-size: 14px;
+            content: "\e903";
+        }
+    }
+
+     &__header button[aria-expanded="true"] { // Old version
+        font-weight: 600;
+
+        &::after {
+            content: "\e902";
+        }
+    }
+
+    // .c-faq-accordion__content
+    &__content {
+        padding: 0 24px 24px;
+
+        @include sm {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        picture {
+            float: right;
+            width: min(300px, 40%);
+            margin-bottom: 25px;
+            margin-left: 40px;
+
+            @include sm {
+                float: none;
+                display: block;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        p {
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &[href^="mailto:"] {
+                color: #91baec;
+            }
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 24px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            li {
+                padding-left: 4px;
+                list-style: disc;
+            }
+        }
+
+        ol {
+            @include numeric-list;
+        }
+    }
+
+    // .c-faq-accordion___ask-us
+    &__ask-us {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        font-weight: 500;
+
+        @include sm {
+            margin-top: 32px;
+            margin-bottom: 4px;
+        }
+
+        a {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-weight: inherit;
+
+            .e-icon {
+                font-size: 14px;
+                vertical-align: top;
+                -webkit-text-stroke: 0.4px;
+            }
+        }
+    }
+
+    // .c-faq-accordion--lines
+    &--lines {
+        // .c-faq-accordion--lines .c-faq-accordion__list
+        #{$root}__list {
+            gap: 0;
+        }
+
+        // .c-faq-accordion--lines .c-faq-accordion__item
+        #{$root}__item {
+            border-bottom: 1px solid #8b8c8e;
+            border-radius: 0;
+            background: none;
+        }
+
+        // .c-faq-accordion--lines .c-faq-accordion__header
+        #{$root}__header button, // Old version
+        #{$root}__summary {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+
+        // .c-faq-accordion--lines .c-faq-accordion__content
+        #{$root}__content {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}

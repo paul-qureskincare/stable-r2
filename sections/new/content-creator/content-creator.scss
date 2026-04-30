@@ -1,0 +1,140 @@
+@use "@root/mixins" as *;
+@use "@elements/e-icon" as *;
+@use "@components/c-dialog" as *;
+
+.content-creator {
+    $root: &;
+
+    background: #f6f6f7;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 50vw;
+        gap: 60px;
+        align-items: center;
+        overflow: hidden;
+        max-height: 600px;
+        margin-right: 0;
+        padding-top: 60px;
+        padding-right: 0;
+        padding-bottom: 60px;
+
+        @include sm {
+            grid-template-columns: auto;
+            max-height: 640px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            @include max-width(1172px);
+        }
+
+        @media screen and (min-width: 1400px) {
+            @include max-width(1232px);
+        }
+
+        @include md {
+            gap: 40px;
+        }
+
+        @include sm {
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+            padding-right: 16px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 500px;
+
+        &::after {
+
+            @include sm {
+                position: absolute;
+                inset: 0 -16px;
+                z-index: -1;
+                background: linear-gradient(180deg, #f6f6f7 0%, #f6f6f7 75%, rgb(255 255 255 / 0%) 100%);
+                content: '';
+            }
+        }
+
+        @include sm {
+            max-width: none;
+        }
+
+        ul {
+            display: flex;
+            gap: 16px;
+
+            @include md {
+                flex-direction: column;
+            }
+
+            li {
+                width: 100%;
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__videos {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        max-width: 830px;
+        max-height: 600px;
+        margin-top: -180px;
+        margin-right: -125px;
+        transform: rotate(-15deg);
+
+        @include md {
+            margin-top: -100px;
+        }
+
+        @include sm {
+            gap: 5px;
+            margin-top: -150px;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include sm {
+                gap: 5px;
+            }
+
+            &:nth-child(odd) {
+                margin-top: -80px;
+            }
+        }
+    }
+
+    .c-dialog {
+        max-width: 860px;
+    }
+
+    .c-dialog__content {
+        padding: 60px 40px;
+
+        @include sm {
+            padding: 32px 24px;
+        }
+
+        h5 {
+            margin-bottom: 16px;
+            font-family: inherit;
+            font-weight: 500;
+        }
+    }
+}

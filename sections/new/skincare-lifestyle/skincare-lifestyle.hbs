@@ -1,0 +1,19 @@
+<!-- SKINCARE LIFESTYLE -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/skincare-lifestyle/skincare-lifestyle.css" />
+{{/unless}}
+<section class="skincare-lifestyle {{ classes }}">
+    <div class="container">
+        <article>
+            <h2>{{ title }}</h2>
+            <p>{{ text }}</p>
+        </article>
+        {{> @partial-block }}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('skincare-lifestyle', 'sections/new/skincare-lifestyle/skincare-lifestyle.js');
+    });
+</script>
+<!-- SKINCARE LIFESTYLE END -->

@@ -1,0 +1,68 @@
+.qure__serum-img img {
+    max-height: 140px;
+    margin-bottom: 24px;
+}
+.qure__serum-title {
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--Charcoal-10, #DFE0E0);
+    margin-bottom: 10px;
+}
+.qure__serum-qualities {
+    border: 1px solid var(--Charcoal-10, #DFE0E0);
+    padding: 32px 24px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 0 40px;
+    margin-bottom: 10px;
+}
+.quality-list img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.qure__serum-tabs {
+    border: 1px solid var(--Charcoal-10, #DFE0E0);
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.qure__serum-tabs .qure__accordion-header {
+    font-size: 16px;
+}
+.qure__serum-feedback {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+.qs-user {
+    display: grid;
+    grid-template-columns: 16px max-content;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.qs-user img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+.qure__serum-or{
+    height: calc(var(--eq__height) - 75px);
+}
+@media(max-width:767px){
+    .qure__serum-title {padding: 24px 16px;}
+    .qure__serum-qualities {gap:0 20px;padding: 24px 16px;}
+    .qure__serum-or{height: auto;}
+}

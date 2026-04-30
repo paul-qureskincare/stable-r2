@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Contact Us - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/spacings.css" />
+        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+        <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
+
+    <body class="page.contact-us">
+        <!-- PAGE HEADER -->
+        <div id="site-header"></div>
+        <!-- PAGE HEADER END -->
+
+        <!-- ANNOUNCEMENT BAR -->
+        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
+        <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
+            <div class="container">
+                <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
+
+        <!-- SECTIONS STACK -->
+        <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+        <main class="sections-stack">
+            <!-- CONTACT US -->
+            <link rel="stylesheet" href="sections/new/contact-us/contact-us.css" />
+            <section class="contact-us">
+                <div class="container">
+                    <article class="contact-us__text">
+                        <h2>Contact Us</h2>
+                        <p>We are here to help!</p>
+                    </article>
+                    <ul class="contact-us__info">
+                        <li>
+                            <i class="e-icon e-icon-chat"></i>
+                            <strong>Live Chat</strong>
+                            <p>
+                                Mon - Fri<br />
+                                9AM - 5PM EST
+                            </p>
+                        </li>
+                        <li>
+                            <i class="e-icon e-icon-call-us"></i>
+                            <strong>Call Us</strong>
+                            <p>
+                                +1 (240) 702-2228<br />
+                                Sat - Sun<br />
+                                9AM - 5PM EST
+                            </p>
+                        </li>
+                        <li>
+                            <i class="e-icon e-icon-email"></i>
+                            <strong>Email</strong>
+                            <p>
+                                Send a Message to Customer<br />
+                                Service below
+                            </p>
+                        </li>
+                    </ul>
+                    <form class="contact-us__feedback" action="#">
+                        <p class="contact-us__feedback-success">Thanks for contacting us. We'll get back to you as soon as possible.</p>
+                        <div class="contact-us__feedback-field">
+                            <input type="text" class="form-control" placeholder="Name" />
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <input type="email" class="form-control" placeholder="Email address" />
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <input type="text" class="form-control" placeholder="Order number" />
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <input type="text" class="form-control" placeholder="Telephone number" />
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <select class="form-control synced-select">
+                                <option value="">Topic</option>
+                                <option value="Order_Tracking">Order Tracking</option>
+                                <option value="Order_Issue">Order Issue</option>
+                                <option value="product__Inquiry">Product Inquiry</option>
+                                <option value="Discounts_and_Promotions">Discounts and Promotions</option>
+                                <option value="Subscriptions">Subscriptions</option>
+                                <option value="Rewards">Rewards</option>
+                                <option value="Qure_App">Qure App</option>
+                                <option value="Something_else">Something else</option>
+                            </select>
+                        </div>
+                        <div class="contact-us__feedback-field" style="display: none">
+                            <select class="form-control synced-select" placeholder="Topic">
+                                <option>Product</option>
+                                <option value="Micro-Infusion Facial System">Micro-Infusion Facial System</option>
+                                <option value="Q-Rejuvalight Pro Facewear">Q-Rejuvalight Pro Facewear</option>
+                                <option value="Neck & Décolletage LED Device">Neck &amp; Décolletage LED Device</option>
+                                <option value="Shower Filter">Shower Filter</option>
+                                <option value="Faucet Filter">Faucet Filter</option>
+                                <option value="Micro-Infusion Target Patches">Micro-Infusion Target Patches</option>
+                                <option value="All-In-One Face Serum">All-In-One Face Serum</option>
+                                <option value="Dermal Mist">Dermal Mist</option>
+                                <option value="Silk Pillowcase">Silk Pillowcase</option>
+                            </select>
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <textarea class="form-control" rows="3" placeholder="What’s on your mind?"></textarea>
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <label>
+                                <input type="checkbox" class="form-check-input" id="checkConsent" />
+                                By submitting this contact form, you consent to receive text messages/SMS from Qure Skincare. To end messaging from us, you may always reply with STOP.
+                            </label>
+                        </div>
+                        <div class="contact-us__feedback-field">
+                            <button type="submit" class="btn btn--primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("contact-us", "sections/new/contact-us/contact-us.js");
+                });
+            </script>
+            <!-- CONTACT US END -->
+            <!-- TEXT SECTION -->
+            <link rel="stylesheet" href="sections/new/text-section/text-section.css" />
+            <section class="text-section">
+                <div class="container">
+                    <article>
+                        <strong>Additional Customer Service</strong>
+                        <a href="#">Frequently Asked Questions</a>
+                        <span>|</span>
+                        <a href="#">Returns and Exchanges</a>
+                    </article>
+                </div>
+            </section>
+            <!-- TEXT SECTION END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer"></div>
+        <div id="site-cart-drawer"></div>
+
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
+
+        <!-- SCRIPTS -->
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
+    </body>
+</html>

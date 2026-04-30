@@ -1,0 +1,55 @@
+@use "@root/mixins" as *;
+
+.e-pill-badge {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: max-content;
+    padding: 10px 20px;
+    color: var(--badge-base-color, #8b8c8e);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    background: hsl( from currentcolor h calc(s * 3) calc(l + (100 - l) * 0.95));
+
+    .e-checkmark {
+        font-size: 20px;
+    }
+
+    .e-icon-checkmark {
+        font-size: 0.6em;
+    }
+
+    // .e-pill-badge--sm
+    // .e-pill-badge--small
+    &--sm,
+    &--small {
+        padding: 4px 12px;
+        font-size: 16px;
+        letter-spacing: normal;
+    }
+
+    // .e-pill-badge--xs
+    &--xs {
+        gap: 6px;
+        padding: 2px 12px;
+        font-size: 16px;
+        letter-spacing: normal;
+    }
+
+    // .e-pill-badge--xxs
+    &--xxs {
+        gap: 4px;
+        padding: 0 10px;
+        font-size: 16px;
+        letter-spacing: normal;
+    }
+
+    // .e-pill-badge--fill
+    &--fill {
+        color: var(--badge-base-color, #fff);
+        background: var(--badge-fill-color, #ff5429);
+    }
+}

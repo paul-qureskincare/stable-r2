@@ -1,0 +1,221 @@
+{{#> default
+    title="Silk Pillowcase"
+    body-class="product.silk-pillowcase"
+}}
+
+{{#> section-stack }}
+    <!-- BUY SECTION -->
+    <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
+    <section class="hero-product" id="hero-product">
+        <div class="hero-product__container container">
+            <div class="hero-product__gallery">
+                <div
+                    class="c-swiper"
+                    data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 16,
+                        "navigation": {
+                            "prevEl": "#hero-product .c-swiper-button-prev",
+                            "nextEl": "#hero-product .c-swiper-button-next"
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-pillowcase/images/pillowcase1.webp" alt="Pure silk pillowcase" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-pillowcase/images/pillowcase2.webp" alt="Pure silk pillowcase" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sections/isolated/product-pillowcase/images/pillowcase3.webp" alt="Pure silk pillowcase" />
+                        </div>
+                    </div>
+                </div>
+                <div class="c-swiper-thumbs-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div
+                        class="c-swiper c-swiper-thumbs"
+                        data-swiper='{
+                            "slidesPerView": "auto",
+                            "spaceBetween": 12
+                        }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-pillowcase/images/pillowcase1.webp" alt="Pure silk pillowcase" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-pillowcase/images/pillowcase2.webp" alt="Pure silk pillowcase" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-pillowcase/images/pillowcase3.webp" alt="Pure silk pillowcase" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+            <div class="hero-product__main">
+                {{> c-rating value="4.7" }}
+                <p>Pure silk pillowcase</p>
+                <h1>Minimize the formation of wrinkles while you sleep</h1>
+                {{> e-price current="{$dyn}" }}
+                <article>
+                    <ul>
+                        <li>Causes less friction against the skin, helping minimize the formation of sleep lines and wrinkles.</li>
+                        <li>Reduces the accumulation of oils and bacteria that can clog pores and cause acne.</li>
+                        <li>Helps to retain moisture: Absorbs less face cream, helping you maintain hydration for a more healthy-looking complexion.</li>
+                    </ul>
+                </article>
+                <div class="c-buy-block">
+                    {{> c-order-button }}
+                    {{> c-certified-box }}
+                    <ul class="e-features-list">
+                        <li>
+                            {{> e-icon icon="guarantee" }}
+                            30-Day Money-Back Guarantee
+                        </li>
+                        <li>
+                            {{> e-icon icon="shipping-order" }}
+                            Free Shipping over {$dyn}
+                        </li>
+                    </ul>
+                </div>
+                {{> c-next-batch }}
+            </div>
+            <div class="hero-product__extra">
+                <div class="hero-product__best-with">
+                    <h6>Get The Best Results With</h6>
+                    <div
+                        class="c-swiper"
+                        data-swiper='{
+                            "slidesPerView": "1.25",
+                            "spaceBetween": 12,
+                            "breakpoints": {
+                                "992": {
+                                    "slidesPerView": 2
+                                }
+                            }
+                        }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/targeted-patches/images/result-1.webp" alt="All-In One Face Serum" />
+                                <a href="#">All-In One Face Serum</a>
+                                <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/product-shower-filter/images/result-2.webp" alt="Dermal Mist (Duo - 100ml + 15ml)" />
+                                <a href="#">Dermal Mist (Duo - 100ml + 15ml)</a>
+                                <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadScriptOnce('youtube-popup', 'assets/js-new/swiper.js');
+        });
+    </script>
+    <!-- BUY SECTION END -->
+
+    {{> logos-marquee }}
+
+    {{#> base-section
+        classes="base-section--reverse"
+        title="Meet the easiest skincare swap you'll ever make"
+        picture="sections/global/banner-with-text/images/pillowcase_img.webp"
+        button="Shop Now"
+    }}
+        <p>You spend over 2,500 hours a year with your pillow, so what its made of matters. </p>
+        <p>Our silk pillowcase reduces friction on your skin and hair while you sleep, helping prevent sleep creases, minimize tugging on delicate facial skin, and reduce breakage and frizz. It’s a small switch that supports cell renewal overnight—and keeps both your skin and hair looking smoother over time.</p>
+    {{/base-section }}
+
+    {{> features-marquee }}
+
+    {{#> comparison
+        title="The case against cotton"
+        picture-first="sections/isolated/eye-patches/images/compare_pillowcase1.webp"
+        picture-second="sections/isolated/eye-patches/images/compare_pillowcase2.webp"
+        name-first="Silk"
+        name-second="Cotton"
+        list-first='[
+            "Soft on skin, reducing pulling and tugging",
+            "Helps retain skin\'s moisture",
+            "Naturally hypoallergenic with non-toxic dyes",
+            "Helps prevent oil buildup",
+            "Allows your hair to glide, reducing breakage"
+        ]'
+        list-second='[
+            "Can contribute to sleep lines & wrinkle formation",
+            "Absorbs skin\'s moisture & skincare products",
+            "Can contribute to skin stress",
+            "Oil & product buildup can cause breakouts/clogged pores",
+            "Can cause bedhead & breakage"
+        ]'
+    }}
+        <p>Your cotton pillowcase has a lot to answer for as they are holding back your advanced skincare routine. Cotton is a highly absorbent fabric! So while you take time every night to remove your makeup and put on your most powerful and effective skincare, cotton can suck it in, leading to clogged pores, breakouts, and puffy eyes from the product migration</p>
+    {{/comparison }}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "What kind of silk material is used?",
+                "text": "<p>We use the highest grade (6A) long fiber mulberry silk, with a thickness of 22 momme and enforce the strictest quality guidelines, including non-toxic dyes.</p>"
+            },
+            {
+                "summary": "How do I care for the silk pillowcase?",
+                "text": "
+                    <p>The better you can care for your Silk Pillowcase, the better it can care for you. To keep your pillowcase in top condition, wash it in cold water or temperatures no higher than 30°C. Avoid powder detergents or bleach. Always air dry your pillowcase flat or hanging. Never tumble dry or wring it out.</p>
+                    <p>Washing by hand:</p>
+                    <ul>
+                        <li>Use pH neutral, liquid detergent</li>
+                        <li>Wash in cold water</li>
+                        <li>Don’t leave to soak</li>
+                        <li>Don’t wring the pillowcase</li>
+                        <li>Air dry flat or hanging</li>
+                        <li>Iron or steam on lowest setting</li>
+                    </ul>
+                    <p>Machine washing:</p>
+                    <ul>
+                        <li>Use pH neutral, liquid detergent</li>
+                        <li>Use hand wash setting</li>
+                        <li>Wash in 30°C (86°F)</li>
+                        <li>Use washing bag for delicates</li>
+                        <li>Air dry flat or hanging</li>
+                        <li>Iron or steam on lowest setting</li>
+                    </ul>
+                "
+            },
+            {
+                "summary": "Who is this pillowcase best for?",
+                "text": "
+                    <p>Anyone who wants to wake up with smoother skin and healthier hair. </p>
+                    <p>It’s especially great for:</p>
+                    <ul>
+                        <li>Side and stomach sleepers who are more prone to sleep creases</li>
+                        <li>People with sensitive or aging skin, since silk reduces friction and irritation</li>
+                        <li>Those with curly, fine, or damaged hair looking to prevent breakage and frizz</li>
+                        <li>Beauty minimalists who want a low-effort way to support skin and hair health overnight</li>
+                        <li>Anyone investing in skincare—because what touches your face for 7+ hours a day should be part of the routine too.</li>
+                    </ul>
+                "
+            },
+            {
+                "summary": "What’s the difference between satin and silk pillowcases?",
+                "text": "
+                    <p>Satin refers to a finish rather than a fabric, and when people talk about \"satin pillowcases,\" they often mean those made from synthetic materials like polyester. While these synthetic satin options may feel smooth initially, they don\'t provide the same benefits for your skin and hair as real silk. </p>
+                    <p>Silk, a natural fiber, offers superior softness and breathability compared to synthetic alternatives, which can feel rougher and less comfortable over time. To identify genuine silk, look for a natural, subtle sheen, rather than the overly shiny appearance of synthetic alternatives.</p>
+                "
+            }
+        ]'
+    }}
+
+{{/section-stack }}
+
+{{/default }}

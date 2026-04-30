@@ -1,0 +1,774 @@
+.e-icon{
+  display:inline-block;
+  line-height:1;
+}
+.e-icon:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+}
+
+.e-icon-chevron:before{
+  content:"\e900";
+}
+
+.e-icon-checkmark:before{
+  content:"\e901";
+}
+
+.e-icon-plus:before{
+  content:"\e903";
+}
+
+.e-icon-minus:before{
+  content:"\e902";
+}
+
+.e-icon-cross:before{
+  content:"\e904";
+}
+
+.e-icon-arrow:before{
+  content:"\e905";
+}
+
+.e-icon-qure:before{
+  content:"\e906";
+}
+
+.e-icon-q:before{
+  content:"\e907";
+}
+
+.e-icon-youtube:before{
+  content:"\e90b";
+}
+
+.e-icon-instagram:before{
+  content:"\e90a";
+}
+
+.e-icon-facebook:before{
+  content:"\e909";
+}
+
+.e-icon-tiktok:before{
+  content:"\e908";
+}
+
+.e-icon-i:before{
+  content:"\e90c";
+}
+
+.e-icon-play:before{
+  content:"\e90d";
+}
+
+.e-icon-stars:before{
+  content:"\e920";
+}
+
+.e-icon-rating-fill:before{
+  content:"\e921";
+}
+
+.e-icon-trustpilot:before{
+  content:"\e922";
+}
+
+.e-icon-pm:before{
+  content:"\e923";
+}
+
+.e-icon-am:before{
+  content:"\e924";
+}
+
+.e-icon-watch:before{
+  content:"\e925";
+}
+
+.e-icon-cart:before{
+  content:"\e926";
+}
+
+.e-icon-user:before{
+  content:"\e927";
+}
+
+.e-icon-gift:before{
+  content:"\e928";
+}
+
+.e-icon-shipping:before{
+  content:"\e92b";
+}
+
+.e-icon-faq:before{
+  content:"\e92a";
+}
+
+.e-icon-letter:before{
+  content:"\e929";
+}
+
+.e-icon-pillow:before{
+  content:"\e92c";
+}
+
+.e-icon-patches:before{
+  content:"\e92d";
+}
+
+.e-icon-mist:before{
+  content:"\e92e";
+}
+
+.e-icon-lock:before{
+  content:"\e92f";
+}
+
+.e-icon-guarantee:before{
+  content:"\e930";
+}
+
+.e-icon-top:before{
+  content:"\e931";
+}
+
+.e-icon-proven:before{
+  content:"\e932";
+}
+
+.e-icon-pay-later:before{
+  content:"\e933";
+}
+
+.e-icon-reviewed:before{
+  content:"\e934";
+}
+
+.e-icon-verified-shield:before{
+  content:"\e93b";
+}
+
+.e-icon-checkmark-fill:before{
+  content:"\e944";
+}
+
+.e-icon-cross-fill:before{
+  content:"\e945";
+}
+
+.e-icon-clock:before{
+  content:"\e94b";
+}
+
+.e-icon-blemishes:before{
+  content:"\e951";
+}
+
+.e-icon-dark-spots:before{
+  content:"\e952";
+}
+
+.e-icon-fine-lines:before{
+  content:"\e953";
+}
+
+.e-icon-rough-texture:before{
+  content:"\e954";
+}
+
+.e-icon-puffiness:before{
+  content:"\e955";
+}
+
+.e-icon-eye-bags:before{
+  content:"\e956";
+}
+
+.e-icon-wrinkles:before{
+  content:"\e957";
+}
+
+.e-icon-call-us:before{
+  content:"\e95f";
+}
+
+.e-icon-chat:before{
+  content:"\e960";
+}
+
+.e-icon-email:before{
+  content:"\e961";
+}
+
+.e-icon-email-fill:before{
+  content:"\e962";
+}
+
+.e-icon-pinterest:before{
+  content:"\e963";
+}
+
+.e-icon-whatsapp:before{
+  content:"\e964";
+}
+
+.e-icon-access-creatives:before{
+  content:"\e965";
+}
+
+.e-icon-ambassador-manager:before{
+  content:"\e966";
+}
+
+.e-icon-earn-money:before{
+  content:"\e967";
+}
+
+.e-icon-exclusive-perks:before{
+  content:"\e968";
+}
+
+.e-icon-social-collabs:before{
+  content:"\e969";
+}
+
+.e-icon-special-discounts:before{
+  content:"\e96a";
+}
+
+.e-icon-clinic-results:before{
+  content:"\e96b";
+}
+
+.e-icon-incredibly-convenient:before{
+  content:"\e96c";
+}
+
+.e-icon-one-time-money:before{
+  content:"\e96d";
+}
+
+.e-icon-balances:before{
+  content:"\e96e";
+}
+
+.e-icon-hydration:before{
+  content:"\e96f";
+}
+
+.e-icon-no-chlorine:before{
+  content:"\e970";
+}
+
+.e-icon-shine:before{
+  content:"\e971";
+}
+
+.e-icon-unclogs-pores:before{
+  content:"\e972";
+}
+
+.e-icon-watering-can:before{
+  content:"\e973";
+}
+
+.e-icon-easy-washing:before{
+  content:"\e974";
+}
+
+.e-icon-faucet:before{
+  content:"\e975";
+}
+
+.e-icon-rotation:before{
+  content:"\e976";
+}
+
+.e-icon-one-year:before{
+  content:"\e977";
+}
+
+.e-icon-hand:before{
+  content:"\e978";
+}
+
+.e-icon-calendar:before{
+  content:"\e979";
+}
+
+.e-icon-certificate:before{
+  content:"\e97a";
+}
+
+.e-icon-charge:before{
+  content:"\e97b";
+}
+
+.e-icon-leds:before{
+  content:"\e97c";
+}
+
+.e-icon-switcher:before{
+  content:"\e97d";
+}
+
+.e-icon-wave:before{
+  content:"\e97e";
+}
+
+.e-icon-treatment-time:before{
+  content:"\e97f";
+}
+
+.e-icon-eye:before{
+  content:"\e980";
+}
+
+.e-icon-share:before{
+  content:"\e981";
+}
+
+.e-icon-shipping-order:before{
+  content:"\e90e";
+}
+
+.e-icon-shipping-order-hvr:before{
+  content:"\e90f";
+}
+
+.e-icon-rejuvalight-pro-facewear:before{
+  content:"\e911";
+}
+
+.e-icon-rejuvalight-pro-facewear-hvr:before{
+  content:"\e910";
+}
+
+.e-icon-micro-infusion-system:before{
+  content:"\e913";
+}
+
+.e-icon-micro-infusion-system-hvr:before{
+  content:"\e912";
+}
+
+.e-icon-renew-lllt-helmet:before{
+  content:"\e915";
+}
+
+.e-icon-renew-lllt-helmet-hvr:before{
+  content:"\e914";
+}
+
+.e-icon-returns-exchanges:before{
+  content:"\e917";
+}
+
+.e-icon-returns-exchanges-hvr:before{
+  content:"\e916";
+}
+
+.e-icon-billing-payment:before{
+  content:"\e919";
+}
+
+.e-icon-billing-payment-hvr:before{
+  content:"\e918";
+}
+
+.e-icon-warranty:before{
+  content:"\e91b";
+}
+
+.e-icon-warranty-hvr:before{
+  content:"\e91a";
+}
+
+.e-icon-qure-app:before{
+  content:"\e91d";
+}
+
+.e-icon-qure-app-hvr:before{
+  content:"\e91c";
+}
+
+.e-icon-troubleshooting:before{
+  content:"\e91f";
+}
+
+.e-icon-troubleshooting-hvr:before{
+  content:"\e91e";
+}
+
+.e-icon-chlorine:before{
+  content:"\e935";
+}
+
+.e-icon-copper:before{
+  content:"\e936";
+}
+
+.e-icon-heavy-metals:before{
+  content:"\e937";
+}
+
+.e-icon-limescale:before{
+  content:"\e938";
+}
+
+.e-icon-micro-organisms:before{
+  content:"\e939";
+}
+
+.e-icon-micro-plastics:before{
+  content:"\e93a";
+}
+
+.e-icon-benefits-headphone:before{
+  content:"\e940";
+}
+
+.e-icon-benefits-gift:before{
+  content:"\e941";
+}
+
+.e-icon-benefits-restart:before{
+  content:"\e942";
+}
+
+.e-icon-benefits-box:before{
+  content:"\e943";
+}
+
+.e-icon-pp-filter:before{
+  content:"\e93f";
+}
+
+.e-icon-nok-filter:before{
+  content:"\e93e";
+}
+
+.e-icon-carbon:before{
+  content:"\e93d";
+}
+
+.e-icon-asp-descaler:before{
+  content:"\e93c";
+}
+
+.e-icon-mi-painless:before{
+  content:"\e946";
+}
+
+.e-icon-perfect-transforming:before{
+  content:"\e947";
+}
+
+.e-icon-save-money:before{
+  content:"\e948";
+}
+
+.e-icon-mi-seamless:before{
+  content:"\e949";
+}
+
+.e-icon-mi-quick:before{
+  content:"\e94a";
+}
+
+.e-icon-two-in-one:before{
+  content:"\e94c";
+}
+
+.e-icon-deeply-hydrates:before{
+  content:"\e94d";
+}
+
+.e-icon-calms-redness:before{
+  content:"\e94e";
+}
+
+.e-icon-even-looking:before{
+  content:"\e94f";
+}
+
+.e-icon-smooths:before{
+  content:"\e950";
+}
+
+.e-icon-skin-firming:before{
+  content:"\e958";
+}
+
+.e-icon-smooth-skin:before{
+  content:"\e959";
+}
+
+.e-icon-tone-balance:before{
+  content:"\e95a";
+}
+
+.e-icon-neck-even-tone:before{
+  content:"\e95b";
+}
+
+.e-icon-neck-anti-wrinkle:before{
+  content:"\e95c";
+}
+
+.e-icon-neck-firming:before{
+  content:"\e95d";
+}
+
+.e-icon-neck-radiance:before{
+  content:"\e95e";
+}
+
+.shopify-section--faqs-menu{
+  max-width:350px;
+}
+
+.faqs-menu{
+  font-size:20px;
+}
+.faqs-menu .container{
+  padding-right:0;
+}
+.faqs-menu .dropdown{
+  width:100%;
+}
+.faqs-menu .dropdown-toggle{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  width:100%;
+  height:62px;
+  padding:16px;
+  color:inherit;
+  text-align:left;
+  border:1px solid #dfe0e0;
+  border-radius:5px;
+  background:#fff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgMTggOSI+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjEyNDI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMS41Ljc1IDkgOC4yNWw3LjUtNy41Ii8+PC9zdmc+") no-repeat right 16px center/18px 9px;
+}
+.faqs-menu .dropdown-toggle:after{
+  display:none;
+}
+.faqs-menu .dropdown-toggle.show{
+  border-end-end-radius:0;
+  border-end-start-radius:0;
+}
+.faqs-menu .dropdown-toggle .e-icon{
+  margin-right:-5px;
+  margin-left:-5px;
+  font-size:34px;
+}
+.faqs-menu .dropdown-toggle .e-icon-shipping-order{
+  font-size:30px;
+}
+.faqs-menu .dropdown-toggle .e-icon{
+  position:relative;
+}
+.faqs-menu .dropdown-toggle .e-icon:after{
+  position:absolute;
+  top:0;
+  left:0;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  color:#c7e5db;
+}
+.faqs-menu .dropdown-toggle .e-icon-shipping-order:after{
+  content:"\e90f";
+}
+.faqs-menu .dropdown-toggle .e-icon-rejuvalight-pro-facewear:after{
+  content:"\e910";
+}
+.faqs-menu .dropdown-toggle .e-icon-micro-infusion-system:after{
+  content:"\e912";
+}
+.faqs-menu .dropdown-toggle .e-icon-renew-lllt-helmet:after{
+  content:"\e914";
+}
+.faqs-menu .dropdown-toggle .e-icon-returns-exchanges:after{
+  content:"\e916";
+}
+.faqs-menu .dropdown-toggle .e-icon-billing-payment:after{
+  content:"\e918";
+}
+.faqs-menu .dropdown-toggle .e-icon-warranty:after{
+  content:"\e91a";
+}
+.faqs-menu .dropdown-toggle .e-icon-qure-app:after{
+  content:"\e91c";
+}
+.faqs-menu .dropdown-toggle .e-icon-troubleshooting:after{
+  content:"\e91e";
+}
+.faqs-menu .dropdown-menu{
+  z-index:1;
+  padding:0;
+  font-size:18px;
+}
+.faqs-menu .dropdown-menu p{
+  font-weight:500;
+}
+.faqs-menu .dropdown-menu li{
+  border-bottom:1px solid #dfe0e0;
+}
+.faqs-menu .dropdown-menu button{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  width:100%;
+  height:66px;
+  padding:6px;
+  color:inherit;
+  text-align:left;
+  border:0;
+  background:none;
+}
+.faqs-menu .dropdown-menu button:after{
+  margin-left:auto;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  font-size:18px;
+  transform:rotate(90deg);
+  transition:all .2s;
+  content:"\e900";
+}
+.faqs-menu .dropdown-menu button .e-icon{
+  font-size:34px;
+}
+.faqs-menu .dropdown-menu button .e-icon-shipping-order{
+  font-size:30px;
+}
+.faqs-menu .dropdown-menu button.active{
+  font-weight:500;
+}
+.faqs-menu .dropdown-menu button.active:after{
+  transform:rotate(0);
+  -webkit-text-stroke:1px;
+}
+@media screen and (min-width:768px){
+  .faqs-menu .dropdown-toggle{
+    display:none;
+  }
+  .faqs-menu .dropdown-menu{
+    position:static;
+    display:block;
+    font-size:20px;
+    border:0;
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon{
+    position:relative;
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon:after{
+    position:absolute;
+    top:0;
+    left:0;
+    font-family:icomoon;
+    font-weight:400;
+    font-style:normal;
+    font-variant:normal;
+    line-height:1;
+    text-transform:none;
+    vertical-align:top;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    speak:never;
+    color:#c7e5db;
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-shipping-order:after{
+    content:"\e90f";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-rejuvalight-pro-facewear:after{
+    content:"\e910";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-micro-infusion-system:after{
+    content:"\e912";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-renew-lllt-helmet:after{
+    content:"\e914";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-returns-exchanges:after{
+    content:"\e916";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-billing-payment:after{
+    content:"\e918";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-warranty:after{
+    content:"\e91a";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-qure-app:after{
+    content:"\e91c";
+  }
+  .faqs-menu .dropdown-menu button.active .e-icon-troubleshooting:after{
+    content:"\e91e";
+  }
+}
+@media screen and (min-width:1200px){
+  .shopify-section--faqs-menu{
+    margin-left:max(0px, (100% - 1172px) / 2);
+  }
+}
+@media screen and (min-width:1400px){
+  .shopify-section--faqs-menu{
+    margin-left:max(0px, (100% - 1232px) / 2);
+  }
+}
+@media screen and (max-width:767px){
+  .shopify-section--faqs-menu{
+    max-width:none;
+  }
+  .faqs-menu .container{
+    padding-right:16px;
+  }
+  .faqs-menu .dropdown-menu{
+    width:100%;
+    border-color:#dfe0e0;
+    border-top:0;
+    border-radius:5px;
+    transform:translateY(62px) !important;
+    border-start-end-radius:0;
+    border-start-start-radius:0;
+  }
+  .faqs-menu .dropdown-menu p{
+    display:none;
+  }
+  .faqs-menu .dropdown-menu li{
+    border:0;
+  }
+  .faqs-menu .dropdown-menu button{
+    height:60px;
+    padding:16px;
+  }
+  .faqs-menu .dropdown-menu button:after{
+    display:none;
+  }
+}

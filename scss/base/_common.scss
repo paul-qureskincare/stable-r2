@@ -1,0 +1,59 @@
+@use "@root/mixins" as *;
+
+html {
+	overflow-x: hidden;
+	height: 100%;
+    margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	vertical-align: baseline;
+	border: 0;
+    scrollbar-gutter: stable;
+	text-size-adjust: 100%;
+}
+
+body {
+    overflow: hidden;
+	margin: 0;
+    padding-top: var(--height-header);
+    padding-bottom: var(--sticky-cart);
+	color: rgb(var(--base-color));
+    font: var(--base-font-weight) var(--base-font-size) / var(--base-line-height) var(--base-font-family);
+	/* stylelint-disable-next-line value-keyword-case */
+	text-rendering: optimizeSpeed;
+	background: var(--base-body-bg-color);
+	touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+
+    &:has(#announcement-bar) {
+        padding-top: calc(var(--height-bar) + var(--height-header));
+    }
+
+    &.klaviyo-prevent-body-scrolling {
+        height: 100%;
+    }
+}
+
+.container {
+    --bs-gutter-x: 32px;
+    --bs-gutter-y: 0;
+
+    width: 100%;
+    max-width: 1232px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+
+    @media (max-width: 1400px) {
+        max-width: 1172px;
+    }
+
+    @include lg {
+        max-width: none;
+    }
+}
+

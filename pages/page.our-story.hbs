@@ -1,0 +1,337 @@
+{{#> default
+    title="Our Story"
+    body-class="page.our-story"
+}}
+
+{{#> section-stack }}
+    {{#> across-image-banner
+        classes="across-image-banner--hero"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/isolated/our-story-banner/images/our_story_banner.webp" />
+            <img src="sections/isolated/our-story-banner/images/our_story_banner_mob.webp" />
+        </picture>
+        <div class="container">
+            <article>
+                <h1>We're rethinking skincare</h1>
+                <p>Bringing you clinical-grade technologies and products for DIY skin therapies, in the comfort of your own home, and at a price everyone can afford.</p>
+            </article>
+        </div>
+    {{/across-image-banner}}
+
+    {{> logos-marquee }}
+
+    {{#> base-section
+        classes="base-section--simple-grid"
+        title="From a personal struggle to a skincare revolution"
+        picture="sections/global/banner-with-text/images/skincare_revolution.webp"
+    }}
+        <p>Good skin shouldn’t be a luxury. That belief sparked Qure — a brand built to bridge <em>the gap between clinical-grade treatments and everyday skincare,</em> without the clinic price tag.</p>
+        <p>It started with a personal journey. Kristina had always struggled with her skin and spent years researching products and routines.</p>
+        <p>She’d send care packages to Matt, complete with handwritten instructions. When his skin started to glow, she assumed it was thanks to her advice. But it wasn’t. Matt had been using an LED panel — proof that professional tech worked. <em>The problem? It wasn’t affordable or accessible.</em></p>
+    {{/base-section }}
+
+    {{#> text-section
+        classes="text-section--stats"
+    }}
+        <ul>
+            <li>
+                <span>300,000+</span>
+                Customers Worldwide
+            </li>
+            <li>
+                <span>4.8/5</span>
+                Average Rating
+            </li>
+            <li>
+                <span>#3</span>
+                Fastest Growing Startup
+            </li>
+            <li>
+                <span>7+</span>
+                Clinical &amp; User Studies
+            </li>
+        </ul>
+    {{/text-section}}
+
+    {{#> base-section
+        classes="base-section--simple-grid base-section--reverse"
+        title="From a personal struggle to a skincare revolution"
+        picture="sections/global/banner-with-text/images/skincare_rev.webp"
+    }}
+        <p>With the release of the <a href="#">Q-Rejuvalight Pro LED Face Mask</a>, we put the future of your skin in your hands—literally. </p>
+        <p>By <em>bringing clinical-grade technology home</em>, we’ve made real results possible—without the clinic price tag. </p>
+        <p>Because when it comes to your skin, you deserve solutions that work.</p>
+    {{/base-section }}
+
+    {{#> across-image-banner
+        classes="across-image-banner--sm"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/isolated/our-story-banner/images/feeling_good_banner.webp" />
+            <img src="sections/isolated/our-story-banner/images/feeling_good_banner_mob.webp" />
+        </picture>
+        <div class="container">
+            <article>
+                <h2>Feeling good in your skin is so much more than skin deep. </h2>
+            </article>
+        </div>
+    {{/across-image-banner }}
+
+    {{#> base-slider
+        classes="base-slider--two-cards"
+        title="Clinically proven results you can see"
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.1,
+                "spaceBetween": 15,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 2
+                    },
+                    "1200": {
+                        "slidesPerView": 2,
+                        "spaceBetween": 30
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="c-visual-compare-card">
+                        <picture>
+                            <img src="sections/isolated/after-before/images/no_hype_1.webp" alt="Proven to visually improve" />
+                        </picture>
+                        <article>
+                            {{> e-circle-percent value="70" }}
+                            <p>of participants say their fine lines looked smoother.</p>
+                            <a href="#">
+                                <img src="sections/isolated/micro-infusion-pdp/images/1_month_mixed.webp" alt="Micro-Infusion Facial System" />
+                                <span>Micro-Infusion Facial System</span>
+                                {{> e-icon icon="arrow" }}
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-visual-compare-card">
+                        <picture>
+                            <img src="sections/isolated/after-before/images/q_rejuv_ab_1.webp" alt="Proven to visually improve" />
+                        </picture>
+                        <article>
+                            {{> e-circle-percent value="87" }}
+                            <p>of users reported smoother facial wrinkles and fine lines.</p>
+                            <a href="#">
+                                <img src="sections/isolated/n&d-slider/images/q_rejuvalight_led.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                                <span>Q-Rejuvalight Pro LED Mask</span>
+                                {{> e-icon icon="arrow" }}
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-visual-compare-card">
+                        <picture>
+                            <img src="sections/isolated/after-before/images/q_rejuv_ab_3.webp" alt="Proven to visually improve" />
+                        </picture>
+                        <article>
+                            {{> e-circle-percent value="83" }}
+                            <p>of participants note a reduction of acne breakouts.</p>
+                            <a href="#">
+                                <img src="sections/isolated/n&d-slider/images/q_rejuvalight_led.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                                <span>Q-Rejuvalight Pro LED Mask</span>
+                                {{> e-icon icon="arrow" }}
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    {{/base-slider }}
+
+    {{> features-marquee }}
+
+    {{#> base-section
+        classes="base-section--small-media"
+        title="Trusted and Recommended by Experts"
+        video='[
+            {
+                "url": "https://www.youtube.com/watch?v=jwKN4SH4yz8",
+                "picture": "sections/isolated/experts/images/doctor_img_clean.webp",
+                "label-main": "Dr. Shah & Dr. Maxfield",
+                "label-secondary": "Board Certified Dermatologists"
+            }
+        ]'
+        pill-badge=true
+    }}
+        <p>What sets us apart is the trust we've earned from dermatologists who share our mission to make professional skincare accessible to all.</p>
+        <p>We’re removing the industry’s gatekeepers and putting clinical-grade, science-backed treatments in your hands — so you can care for your skin confidently, on your terms, at home.</p>
+    {{/base-section }}
+
+    {{#> base-slider
+        classes="base-slider--tree-cards"
+        title=""
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.1,
+                "spaceBetween": 13,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 2
+                    },
+                    "1200": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 16
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            class="filter-card-video"
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="rehxqby0fq"
+                        >
+                            <img src="sections/isolated/trusted-video/images/home-trusted_img_1.webp" alt="Dr. Alekandra Brown" />
+                        </picture>
+                        <article>
+                            <p>"I like using this between my in-office treatments and it's easy to use, even for beginners." </p>
+                            <div>
+                                <p>Dr. Alekandra Brown</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="ug1o3j3d8w"
+                        >
+                            <img src="sections/isolated/trusted-video/images/trusted_img_5.webp" alt="Dr. Lindsey Zubritsky" />
+                        </picture>
+                        <article>
+                            <p>"After just a few uses my wrinkles look less visible and my skin brighter and smoother."</p>
+                            <div>
+                                <p>Dr. Lindsey Zubritsky</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="wbf95ywhx4"
+                        >
+                            <img src="sections/isolated/trusted-video/images/trusted_img_6.webp" alt="Dr. Alexis Stephens" />
+                        </picture>
+                        <article>
+                            <p>"You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin"</p>
+                            <div>
+                                <p>Dr. Alexis Stephens</p>
+                                <p><span class="e-checkmark"></span> Internal Medicine Doctor</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="gzba345nd4"
+                        >
+                            <img src="sections/isolated/trusted-video/images/trusted_img_9.webp" alt="Dr. Prem Tripati" />
+                        </picture>
+                        <article>
+                            <p>"With Qure's Micro-Infusion System - consistency is key."</p>
+                            <div>
+                                <p>Dr. Prem Tripati</p>
+                                <p><span class="e-checkmark"></span> Facial Plastic Surgeon</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="ypvcdsgwkx"
+                        >
+                            <img src="sections/isolated/trusted-video/images/trusted_img_8.webp" alt="Dr. Wallace Nozile" />
+                        </picture>
+                        <article>
+                            <p>"One of the best ways to treat hyperpigmentation at home."</p>
+                            <div>
+                                <p>Dr. Wallace Nozile</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="c-trusted-video-card">
+                        <picture
+                            data-bs-toggle="modal"
+                            data-bs-target="#reusableWistiaModal"
+                            data-video-id="3bud7no0j9"
+                        >
+                            <img src="sections/isolated/trusted-video/images/trusted_img_7.webp" alt="Dr. Davin Lim" />
+                        </picture>
+                        <article>
+                            <p>"With Micro-Infusion, you get to see the results almost instantly."</p>
+                            <div>
+                                <p>Dr. Davin Lim</p>
+                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    {{/base-slider }}
+{{/section-stack }}
+
+{{/default }}

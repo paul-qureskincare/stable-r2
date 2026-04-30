@@ -1,0 +1,48 @@
+@use "@root/mixins" as *;
+
+@mixin c-marked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+        position: relative;
+        padding-left: 1.75em;
+        line-height: 1.25;
+
+        @include sm {
+            font-size: 16px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25em;
+            height: 2.25em;
+            color: #91baec;
+            font-size: 0.5em;
+            @include icon;
+            vertical-align: top;
+            border: 1.5px solid;
+            border-radius: 50%;
+            content: "\e901";
+        }
+    }
+}
+
+.c-marked-list {
+    @include c-marked-list;
+
+    &--fill {
+        li {
+            &::before {
+                color: #fff;
+                background: #91baec;
+            }
+        }
+    }
+}

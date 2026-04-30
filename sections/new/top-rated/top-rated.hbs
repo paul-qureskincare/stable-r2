@@ -1,0 +1,15 @@
+<!-- TOP RATED -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/top-rated/top-rated.css" />
+{{/unless}}
+<section class="top-rated {{ classes }}">
+    <div class="container">
+        <article>
+            {{#if title }}
+                <h2>{{ title }}</h2>
+            {{/if}}
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<!-- TOP RATED END -->

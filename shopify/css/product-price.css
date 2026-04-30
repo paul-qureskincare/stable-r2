@@ -1,0 +1,33 @@
+.save_price {
+    color: #FF5429;
+    background: #FFEEEA;
+    padding: 1px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+.qure__price .price__regular {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 10px;
+}
+
+.qure__price .price__sale {
+    position: relative;
+    color: #8B8C8E;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.qure__price .price__sale {
+    text-decoration: none;
+}
+
+.qure__price .price__sale::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: currentColor;
+    top: 50%;
+}

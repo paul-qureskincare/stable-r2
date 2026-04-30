@@ -1,0 +1,16 @@
+<div class="c-wistia-embed-video {{#if custom }}c-wistia-embed-video--custom{{/if }} {{ classes }}">
+    {{#if custom }}
+        <div class="wistia_embed wistia_async_{{ id }} popover=true seo=false videoFoam=true"></div>
+    {{ else }}
+        <div class="wistia_responsive_padding">
+            <div class="wistia_responsive_wrapper">
+                <div class="wistia_embed wistia_async_{{ id }} {{#unless inline }}popover=true{{/unless}} seo=false videoFoam=true">
+                    <div class="wistia_swatch">
+                        <img src="https://fast.wistia.com/embed/medias/{{ id }}/swatch" alt="{{ alt }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/if }}
+    {{> @partial-block }}
+</div>

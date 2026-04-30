@@ -1,0 +1,70 @@
+.shop-black-friday{
+  padding-top:60px;
+  padding-bottom:60px;
+  text-align:center;
+}
+.shop-black-friday h2{
+  margin-bottom:32px;
+}
+.shop-black-friday ul{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:24px;
+  justify-items:center;
+}
+.shop-black-friday a{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  color:inherit;
+  line-height:1.2;
+  text-decoration:underline;
+}
+.shop-black-friday a:hover{
+  text-decoration:none;
+}
+.shop-black-friday a[data-badge]:before{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:4px 12px;
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  line-height:17px;
+  text-transform:uppercase;
+  border-radius:20px;
+  background:#ff5429;
+  content:attr(data-badge);
+}
+.shop-black-friday img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:10px;
+}
+@media screen and (max-width:991px){
+  .shop-black-friday{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+  .shop-black-friday h2{
+    margin-bottom:20px;
+  }
+  .shop-black-friday ul{
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+  }
+}
+@media screen and (max-width:767px){
+  .shop-black-friday a{
+    font-size:14px;
+  }
+  .shop-black-friday a[data-badge]:before{
+    top:8px;
+    left:8px;
+    padding:0 8px;
+    line-height:18px;
+  }
+}

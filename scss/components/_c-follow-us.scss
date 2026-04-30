@@ -1,0 +1,30 @@
+@use "@root/mixins" as *;
+
+.c-follow-us {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+
+    @include sm {
+        gap: 14px;
+    }
+    
+    h2 {
+        margin-bottom: 0;
+        color: inherit;
+    }
+    
+    ul {
+        display: flex;
+        gap: 28px;
+    }
+
+    a {
+        display: block;
+        color: inherit;
+        font-size: 35px;
+    }
+}

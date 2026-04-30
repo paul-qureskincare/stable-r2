@@ -1,0 +1,301 @@
+.e-rating-stars{
+  position:relative;
+  display:inline-block;
+  line-height:1;
+  letter-spacing:.135em;
+}
+.e-rating-stars:after,.e-rating-stars:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  white-space:nowrap;
+  vertical-align:top;
+  content:"\e921\e921\e921\e921\e921";
+}
+.e-rating-stars:before{
+  color:#dfe0e0;
+}
+.e-rating-stars:after{
+  position:absolute;
+  top:0;
+  left:0;
+  overflow:hidden;
+  width:calc(var(--rating) / 5 * 100%);
+  color:#91baec;
+}
+
+.c-note{
+  display:block;
+  padding:10px 12px;
+  font-size:16px;
+  line-height:1.25;
+  border-radius:10px;
+  background:var(--note-bg, #eef7f4);
+  max-width:500px;
+}
+.c-note p{
+  margin:0;
+}
+.c-note p+p{
+  margin-top:15px;
+}
+.c-note p+ul{
+  margin-top:5px;
+}
+.c-note strong{
+  font-weight:600;
+}
+.c-note ul{
+  padding-left:24px;
+}
+.c-note ul li{
+  padding-left:4px;
+  list-style:disc;
+}
+.c-note a{
+  color:inherit;
+  text-decoration:underline;
+}
+.c-note a:hover{
+  text-decoration:none;
+}
+.c-note--info,.c-note--warning{
+  position:relative;
+  padding-left:36px;
+}
+.c-note--info:before,.c-note--warning:before{
+  position:absolute;
+  top:12px;
+  left:12px;
+  width:16px;
+  height:16px;
+  color:#fff;
+  font-size:8px;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  line-height:16px;
+  text-align:center;
+  border-radius:16px;
+  content:"\e90c";
+}
+.c-note--info{
+  background:#f4f8fd;
+}
+.c-note--info:before{
+  background:#91baec;
+}
+.c-note--warning{
+  background:#ffeeea;
+}
+.c-note--warning:before{
+  background:#ff5429;
+}
+.page\.qure-microinfusion-offer-listicle .c-note{
+  max-width:none;
+  padding:12px 16px;
+  color:#008763;
+  font-size:18px;
+  background:#e5fff7;
+}
+
+.science-backed .container{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  align-items:center;
+}
+.science-backed__text{
+  max-width:800px;
+  text-align:center;
+}
+.science-backed__text h2{
+  margin-bottom:24px;
+}
+.science-backed__content{
+  display:grid;
+  grid-template-columns:1fr -webkit-min-content 1fr;
+  grid-template-columns:1fr min-content 1fr;
+  gap:min(3%, 50px);
+  width:100%;
+  max-width:954px;
+}
+.science-backed__data{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.science-backed__data>img:first-child{
+  align-self:center;
+  -o-object-fit:contain;
+     object-fit:contain;
+  width:auto;
+  height:140px;
+  margin-bottom:12px;
+}
+.science-backed__data h4{
+  margin-bottom:0;
+  padding:28px 0;
+  font-size:28px;
+  line-height:unset;
+  text-align:center;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.science-backed__data ul{
+  display:flex;
+  gap:10px;
+  justify-content:space-between;
+  padding:32px 30px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.science-backed__data ul li{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+  width:100%;
+  max-width:90px;
+  font-size:16px;
+  line-height:1.2;
+  text-align:center;
+}
+.science-backed__data ul li .e-icon{
+  font-size:60px;
+}
+.science-backed__data .c-accordion{
+  margin-bottom:12px;
+  padding:8px 30px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.science-backed__data .c-accordion__item:last-child{
+  border-bottom:0;
+}
+.science-backed__data .c-accordion__item small{
+  --note-bg:#f6f6f7;
+  display:block;
+  padding:10px 12px;
+  font-size:16px;
+  line-height:1.25;
+  border-radius:10px;
+  background:var(--note-bg, #eef7f4);
+}
+.science-backed__data .quote{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  align-self:center;
+  max-width:300px;
+  font-size:14px;
+  text-align:center;
+}
+.science-backed__data .quote p{
+  padding-top:16px;
+  padding-bottom:16px;
+  line-height:1.2;
+}
+.science-backed__data .quote small{
+  font-size:12px;
+}
+.science-backed__data .quote .e-author{
+  gap:6px;
+  line-height:1;
+}
+.science-backed__data .quote .e-author img{
+  max-width:16px;
+}
+.science-backed__or{
+  align-self:center;
+  font-family:Canela,serif;
+  font-size:38px;
+  font-weight:300;
+  text-align:center;
+}
+.science-backed--single .science-backed__content{
+  grid-template-columns:repeat(2, 1fr);
+  max-width:none;
+}
+.science-backed--single .science-backed__content picture img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+}
+.science-backed--single .science-backed__text{
+  display:none;
+}
+.science-backed--single .science-backed__data>article{
+  display:grid;
+  grid-template:repeat(2, auto)/auto 1fr;
+  gap:0 24px;
+  align-items:center;
+  margin-bottom:12px;
+}
+.science-backed--single .science-backed__data>article img{
+  grid-row:1 /  -1;
+  -o-object-fit:contain;
+     object-fit:contain;
+  width:auto;
+  height:120px;
+}
+.science-backed--single .science-backed__data>article h3{
+  align-self:end;
+}
+.science-backed--single .science-backed__data>article p{
+  align-self:start;
+}
+@media screen and (max-width:767px){
+  .page\.qure-microinfusion-offer-listicle .c-note{
+    font-size:16px;
+  }
+  .science-backed__text h2{
+    margin-bottom:16px;
+  }
+  .science-backed__content{
+    grid-template-columns:auto;
+    gap:32px;
+  }
+  .science-backed__data h4{
+    padding-top:16px;
+    padding-bottom:16px;
+  }
+  .science-backed__data ul{
+    padding:24px;
+  }
+  .science-backed__data ul li{
+    font-size:14px;
+  }
+  .science-backed__data ul li .e-icon{
+    font-size:50px;
+  }
+  .science-backed__data .c-accordion{
+    padding:0 16px;
+  }
+  .science-backed__or{
+    font-size:28px;
+  }
+  .science-backed--single .science-backed__content{
+    grid-template-columns:auto;
+  }
+  .science-backed--single .science-backed__text{
+    display:block;
+  }
+  .science-backed--single .science-backed__data>article img{
+    height:100px;
+  }
+}

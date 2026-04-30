@@ -1,0 +1,41 @@
+@use "@root/mixins" as *;
+@use "@components/c-product-tile" as *;
+
+.top-rated {
+    $root: &;
+
+    h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 12px;
+        text-align: center;
+
+        @include sm {
+            margin-bottom: 10px;
+        }
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        @include sm {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+    }
+
+    .c-product-tile__rating {
+
+        @include sm {
+            gap: 8px;
+            font-size: 14px;
+        }
+    }
+
+    .e-rating-stars {
+        @include sm {
+            font-size: 12px;
+        }
+    }
+}

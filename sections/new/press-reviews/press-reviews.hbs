@@ -1,0 +1,16 @@
+<!-- PRESS REVIEWS -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/new/press-reviews/press-reviews.css" />
+{{/unless}}
+<section class="press-reviews {{ classes }}" >
+    <div class="container">
+        <h6>FEATURED IN</h6>
+        {{> @partial-block }}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('swiper', 'assets/js-new/swiper.js');
+    });
+</script>
+<!-- PRESS REVIEWS END -->

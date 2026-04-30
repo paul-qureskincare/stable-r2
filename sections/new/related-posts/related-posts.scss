@@ -1,0 +1,11 @@
+@use "@root/mixins" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-post-tile" as *;
+
+.related-posts {
+    $root: &;
+
+    h2 {
+        margin-bottom: 24px;
+    }
+}

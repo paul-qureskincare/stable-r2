@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Qure Skincare App - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/spacings.css" />
+        <link href="assets/css/theme-fonts.css" rel="stylesheet" />
+        <link href="assets/css/base.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
+
+    <body class="page.qure-skincare-app">
+        <!-- PAGE HEADER -->
+        <div id="site-header"></div>
+        <!-- PAGE HEADER END -->
+
+        <!-- ANNOUNCEMENT BAR -->
+        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
+        <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
+            <div class="container">
+                <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
+
+        <!-- SECTIONS STACK -->
+        <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+        <main class="sections-stack">
+            <!-- ACROSS IMAGE BANNER -->
+            <link rel="stylesheet" href="sections/new/across-image-banner/across-image-banner.css" />
+            <section class="across-image-banner across-image-banner--hero">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="sections/isolated/page-banner/images/hero-app.webp" />
+                    <img src="sections/isolated/page-banner/images/hero-app-mob.webp" />
+                </picture>
+                <div class="container">
+                    <article>
+                        <h1>The only FDA-cleared LED&nbsp;light therapy mask with&nbsp;an&nbsp;app.</h1>
+                        <div class="c-app-stores c-app-stores--row">
+                            <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure&ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340&pli=1" target="_blank" rel="nofollow">
+                                <img src="./assets/images/app_store_200x.svg" alt="App Store" />
+                            </a>
+                            <a href="https://apps.apple.com/us/app/qure-skincare/id1670113821" target="_blank" rel="nofollow">
+                                <img src="./assets/images/google_play_200x.svg" alt="Google Play" />
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                });
+            </script>
+            <!-- ACROSS IMAGE BANNER END -->
+
+            <!-- TEXT SECTION -->
+            <link rel="stylesheet" href="sections/new/text-section/text-section.css" />
+            <section class="text-section">
+                <div class="container">
+                    <article>
+                        <h2>An app for out-of-this world skincare</h2>
+                        <p>Your skin is unique, and your treatment should reflect that. The Qure Skincare App gives you full control of your clinical-grade LED sessions, all from home.</p>
+                        <p>No clinics, no waiting rooms, just personalized treatment when you need it.</p>
+                    </article>
+                </div>
+            </section>
+            <!-- TEXT SECTION END -->
+
+            <!-- APP FEATURES -->
+            <link rel="stylesheet" href="sections/new/app-features/app-features.css" />
+            <section class="app-features">
+                <div class="container">
+                    <div
+                        class="c-swiper"
+                        data-swiper-thumbs=".c-swiper-texts"
+                        data-swiper='{
+                            "slidesPerView": 3,
+                            "spaceBetween": 0,
+                            "centeredSlides": true,
+                            "pagination": {
+                                "el": ".app-features .c-swiper-pagination",
+                                "type": "custom"
+                            },
+                            "navigation": {
+                                "prevEl": ".app-features .c-swiper-button-prev",
+                                "nextEl": ".app-features .c-swiper-button-next"
+                            }
+                        }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-1.webp" alt="Customize Your Treatments" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-2.webp" alt="Plan and Schedule Your Routine" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-3.webp" alt="Get Reminders" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/new/app-features/images/app-features-screen-4.webp" alt="Track Your Progress" />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="c-swiper c-swiper-texts"
+                        data-swiper='{
+                            "slidesPerView": 1,
+                            "spaceBetween": 16,
+                            "allowTouchMove": false
+                        }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h6>Customize Your Treatments</h6>
+                                <p>Customize your LED treatments for a personalized program that’s unique to your skin’s profile.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h6>Plan and Schedule Your Routine</h6>
+                                <p>The Qure planner shows your treatment history and scheduled treatments in a monthly calendar.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h6>Get Reminders</h6>
+                                <p>Schedule in your treatments on your own time. Get reminders straight to your phone so you never miss a treatment.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h6>Track Your Progress</h6>
+                                <p>See your skin change over time with progress photos, notes, and treatment history in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-swiper-nav">
+                        <button class="c-swiper-button-prev"></button>
+                        <div class="c-swiper-pagination"></div>
+                        <button class="c-swiper-button-next"></button>
+                    </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("swiper", "assets/js-new/swiper.js");
+                });
+            </script>
+            <!-- APP FEATURES END -->
+
+            <!-- PRESS REVIEWS -->
+            <link rel="stylesheet" href="sections/new/press-reviews/press-reviews.css" />
+            <section class="press-reviews">
+                <div class="container">
+                    <h6>FEATURED IN</h6>
+                    <div
+                        class="c-swiper"
+                        data-swiper-thumbs=".press-reviews .c-swiper-thumbs"
+                        data-swiper='{
+                                "slidesPerView": 1,
+                                "spaceBetween": 16,
+                                "loop": true,
+                                "autoplay": {
+                                    "delay": 5000
+                                }
+                            }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h4>“The professional grade is the perfect addition to any at-home skincare routine.”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4>“My skin actually seems considerable brighter and smoother! It’s simple, fast, and effective enough to become a daily habit.”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4>“The results are blatant — my glow after using the treatment speaks for itself. You'll notice hydrated, radiant, and healthy-looking skin.”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”</h4>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4> “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="c-swiper c-swiper-thumbs"
+                        data-swiper='{
+                                "slidesPerView": 3,
+                                "spaceBetween": 30,
+                                "breakpoints": {
+                                    "992": {
+                                        "slidesPerView": 5,
+                                        "spaceBetween": 50
+                                    }
+                                }
+                            }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/vogue-black.svg" alt="Vogue" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/women-health.svg" alt="Women Health" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/popsugar.svg" alt="Popsugar" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/cosmopolitan.svg" alt="Cosmopolitan" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sections/isolated/press_slider/images/gq.svg" alt="QG" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("swiper", "assets/js-new/swiper.js");
+                });
+            </script>
+            <!-- PRESS REVIEWS END -->
+
+            <!-- BASE SECTION -->
+            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
+            <section class="base-section base-section--simple-grid base-section--reverse">
+                <div class="container">
+                    <article>
+                        <h2>Personalized skincare awaits</h2>
+                        <div class="wistia-embed-video">
+                            <div class="wistia_responsive_padding">
+                                <div class="wistia_responsive_wrapper">
+                                    <div class="wistia_embed wistia_async_xdk9firq7i seo=false videoFoam=true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="c-app-stores c-app-stores--row">
+                                <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure&ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340&pli=1" target="_blank" rel="nofollow">
+                                    <img src="./assets/images/app_store_200x.svg" alt="App Store" />
+                                </a>
+                                <a href="https://apps.apple.com/us/app/qure-skincare/id1670113821" target="_blank" rel="nofollow">
+                                    <img src="./assets/images/google_play_200x.svg" alt="Google Play" />
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
+                });
+            </script>
+            <!-- BASE SECTION END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <!-- FOOTER BENEFITS -->
+        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("swiper", "assets/js-new/swiper.js");
+            });
+        </script>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer"></div>
+        <div id="site-cart-drawer"></div>
+
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <img src="assets/images/notify.gif" alt="" />
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
+
+        <!-- SCRIPTS -->
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="sections/new/header/header.js" defer="defer"></script>
+        <script src="sections/new/footer/footer.js" defer="defer"></script>
+    </body>
+</html>
