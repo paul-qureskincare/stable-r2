@@ -1,0 +1,15 @@
+{
+    "name": "commands",
+    "scripts": {
+        "sync": "git checkout main; git pull origin main; git fetch --prune",
+        "open": "git checkout main; git pull origin main; git checkout -b feature/$npm_config_name",
+        "push": "git add .; git commit -m \"${npm_config_message:-push}\"; git push origin feature/${npm_config_name}",
+        "close": "git checkout main; git pull origin main; git fetch --prune; git branch -D feature/$npm_config_name"
+    },
+    "comments": {
+        "sync": "npm run sync",
+        "open": "npm run open --name=[branch-name]",
+        "push": "npm run push --name=[branch-name] --message=[optional]",
+        "close": "npm run close --name=[branch-name]"
+    }
+}
