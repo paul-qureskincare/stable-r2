@@ -101,99 +101,6 @@
   border-start-end-radius:10px;
 }
 
-.c-swiper{
-  overflow:hidden;
-  margin-right:-16px;
-  margin-left:-16px;
-  padding-right:16px;
-  padding-left:16px;
-}
-.c-swiper .swiper-slide{
-  height:auto;
-}
-.c-swiper .swiper-slide picture[data-url],.c-swiper .swiper-slide picture[data-video-id]{
-  cursor:pointer;
-}
-.c-swiper .swiper-slide img{
-  width:100%;
-  height:auto;
-  vertical-align:top;
-}
-.c-swiper-nav{
-  display:flex;
-  gap:20px;
-  align-items:center;
-  justify-content:center;
-  margin-top:32px;
-}
-.c-swiper-nav-disabled .c-swiper-nav{
-  display:none;
-}
-.c-swiper-pagination{
-  display:flex;
-  gap:10px;
-  width:auto;
-}
-.c-swiper-thumbs-nav{
-  display:flex;
-  gap:20px;
-  align-items:center;
-  justify-content:center;
-  overflow:unset;
-  width:auto;
-}
-.c-swiper-thumbs-nav .swiper-slide{
-  overflow:hidden;
-  border-radius:5px;
-  cursor:pointer;
-  opacity:.5;
-  transition:opacity .2s linear;
-}
-.c-swiper-thumbs-nav .swiper-slide.swiper-slide-thumb-active{
-  border:1px solid #212428;
-  cursor:default;
-  opacity:1;
-}
-.c-swiper-button-next,.c-swiper-button-prev{
-  display:flex;
-  flex:0 0 40px;
-  align-items:center;
-  justify-content:center;
-  height:40px;
-  color:#212428;
-  font-size:12px;
-  border:1px solid;
-  border-radius:50px;
-  background:#fff;
-  cursor:pointer;
-  transition:.3s;
-}
-.c-swiper-button-next:after,.c-swiper-button-prev:after{
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  vertical-align:top;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  content:"\e900";
-}
-.c-swiper-button-next:hover,.c-swiper-button-prev:hover{
-  border-color:#c8e6dc;
-  background:#c8e6dc;
-}
-.c-swiper-button-next.swiper-button-disabled,.c-swiper-button-prev.swiper-button-disabled{
-  color:#8b8c8e;
-  pointer-events:none;
-  opacity:.3;
-}
-.c-swiper-button-prev:after{
-  transform:rotate(-180deg);
-}
-
 .c-visual-compare-card{
   --c-visual-compare-card-pill-color:#c8e6dc;
   display:flex;
@@ -351,9 +258,6 @@
 @media screen and (max-width:767px){
   .e-pill-tabs button,.e-pill-tabs label{
     font-size:16px;
-  }
-  .c-swiper-nav{
-    margin-top:16px;
   }
   .why-it-work__content,.why-it-work__header{
     grid-template-columns:auto;

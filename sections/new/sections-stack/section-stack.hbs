@@ -1,5 +1,7 @@
 <!-- SECTIONS STACK -->
-<link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
+{{/unless}}
 <main class="sections-stack">
     {{> @partial-block}}
 </main>

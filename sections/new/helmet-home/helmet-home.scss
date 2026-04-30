@@ -1,9 +1,9 @@
-@use "@elements/e-icon" as *;
+
 @use "@elements/e-rating-stars" as *;
 @use "@components/c-accordion" as *;
 @use "@components/c-moneyback" as *;
 @use "@components/c-jump-to" as *;
-@use "@components/c-swiper" as *;
+
 
 @mixin badge {
     padding: 3px 12px;
