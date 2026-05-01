@@ -1,5 +1,7 @@
 <!-- PRODUCT SETTINGS -->
-<link rel="stylesheet" href="sections/new/product-settings/product-settings.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/product-settings/product-settings.css" />
+{{/unless}}
 <section class="product-settings {{ classes }}">
     <div class="container">
         {{> @partial-block }}
