@@ -1,5 +1,7 @@
 <!-- PROGRESS METRICS -->
-<link rel="stylesheet" href="sections/new/progress-metrics/progress-metrics.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/progress-metrics/progress-metrics.css" />
+{{/unless}}
 <section class="progress-metrics {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         {{> @partial-block }}

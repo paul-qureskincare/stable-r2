@@ -1,5 +1,7 @@
 <!-- SET UP -->
-<link rel="stylesheet" href="sections/new/set-up/set-up.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/set-up/set-up.css" />
+{{/unless}}
 <section class="set-up {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         {{> @partial-block }}

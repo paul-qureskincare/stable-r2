@@ -1,5 +1,7 @@
 <!-- CTA BAR -->
-<link rel="stylesheet" href="sections/new/cta-bar/cta-bar.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/cta-bar/cta-bar.css" />
+{{/unless}}
 <section class="cta-bar {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         {{#if name }}
