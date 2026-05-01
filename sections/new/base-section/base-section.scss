@@ -119,7 +119,7 @@
             }
         }
 
-        ul:not(.c-marked-list, .e-steps-list, .c-percent-list) {
+        ul:not([class]) {
             padding-left: 24px;
 
             &:not(:last-child) {
