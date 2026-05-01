@@ -1,4 +1,17 @@
-    const sectionsToLoad = [
+   (function initVercelSpeedInsights() {
+     if (document.querySelector('script[src="/_vercel/speed-insights/script.js"]')) return;
+   
+     window.si = window.si || function () {
+       (window.siq = window.siq || []).push(arguments);
+     };
+   
+     const script = document.createElement('script');
+     script.src = '/_vercel/speed-insights/script.js';
+     script.defer = true;
+     document.head.appendChild(script);
+   })();
+
+   const sectionsToLoad = [
       { file: './site-header.html', targetId: 'site-header' },
       { file: './site-footer.html', targetId: 'site-footer' },
       { file: './site-cart-drawer.html', targetId: 'site-cart-drawer' },
