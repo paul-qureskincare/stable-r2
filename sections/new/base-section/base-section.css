@@ -961,13 +961,13 @@
 .base-section article p+h2{
   margin:40px 0 20px;
 }
-.base-section article ul:not(.c-marked-list,.e-steps-list,.c-percent-list){
+.base-section article ul:not([class]){
   padding-left:24px;
 }
-.base-section article ul:not(.c-marked-list,.e-steps-list,.c-percent-list):not(:last-child){
+.base-section article ul:not([class]):not(:last-child){
   margin-bottom:15px;
 }
-.base-section article ul:not(.c-marked-list,.e-steps-list,.c-percent-list) li{
+.base-section article ul:not([class]) li{
   padding-left:4px;
   list-style:disc;
 }
