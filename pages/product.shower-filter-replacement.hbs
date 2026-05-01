@@ -1,11 +1,10 @@
 {{#> default
     title="Shower Filter Replacement"
     body-class="product.shower-filter-replacement"
+    page-css=true
 }}
-
-
     <!-- BUY SECTION -->
-    <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
+    {{!-- <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" /> --}}
     <section class="hero-product" id="hero-product">
         <div class="hero-product__container container">
             <div class="hero-product__gallery">
@@ -763,13 +762,11 @@
         ]'
     }}
 
-
-
-{{#> cta-bar
-    color-selector=true
-    hide-silver=true
-    button="Subscribe & Save 30%"
-}}
-{{/cta-bar}}
+    {{#> cta-bar
+        color-selector=true
+        hide-silver=true
+        button="Subscribe & Save 30%"
+    }}
+    {{/cta-bar}}
 
 {{/default }}
