@@ -301,9 +301,26 @@
             padding-left: 16px;
         }
 
-        .btn-close {
-            margin: -5px;
-            padding: 5px;
+    }
+
+    // .flyout-cart__close
+    &__close {
+        margin: -10px;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1;
+        border: 0;
+        border-radius: 50%;
+        background: none;
+        @include transition;
+
+        .e-icon {
+            vertical-align: top;
+        }
+
+        @include hover {
+            color: #fff;
+            background: #212428;
         }
     }
 
