@@ -12,6 +12,7 @@
             }
         </style>
         <link href="assets/css/general.css" rel="stylesheet" />
+        <link href="assets/css/product.dermal-mist.css" rel="stylesheet" />
         <!-- Loading HTML Files -->
         <script src="assets/js/fileloader.js"></script>
     </head>
@@ -22,7 +23,6 @@
         <!-- PAGE HEADER END -->
 
         <!-- ANNOUNCEMENT BAR -->
-        <link rel="stylesheet" href="sections/new/announcement/announcement-bar.css" />
         <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size: 16px; --anc-bar-font-weight: 400">
             <div class="container">
                 <div class="announcement-bar-content text-center">FREE Worldwide Shipping Above $100 <a href="#">Shop Now</a></div>
@@ -36,10 +36,8 @@
         <!-- ANNOUNCEMENT BAR END -->
 
         <!-- SECTIONS STACK -->
-        <link rel="stylesheet" href="sections/new/sections-stack/sections-stack.css" />
         <main class="sections-stack">
             <!-- BUY SECTION -->
-            <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
             <section class="hero-product" id="hero-product">
                 <div class="hero-product__container container">
                     <div class="hero-product__gallery">
@@ -330,7 +328,6 @@
             <!-- BUY SECTION END -->
 
             <!-- LOGOS MARQUEE -->
-            <link rel="stylesheet" href="sections/new/logos-marquee/logos-marquee.css" />
             <div class="logos-marquee">
                 <div class="container">
                     <ul class="logos-marquee__list">
@@ -347,7 +344,6 @@
             <!-- LOGOS MARQUEE END -->
 
             <!-- BASE SECTION -->
-            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
             <section class="base-section base-section--reverse">
                 <div class="container">
                     <article>
@@ -377,7 +373,6 @@
             <!-- BASE SECTION END -->
 
             <!-- HOW TO USE -->
-            <link rel="stylesheet" href="sections/new/how-to-use/how-to-use.css" />
             <section class="how-to-use" id="easy_steps">
                 <div class="container">
                     <article class="how-to-use__content">
@@ -456,7 +451,6 @@
             <!-- HOW TO USE END -->
 
             <!-- BASE SECTION -->
-            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
             <section class="base-section base-section--small-media">
                 <div class="container">
                     <article>
@@ -491,7 +485,6 @@
             <!-- BASE SECTION END -->
 
             <!-- FEATURES MARQUEE -->
-            <link rel="stylesheet" href="sections/new/features-marquee/features-marquee.css" />
             <div class="features-marquee">
                 <div class="container" id="features-marquee-container">
                     <ul class="features-marquee__list">
@@ -526,7 +519,6 @@
             <!-- FEATURES MARQUEE END -->
 
             <!-- BASE SECTION -->
-            <link rel="stylesheet" href="sections/new/base-section/base-section.css" />
             <section class="base-section base-section--reverse" id="ingredients">
                 <div class="container">
                     <article>
@@ -560,7 +552,6 @@
             <!-- BASE SECTION END -->
 
             <!-- BASE SLIDER -->
-            <link rel="stylesheet" href="sections/new/base-slider/base-slider.css" />
             <section class="base-slider">
                 <div class="container">
                     <h2>Confident skin starts here</h2>
@@ -653,7 +644,6 @@
             <!-- BASE SLIDER END -->
 
             <!-- COMPARISON -->
-            <link rel="stylesheet" href="sections/new/comparison/comparison.css" />
             <div class="comparison">
                 <div class="container">
                     <article>
@@ -691,7 +681,6 @@
             <!-- COMPARISON END -->
 
             <!-- HAVE QUESTIONS -->
-            <link rel="stylesheet" href="sections/new/have-questions/have-questions.css" />
             <div class="have-questions" id="faq">
                 <div class="container">
                     <h2>Have questions?</h2>
@@ -747,31 +736,26 @@
             </div>
             <!-- HAVE QUESTIONS END -->
 
-            <!-- Sticky CTA start -->
-            <link rel="stylesheet" href="sections/isolated/sticky-cta/sticky-cta.css" />
-            <div class="qure__sticky-atc">
+            <!-- CTA BAR -->
+            <section class="cta-bar">
                 <div class="container">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center py-16">
-                        <h3 class="fs-20 m-0 d-none d-md-block">Dermal Mist</h3>
-                        <a href="#hero-product" class="btn btn--primary">Pre-Order Now</a>
+                    <h6 class="cta-bar__title">Dermal Mist</h6>
+                    <div class="cta-bar__button">
+                        <button class="btn btn--primary" type="button">Pre-Order Now</button>
                     </div>
                 </div>
-                <div class="align-items-center bg-light d-flex fs-16 gap-4 justify-content-center py-6 qure__user-online text-center">
-                    <div class="pulse"></div>
-                    93 reserved in last 48 hours
-                </div>
-            </div>
+                <div class="cta-bar__bottom">580 Units Reserved in last 48 hours</div>
+            </section>
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("sticky-cta", "assets/js/sticky-cta.js");
+                    loadScriptOnce("cta-bar", "sections/new/cta-bar/cta-bar.js");
                 });
             </script>
-            <!-- Sticky CTA end -->
+            <!-- CTA BAR END -->
         </main>
         <!-- SECTIONS STACK END -->
 
         <!-- FOOTER BENEFITS -->
-        <link rel="stylesheet" href="sections/new/footer-benefits/footer-benefits.css" />
         <section class="footer-benefits">
             <div class="container">
                 <div

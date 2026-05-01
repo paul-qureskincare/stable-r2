@@ -1,11 +1,10 @@
 {{#> default
     title="Dermal Mist"
     body-class="product.dermal-mist"
+    page-css=true
 }}
-
-
     <!-- BUY SECTION -->
-    <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
+    {{!-- <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" /> --}}
     <section class="hero-product" id="hero-product">
         <div class="hero-product__container container">
             <div class="hero-product__gallery">
@@ -536,26 +535,9 @@
         ]'
     }}
 
-
-
-<!-- Sticky CTA start -->
-<link rel="stylesheet" href="sections/isolated/sticky-cta/sticky-cta.css" />
-<div class="qure__sticky-atc">
-    <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center py-16">
-            <h3 class="fs-20 m-0 d-none d-md-block">Dermal Mist</h3>
-            <a href="#hero-product" class="btn btn--primary">Pre-Order Now</a>
-        </div>
-    </div>
-    <div class="align-items-center bg-light d-flex fs-16 gap-4 justify-content-center py-6 qure__user-online text-center">
-        <div class="pulse"></div> 93 reserved in last 48 hours
-    </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        loadScriptOnce('sticky-cta', 'assets/js/sticky-cta.js');
-    });
-</script>
-<!-- Sticky CTA end -->
-
+    {{#> cta-bar
+        name="Dermal Mist"
+        button="Pre-Order Now"
+    }}
+    {{/cta-bar}}
 {{/default }}
