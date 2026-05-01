@@ -1,5 +1,7 @@
 <!-- WHY IT WORKS -->
-<link rel="stylesheet" href="sections/new/why-it-works/why-it-works.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/why-it-works/why-it-works.css" />
+{{/unless}}
 <section class="why-it-works {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         {{> @partial-block }}
