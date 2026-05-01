@@ -558,9 +558,18 @@
   padding:24px 24px 14px;
   color:#000;
 }
-.flyout-cart__header .btn-close{
-  margin:-5px;
-  padding:5px;
+.flyout-cart__close{
+  margin:-10px;
+  padding:10px;
+  font-size:16px;
+  line-height:1;
+  border:0;
+  border-radius:50%;
+  background:none;
+  transition:all .2s linear;
+}
+.flyout-cart__close .e-icon{
+  vertical-align:top;
 }
 .flyout-cart__gifts{
   display:flex;
@@ -852,5 +861,9 @@
 @media (hover:hover){
   .e-quantity button:hover{
     background:#ddd;
+  }
+  .flyout-cart__close:hover{
+    color:#fff;
+    background:#212428;
   }
 }

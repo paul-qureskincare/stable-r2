@@ -129,11 +129,9 @@
         document.body.style.top = `-${scrollY}px`;
 
         const cartPopup = document.getElementById('cartCanvas');
-        if (!cartPopup || !window.bootstrap?.Offcanvas) return;
+        if (!cartPopup) return;
 
-        // cartPopup.showModal();
-
-        bootstrap.Offcanvas.getOrCreateInstance(cartPopup).show();
+        cartPopup.showModal();
     });
     // Show FLYOUT CART
 

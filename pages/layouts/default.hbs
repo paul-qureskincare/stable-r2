@@ -25,14 +25,20 @@
     <!-- PAGE HEADER END -->
 
     {{#unless hide-def-announcement }}
-        {{#> announcement-bar }}{{/announcement-bar}}
-    {{/unless}}
+        {{#> announcement-bar }}{{/announcement-bar }}
+    {{/unless }}
 
-    {{> @partial-block}}
+    {{#> sections-stack }}
+        {{> @partial-block}}
+    {{/sections-stack }}
+
+    {{#if show-cookies }}
+        {{> cookies }}
+    {{/if }}
 
     {{#unless hide-benefits }}
         {{> footer-benefits }}
-    {{/unless}}
+    {{/unless }}
     <!-- CART AND FOOTER -->
     <div id="site-footer"></div>
     <div id="site-cart-drawer"></div>

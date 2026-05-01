@@ -1,6 +1,5 @@
 <!-- FLYOUT CART -->
-<link rel="stylesheet" href="sections/new/cart/cart.css" />
-<div class="flyout-cart offcanvas offcanvas-end" id="cartCanvas">
+<dialog class="flyout-cart" id="cartCanvas">
     <div id="cart-dynamic-content" class="flyout-cart__dynamic">
         <div class="cart-countdown-time" data-countdown-time="15" data-timeout-message="Time is up!">
             <span><strong>IN HIGH DEMAND</strong> | Items reserved for:</span>
@@ -13,7 +12,7 @@
         <div class="flyout-cart__wrapper">
             <div class="flyout-cart__header">
                 <div>Your Cart (2)</div>
-                <button class="btn-close" type="button" data-bs-dismiss="offcanvas">
+                <button class="flyout-cart__close" type="button" onclick="cartCanvas.close()">
                     <i class="e-icon e-icon-cross"></i>
                 </button>
             </div>
@@ -48,7 +47,7 @@
                                 <img src="sections/new/cart/images/flyout-cart-placeholder.webp" alt="" />
                                 <h6>Save up to 55% on our exclusive bundles</h6>
                                 <ul>
-                                    <li>Shop our devices & skincare at our best prices.</li>
+                                    <li>Shop our devices &amp; skincare at our best prices.</li>
                                     <li>Target your skin concerns in one simple routine.</li>
                                     <li>Get clinical results at home - no downtime.</li>
                                 </ul>
@@ -241,5 +240,5 @@
             </div>
         </div>
     </div>
-</div>
+</dialog>
 <!-- FLYOUT CART END -->

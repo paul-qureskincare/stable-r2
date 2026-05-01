@@ -19,7 +19,7 @@
   flex:none;
   width:24px;
   height:24px;
-  border:7px solid hsla(165,2%,48%,.4);
+  border:7px solid rgba(121,125,124,.4);
   border-radius:50%;
   background:#212428;
   background-clip:content-box;
