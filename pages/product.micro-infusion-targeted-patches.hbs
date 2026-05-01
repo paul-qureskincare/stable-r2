@@ -1,11 +1,10 @@
 {{#> default
     title="Micro-Infusion Patches"
     body-class="product.micro-infusion-targeted-patches"
+    page-css=true
 }}
-
-
     <!-- BUY SECTION -->
-    <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
+    {{!-- <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" /> --}}
     <section class="hero-product" id="hero-product">
         <div class="hero-product__container container">
             <div class="hero-product__gallery">
@@ -865,40 +864,38 @@
         ]'
     }}
 
-
-{{#> cta-bar
-    qty-selector=true
-    button="Subscribe & Save {dyn}%"
-}}
-    <div class="cta-bar__selector" data-label="Select Quantity">
-        <button type="button">
-            <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
-            3 Months
-        </button>
-        <ul>
-            <li>
-                <label>
-                    <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
-                    <input type="radio" name="cta-qty" value="white" checked />
-                    <span>3 Months</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="sections/isolated/targeted-patches/images/12-pairs-new.webp" alt="2 Months" />
-                    <input type="radio" name="cta-qty" value="white" />
-                    <span>2 Months</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="sections/isolated/targeted-patches/images/8-pairs-new.webp" alt="1 Months" />
-                    <input type="radio" name="cta-qty" value="white" />
-                    <span>1 Months</span>
-                </label>
-            </li>
-        </ul>
-    </div>
-{{/cta-bar}}
-
+    {{#> cta-bar
+        qty-selector=true
+        button="Subscribe & Save {dyn}%"
+    }}
+        <div class="cta-bar__selector" data-label="Select Quantity">
+            <button type="button">
+                <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
+                3 Months
+            </button>
+            <ul>
+                <li>
+                    <label>
+                        <img src="sections/isolated/targeted-patches/images/24-pairs-new.webp" alt="3 Months" />
+                        <input type="radio" name="cta-qty" value="white" checked />
+                        <span>3 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="sections/isolated/targeted-patches/images/12-pairs-new.webp" alt="2 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>2 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="sections/isolated/targeted-patches/images/8-pairs-new.webp" alt="1 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>1 Months</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    {{/cta-bar}}
 {{/default }}
