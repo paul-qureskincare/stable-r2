@@ -1,35 +1,3 @@
-.e-rating-stars{
-  position:relative;
-  display:inline-block;
-  line-height:1;
-  letter-spacing:.135em;
-}
-.e-rating-stars:after,.e-rating-stars:before{
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  white-space:nowrap;
-  vertical-align:top;
-  content:"\e921\e921\e921\e921\e921";
-}
-.e-rating-stars:before{
-  color:#dfe0e0;
-}
-.e-rating-stars:after{
-  position:absolute;
-  top:0;
-  left:0;
-  overflow:hidden;
-  width:calc(var(--rating) / 5 * 100%);
-  color:#91baec;
-}
-
 .c-accordion__list{
   display:flex;
   flex-direction:column;

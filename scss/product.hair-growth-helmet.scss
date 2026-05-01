@@ -1,0 +1,10 @@
+// Sections styles on current page
+@use "@sections/helmet-home/helmet-home" as *;
+@use "@sections/peek-cards-slider/peek-cards-slider" as *;
+@use "@sections/expert-reviews/expert-reviews" as *;
+@use "@sections/product-results/product-results" as *;
+@use "@sections/features-marquee/features-marquee" as *;
+@use "@sections/how-to-helmet/how-to-helmet" as *;
+@use "@sections/how-compares/how-compares" as *;
+
+// Styles for current page only
