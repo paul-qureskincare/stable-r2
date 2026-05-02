@@ -48,6 +48,12 @@
 .c-faq-accordion__header button[aria-expanded=true]:after{
   content:"\e902";
 }
+.c-faq-accordion__body{
+  display:none;
+}
+.c-faq-accordion__body.show{
+  display:block;
+}
 .c-faq-accordion__content{
   padding:0 24px 24px;
 }
