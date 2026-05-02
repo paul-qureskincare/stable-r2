@@ -63,6 +63,15 @@
         }
     }
 
+    // .c-faq-accordion__body
+    &__body {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
     // .c-faq-accordion__content
     &__content {
         padding: 0 24px 24px;
