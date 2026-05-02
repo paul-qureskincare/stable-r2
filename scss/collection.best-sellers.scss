@@ -1,0 +1,9 @@
+// Sections styles on current page
+@use "@sections/hero-banner/hero-banner" as *;
+@use "@sections/breadcrumb/breadcrumb" as *;
+@use "@sections/pills-nav/pills-nav" as *;
+@use "@sections/best-sellers/best-sellers" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/take-quiz/take-quiz" as *;
+
+// Styles for current page only
