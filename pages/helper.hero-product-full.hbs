@@ -1,8 +1,6 @@
 {{#> default
     title="Hero Product Full"
 }}
-
-
     <br /><br />
     <!-- BUY SECTION -->
     <link rel="stylesheet" href="sections/new/hero-product/hero-product.css" />
@@ -554,51 +552,50 @@
     <br /><br /><br /><br /><br />
 
 
-{{#> cta-bar
-    color-selector=true
-    button="Subscribe & Save {dyn}%"
-}}
-{{/cta-bar}}
+    {{#> cta-bar
+        color-selector=true
+        button="Subscribe & Save {dyn}%"
+    }}
+    {{/cta-bar}}
 
-{{#> cta-bar
-    qty-selector=true
-    button="Subscribe & Save {dyn}%"
-}}
-    <div class="cta-bar__selector" data-label="Select Quantity">
-        <button type="button">
-            <img src="sections/isolated/targeted-patches/images/3-bottles_250x.webp" alt="6 Months" />
-            6 Months
-        </button>
-        <ul>
-            <li>
-                <label>
-                    <img src="sections/isolated/targeted-patches/images/3-bottles_250x.webp" alt="6 Months" />
-                    <input type="radio" name="cta-qty" value="white" checked />
-                    <span>6 Months</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="sections/isolated/targeted-patches/images/2-bottles_250x.webp" alt="4 Months" />
-                    <input type="radio" name="cta-qty" value="white" />
-                    <span>4 Months</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="sections/isolated/targeted-patches/images/1-bottle_250x.webp" alt="2 Months" />
-                    <input type="radio" name="cta-qty" value="white" />
-                    <span>2 Months</span>
-                </label>
-            </li>
-        </ul>
-    </div>
-{{/cta-bar}}
+    {{#> cta-bar
+        qty-selector=true
+        button="Subscribe & Save {dyn}%"
+    }}
+        <div class="cta-bar__selector" data-label="Select Quantity">
+            <button type="button">
+                <img src="sections/isolated/targeted-patches/images/3-bottles_250x.webp" alt="6 Months" />
+                6 Months
+            </button>
+            <ul>
+                <li>
+                    <label>
+                        <img src="sections/isolated/targeted-patches/images/3-bottles_250x.webp" alt="6 Months" />
+                        <input type="radio" name="cta-qty" value="white" checked />
+                        <span>6 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="sections/isolated/targeted-patches/images/2-bottles_250x.webp" alt="4 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>4 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="sections/isolated/targeted-patches/images/1-bottle_250x.webp" alt="2 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>2 Months</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    {{/cta-bar}}
 
-{{#> cta-bar
-    name="Faucet Filter"
-    button="Subscribe & Save {dyn}%"
-}}
-{{/cta-bar}}
-
+    {{#> cta-bar
+        name="Faucet Filter"
+        button="Subscribe & Save {dyn}%"
+    }}
+    {{/cta-bar}}
 {{/default }}
