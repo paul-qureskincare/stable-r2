@@ -1,0 +1,73 @@
+/* stylelint-disable */
+
+@use "sass:map";
+@use "sass:math";
+
+// Переменные
+$grid-columns: 12;
+$gutter-width: 16px;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Миксин для медиазапросов
+@mixin respond-to($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if $value != 0 {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Контейнер
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+
+  @include respond-to(sm) { max-width: 540px; }
+  @include respond-to(md) { max-width: 720px; }
+  @include respond-to(lg) { max-width: 960px; }
+  @include respond-to(xl) { max-width: 1140px; }
+}
+
+// Ряд
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+}
+
+// Колонки
+[class*="col"] {
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+  box-sizing: border-box;
+}
+
+// Генерация колонок
+@each $breakpoint, $value in $breakpoints {
+  @include respond-to($breakpoint) {
+
+    .col-#{$breakpoint} {
+      flex: 1 0 0%;
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        width: math.percentage(math.div($i, $grid-columns));
+      }
+    }
+  }
+}

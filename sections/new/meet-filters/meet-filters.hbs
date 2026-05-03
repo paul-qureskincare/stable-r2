@@ -1,5 +1,7 @@
 <!-- MEET FILTERS -->
-<link rel="stylesheet" href="sections/new/meet-filters/meet-filters.css" />
+{{#unless page-css }}
+    <link rel="stylesheet" href="sections/new/meet-filters/meet-filters.css" />
+{{/unless}}
 <section class="meet-filters {{ classes }}">
     <div class="container">
         {{> @partial-block }}

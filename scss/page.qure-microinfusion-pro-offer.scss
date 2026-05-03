@@ -1,0 +1,12 @@
+// Sections styles on current page
+@use "@sections/hero-section/hero-section" as *;
+@use "@sections/achieve-goals/achieve-goals" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/comparison-table/comparison-table" as *;
+@use "@sections/set-up/set-up" as *;
+@use "@sections/treatment/treatment" as *;
+@use "@sections/mi-new/mi-new" as *;
+@use "@sections/why-using/why-using" as *;
+
+
+// Styles for current page only
