@@ -14,7 +14,7 @@
                 <h4>{{ name-first }}</h4>
                 <ul>
                     {{#eachList list-first }}
-                        <li>{{> e-icon icon="checkmark" }} {{{ this }}}</li>
+                        <li>{{> e-icon icon="checkmark" }} <div>{{{ this }}}</div></li>
                     {{/eachList }}
                 </ul>
             </div>
@@ -24,7 +24,7 @@
                 <h4>{{ name-second }}</h4>
                 <ul>
                     {{#eachList list-second }}
-                        <li>{{> e-icon icon="cross" }} {{{ this }}}</li>
+                        <li>{{> e-icon icon="cross" }} <div>{{{ this }}}</div></li>
                     {{/eachList }}
                 </ul>
             </div>

@@ -1,10 +1,8 @@
 @use "@root/mixins" as *;
-
 @use "@elements/e-declaimer" as *;
 
 .comparison {
     $root: &;
-
 
     .container {
         display: flex;
@@ -66,6 +64,7 @@
 
             @include sm {
                 gap: 18px;
+                margin-top: auto;
                 padding: 0;
             }
         }

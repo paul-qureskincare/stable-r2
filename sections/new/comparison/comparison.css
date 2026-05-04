@@ -114,6 +114,7 @@
   }
   .comparison__product ul{
     gap:18px;
+    margin-top:auto;
     padding:0;
   }
   .comparison__product li{
