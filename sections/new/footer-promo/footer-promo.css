@@ -36,6 +36,55 @@
   border-radius:0;
   background:#fff;
 }
+.c-subscribe-form .klaviyo-form,.c-subscribe-form .klaviyo-form [data-testid=form-component]{
+  padding:0 !important;
+}
+.c-subscribe-form .klaviyo-form form{
+  overflow:hidden !important;
+  width:100% !important;
+  border-radius:50px !important;
+}
+.c-subscribe-form .klaviyo-form input[type=email]{
+  width:100% !important;
+  height:60px !important;
+  padding:0 0 0 30px !important;
+  color:#212428 !important;
+  font-size:18px !important;
+  border:0 !important;
+  border-radius:0 !important;
+}
+.c-subscribe-form .klaviyo-form button{
+  position:relative;
+  flex:none !important;
+  overflow:hidden;
+  width:80px !important;
+  height:60px !important;
+  padding:0 30px 0 20px !important;
+  font-size:0 !important;
+  line-height:20;
+  border:0 !important;
+  border-radius:0 !important;
+  background:#fff !important;
+}
+.c-subscribe-form .klaviyo-form button:after{
+  position:absolute;
+  top:50%;
+  left:50%;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  vertical-align:top;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  color:#212428;
+  font-size:20px;
+  transform:translate(-50%, -50%);
+  content:"\e905";
+}
 
 .c-follow-us{
   display:flex;
@@ -84,6 +133,9 @@
   }
   .c-subscribe-form button{
     font-size:16px;
+  }
+  .c-subscribe-form .klaviyo-form button:after,.c-subscribe-form .klaviyo-form input[type=email]{
+    font-size:16px !important;
   }
   .c-follow-us{
     gap:14px;
