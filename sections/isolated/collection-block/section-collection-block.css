@@ -81,7 +81,7 @@
   margin-right:-16px;
 }
 
-[class*=col]{
+[class*=col-]{
   padding-left:16px;
   padding-right:16px;
   box-sizing:border-box;

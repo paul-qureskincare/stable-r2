@@ -1,5 +1,4 @@
 @use "@root/mixins" as *;
-
 @use "@components/c-trusted-video-card" as *;
 @use "@components/c-visual-compare-card" as *;
 @use "@components/c-advisory-collapse-card" as *;
@@ -68,6 +67,14 @@
                 display: flex;
                 justify-content: center;
             }
+        }
+
+        .c-trusted-video-card {
+            max-width: 340px;
+        }
+
+        .c-advisory-collapse-card {
+            max-width: 300px;
         }
     }
 

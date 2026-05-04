@@ -50,7 +50,7 @@ $breakpoints: (
 }
 
 // Колонки
-[class*="col"] {
+[class*="col-"] {
   padding-left: $gutter-width;
   padding-right: $gutter-width;
   box-sizing: border-box;

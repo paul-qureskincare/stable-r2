@@ -528,6 +528,12 @@
   display:flex;
   justify-content:center;
 }
+.base-slider .swiper-slide .c-trusted-video-card{
+  max-width:340px;
+}
+.base-slider .swiper-slide .c-advisory-collapse-card{
+  max-width:300px;
+}
 .base-slider--two-cards .container{
   max-width:1022px;
 }
