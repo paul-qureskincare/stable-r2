@@ -139,6 +139,7 @@
   border:1px solid #dfe0e0;
 }
 .trusted-reviews .c-trusted-review-card{
+  max-width:400px;
   height:100%;
 }
 .trusted-reviews .btn{
