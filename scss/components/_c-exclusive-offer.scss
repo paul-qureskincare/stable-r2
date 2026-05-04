@@ -52,6 +52,7 @@
         }
 
         img {
+            @include img-fluid;
             vertical-align: top;
             border-radius: 5px;
         }

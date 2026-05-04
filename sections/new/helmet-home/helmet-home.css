@@ -272,6 +272,96 @@
   transform:rotate(90deg);
 }
 
+.e-double-tag{
+  display:inline-flex;
+  gap:16px;
+  align-items:center;
+  overflow:hidden;
+  padding-right:16px;
+  font-size:22px;
+  font-weight:500;
+  text-transform:uppercase;
+  border-radius:5px;
+  background:hsl(from var(--e-double-tag-color, #ff5429) h s calc(l + 37));
+}
+.e-double-tag strong{
+  padding:4px 16px;
+  color:#fff;
+  background:var(--e-double-tag-color, #ff5429);
+}
+
+.c-exclusive-offer{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:center;
+  max-width:500px;
+  padding:36px 10px 16px;
+  text-align:center;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.c-exclusive-offer__tag{
+  position:absolute;
+  right:0;
+  bottom:100%;
+  left:0;
+  z-index:1;
+  margin-bottom:-15px;
+  font-size:18px;
+  text-align:center;
+}
+.c-exclusive-offer__tag .e-double-tag{
+  font-size:inherit;
+}
+.c-exclusive-offer__list{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.c-exclusive-offer__item{
+  position:relative;
+  max-width:100px;
+}
+.c-exclusive-offer__item:has(del) img{
+  border:1px solid #ff5429;
+}
+.c-exclusive-offer__item img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  vertical-align:top;
+  border-radius:5px;
+}
+.c-exclusive-offer__item div{
+  position:absolute;
+  right:-8px;
+  bottom:-8px;
+  padding:2px 10px;
+  color:#ff5429;
+  font-size:14px;
+  line-height:1;
+  text-transform:uppercase;
+  border:1px solid #ff5429;
+  border-radius:5px;
+  background:#fff;
+}
+.c-exclusive-offer__item div:has(del){
+  color:#fff;
+  background:#ff5429;
+}
+.c-exclusive-offer__item div:has(del) img{
+  border:1px solid #ff5429;
+}
+.c-exclusive-offer .e-icon-plus{
+  padding:9px;
+  color:#fff;
+  font-size:12px;
+  border-radius:50%;
+  background:#212422;
+}
+
 .helmet-home__grid{
   display:grid;
   grid-template:auto/43% 51%;
@@ -420,6 +510,9 @@
   text-align:center;
   border:1px solid #dfe0e0;
   border-radius:5px;
+}
+.helmet-home__exclusive-offer{
+  padding-top:8px;
 }
 .helmet-home__ordering{
   display:flex;
@@ -739,6 +832,9 @@
   }
   .c-moneyback p{
     font-size:14px;
+  }
+  .c-exclusive-offer{
+    max-width:none;
   }
   .helmet-home__grid{
     display:flex;
