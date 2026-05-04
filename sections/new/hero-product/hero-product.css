@@ -1796,6 +1796,9 @@
   border:1px solid #ff5429;
 }
 .c-exclusive-offer__item img{
+  display:block;
+  max-width:100%;
+  height:auto;
   vertical-align:top;
   border-radius:5px;
 }
