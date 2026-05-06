@@ -1,5 +1,4 @@
 @use "@root/mixins" as *;
-
 @use "@elements/e-discount-badge" as *;
 @use "@elements/e-features-list" as *;
 @use "@elements/e-pill-badge" as *;
@@ -7,7 +6,6 @@
 @use "@components/c-app-stores" as *;
 @use "@components/c-buy-block" as *;
 @use "@components/c-marked-list" as *;
-@use "@components/c-dialog" as *;
 
 @mixin banner-height($height, $width) {
     height: calc(100vw * $height / $width);

@@ -1,5 +1,4 @@
 // Elements
-
 @use "@elements/e-checkmark" as *;
 @use "@elements/e-pill-save" as *;
 @use "@elements/e-pill-badge" as *;
@@ -10,7 +9,6 @@
 @use "@elements/e-quantity" as *;
 
 // Components
-
 @use "@components/c-accordion" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-order-button" as *;
@@ -30,9 +28,40 @@
     padding: 30px 0 50vh;
 }
 
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-item {
+    margin-bottom: -1px;
+}
+
 .nav-link {
+    display: block;
     padding: 10px 20px;
     font-size: 22px;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+        background: #eee;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &.active {
+        background: #dee2e6;
+    }
+
+    &.disabled {
+
+    }
 }
 
 .tab-pane {

@@ -1,0 +1,17 @@
+@use "@root/mixins" as *;
+
+.nav-tabs {
+    display: flex;
+}
+
+.tab-content {
+
+}
+
+.tab-pane {
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
