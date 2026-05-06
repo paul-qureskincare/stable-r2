@@ -7,6 +7,7 @@
     <title>{{ title }} - Qure</title>
     <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
     {{> css-vars }}
+    {{!-- {{> css-fonts }} --}}
     {{!-- <link rel="stylesheet" href="assets/css/vendor.css" /> --}}
     {{!-- <link rel="stylesheet" href="assets/css/spacings.css" /> --}}
     {{!-- <link href="assets/css/theme-fonts.css" rel="stylesheet" /> --}}
@@ -70,7 +71,10 @@
         <div class="c-dialog__content">
             <form action="#">
                 <i class="e-icon e-icon-qure"></i>
-                <img src="assets/images/notify.gif" alt="" />
+                <video autoplay loop muted playsinline>
+                    <source src="assets/images/notify.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
                 <h5>Get Notified When It's Back In Stock</h5>
                 <p>Enter your email address below</p>
                 <input type="text" class="form-control" placeholder="Enter your email address">
@@ -86,9 +90,9 @@
     </script>
 
     <!-- SCRIPTS -->
+    {{!-- <script src="https://fast.wistia.com/player.js" defer="defer"></script> --}}
     <script src="assets/js/vendor.js" defer="defer"></script>
     <script src="sections/new/header/header.js" defer="defer"></script>
     <script src="sections/new/footer/footer.js" defer="defer"></script>
 </body>
-
 </html>

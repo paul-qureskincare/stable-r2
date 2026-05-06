@@ -1,7 +1,5 @@
 @use "@root/mixins" as *;
 
-@use "@components/c-dialog" as *;
-
 .content-creator {
     $root: &;
 

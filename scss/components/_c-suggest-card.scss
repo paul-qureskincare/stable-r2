@@ -1,9 +1,7 @@
 @use "@root/mixins" as *;
-
 @use "@elements/e-pill-tabs" as *;
 @use "@elements/e-rating-stars" as *;
 @use "@components/c-pills-nav" as *;
-@use "@components/c-dialog" as *;
 
 .c-suggest-card {
     $root: &;
