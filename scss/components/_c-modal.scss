@@ -7,7 +7,7 @@
     --bs-modal-padding: 1rem;
     --bs-modal-margin: .5rem;
     --bs-modal-color: var(--bs-body-color);
-    --bs-modal-bg: var(--bs-body-bg);
+    --bs-modal-bg: #fff;
     --bs-modal-border-color: var(--bs-border-color-translucent);
     --bs-modal-border-width: var(--bs-border-width);
     --bs-modal-border-radius: var(--bs-border-radius-lg);
@@ -36,11 +36,46 @@
 }
 
 .modal-content {
+    position: relative;
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    color: var(--bs-modal-color);
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+}
+
+.modal-dialog {
+    @media(min-width: 576px) {
+        max-width: var(--bs-modal-width);
+        margin-right: auto;
+        margin-left: auto
+    }
 }
 
 .fade:not(.show) {
     opacity: 0;
+}
+
+.modal-backdrop {
+    --bs-backdrop-zindex: 1050;
+    --bs-backdrop-bg: #000;
+    --bs-backdrop-opacity: .5;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bs-backdrop-bg);
+
+    &.show {
+        opacity: var(--bs-backdrop-opacity)
+    }
 }
 
 // My modals
@@ -156,50 +191,3 @@
         }
     }
 }
-
-/* .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1050;
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-
-.modal.show {
-    display: block;
-}
-
-.modal::before {
-    position: fixed;
-    inset: 0;
-    background: rgb(0 0 0 / 50%);
-    content: "";
-}
-
-.modal-dialog {
-    position: relative;
-    max-width: 800px;
-    margin: 5% auto;
-    pointer-events: none;
-}
-
-.modal-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    border-radius: 8px;
-    background: #fff;
-    pointer-events: auto;
-}
-
-.modal-header,
-.modal-body,
-.modal-footer {
-    margin-bottom: 10px;
-}
-
-.modal-open {
-    overflow: hidden;
-} */
