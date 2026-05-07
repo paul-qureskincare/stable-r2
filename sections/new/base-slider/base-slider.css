@@ -9,10 +9,34 @@
 .c-trusted-video-card picture[data-url],.c-trusted-video-card picture[data-video-id]{
   cursor:pointer;
 }
-.c-trusted-video-card img{
-  display:block;
-  width:100%;
-  height:auto;
+.c-trusted-video-card picture:after{
+  font-size:40px;
+}
+.c-trusted-video-card .c-wistia{
+  border-radius:0;
+}
+.c-trusted-video-card .c-wistia img{
+  filter:brightness(.7);
+}
+.c-trusted-video-card .e-pill-badge{
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:1;
+  gap:6px;
+  color:#212428;
+  font-size:16px;
+  background:hsla(0,0%,100%,.7);
+  -webkit-backdrop-filter:blur(15px);
+          backdrop-filter:blur(15px);
+}
+.c-trusted-video-card .e-pill-badge:before{
+  width:0;
+  height:0;
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+  border-left:8px solid currentColor;
+  content:"";
 }
 .c-trusted-video-card p{
   margin:0;
@@ -642,6 +666,9 @@
   }
   .base-slider .swiper-slide .c-product-tile .btn{
     display:block;
+  }
+  .base-slider .swiper-slide .c-advisory-collapse-card{
+    max-width:400px;
   }
   .base-slider--bg{
     padding-top:40px;

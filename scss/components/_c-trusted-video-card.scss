@@ -12,12 +12,39 @@
         &[data-url], {
             cursor: pointer;
         }
+
+        &::after {
+            font-size: 40px;
+        }
     }
 
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
+    .c-wistia {
+        border-radius: 0;
+
+        img {
+            filter: brightness(0.7);
+        }
+    }
+
+    .e-pill-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        gap: 6px;
+        color: #212428;
+        font-size: 16px;
+        background: rgb(255 255 255 / 70%);
+        backdrop-filter: blur(15px);
+
+        &::before {
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid currentColor;
+            content: '';
+        }
     }
 
     p  {
