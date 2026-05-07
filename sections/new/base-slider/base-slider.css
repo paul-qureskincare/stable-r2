@@ -209,7 +209,7 @@
   --bs-modal-padding:1rem;
   --bs-modal-margin:.5rem;
   --bs-modal-color:var(--bs-body-color);
-  --bs-modal-bg:var(--bs-body-bg);
+  --bs-modal-bg:#fff;
   --bs-modal-border-color:var(--bs-border-color-translucent);
   --bs-modal-border-width:var(--bs-border-width);
   --bs-modal-border-radius:var(--bs-border-radius-lg);
@@ -231,17 +231,43 @@
   z-index:var(--bs-modal-zindex);
   display:none;
   overflow:hidden auto;
-  width:100%;
   height:100%;
+}
+
+.modal,.modal-content{
+  width:100%;
   outline:0;
 }
 
 .modal-content{
+  position:relative;
+  display:flex;
   flex-direction:column;
+  color:var(--bs-modal-color);
+  border:var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius:var(--bs-modal-border-radius);
+  background-color:var(--bs-modal-bg);
+  background-clip:padding-box;
 }
 
 .fade:not(.show){
   opacity:0;
+}
+
+.modal-backdrop{
+  --bs-backdrop-zindex:1050;
+  --bs-backdrop-bg:#000;
+  --bs-backdrop-opacity:.5;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:var(--bs-backdrop-zindex);
+  width:100vw;
+  height:100vh;
+  background-color:var(--bs-backdrop-bg);
+}
+.modal-backdrop.show{
+  opacity:var(--bs-backdrop-opacity);
 }
 
 .c-modal{
@@ -340,6 +366,7 @@
   margin:0 auto;
   border-radius:10px;
 }
+
 .e-rating-stars{
   position:relative;
   display:inline-block;
@@ -640,6 +667,13 @@
      object-fit:contain;
   width:100%;
   height:100%;
+}
+@media (min-width:576px){
+  .modal-dialog{
+    max-width:var(--bs-modal-width);
+    margin-right:auto;
+    margin-left:auto;
+  }
 }
 @media screen and (max-width:991px){
   .c-visual-compare-card{
