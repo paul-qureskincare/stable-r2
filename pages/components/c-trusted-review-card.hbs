@@ -1,0 +1,29 @@
+<div class="c-trusted-review-card">
+    <figure>
+        <img src="{{ before }}" alt="Before" />
+        <figcaption>Before</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ after }}" alt="After Qure" />
+        <figcaption>After {{> e-icon icon="qure" }}</figcaption>
+    </figure>
+    <div class="e-author">
+        <img src="{{ flag }}" alt="{{ user }} {{ user-letter }}." />
+        {{ user }} {{ user-letter }}.
+    </div>
+    <div class="e-verified-customer">
+        <div class="e-checkmark"></div>
+        Verified customer
+    </div>
+    <article>
+        <h6>{{ title }}</h6>
+        <p>“{{ text }}”</p>
+    </article>
+    {{#if link-img }}
+        <a href="#">
+            <img src="{{ link-img }}" alt="{{ link-text }}" />
+            <small>{{ user }} uses...</small>
+            <span>{{ link-text }}</span>
+        </a>
+    {{/if }}
+</div>
