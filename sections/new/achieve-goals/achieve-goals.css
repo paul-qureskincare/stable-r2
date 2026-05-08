@@ -52,16 +52,35 @@
 
 .c-trusted-review-card{
   display:grid;
-  grid-template:repeat(3, auto)/repeat(2, auto);
-  gap:24px;
+  grid-template:repeat(3, auto)/repeat(2, 1fr);
+  gap:24px 6px;
   align-content:start;
   overflow:hidden;
   padding-bottom:24px;
+  border:1px solid #dfe0e0;
   border-radius:10px;
   background:#fff;
 }
 .c-trusted-review-card:has(a){
   grid-template-rows:repeat(3, auto) 1fr;
+}
+.c-trusted-review-card figure{
+  position:relative;
+}
+.c-trusted-review-card figure img{
+  aspect-ratio:360/480;
+  vertical-align:top;
+}
+.c-trusted-review-card figcaption{
+  position:absolute;
+  top:0;
+  left:0;
+  padding:10px;
+  font-size:16px;
+  border-bottom-right-radius:10px;
+  background:hsla(0,0%,100%,.7);
+  -webkit-backdrop-filter:blur(15px);
+          backdrop-filter:blur(15px);
 }
 .c-trusted-review-card article,.c-trusted-review-card picture{
   grid-column:1 /  -1;
@@ -260,7 +279,7 @@
 }
 @media screen and (max-width:767px){
   .c-trusted-review-card{
-    gap:16px;
+    gap:16px 6px;
     padding-bottom:16px;
   }
   .c-trusted-review-card article{
@@ -275,6 +294,7 @@
   }
   .c-trusted-review-card .e-verified-customer{
     margin-right:16px;
+    font-size:12px;
   }
   .c-trusted-review-card--short{
     gap:8px;
