@@ -50,6 +50,26 @@
                         <div class="helmet-home__ordering">
                             <button type="button" class="btn btn--primary">Buy Now &amp; Save 44%</button>
                         </div>
+                        <div class="helmet-home__ordering">
+                            <button type="button" class="btn btn--primary">Reserve Now</button>
+                            <div class="pre-order-info">
+                                <div class="pre-order-info__status">Available for Pre-Order</div>
+                                <div class="pre-order-info__expected" onclick="shipmentModal.showModal()">
+                                    Next Batch Ships 11th May
+                                    <img src="sections/new/helmet-home/images/expected-arrow.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="helmet-home__ordering">
+                            <button type="button" class="btn btn--primary" data-bs-toggle="modal" data-bs-target="#email-modal">
+                                Join the Waitlist
+                                <img src="sections/new/helmet-home/images/email-icon.svg" alt="" />
+                            </button>
+                            <div class="pre-order-info">
+                                <div class="pre-order-info__status">Unavailable</div>
+                                <div class="pre-order-info__expected">Expected Jan. 2026</div>
+                            </div>
+                        </div>
                         <div class="helmet-home__users-experienced" data-bs-toggle="modal" data-bs-target="#info-modal">
                             <img src="sections/new/helmet-home/images/qure-headgear-1589-2.webp" alt="">
                             <p>90% of users experienced significant improvement to their hair line.</p>
@@ -269,6 +289,25 @@
             </div>
         </div>
     </div>
+    {{#> c-dialog
+        classes="c-dialog--right-side"
+        id="shipmentModal"
+    }}
+        <div class="shipment-popup">
+            <span>JOIN OUR EARLY ACCESS</span>
+            <h6>Secure your Q-Renew LLLT Helmet before anyone else.</h6>
+            <p>We know how hard it is to wait when you're ready for change. Pre-ordering ensures you're <strong>first in line</strong> once shipments begin.</p>
+            <p>Your order will ship in January 2026, and you'll get <strong>early access</strong> to updates, usage tips, and progress guides before anyone else.</p>
+            <hr />
+            <span>Your pre-order includes</span>
+            <strong>1-Year Money-Back Guarantee</strong>
+            <p>Hair growth isn't instant. That's why we offer a money-back guarantee. If you don't see real results, get a full refund - no questions asked.</p>
+            <strong>Free Worldwide Shipping</strong>
+            <p>Your pre-order comes with free worldwide shipping.</p>
+            <p>Orders shipped outside the U.S. may be subject to import duties, customs fees, or local taxes upon arrival. These are determined by your country’s customs authority and are the responsibility of the customer.</p>
+            <button type="button" class="btn btn--primary">Pre-Order Now</button>
+        </div>
+    {{/c-dialog }}
     <div class="modal helmet-home-modal fade" id="info-modal">
         <div class="modal-dialog">
             <div class="modal-content helmet-home-modal__content">
@@ -347,7 +386,7 @@
         <div class="modal-dialog">
             <div class="modal-content email-modal__content">
                 <div class="email-modal-form">
-                    <div class="klaviyo-form-QQP9fe"></div>
+                    <div class="klaviyo-form-ULVMBS"></div>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal">
                     <img src="assets/images/cross_black.svg" alt="" />
@@ -357,7 +396,7 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('klaviyo-early-access', 'https://static.klaviyo.com/onsite/js/VtM5fu/klaviyo.js');
+            loadScriptOnce('klaviyo-early-access', 'https://static.klaviyo.com/onsite/js/ULVMBS/klaviyo.js');
             loadScriptOnce('wistia-popup', 'assets/js-new/wistia-popup.js');
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             loadScriptOnce('swiper', 'assets/js-new/swiper.js');

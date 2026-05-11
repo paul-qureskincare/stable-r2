@@ -570,11 +570,11 @@
   align-items:center;
   color:#8b8c8e;
 }
-.helmet-home__ordering .pre-order-info__expected[data-bs-toggle]{
+.helmet-home__ordering .pre-order-info__expected[onclick]{
   text-decoration:underline;
   cursor:pointer;
 }
-.helmet-home__ordering .pre-order-info__expected[data-bs-toggle]:hover{
+.helmet-home__ordering .pre-order-info__expected[onclick]:hover{
   text-decoration:none;
 }
 .helmet-home__users-experienced{
@@ -686,22 +686,28 @@
 .shipment-popup{
   font-size:16px;
 }
+.shipment-popup h6{
+  margin-bottom:10px;
+  font-family:inherit;
+  font-weight:600;
+}
 .shipment-popup span:first-child{
+  display:inline-block;
   margin-bottom:16px;
   padding:3px 12px;
+  color:#ff5429;
   font-size:.815em;
   font-weight:600;
+  text-transform:uppercase;
   border-radius:5px;
   background:#fff5f2;
   font-size:1em;
 }
-.shipment-popup hr+span,.shipment-popup span:first-child{
-  display:inline-block;
+.shipment-popup hr+span{
+  display:block;
+  margin-bottom:12px;
   color:#ff5429;
   text-transform:uppercase;
-}
-.shipment-popup hr+span{
-  margin-bottom:12px;
 }
 .shipment-popup .btn{
   width:100%;
