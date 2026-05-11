@@ -334,7 +334,7 @@
                 align-items: center;
                 color: #8b8c8e;
 
-                &[data-bs-toggle] {
+                &[onclick] {
                     text-decoration: underline;
                     cursor: pointer;
 
@@ -342,7 +342,6 @@
                         text-decoration: none;
                     }
                 }
-
             }
         }
     }
@@ -521,6 +520,12 @@
 .shipment-popup {
     font-size: 16px;
 
+    h6 {
+        margin-bottom: 10px;
+        font-family: inherit;
+        font-weight: 600;
+    }
+
     span {
         &:first-child {
             display: inline-block;
@@ -532,7 +537,7 @@
 
     hr {
         & + span {
-            display: inline-block;
+            display: block;
             margin-bottom: 12px;
             color: #ff5429;
             text-transform: uppercase;
