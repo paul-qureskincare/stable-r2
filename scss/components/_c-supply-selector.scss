@@ -2,7 +2,6 @@
 @use "@elements/e-pill-save" as *;
 @use "@elements/e-price" as *;
 @use "@elements/e-declaimer" as *;
-@use "@components/c-dialog" as *;
 
 .c-supply-selector {
     $root: &;

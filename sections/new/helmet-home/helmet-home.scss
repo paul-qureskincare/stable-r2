@@ -15,6 +15,8 @@
 }
 
 .helmet-home {
+    $root: &;
+
     // .helmet-home__grid
     &__grid {
         display: grid;
@@ -289,12 +291,20 @@
         .btn {
             width: 100%;
 
-            &:has(img) {
+            .e-icon {
+                font-size: 24px;
+                vertical-align: top;
+                -webkit-text-stroke: 0.5px;
+            }
+
+            &:has(img), &:has(.e-icon) {
                 display: flex;
                 justify-content: space-between;
                 padding: 16px 30px;
                 border-radius: 50px;
+            }
 
+            &:has(img) {
                 &:not(:hover) {
                     img {
                         filter: brightness(0) invert(100%);
@@ -335,12 +345,22 @@
                 color: #8b8c8e;
 
                 &[onclick] {
-                    text-decoration: underline;
                     cursor: pointer;
 
-                    &:hover {
-                        text-decoration: none;
+                    span {
+                        text-decoration: underline;
                     }
+
+                    &:hover {
+                        span {
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .e-icon {
+                    font-size: 10px;
+                    transform: rotate(-45deg);
                 }
             }
         }
@@ -449,7 +469,7 @@
     }
 
     // .helmet-home-modal__text
-    &__text {
+     &__text {
         flex-grow: 1;
         overflow: auto;
         padding: 32px 24px 0;
@@ -458,7 +478,11 @@
             padding-right: 16px;
             padding-left: 16px;
         }
+    }
 
+    // .helmet-home-modal__text
+    @at-root .helmet-home .c-dialog__content, // for new popups
+    &__text {
         hr {
             margin-top: 24px;
             margin-bottom: 24px;

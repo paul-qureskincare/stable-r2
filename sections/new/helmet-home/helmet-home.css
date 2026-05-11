@@ -522,7 +522,12 @@
 .helmet-home__ordering .btn{
   width:100%;
 }
-.helmet-home__ordering .btn:has(img){
+.helmet-home__ordering .btn .e-icon{
+  font-size:24px;
+  vertical-align:top;
+  -webkit-text-stroke:.5px;
+}
+.helmet-home__ordering .btn:has(.e-icon),.helmet-home__ordering .btn:has(img){
   display:flex;
   justify-content:space-between;
   padding:16px 30px;
@@ -571,11 +576,17 @@
   color:#8b8c8e;
 }
 .helmet-home__ordering .pre-order-info__expected[onclick]{
-  text-decoration:underline;
   cursor:pointer;
 }
-.helmet-home__ordering .pre-order-info__expected[onclick]:hover{
+.helmet-home__ordering .pre-order-info__expected[onclick] span{
+  text-decoration:underline;
+}
+.helmet-home__ordering .pre-order-info__expected[onclick]:hover span{
   text-decoration:none;
+}
+.helmet-home__ordering .pre-order-info__expected .e-icon{
+  font-size:10px;
+  transform:rotate(-45deg);
 }
 .helmet-home__users-experienced{
   display:grid;
@@ -651,18 +662,19 @@
   overflow:auto;
   padding:32px 24px 0;
 }
-.helmet-home-modal__text hr{
+.helmet-home .c-dialog__content hr,.helmet-home-modal__text hr{
   margin-top:24px;
   margin-bottom:24px;
 }
-.helmet-home-modal__text h6{
+.helmet-home .c-dialog__content h6,.helmet-home-modal__text h6{
   margin-bottom:10px;
   font-family:inherit;
   font-weight:600;
 }
-.helmet-home-modal__text>strong{
+.helmet-home .c-dialog__content>strong,.helmet-home-modal__text>strong{
   display:block;
 }
+
 .helmet-home-modal__disclaimer{
   max-width:395px;
   padding:0 24px 32px;

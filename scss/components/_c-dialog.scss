@@ -222,6 +222,15 @@
         }
     }
 
+    // .c-dialog--klaviyo
+    &--klaviyo {
+        background: none;
+
+        .c-dialog__content {
+            padding: 0;
+        }
+    }
+
     // .c-dialog--notify-available
     &--notify-available {
         max-width: 400px;
