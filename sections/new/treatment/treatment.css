@@ -184,359 +184,6 @@
   line-height:1.25;
 }
 
-.c-marked-list{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.c-marked-list li{
-  position:relative;
-  padding-left:1.75em;
-  line-height:1.25;
-}
-.c-marked-list li:before{
-  position:absolute;
-  top:0;
-  left:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:2.25em;
-  height:2.25em;
-  color:#91baec;
-  font-size:.5em;
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  vertical-align:top;
-  border:1.5px solid;
-  border-radius:50%;
-  content:"\e901";
-}
-.c-marked-list--fill li:before{
-  color:#fff;
-  background:#91baec;
-}
-
-.c-dialog{
-  overflow:auto;
-  max-width:none;
-  padding:0;
-  border:0;
-}
-.c-dialog::backdrop{
-  background:#212428;
-  opacity:.6;
-}
-.c-dialog__message{
-  display:flex;
-  flex:none;
-  align-items:center;
-  height:var(--height-bar);
-  padding:2px 24px;
-  font-size:14px;
-  line-height:1.1;
-  background:#f6f6f7;
-}
-.c-dialog__content{
-  flex-grow:1;
-  overflow:auto;
-  min-height:1px;
-  padding:24px;
-}
-.c-dialog__content hr{
-  margin-top:16px;
-  margin-bottom:16px;
-}
-.c-dialog__disclaimer{
-  padding:16px 24px 24px;
-  display:block;
-  color:#8b8c8e;
-  font-size:16px;
-  line-height:1.25;
-  font-size:14px;
-  border-top:1px solid #dfe0e0;
-}
-.c-dialog__close{
-  position:absolute;
-  top:6px;
-  right:6px;
-  z-index:10;
-  padding:8px;
-  font-size:18px;
-  line-height:1;
-  border:0;
-  border-radius:30px;
-  background:none;
-  background:#fff;
-  transition:all .2s linear;
-}
-.c-dialog__close:hover{
-  color:#fff;
-  background:#212428;
-}
-.c-dialog__close .e-icon{
-  vertical-align:top;
-}
-.c-dialog__tabs{
-  display:flex;
-  flex-direction:column;
-  justify-content:start;
-}
-.c-dialog__tabs-buttons{
-  display:flex;
-  margin-right:auto;
-  margin-bottom:24px;
-  border-bottom:1px solid #dfe0e0;
-}
-.c-dialog__tabs-buttons li{
-  margin-bottom:-1px;
-}
-.c-dialog__tabs-buttons button{
-  display:flex;
-  justify-content:center;
-  width:100%;
-  padding:0 20px 8px;
-  font-size:16px;
-  border:0;
-  border-bottom:2px solid transparent;
-  background:none;
-}
-.c-dialog__tabs-buttons button.active{
-  font-weight:600;
-  border-color:#212428;
-}
-.c-dialog__tabs-pane{
-  display:none;
-}
-.c-dialog__tabs-pane.show{
-  display:block;
-}
-.c-dialog--column{
-  width:min(450px, 100%);
-  height:100vh;
-  max-height:none;
-  margin:0 0 0 auto;
-  padding:0;
-}
-.c-dialog--column .c-dialog__close{
-  top:calc(var(--height-bar) + 22px);
-  right:14px;
-}
-.c-dialog--column .upsell-popup{
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-}
-.c-dialog--column .upsell-popup__header{
-  max-width:360px;
-}
-.c-dialog--column .upsell-popup__header h5{
-  font-family:inherit;
-  font-weight:500;
-}
-.c-dialog--column .upsell-popup__header p{
-  font-size:20px;
-}
-.c-dialog--column .upsell-popup__header p em{
-  display:inline-block;
-  padding:2px 12px;
-  color:#ff5429;
-  border-radius:20px;
-  background:#ffeeea;
-}
-.c-dialog--column .upsell-popup__content{
-  padding-bottom:15px;
-  font-size:16px;
-  border-bottom:1px solid #dfe0e0;
-}
-.c-dialog--column .upsell-popup__content img{
-  margin-bottom:15px;
-  display:block;
-  max-width:100%;
-  height:auto;
-}
-.c-dialog--column .upsell-popup__content ul{
-  margin-bottom:15px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.c-dialog--column .upsell-popup__content ul li{
-  position:relative;
-  padding-left:1.75em;
-  line-height:1.25;
-}
-.c-dialog--column .upsell-popup__content ul li:before{
-  position:absolute;
-  top:0;
-  left:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:2.25em;
-  height:2.25em;
-  color:#91baec;
-  font-size:.5em;
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  vertical-align:top;
-  border:1.5px solid;
-  border-radius:50%;
-  content:"\e901";
-}
-.c-dialog--column .upsell-popup__footer{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  align-items:center;
-}
-.c-dialog--column .upsell-popup__footer .btn{
-  width:100%;
-}
-.c-dialog--column .upsell-popup__footer .btn span{
-  color:#b5b6b7;
-  text-decoration:line-through;
-}
-.c-dialog--column .upsell-popup__footer a{
-  color:inherit;
-  text-decoration:underline;
-}
-.c-dialog--column .upsell-popup__footer a:hover{
-  text-decoration:none;
-}
-.c-dialog--notify-available{
-  max-width:400px;
-  padding:0;
-  border-radius:10px;
-}
-.c-dialog--notify-available form{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  align-items:center;
-  text-align:center;
-}
-.c-dialog--notify-available .e-icon{
-  font-size:36px;
-}
-.c-dialog--notify-available h5{
-  margin-bottom:-10px;
-}
-.c-dialog--notify-available video{
-  width:100%;
-}
-.c-dialog--notify-available img{
-  display:block;
-  max-width:100%;
-  height:auto;
-  vertical-align:top;
-}
-.c-dialog--notify-available .btn{
-  width:100%;
-}
-.c-dialog--right-side{
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:auto;
-  z-index:100;
-  flex-direction:column;
-  overflow:visible;
-  width:450px;
-  height:100vh;
-  max-height:none;
-}
-.c-dialog--right-side[open]{
-  display:flex;
-}
-.c-dialog--right-side::backdrop{
-  background:rgba(0,0,0,.5);
-  opacity:1;
-  -webkit-backdrop-filter:blur(10px);
-          backdrop-filter:blur(10px);
-}
-.c-dialog--right-side .c-dialog__close{
-  top:24px;
-  left:-66px;
-  z-index:100;
-  width:50px;
-  height:50px;
-  padding:0;
-  color:#212428;
-  border-radius:100px;
-  background:hsla(0,0%,100%,.8);
-}
-.c-dialog--right-side .c-dialog__close:hover{
-  color:#212428;
-  opacity:.75;
-}
-.c-dialog--right-side .c-dialog__close img{
-  vertical-align:top;
-}
-.c-dialog--right-side__content{
-  flex-grow:1;
-  overflow:auto;
-  height:100%;
-  min-height:1px;
-}
-.c-dialog--right-side .c-swiper{
-  margin-bottom:24px;
-}
-.c-dialog--right-side .swiper-slide img{
-  display:block;
-  -o-object-fit:cover;
-     object-fit:cover;
-  width:100%;
-  height:250px;
-  border-radius:10px;
-}
-.c-dialog--right-side .tiles{
-  display:flex;
-  gap:12px;
-  margin-bottom:24px;
-}
-.c-dialog--right-side .tiles li{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  align-items:center;
-  width:100%;
-  padding:12px;
-  font-size:14px;
-  line-height:1;
-  text-align:center;
-  border-radius:5px;
-  background:#f6f6f7;
-}
-.c-dialog--right-side .tiles span{
-  max-width:90px;
-}
-.c-dialog--right-side .features h6{
-  margin-bottom:10px;
-  font-family:inherit;
-  font-weight:600;
-}
-.c-dialog--right-side .features ul{
-  padding-left:2rem;
-}
-.c-dialog--right-side .features li{
-  list-style:initial;
-}
-
 .c-supply-selector{
   display:flex;
   flex-direction:column;
@@ -1432,6 +1079,46 @@
   content:"";
 }
 
+.c-marked-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.c-marked-list li{
+  position:relative;
+  padding-left:1.75em;
+  line-height:1.25;
+}
+.c-marked-list li:before{
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:2.25em;
+  height:2.25em;
+  color:#91baec;
+  font-size:.5em;
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  vertical-align:top;
+  border:1.5px solid;
+  border-radius:50%;
+  content:"\e901";
+}
+.c-marked-list--fill li:before{
+  color:#fff;
+  background:#91baec;
+}
+
 .c-note{
   display:block;
   padding:10px 12px;
@@ -1875,11 +1562,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
 }
 @media screen and (max-width:991px){
-  .c-dialog--right-side .c-dialog__close{
-    top:-25px;
-    right:16px;
-    left:auto;
-  }
   .treatment .container{
     gap:20px 40px;
   }
@@ -1907,37 +1589,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
   .e-declaimer{
     font-size:14px;
-  }
-  .c-marked-list li{
-    font-size:16px;
-  }
-  .c-dialog__content,.c-dialog__message{
-    padding-right:16px;
-    padding-left:16px;
-  }
-  .c-dialog__disclaimer{
-    font-size:14px;
-    padding:16px;
-  }
-  .c-dialog--column .upsell-popup{
-    gap:16px;
-  }
-  .c-dialog--column .upsell-popup__header p{
-    font-size:18px;
-  }
-  .c-dialog--column .upsell-popup__content ul li{
-    font-size:16px;
-  }
-  .c-dialog--notify-available{
-    width:calc(100% - 32px);
-  }
-  .c-dialog--notify-available form{
-    gap:14px;
-  }
-  .c-dialog--right-side{
-    top:auto;
-    width:100vw;
-    height:calc(100vh - 100px);
   }
   .c-supply-selector{
     max-width:none;
@@ -1999,7 +1650,7 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   .c-buy-block{
     max-width:none;
   }
-  .e-pill-tabs button,.e-pill-tabs label,.page\.qure-microinfusion-offer-listicle .c-note{
+  .c-marked-list li,.e-pill-tabs button,.e-pill-tabs label,.page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
   }
   .c-pill-tabs{
