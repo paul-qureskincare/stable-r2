@@ -3,16 +3,16 @@
     if (!ctaBar) return;
 
     // Show/Hide CTA BAR
+    const formIds = ["purchase-form", "buy-form"];
     document.addEventListener("scroll", function () {
-        const treatmentElement = document.getElementById("purchase-form");
-        let isTreatmentVisible = false;
+        const isAnyFormVisible = formIds.some(function (id) {
+            const element = document.getElementById(id);
+            if (!element) return false;
+            const rect = element.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        });
 
-        if (treatmentElement) {
-            const rect = treatmentElement.getBoundingClientRect();
-            isTreatmentVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        }
-
-        if (window.scrollY > 300 && !isTreatmentVisible) {
+        if (window.scrollY > 300 && !isAnyFormVisible) {
             ctaBar.classList.add("show");
         } else {
             ctaBar.classList.remove("show");
