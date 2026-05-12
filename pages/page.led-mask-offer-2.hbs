@@ -83,11 +83,7 @@
                 </ul>
             </article>
             <div class="c-buy-block">
-                {{> c-order-button
-                    button="Shop Now & Save {$dyn}"
-                    hide-pay=true
-                    arrow=true
-                }}
+                <a href="#buy-form" class="btn btn--primary">Shop Now &amp; Save ₴13.567</a>
                 <ul class="e-features-list">
                     <li>
                         {{> e-icon icon="one-year" }}
@@ -440,19 +436,19 @@
     {{/exclusive-bundle }}
 
     {{#> hero-product
-        id="limited-offer"
+        id="buy-form"
         classes="hero-product--reverse hero-product--secondary"
     }}
         <div class="hero-product__gallery">
             <div
                 class="c-swiper"
-                data-swiper-thumbs="#limited-offer .c-swiper-thumbs"
+                data-swiper-thumbs="#buy-form .c-swiper-thumbs"
                 data-swiper='{
                     "slidesPerView": 1,
                     "spaceBetween": 16,
                     "navigation": {
-                        "prevEl": "#limited-offer .c-swiper-button-prev",
-                        "nextEl": "#limited-offer .c-swiper-button-next"
+                        "prevEl": "#buy-form .c-swiper-button-prev",
+                        "nextEl": "#buy-form .c-swiper-button-next"
                     }
                 }'
             >

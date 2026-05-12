@@ -362,8 +362,10 @@
     }
 
     // .hero-product--secondary
-    &--secondary #{$root} {
-        &__main {
+    &--secondary {
+        scroll-margin-top: 60px;
+
+        #{$root}__main {
             .e-pill-badge:first-child {
                 color: #ff5429;
                 border-radius: 5px;

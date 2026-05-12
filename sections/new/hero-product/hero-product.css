@@ -2236,6 +2236,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 .hero-product__best-with .swiper-slide .btn{
   --btn-sm-padding:7px 20px;
 }
+.hero-product--secondary{
+  scroll-margin-top:60px;
+}
 .hero-product--secondary .hero-product__main .e-pill-badge:first-child{
   color:#ff5429;
   border-radius:5px;
