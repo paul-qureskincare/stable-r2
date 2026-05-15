@@ -503,6 +503,7 @@
   flex-direction:column;
   visibility:hidden;
   width:min(var(--bs-offcanvas-width), 100%);
+  max-width:none;
   height:100vh;
   max-height:none;
   padding:0;
@@ -798,7 +799,7 @@
   text-transform:uppercase;
 }
 .flyout-cart__footer{
-  flex:nowrap;
+  flex-wrap:nowrap;
   padding:24px 24px 18px;
   border-top:1px solid #dfe0e0;
 }
@@ -852,6 +853,9 @@
   }
   .flyout-cart__list,.flyout-cart__upsells{
     padding:0 16px;
+  }
+  .flyout-cart__upsells .swiper-slide{
+    gap:8px;
   }
   .flyout-cart__footer{
     padding-right:16px;
