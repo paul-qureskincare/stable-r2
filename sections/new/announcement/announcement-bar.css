@@ -36,14 +36,17 @@
   font-weight:var(--anc-bar-font-weight, 400);
   background:#fff;
 }
-.announcement-bar-content>a{
+.announcement-bar-content>a:not(.announcement-bar-link){
+  display:inline-block;
   margin:0 10px;
-  padding:1px 6px;
+  padding:4px 16px;
   color:var(--white-color);
   font-size:14px;
-  text-transform:var(--anc-link-transform, uppercase);
   border-radius:20px;
   background:#ff5429;
+}
+.announcement-bar-content>a:not(.announcement-bar-link):hover{
+  text-decoration:none;
 }
 .announcement-bar-offer-countdown{
   display:flex;
@@ -74,7 +77,7 @@
   line-height:10px;
   letter-spacing:0;
 }
-body:has(.announcement-bar-offer-countdown){
+body:has(.announcement-bar-offer-countdown,announcement-bar-rotating){
   --height-bar:50px;
 }
 
@@ -131,7 +134,7 @@ body:has(.announcement-bar-offer-countdown){
   .announcement-bar-offer-countdown .e-countdown>div[data-key=seconds]:after{
     content:"S";
   }
-  body:has(.announcement-bar-offer-countdown){
+  body:has(.announcement-bar-offer-countdown,announcement-bar-rotating){
     --height-bar:66px;
   }
 }

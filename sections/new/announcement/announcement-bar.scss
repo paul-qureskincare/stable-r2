@@ -26,14 +26,18 @@
             font-size: 12px;
         }
 
-        & > a {
+        & > a:not(.announcement-bar-link) {
+            display: inline-block;
             margin: 0 10px;
-            padding: 1px 6px;
+            padding: 4px 16px;
             color: var(--white-color);
             font-size: 14px;
-            text-transform: var(--anc-link-transform, uppercase);
             border-radius: 20px;
             background: #ff5429;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
@@ -138,7 +142,7 @@
         }
     }
 
-    @at-root body:has(.announcement-bar-offer-countdown) {
+    @at-root body:has(.announcement-bar-offer-countdown, announcement-bar-rotating) {
         --height-bar: 50px;
 
         @include sm {
