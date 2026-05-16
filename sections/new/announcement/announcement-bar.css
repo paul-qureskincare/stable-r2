@@ -27,33 +27,50 @@
   position:fixed;
   top:0;
   z-index:9;
+  width:100%;
+  background:#fff;
+}
+.announcement-bar .c-swiper{
+  margin:0;
+  padding:0;
+}
+.announcement-bar .swiper-slide{
+  width:100%;
+}
+.announcement-bar-content{
+  font-size:16px;
+}
+.announcement-bar-content,.announcement-bar-link,.announcement-bar-offer-countdown{
   display:flex;
   align-items:center;
   width:100%;
-  padding:15px 0;
-  font-family:TT Commons,system-ui,sans-serif;
-  font-size:var(--ans-bar-font-size, 16px);
-  font-weight:var(--anc-bar-font-weight, 400);
-  background:#fff;
+  height:var(--height-bar, 50px);
 }
-.announcement-bar-content>a:not(.announcement-bar-link){
-  display:inline-block;
-  margin:0 10px;
-  padding:4px 16px;
-  color:var(--white-color);
-  font-size:14px;
-  border-radius:20px;
-  background:#ff5429;
+.announcement-bar-link{
+  gap:20px;
+  justify-content:center;
+  padding-right:16px;
+  padding-left:16px;
 }
-.announcement-bar-content>a:not(.announcement-bar-link):hover{
+.announcement-bar-link:hover{
   text-decoration:none;
 }
+.announcement-bar-link span{
+  padding:5px 12px;
+  color:#fff;
+  white-space:nowrap;
+  border-radius:40px;
+  background:#ff5429;
+}
 .announcement-bar-offer-countdown{
+  width:100%;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+.announcement-bar-offer-countdown .container{
   display:flex;
   gap:6px;
   align-items:center;
-  width:100%;
-  min-height:22px;
 }
 .announcement-bar-offer-countdown p{
   color:var(--colorize-color, inherit);
@@ -77,31 +94,31 @@
   line-height:10px;
   letter-spacing:0;
 }
-body:has(.announcement-bar-offer-countdown,announcement-bar-rotating){
+body:has(.announcement-bar){
   --height-bar:50px;
 }
 
-.announcement-bar-rotating.scroll-hiding,.announcement-bar.scroll-hiding{
+.announcement-bar.scroll-hiding{
   transform:translateY(-100px);
 }
 
 @media screen and (max-width:991px){
-  .announcement-bar{
-    padding:9px 0;
-    font-size:var(--ans-bar-font-size-mob, 14px);
-    font-weight:var(--anc-bar-font-weight-mob, 400);
-  }
-  .announcement-bar-content{
-    font-size:12px;
-  }
   .announcement-bar-offer-countdown{
-    min-height:38px;
     font-size:14px;
   }
 }
 
 @media screen and (max-width:767px){
-  .announcement-bar-offer-countdown{
+  .announcement-bar-content{
+    font-size:14px;
+  }
+  .announcement-bar-link{
+    gap:10px;
+  }
+  .announcement-bar-link span{
+    font-size:12px;
+  }
+  .announcement-bar-offer-countdown .container{
     flex-direction:column;
     justify-content:center;
     min-height:54px;
@@ -134,7 +151,7 @@ body:has(.announcement-bar-offer-countdown,announcement-bar-rotating){
   .announcement-bar-offer-countdown .e-countdown>div[data-key=seconds]:after{
     content:"S";
   }
-  body:has(.announcement-bar-offer-countdown,announcement-bar-rotating){
+  body:has(.announcement-bar){
     --height-bar:66px;
   }
 }
