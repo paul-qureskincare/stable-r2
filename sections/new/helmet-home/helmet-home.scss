@@ -63,6 +63,10 @@
         .swiper-slide {
             position: relative;
 
+            @include sm {
+                max-width: 100%;
+            }
+
             img {
                 display: block;
                 max-width: 100%;
