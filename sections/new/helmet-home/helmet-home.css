@@ -863,6 +863,9 @@
     top:auto;
     gap:16px;
   }
+  .helmet-home__gallery .swiper-slide{
+    max-width:100%;
+  }
   .helmet-home__gallery .swiper-slide .watch-how-it-works{
     bottom:12px;
     left:12px;
