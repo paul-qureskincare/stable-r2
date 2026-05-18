@@ -25,18 +25,9 @@
     <div id="site-header"></div>
     <!-- PAGE HEADER END -->
 
-    {{#if hide-def-announcement }}
-        {{#> announcement-bar }}
-            <div class="announcement-bar-offer-countdown">
-                <p style="--colorize-color_: #ff5429;"><a href="#">Limited Time Easter Offer</a> - Save&nbsp;Up&nbsp;To&nbsp;25%</p>
-                {{> e-countdown
-                    color='style="--colorize-color: #ff5429;"'
-                }}
-            </div>
-        {{/announcement-bar}}
-    {{ else }}
-        {{#> announcement-bar }}{{/announcement-bar }}
-    {{/if }}
+    {{#unless hide-announcement }}
+        {{> announcement-bar }}
+    {{/unless }}
 
     {{#> sections-stack }}
         {{> @partial-block}}
