@@ -555,6 +555,40 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 .across-image-banner--holidays-secondary article small em{
   color:#ff5429;
 }
+.across-image-banner--fathers-day article{
+  margin-left:0;
+}
+.across-image-banner--fathers-day article .e-pill-badge{
+  --badge-base-color:#fff;
+  justify-content:center;
+  min-width:238px;
+  margin-bottom:16px;
+  background:#212428;
+}
+.across-image-banner--fathers-day article .special-bundle{
+  display:grid;
+  grid-template-columns:75px 75px 170px;
+  gap:12px;
+  align-items:center;
+  padding-bottom:8px;
+  text-align:left;
+}
+.across-image-banner--fathers-day article .special-bundle img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  border:1px solid;
+  border-radius:50%;
+}
+.across-image-banner--fathers-day article .special-bundle p{
+  margin-bottom:0;
+}
+.across-image-banner--fathers-day article .btn{
+  --btn-primary-bg:#ff5429;
+  --btn-primary-bg-hover:#212428;
+  --btn-primary-color-hover:#fff;
+  max-width:360px;
+}
 .across-image-banner--light-tech{
   color:#fff;
 }
@@ -776,6 +810,36 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .across-image-banner--holidays-secondary article small{
     font-size:14px;
     display:block;
+  }
+  .across-image-banner--fathers-day .container{
+    justify-content:flex-start;
+    height:140vw;
+    max-height:525px;
+  }
+  .across-image-banner--fathers-day picture{
+    position:absolute;
+  }
+  .across-image-banner--fathers-day article{
+    flex-grow:1;
+    align-items:center;
+    padding-top:20px;
+    padding-bottom:32px;
+  }
+  .across-image-banner--fathers-day article .e-pill-badge{
+    min-width:0;
+    margin:0 0 10px;
+  }
+  .across-image-banner--fathers-day article .special-bundle{
+    grid-template:repeat(2, auto)/repeat(2, 70px);
+    align-self:start;
+    padding-top:16px;
+    padding-left:8px;
+  }
+  .across-image-banner--fathers-day article .special-bundle p{
+    grid-column:1 /  -1;
+  }
+  .across-image-banner--fathers-day article .btn{
+    margin-top:auto;
   }
   .across-image-banner--light-tech .btn{
     max-width:none;

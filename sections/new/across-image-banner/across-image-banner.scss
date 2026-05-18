@@ -596,8 +596,88 @@
                 }
             }
         }
+    }
 
+    &--fathers-day {
+        .container {
+            @include sm {
+                justify-content: flex-start;
+                @include banner-height(525, 375);
+            }
+        }
 
+        picture {
+            @include sm {
+                position: absolute;
+            }
+        }
+
+        article {
+            margin-left: 0;
+
+            @include sm {
+                flex-grow: 1;
+                align-items: center;
+                padding-top: 20px;
+                padding-bottom: 32px;
+            }
+
+            .e-pill-badge {
+                --badge-base-color: #fff;
+
+                justify-content: center;
+                min-width: 238px;
+                margin-bottom: 16px;
+                background: #212428;
+
+                @include sm {
+                    min-width: 0;
+                    margin: 0 0 10px;
+                }
+            }
+
+            .special-bundle {
+                display: grid;
+                grid-template-columns: 75px 75px 170px;
+                gap: 12px;
+                align-items: center;
+                padding-bottom: 8px;
+                text-align: left;
+
+                @include sm {
+                    grid-template: repeat(2, auto) / repeat(2, 70px);
+                    align-self: start;
+                    padding-top: 16px;
+                    padding-left: 8px;
+                }
+
+                img {
+                    @include img-fluid;
+                    border: 1px solid;
+                    border-radius: 50%;
+                }
+
+                p {
+                    margin-bottom: 0;
+
+                    @include sm {
+                        grid-column: 1 / -1;
+                    }
+                }
+            }
+
+            .btn {
+                --btn-primary-bg: #ff5429;
+                --btn-primary-bg-hover: #212428;
+                --btn-primary-color-hover: #fff;
+
+                max-width: 360px;
+
+                @include sm {
+                    margin-top: auto;
+                }
+            }
+        }
     }
 
     &--light-tech {
