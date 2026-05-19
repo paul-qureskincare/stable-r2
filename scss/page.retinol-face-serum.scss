@@ -1,0 +1,9 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/logos-marquee/logos-marquee" as *;
+@use "@sections/before-after-accordion/before-after-accordion" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/features-marquee/features-marquee" as *;
+@use "@sections/comparison-table/comparison-table" as *;
+
+// Styles for current page only
