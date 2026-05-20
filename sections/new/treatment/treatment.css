@@ -242,6 +242,10 @@
 .c-supply-selector__label:has(input:checked) .c-supply-selector__final-price{
   font-weight:600;
 }
+.c-supply-selector__label:has(input:checked) .c-supply-selector__save .e-pill-save--light{
+  color:#fff;
+  background:#ff5429;
+}
 .c-supply-selector__label:has(picture) .c-supply-selector__main{
   grid-template:repeat(2, auto)/50px 1fr auto;
 }

@@ -79,6 +79,13 @@
             #{$root}__final-price {
                 font-weight: 600;
             }
+
+            #{$root}__save {
+                .e-pill-save--light {
+                    color: #fff;
+                    background: #ff5429;
+                }
+            }
         }
 
         &:has(picture) {
