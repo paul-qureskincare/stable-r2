@@ -793,6 +793,15 @@
   vertical-align:top;
   -webkit-text-stroke:.4px;
 }
+.c-accordion__link{
+  display:block;
+  margin-top:16px;
+  font-size:14px;
+  text-decoration:underline;
+}
+.c-accordion__link:hover{
+  text-decoration:none;
+}
 .c-accordion .devices-technical{
   display:flex;
   flex-direction:column;
@@ -1022,6 +1031,15 @@
 .c-buy-block .e-get-free-shipping{
   margin-bottom:8px;
 }
+.c-buy-block .one-time-purchase{
+  display:block;
+  font-size:16px;
+  text-align:center;
+  text-decoration:underline;
+}
+.c-buy-block .one-time-purchase:hover{
+  text-decoration:none;
+}
 .c-buy-block__payment-logos{
   text-align:center;
 }
@@ -1132,6 +1150,10 @@
   background:var(--note-bg, #eef7f4);
   max-width:500px;
 }
+.c-note h6{
+  font-family:inherit;
+  font-weight:500;
+}
 .c-note p{
   margin:0;
 }
@@ -1196,6 +1218,22 @@
 }
 .c-note--warning:before{
   background:#ff5429;
+}
+.c-note--triangle{
+  position:relative;
+  margin-top:8px;
+}
+.c-note--triangle:before{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  width:0;
+  height:0;
+  border-width:0 9px 14px;
+  border-style:solid;
+  border-color:transparent transparent #e5f7f2;
+  transform:translateX(-50%);
+  content:"";
 }
 .page\.qure-microinfusion-offer-listicle .c-note{
   max-width:none;

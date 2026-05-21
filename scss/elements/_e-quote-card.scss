@@ -1,0 +1,60 @@
+@use "@root/mixins" as *;
+
+.e-quote-card {
+    $root: &;
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 24px 120px 24px 40px;
+    border-radius: 5px;
+    background: #f6f6f7;
+
+    @include sm {
+        padding: 36px 100px 16px 16px;
+    }
+
+    .e-icon {
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        color: #c7e5db;
+        font-size: 8px;
+
+        @include sm {
+            top: 16px;
+            left: 16px;
+        }
+    }
+
+    picture {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 120px;
+
+        @include sm {
+            right: -20px;
+            width: 140px;
+        }
+    }
+
+    img {
+        @include img-fluid;
+    }
+
+    div {
+        font-size: 16px;
+
+        &:last-child {
+            margin-top: 10px;
+        }
+
+        small {
+            color: #8b8c8e;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}

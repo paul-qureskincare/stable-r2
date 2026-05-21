@@ -43,6 +43,17 @@
         margin-bottom: 8px;
     }
 
+    .one-time-purchase {
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     // .c-buy-block__payment-logos
     &__payment-logos {
         text-align: center;

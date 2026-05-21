@@ -13,6 +13,11 @@
     @include note;
     max-width: 500px;
 
+    h6 {
+        font-family: inherit;
+        font-weight: 500;
+    }
+
     p {
         margin: 0;
 
@@ -85,6 +90,24 @@
 
         &::before {
             background: #ff5429;
+        }
+    }
+
+    &--triangle {
+        position: relative;
+        margin-top: 8px;
+
+        &::before {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-width: 0 9px 14px;
+            border-style: solid;
+            border-color: transparent transparent #e5f7f2;
+            transform: translateX(-50%);
+            content: "";
         }
     }
 

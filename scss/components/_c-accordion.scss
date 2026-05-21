@@ -167,6 +167,17 @@
         }
     }
 
+    &__link {
+        display: block;
+        margin-top: 16px;
+        font-size: 14px;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     .devices-technical {
         display: flex;
         flex-direction: column;

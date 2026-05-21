@@ -231,6 +231,15 @@
 .c-buy-block .e-get-free-shipping{
   margin-bottom:8px;
 }
+.c-buy-block .one-time-purchase{
+  display:block;
+  font-size:16px;
+  text-align:center;
+  text-decoration:underline;
+}
+.c-buy-block .one-time-purchase:hover{
+  text-decoration:none;
+}
 .c-buy-block__payment-logos{
   text-align:center;
 }
