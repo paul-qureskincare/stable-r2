@@ -3,12 +3,12 @@
 @use "@elements/e-sticky-thumb-video" as *;
 @use "@elements/e-pill-tabs" as *;
 @use "@elements/e-get-free-shipping" as *;
+@use "@elements/e-quote-card" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-special-offer" as *;
 @use "@components/c-marked-list" as *;
 @use "@components/c-buy-block" as *;
 @use "@components/c-next-batch" as *;
-
 @use "@components/c-accordion" as *;
 @use "@components/c-jump-to" as *;
 @use "@components/c-options-selector" as *;
@@ -25,6 +25,7 @@
 @use "@components/c-lifetime-warranty" as *;
 @use "@components/c-bundle-included" as *;
 @use "@components/c-approved-by" as *;
+@use "@components/c-note" as *;
 
 .hero-product {
     $root: &;
@@ -67,6 +68,7 @@
 
         & > p {
             &:first-of-type {
+                margin-bottom: 0;
                 font-size: 16px;
                 text-transform: uppercase;
             }
@@ -110,6 +112,42 @@
                 }
             }
 
+            a[href="javascript:;"] {
+                display: block;
+                font-size: 16px;
+                text-align: center;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .collapsed-list {
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                }
+
+                p {
+                    display: none;
+                    font-size: 16px;
+                }
+            }
+
+            &.show-more {
+                .collapsed-list {
+                    span {
+                        font-weight: 600;
+                    }
+
+                    p {
+                        display: block;
+                    }
+                }
+            }
+
             // Some other order on this page
             body[class*="page.qure-microinfusion-offer"] &,
             body[class*="page.qure-microinfusion-offer-men"] & {
@@ -120,6 +158,7 @@
         & > hr {
             max-width: 500px;
             margin: 0;
+            opacity: 0.4;
 
             @include sm {
                 max-width: none;
@@ -358,6 +397,21 @@
             .btn {
                 --btn-sm-padding: 7px 20px;
             }
+        }
+    }
+
+    // .hero-product__experts
+    &__experts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include sm {
+            order: -1;
+        }
+
+        .c-certified-box {
+            max-width: none;
         }
     }
 

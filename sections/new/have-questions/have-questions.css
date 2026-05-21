@@ -136,6 +136,15 @@
   vertical-align:top;
   -webkit-text-stroke:.4px;
 }
+.c-accordion__link{
+  display:block;
+  margin-top:16px;
+  font-size:14px;
+  text-decoration:underline;
+}
+.c-accordion__link:hover{
+  text-decoration:none;
+}
 .c-accordion .devices-technical{
   display:flex;
   flex-direction:column;

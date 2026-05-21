@@ -293,6 +293,15 @@
 .c-buy-block .e-get-free-shipping{
   margin-bottom:8px;
 }
+.c-buy-block .one-time-purchase{
+  display:block;
+  font-size:16px;
+  text-align:center;
+  text-decoration:underline;
+}
+.c-buy-block .one-time-purchase:hover{
+  text-decoration:none;
+}
 .c-buy-block__payment-logos{
   text-align:center;
 }
@@ -500,6 +509,15 @@
   font-size:14px;
   vertical-align:top;
   -webkit-text-stroke:.4px;
+}
+.c-accordion__link{
+  display:block;
+  margin-top:16px;
+  font-size:14px;
+  text-decoration:underline;
+}
+.c-accordion__link:hover{
+  text-decoration:none;
 }
 .c-accordion .devices-technical{
   display:flex;
