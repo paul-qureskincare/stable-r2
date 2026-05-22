@@ -1,0 +1,238 @@
+@use "@root/mixins" as *;
+@use "@elements/e-pill-badge" as *;
+
+.exclusive-bundle {
+    $root: &;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        text-align: center;
+
+        @include sm {
+            gap: 24px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    &__tabs {
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        gap: 32px;
+        max-width: 944px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+
+        p {
+            &:first-child {
+                display: none;
+                text-align: center;
+
+                @include sm {
+                    display: block;
+                }
+            }
+        }
+
+        & > .e-icon {
+            align-self: start;
+            margin-top: 100px;
+            padding: 24px;
+            color: #fff;
+            font-size: 32px;
+            border-radius: 50%;
+            background: #212428;
+
+            @include sm {
+                display: none;
+            }
+        }
+    }
+
+    &__tabs-buttons {
+        position: relative;
+        display: none;
+
+        @include sm {
+            display: flex;
+            gap: 12px;
+        }
+
+        button {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 147px;
+            padding: 12px 16px;
+            line-height: 1.2;
+            border: 1px solid #dfe0e0;
+            border-radius: 10px;
+            background: none;
+            opacity: 0.5;
+
+            &.active {
+                font-weight: 600;
+                border-color: currentColor;
+                background: #f4faf8;
+                opacity: 1;
+
+                .e-pill-badge {
+                    background: #ff5429;
+                }
+            }
+
+            .e-pill-badge {
+                --badge-fill-color: #212428;
+
+                position: absolute;
+                top: -14px;
+                right: 10px;
+            }
+        }
+
+        img {
+            width: auto;
+            height: 45px;
+        }
+
+        .e-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            padding: 9px;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 50%;
+            background: #212428;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__tabs-pane {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        padding: 24px 50px;
+        border: 1px solid #dfe0e0;
+        border-radius: 10px;
+        transition: opacity 600ms linear;
+
+        @include md {
+            padding: 24px;
+        }
+
+        &:not(.show) {
+            @include sm {
+                @include hide-pane;
+            }
+        }
+
+        &:has(.e-pill-badge--fill) {
+            border-color: #ff5429;
+        }
+
+        img {
+            width: auto;
+            height: 165px;
+            vertical-align: top;
+
+            @include sm {
+                height: 120px;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        .e-price {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .e-price__main {
+            flex-direction: row-reverse;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 0 10px;
+            text-align: left;
+
+            @include sm {
+                gap: 18px;
+                padding: 0;
+            }
+        }
+
+        li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            min-height: 44px;
+            padding-bottom: 20px;
+            line-height: 1.15;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #dfe0e0;
+            }
+
+            @include sm {
+                min-height: 0;
+            }
+        }
+
+        .e-icon {
+            display: flex;
+            flex: none;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            border-radius: 20px;
+
+            @include sm {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .e-icon-checkmark {
+            color: #91baec;
+            font-size: 8px;
+            border: 1px solid;
+        }
+
+        .e-pill-badge--fill {
+            position: absolute;
+            top: -20px;
+            font-size: 16px;
+            font-weight: 600;
+
+            @include sm {
+                display: none;
+            }
+        }
+    }
+}

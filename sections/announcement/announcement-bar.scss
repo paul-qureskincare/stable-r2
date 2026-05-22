@@ -1,0 +1,186 @@
+@use "@root/mixins" as *;
+@use "@elements/e-countdown" as *;
+
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    background: #fff;
+
+    .c-swiper {
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    // .announcement-content
+    &-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--height-bar, 50px);
+        font-size: 16px;
+
+        @include sm {
+            font-size: 14px;
+        }
+    }
+
+    // .announcement-bar-link
+    &-link,
+     // .announcement-bar-offer-countdown
+    &-offer-countdown {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--height-bar, 50px);
+    }
+
+    // .announcement-bar-link
+    &-link {
+        gap: 20px;
+        justify-content: center;
+        padding-right: 16px;
+        padding-left: 16px;
+
+        @include sm {
+            gap: 10px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        span {
+            padding: 5px 12px;
+            color: #fff;
+            white-space: nowrap;
+            border-radius: 40px;
+            background: #ff5429;
+
+            @include sm {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // .announcement-bar-offer-countdown
+    &-offer-countdown {
+        width: 100%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+        @include md {
+            font-size: 14px;
+        }
+
+        .container {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+
+            @include sm {
+                flex-direction: column;
+                justify-content: center;
+                min-height: 54px;
+            }
+        }
+
+        p {
+            color: var(--colorize-color, inherit);
+            line-height: 1;
+            text-align: left;
+
+            @include sm {
+                line-height: 0.95;
+            }
+        }
+
+        a {
+            color: inherit;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .e-countdown {
+            margin-left: auto;
+            color: var(--colorize-color, inherit);
+            font-size: 18px;
+
+            @include sm {
+                margin-left: unset;
+                font-size: inherit;
+            }
+
+            & > div {
+                gap: 2px;
+                line-height: 10px;
+                letter-spacing: 0;
+
+                @include sm {
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 42px;
+                    text-align: center;
+                }
+
+                &::after {
+                    @include sm {
+                        font-size: 14px;
+                    }
+                }
+
+                &[data-key="days"] {
+                    &::after {
+                        @include sm {
+                            content: "D";
+                        }
+                    }
+                }
+
+                &[data-key="hours"] {
+                    &::after {
+                        @include sm {
+                            content: "H";
+                        }
+                    }
+                }
+
+                &[data-key="minutes"] {
+                    &::after {
+                        @include sm {
+                            content: "M";
+                        }
+                    }
+                }
+
+                &[data-key="seconds"] {
+                    &::after {
+                        @include sm {
+                            content: "S";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root body:has(.announcement-bar) {
+        --height-bar: 50px;
+
+        @include sm {
+            --height-bar: 66px;
+        }
+    }
+}
+
+.announcement-bar.scroll-hiding {
+    transform: translateY(-100px);
+}

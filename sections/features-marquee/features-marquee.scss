@@ -1,0 +1,71 @@
+@use "@root/mixins" as *;
+
+.features-marquee {
+    background: #f6f6f7;
+
+    .container {
+        display: flex;
+        gap: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    // .features-marquee__list
+    &__list {
+        display: flex;
+        gap: 30px;
+        justify-content: space-around;
+        width: 100%;
+
+        @include sm {
+            width: auto;
+            animation: "features-marquee" 20s linear infinite;
+        }
+
+        & + & {
+            display: none;
+
+            @include sm {
+                display: flex;
+            }
+        }
+
+        li {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            line-height: 1.15;
+
+            @include sm {
+                font-size: 16px;
+                white-space: nowrap;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .e-icon {
+            font-size: 40px;
+
+            @include sm {
+                font-size: 20px;
+            }
+
+            &-shipping-order {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+@keyframes features-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

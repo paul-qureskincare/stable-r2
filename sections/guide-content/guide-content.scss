@@ -1,0 +1,675 @@
+@use "@root/mixins" as *;
+@use "@components/c-modal" as *;
+@use "@components/c-note" as *;
+@use "@components/c-step-by-step" as *;
+@use "@components/c-faq-accordion" as *;
+@use "@components/c-app-stores" as *;
+
+@mixin content-width {
+    max-width: 100%;
+
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
+    & {
+        @media screen and (min-width: 1200px) {
+            max-width: 746px;
+        }
+
+        @media screen and (min-width: 1400px) {
+            max-width: 806px;
+        }
+    }
+}
+
+.shopify-section--guide-content {
+    @media screen and (min-width: 992px) {
+        display: none;
+        max-width: calc(100% - (350px + 60px));
+
+        &:has(.guide-content.active) {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: calc(100% - (calc((100% - 1172px) / 2) + 350px + 60px));
+    }
+
+    @media screen and (min-width: 1400px) {
+        max-width: calc(100% - (calc((100% - 1232px) / 2) + 350px + 60px));
+    }
+
+    @include md {
+        max-width: none;
+        margin-top: -40px;
+    }
+}
+
+.guide-content {
+    $root: &;
+
+    display: none;
+
+    @include md {
+        display: block;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    .container {
+        margin: 0;
+        padding-left: 0;
+
+        @include md {
+            padding-left: 16px;
+        }
+    }
+
+    .accordion {
+        @include md {
+            border-bottom: 1px solid #dfe0e0;
+        }
+
+        & > .accordion-button {
+            display: none;
+            gap: 8px;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            padding: 6px;
+            color: inherit;
+            font-size: 20px;
+            text-align: left;
+            border: 0;
+            box-shadow: none;
+            background: none;
+
+            @include md {
+                display: flex;
+            }
+
+            &::after {
+                width: auto;
+                height: auto;
+                margin-left: auto;
+                @include icon;
+                font-size: 18px;
+                background: none;
+                transform: none;
+                transition: all 200ms;
+                content: "\e900";
+            }
+
+            &.active {
+                font-weight: 500;
+
+                &::after {
+                    font-size: 20px;
+                }
+            }
+
+            &[aria-expanded="true"] {
+                font-weight: 500;
+
+                &::after {
+                    transform: rotate(-90deg);
+                }
+            }
+
+            em {
+                padding: 0 12px;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                background: #c7e5db;
+            }
+        }
+
+        & > .accordion-collapse {
+            display: none;
+            padding: 0 6px 28px;
+
+            @include md {
+                max-width: none;
+            }
+
+            @media screen and (min-width: 992px) {
+                display: block;
+                padding: 0;
+            }
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+
+
+    article {
+        overflow: hidden;
+        @include content-width;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        &:not(:has(p), :has(ul)) {
+            @include sm {
+                display: none;
+            }
+        }
+
+        // CONTENT ELEMENTS:
+        // Title
+        h2 {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+
+            @include md {
+                display: none;
+            }
+        }
+
+        h6 {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 600;
+
+            em {
+                color: #ff5429;
+            }
+
+            & + p {
+                margin-top: 15px;
+            }
+        }
+
+        // Dotted list
+        ul {
+            padding-left: 24px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            li {
+                padding-left: 4px;
+                list-style: disc;
+            }
+        }
+
+        p {
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            & + ul {
+                margin-top: -10px;
+            }
+        }
+
+        // Numeric list
+        ol {
+            margin-top: 15px;
+            @include numeric-list;
+        }
+
+        // Link
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        // Image
+        picture {
+            float: right;
+            width: clamp(250px, 50%, 335px);
+            margin-bottom: 25px;
+            margin-left: 40px;
+
+            @include sm {
+                float: none;
+                display: block;
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            &[data-video-id],
+            &[data-url] {
+                @include play;
+                cursor: pointer;
+
+                img {
+                    border-radius: 10px;
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+
+            }
+
+            &[data-label-text] {
+                &::before {
+                    position: absolute;
+                    bottom: 22px;
+                    left: 20px;
+                    color: #fff;
+                    font-weight: 500;
+                    content: attr(data-label-text);
+                }
+
+                &::after {
+                    inset: auto 20px 10px auto;
+                    font-size: 35px;
+                    transform: none;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                vertical-align: top;
+                border-radius: 10px;
+            }
+        }
+
+        hr {
+            @include content-width;
+            margin: 15px 0;
+            border-color: #dfe0e0;
+            opacity: 1;
+        }
+
+        .c-app-stores {
+            float: right;
+            width: 100%;
+            max-width: 200px;
+            margin-left: 40px;
+
+            @include sm {
+                float: none;
+                flex-direction: row;
+                order: 10;
+                max-width: 400px;
+                margin-top: 20px;
+                margin-left: 0;
+            }
+        }
+
+        .c-note {
+            overflow: hidden;
+        }
+
+        // Order video picture to bottom
+        &:has(picture:not(.d-none.d-lg-block)) {
+            @include sm {
+                display: flex;
+                flex-direction: column;
+            }
+
+            picture {
+                @include sm {
+                    order: 10;
+                    margin-top: 25px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        // Order c-app-stores to bottom
+        &:has(.c-app-stores) {
+            @include sm {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    // Details guide link
+    .guide-link {
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    // Serum Ingredients & Information (list and popup)
+    .serum-ingredients-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        @include content-width;
+
+        ul {
+            display: flex;
+            gap: 24px;
+
+            @include sm {
+                flex-direction: column;
+            }
+        }
+
+        li {
+            display: grid;
+            grid-template: repeat(2, auto) / repeat(2, auto);
+            gap: 4px 24px;
+            align-items: center;
+            padding: 24px;
+            border: 1px solid #dfe0e0;
+            border-radius: 10px;
+        }
+
+        picture {
+            grid-row: 1 / -1;
+        }
+
+        img {
+            width: auto;
+            height: 100px;
+            vertical-align: top;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        a {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            color: inherit;
+
+            span {
+                text-decoration: underline;
+            }
+
+            &:hover {
+                text-decoration: none;
+
+                span {
+                    text-decoration: none;
+                }
+            }
+
+        }
+
+        .e-icon {
+            font-size: 14px;
+        }
+    }
+
+    .serum-ingredients-details {
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+
+            button {
+                padding: 0 22px 8px;
+                color: #212428;
+                border: 0;
+                border-bottom: 1px solid #b5b6b7;
+                background: none;
+
+                &.active {
+                    font-weight: 600;
+                    border-bottom: 2px solid #212428;
+                }
+            }
+        }
+
+        .tab-content {
+            display: none;
+            margin-bottom: 25px;
+
+            &.show {
+                display: block;
+            }
+
+        }
+
+        .c-note {
+            background: #f6f6f7;
+        }
+    }
+
+    // Content Angles & Ideas Card in slider
+    .content-angles-ideas-card {
+        height: 100%;
+        padding: 68px 24px 24px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        &::before {
+            top: 24px;
+            left: 24px;
+            font-size: 16px;
+            @include index-number;
+            content: attr(data-index);
+        }
+
+        .c-note {
+            background: #fff;
+
+            strong {
+                display: block;
+                margin-bottom: 4px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    // Q-Rejuvalight Pro treatment modes
+    // Water Mode Selection
+    .treatment-modes-list,
+    .water-modes-list {
+        display: flex;
+        gap: 60px;
+        @include content-width;
+
+        @include sm {
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        picture {
+            margin-top: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+            border-radius: 10px;
+        }
+    }
+
+    // MOD for Water Mode Selection on Shower Filter Guide page
+    /* stylelint-disable-next-line selector-class-pattern */
+    @at-root .page\.shower-filter-online-guide .water-modes-list {
+        flex-wrap: wrap;
+
+        @include sm {
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        li {
+            gap: 16px;
+            align-items: center;
+            width: auto;
+            text-align: center;
+
+            @include sm {
+                width: calc(50% - 24px);
+            }
+        }
+
+        picture {
+            max-width: 95px;
+        }
+    }
+
+    // What’s Included In The Box
+    .included-box-list {
+        @include content-width;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 32px;
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 12px;
+        }
+
+        li {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            padding-top: 24px;
+            border-top: 1px solid #dfe0e0;
+
+            @include sm {
+                padding-top: 16px;
+            }
+
+            &:first-child {
+                &,
+                & + li {
+                    padding-top: 0;
+                    border-top: 0;
+                }
+
+                & + li {
+                    @include sm {
+                        padding-top: 16px;
+                        border-top: 1px solid #dfe0e0;
+                    }
+                }
+            }
+        }
+
+        img {
+            flex: none;
+            width: 40px;
+            height: auto;
+
+            & + p {
+                flex-grow: 1;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    // Slider
+    .c-swiper {
+        margin: 0 -22px;
+        padding-right: 22px;
+        padding-left: 22px;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        picture {
+            &[data-video-id],
+            &[data-url] {
+                @include play;
+
+                &::after {
+                    font-size: 46px;
+                }
+            }
+        }
+
+        @at-root #{$root} #creative-direction-collapse .c-swiper {
+            max-width: 616px;
+        }
+    }
+
+    // Step by step list(swiper)
+    .c-step-by-step {
+        @include content-width;
+        margin-bottom: 25px;
+
+        @include sm {
+            padding-top: 25px;
+            border-top: 1px solid #dfe0e0;
+        }
+
+        .c-swiper {
+            img {
+                height: 100%;
+            }
+        }
+
+        & + .c-note {
+            @include content-width;
+        }
+    }
+
+    // .c-note
+    .c-note {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    // .c-faq-accordion
+    .c-faq-accordion {
+        @include content-width;
+    }
+
+    // Wistia embed video code
+    .wistia-embed-video {
+        @include wistia-inline;
+
+        .wistia_swatch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            transition: opacity 200ms;
+            opacity: 0;
+        }
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

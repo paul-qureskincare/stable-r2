@@ -62,7 +62,7 @@
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+                loadScriptOnce("countdown", "assets/js/countdown.js");
             });
         </script>
         <!-- ANNOUNCEMENT BAR END -->
@@ -73,15 +73,15 @@
             <section class="hero-section">
                 <div class="container">
                     <picture class="hero-section__image">
-                        <source media="(min-width:768px)" srcset="sections/new/hero-section/images/micro-infusion-listicle-hero.webp" />
-                        <img src="sections/new/hero-section/images/micro-infusion-listicle-hero-mob.webp" alt="Micro-Infusion" />
+                        <source media="(min-width:768px)" srcset="sections/hero-section/images/micro-infusion-listicle-hero.webp" />
+                        <img src="sections/hero-section/images/micro-infusion-listicle-hero-mob.webp" alt="Micro-Infusion" />
                     </picture>
                     <article class="hero-section__content">
                         <div class="hero-section__content-header">
                             <div class="c-approved-by">
                                 <ul>
-                                    <li><img src="sections/new/hero-section/images/approved-by-1.webp" alt="Dr. Shah" /></li>
-                                    <li><img src="sections/new/hero-section/images/approved-by-2.webp" alt="Dr. Maxfield" /></li>
+                                    <li><img src="sections/hero-section/images/approved-by-1.webp" alt="Dr. Shah" /></li>
+                                    <li><img src="sections/hero-section/images/approved-by-2.webp" alt="Dr. Maxfield" /></li>
                                 </ul>
                                 <p>Approved by <strong>Dr. Shah</strong> &amp; <strong>Dr. Maxfield</strong></p>
                             </div>
@@ -149,7 +149,7 @@
                         <strong>Reason #2</strong>
                         <h2>Dermatologists Say It's More Effective</h2>
                         <picture>
-                            <img src="sections/new/base-section/images/microinfusion-listicle-1.webp" alt="Dermatologists Say It's More Effective" />
+                            <img src="sections/base-section/images/microinfusion-listicle-1.webp" alt="Dermatologists Say It's More Effective" />
                         </picture>
                         <div>
                             <p>You've probably spent hundreds on luxury creams that promised miracles but delivered disappointment.</p>
@@ -173,7 +173,7 @@
                         <strong>Reason #3</strong>
                         <h2>See Results Overnight (Not in 8-12 Weeks)</h2>
                         <picture>
-                            <img src="sections/new/base-section/images/microinfusion-listicle-2.webp" alt="See Results Overnight (Not in 8-12 Weeks)" />
+                            <img src="sections/base-section/images/microinfusion-listicle-2.webp" alt="See Results Overnight (Not in 8-12 Weeks)" />
                         </picture>
                         <div>
                             <p>Remember reading "results in 8-12 weeks" on your last cream purchase?</p>
@@ -197,7 +197,7 @@
                         <strong>Reason #4</strong>
                         <h2>Stop Wasting Money on Products That Can't Penetrate</h2>
                         <picture>
-                            <img src="sections/new/base-section/images/microinfusion-listicle-3.webp" alt="Stop Wasting Money on Products That Can't Penetrate" />
+                            <img src="sections/base-section/images/microinfusion-listicle-3.webp" alt="Stop Wasting Money on Products That Can't Penetrate" />
                         </picture>
                         <div>
                             <p>
@@ -224,7 +224,7 @@
                         <strong>Reason #5</strong>
                         <h2>Virtually Painless & Zero Downtime</h2>
                         <picture>
-                            <img src="sections/new/base-section/images/microinfusion-listicle-4.webp" alt="Virtually Painless & Zero Downtime" />
+                            <img src="sections/base-section/images/microinfusion-listicle-4.webp" alt="Virtually Painless & Zero Downtime" />
                         </picture>
                         <div>
                             <p>
@@ -273,21 +273,21 @@
                                             <li>
                                                 <label>
                                                     <input type="radio" name="serum" checked="checked" />
-                                                    <img src="sections/new/treatment/images/Dark_Spots_4.png" alt="Dark Spots" />
+                                                    <img src="sections/treatment/images/Dark_Spots_4.png" alt="Dark Spots" />
                                                     <span>Dark Spots</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label>
                                                     <input type="radio" name="serum" />
-                                                    <img src="sections/new/treatment/images/Mixed_3.png" alt="Wrinkles" />
+                                                    <img src="sections/treatment/images/Mixed_3.png" alt="Wrinkles" />
                                                     <span>Wrinkles</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label>
                                                     <input type="radio" name="serum" />
-                                                    <img src="sections/new/treatment/images/Wrinkles_2.png" alt="Mixed" />
+                                                    <img src="sections/treatment/images/Wrinkles_2.png" alt="Mixed" />
                                                     <span>Mixed</span>
                                                 </label>
                                             </li>
@@ -503,8 +503,7 @@
             </section>
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("treatment-new", "sections/new/treatment/treatment.js");
-                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                    loadScriptOnce("treatment-new", "sections/treatment/treatment.js");
                 });
             </script>
             <!-- TREATMENT END -->
@@ -691,11 +690,6 @@
                 </div>
             </div>
         </section>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                loadScriptOnce("swiper", "assets/js-new/swiper.js");
-            });
-        </script>
         <!-- FOOTER BENEFITS END -->
         <!-- CART AND FOOTER -->
         <div id="site-footer"></div>
@@ -739,7 +733,10 @@
 
         <!-- SCRIPTS -->
         <script src="assets/js/vendor.js" defer="defer"></script>
-        <script src="sections/new/header/header.js" defer="defer"></script>
-        <script src="sections/new/footer/footer.js" defer="defer"></script>
+        <script src="assets/js/swiper.js" defer="defer"></script>
+        <script src="assets/js/yt-popup.js" defer="defer"></script>
+        <script src="assets/js/dialog.js" defer="defer"></script>
+        <script src="sections/header/header.js" defer="defer"></script>
+        <script src="sections/footer/footer.js" defer="defer"></script>
     </body>
 </html>

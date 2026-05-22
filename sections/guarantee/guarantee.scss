@@ -1,0 +1,34 @@
+@use "@root/mixins" as *;
+
+.guarantee {
+    $root: &;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        max-width: 740px;
+        margin: 0 auto;
+        text-align: center;
+
+        @include sm {
+            gap: 24px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    img {
+        max-width: 172px;
+        height: auto;
+        vertical-align: top;
+
+        @include sm {
+            width: 100px;
+        }
+    }
+
+}

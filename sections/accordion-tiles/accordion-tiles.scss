@@ -1,0 +1,209 @@
+@use "@root/mixins" as *;
+
+.accordion-tiles {
+    $root: &;
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 24px;
+        }
+
+        img {
+            object-fit: cover;
+            @include img-fluid;
+            min-height: 100px;
+        }
+
+        h2 {
+            grid-column: 1 / -1;
+            margin-bottom: 0;
+            text-align: center;
+
+            @include sm {
+                grid-column: auto;
+            }
+        }
+
+        & > .btn {
+            grid-column: 1 / -1;
+            margin-right: auto;
+            margin-left: auto;
+
+            @include sm {
+                grid-column: auto;
+            }
+        }
+    }
+
+    details {
+        &[open] {
+            summary {
+                .e-icon {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+            padding: 24px 12px 0;
+        }
+    }
+
+    summary {
+        position: relative;
+
+        img {
+            border-radius: 10px;
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px;
+        }
+
+        .e-icon {
+            @include transition;
+            transform: rotate(90deg);
+        }
+    }
+
+    .c-dialog {
+        max-width: 900px;
+
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 12px;
+            box-shadow: none;
+        }
+    }
+
+    .c-dialog__content {
+        padding: 40px;
+
+        @include sm {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .c-marked-list--fill {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            max-width: 600px;
+
+            @include sm {
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+    }
+
+    &--square {
+        article {
+            align-items: center;
+
+            h2 {
+                grid-column: auto;
+                text-align: left;
+            }
+
+            a {
+                grid-column: 2;
+                margin-left: auto;
+                color: inherit;
+                text-decoration: underline;
+
+                @include hover {
+                    text-decoration: none;
+                }
+
+                @include sm {
+                    grid-column: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .c-swiper {
+            grid-row: 2;
+            grid-column: 1 / -1;
+
+            @include sm {
+                grid-row: auto;
+                grid-column: auto;
+            }
+        }
+
+        .swiper-slide {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+
+            details {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-top: 1px solid #b5b6b7;
+                background: rgb(255 255 255 / 50%);
+                backdrop-filter: blur(5px);
+
+                &[open] {
+                    .e-icon {
+                        transform: none;
+
+                        &::before {
+                            content: "\e902";
+                        }
+                    }
+                }
+            }
+
+            summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px;
+                font-weight: 500;
+            }
+
+            img {
+                vertical-align: top;
+            }
+
+            p {
+                padding: 0 16px 16px;
+            }
+
+            .e-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 50%;
+                background: #dfe0e0;
+                transform: none;
+            }
+        }
+    }
+}

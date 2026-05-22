@@ -1,0 +1,190 @@
+.e-pill-badge{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  padding:10px 20px;
+  color:var(--badge-base-color, #8b8c8e);
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.32px;
+  text-transform:capitalize;
+  border-radius:30px;
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
+}
+.e-pill-badge .e-checkmark{
+  font-size:20px;
+}
+.e-pill-badge .e-icon-checkmark{
+  font-size:.6em;
+}
+.e-pill-badge--sm,.e-pill-badge--small{
+  padding:4px 12px;
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xs{
+  gap:6px;
+  padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
+}
+.e-pill-badge--fill{
+  color:var(--badge-base-color, #fff);
+  background:var(--badge-fill-color, #ff5429);
+}
+
+.c-wistia-embed-video{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+.c-wistia-embed-video .wistia_embed,.c-wistia-embed-video .wistia_responsive_padding,.c-wistia-embed-video .wistia_responsive_wrapper,.c-wistia-embed-video .wistia_swatch{
+  height:100%;
+}
+.c-wistia-embed-video .wistia_swatch img{
+  display:block;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+  height:100%;
+  max-height:100%;
+  filter:blur(5px);
+}
+.c-wistia-embed-video div[id$=thumbnail_focus_indicator]{
+  box-shadow:none !important;
+}
+.c-wistia-embed-video--custom{
+  position:relative;
+}
+.c-wistia-embed-video--custom .wistia_embed{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  opacity:0;
+}
+.c-wistia-embed-video--custom:has(.wistia_mouseover) .c-wistia-embed-video__link span{
+  text-decoration:underline;
+}
+.c-wistia-embed-video--custom .c-wistia-embed-video__link{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  font-size:20px;
+  font-weight:600;
+}
+.c-wistia-embed-video--custom .c-wistia-embed-video__link .e-icon{
+  -webkit-text-stroke:.5px;
+}
+
+.skincare-routine h2{
+  margin-bottom:32px;
+  text-align:center;
+}
+.skincare-routine__content{
+  display:grid;
+  grid-template:auto 1fr/1fr 400px;
+  gap:24px 60px;
+}
+.skincare-routine__media{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
+.skincare-routine__media-item{
+  display:none;
+}
+.skincare-routine__media-item.show{
+  display:block;
+}
+.skincare-routine__media-item img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.skincare-routine__switcher{
+  display:flex;
+  border-bottom:1px solid #dfe0e0;
+}
+.skincare-routine__switcher li{
+  width:100%;
+  margin-bottom:-1px;
+}
+.skincare-routine__switcher button{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  height:40px;
+  padding:0;
+  border:0;
+  border-bottom:2px solid transparent;
+  background:none;
+}
+.skincare-routine__switcher button.active{
+  font-weight:600;
+  border-color:#91baec;
+}
+.skincare-routine__info-item{
+  display:none;
+  flex-direction:column;
+  gap:24px;
+}
+.skincare-routine__info-item.show{
+  display:flex;
+}
+.skincare-routine__info-item h6{
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:500;
+}
+.skincare-routine__info-item hr{
+  margin:0;
+  opacity:.1;
+}
+.skincare-routine__info-item ul{
+  padding-left:24px;
+}
+.skincare-routine__info-item ul li{
+  padding-left:4px;
+  list-style:disc;
+}
+.skincare-routine__info-item ul li::marker{
+  color:#91baec;
+}
+.skincare-routine__info-item .badges{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.skincare-routine__info-item .e-pill-badge{
+  padding-top:6px;
+  padding-bottom:6px;
+  color:inherit;
+  font-size:18px;
+  background:#f6f6f7;
+}
+.skincare-routine__info-item .e-icon{
+  -webkit-text-stroke:.5px;
+}
+@media screen and (max-width:767px){
+  .skincare-routine h2{
+    margin-bottom:24px;
+  }
+  .skincare-routine__content{
+    grid-template:auto/auto;
+  }
+  .skincare-routine__media{
+    grid-row:auto;
+    grid-column:auto;
+  }
+  .skincare-routine__info-item{
+    gap:16px;
+  }
+}

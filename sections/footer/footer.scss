@@ -1,0 +1,217 @@
+@use "@root/mixins" as *;
+
+.footer {
+    padding: 60px 0;
+    color: #fff;
+    background: #212428;
+
+    a {
+        &:hover {
+            color: #c8e6dc;
+        }
+    }
+
+    hr {
+        margin: 0;
+        color: #8b8c8e;
+        opacity: 1;
+    }
+
+    // .footer__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    // .footer__content-main
+    &__content-main {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+
+        @include md {
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    // .footer__logo
+    &__logo {
+        font-size: 99px;
+
+        @include md {
+            width: 100%;
+            font-size: 60px;
+            text-align: center;
+        }
+    }
+
+    // .footer__nav-column
+    &__nav-column {
+        width: 100%;
+        max-width: 180px;
+
+        @include md {
+            width: calc((100% - 48px) / 3);
+            max-width: none;
+        }
+
+        @include sm {
+            width: 100%;
+            padding-right: 6px;
+            padding-left: 6px;
+            border-bottom: 1px solid #8b8c8e;
+        }
+
+        h6 {
+            margin-bottom: 12px;
+            color: #8b8c8e;
+            font-family: inherit;
+            font-weight: 500;
+            text-transform: uppercase;
+            pointer-events: none;
+
+            @include sm {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+                font-weight: 400;
+                cursor: pointer;
+                pointer-events: all;
+            }
+
+            &::after {
+                font-size: 16px;
+
+                @include sm {
+                    @include icon;
+                    content: "\e903";
+                }
+            }
+
+            &.active {
+                &::after {
+                    @include sm {
+                        content: "\e902";
+                    }
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            @include sm {
+                gap: 8px;
+                overflow: hidden;
+                height: 0;
+                transition: height 200ms ease-in-out;
+            }
+        }
+
+        li {
+            &:last-child {
+                @include sm {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // .footer__app
+    &__app {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 12px;
+        min-width: 212px;
+
+        @include md {
+            grid-template: repeat(2, auto) / 1fr calc((100% - 48px) / 3);
+            align-items: center;
+            width: 100%;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr 120px;
+            padding-top: 6px;
+        }
+
+        h6 {
+            align-self: end;
+            margin-bottom: 0;
+            color: inherit;
+            font-family: inherit;
+            font-weight: 400;
+        }
+
+        p {
+            align-self: start;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include md {
+                grid-row: 1 / -1;
+                grid-column: 2;
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                vertical-align: top;
+            }
+        }
+    }
+
+    // .footer__content-bottom
+    &__content-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__copyright {
+        &,
+        ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        @include sm {
+            flex-direction: column;
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__disclaimer {
+        max-width: 750px;
+        color: #8b8c8e;
+        font-size: 16px;
+    }
+}

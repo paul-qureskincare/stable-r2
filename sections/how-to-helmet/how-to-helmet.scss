@@ -1,0 +1,126 @@
+@use "@root/mixins" as *;
+
+
+@use "@components/c-wistia-embed-video" as *;
+
+.how-to-helmet {
+    $root: &;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include sm {
+        gap: 24px;
+    }
+
+    .container {
+        & > article {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+
+            @include sm {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            .c-wistia-embed-video__link {
+                margin-right: 16px;
+                color: #ff5429;
+            }
+        }
+    }
+
+    .container:has(.c-swiper) {
+        margin-right: 0;
+        padding-right: 0;
+
+        @media screen and (min-width: 1200px) {
+            @include max-width(1172px);
+        }
+
+        @media screen and (min-width: 1400px) {
+            @include max-width(1232px);
+        }
+
+        @include sm {
+            padding-right: 16px;
+        }
+    }
+
+    .c-swiper {
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+        overflow: hidden;
+
+        picture {
+            position: relative;
+
+            @include sm {
+                flex: none;
+                width: 100px;
+            }
+
+            &[data-index] {
+                &::before {
+                    top: 12px;
+                    left: 12px;
+                    @include index-number;
+                    color: #212428;
+                    font-size: 20px;
+                    background: #fff;
+                    content: attr(data-index);
+
+                    @include sm {
+                        top: 5px;
+                        left: 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+
+            @include sm {
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        article {
+            padding-top: 24px;
+        }
+
+        h6 {
+            margin-bottom: 8px;
+            font-family: inherit;
+            font-weight: 500;
+        }
+    }
+
+    .c-swiper-nav {
+        padding-right: 16px;
+
+        @media screen and (min-width: 1200px) {
+            @include side-space("padding-right", 1172px);
+        }
+
+        @media screen and (min-width: 1400px) {
+            @include side-space("padding-right", 1232px);
+        }
+    }
+}

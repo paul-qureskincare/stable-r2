@@ -1,0 +1,117 @@
+@use "@root/mixins" as *;
+@use "@components/c-faq-accordion" as *;
+
+@mixin content-width {
+    max-width: 100%;
+
+    /* stylelint-disable-next-line block-no-redundant-nested-style-rules */
+    & {
+        @media screen and (min-width: 1200px) {
+            max-width: 746px;
+        }
+
+        @media screen and (min-width: 1400px) {
+            max-width: 806px;
+        }
+    }
+}
+
+.shopify-section--faqs-content {
+    display: none;
+
+    &:has(.faqs-content.active) {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: calc(100% - (350px + 60px));
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: calc(100% - (calc((100% - 1172px) / 2) + 350px + 60px));
+    }
+
+    @media screen and (min-width: 1400px) {
+        max-width: calc(100% - (calc((100% - 1232px) / 2) + 350px + 60px));
+    }
+
+    @include sm {
+        max-width: none;
+    }
+}
+
+.faqs-content {
+    $root: &;
+
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .container {
+        margin: 0;
+        padding-left: 0;
+
+        @include md {
+            padding-left: 16px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    .c-faq-accordion {
+        @include content-width;
+
+
+        // .c-faq-accordion__item[data-title]
+        &__item[data-title] {
+            position: relative;
+            overflow: visible;
+            margin-top: 70px;
+
+            &::before {
+                position: absolute;
+                top: -45px;
+                left: 0;
+                font-size: 20px;
+                content: attr(data-title);
+            }
+
+            &:first-child {
+                margin-top: 45px;
+            }
+        }
+    }
+
+    .secure-strap {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        // .secure-strap__item
+        &__item {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            &:first-child {
+                padding-bottom: 16px;
+                border-bottom: 1px solid #dfe0e0;
+            }
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            vertical-align: top;
+        }
+
+        strong {
+            display: block;
+            font-weight: 600;
+        }
+    }
+}
