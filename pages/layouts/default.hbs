@@ -7,11 +7,6 @@
     <title>{{ title }} - Qure</title>
     <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
     {{> css-vars }}
-    {{!-- {{> css-fonts }} --}}
-    {{!-- <link rel="stylesheet" href="assets/css/vendor.css" /> --}}
-    {{!-- <link rel="stylesheet" href="assets/css/spacings.css" /> --}}
-    {{!-- <link href="assets/css/theme-fonts.css" rel="stylesheet" /> --}}
-    {{!-- <link href="assets/css/base.css" rel="stylesheet" /> --}}
     <link href="assets/css/general.css" rel="stylesheet" />
     {{#if page-css }}
         <link href="assets/css/{{ body-class }}.css" rel="stylesheet" />
@@ -83,7 +78,10 @@
     <!-- SCRIPTS -->
     {{!-- <script src="https://fast.wistia.com/player.js" defer="defer"></script> --}}
     <script src="assets/js/vendor.js" defer="defer"></script>
-    <script src="sections/new/header/header.js" defer="defer"></script>
-    <script src="sections/new/footer/footer.js" defer="defer"></script>
+    <script src="assets/js/swiper.js" defer="defer"></script>
+    <script src="assets/js/yt-popup.js" defer="defer"></script>
+    <script src="assets/js/dialog.js" defer="defer"></script>
+    <script src="sections/header/header.js" defer="defer"></script>
+    <script src="sections/footer/footer.js" defer="defer"></script>
 </body>
 </html>

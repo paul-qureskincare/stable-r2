@@ -1,0 +1,66 @@
+@use "@root/mixins" as *;
+@use "@components/c-suggest-card" as *;
+
+.we-suggest {
+    $root: &;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        max-width: 1072px;
+
+        @include sm {
+            gap: 24px;
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    // .we-suggest__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        counter-reset: item;
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 32px;
+        }
+
+        .c-suggest-card {
+            position: relative;
+            counter-increment: item;
+
+            &::before {
+                position: absolute;
+                top: -12px;
+                left: -12px;
+                width: 50px;
+                height: 50px;
+                font-size: 34px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50px;
+                background: #c7e5db;
+                content: counters(item, "");
+
+                @include sm {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 26px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    // .we-suggest__button
+    &__button {
+        margin-top: 8px;
+    }
+}

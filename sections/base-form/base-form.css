@@ -1,0 +1,30 @@
+.base-form__form{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:12px 24px;
+}
+.base-form__form-success{
+  grid-column:1 /  -1;
+  margin-bottom:16px;
+  color:#0a0;
+  font-size:20px;
+  font-weight:500;
+  text-align:center;
+}
+.base-form__form-field:has(textarea){
+  grid-column:1 /  -1;
+}
+.base-form__form-submit{
+  margin-top:12px;
+}
+.base-form__form-submit .btn{
+  min-width:150px;
+}
+@media screen and (max-width:767px){
+  .base-form__form{
+    grid-template-columns:auto;
+  }
+  .base-form__form-success{
+    grid-column:auto;
+  }
+}

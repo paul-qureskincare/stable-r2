@@ -1,0 +1,33 @@
+.base-info{
+  padding-top:60px;
+  padding-bottom:60px;
+}
+.base-info .container{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+.base-info article{
+  flex-grow:1;
+}
+.base-info .btn{
+  min-width:200px;
+}
+.base-info--grey{
+  background:#f6f6f7;
+}
+@media screen and (max-width:991px){
+  .base-info{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+}
+@media screen and (max-width:767px){
+  .base-info .container{
+    flex-direction:column;
+    gap:16px;
+  }
+  .base-info .btn,.base-info article{
+    width:100%;
+  }
+}

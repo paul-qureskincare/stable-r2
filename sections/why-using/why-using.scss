@@ -1,0 +1,86 @@
+@use "@root/mixins" as *;
+
+
+.why-using {
+    $root: &;
+
+    // .why-using--bg
+    &--bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+
+        @include sm {
+            gap: 20px;
+        }
+    }
+
+    h2 {
+        width: 100%;
+        max-width: 670px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        gap: 40px;
+        width: 100%;
+
+        @include md {
+            gap: 16px;
+        }
+
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+
+        @include sm {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        &:not(:first-child) {
+            @include sm {
+                padding-top: 16px;
+                border-top: 1px solid #dfe0e0;
+            }
+        }
+    }
+
+    .e-icon {
+        flex: none;
+        font-size: 90px;
+
+        @include md {
+            width: 60px;
+            font-size: 55px;
+            text-align: center;
+        }
+    }
+
+    .btn {
+        text-transform: uppercase;
+    }
+}

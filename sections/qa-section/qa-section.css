@@ -1,0 +1,231 @@
+.e-pill-badge{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  padding:10px 20px;
+  color:var(--badge-base-color, #8b8c8e);
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.32px;
+  text-transform:capitalize;
+  border-radius:30px;
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
+}
+.e-pill-badge .e-checkmark{
+  font-size:20px;
+}
+.e-pill-badge .e-icon-checkmark{
+  font-size:.6em;
+}
+.e-pill-badge--sm,.e-pill-badge--small{
+  padding:4px 12px;
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xs{
+  gap:6px;
+  padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
+}
+.e-pill-badge--fill{
+  color:var(--badge-base-color, #fff);
+  background:var(--badge-fill-color, #ff5429);
+}
+
+.e-features-list{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  font-size:14px;
+}
+.e-features-list li{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  line-height:1.1;
+}
+.e-features-list .e-icon-guarantee{
+  font-size:30px;
+}
+.e-features-list .e-icon-shipping-order{
+  font-size:22px;
+}
+.e-features-list .e-icon-proven{
+  font-size:28px;
+}
+.e-features-list .e-icon-checkmark{
+  font-size:10px;
+}
+.e-features-list .e-icon-one-year{
+  font-size:24px;
+}
+
+.qa-section .container{
+  max-width:1072px;
+}
+.qa-section article h2{
+  margin-bottom:24px;
+  font-family:inherit;
+  font-weight:600;
+}
+.qa-section article picture{
+  display:block;
+  margin-bottom:15px;
+}
+.qa-section article img{
+  border-radius:10px;
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.qa-section article a:not(.btn){
+  color:inherit;
+  text-decoration:underline;
+}
+.qa-section article a:not(.btn):hover{
+  text-decoration:none;
+}
+.qa-section article ol{
+  counter-reset:item;
+}
+.qa-section article ol li{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  margin-bottom:24px;
+  counter-increment:item;
+}
+.qa-section article ol li:before{
+  padding:7px 14px;
+  font-size:16px;
+  font-weight:600;
+  white-space:nowrap;
+  background:#c7e5db;
+  content:"Step " counters(item, "");
+}
+.qa-section .cta-box{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  align-items:center;
+  width:100%;
+  max-width:900px;
+  margin:40px auto 0;
+  border:2px dashed;
+  border-radius:10px;
+}
+.qa-section .cta-box__image{
+  margin-bottom:0;
+}
+.qa-section .cta-box__image img{
+  vertical-align:top;
+  border-radius:10px 0 0 10px;
+}
+.qa-section .cta-box__content{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  padding:24px 32px;
+  text-align:center;
+}
+.qa-section .cta-box__content .e-pill-badge{
+  margin-right:auto;
+  margin-left:auto;
+  border-radius:5px;
+}
+.qa-section .cta-box__content h5{
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:500;
+}
+.qa-section .cta-box__content p{
+  font-size:16px;
+  line-height:1.2;
+}
+.qa-section .cta-box__content .btn{
+  margin-bottom:10px;
+}
+.qa-section .updated-info{
+  padding:24px 32px;
+  border:2px dashed;
+  border-radius:5px;
+  background:#fefcef;
+}
+.qa-section .updated-info h6{
+  color:#ff5429;
+  font-family:inherit;
+  font-weight:600;
+}
+.qa-section--img-to-left picture{
+  float:left;
+  width:min(410px, 45%);
+  margin-right:60px;
+  margin-bottom:0;
+}
+@media screen and (max-width:991px){
+  .qa-section--img-to-left picture{
+    margin-right:40px;
+  }
+}
+@media screen and (max-width:767px){
+  .e-features-list{
+    gap:8px;
+  }
+  .e-features-list li{
+    gap:4px;
+  }
+  .e-features-list .e-icon-guarantee{
+    font-size:24px;
+  }
+  .e-features-list .e-icon-shipping-order{
+    font-size:16px;
+  }
+  .e-features-list .e-icon-one-year{
+    font-size:18px;
+  }
+  .qa-section .container{
+    padding-right:24px;
+    padding-left:24px;
+  }
+  .qa-section article img{
+    width:100%;
+    border-radius:5px;
+  }
+  .qa-section .cta-box{
+    grid-template-columns:auto;
+  }
+  .qa-section .cta-box__image img{
+    border-radius:10px 10px 0 0;
+  }
+  .qa-section .cta-box__content{
+    padding:24px;
+  }
+  .qa-section .cta-box__content .e-pill-badge{
+    position:absolute;
+    top:-21px;
+    left:50%;
+    transform:translateX(-50%);
+  }
+  .qa-section--img-to-left picture{
+    width:100%;
+    margin-right:0;
+    margin-bottom:15px;
+  }
+  .qa-section--img-to-top article{
+    display:grid;
+  }
+  .qa-section--img-to-top article picture{
+    order:-1;
+    margin-bottom:20px;
+  }
+}

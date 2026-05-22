@@ -1,0 +1,108 @@
+.c-hr-with-text{
+  position:relative;
+  text-align:center;
+}
+.c-hr-with-text:after{
+  position:absolute;
+  top:50%;
+  right:0;
+  left:0;
+  z-index:-1;
+  height:1px;
+  background:#dfe0e0;
+  content:"";
+}
+.c-hr-with-text span{
+  padding-right:12px;
+  padding-left:12px;
+  font-size:20px;
+  font-weight:500;
+  text-transform:lowercase;
+  background:#fff;
+}
+
+.guide-welcome .container{
+  display:grid;
+  grid-template:1fr auto/280px 1fr 1fr;
+  grid-template-areas:"video title title" "video start contact";
+  gap:60px;
+  width:100%;
+}
+.guide-welcome .c-hr-with-text{
+  margin-top:-6px;
+  margin-bottom:-6px;
+}
+.guide-welcome__title{
+  -ms-grid-row:1;
+  -ms-grid-column:3;
+  -ms-grid-column-span:3;
+  grid-area:title;
+  align-self:end;
+}
+.guide-welcome__title h2{
+  margin-bottom:0;
+}
+.guide-welcome__video{
+  -ms-grid-row:1;
+  -ms-grid-row-span:3;
+  -ms-grid-column:1;
+  grid-area:video;
+}
+.guide-welcome__video .wistia_responsive_padding{
+  position:relative;
+}
+.guide-welcome__video .wistia_responsive_wrapper{
+  position:absolute;
+  inset:0;
+}
+.guide-welcome__video .wistia_embed{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.guide-welcome__card{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  padding:32px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.guide-welcome__card h4{
+  margin-bottom:0;
+}
+.guide-welcome__card .btn{
+  width:100%;
+}
+.guide-welcome__card .btn--light{
+  font-weight:500;
+  border-radius:50px;
+}
+.guide-welcome__card--start{
+  -ms-grid-row:3;
+  -ms-grid-column:3;
+  grid-area:start;
+}
+.guide-welcome__card--contact{
+  -ms-grid-row:3;
+  -ms-grid-column:5;
+  grid-area:contact;
+}
+@media screen and (max-width:1120px){
+  .guide-welcome .container{
+    gap:40px;
+  }
+  .guide-welcome__card{
+    padding:24px;
+  }
+}
+@media screen and (max-width:991px){
+  .guide-welcome .container{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+  }
+  .guide-welcome__title{
+    align-self:start;
+  }
+}

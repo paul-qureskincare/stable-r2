@@ -1,0 +1,54 @@
+@use "@root/mixins" as *;
+
+.logos-marquee {
+    background: #f6f6f7;
+
+    .container {
+        overflow: auto hidden;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        @include sm {
+            overflow: unset;
+            animation: "logos-marquee" 20s linear infinite;
+        }
+    }
+
+    // .logos-marquee__list
+    &__list {
+        display: inline-flex;
+        gap: 60px;
+        justify-content: space-around;
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+
+        img {
+            width: auto;
+            height: 28px;
+            vertical-align: top;
+            opacity: 0.6;
+        }
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.become-stockist &,
+    /* stylelint-disable-next-line selector-class-pattern */
+    body.page\.our-story & {
+        margin-top: -60px;
+
+        @include sm {
+            margin-top: -40px;
+        }
+    }
+}
+
+@keyframes logos-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,46 @@
+@use "@root/mixins" as *;
+@use "@components/c-trusted-review-card" as *;
+
+.before-after-accordion {
+    $root: &;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        padding: 32px;
+        border: 1px solid #dfe0e0;
+        border-radius: 10px;
+
+        @include md {
+            gap: 40px;
+            align-items: start;
+            padding: 24px;
+        }
+
+        @include sm {
+            grid-template-columns: auto;
+            gap: 24px;
+            padding: 0;
+        }
+    }
+
+    .c-trusted-review-card {
+        align-self: start;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-self: center;
+
+        @include sm {
+            padding: 0 16px 16px;
+        }
+
+        h3, p, hr {
+            margin: 0;
+        }
+    }
+}

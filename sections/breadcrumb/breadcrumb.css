@@ -1,0 +1,26 @@
+.breadcrumb{
+  margin-bottom:0;
+}
+.breadcrumb .container{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-size:16px;
+}
+.breadcrumb a{
+  color:inherit;
+}
+.breadcrumb a:hover{
+  text-decoration:underline;
+}
+.breadcrumb .e-icon{
+  font-size:14px;
+}
+body[class="collection.best-sellers"] .breadcrumb{
+  margin-bottom:-40px;
+}
+@media screen and (max-width:991px){
+  body[class="collection.best-sellers"] .breadcrumb{
+    margin-bottom:-30px;
+  }
+}

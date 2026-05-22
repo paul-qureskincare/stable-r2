@@ -1,0 +1,209 @@
+.e-author{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.e-author img{
+  width:100%;
+  max-width:25px;
+  height:auto;
+  vertical-align:top;
+  border-radius:50%;
+}
+
+.e-checkmark{
+  width:1em;
+  height:1em;
+  color:#212428;
+  line-height:1em;
+  text-align:center;
+  border-radius:50%;
+  background:#c7e5db;
+}
+.e-checkmark:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  font-size:.35em;
+  line-height:inherit;
+  vertical-align:top;
+  content:"\e901";
+}
+
+.e-verified-customer{
+  --e-verified-customer-bg:rgba(199,229,219,.3);
+  display:inline-flex;
+  gap:5px;
+  align-items:center;
+  padding:4px 10px;
+  font-size:14px;
+  border-radius:5px;
+  background:var(--e-verified-customer-bg);
+}
+.e-verified-customer .e-checkmark{
+  vertical-align:top;
+}
+
+.c-trusted-review-card{
+  display:grid;
+  grid-template:repeat(3, auto)/repeat(2, 1fr);
+  gap:24px 6px;
+  align-content:start;
+  overflow:hidden;
+  padding-bottom:24px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+  background:#fff;
+}
+.c-trusted-review-card:has(a){
+  grid-template-rows:repeat(3, auto) 1fr;
+}
+.c-trusted-review-card figure{
+  position:relative;
+}
+.c-trusted-review-card figure img{
+  aspect-ratio:360/480;
+  vertical-align:top;
+}
+.c-trusted-review-card figcaption{
+  position:absolute;
+  top:0;
+  left:0;
+  padding:10px;
+  font-size:16px;
+  border-bottom-right-radius:10px;
+  background:hsla(0,0%,100%,.7);
+  -webkit-backdrop-filter:blur(15px);
+          backdrop-filter:blur(15px);
+}
+.c-trusted-review-card article,.c-trusted-review-card picture{
+  grid-column:1 /  -1;
+}
+.c-trusted-review-card article{
+  padding:0 24px;
+  line-height:1.25;
+}
+.c-trusted-review-card article p{
+  font-size:16px;
+}
+.c-trusted-review-card img{
+  width:100%;
+}
+.c-trusted-review-card h6{
+  margin-bottom:20px;
+  font-family:inherit;
+  font-weight:500;
+  line-height:1;
+}
+.c-trusted-review-card a{
+  display:grid;
+  grid-template:repeat(2, auto)/45px 1fr;
+  grid-column:1 /  -1;
+  gap:0 12px;
+  align-self:end;
+  margin:0 24px;
+  padding:12px;
+  color:inherit;
+  font-size:16px;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.c-trusted-review-card a:hover{
+  text-decoration:none;
+  background:#c8e6dc;
+}
+.c-trusted-review-card a img{
+  grid-row:1 /  -1;
+}
+.c-trusted-review-card a small{
+  font-size:.875em;
+}
+.c-trusted-review-card a span{
+  text-decoration:underline;
+}
+.c-trusted-review-card .e-author{
+  align-self:center;
+  margin-left:24px;
+}
+.c-trusted-review-card .e-verified-customer{
+  margin-right:24px;
+  margin-left:auto;
+}
+.c-trusted-review-card--short{
+  gap:10px 24px;
+  background:#f6f6f7;
+}
+.c-trusted-review-card--short .e-verified-customer{
+  gap:8px;
+  font-size:18px;
+  background:none;
+}
+
+.before-after-accordion__content{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:60px;
+  padding:32px;
+  border:1px solid #dfe0e0;
+  border-radius:10px;
+}
+.before-after-accordion .c-trusted-review-card{
+  align-self:start;
+}
+.before-after-accordion article{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-self:center;
+}
+.before-after-accordion article h3,.before-after-accordion article hr,.before-after-accordion article p{
+  margin:0;
+}
+@media screen and (max-width:991px){
+  .before-after-accordion__content{
+    gap:40px;
+    align-items:start;
+    padding:24px;
+  }
+}
+@media screen and (max-width:767px){
+  .c-trusted-review-card{
+    gap:16px 6px;
+    padding-bottom:16px;
+  }
+  .c-trusted-review-card article{
+    padding:0 16px;
+    font-size:16px;
+  }
+  .c-trusted-review-card a{
+    margin:0 16px;
+  }
+  .c-trusted-review-card .e-author{
+    margin-left:16px;
+  }
+  .c-trusted-review-card .e-verified-customer{
+    margin-right:16px;
+    font-size:12px;
+  }
+  .c-trusted-review-card--short{
+    gap:8px;
+    font-size:16px;
+  }
+  .c-trusted-review-card--short .e-verified-customer{
+    font-size:inherit;
+  }
+  .before-after-accordion__content{
+    grid-template-columns:auto;
+    gap:24px;
+    padding:0;
+  }
+  .before-after-accordion article{
+    padding:0 16px 16px;
+  }
+}

@@ -1,0 +1,38 @@
+.logos-marquee{
+  background:#f6f6f7;
+}
+.logos-marquee .container{
+  overflow:auto hidden;
+  padding-top:24px;
+  padding-bottom:24px;
+}
+.logos-marquee__list{
+  display:inline-flex;
+  justify-content:center;
+}
+.logos-marquee__list li{
+  width:100%;
+  padding:0 40px;
+}
+.logos-marquee__list img{
+  width:auto;
+  height:28px;
+  vertical-align:top;
+  opacity:.6;
+}
+
+@keyframes logos-marquee{
+  0%{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-100%);
+  }
+}
+
+@media screen and (max-width:767px){
+  .logos-marquee .container{
+    overflow:unset;
+    animation:"logos-marquee" 20s linear infinite;
+  }
+}

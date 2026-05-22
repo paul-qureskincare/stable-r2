@@ -62,7 +62,7 @@
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                loadScriptOnce("countdown", "assets/js-new/countdown.js");
+                loadScriptOnce("countdown", "assets/js/countdown.js");
             });
         </script>
         <!-- ANNOUNCEMENT BAR END -->
@@ -78,7 +78,7 @@
                         <p>All orders are one-time purchases. No extra charges, and no hidden fees.</p>
 
                         <picture>
-                            <img src="sections/new/treatment/images/MI_6_month_DS.webp" alt="Choose your treatment" />
+                            <img src="sections/treatment/images/MI_6_month_DS.webp" alt="Choose your treatment" />
                         </picture>
                     </article>
                     <div class="treatment__form">
@@ -91,21 +91,21 @@
                                             <li>
                                                 <label>
                                                     <input type="radio" name="color" checked="checked" />
-                                                    <img src="sections/new/treatment/images/Dark_Spots_4.png" alt="White" />
+                                                    <img src="sections/treatment/images/Dark_Spots_4.png" alt="White" />
                                                     <span>White</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label>
                                                     <input type="radio" name="color" />
-                                                    <img src="sections/new/treatment/images/Mixed_3.png" alt="Black" />
+                                                    <img src="sections/treatment/images/Mixed_3.png" alt="Black" />
                                                     <span>Black</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label>
                                                     <input type="radio" name="color" />
-                                                    <img src="sections/new/treatment/images/Wrinkles_2.png" alt="Silver" />
+                                                    <img src="sections/treatment/images/Wrinkles_2.png" alt="Silver" />
                                                     <span>Silver</span>
                                                 </label>
                                             </li>
@@ -684,8 +684,7 @@
             </section>
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("treatment-new", "sections/new/treatment/treatment.js");
-                    loadScriptOnce("dialog", "assets/js-new/dialog.js");
+                    loadScriptOnce("treatment-new", "sections/treatment/treatment.js");
                 });
             </script>
             <!-- TREATMENT END -->
@@ -738,11 +737,6 @@
                 </div>
             </div>
         </section>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                loadScriptOnce("swiper", "assets/js-new/swiper.js");
-            });
-        </script>
         <!-- FOOTER BENEFITS END -->
         <!-- CART AND FOOTER -->
         <div id="site-footer"></div>
@@ -786,7 +780,10 @@
 
         <!-- SCRIPTS -->
         <script src="assets/js/vendor.js" defer="defer"></script>
-        <script src="sections/new/header/header.js" defer="defer"></script>
-        <script src="sections/new/footer/footer.js" defer="defer"></script>
+        <script src="assets/js/swiper.js" defer="defer"></script>
+        <script src="assets/js/yt-popup.js" defer="defer"></script>
+        <script src="assets/js/dialog.js" defer="defer"></script>
+        <script src="sections/header/header.js" defer="defer"></script>
+        <script src="sections/footer/footer.js" defer="defer"></script>
     </body>
 </html>

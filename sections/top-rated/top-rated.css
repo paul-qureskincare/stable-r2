@@ -1,0 +1,203 @@
+.e-rating-stars{
+  position:relative;
+  display:inline-block;
+  line-height:1;
+  letter-spacing:.135em;
+}
+.e-rating-stars:after,.e-rating-stars:before{
+  font-family:icomoon;
+  font-weight:400;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1;
+  text-transform:none;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  speak:never;
+  white-space:nowrap;
+  vertical-align:top;
+  content:"\e921\e921\e921\e921\e921";
+}
+.e-rating-stars:before{
+  color:#dfe0e0;
+}
+.e-rating-stars:after{
+  position:absolute;
+  top:0;
+  left:0;
+  overflow:hidden;
+  width:calc(var(--rating) / 5 * 100%);
+  color:#91baec;
+}
+
+.e-pill-badge{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  padding:10px 20px;
+  color:var(--badge-base-color, #8b8c8e);
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.32px;
+  text-transform:capitalize;
+  border-radius:30px;
+  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
+}
+.e-pill-badge .e-checkmark{
+  font-size:20px;
+}
+.e-pill-badge .e-icon-checkmark{
+  font-size:.6em;
+}
+.e-pill-badge--sm,.e-pill-badge--small{
+  padding:4px 12px;
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xs{
+  gap:6px;
+  padding:2px 12px;
+}
+.e-pill-badge--xs,.e-pill-badge--xxs{
+  font-size:16px;
+  letter-spacing:normal;
+}
+.e-pill-badge--xxs{
+  gap:4px;
+  padding:0 10px;
+}
+.e-pill-badge--fill{
+  color:var(--badge-base-color, #fff);
+  background:var(--badge-fill-color, #ff5429);
+}
+
+.c-product-tile{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.c-product-tile a{
+  color:inherit;
+}
+.c-product-tile a:hover{
+  -webkit-text-decoration:underline 1px;
+          text-decoration:underline 1px;
+  text-underline-offset:2px;
+}
+.c-product-tile__image{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+}
+.c-product-tile__image img{
+  -o-object-fit:cover;
+     object-fit:cover;
+  aspect-ratio:1/1;
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.c-product-tile__image:after{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  visibility:hidden;
+  background:var(--image-on-hover);
+  background-size:cover;
+  opacity:0;
+  content:"";
+  transition:all .2s linear;
+}
+.c-product-tile__image>.e-pill-badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  z-index:2;
+  text-decoration:none;
+}
+.c-product-tile__image>.e-pill-badge:not(.e-pill-badge--fill){
+  background:hsl(from currentcolor h s calc(l + 35));
+}
+.c-product-tile__time{
+  position:absolute;
+  bottom:8px;
+  left:8px;
+  z-index:2;
+  display:flex;
+  gap:4px;
+  align-items:center;
+}
+.c-product-tile__time .e-pill-badge{
+  gap:4px;
+  padding:0 8px;
+  color:#212428;
+  font-size:12px;
+  text-transform:uppercase;
+  background:#f6f6f7;
+}
+.c-product-tile__rating{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-size:16px;
+}
+.c-product-tile__name{
+  font-family:inherit;
+  font-weight:600;
+}
+.c-product-tile__desc{
+  font-size:16px;
+  line-height:1.25;
+}
+.c-product-tile__price{
+  margin-top:auto;
+}
+.c-product-tile__button .btn{
+  width:100%;
+}
+
+.top-rated h2{
+  grid-column:1 /  -1;
+  margin-bottom:12px;
+  text-align:center;
+}
+.top-rated article{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+@media screen and (max-width:767px){
+  .c-product-tile{
+    gap:8px;
+  }
+  .c-product-tile__price{
+    font-size:16px;
+  }
+  .c-product-tile__button .btn{
+    display:none;
+  }
+  .top-rated h2{
+    margin-bottom:10px;
+  }
+  .top-rated article{
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+  }
+  .top-rated .c-product-tile__rating{
+    gap:8px;
+    font-size:14px;
+  }
+  .top-rated .e-rating-stars{
+    font-size:12px;
+  }
+}
+@media (hover:hover){
+  .c-product-tile__image:hover:after{
+    visibility:visible;
+    transform:scale(1.02);
+    opacity:1;
+  }
+}

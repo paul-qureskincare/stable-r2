@@ -1,0 +1,42 @@
+@use "@root/mixins" as *;
+
+.base-info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include md {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        @include sm {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    article {
+        flex-grow: 1;
+
+        @include sm {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        min-width: 200px;
+
+        @include sm {
+            width: 100%;
+        }
+    }
+
+    &--grey {
+        background: #f6f6f7;
+    }
+}
