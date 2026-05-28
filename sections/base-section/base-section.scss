@@ -54,7 +54,8 @@
 
         figure,
         & > picture,
-        .wistia-embed-video {
+        .wistia-embed-video,
+        .c-wistia {
             grid-row: 1 / -1;
             grid-column: 2;
 
@@ -132,7 +133,10 @@
 
         ol {
             @include numeric-list;
-            @include numeric-list-big;
+
+            &:not([class]) {
+                @include numeric-list-big;
+            }
         }
 
         .c-note {
@@ -456,7 +460,8 @@
     &--reverse {
         article {
             & > picture,
-            .wistia-embed-video {
+            .wistia-embed-video,
+            .c-wistia {
                 grid-column: 1;
             }
         }

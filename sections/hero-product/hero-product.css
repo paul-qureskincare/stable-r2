@@ -2147,6 +2147,56 @@
   background:#e5fff7;
 }
 
+.c-upsell-card{
+  display:grid;
+  grid-template:repeat(4, auto)/100px repeat(2, auto);
+  gap:6px 16px;
+  align-items:center;
+  padding:16px;
+  border-radius:10px;
+  background:#eff5fc;
+}
+.c-upsell-card picture{
+  grid-row:1 /  -1;
+}
+.c-upsell-card img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.c-upsell-card h6,.c-upsell-card p,.c-upsell-card small{
+  grid-column:2 /  -1;
+}
+.c-upsell-card small{
+  color:#6f6f71;
+  font-size:14px;
+  text-transform:uppercase;
+}
+.c-upsell-card h6{
+  margin-bottom:0;
+  font-family:inherit;
+  font-weight:400;
+}
+.c-upsell-card p{
+  color:#6f6f71;
+  font-size:14px;
+}
+.c-upsell-card .e-price{
+  font-size:16px;
+}
+.c-upsell-card .e-price__main{
+  flex-direction:row-reverse;
+}
+.c-upsell-card a{
+  margin-left:auto;
+  font-size:16px;
+  text-transform:uppercase;
+  text-decoration:underline;
+}
+.c-upsell-card a:hover{
+  text-decoration:none;
+}
+
 .hero-product__container{
   display:grid;
   grid-template:auto 1fr/repeat(2, 1fr);
@@ -2656,6 +2706,12 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
+  }
+  .c-upsell-card{
+    grid-template:repeat(3, auto)/90px repeat(2, auto);
+  }
+  .c-upsell-card p{
+    display:none;
   }
   .hero-product__container{
     grid-template:auto/auto;

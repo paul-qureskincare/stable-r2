@@ -4,10 +4,10 @@
     $root: &;
 
     position: relative;
-    overflow: hidden;
-    border-radius: 10px;
 
     wistia-player {
+        overflow: hidden;
+        border-radius: 10px;
         cursor: pointer;
     }
 
@@ -66,6 +66,15 @@
                 @include img-fluid;
                 vertical-align: top;
             }
+        }
+    }
+
+    // .c-wistia--always-playing
+    &--always-playing {
+        pointer-events: none;
+
+        .c-wistia__play {
+            display: none;
         }
     }
 }

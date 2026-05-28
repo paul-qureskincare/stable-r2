@@ -119,7 +119,7 @@
                 {{> c-rating value="4.8" }}
                 <p>Qure faucet filter</p>
                 <h1>Get clearer skin, on tap, with Qure Faucet Filter</h1>
-                {{> e-price current="{$dyn}" }}
+                {{> e-price current="{$dyn}" old="{$dyn}" }}
                 {{> c-special-offer }}
                 <article>
                     <ul>
@@ -479,6 +479,11 @@
                         </div>
                     </div>
                 </div>
+                {{> c-upsell-card
+                    image="assets/images/blue-plus-face-serum/bundle-thumbnail.webp"
+                    name="Qure LED Routine Set"
+                    text="Visibly reduce redness and signs of aging with our Q-Rejuvalight Pro LED Mask and Blue+ Face Serum duo."
+                }}
                 {{> c-accordion
                     type="lines"
                     list='[
