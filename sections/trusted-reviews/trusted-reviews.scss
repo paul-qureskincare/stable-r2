@@ -34,6 +34,14 @@
     .c-trusted-review-card {
         max-width: 400px;
         height: 100%;
+
+        @include md {
+            max-width: 50vw;
+        }
+
+        @include sm {
+            max-width: 100vw;
+        }
     }
 
     .btn {

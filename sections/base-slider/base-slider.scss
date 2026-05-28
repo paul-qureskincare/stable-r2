@@ -71,13 +71,29 @@
 
         .c-trusted-video-card {
             max-width: 340px;
+
+            @include xl {
+                max-width: 50vw;
+            }
+
+            @include sm {
+                max-width: 100vw;
+            }
         }
 
         .c-advisory-collapse-card {
             max-width: 300px;
 
+            @include xl {
+                max-width: calc(100vw / 3);
+            }
+
+            @include md {
+                max-width: 50vw;
+            }
+
             @include sm {
-                max-width: 400px;
+                max-width: 100vw;
             }
         }
     }
