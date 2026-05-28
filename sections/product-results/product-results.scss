@@ -122,16 +122,4 @@
             --c-visual-compare-card-pill-color: #f6f6f7;
         }
     }
-
-    // TODO: Remove after run section stack
-    /* stylelint-disable-next-line selector-class-pattern */
-    @at-root .product\.hair-growth-helmet &:not(.product-results--new-page) {
-        padding-top: 30px;
-        padding-bottom: 60px;
-
-        @include sm {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-    }
 }

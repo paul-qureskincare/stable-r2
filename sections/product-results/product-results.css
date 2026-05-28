@@ -213,10 +213,6 @@
 .product-results__content .c-visual-compare-card{
   --c-visual-compare-card-pill-color:#f6f6f7;
 }
-.product\.hair-growth-helmet .product-results:not(.product-results--new-page){
-  padding-top:30px;
-  padding-bottom:60px;
-}
 @media screen and (max-width:991px){
   .c-visual-compare-card{
     gap:16px;
@@ -249,9 +245,5 @@
   }
   .product-results__content .c-swiper,.product-results__content>picture{
     width:100%;
-  }
-  .product\.hair-growth-helmet .product-results:not(.product-results--new-page){
-    padding-top:40px;
-    padding-bottom:40px;
   }
 }
