@@ -177,6 +177,9 @@
   .trusted-reviews h2{
     margin-bottom:20px;
   }
+  .trusted-reviews .c-trusted-review-card{
+    max-width:50vw;
+  }
 }
 @media screen and (max-width:767px){
   .c-trusted-review-card{
@@ -207,6 +210,9 @@
   .trusted-reviews:not(.trusted-reviews--light){
     padding-top:40px;
     padding-bottom:40px;
+  }
+  .trusted-reviews .c-trusted-review-card{
+    max-width:100vw;
   }
   .trusted-reviews .btn{
     margin-top:24px;
