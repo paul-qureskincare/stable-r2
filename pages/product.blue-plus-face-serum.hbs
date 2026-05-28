@@ -1,0 +1,491 @@
+{{#> default
+    title="Blue+ Face Serum"
+    body-class="product.blue-plus-face-serum"
+    page-css=true
+}}
+    {{#> hero-product }}
+        <div class="hero-product__gallery">
+            <div
+                class="c-swiper"
+                data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 16,
+                    "navigation": {
+                        "prevEl": "#hero-product .c-swiper-button-prev",
+                        "nextEl": "#hero-product .c-swiper-button-next"
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/blue-plus-face-serum/blue-plus-base-1.webp" alt="Blue+ Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/blue-plus-face-serum/blue-plus-base-2.webp" alt="Blue+ Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/blue-plus-face-serum/blue-plus-base-3.webp" alt="Blue+ Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/blue-plus-face-serum/blue-plus-base-4.webp" alt="Blue+ Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/blue-plus-face-serum/blue-plus-base-5.webp" alt="Blue+ Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/blue-plus-face-serum/blue-plus-base-6.webp" alt="Blue+ Face Serum" />
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-thumbs-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div
+                    class="c-swiper c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": "auto",
+                        "spaceBetween": 12
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/blue-plus-face-serum/blue-plus-base-1.webp" alt="Blue+ Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/blue-plus-face-serum/blue-plus-base-2.webp" alt="Blue+ Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/blue-plus-face-serum/blue-plus-base-3.webp" alt="Blue+ Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/blue-plus-face-serum/blue-plus-base-4.webp" alt="Blue+ Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/blue-plus-face-serum/blue-plus-base-5.webp" alt="Blue+ Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/blue-plus-face-serum/blue-plus-base-6.webp" alt="Blue+ Face Serum" />
+                        </div>
+                    </div>
+                </div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+        <div class="hero-product__main">
+            {{> c-rating custom="Backed by Dermatologists" light=true }}
+            <p>DESIGNED FOR SKIN THAT USES LED</p>
+            <h1>Blue+ Face Serum</h1>
+            <article>
+                <p>A methylene blue–powered serum that helps your skin make the most of every LED session while delivering antioxidant support for calmer, fresher-looking skin.</p>
+            </article>
+            <ul class="e-pill-tabs e-pill-tabs--selector">
+                <li>
+                    <label>
+                        <input name="delivery-type" type="radio" />
+                        One time purchase
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input name="delivery-type" type="radio" checked />
+                        Subscribe &amp; Save
+                    </label>
+                </li>
+            </ul>
+            {{> c-supply-selector
+                classes="c-supply-selector--delivery"
+                title="Select Your Delivery"
+                list='[
+                    {
+                        "image": "assets/images/blue-plus-face-serum/form-thumbnail-trio.webp",
+                        "name": "6 Months Supply",
+                        "desc": "1 Bottle + 2 Refills",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "price-special": "{$dyn}",
+                        "save-pill": true,
+                        "save-value": "{dyn}% OFF",
+                        "tag-down": true,
+                        "tag-name": "Best Value",
+                        "option": "subscribe",
+                        "checked": true
+                    },
+                    {
+                        "image": "assets/images/blue-plus-face-serum/form-thumbnail-duo.webp",
+                        "name": "4 Months Supply",
+                        "desc": "1 Bottle + 1 Refills",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "price-special": "{$dyn}",
+                        "save-pill": true,
+                        "save-pill-light": true,
+                        "save-value": "{dyn}% OFF",
+                        "option": "subscribe"
+                    },
+                    {
+                        "image": "assets/images/blue-plus-face-serum/form-thumbnail-uno.webp",
+                        "name": "2 Months Supply",
+                        "desc": "1 Bottle",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "save-pill": true,
+                        "save-pill-light": true,
+                        "save-value": "{dyn}% OFF",
+                        "option": "subscribe"
+                    }
+                ]'
+            }}
+            <p class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
+            <div class="c-buy-block">
+                {{> c-order-button
+                    button="Subscribe Now & Save {dyn}%"
+                }}
+                {{> c-certified-box }}
+                <ul class="e-features-list">
+                    <li>
+                        {{> e-icon icon="guarantee" }}
+                        30-Day Money-Back Guarantee
+                    </li>
+                    <li>
+                        {{> e-icon icon="shipping-order" }}
+                        Free Shipping over {$dyn}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero-product__extra">
+            {{> c-upsell-card
+                image="assets/images/blue-plus-face-serum/bundle-thumbnail.webp"
+                name="Qure LED Routine Set"
+                text="Visibly reduce redness and signs of aging with our Q-Rejuvalight Pro LED Mask and Blue+ Face Serum duo."
+            }}
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "Key Benefits",
+                        "text": "
+                            <p>Blue+ Face Serum is designed for skin used with LED light therapy, with ingredients chosen to support skin exposed to light so your routine stays comfortable and consistent. It\'s lightweight, absorbs quickly, and sits comfortably on skin during LED use.</p>
+                            <p>Visible benefits include:</p>
+                            <ul>
+                                <li>Skin that looks clearer and more even-toned over time</li>
+                                <li>A complexion that appears more vibrant and less fatigued</li>
+                                <li>Improved texture and smoothness with consistent use</li>
+                                <li>Comfort during repeated LED sessions, even for sensitive skin</li>
+                            </ul>
+                        "
+                    },
+                    {
+                        "summary": "How To Use",
+                        "text": "
+                            <ul>
+                                <li>Apply 1 pump to clean, dry skin. Wait 2 minutes until fully absorbed.</li>
+                                <li>Use Q-Rejuvalight Pro LED Mask immediately after on desired treatment mode.</li>
+                                <li>For best results, use consistently with every LED session.</li>
+                            </ul>
+                        "
+                    },
+                    {
+                        "summary": "Why We Love It",
+                        "text": "
+                            <p>We designed Blue+ to solve a simple problem: most people use their LED mask the same way every time and hope for better results. But LED effectiveness depends on how your skin receives light, not just the device itself.</p>
+                            <p>Blue+ prepares your skin so each session works harder, not harsher. It\'s the step that makes an LED routine feel complete – smarter results without adding time, intensity, or irritation.</p>
+                            <p>For anyone who\'s already invested in LED, this is the upgrade that actually makes sense.</p>
+                        "
+                    },
+                    {
+                        "summary": "Clean Ingredients",
+                        "text": "
+                            <p>
+                                <strong>Methylene Blue</strong><br />
+                                A cosmetic photosensitizer and antioxidant used to enhance how skin responds to light-based treatments.
+                            </p>
+
+                            <p>
+                                <strong>Calendula iActive</strong><br />
+                                Provides additional antioxidant support and comfort to the skin.
+                            </p>
+
+                            <p>
+                                <strong>Beta-Glucan</strong><br />
+                                Helps soothe and calm the skin to reduce the look of inflammation and reinforce hydration.
+                            </p>
+
+                            <p>
+                                <strong>Niacinamide</strong><br />
+                                Supports a healthy-looking skin barrier and more even-looking tone.
+                            </p>
+                            <hr />
+                            <ul class=\"c-marked-list\">
+                                <li>Suitable for sensitive skin</li>
+                                <li>Hypoallergenic and allergy tested</li>
+                                <li>Free from fragrance, parabens, and PEG</li>
+                                <li>Vegan and cruelty-free</li>
+                            </ul>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+    {{/hero-product }}
+
+    {{#> base-section
+        classes="base-section--reverse"
+        title="Skincare that works in sync with LED light"
+        c-wistia="qk92k5wrnj"
+        c-wistia-inline=true
+        c-wistia-hide-panel=true
+        button="Shop Now"
+    }}
+        <p>LED therapy works by delivering light energy into the skin. But what you apply before your session matters.</p>
+        <p>Many serums are designed for overnight repair or active treatment — not for repeated light exposure. Some can Interfere with LED light therapy, be irritating, or simply weren’t formulated with LED in mind.</p>
+        <p>Blue+ is different.</p>
+        <p>It uses methylene blue, an antioxidant studied in light-exposure contexts, in a lightweight formula designed to sit comfortably on skin during LED sessions.</p>
+    {{/base-section }}
+
+    {{#> base-section
+        classes="base-section--small-media"
+        title="Trusted and Recommended by Experts"
+        picture="assets/images/experts/dr-shah-maxfield-2.webp"
+        pill-badge=true
+    }}
+        <p>“Methylene blue has been studied for how it interacts with cellular energy and light-dependent processes, making it <em>a great ingredient in skincare</em> designed for use with LED light therapy.”</p>
+    {{/base-section }}
+
+    {{> features-marquee }}
+
+    {{#> accordion-tiles
+        title="Made gentle for all skin types"
+        square=true
+        list='[
+            {
+                "image": "methylene-blue-tile",
+                "summary": "Methylene Blue",
+                "text": "A powerful antioxidant that helps tired, stressed skin look more awake. It works to even out tone and bring back the healthy clarity your skin needs."
+            },
+            {
+                "image": "calendula-iactive-tile",
+                "summary": "Calendula iActive",
+                "text": "Selected for its calming properties, it helps reduce the look of redness and sensitivity while supporting skin that is easily stressed or overworked. In daily use, it contributes to skin feeling more balanced, comfortable, and visibly calmer."
+            },
+            {
+                "image": "beta-glucan-tile",
+                "summary": "Beta-Glucan",
+                "text": "Deeply soothing and hydrating, Beta-Glucan helps skin stay comfortable and bounce back faster. It\'s the ingredient that makes repeated LED sessions feel gentle rather than demanding."
+            }
+        ]'
+    }}
+        <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>
+        {{#> c-dialog
+            id="fullIngredient"
+        }}
+            <p><strong>Blue+ Face Serum Ingredients</strong></p>
+            <p>Water (Aqua), Coco-Caprylate/Caprate, Propanediol, Cetearyl Alcohol, Aloe Barbadensis Leaf Juice, Glyceryl Caprylate, Methylene Blue, Sodium Hyaluronate, Cetearyl Glucoside, Sorbitol, Tocopheryl Acetate, Cetearyl Olivate, Glucomannan, Niacinamide, Sorbitan Olivate, Glycerin, Caprylhydroxamic Acid, Aloe Barbadensis Leaf Juice Powder, Bisabolol, Calendula Officinalis Flower Extract, Allantoin, Panthenol, Methylparaben, Citric Acid, Potassium Sorbate, Sodium Benzoate, Beta-Glucan, 1,2-Hexanediol, Caprylyl Glycol.</p>
+            <hr />
+            <ul class="c-marked-list c-marked-list--fill">
+                <li>Fragrance-free</li>
+                <li>Silicone-free</li>
+                <li>Cruelty-free</li>
+                <li>Lightweight</li>
+                <li>Hypoallergenic</li>
+                <li>Safe for sensitive skin</li>
+            </ul>
+        {{/c-dialog }}
+    {{/accordion-tiles}}
+
+    {{#> across-image-banner }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="assets/images/blue-plus-face-serum/blue-bg-image-1.webp" />
+            <img src="assets/images/blue-plus-face-serum/blue-bg-image-1-mob.webp" alt="Why we chose methylene blue" />
+        </picture>
+        <div class="container">
+            <article>
+                <h2>Why we chose methylene blue</h2>
+                <p>Besides its unique light-responsive properties, it’s a next-generation antioxidant studied for its role in skin longevity.</p>
+                <p>Research shows methylene blue can help reduce oxidative stress — one of the key contributors to visible skin aging — while supporting healthy fibroblast activity and overall skin resilience.</p>
+                <p>It has also been shown in skin models to support hydration and skin structure markers associated with firmer, healthier-looking skin.</p>
+            </article>
+        </div>
+    {{/across-image-banner}}
+
+    {{#> base-section
+        classes="base-section--reverse base-section--simple-grid"
+        title="Designed to last and built to refill"
+        c-wistia="tj97vrxlon"
+        c-wistia-custom='
+            <picture>
+                <img src="assets/images/blue-plus-face-serum/blue-video-thumbnail-1.webp" alt="Video thumbnaul text" />
+            </picture>
+        '
+    }}
+        <p>Our new refillable system means less waste and better value over time.</p>
+        <ol class="normal">
+            <li>Remove the lid of your base by pushing the button on the base.</li>
+            <li>Pull the top off and slide out the the empty refill container.</li>
+            <li>Slide in your new refill container and slide the top over the refill.</li>
+        </ol>
+    {{/base-section }}
+
+    {{#> complete-system
+        title="Complete the Qure system"
+    }}
+        <ol class="complete-system__scale c-swiper-steps">
+            <li><span>Restrict</span></li>
+            <li><span>Revive</span></li>
+            <li><span>Ready</span></li>
+            <li><span>Rejuvenate</span></li>
+        </ol>
+        <div class="complete-system__items">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.4,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "steps-selector": ".c-swiper-steps",
+                    "watchSlidesProgress": true,
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 24
+                        },
+                        "992": {
+                            "slidesPerView": 4
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/faucet-filter.webp"
+                            image-hover="/sections/complete-system/images/faucet-filter-hover.webp"
+                            reviews="28"
+                            name="Faucet Filter"
+                            desc="Wash with filtered water to help boost hydration and reduce the look of irritation."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/cleanser.webp"
+                            image-hover="/sections/complete-system/images/cleanser-hover.webp"
+                            reviews="31"
+                            name="Daily Gel Cleanser"
+                            desc="Cleanses thoroughly while helping skin stay calm and balanced."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/blue-face-serum.webp"
+                            image-hover="/sections/complete-system/images/blue-face-serum-hover.webp"
+                            reviews="32"
+                            name="Blue+ Face Serum"
+                            desc="Prepares skin for a more effective LED session."
+                            day=false
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/led-mask.webp"
+                            image-hover="/sections/complete-system/images/led-mask-hover.webp"
+                            reviews="283"
+                            name="Q-Rejuvalight Pro LED Mask"
+                            desc="Daily multi wavelength LED treatment for clearer, firmer-looking skin."
+                            day=false
+                            night=true
+                        }}
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/complete-system }}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "Is this serum suitable for sensitive skin?",
+                "text": "<p>Yes. Blue+ Face Serum is dermatologically tested, non-irritating, hypoallergenic, and suitable for sensitive skin. The formula includes soothing and barrier-supporting ingredients such as beta-glucan, bisabolol, allantoin, and aloe to help keep skin comfortable.</p>"
+            },
+            {
+                "summary": "Does Blue+ work without LED?",
+                "text": "<p>Yes. Blue+ can be used on its own as a lightweight antioxidant serum that helps support skin exposed to everyday environmental stressors, including screen-based blue light. When used with LED, it is designed to enhance how the skin responds to red and blue light.</p>"
+            },
+            {
+                "summary": "Will this replace my other serums?",
+                "text": "<p>Not necessarily. Blue+ is designed to work as a targeted treatment step. It can be used on its own as a simple, all-in-one antioxidant serum, or layered with other products depending on your routine and skin needs.</p>"
+            },
+            {
+                "summary": "How often should I use it?",
+                "text": "<p>Blue+ can be used daily. When using LED, apply it before each LED session. When not using LED, apply in the morning as part of your skincare routine to help support skin exposed to daily environmental stressors.</p>"
+            },
+            {
+                "summary": "How much should I use?",
+                "text": "<p>It is important to use only a pea-sized amount for the face and neck. Applying more than this is not necessary and may lead to temporary blue surface staining.</p><p>Always allow the serum to fully absorb for a few minutes before applying your LED mask or other products. Blue+ has been tested with the Q-Rejuvalight Pro LED Mask materials and is designed to absorb without interfering with light coverage. Any temporary tinting will fade on its own.</p>"
+            },
+            {
+                "summary": "Does it work with both red and blue LED modes?",
+                "text": "<p>Yes. Blue+ was formulated to work with both red and blue LED wavelengths. The formula uses methylene blue to absorb light and support the skin’s biological response, helping blue light target acne-causing bacteria and red light support skin renewal and overall skin quality.</p>"
+            },
+            {
+                "summary": "How does the refill system work?",
+                "text": "<p>The refill system is designed so you keep the outer bottle and pump, and only replace the inner serum refill. To refill, detach the outer case from the base, remove the empty refill, slide in the new refill, then place the case back on and twist the base to open and unlock the nozzle. This reduces waste while keeping the same packaging experience.</p>"
+            }
+        ]'
+    }}
+
+    {{#> cta-bar
+        qty-selector=true
+        button="Subscribe & Save {dyn}%"
+    }}
+        <div class="cta-bar__selector" data-label="Select Quantity">
+            <button type="button">
+                <img src="assets/images/blue-plus-face-serum/form-thumbnail-trio.webp" alt="6 Months" />
+                6 Months
+            </button>
+            <ul>
+                <li>
+                    <label>
+                        <img src="assets/images/blue-plus-face-serum/form-thumbnail-trio.webp" alt="6 Months" />
+                        <input type="radio" name="cta-qty" value="white" checked />
+                        <span>6 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="assets/images/blue-plus-face-serum/form-thumbnail-duo.webp" alt="4 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>4 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="assets/images/blue-plus-face-serum/form-thumbnail-uno.webp" alt="2 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>2 Months</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    {{/cta-bar}}
+{{/default }}

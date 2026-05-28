@@ -624,7 +624,7 @@
   margin-bottom:0;
   color:inherit;
 }
-.base-section article .wistia-embed-video,.base-section article figure,.base-section article>picture{
+.base-section article .c-wistia,.base-section article .wistia-embed-video,.base-section article figure,.base-section article>picture{
   grid-row:1 /  -1;
   grid-column:2;
 }
@@ -700,16 +700,16 @@
 .base-section article ol li:not(:last-child){
   margin-bottom:12px;
 }
-.base-section article ol{
+.base-section article ol:not([class]){
   padding-top:4px;
   padding-bottom:4px;
 }
-.base-section article ol li{
+.base-section article ol:not([class]) li{
   min-height:36px;
   padding-top:8px;
   padding-left:52px;
 }
-.base-section article ol li:before{
+.base-section article ol:not([class]) li:before{
   width:36px;
   height:36px;
   font-size:18px;
@@ -717,11 +717,11 @@
   line-height:36px;
   border-radius:36px;
 }
-.base-section article ol li:not(:last-child){
+.base-section article ol:not([class]) li:not(:last-child){
   margin-bottom:0;
   padding-bottom:18px;
 }
-.base-section article ol li:not(:last-child):after{
+.base-section article ol:not([class]) li:not(:last-child):after{
   position:absolute;
   top:0;
   bottom:0;
@@ -930,7 +930,7 @@
 .base-section--half-media.base-section--reverse article{
   grid-template-columns:50vw 1fr;
 }
-.base-section--reverse article .wistia-embed-video,.base-section--reverse article>picture{
+.base-section--reverse article .c-wistia,.base-section--reverse article .wistia-embed-video,.base-section--reverse article>picture{
   grid-column:1;
 }
 .base-section--grey{
@@ -1057,7 +1057,7 @@ body[class="product.face-serum"] .base-section article:has(.circle-icons-list) p
   .base-section article>h1+figure,.base-section article>h1+picture[data-url],.base-section article>h2+figure,.base-section article>h2+picture[data-url]{
     order:0;
   }
-  .base-section article .wistia-embed-video,.base-section article figure,.base-section article>picture{
+  .base-section article .c-wistia,.base-section article .wistia-embed-video,.base-section article figure,.base-section article>picture{
     order:-1;
     grid-area:auto;
     grid-column:1;

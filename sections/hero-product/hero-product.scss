@@ -26,6 +26,7 @@
 @use "@components/c-bundle-included" as *;
 @use "@components/c-approved-by" as *;
 @use "@components/c-note" as *;
+@use "@components/c-upsell-card" as *;
 
 .hero-product {
     $root: &;

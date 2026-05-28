@@ -1,7 +1,7 @@
 <div class="c-rating {{#unless light }}c-rating--bg{{/unless }}">
-    <div class="e-rating-stars" style="--rating: {{ value }};"></div>
+    <div class="e-rating-stars" style="--rating: {{#if value }}{{ value }}{{else}}4.5{{/if }};"></div>
     {{#if custom }}
-        <span>{{ custom }} <strong>{{ value }}</strong>/5</span>
+        <span>{{ custom }} {{#if value }}<strong>{{ value }}</strong>/5{{/if }}</span>
     {{ else }}
         <a href="#"><strong>{{ value }}</strong>/5 Rated by Customers</a>
     {{/if }}

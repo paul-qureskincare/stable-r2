@@ -46,6 +46,15 @@
                     </div>
                 </div>
             {{/if}}
+            {{#if c-wistia }}
+                {{> c-wistia
+                    id=c-wistia
+                    inline=c-wistia-inline
+                    autoplay=true
+                    hide-panel=c-wistia-hide-panel
+                    custom=c-wistia-custom
+                }}
+            {{/if}}
             {{#if features-list }}
                 {{{ features-list }}}
             {{/if}}

@@ -1,0 +1,13 @@
+<div class="c-upsell-card">
+    <picture>
+        <img src="{{ image }}" alt="{{ name }}" />
+    </picture>
+    <small>Bundle &amp; Save</small>
+    <h6>{{ name }}</h6>
+    <p>{{ text }}</p>
+    {{> e-price
+        current="{$dyn}"
+        old="{$dyn}"
+    }}
+    <a href="#">Buy Now</a>
+</div>
