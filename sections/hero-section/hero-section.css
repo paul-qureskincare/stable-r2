@@ -33,6 +33,8 @@
 }
 .c-approved-by img{
   display:block;
+  -o-object-fit:cover;
+     object-fit:cover;
   width:46px;
   height:46px;
   vertical-align:top;
