@@ -1,0 +1,115 @@
+// Sections styles on current page
+@use "@sections/best-sellers/best-sellers" as *;
+@use "@sections/how-it-works/how-it-works" as *;
+// @use "@sections/accordion-tiles/accordion-tiles" as *;
+// @use "@sections/trusted-reviews/trusted-reviews" as *;
+// @use "@sections/features-marquee/features-marquee" as *;
+// @use "@sections/comparison-table/comparison-table" as *;
+// @use "@sections/complete-system/complete-system" as *;
+
+// Styles for current page only
+.sections-stack {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.across-image-banner--flex {
+    .container {
+        display: grid;
+        grid-template: repeat(2, auto) / min(50%, 500px) 1fr;
+        gap: 60px 70px;
+        align-items: center;
+
+        @include sm {
+            display: block;
+        }
+    }
+
+    article {
+        grid-row: 1 / -1;
+        gap: 24px;
+        margin-right: auto;
+
+        @include sm {
+            gap: 16px;
+        }
+
+        h1 {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            line-height: 1;
+
+            @include sm {
+                justify-content: center;
+            }
+        }
+
+        .e-icon-qure {
+            font-size: 46px;
+        }
+
+        .e-icon-thin-cross {
+            font-size: 20px;
+        }
+
+        .e-icon-flex {
+            margin-top: -4px;
+            font-size: 34px;
+        }
+
+        .e-pill-badge {
+            --badge-base-color: #212428;
+
+            padding: 4px 20px 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+            background: #c7e5db;
+
+            @include sm {
+                position: absolute;
+                bottom: 16px;
+                left: 16px;
+            }
+        }
+
+        .btn {
+            max-width: 450px;
+
+            @include sm {
+                max-width: none;
+            }
+        }
+    }
+
+    .badges-group {
+        display: flex;
+        gap: 24px;
+
+        @include sm {
+            display: none;
+        }
+
+        .e-pill-badge {
+            --badge-fill-color: #f6f6f7;
+            --badge-base-color: #212428;
+
+            gap: 6px;
+            padding: 6px 16px;
+            font-size: 16px;
+        }
+
+        .e-checkmark {
+            box-shadow: inset 0 0 0 1px;
+            background: none;
+        }
+    }
+
+    .c-certified-box {
+        border-radius: 100px;
+
+        @include sm {
+            display: none;
+        }
+    }
+}

@@ -15,7 +15,7 @@
     background: hsl( from currentcolor h calc(s * 3) calc(l + (100 - l) * 0.95));
 
     .e-checkmark {
-        font-size: 20px;
+        font-size: 1em;
     }
 
     .e-icon-checkmark {
@@ -26,9 +26,14 @@
     // .e-pill-badge--small
     &--sm,
     &--small {
+        gap: 6px;
         padding: 4px 12px;
         font-size: 16px;
         letter-spacing: normal;
+
+        .e-checkmark {
+            margin-left: -4px;
+        }
     }
 
     // .e-pill-badge--xs
@@ -37,6 +42,10 @@
         padding: 2px 12px;
         font-size: 16px;
         letter-spacing: normal;
+
+        .e-checkmark {
+            margin-left: -4px;
+        }
     }
 
     // .e-pill-badge--xxs

@@ -416,27 +416,34 @@
   background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
 }
 .e-pill-badge .e-checkmark{
-  font-size:20px;
+  font-size:1em;
 }
 .e-pill-badge .e-icon-checkmark{
   font-size:.6em;
 }
 .e-pill-badge--sm,.e-pill-badge--small{
+  gap:6px;
   padding:4px 12px;
   font-size:16px;
   letter-spacing:normal;
 }
+.e-pill-badge--sm .e-checkmark,.e-pill-badge--small .e-checkmark{
+  margin-left:-4px;
+}
 .e-pill-badge--xs{
   gap:6px;
   padding:2px 12px;
-}
-.e-pill-badge--xs,.e-pill-badge--xxs{
   font-size:16px;
   letter-spacing:normal;
+}
+.e-pill-badge--xs .e-checkmark{
+  margin-left:-4px;
 }
 .e-pill-badge--xxs{
   gap:4px;
   padding:0 10px;
+  font-size:16px;
+  letter-spacing:normal;
 }
 .e-pill-badge--fill{
   color:var(--badge-base-color, #fff);

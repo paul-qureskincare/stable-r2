@@ -30,6 +30,15 @@
         {{#if badge-blue }}
             <div class="e-pill-badge e-pill-badge--xs e-pill-badge--fill" style="--badge-fill-color: #91baec">{{ badge-blue }}</div>
         {{/if}}
+        {{#if hsa-fsa }}
+            <div
+                class="e-pill-badge e-pill-badge--sm e-pill-badge--fill"
+                style="--badge-fill-color: #f6f6f7; --badge-base-color: #212428"
+            >
+                <span class="e-checkmark"></span>
+                HSA/FSA
+            </div>
+        {{/if}}
     </a>
     <div class="c-product-tile__rating">
         <div class="e-rating-stars" style="--rating: {{ rating-value }};"></div>
