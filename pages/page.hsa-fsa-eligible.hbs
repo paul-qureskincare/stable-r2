@@ -1,0 +1,145 @@
+{{#> default
+    title="Qure + Flex"
+    body-class="page.hsa-fsa-eligible"
+    page-css=true
+}}
+    {{#> across-image-banner
+        classes="across-image-banner--flex"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/across-image-banner/images/flex.webp" />
+            <img src="sections/across-image-banner/images/flex-mob.webp" alt="Pay With HSA / FSA" />
+        </picture>
+        <div class="container">
+            <article>
+                <div class="e-pill-badge e-pill-badge--xs">Pay With HSA / FSA</div>
+                <h1>
+                    {{> e-icon icon="qure" }}
+                    {{> e-icon icon="thin-cross" }}
+                    {{> e-icon icon="flex" }}
+                </h1>
+                <p>Qure has partnered with Flex so you can use your HSA or FSA pre-tax dollars on eligible Qure products, from clinically validated skincare devices to dermatologist-approved at-home treatments.</p>
+                <a href="#" class="btn btn--primary">Shop Eligible Products</a>
+            </article>
+            <ul class="badges-group">
+                <li>
+                    <div class="e-pill-badge e-pill-badge--fill">
+                        <span class="e-checkmark"></span>
+                        FSA Eligible
+                    </div>
+                </li>
+                <li>
+                    <div class="e-pill-badge e-pill-badge--fill">
+                        <span class="e-checkmark"></span>
+                        HSA Eligible
+                    </div>
+                </li>
+            </ul>
+            {{> c-certified-box }}
+        </div>
+    {{/across-image-banner }}
+
+    {{#> how-it-works
+        title="How It Works"
+    }}
+        <ol>
+            <li>
+                <h6>Add Products to Your Cart</h6>
+                <p>Log in to your HSA or FSA provider to confirm your available balance before purchasing.</p>
+            </li>
+            <li>
+                <h6>Select Flex at Checkout</h6>
+                <p>Every eligible item is clearly labeled on this page. Add directly to cart, no guessing, no eligibility confusion.</p>
+            </li>
+            <li>
+                <h6>Enter With Your HSA/FSA Card</h6>
+                <p>Enter your HSA/FSA card. Flex verifies instantly, no forms, no reimbursement.</p>
+            </li>
+        </ol>
+    {{/how-it-works }}
+
+    {{#> text-section
+        classes="text-section--flex"
+    }}
+        <div>
+            {{> e-icon icon="qure" }}
+            {{> e-icon icon="thin-cross" }}
+            {{> e-icon icon="flex" }}
+        </div>
+        <h4>Spend HSA/FSA funds on your dermatologist-recommended</h4>
+        <a href="#">Learn how it works {{> e-icon icon="arrow" }}</a>
+    {{/text-section}}
+
+    {{#> best-sellers
+        title="Pay Directly With Your HSA/FSA Card"
+    }}
+        <div class="best-sellers__item">
+            {{> c-product-tile
+                image="assets/images/top-products/helmet.webp"
+                image-hover="/assets/images/top-products/helmet-hover.webp"
+                rating-value="4.9"
+                reviews="380"
+                name="Q-Renew LLLT Helmet"
+                hsa-fsa=true
+                button="Buy Now"
+            }}
+        </div>
+        <div class="best-sellers__item">
+            {{> c-product-tile
+                image="assets/images/top-products/q-rejuvalight-pro-facewear.webp"
+                image-hover="/assets/images/top-products/q-rejuvalight-pro-facewear-hover.webp"
+                rating-value="4.6"
+                reviews="1,375"
+                name="Q-Rejuvalight Pro Facewear"
+                hsa-fsa=true
+                button="Buy Now"
+            }}
+        </div>
+        <div class="best-sellers__item">
+            {{> c-product-tile
+                image="assets/images/top-products/neck-and-deck.webp"
+                image-hover="/assets/images/top-products/neck-and-deck-hover.webp"
+                rating-value="4.5"
+                reviews="106"
+                name="Neck & Décolletage LED Device"
+                hsa-fsa=true
+                button="Buy Now"
+            }}
+        </div>
+        <div class="best-sellers__item">
+            {{> c-product-tile
+                image="sections/complete-system/images/micro-infusion.webp"
+                image-hover="/sections/complete-system/images/micro-infusion-hover.webp"
+                reviews="196"
+                name="Micro-Infusion Facial System"
+                hsa-fsa=true
+                button="Buy Now"
+            }}
+        </div>
+    {{/best-sellers}}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "What is a qualified customer?",
+                "text": "<p>A qualified customer is any individual with an active HSA (Health Savings Account) or FSA (Flexible Spending Account) who is purchasing an eligible product. Most people with employer-sponsored health benefits or a high-deductible health plan qualify.</p>"
+            },
+            {
+                "summary": "What is an HSA or FSA and what are the benefits?",
+                "text": "<p>HSA (Health Savings Account) and FSA (Flexible Spending Account) are tax-advantaged accounts that let you use pre-tax dollars for qualified health and wellness purchases — giving you an instant discount equal to your tax rate. FSAs are employer-sponsored with use-it-or-lose-it rules; HSAs are tied to high-deductible health plans and roll over year to year.</p>"
+            },
+            {
+                "summary": "I\'m not seeing HSA or FSA options at checkout. Why not?",
+                "text": "<p>The HSA/FSA option only appears at checkout when your cart contains eligible products. If you don\'t see it, one or more items in your cart may not qualify. Remove non-eligible items and try again, or contact our support team for help.</p>"
+            },
+            {
+                "summary": "I keep being redirected to Shop Pay. How do I use my HSA/FSA card?",
+                "text": "<p>At checkout, scroll past the accelerated payment options (Shop Pay, Apple Pay, etc.) to the manual payment section. Select Flex | Pay with HSA/FSA as your payment method, then enter your HSA or FSA debit card details as prompted.</p>"
+            },
+            {
+                "summary": "I don\'t have an HSA or FSA card. Can I still use my HSA/FSA funds?",
+                "text": "<p>Yes. You can pay with a regular credit or debit card at checkout, and Flex will email you an itemized receipt that you can submit to your HSA or FSA provider for reimbursement. The process typically takes 5–10 business days depending on your plan.</p>"
+            }
+        ]'
+    }}
+{{/default }}

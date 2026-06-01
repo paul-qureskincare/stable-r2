@@ -4,6 +4,9 @@
 {{/unless}}
 <section class="best-sellers {{ classes }}">
     <div class="container">
+        {{#if title }}
+            <h2>{{ title }}</h2>
+        {{/if }}
         <div class="best-sellers__list">
             {{> @partial-block }}
         </div>

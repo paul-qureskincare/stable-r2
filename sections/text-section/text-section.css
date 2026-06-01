@@ -124,6 +124,50 @@ body.page\.our-story .text-section--stats ul span{
 .text-section--stats .footnote p{
   margin:0;
 }
+.text-section--flex{
+  padding-top:40px;
+  padding-bottom:40px;
+  background:#f6f6f7;
+}
+.text-section--flex article{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:none;
+}
+.text-section--flex div{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.text-section--flex .e-icon-qure{
+  font-size:34px;
+}
+.text-section--flex .e-icon-thin-cross{
+  font-size:14px;
+}
+.text-section--flex .e-icon-flex{
+  margin-top:-4px;
+  font-size:24px;
+}
+.text-section--flex .e-icon-arrow{
+  font-size:12px;
+}
+.text-section--flex h4{
+  margin-bottom:0;
+  text-align:center;
+}
+.text-section--flex a{
+  line-height:1;
+  white-space:nowrap;
+  border-bottom:1px solid;
+}
+.text-section--flex a:hover{
+  text-decoration:none;
+  border-bottom-color:transparent;
+}
 body.page\.exclusive-holiday-bundle-deal .text-section{
   padding-top:60px;
   padding-bottom:60px;
@@ -151,6 +195,15 @@ body.page\.contact-us .text-section article a{
 }
 body.page\.contact-us .text-section article a:hover{
   text-decoration:none;
+}
+@media screen and (max-width:991px){
+  .text-section--flex article{
+    flex-direction:column;
+    gap:16px;
+  }
+  .text-section--flex h4{
+    font-size:28px;
+  }
 }
 @media screen and (max-width:767px){
   .text-section article{
