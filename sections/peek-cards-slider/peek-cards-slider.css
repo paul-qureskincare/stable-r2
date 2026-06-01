@@ -70,6 +70,9 @@
   grid-row:1 /  -1;
   grid-column:2;
 }
+.peek-cards-slider .c-swiper:not(.swiper-initialized){
+  display:none;
+}
 .peek-cards-slider .swiper-slide{
   position:relative;
   overflow:hidden;

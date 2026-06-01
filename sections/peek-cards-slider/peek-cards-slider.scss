@@ -56,6 +56,10 @@
         grid-row: 1 / -1;
         grid-column: 2;
 
+        &:not(.swiper-initialized) {
+            display: none;
+        }
+
         @include sm {
             grid-row: auto;
             grid-column: auto;

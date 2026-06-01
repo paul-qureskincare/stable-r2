@@ -1,21 +1,10 @@
 @use "@root/mixins" as *;
 @use "@elements/e-declaimer" as *;
 @use "@elements/e-pill-badge" as *;
-@use "@components/c-wistia-embed-video" as *;
+// @use "@components/c-wistia-embed-video" as *;
 
 .expert-reviews {
     $root: &;
-
-    // .expert-reviews--old-page
-    &--old-page {
-        padding-top: 60px;
-        padding-bottom: 60px;
-
-        @include sm {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-    }
 
     .container {
         display: grid;
@@ -63,6 +52,50 @@
         }
     }
 
+    .c-wistia {
+        @include sm {
+            min-height: 200px;
+        }
+
+        wistia-player {
+            height: 100%;
+            border-radius: 0;
+
+        }
+    }
+
+    .c-wistia__custom {
+        position: relative;
+        height: 100%;
+
+        picture {
+            &::after {
+                display: none;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+
+            @include sm {
+                border-radius: 10px;
+            }
+        }
+
+        .e-pill-badge {
+            position: absolute;
+            bottom: 18px;
+            left: 18px;
+            z-index: 8;
+            color: inherit;
+            background: rgb(255 255 255 / 60%);
+        }
+    }
+
+    // TODO: Old code need to remove after change video
     .c-wistia-embed-video {
         border-radius: 10px 0 0 10px;
 
@@ -74,7 +107,7 @@
             position: absolute;
             bottom: 18px;
             left: 18px;
-            z-index: 100;
+            z-index: 8;
             color: inherit;
             background: rgb(255 255 255 / 60%);
         }
@@ -89,6 +122,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                max-width: calc(100vw - 32px);
 
                 @include sm {
                     gap: 12px;

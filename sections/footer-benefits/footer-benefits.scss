@@ -13,10 +13,18 @@
         padding-bottom: 40px;
     }
 
+    .c-swiper {
+        &:not(.swiper-initialized) {
+            display: none;
+        }
+    }
+
     .swiper-slide {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        width: 100%;
+        max-width: 100vw;
 
         @include sm {
             align-items: center;

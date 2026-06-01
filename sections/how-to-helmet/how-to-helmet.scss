@@ -63,6 +63,7 @@
     .swiper-slide {
         position: relative;
         overflow: hidden;
+        max-width: 100vw;
 
         picture {
             position: relative;

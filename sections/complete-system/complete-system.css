@@ -97,6 +97,7 @@
 .c-product-tile__image{
   position:relative;
   overflow:hidden;
+  aspect-ratio:1/1;
   border-radius:10px;
 }
 .c-product-tile__image img{
