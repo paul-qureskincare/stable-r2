@@ -568,16 +568,18 @@
     {{/across-image-banner}}
 
     {{#> expert-reviews }}
-        {{#> c-wistia-embed-video
-            classes=""
+        {{> c-wistia
             id="8kldazu7xg"
-            alt="Watch: Doctorly"
+            custom='
+                <picture>
+                    <img src="sections/expert-reviews/images/video-poster-1.webp" alt="Trusted and Recommended by Experts" />
+                </picture>
+                <div class="e-pill-badge e-pill-badge--sm">
+                    <i class="e-icon e-icon-watch"></i>
+                    <div><strong>Watch:</strong> Doctorly</div>
+                </div>
+            '
         }}
-            <div class="e-pill-badge e-pill-badge--sm wistia-custom-play">
-                <i class="e-icon e-icon-watch"></i>
-                <div><strong>Watch:</strong> Doctorly</div>
-            </div>
-        {{/c-wistia-embed-video}}
         <div class="expert-reviews__content">
             <div class="c-swiper c-swiper-thumbs"
                 data-swiper='{
@@ -683,7 +685,6 @@
     {{/base-slider }}
 
     <!-- PRODUCT RESULTS -->
-    {{!-- <link rel="stylesheet" href="sections/product-results/product-results.css" /> --}}
     <section class="product-results">
         <div class="container">
             <div class="product-results__header">
@@ -885,7 +886,6 @@
     {{/how-to-helmet }}
 
     <!-- HOW IT COMPARES -->
-    {{!-- <link rel="stylesheet" href="sections/how-compares/how-compares.css" /> --}}
     <div class="how-compares" id="compares">
         <div class="container">
             <div class="how-compares__header">

@@ -66,6 +66,7 @@
 .how-to-helmet .swiper-slide{
   position:relative;
   overflow:hidden;
+  max-width:100vw;
 }
 .how-to-helmet .swiper-slide picture{
   position:relative;

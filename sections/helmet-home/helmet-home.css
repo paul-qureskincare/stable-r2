@@ -387,6 +387,9 @@
   margin-top:0 !important;
   margin-bottom:0 !important;
 }
+.helmet-home__gallery .c-swiper:not(.c-swiper-thumbs) .swiper-slide{
+  min-height:350px;
+}
 .helmet-home__gallery .swiper-slide{
   position:relative;
 }

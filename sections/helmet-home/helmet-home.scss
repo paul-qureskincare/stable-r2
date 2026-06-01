@@ -60,6 +60,14 @@
 
     // .helmet-home__gallery
     &__gallery {
+        .c-swiper {
+            &:not(.c-swiper-thumbs) {
+                .swiper-slide {
+                    min-height: 350px;
+                }
+            }
+        }
+
         .swiper-slide {
             position: relative;
 

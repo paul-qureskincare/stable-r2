@@ -466,6 +466,7 @@
 .c-product-tile__image{
   position:relative;
   overflow:hidden;
+  aspect-ratio:1/1;
   border-radius:10px;
 }
 .c-product-tile__image img{
@@ -624,6 +625,7 @@
   flex-direction:column;
   gap:16px;
   align-items:center;
+  max-width:100vw;
   padding:32px;
   text-align:left;
   border-radius:10px;
@@ -632,6 +634,7 @@
 .base-slider--why-work .swiper-slide img{
   max-width:250px;
   height:auto;
+  aspect-ratio:1.1;
   margin-bottom:4px;
 }
 .base-slider--why-work .swiper-slide h6{
