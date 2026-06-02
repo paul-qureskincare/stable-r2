@@ -3,28 +3,25 @@
     body-class="page.qure-microinfusion-pro-offer"
     page-css=true
 }}
-    <!-- HERO SECTION  -->
-    {{!-- <link rel="stylesheet" href="sections/hero-section/hero-section.css" /> --}}
-    <section class="hero-section">
-        <div class="container">
-            <picture class="hero-section__image">
-                <source media="(min-width:768px)" srcset="sections/hero-section/images/micro-infusion-pro-hero.webp" />
-                <img src="sections/hero-section/images/micro-infusion-pro-hero-mob.webp" alt="Micro-Infusion PRO" />
-            </picture>
-            <article class="hero-section__content">
-                <div class="hero-section__content-header">
-                    {{> c-approved-by }}
-                    <h1>Visibly reduce the appearance of wrinkles and dark spots - without injectables.</h1>
-                    <p><strong>24K gold microneedles</strong> deliver <strong>targeted serums</strong> beyond your skin's barrier where traditional creams can't reach.</p>
-                </div>
-                <div class="hero-section__content-button">
-                    <a href="#buy_box" class="btn btn--primary">Start your transformation</a>
-                    <div class="c-info-bar"><strong>Limited Time Offer:</strong> Save Up to 70%</div>
-                </div>
-            </article>
-        </div>
-    </section>
-    <!-- HERO SECTION END  -->
+    {{#> hero-section
+        classes=""
+    }}
+        <picture class="hero-section__image">
+            <source media="(min-width:768px)" srcset="sections/hero-section/images/micro-infusion-pro-hero.webp" />
+            <img src="sections/hero-section/images/micro-infusion-pro-hero-mob.webp" alt="Micro-Infusion PRO" />
+        </picture>
+        <article class="hero-section__content">
+            <div class="hero-section__content-header">
+                {{> c-approved-by }}
+                <h1>Visibly reduce the appearance of wrinkles and dark spots - without injectables.</h1>
+                <p><strong>24K gold microneedles</strong> deliver <strong>targeted serums</strong> beyond your skin's barrier where traditional creams can't reach.</p>
+            </div>
+            <div class="hero-section__content-button">
+                <a href="#buy_box" class="btn btn--primary">Start your transformation</a>
+                <div class="c-info-bar"><strong>Limited Time Offer:</strong> Save Up to 70%</div>
+            </div>
+        </article>
+    {{/hero-section }}
 
     {{> board-advisors
         title="Trusted and Recommended by Skin Experts"

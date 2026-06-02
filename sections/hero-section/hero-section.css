@@ -42,6 +42,19 @@
   border-radius:50%;
   box-shadow:0 5px 5px 0 rgba(0,0,0,.25);
 }
+.c-approved-by--secondary li+li{
+  margin-left:-12px;
+}
+.c-approved-by--secondary span{
+  padding:0 8px;
+}
+.c-approved-by--secondary a{
+  margin-right:4px;
+  text-decoration:underline;
+}
+.c-approved-by--secondary a:hover{
+  text-decoration:none;
+}
 
 .c-info-bar{
   font-size:16px;
@@ -69,6 +82,16 @@
   border-radius:50%;
   background:#fea500;
   content:"\e90c";
+}
+.c-info-bar--fill{
+  padding:6px 10px;
+  border-radius:30px;
+}
+.c-info-bar--alert{
+  background:#ffeeea;
+}
+.c-info-bar--alert:before{
+  background:#ff5429;
 }
 
 .c-marked-list{
@@ -314,6 +337,25 @@
   vertical-align:top;
   border-radius:10px;
 }
+.hero-section--secondary .hero-section__content{
+  position:relative;
+  z-index:1;
+}
+.hero-section--secondary .hero-section__content-button{
+  position:relative;
+}
+.hero-section--secondary .hero-section__content-button hr{
+  position:absolute;
+  top:13px;
+  right:0;
+  left:0;
+  z-index:-1;
+  height:1px;
+  margin:0;
+  border:0;
+  outline:none;
+  background:#8b8c8e;
+}
 .page\.qure-microinfusion-offer-listicle .hero-section__content{
   padding-top:20px;
   padding-bottom:0;
@@ -321,9 +363,18 @@
 .page\.qure-microinfusion-offer-listicle .hero-section__content-footer .c-note{
   align-self:flex-start;
 }
+@media screen and (min-width:768px){
+  .hero-section--secondary .hero-section__content-button .c-info-bar--alert{
+    background:#fff;
+  }
+}
 @media screen and (min-width:1200px){
   .hero-section .container{
     max-width:calc(100% - (100vw - 1172px) / 2);
+  }
+  .hero-section--secondary .hero-section__content-button .c-info-bar--alert{
+    padding-right:30px;
+    padding-left:30px;
   }
 }
 @media screen and (min-width:1400px){
@@ -347,6 +398,12 @@
     width:26px;
     height:26px;
     border-width:2px;
+  }
+  .c-approved-by--secondary li+li{
+    margin-left:-8px;
+  }
+  .c-approved-by--secondary span{
+    padding:0 4px;
   }
   .c-marked-list li,.page\.qure-microinfusion-offer-listicle .c-note{
     font-size:16px;
@@ -388,6 +445,18 @@
   }
   .hero-section__content-footer{
     gap:20px;
+  }
+  .hero-section--secondary .container{
+    flex-direction:column-reverse;
+    gap:0;
+  }
+  .hero-section--secondary .hero-section__content{
+    margin-bottom:-100px;
+    padding-top:20px;
+    padding-bottom:0;
+  }
+  .hero-section--secondary .hero-section__content-button hr{
+    display:none;
   }
   .page\.qure-microinfusion-offer-listicle .hero-section .container{
     flex-direction:column-reverse;

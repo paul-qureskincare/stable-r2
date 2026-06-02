@@ -17,3 +17,31 @@
 
 
 // Styles for current page only
+.sections-stack {
+    padding-top: 60px !important;
+
+    @include sm {
+        padding-top: 40px !important;
+    }
+}
+
+.hero-section {
+    .hero-section__content-header {
+        h1 {
+            line-height: 1.2;
+
+            @include sm {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &:not(.hero-section--secondary) {
+        .hero-section__image {
+            img {
+                object-position: 0 50%;
+            }
+        }
+    }
+}
+
