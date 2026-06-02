@@ -1,7 +1,16 @@
-<div class="c-approved-by">
+<div class="c-approved-by {{#if secondary }}c-approved-by--secondary{{/if}}">
     <ul>
         <li><img src="sections/hero-section/images/approved-by-1.webp" alt="Dr. Shah" /></li>
         <li><img src="sections/hero-section/images/approved-by-2.webp" alt="Dr. Maxfield" /></li>
+        {{#if secondary }}
+            <li><img src="sections/hero-section/images/approved-by-3.webp" alt="Dr. Maxfield" /></li>
+            <li><img src="sections/hero-section/images/approved-by-4.webp" alt="Dr. Maxfield" /></li>
+        {{/if }}
     </ul>
-    <p>Approved by <strong>Dr. Shah</strong> &amp; <strong>Dr. Maxfield</strong></p>
+    {{#if secondary }}
+        <p>50+ dermatologists <span>&bull;</span> <a href="#"><strong>4.8/5</strong></a> 500k+ customers</p>
+    {{ else }}
+        <p>Approved by <strong>Dr. Shah</strong> &amp; <strong>Dr. Maxfield</strong></p>
+    {{/if }}
+
 </div>

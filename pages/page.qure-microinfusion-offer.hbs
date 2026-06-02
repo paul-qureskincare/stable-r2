@@ -3,6 +3,7 @@
     body-class="page.qure-microinfusion-offer"
     page-css=true
 }}
+
     {{#> hero-product }}
         <div class="hero-product__gallery">
             <div
@@ -171,6 +172,47 @@
             }}
         </div>
     {{/hero-product}}
+
+    {{#> hero-section
+        classes=""
+    }}
+        <picture class="hero-section__image">
+            <source media="(min-width:768px)" srcset="sections/hero-section/images/micro-infusion-hero-b.webp" />
+            <img src="sections/hero-section/images/micro-infusion-hero-b-mob.webp" alt="Micro-Infusion" />
+        </picture>
+        <article class="hero-section__content">
+            <div class="hero-section__content-header">
+                {{> c-approved-by secondary=true }}
+                <h1>Fine lines &amp; dark spots look smoother. No injections.</h1>
+                <p><strong>24K gold-plated microneedles.</strong> Qure's Micro-Infusion System delivers active serums deeper than traditional creams can reach.</p>
+            </div>
+            <div class="hero-section__content-button">
+                <div class="c-info-bar c-info-bar--alert c-info-bar--fill"><strong>Limited Time Offer:</strong> Less than one clinic visit.</div>
+                <a href="#buy_box" class="btn btn--primary">START &amp; SAVE 70%</a>
+            </div>
+        </article>
+    {{/hero-section }}
+
+    {{#> hero-section
+        classes="hero-section--secondary"
+    }}
+        <picture class="hero-section__image">
+            <source media="(min-width:768px)" srcset="sections/hero-section/images/micro-infusion-hero-c.webp" />
+            <img src="sections/hero-section/images/micro-infusion-hero-c-mob.webp" alt="Micro-Infusion" />
+        </picture>
+        <article class="hero-section__content">
+            <div class="hero-section__content-header">
+                {{> c-approved-by secondary=true }}
+                <h1>Fine lines &amp; dark spots look visibly reduced. No injections.</h1>
+                <p><strong>24K gold microneedles</strong> deliver <strong>targeted serums</strong> beyond your skin's barrier where traditional creams can't reach.</p>
+            </div>
+            <div class="hero-section__content-button">
+                <hr />
+                <div class="c-info-bar c-info-bar--alert c-info-bar--fill"><strong>Limited Time Offer:</strong> Save Up to 70%.</div>
+                <a href="#buy_box" class="btn btn--primary">Choose Your Supply</a>
+            </div>
+        </article>
+    {{/hero-section }}
 
     {{#> press-reviews }}
         <div

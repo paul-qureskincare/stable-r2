@@ -168,6 +168,58 @@
         }
     }
 
+    &--secondary {
+        .container {
+            @include sm {
+                flex-direction: column-reverse;
+                gap: 0;
+            }
+        }
+
+        #{$root}__content {
+            position: relative;
+            z-index: 1;
+
+            @include sm {
+                margin-bottom: -100px;
+                padding-top: 20px;
+                padding-bottom: 0;
+            }
+        }
+
+        #{$root}__content-button {
+            position: relative;
+
+            hr {
+                position: absolute;
+                top: 13px;
+                right: 0;
+                left: 0;
+                z-index: -1;
+                height: 1px;
+                margin: 0;
+                border: 0;
+                outline: none;
+                background: #8b8c8e;
+
+                @include sm {
+                    display: none;
+                }
+            }
+
+            .c-info-bar--alert {
+                @media screen and (min-width: 1200px) {
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+
+                @media screen and (min-width: 768px) {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
     // Styles on qure-microinfusion-offer-listicle page
     /* stylelint-disable-next-line selector-class-pattern */
     @at-root .page\.qure-microinfusion-offer-listicle  {
