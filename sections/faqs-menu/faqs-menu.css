@@ -9,6 +9,7 @@
   padding-right:0;
 }
 .faqs-menu .dropdown{
+  position:relative;
   width:100%;
 }
 .faqs-menu .dropdown-toggle{
@@ -86,9 +87,13 @@
   content:"\e91e";
 }
 .faqs-menu .dropdown-menu{
+  position:absolute;
   z-index:1;
   padding:0;
   font-size:18px;
+}
+.faqs-menu .dropdown-menu.show{
+  display:block;
 }
 .faqs-menu .dropdown-menu p{
   font-weight:500;
@@ -213,10 +218,12 @@
     padding-right:16px;
   }
   .faqs-menu .dropdown-menu{
+    display:none;
     width:100%;
-    border-color:#dfe0e0;
+    border:1px solid #dfe0e0;
     border-top:0;
     border-radius:5px;
+    background:#fff;
     transform:translateY(62px) !important;
     border-start-end-radius:0;
     border-start-start-radius:0;
