@@ -5,6 +5,10 @@
 
     background: #f6f6f7;
 
+    @include sm {
+        min-height: 640px;
+    }
+
     .container {
         display: grid;
         grid-template-columns: 1fr 50vw;
@@ -114,6 +118,20 @@
 
             &:nth-child(odd) {
                 margin-top: -80px;
+            }
+        }
+
+        .wistia-embed-video {
+            min-height: 220px;
+
+            @include lg {
+                min-height: 180px;
+            }
+
+            @include sm {
+                width: 100%;
+                max-width: 25vw;
+                min-height: calc(25vw * 1.5);
             }
         }
     }
