@@ -60,6 +60,9 @@
   width:100%;
   height:100%;
 }
+.guide-welcome__video{
+  min-height:600px;
+}
 .guide-welcome__card{
   display:flex;
   flex-direction:column;
