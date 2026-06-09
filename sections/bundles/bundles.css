@@ -89,6 +89,10 @@
   justify-content:center;
   line-height:1;
 }
+.e-pay-options li{
+  display:flex;
+  align-items:center;
+}
 .e-pay-options img{
   max-width:100%;
   height:auto;
