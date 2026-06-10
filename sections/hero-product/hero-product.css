@@ -368,6 +368,10 @@
   justify-content:center;
   line-height:1;
 }
+.e-pay-options li{
+  display:flex;
+  align-items:center;
+}
 .e-pay-options img{
   max-width:100%;
   height:auto;
@@ -1419,6 +1423,10 @@
   align-items:center;
   font-size:14px;
   line-height:1.25;
+}
+.c-payment-selector__text img{
+  width:auto;
+  height:18px;
 }
 
 .e-countdown{
