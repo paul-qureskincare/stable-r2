@@ -241,6 +241,13 @@
   font-size:14px;
   text-align:center;
 }
+.complete-system--bg{
+  position:relative;
+  z-index:1;
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
 @media screen and (max-width:991px){
   .complete-system__scale li span{
     display:none;
@@ -249,6 +256,11 @@
     padding:16px;
     border-radius:10px;
     background:#f6f6f7;
+  }
+  .complete-system--bg .c-product-tile{
+    padding:0;
+    border-radius:0;
+    background:none;
   }
 }
 @media screen and (max-width:767px){
@@ -280,6 +292,10 @@
   }
   .complete-system__scale li:first-child:after,.complete-system__scale li:last-child:after{
     width:calc(50% + 8px);
+  }
+  .complete-system--bg{
+    padding-top:40px;
+    padding-bottom:40px;
   }
 }
 @media (hover:hover){

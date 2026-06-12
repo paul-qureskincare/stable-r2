@@ -1,0 +1,805 @@
+{{#> default
+    title="All-In-One Face Serum 2.0"
+    body-class="product.all-in-one-serum"
+    page-css=true
+}}
+    {{#> hero-product }}
+        <div class="hero-product__gallery">
+            <div
+                class="c-swiper"
+                data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 16,
+                    "navigation": {
+                        "prevEl": "#hero-product .c-swiper-button-prev",
+                        "nextEl": "#hero-product .c-swiper-button-next"
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/aio-face-serum/aio-face-serum-base-1.webp" alt="All-In-One Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/micro-infusion-pdp/B&A-1.webp" alt="All-In-One Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/aio-face-serum/aio-face-serum-base-2.webp" alt="All-In-One Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/aio-face-serum/aio-face-serum-base-3.webp" alt="All-In-One Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/micro-infusion-pdp/B&A-4.webp" alt="All-In-One Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/micro-infusion-pdp/B&A-5.webp" alt="All-In-One Face Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/micro-infusion-pdp/B&A-8.webp" alt="All-In-One Face Serum" />
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-thumbs-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div
+                    class="c-swiper c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": "auto",
+                        "spaceBetween": 12
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/aio-face-serum/aio-face-serum-base-1.webp" alt="All-In-One Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/micro-infusion-pdp/B&A-1.webp" alt="All-In-One Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/aio-face-serum/aio-face-serum-base-2.webp" alt="All-In-One Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/aio-face-serum/aio-face-serum-base-3.webp" alt="All-In-One Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/micro-infusion-pdp/B&A-4.webp" alt="All-In-One Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/micro-infusion-pdp/B&A-5.webp" alt="All-In-One Face Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/micro-infusion-pdp/B&A-8.webp" alt="All-In-One Face Serum" />
+                        </div>
+                    </div>
+                </div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+        <div class="hero-product__main">
+            {{> c-rating custom="Backed by Dermatologists" light=true }}
+            <p>ANTI-AGING &amp; ALL-IN-ONE SERUM</p>
+            <h1>Embrace ageless confidence with All-In-One Face Serum</h1>
+            <article>
+                <ul>
+                    <li>Helps reduce the appearance of fine lines and uneven skin tone, for smoother-, firmer-looking skin.</li>
+                    <li>Save money buying multiple skincare products to treat various concerns.</li>
+                    <li>Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Vitamin C, Vitamin E, Ferulic Acid.</li>
+                </ul>
+            </article>
+            <ul class="e-pill-tabs e-pill-tabs--selector">
+                <li>
+                    <label>
+                        <input name="delivery-type" type="radio" />
+                        One time purchase
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input name="delivery-type" type="radio" checked />
+                        Subscribe &amp; Save
+                    </label>
+                </li>
+            </ul>
+            {{> c-supply-selector
+                classes="c-supply-selector--delivery"
+                title="Select Your Delivery"
+                list='[
+                    {
+                        "image": "assets/images/aio-face-serum/form-thumbnail-trio.webp",
+                        "name": "6 Months",
+                        "desc": "1 Bottle + 2 Refills",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "price-special": "{$dyn}",
+                        "save-pill": true,
+                        "save-value": "{dyn}% OFF",
+                        "tag-down": true,
+                        "tag-name": "Best Value",
+                        "option": "subscribe",
+                        "checked": true
+                    },
+                    {
+                        "image": "assets/images/aio-face-serum/form-thumbnail-duo.webp",
+                        "name": "4 Months",
+                        "desc": "1 Bottle + 1 Refills",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "price-special": "{$dyn}",
+                        "save-pill": true,
+                        "save-pill-light": true,
+                        "save-value": "{dyn}% OFF",
+                        "option": "subscribe"
+                    },
+                    {
+                        "image": "assets/images/aio-face-serum/form-thumbnail-uno.webp",
+                        "name": "2 Months",
+                        "desc": "1 Bottle",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "save-pill": true,
+                        "save-pill-light": true,
+                        "save-value": "{dyn}% OFF",
+                        "option": "subscribe"
+                    }
+                ]'
+            }}
+            <p class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
+            <div class="c-buy-block">
+                {{> c-order-button
+                    button="Subscribe Now & Save {dyn}%"
+                }}
+                {{> c-certified-box }}
+                <ul class="e-features-list">
+                    <li>
+                        {{> e-icon icon="guarantee" }}
+                        30-Day Money-Back Guarantee
+                    </li>
+                    <li>
+                        {{> e-icon icon="shipping-order" }}
+                        Free Shipping over {$dyn}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero-product__extra">
+            <div class="hero-product__best-with">
+                <h6>Get The Best Results With</h6>
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": "1.25",
+                        "spaceBetween": 12,
+                        "breakpoints": {
+                            "992": {
+                                "slidesPerView": 2
+                            }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="assets/images/targeted-patches/result-1.webp" alt="All-In One Face Serum" /></a>
+                            <a href="#">All-In One Face Serum</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/targeted-patches/derm_mist_result.webp" alt="Micro-Infusion Targeted Patches" />
+                            <a href="#">Micro-Infusion Targeted Patches</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "Key Benefits",
+                        "text": "
+                            <p>The All-In-One Serum helps improve the appearance of fine lines, uneven skin tone, dryness, and rough texture in one simple step. Suitable for all skin types, including sensitive skin.</p>
+                            <p>Visible benefits may include:</p>
+                            <ul>
+                                <li>Brighter, more radiant-looking skin</li>
+                                <li>Smoother- and softer-looking skin texture</li>
+                                <li>Improved appearance of uneven skin tone and discoloration</li>
+                                <li>Reduced appearance of fine lines and early signs of aging</li>
+                                <li>Hydrated, refreshed, and healthier-looking skin</li>
+                            </ul>
+                            <p>Formulated with clinically studied ingredients to support healthy-looking skin over time.</p>
+                        "
+                    },
+                    {
+                        "summary": "How To Use",
+                        "text": "
+                            <ul>
+                                <li>Apply 1-2 pumps to clean, dry skin in the evening. </li>
+                                <li>Gently press across face and neck, allowing the serum to absorb before applying moisturizer. </li>
+                                <li>For best results, use consistently as part of your daily routine.</li>
+                            </ul>
+                        "
+                    },
+                    {
+                        "summary": "Why We Love It",
+                        "text": "
+                            <p>We created this serum for anyone who’s been burned by retinol, literally. By pairing retinol with bakuchiol and a barrier-supporting formula, we’ve made it possible to target the appearance of fine lines, uneven tone, and texture while helping maintain skin comfort and hydration.</p>
+                        "
+                    },
+                    {
+                        "summary": "Full Ingredient List",
+                        "text": "
+                            <p>
+                                <strong>Retinol</strong><br />
+                                Helps reduce the appearance of fine lines, wrinkles, and uneven skin tone.
+                            </p>
+                            <p>
+                                <strong>Bakuchiol</strong><br />
+                                A plant-derived retinol-like ingredient that helps support smoother-looking, more even-appearing skin.
+                            </p>
+                            <p>
+                                <strong>Lactic Acid + Mandelic Acid</strong><br />
+                                Helps visibly brighten the look of skin while improving the appearance of uneven tone and texture.
+                            </p>
+                            <hr />
+                            <ul class=\"c-marked-list\">
+                                <li>Suitable for sensitive skin</li>
+                                <li>Hypoallergenic and allergy tested</li>
+                                <li>Free from fragrance, parabens, and PEG</li>
+                                <li>Vegan and cruelty-free</li>
+                            </ul>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+    {{/hero-product }}
+
+    {{> logos-marquee }}
+
+    {{#> base-section
+        classes="base-section--reverse"
+        title="Your skin changes. Your serum should too"
+        picture="assets/images/aio-face-serum/aio-face-serum-base-4.webp"
+        button="Shop Now"
+    }}
+        <p>As skin evolves, its needs change. Early dehydration and dullness can slowly turn into fine lines, uneven tone, and a loss of firmness. This daily serum is designed to support skin at every stage.</p>
+    {{/base-section }}
+
+    {{#> trusted-reviews
+        title="Results you’ll see with your own eyes"
+    }}
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/ana.webp" alt="Amazing" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/australia_f.webp" alt="Ana L." />
+                    Ana L.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Amazing</h6>
+                    <p>I'm so happy, l've been using the products for 2 months and they have made such a difference in my skin. I had tried a lot of products before but with just one bottle of the serum, staying consistent with the Mask, and doing a few treatments of the Micro-Infusion for scaring. l've seen a huge change in my skin.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/vanessa.webp" alt="My cystic acne is gone" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/australia_f.webp" alt="Vanessa B." />
+                    Vanessa B.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>My cystic acne is gone</h6>
+                    <p>“So far loving it! Had a little purging the first day using it but when it settled down, boy was it good. My cystic acne is gone. I still have some hyperpigmentation and little surface pimples that I get occasionally but no where near the pain I experienced with cystic acne.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/cheryl.webp" alt="I see a difference!" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Cheryl T." />
+                    Cheryl T.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>I see a difference!</h6>
+                    <p>“I SEE A DIFFERENCE!! This product is a keeper. I’ve been using it for 2 weeks now and there is definitely a big difference in my skin!! I noticed my sun spots have lighten, especially on the backs of my hands. Facial redness and discolorations have lessened! Very happy with this serum.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/dona.webp" alt="Love your serum!" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Dona S." />
+                    Dona S.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Love your serum!</h6>
+                    <p>“Love your serum! It goes on easily, feels good, and did make my old skin look and feel better. Wish it had been around when I was in my 30’s. I might have taken care of my skin. Since my late 60’s I’ve tried other brands. All were a bit disappointing and I saw few results. After two weeks using Qure I actually thought my old skin looked better.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/tina.webp" alt="I look fresher" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Tina C." />
+                    Tina C.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>I look fresher</h6>
+                    <p>“I am only 2 weeks in on using this product, my skin feels softer, hydrated and glowing. Friends have asked me what do I use on my face as I look fresher. I tell them Qure All in One Face Serum. I have give them your website to order their choice of products from your company 😁👍.”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/bethany.webp" alt="Changed my life!" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/canada_f.webp" alt="Bethany N." />
+                    Bethany N.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Changed my life!</h6>
+                    <p>“This product has changed my life! My skin feels brighter, clearer and way more even! I’ll use this for the rest of my life!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/lena.webp" alt="My skin feels tight" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Lena A." />
+                    Lena A.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>My skin feels tight</h6>
+                    <p>“I tried this serum after trying all the others. I have found the fountain of youth! It started minimizing fine lines from the first use. My skin feels tight, but, not too tight. My face is softer than it has been in 20 years. I will not be using any serums on my face except QURE. I am thrilled with the results!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/jessica.webp" alt="Best experience" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Jessica R." />
+                    Jessica R.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Best experience</h6>
+                    <p>“I had an excellent customer service, they have been very attentive to my questions and the quality of the items they sell. I give them a 100/100 , My skin had a small breakout, enlarged pores and was tired, with just one Micro-Infusion treatment it changed radically in 3 days, I will buy it again”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/dorothy.webp" alt="Beauty has no age limit" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Dorothy S." />
+                    Dorothy S.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>Beauty has no age limit</h6>
+                    <p>“I am 76 years old. I shared my discovery of Qure’s All-in-1 serum about three months ago and that I had purchased the red light mask about six weeks before. I use both daily. Such a boost to my anti-aging regimen in just three or four minutes! The Qure's at home Micro-Infusion System and targeted serums enhance the red light therapy and All-in-1 Serum and it saves me money! Qure’s products have made an obvious improvement in my skin’s texture, brightness, and tone.</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/white-c.webp" alt="The best serum!" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/hong_kong_f.webp" alt="White C." />
+                    White C.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>The best serum!</h6>
+                    <p>“I can't believe it! In just 2 months of using this serum, the results on my skin are absolutely amazing. I no longer have to rely on heavy makeup and concealer to cover up any imperfections. This serum has truly worked wonders for me!”</p>
+                </article>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="c-trusted-review-card">
+                <picture>
+                    <img src="assets/images/review-slider/johanna.webp" alt="All in for All-In-One Serum" />
+                </picture>
+                <div class="e-author">
+                    <img src="assets/images/review-slider/america_f.webp" alt="Johanna Y." />
+                    Johanna Y.
+                </div>
+                <div class="e-verified-customer">
+                    <div class="e-checkmark"></div>
+                    Verified customer
+                </div>
+                <article>
+                    <h6>All in for All-In-One Serum</h6>
+                    <p>“I purchased this as part of my nightly routine as a few dark spots and some fine lines showing up. After using it consistently now for 6-8 weeks, I can honestly say the darker spots are lighter. My skin feels smooth and I see less fine lines! I will continue on this journey in hopes to see even more benefits like brighter, plump skin!”</p>
+                </article>
+            </div>
+        </div>
+    {{/trusted-reviews }}
+
+    {{#> base-section
+        classes="base-section--small-media"
+        title="Trusted and Recommended by Experts"
+        video='[
+            {
+                "url": "https://www.youtube.com/watch?v=PJt57LcFEQk",
+                "picture": "assets/images/experts/dr_shah_max_2.webp",
+                "label-main": "Dr. Shah & Dr. Maxfield",
+                "label-secondary": "Board Certified Dermatologists"
+            }
+        ]'
+        pill-badge=true
+    }}
+        <p>“Qure has a really good serum. It’s probably <em>the best known peptide complex</em>.</p>
+        <p>It has awesome, complimenting ingredients and amazing antioxidants. It really helps to simplify and consolidate your night routine.”</p>
+    {{/base-section }}
+
+    {{#> base-slider
+        classes="base-slider--videos"
+        title="Confident skin starts here"
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.2,
+                "spaceBetween": 16,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "480": {
+                        "slidesPerView": 2.2
+                    },
+                    "768": {
+                        "slidesPerView": 4
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{> c-wistia
+                        id="gt0wr74fyd"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    <picture data-url="https://www.youtube.com/watch?v=wuIjXhlFUTU">
+                        <img src="assets/images/review-videos/all-in-one-serum-reviews.webp" alt="Video thumbnail" />
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    {{> c-wistia
+                        id="7ghlcv9xqg"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-wistia
+                        id="cdyj6o3q28"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    <picture data-url="https://www.youtube.com/watch?v=j0L38mO7XaY&t=208s">
+                        <img src="assets/images/review-videos/luxury-micro-habits.webp" alt="Video thumbnail" />
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture data-url="https://www.youtube.com/watch?v=Jb99E6ztDIM">
+                        <img src="assets/images/review-videos/anti-aging-skincare-serum.webp" alt="Video thumbnail" />
+                    </picture>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+    {{/base-slider }}
+
+    {{> features-marquee }}
+
+    {{#> accordion-tiles
+        title="Results without compromise"
+        square=true
+        list='[
+            {
+                "image": "retinol-bakuchiol-tile",
+                "summary": "Retinol + Bakuchiol",
+                "text": "A balanced combination designed to improve the appearance of fine lines and texture, while remaining gentle enough for sensitive skin."
+            },
+            {
+                "image": "vit-c-ferulic-acid-tile",
+                "summary": "Vitamin C + Ferulic Acid",
+                "text": "A clinically backed antioxidant duo that helps support brighter-looking skin and protect against visible dullness caused by environmental stressors."
+            },
+            {
+                "image": "aha-blend-tile",
+                "summary": "AHA Blend",
+                "text": "A mild blend of Lactic Acid and Mandelic Acid to help smooth the appearance of rough texture and uneven skin tone, without aggressive resurfacing or downtime."
+            }
+        ]'
+    }}
+        <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>
+        {{#> c-dialog
+            id="fullIngredient"
+        }}
+            <p><strong>All-In-One Serum Ingredients</strong></p>
+            <p>Water (Aqua), Caprylic/Capric Triglyceride, Propanediol, Glyceryl Oleate Citrate, Maltodextrin, Sodium Acrylates Copolymer, Glyceryl Caprylate, Niacinamide, Polyacrylate-13, Sucrose Dilaurate, Limnanthes Alba (Meadowfoam) Seed Oil, Bakuchiol, Retinyl Palmitate, Glycine Soja (Soybean) Oil, Lactic Acid, Tocopheryl Acetate, Caprylyl Glycol, Lecithin, 1,2-Hexanediol, 3-O-Ethyl Ascorbic Acid, Polyisobutene, Glyceryl Behenate, Sodium Cocoyl Glutamate, Glyceryl Undecylenate, Ferulic Acid, Mandelic Acid, Terminalia Ferdinandiana (Kakadu Plum) Fruit Extract, Sodium Hyaluronate, Pisum Sativum (Pea) Extract, Polysorbate 20, Retinol, Sorbitan Isostearate, Boswellia Serrata Extract, Glycerin, Leuconostoc/Radish Root Ferment Filtrate, Tocopherol, Tropolone, Camellia Sinensis (Green Tea) Leaf Extract, Ganoderma Lucidum (Mushroom) Extract, Acetyl Hexapeptide-8, Artemisia Umbelliformis Flower Extract, Ginkgo Biloba Leaf Extract, Citric Acid, Potassium Sorbate, Sodium Benzoate, Arginine.</p>
+            <hr />
+            <ul class="c-marked-list c-marked-list--fill">
+                <li>Fragrance-free</li>
+                <li>Silicone-free</li>
+                <li>Cruelty-free</li>
+                <li>Lightweight</li>
+                <li>Hypoallergenic</li>
+                <li>Safe for sensitive skin</li>
+            </ul>
+        {{/c-dialog }}
+    {{/accordion-tiles}}
+
+    {{#> complete-system
+        classes="complete-system--bg"
+        title="Complete the Qure system"
+    }}
+        <ol class="complete-system__scale c-swiper-steps">
+            <li><span>Restrict</span></li>
+            <li><span>Revive</span></li>
+            <li><span>Ready</span></li>
+            <li><span>Rejuvenate</span></li>
+        </ol>
+        <div class="complete-system__items">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.4,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "steps-selector": ".c-swiper-steps",
+                    "watchSlidesProgress": true,
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 24
+                        },
+                        "992": {
+                            "slidesPerView": 4
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/faucet-filter.webp"
+                            image-hover="/sections/complete-system/images/faucet-filter-hover.webp"
+                            reviews="28"
+                            name="Faucet Filter"
+                            desc="Wash with filtered water to help boost hydration and reduce the look of irritation."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/cleanser.webp"
+                            image-hover="/sections/complete-system/images/cleanser-hover.webp"
+                            reviews="31"
+                            name="Daily Gel Cleanser"
+                            desc="Cleanses thoroughly while helping skin stay calm and balanced."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/led-mask.webp"
+                            image-hover="/sections/complete-system/images/led-mask-hover.webp"
+                            reviews="283"
+                            name="Q-Rejuvalight Pro LED Mask"
+                            desc="Daily multi wavelength LED treatment for clearer, firmer-looking skin."
+                            day=false
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/all-in-one-2.webp"
+                            image-hover="/sections/complete-system/images/all-in-one-2-hover.webp"
+                            reviews="38"
+                            name="All-In-One Face Serum"
+                            desc="Brightens, smooths and firms in one step, designed to simplify your routine."
+                            day=false
+                            night=true
+                        }}
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/complete-system }}
+
+    {{#> base-section
+        classes="base-section--reverse base-section--simple-grid"
+        title="Designed to last and built to refill"
+        c-wistia="tj97vrxlon"
+        c-wistia-custom='
+            <picture>
+                <img src="assets/images/blue-plus-face-serum/blue-video-thumbnail-1.webp" alt="Video thumbnaul text" />
+            </picture>
+        '
+    }}
+        <p>Our new refillable system means less waste and better value over time.</p>
+        <ol class="normal">
+            <li>Remove the lid of your base by pushing the button on the base.</li>
+            <li>Pull the top off and slide out the the empty refill container.</li>
+            <li>Slide in your new refill container and slide the top over the refill.</li>
+        </ol>
+    {{/base-section }}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "Who should use All-In-One Serum?",
+                "text": "
+                    <p>You should use the All-In-One Serum if:</p>
+                    <ul>
+                        <li>Your skin is showing signs of aging</li>
+                        <li>Your skin looks dull and tired</li>
+                        <li>You want to improve the appearance of uneven skin tone and texture</li>
+                        <li>Your skin has discoloration or uneven tone</li>
+                    </ul>
+                    <p>All-In-One Serum helps improve the appearance of these skin concerns. It’s a lightweight serum that helps revive dull-looking skin for smoother-, more radiant-looking results. Its clinically studied ingredients help support brighter-looking skin, instantly and over time.</p>
+                "
+            },
+            {
+                "summary": "When will I start to see results?",
+                "text": "<p>Most people see improvement in a few weeks, but this can vary. Remember to stick with it - consistency is key!</p>"
+            },
+            {
+                "summary": "When should I use the All-In-One Serum?",
+                "text": "
+                    <p>The All-In-One Serum should be used once daily, after cleansing and before moisturizer. It’s suitable for both morning and evening routines.</p>
+                    <p>To maximize the effectiveness, apply after your Q-Rejuvalight Pro LED Mask treatment.</p>
+                "
+            },
+            {
+                "summary": "What is the full ingredient list?",
+                "text": "<p>Water (Aqua), Caprylic/Capric Triglyceride, Propanediol, Glyceryl Oleate Citrate, Maltodextrin, Sodium Acrylates Copolymer, Glyceryl Caprylate, Niacinamide, Polyacrylate-13, Sucrose Dilaurate, Limnanthes Alba (Meadowfoam) Seed Oil, Bakuchiol, Retinyl Palmitate, Glycine Soja (Soybean) Oil, Lactic Acid, Tocopheryl Acetate, Caprylyl Glycol, Lecithin, 1,2-Hexanediol, 3-O-Ethyl Ascorbic Acid, Polyisobutene, Glyceryl Behenate, Sodium Cocoyl Glutamate, Glyceryl Undecylenate, Ferulic Acid, Mandelic Acid, Terminalia Ferdinandiana (Kakadu Plum) Fruit Extract, Sodium Hyaluronate, Pisum Sativum (Pea) Extract, Polysorbate 20, Retinol, Sorbitan Isostearate, Boswellia Serrata Extract, Glycerin, Leuconostoc/Radish Root Ferment Filtrate, Tocopherol, Tropolone, Camellia Sinensis (Green Tea) Leaf Extract, Ganoderma Lucidum (Mushroom) Extract, Acetyl Hexapeptide-8, Artemisia Umbelliformis Flower Extract, Ginkgo Biloba Leaf Extract, Citric Acid, Potassium Sorbate, Sodium Benzoate, Arginine.</p>"
+            },
+            {
+                "summary": "What skin types is the All-In-One Serum best for?",
+                "text": "
+                    <p>This formula is dermatologically tested and suitable for all skin types, including sensitive skin, thanks to its balanced blend of active and calming ingredients. It is hypoallergenic and non-irritating.</p>
+                    <p>It’s especially helpful if you’re targeting the appearance of fine lines, dullness, uneven skin tone, texture, or dryness.</p>
+                "
+            },
+            {
+                "summary": "Can I use this with the Q-Rejuvalight Pro LED Face Mask?",
+                "text": "<p>Yes, this serum pairs perfectly with the Q-Rejuvalight Pro. For best results, use the mask on clean skin first, then follow with the All-In-One Serum to maximize absorption and benefits.</p>"
+            },
+            {
+                "summary": "How does the refill system work?",
+                "text": "<p>The refill system is designed so you keep the outer bottle and pump, and only replace the inner serum refill. To refill, detach the outer case from the base, remove the empty refill, slide in the new refill, then place the case back on and twist the base to open and unlock the nozzle. This reduces waste while keeping the same packaging experience.</p>"
+            }
+        ]'
+    }}
+
+    {{#> cta-bar
+        qty-selector=true
+        button="Subscribe & Save {dyn}%"
+    }}
+        <div class="cta-bar__selector" data-label="Select Quantity">
+            <button type="button">
+                <img src="assets/images/aio-face-serum/form-thumbnail-trio.webp" alt="6 Months" />
+                6 Months
+            </button>
+            <ul>
+                <li>
+                    <label>
+                        <img src="assets/images/aio-face-serum/form-thumbnail-trio.webp" alt="6 Months" />
+                        <input type="radio" name="cta-qty" value="white" checked />
+                        <span>6 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="assets/images/aio-face-serum/form-thumbnail-duo.webp" alt="4 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>4 Months</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="assets/images/aio-face-serum/form-thumbnail-uno.webp" alt="2 Months" />
+                        <input type="radio" name="cta-qty" value="white" />
+                        <span>2 Months</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    {{/cta-bar}}
+{{/default }}

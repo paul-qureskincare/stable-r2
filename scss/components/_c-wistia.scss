@@ -24,6 +24,10 @@
 
         &:empty {
             @include play-icon;
+
+            &::after {
+                font-size: 46px;
+            }
         }
 
         &:has(.e-pill-badge) {
