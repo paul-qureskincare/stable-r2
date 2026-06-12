@@ -1,6 +1,29 @@
 (() => {
+	const inputSelector = 'input[type="radio"], input[type="checkbox"]';
+	const triggerSelector = [
+		'.c-options-selector',
+		'.c-supply-selector',
+		'.c-payment-selector',
+		'.c-subscribe-selector',
+		'.e-pill-tabs'
+	].join(',');
+
+	const getDetails = (step) => step.querySelector('.info-items');
+
+	const getTriggerScope = (step) => {
+		const details = getDetails(step);
+		let sibling = details?.previousElementSibling;
+
+		while (sibling) {
+			if (sibling.matches(triggerSelector)) return sibling;
+			sibling = sibling.previousElementSibling;
+		}
+
+		return step;
+	};
+
 	const getTriggers = (step) =>
-		[...step.querySelectorAll('input[type="radio"], input[type="checkbox"]')]
+		[...getTriggerScope(step).querySelectorAll(inputSelector)]
 			.filter((i) => !i.closest('.info-items'));
 
 	const showDetails = (step, index = -1) => {
