@@ -201,6 +201,19 @@
         }
     }
 
+    &--videos {
+        picture {
+            &[data-video-id],
+            &[data-url] {
+                img {
+                    object-fit: cover;
+                    aspect-ratio: 17 / 30;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
     // Wistia embed video code
     .wistia-embed-video {
          @include wistia-inline;

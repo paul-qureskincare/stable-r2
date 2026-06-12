@@ -650,6 +650,12 @@
   max-width:300px;
   margin-left:auto;
 }
+.base-slider--videos picture[data-url] img,.base-slider--videos picture[data-video-id] img{
+  -o-object-fit:cover;
+     object-fit:cover;
+  aspect-ratio:17/30;
+  border-radius:10px;
+}
 .base-slider .wistia-embed-video .wistia_responsive_padding{
   position:relative;
 }
