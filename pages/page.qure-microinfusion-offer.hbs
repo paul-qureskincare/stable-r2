@@ -1237,15 +1237,97 @@
                         }
                     ]'
                 }}
+                <div class="info-items">
+                    <div class="info-items__item show">
+                        {{> c-accordion
+                            type="lines"
+                            list='[
+                                {
+                                    "summary": "What can it do for your skin",
+                                    "text": "
+                                        <p>Helps reveal a smoother-looking, more radiant complexion. Formulated to help improve the appearance of dark spots and uneven tone for skin that looks refreshed and luminous.</p>
+                                        <p><strong>Skin Concerns:</strong> Ideal for skin that appears uneven in tone or texture and shows visible dark spots or post-blemish marks.</p>
+                                    "
+                                },
+                                {
+                                    "summary": "All Ingredients",
+                                    "text": "
+                                        <p><strong>Odycea Onsen-Sui Thermal Spring Water (France): </strong>Making up 50% of the formula, this mineral-rich thermal spring water is known for its soothing, hydrating, and balancing properties that help support skin comfort and barrier strength.<br><br><strong>Epidermal Growth Factor (EGF): </strong>A science-backed ingredient known to support the look of smoother, hydrated, and more refreshed skin. Helps visibly reduce the look of fine lines and uneven tone.<br><br><strong>Niacinamide:</strong>A multi-benefit vitamin known to help improve the look of uneven tone, minimize visible pores, and support smoother-looking skin.<br><br><strong>Tranexamic Acid:</strong>A brightening ingredient that helps visibly improve the look of dark spots, uneven tone, and dullness.<br><br><strong>All ingredients:</strong><br>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.</p>
+                                        <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
+                                    "
+                                }
+                            ]'
+                        }}
+                    </div>
+                    <div class="info-items__item">
+                        {{> c-accordion
+                            type="lines"
+                            list='[
+                                {
+                                    "summary": "What can it do for your skin",
+                                    "text": "
+                                        <p>Delivers lasting hydration to leave skin looking plumper, smoother, and refreshed. Helps reduce the look of fine lines and wrinkles while supporting visibly calm, balanced, and supple-feeling skin.</p>
+                                        <p><strong>Skin Concerns:</strong> Ideal for skin that appears dry, dull, or shows visible signs of aging such as fine lines, uneven tone, and temporary redness.</p>
+                                    "
+                                },
+                                {
+                                    "summary": "All Ingredients",
+                                    "text": "
+                                        <p><strong>Odycea Onsen-Sui Thermal Spring Water (France): </strong>Making up 50% of the formula, this mineral-rich thermal spring water is the foundation of our serum. Naturally sourced from the Onsen-Sui springs in France, it’s known for its soothing, hydrating, and balancing properties that help support skin comfort, barrier strength, and ingredient performance. As the main base of our micro-infusion system, it gives the formula its refreshing and lightweight feel — gentle enough even for sensitive skin.<br><br><strong>Beta Glucan:</strong> A powerful hydrator that helps the skin feel supple, moisturized, and visibly smoother.<br><br><strong>GHK-Cu (Copper Peptide):</strong>A peptide complex known to help improve the appearance of firmness and smoothness for youthful-looking skin. Gives the serum its signature blue hue.<br><br><strong>Sodium Hyaluronate:</strong>A powerful hydrator that helps the skin feel supple, moisturized, and visibly smoother.<br><br><strong>All ingredients:</strong><br>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
+                                        <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
+                                    "
+                                }
+                            ]'
+                        }}
+                    </div>
+                    <div class="info-items__item">
+                        {{> c-accordion
+                            type="lines"
+                            list='[
+                                {
+                                    "summary": "What can it do for your skin",
+                                    "text": "
+                                        <p>Designed to support smoother, brighter-looking skin with balanced hydration.</p>
+                                        <p>Helps soften the look of fine lines while improving the appearance of dark spots and uneven tone, leaving skin looking refreshed, plumper, and more luminous.</p>
+                                    "
+                                },
+                                {
+                                    "summary": "All Ingredients",
+                                    "text": "
+                                        <p><strong>Dark Spots Serum:<br></strong>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.<br><br><strong>Wrinkles Serum:<br></strong>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
+                                        <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
+                                    "
+                                }
+                            ]'
+                        }}
+                    </div>
+                </div>
             </div>
             <div class="treatment__step">
+                <div class="treatment__switcher">
+                    <ul class="e-pill-tabs e-pill-tabs--selector">
+                        <li>
+                            <label>
+                                <input name="delivery-type" type="radio" />
+                                One time purchase
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="delivery-type" type="radio" checked />
+                                Subscribe &amp; Save&nbsp;<strong>75%</strong>
+                            </label>
+                        </li>
+                    </ul>
+                    <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
+                </div>
                 {{> c-supply-selector
                     classes=""
                     title="Select Your Supply"
                     list='[
                         {
-                            "name": "Buy 3 Months, Get 3 Months FREE",
-                            "desc": "12 Micro-Infusion Treatments",
+                            "name": "6 Month Supply",
+                            "desc": "(3 bottles) <small>Ships every 6 months</small>",
                             "price-old": true,
                             "price-highlight": true,
                             "save-pill": true,
@@ -1257,8 +1339,8 @@
                             "checked": true
                         },
                         {
-                            "name": "2 Month Supply",
-                            "desc": "4 Micro-Infusion Treatments",
+                            "name": "3 Month Supply",
+                            "desc": "(2 bottles) <small>Ships every 4 months</small>",
                             "price-old": true,
                             "price-highlight": true,
                             "save-pill": true,
@@ -1268,8 +1350,13 @@
                             "kits-left-normal": true
                         },
                         {
-                            "name": "1 Months Supply",
-                            "desc": "2 Micro-Infusion Treatments",
+                            "name": "1 Month Supply",
+                            "desc": "(1 bottles) <small>Ships every 2 months</small>",
+                            "price-old": true,
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "Save 10%",
                             "option": "supply"
                         }
                     ]'
