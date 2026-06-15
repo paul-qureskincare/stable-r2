@@ -134,6 +134,23 @@
                 </div>
             </div>
             <div class="treatment__step">
+                <div class="treatment__switcher">
+                    <ul class="e-pill-tabs e-pill-tabs--selector">
+                        <li>
+                            <label>
+                                <input name="delivery-type-2" type="radio" />
+                                One time purchase
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="delivery-type-2" type="radio" checked />
+                                Subscribe &amp; Save&nbsp;<strong>75%</strong>
+                            </label>
+                        </li>
+                    </ul>
+                    <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
+                </div>
                 {{> c-supply-selector
                     classes=""
                     title="Select Your Supply"

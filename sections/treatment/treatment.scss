@@ -348,6 +348,12 @@
             border-radius: 50%;
             background: #c7e5db;
         }
+
+        &:has(li:first-child label input:checked) {
+            p {
+                display: none;
+            }
+        }
     }
 
     // .treatment__extra

@@ -1551,6 +1551,9 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   border-radius:50%;
   background:#c7e5db;
 }
+.treatment__switcher:has(li:first-child label input:checked) p{
+  display:none;
+}
 .treatment__extra{
   display:flex;
   flex-direction:column;
