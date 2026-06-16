@@ -1,5 +1,5 @@
 (() => {
-	const inputSelector = 'input[type="radio"], input[type="checkbox"]';
+	const inputSelector = 'input[type="radio"]:not([name="delivery-type"]), input[type="checkbox"]';
 	const triggerSelector = [
 		'.c-options-selector',
 		'.c-supply-selector',
