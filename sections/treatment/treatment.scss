@@ -4,6 +4,7 @@
 @use "@components/c-supply-selector" as *;
 @use "@components/c-subscribe-selector" as *;
 @use "@components/c-payment-selector" as *;
+@use "@components/c-selector-switcher" as *;
 @use "@components/c-accordion" as *;
 @use "@components/c-buy-block" as *;
 @use "@components/c-next-batch" as *;
@@ -285,8 +286,8 @@
             margin-bottom: 16px;
         }
 
-        .e-pill-tabs {
-            margin-bottom: 16px;
+        .c-selector-switcher {
+            margin-bottom: 24px;
         }
 
         .subscription-details {

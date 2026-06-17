@@ -666,6 +666,50 @@
   height:18px;
 }
 
+.c-selector-switcher{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items:center;
+  max-width:500px;
+}
+.c-selector-switcher .e-pill-tabs{
+  width:100%;
+  margin-bottom:0;
+  border:0;
+  background:#f6f6f7;
+}
+.c-selector-switcher .e-pill-tabs label{
+  padding-top:9px;
+  padding-bottom:9px;
+}
+.c-selector-switcher p{
+  color:#8b8c8e;
+  font-size:12px;
+}
+.c-selector-switcher .e-icon{
+  padding:1px 0;
+  font-size:10px;
+  border:2px solid #c7e5db;
+  border-radius:50%;
+  background:#c7e5db;
+}
+.c-selector-switcher:has(li:first-child label input:checked) p{
+  display:none;
+}
+.c-selector-switcher--dark .e-pill-tabs label{
+  padding-top:9px;
+  padding-bottom:9px;
+}
+.c-selector-switcher--dark .e-pill-tabs label:has(input:checked){
+  color:#fff;
+  font-weight:500;
+  background:#212428;
+}
+.c-selector-switcher--dark .e-pill-tabs label:has(input:checked) strong{
+  color:#ff5429;
+}
+
 .c-accordion__list{
   display:flex;
   flex-direction:column;
@@ -1500,8 +1544,11 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
 .treatment__step .info-items__item .c-accordion__summary:after{
   font-size:12px;
 }
-.treatment__step .e-pill-tabs,.treatment__step .treatment__tabs-title{
+.treatment__step .treatment__tabs-title{
   margin-bottom:16px;
+}
+.treatment__step .c-selector-switcher{
+  margin-bottom:24px;
 }
 .treatment__step .subscription-details{
   margin:16px 0 0;
