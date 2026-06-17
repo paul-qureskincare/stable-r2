@@ -125,24 +125,87 @@
                 title="Select Your Serum"
                 list='[
                     {
-                        "img": "assets/images/micro-infusion-pdp/serum_1.webp",
+                        "img": "assets/images/micro-infusion-pdp/serum_1_new.webp",
                         "name": "Dark Spots",
                         "option": "serum",
                         "checked": true
                     },
                     {
-                        "img": "assets/images/micro-infusion-pdp/serum_2.webp",
+                        "img": "assets/images/micro-infusion-pdp/serum_2_new.webp",
                         "name": "Wrinkles",
                         "option": "serum"
                     },
                     {
-                        "img": "assets/images/micro-infusion-pdp/serum_3.webp",
+                        "img": "assets/images/micro-infusion-pdp/serum_3_new.webp",
                         "name": "Mixed",
                         "option": "serum"
                     }
                 ]'
             }}
+            <div class="c-selector-switcher c-selector-switcher--dark">
+                <ul class="e-pill-tabs e-pill-tabs--selector">
+                    <li>
+                        <label>
+                            <input name="delivery-type" type="radio" />
+                            One time purchase
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input name="delivery-type" type="radio" checked />
+                            Subscribe &amp; Save&nbsp;<strong>75%</strong>
+                        </label>
+                    </li>
+                </ul>
+                <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
+            </div>
             {{> c-supply-selector
+                classes="c-supply-selector--delivery"
+                title="Select Your Supply"
+                list='[
+                    {
+                        "image": "assets/images/micro-infusion-pdp/mi_6_months.webp",
+                        "name": "6 Month Supply",
+                        "desc": "(12 treatments) <small>Ships every 6 months</small>",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "price-special": "{$dyn}",
+                        "save-pill": true,
+                        "save-value": "{dyn}% OFF",
+                        "tag-up": false,
+                        "tag-name": "Best Results",
+                        "option": "subscribe",
+                        "checked": true
+                    },
+                    {
+                        "image": "assets/images/micro-infusion-pdp/mi_3_months.webp",
+                        "name": "3 Month Supply",
+                        "desc": "(6 treatments) <small>Ships every 3 months</small>",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "price-special": "{$dyn}",
+                        "save-pill": true,
+                        "save-pill-light": true,
+                        "save-value": "{dyn}% OFF",
+                        "option": "subscribe"
+                    },
+                    {
+                        "image": "assets/images/micro-infusion-pdp/mi_1_months.webp",
+                        "name": "1 Month Supply",
+                        "desc": "(2 treatments) <small>Ships every 1 months</small>",
+                        "price-old": true,
+                        "price-in-save": "{$dyn}",
+                        "price-highlight": true,
+                        "save-pill": true,
+                        "save-pill-light": true,
+                        "save-value": "{dyn}% OFF",
+                        "option": "subscribe"
+                    }
+                ]'
+            }}
+            {{!-- {{> c-supply-selector
                 title="Select Your Supply"
                 list='[
                     {
@@ -179,7 +242,7 @@
                         "option": "supply"
                     }
                 ]'
-            }}
+            }} --}}
             <div class="c-buy-block">
                 {{> c-order-button
                     on-click="upsellPopup.showModal()"
