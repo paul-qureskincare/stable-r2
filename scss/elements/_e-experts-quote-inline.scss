@@ -1,0 +1,22 @@
+@use "@root/mixins" as *;
+
+.e-experts-quote-inline {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #dfe0e0;
+    border-radius: 60px;
+
+    img {
+        object-fit: cover;
+        width: auto;
+        max-width: 100px;
+        height: 68px;
+        border-radius: 60px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

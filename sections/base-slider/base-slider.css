@@ -532,6 +532,9 @@
 .c-product-tile__price{
   margin-top:auto;
 }
+.c-product-tile__price .e-price__main{
+  flex-direction:row-reverse;
+}
 .c-product-tile__button .btn{
   width:100%;
 }

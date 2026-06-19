@@ -1,0 +1,4 @@
+@mixin banner-height($height, $width) {
+    height: calc(100vw * $height / $width);
+    max-height: calc($height * 1px);
+}

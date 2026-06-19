@@ -1,0 +1,10 @@
+@use "media" as *;
+
+@mixin strikethrough {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 2px;
+    background: #ff5429;
+    transform: rotate(5deg);
+}

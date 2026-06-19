@@ -65,6 +65,22 @@
   grid-column:1 /  -1;
   margin-bottom:0;
 }
+.expert-reviews h6{
+  margin-bottom:8px;
+  font-family:inherit;
+  font-weight:600;
+  counter-increment:item;
+}
+.expert-reviews h6:before{
+  content:"0" counter(item) ". ";
+}
+.expert-reviews ol{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px 24px;
+  font-size:16px;
+  counter-reset:item;
+}
 .expert-reviews__content{
   display:flex;
   flex-direction:column;
@@ -140,6 +156,12 @@
   font-size:25px;
   font-weight:500;
 }
+.expert-reviews .c-swiper-videos{
+  max-height:500px;
+}
+.expert-reviews .c-swiper-videos .c-wistia{
+  height:100%;
+}
 .expert-reviews .c-swiper-thumbs .swiper-slide{
   --progress:0;
   overflow:hidden;
@@ -163,6 +185,24 @@
 }
 .expert-reviews .c-swiper-thumbs .swiper-slide.swiper-slide-thumb-active img{
   opacity:1;
+}
+@media screen and (min-width:768px){
+  .expert-reviews h6{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .expert-reviews h6:before{
+    width:30px;
+    height:30px;
+    color:#fff;
+    font-weight:600;
+    line-height:30px;
+    text-align:center;
+    border-radius:30px;
+    background:#91baec;
+    content:counter(item);
+  }
 }
 @media screen and (max-width:767px){
   .e-declaimer{

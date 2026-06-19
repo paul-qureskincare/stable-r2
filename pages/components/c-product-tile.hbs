@@ -49,7 +49,11 @@
         <p class="c-product-tile__desc">{{ desc }}</p>
     {{/if}}
     <div class="c-product-tile__price">
-        {{> e-price current="{$dyn}" }}
+        {{#if price-strikethrough-old }}
+            {{> e-price current="{$dyn}" old=true strikethrough-old=true }}
+        {{ else }}
+            {{> e-price current="{$dyn}" }}
+        {{/if}}
     </div>
     {{#if button }}
         <form class="c-product-tile__button" action="#">

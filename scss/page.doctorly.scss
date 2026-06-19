@@ -1,0 +1,151 @@
+// Sections styles on current page
+@use "@sections/expert-reviews/expert-reviews" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/treatment/treatment" as *;
+@use "@sections/peek-cards-slider/peek-cards-slider" as *;
+@use "@sections/complete-system/complete-system" as *;
+@use "@sections/comparison/comparison" as *;
+@use "@sections/experts-quote/experts-quote" as *;
+
+.across-image-banner--doctorly {
+    color: #fff;
+
+    @include sm {
+        margin-bottom: 116px;
+    }
+
+    .container {
+        position: relative;
+
+        @include sm {
+            justify-content: start;
+            height: calc(100vw * 650 / 375);
+            max-height: 650px;
+            padding-top: 40px;
+        }
+    }
+
+    .c-rating {
+        margin-bottom: 16px;
+    }
+
+    article {
+        .btn {
+            max-width: 400px;
+
+            @include sm {
+                --btn-primary-bg: #212428;
+                --btn-primary-color: #fff;
+
+                position: absolute;
+                top: 100%;
+                right: 16px;
+                left: 16px;
+                width: auto;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    ul {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        display: flex;
+        gap: 10px;
+
+        @include sm {
+            flex-direction: row-reverse;
+            gap: 5px;
+        }
+    }
+
+    .e-pill-badge {
+        --badge-base-color: #212428;
+
+        font-size: 14px;
+        text-transform: none;
+
+        &:nth-child(2) {
+            @include md {
+                display: none;
+            }
+        }
+    }
+
+    .hero-mi-bottles {
+        position: absolute;
+        right: 440px;
+        bottom: -50px;
+        display: flex;
+        align-items: end;
+        color: #212428;
+        font-size: 14px;
+
+        @include md {
+            right: 310px;
+            bottom: -40px;
+        }
+
+        @include sm {
+            right: auto;
+            left: 8px;
+        }
+
+        span {
+            position: absolute;
+            bottom: 24px;
+            left: 100%;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: -30px;
+            white-space: nowrap;
+
+            @include md {
+                bottom: 16px;
+                margin-left: -20px;
+            }
+
+            &::before {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #2e34ef;
+                content: '';
+            }
+        }
+
+        img {
+            width: 130px;
+            vertical-align: top;
+
+            @include md {
+                width: 90px;
+            }
+        }
+    }
+}
+
+
+.peek-cards-slider {
+    .e-experts-quote-inline {
+        @include sm {
+            order: 10;
+        }
+    }
+
+    .changes-tile {
+        p {
+            span {
+                padding: 10px 16px;
+                border-color: transparent;
+
+                @include sm {
+                    padding: 8px 12px;
+                    border-color: #dfe0e0;
+                }
+            }
+        }
+    }
+}
