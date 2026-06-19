@@ -116,6 +116,10 @@
         @include sm {
             font-size: 16px;
         }
+
+        .e-price__main {
+            flex-direction: row-reverse;
+        }
     }
 
     // .c-product-tile__button

@@ -53,12 +53,18 @@
             flex-wrap: nowrap;
 
             &::before {
-                position: absolute;
-                top: 10px;
-                width: 100%;
-                height: 2px;
-                background: #ff5429;
-                transform: rotate(5deg);
+                @include strikethrough;
+                content: "";
+            }
+        }
+    }
+
+    &--strikethrough-old {
+        #{$root}__old {
+            position: relative;
+
+            &::before {
+                @include strikethrough;
                 content: "";
             }
         }

@@ -49,6 +49,26 @@
   background:var(--badge-fill-color, #ff5429);
 }
 
+.e-experts-quote-inline{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:8px;
+  border:1px solid #dfe0e0;
+  border-radius:60px;
+}
+.e-experts-quote-inline img{
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:auto;
+  max-width:100px;
+  height:68px;
+  border-radius:60px;
+}
+.e-experts-quote-inline p{
+  font-size:14px;
+}
+
 .peek-cards-slider .container{
   margin-right:0;
   padding-right:0;

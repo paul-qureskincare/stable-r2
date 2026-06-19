@@ -1,7 +1,6 @@
 @use "@root/mixins" as *;
-
 @use "@elements/e-pill-badge" as *;
-
+@use "@elements/e-experts-quote-inline" as *;
 
 .peek-cards-slider {
     $root: &;

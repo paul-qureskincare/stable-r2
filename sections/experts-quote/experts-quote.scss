@@ -1,0 +1,99 @@
+@use "@root/mixins" as *;
+
+.experts-quote {
+    $root: &;
+
+    color: #fff;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    // .across-image-banner__image
+    picture {
+        position: absolute;
+        inset: 0 16px;
+        z-index: -1;
+        overflow: hidden;
+        border-radius: 40px;
+        box-shadow: 0 12px 40px 0 #0000001f;
+
+        @include sm {
+            border-radius: 10px;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            object-position: 50% 20%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // .across-image-banner__content
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 650px;
+        height: 100%;
+        padding: 50px;
+
+        @include sm {
+            max-width: none;
+            padding: 32px 12px 20px;
+        }
+
+        &::before {
+            margin-right: auto;
+            font-size: 80px;
+            line-height: 40px;
+            transform: scaleX(-1);
+            content: '”';
+
+            @include sm {
+                font-size: 50px;
+                line-height: 20px;
+            }
+        }
+
+
+        p, span {
+            font-family: var(--heading-font-family);
+            font-size: 32px;
+            font-weight: 300;
+        }
+
+        p {
+            margin-bottom: 50px;
+
+            @include sm {
+                margin-bottom: 16px;
+                font-family: inherit;
+                font-size: 16px;
+                text-shadow: 0 1px 5 0 #000000a6;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            font-size: 20px;
+
+            @include sm {
+                font-size: 12px;
+            }
+        }
+
+        small {
+            @include sm {
+                font-size: 10px;
+            }
+        }
+    }
+}
