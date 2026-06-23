@@ -631,6 +631,63 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 .across-image-banner--light-tech picture img{
   filter:brightness(.5);
 }
+.across-image-banner--fourth-of-july article{
+  gap:24px;
+  margin-left:0;
+}
+.across-image-banner--fourth-of-july article>img{
+  width:34px;
+  height:auto;
+}
+.across-image-banner--fourth-of-july article .e-pill-badge{
+  --badge-base-color:#212428;
+  display:flex;
+  gap:10px;
+  padding:3px 20px;
+  font-weight:500;
+  text-transform:uppercase;
+  border:1px solid;
+  background:none;
+}
+.across-image-banner--fourth-of-july article .e-pill-badge img{
+  width:22px;
+  height:auto;
+}
+.across-image-banner--fourth-of-july article p{
+  margin-bottom:0;
+}
+.across-image-banner--fourth-of-july article p span{
+  color:#bf0a30;
+}
+.across-image-banner--fourth-of-july article .btn{
+  max-width:360px;
+}
+.across-image-banner .treatment-result-badge{
+  position:absolute;
+  top:50%;
+  left:50%;
+  display:flex;
+  gap:16px;
+  align-items:center;
+  width:320px;
+  margin-top:100px;
+  margin-left:-110px;
+  padding:6px 12px;
+  font-weight:300;
+  line-height:1.1;
+  border-radius:24px;
+  box-shadow:0 4px 22px 0 rgba(58,60,65,.102);
+  background:hsla(0,0%,100%,.4);
+  -webkit-backdrop-filter:blur(10px);
+          backdrop-filter:blur(10px);
+}
+.across-image-banner .treatment-result-badge img{
+  width:60px;
+  height:60px;
+}
+.across-image-banner .treatment-result-badge strong{
+  display:block;
+}
 @media screen and (max-width:1199px){
   .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
     max-width:540px;
@@ -666,6 +723,10 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   .across-image-banner--holidays article p{
     margin-bottom:0;
     font-size:16px;
+  }
+  .across-image-banner .treatment-result-badge{
+    inset:auto 16px 16px auto;
+    margin:0;
   }
 }
 @media screen and (max-width:767px){
@@ -863,5 +924,18 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
   }
   .across-image-banner--light-tech .btn{
     max-width:none;
+  }
+  .across-image-banner--fourth-of-july article{
+    gap:12px;
+    text-align:left;
+  }
+  .across-image-banner--fourth-of-july article>img{
+    display:none;
+  }
+  .across-image-banner--fourth-of-july article .e-pill-badge{
+    margin:0;
+  }
+  .across-image-banner .treatment-result-badge{
+    display:none;
   }
 }

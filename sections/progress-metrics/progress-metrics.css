@@ -11,7 +11,7 @@
   height:62px;
   padding:6px;
   border-radius:100px;
-  background:conic-gradient(#c7e5db 0deg calc(var(--percent-value) * 3.6deg), transparent calc(var(--percent-value) * 3.6deg) 1turn);
+  background:conic-gradient(var(--circle-border-color, #c7e5db) 0deg calc(var(--percent-value) * 3.6deg), transparent calc(var(--percent-value) * 3.6deg) 1turn);
 }
 .e-circle-percent:before{
   position:absolute;
