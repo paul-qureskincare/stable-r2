@@ -56,4 +56,36 @@
             }
         }
     }
+
+    &--text {
+        .e-pill-tabs {
+            justify-content: center;
+            background: none;
+
+            li {
+                text-align: center;
+
+                &:has(input:checked) {
+                    display: none;
+                }
+            }
+
+            label {
+                display: inline;
+                padding: 0;
+                color: inherit;
+                font-size: 16px;
+                text-decoration: underline;
+                background: none;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        p {
+            display: none;
+        }
+    }
 }

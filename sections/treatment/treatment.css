@@ -721,6 +721,30 @@
 .c-selector-switcher--dark .e-pill-tabs label:has(input:checked) strong{
   color:#ff5429;
 }
+.c-selector-switcher--text .e-pill-tabs{
+  justify-content:center;
+  background:none;
+}
+.c-selector-switcher--text .e-pill-tabs li{
+  text-align:center;
+}
+.c-selector-switcher--text .e-pill-tabs li:has(input:checked){
+  display:none;
+}
+.c-selector-switcher--text .e-pill-tabs label{
+  display:inline;
+  padding:0;
+  color:inherit;
+  font-size:16px;
+  text-decoration:underline;
+  background:none;
+}
+.c-selector-switcher--text .e-pill-tabs label:hover{
+  text-decoration:none;
+}
+.c-selector-switcher--text p{
+  display:none;
+}
 
 .c-accordion__list{
   display:flex;
