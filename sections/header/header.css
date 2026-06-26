@@ -62,7 +62,13 @@ body:has(#announcement-bar) .header{
   padding:12px;
   color:inherit;
   font-size:36px;
+  line-height:1;
   transform:translate(-50%, -50%);
+}
+.header__logo svg{
+  width:74px;
+  height:35px;
+  vertical-align:top;
 }
 .header__menu{
   display:flex;
@@ -102,6 +108,7 @@ body:has(#announcement-bar) .header{
   display:block;
   padding:5px 10px;
   color:inherit;
+  line-height:1;
 }
 .header__icons li .cart-count{
   position:absolute;
@@ -110,6 +117,9 @@ body:has(#announcement-bar) .header{
   font-size:12px;
   font-weight:600;
   line-height:1;
+}
+.header__icons li svg{
+  vertical-align:top;
 }
 .header__tabs{
   display:none;
@@ -358,7 +368,7 @@ body:has(#announcement-bar) .header{
   .header__icons li:not(:first-child){
     border:0;
   }
-  .header__icons li:has(.e-icon-user){
+  .header__icons li:has(.e-icon-user),.header__icons li:nth-child(2){
     display:none;
   }
   .header__icons li a{

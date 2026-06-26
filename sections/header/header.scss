@@ -56,10 +56,17 @@
         padding: 12px;
         color: inherit;
         font-size: 36px;
+        line-height: 1;
         transform: translate(-50%, -50%);
 
         @include md {
             padding: 10px;
+        }
+
+        svg {
+            width: 74px;
+            height: 35px;
+            vertical-align: top;
         }
     }
 
@@ -116,7 +123,8 @@
                 }
             }
 
-            &:has(.e-icon-user) {
+            &:has(.e-icon-user),
+            &:nth-child(2) {
                 @include md {
                     display: none;
                 }
@@ -132,6 +140,7 @@
                 display: block;
                 padding: 5px 10px;
                 color: inherit;
+                line-height: 1;
 
                 @include md {
                     padding: 5px;
@@ -145,6 +154,10 @@
                 font-size: 12px;
                 font-weight: 600;
                 line-height: 1;
+            }
+
+            svg {
+                vertical-align: top;
             }
         }
     }
