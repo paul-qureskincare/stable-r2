@@ -69,7 +69,7 @@
             `;
         }
 
-        if (/\.(mp4|m4v)$/i.test(url)) {
+        if (/\.(mp4|m4v)(?:[?#].*)?$/i.test(url)) {
             return `
                 <video controls autoplay loop playsinline>
                 <source src="${url}" type="video/mp4">
