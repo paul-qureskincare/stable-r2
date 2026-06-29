@@ -111,6 +111,18 @@
         }
     }
 
+    // .peek-cards-slider--bg
+    &--bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
     // .peek-cards-slider--changes
     &--changes {
         #{$root}__content {
@@ -163,14 +175,13 @@
                 font-size: 16px;
 
                 span {
-                    padding: 4px 18px;
-                    border: 1px solid #8b8c8e;
+                    padding: 10px 16px;
+                    border: 1px solid #dfe0e0;
                     border-radius: 50px;
                     background: #fff;
 
                     @include sm {
-                        padding-top: 0;
-                        padding-bottom: 0;
+                        padding: 8px 12px;
                     }
                 }
             }

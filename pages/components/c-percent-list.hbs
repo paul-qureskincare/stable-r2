@@ -1,7 +1,11 @@
 <ul class="c-percent-list {{#if columns }}c-percent-list--columns{{/if}}">
     {{#parseJson list }}
         <li>
-            {{> e-circle-percent value=value }}
+            {{#if label }}
+                {{> e-circle-percent value=value label=label }}
+            {{ else }}
+                {{> e-circle-percent value=value }}
+            {{/if }}
             <span>{{ text }}</span>
         </li>
     {{/parseJson}}

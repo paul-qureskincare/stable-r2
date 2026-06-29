@@ -134,18 +134,4 @@
             order: 10;
         }
     }
-
-    .changes-tile {
-        p {
-            span {
-                padding: 10px 16px;
-                border-color: transparent;
-
-                @include sm {
-                    padding: 8px 12px;
-                    border-color: #dfe0e0;
-                }
-            }
-        }
-    }
 }

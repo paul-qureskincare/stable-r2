@@ -1,0 +1,74 @@
+@use "@root/mixins" as *;
+
+.better-together {
+    $root: &;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f6f6f7;
+
+    @include sm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 860px;
+        margin-bottom: 32px;
+
+        small {
+            color: #8b8c8e;
+            text-transform: uppercase;
+        }
+
+        p {
+            @include sm {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+        border-radius: 10px;
+        background: #fff;
+
+        figure {
+            position: relative;
+        }
+
+        .e-pill-badge {
+            position: absolute;
+            bottom: 16px;
+            left: 24px;
+            color: #212428;
+            font-weight: 600;
+            background: rgb(255 255 255 / 80%);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 24px;
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        dl {
+            font-size: 14px;
+        }
+
+        dt {
+            color: #91baec;
+            font-weight: 600;
+        }
+    }
+}

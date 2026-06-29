@@ -161,6 +161,70 @@
   text-transform:uppercase;
 }
 
+.e-expert-quote-tag{
+  display:inline-flex;
+  gap:6px;
+  align-items:center;
+  margin-right:auto;
+  padding:4px 16px 4px 4px;
+  border:1px solid #dfe0e0;
+  border-radius:40px;
+}
+.e-expert-quote-tag__avatar{
+  position:relative;
+  width:42px;
+  height:42px;
+}
+.e-expert-quote-tag__avatar img{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:auto;
+}
+.e-expert-quote-tag__avatar:after{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:linear-gradient(180deg, rgba(33,36,40,.05) 50%, #212428);
+  content:"";
+}
+.e-expert-quote-tag__text{
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+}
+.e-expert-quote-tag__quote{
+  font-size:13px;
+  line-height:18px;
+}
+.e-expert-quote-tag__author{
+  color:#8b8c8e;
+  font-size:12px;
+  line-height:18px;
+}
+.e-expert-quote-tag__author strong{
+  font-weight:500;
+}
+
+.e-auto-ships{
+  color:#8b8c8e;
+  font-size:12px;
+}
+.e-auto-ships .e-icon{
+  padding:1px 0;
+  font-size:10px;
+  border:2px solid #c7e5db;
+  border-radius:50%;
+  background:#c7e5db;
+}
+.e-auto-ships a{
+  text-decoration:underline;
+}
+.e-auto-ships a:hover{
+  text-decoration:none;
+}
+
 .e-rating-stars{
   position:relative;
   display:inline-block;
@@ -403,8 +467,19 @@
   font-size:16px;
   -webkit-text-stroke:.7px;
 }
+.c-order-button .btn+p{
+  color:#8b8c8e;
+  font-size:16px;
+  text-align:center;
+}
 .c-order-button .e-pay-options{
   justify-content:center;
+}
+.c-order-button p a{
+  text-decoration:underline;
+}
+.c-order-button p a:hover{
+  text-decoration:none;
 }
 
 .c-certified-box{
@@ -483,6 +558,9 @@
 }
 .c-buy-block .e-get-free-shipping{
   margin-bottom:8px;
+}
+.c-buy-block .e-auto-ships{
+  align-self:center;
 }
 .c-buy-block .one-time-purchase{
   display:block;
@@ -1338,6 +1416,9 @@
 .c-subscribe-selector__text table td,.c-subscribe-selector__text table th{
   padding-top:6px;
   padding-bottom:6px;
+}
+.c-subscribe-selector__text table th{
+  text-align:left;
 }
 .c-subscribe-selector__text table td{
   text-align:right;
@@ -2307,6 +2388,140 @@
   text-decoration:none;
 }
 
+.c-optional-subscription{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  padding-bottom:10px;
+  border:2px solid #212428;
+  border-radius:10px;
+}
+.c-optional-subscription__main{
+  position:relative;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:18px 16px 16px;
+  border-radius:8px 8px 0 0;
+  background:#fff;
+}
+.c-optional-subscription__main span{
+  position:absolute;
+  top:-6px;
+  right:12px;
+  padding:1px 6px;
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  border-radius:0 0 5px 5px;
+  background:#ff5429;
+}
+.c-optional-subscription__main span:after,.c-optional-subscription__main span:before{
+  position:absolute;
+  top:0;
+  width:0;
+  height:0;
+  border-style:solid;
+  content:"";
+}
+.c-optional-subscription__main span:before{
+  left:-6px;
+  border-width:0 0 6px 6px;
+  border-color:transparent transparent #ce3812;
+}
+.c-optional-subscription__main span:after{
+  right:-6px;
+  border-width:6px 0 0 6px;
+  border-color:transparent transparent transparent #ce3812;
+}
+.c-optional-subscription__main img{
+  display:block;
+  flex:none;
+  width:auto;
+  height:50px;
+}
+.c-optional-subscription__main p{
+  flex:1 1 auto;
+}
+.c-optional-subscription__option{
+  position:relative;
+  display:grid;
+  grid-template:repeat(2, auto)/20px auto 1fr auto;
+  gap:6px;
+  align-items:center;
+  margin:0 10px;
+  padding:12px 6px;
+  border-radius:10px;
+  background:#f6f6f7;
+  cursor:pointer;
+}
+.c-optional-subscription__option input{
+  position:absolute;
+  z-index:-1;
+  visibility:hidden;
+  opacity:0;
+}
+.c-optional-subscription__option:has(input:checked) .custom-checkbox{
+  background:#212428;
+}
+.c-optional-subscription__option:has(input:checked) .custom-checkbox .e-icon{
+  opacity:1;
+}
+.c-optional-subscription__option .custom-checkbox{
+  display:flex;
+  flex:0 0 auto;
+  grid-row:1 /  -1;
+  align-items:center;
+  justify-content:center;
+  width:18px;
+  height:18px;
+  color:#fff;
+  font-size:8px;
+  border:1px solid;
+  border-radius:6px;
+  box-shadow:0 0 0 1px #8b8c8e;
+  background:#fff;
+}
+.c-optional-subscription__option .custom-checkbox .e-icon{
+  opacity:0;
+}
+.c-optional-subscription__option img{
+  grid-row:1 /  -1;
+  width:auto;
+  height:50px;
+}
+.c-optional-subscription__option .e-price__current{
+  font-size:14px;
+  font-weight:600;
+}
+.c-optional-subscription__option small{
+  grid-column:3 /  -1;
+  padding-top:6px;
+  color:#8b8c8e;
+  font-size:14px;
+  border-top:1px solid #dfe0e0;
+}
+.c-optional-subscription__option a{
+  text-decoration:underline;
+}
+.c-optional-subscription__option a:hover{
+  text-decoration:none;
+}
+.c-optional-subscription__today{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  padding:10px 16px 0;
+  color:#8b8c8e;
+  font-size:16px;
+  border-radius:0 0 8px 8px;
+  background:#fff;
+}
+.c-optional-subscription__today small{
+  margin-left:auto;
+  font-size:12px;
+}
+
 .hero-product__container{
   display:grid;
   grid-template:auto 1fr/repeat(2, 1fr);
@@ -2546,6 +2761,19 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 .hero-product__gallery .c-swiper-thumbs-nav .swiper-slide img{
   border-radius:5px;
 }
+.hero-product__optional-subscription{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-width:500px;
+}
+.hero-product__optional-subscription:has(input:checked) .e-auto-ships{
+  display:block;
+}
+.hero-product__optional-subscription .e-auto-ships{
+  display:none;
+  align-self:center;
+}
 .hero-product__extra{
   display:flex;
   flex-direction:column;
@@ -2594,11 +2822,45 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 .hero-product__experts .c-certified-box{
   max-width:none;
 }
+.hero-product__studied{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:14px 24px;
+  border-radius:10px;
+  background:#f6f6f7;
+}
+.hero-product__studied p{
+  font-size:16px;
+  font-weight:600;
+}
+.hero-product__studied .c-percent-list{
+  position:relative;
+  z-index:1;
+  flex-direction:row;
+  font-size:16px;
+}
+.hero-product__studied .e-circle-percent{
+  width:42px;
+  height:42px;
+  padding:3px;
+}
+.hero-product__studied .e-circle-percent:before{
+  inset:1px;
+}
+.hero-product__studied .e-circle-percent span{
+  width:36px;
+  height:36px;
+  font-size:14px;
+  background:#f6f6f7;
+}
 .hero-product--secondary{
   scroll-margin-top:60px;
 }
 .hero-product--secondary .hero-product__main .e-pill-badge:first-child{
   color:#ff5429;
+}
+.hero-product--secondary .hero-product__main .e-pill-badge--md:first-child{
   border-radius:5px;
 }
 .hero-product--secondary .hero-product__main h2{
@@ -2631,6 +2893,16 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 .hero-product--reverse .hero-product__main{
   grid-column:2;
 }
+.hero-product--bg{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
+.hero-product--bg .hero-product__main{
+  padding:24px;
+  border-radius:10px;
+  background:#fff;
+}
 @media (min-width:576px){
   .modal-dialog{
     max-width:var(--bs-modal-width);
@@ -2647,6 +2919,10 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 @media screen and (max-width:1120px){
   .hero-product__gallery .c-swiper-thumbs-nav{
     max-width:354px;
+  }
+  .hero-product__studied .c-percent-list li{
+    flex-direction:column;
+    text-align:center;
   }
 }
 @media screen and (max-width:991px){
@@ -2829,6 +3105,26 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-upsell-card p{
     display:none;
   }
+  .c-optional-subscription{
+    padding-bottom:0;
+  }
+  .c-optional-subscription__main{
+    padding:10px 6px;
+  }
+  .c-optional-subscription__option{
+    margin:0;
+    padding:10px 6px;
+  }
+  .c-optional-subscription__option p strong{
+    display:block;
+  }
+  .c-optional-subscription__option .e-price__main{
+    flex-direction:column;
+    align-items:end;
+  }
+  .c-optional-subscription__today{
+    padding:6px;
+  }
   .hero-product__container{
     grid-template:auto/auto;
     gap:24px;
@@ -2877,14 +3173,29 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .hero-product__gallery .c-swiper-thumbs-nav .swiper-slide{
     width:60px;
   }
+  .hero-product__optional-subscription{
+    max-width:none;
+  }
   .hero-product__extra{
     gap:24px;
   }
   .hero-product__experts{
     order:-1;
   }
+  .hero-product__studied{
+    display:none;
+  }
   .hero-product--reverse .hero-product__main{
     grid-column:auto;
+  }
+  .hero-product--bg{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+  .hero-product--bg .hero-product__main{
+    padding:0;
+    border-radius:0;
+    background:none;
   }
 }
 @media screen and (max-width:480px){

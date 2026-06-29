@@ -1,0 +1,12 @@
+<!-- BUNDLE USAGE -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/bundle-usage/bundle-usage.css" />
+{{/unless}}
+<section class="bundle-usage {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        <article class="bundle-usage__content">
+            {{> @partial-block }}
+        </article>
+    </div>
+</section>
+<!-- BUNDLE USAGE END -->

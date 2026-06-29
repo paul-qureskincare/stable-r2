@@ -1,0 +1,192 @@
+@use "@root/mixins" as *;
+
+.bundle-usage {
+    $root: &;
+
+    // .bundle-usage__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+
+        @include sm {
+            align-items: start;
+        }
+
+        & > small {
+            color: #8b8c8e;
+            text-transform: uppercase;
+        }
+    }
+
+    // .bundle-usage__items
+    &__items {
+        max-width: 100%;
+    }
+
+    // .bundle-usage___scale
+    &__scale {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        counter-reset: item;
+
+        @include sm {
+            margin-bottom: -8px;
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            width: 100%;
+            counter-increment: item;
+
+            &.active {
+                span,
+                &::before {
+                    color: #fff;
+                    background: #212428;
+                }
+            }
+
+            &::before {
+                display: none;
+                width: 24px;
+                height: 24px;
+                font-size: 14px;
+                line-height: 22px;
+                text-align: center;
+                border: 1px solid #212428;
+                border-radius: 50%;
+                background: #f6f6f7;
+                content: " "counter(item);
+
+                @include md {
+                    display: block;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                top: 15px;
+                right: -12px;
+                left: -12px;
+                z-index: -1;
+                height: 1px;
+                background: #212428;
+                content: '';
+
+                @include sm {
+                    top: 12px;
+                    margin-right: -8px;
+                    margin-left: -8px;
+                }
+            }
+
+            &:first-child {
+                &::after {
+                    left: auto;
+                    width: calc(50% + 12px);
+
+                    @include sm {
+                        width: calc(50% + 8px);
+                    }
+                }
+            }
+
+            &:last-child {
+                &::after {
+                    right: auto;
+                    width: calc(50% + 12px);
+
+                    @include sm {
+                        width: calc(50% + 8px);
+                    }
+                }
+
+                span {
+                    &::after {
+                        @media screen and (min-width: 768px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            span {
+                padding-right: 10px;
+                padding-left: 10px;
+                font-weight: 600;
+                line-height: 30px;
+                text-align: center;
+                border: 1px solid #212428;
+                border-radius: 30px;
+                background: #f6f6f7;
+
+                @include md {
+                    display: none;
+                }
+
+                &::after {
+                    content: " "counter(item);
+                }
+            }
+        }
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 10px;
+        border: 1px solid #dfe0e0;
+        border-radius: 10px;
+
+        figure {
+            position: relative;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .e-pill-badge {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            color: inherit;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .c-buy-block {
+        gap: 10px;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 16px;
+
+        @include sm {
+            margin-top: 8px;
+        }
+
+        small {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}

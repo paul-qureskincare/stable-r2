@@ -1,0 +1,54 @@
+@use "@root/mixins" as *;
+
+.e-expert-quote-tag {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    margin-right: auto;
+    padding: 4px 16px 4px 4px;
+    border: 1px solid #dfe0e0;
+    border-radius: 40px;
+
+    &__avatar {
+        position: relative;
+        width: 42px;
+        height: 42px;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(180deg, rgb(33 36 40 / 5%) 50%, rgb(33 36 40 / 100%) 100%);
+            content: "";
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    &__quote {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    &__author {
+        color: #8b8c8e;
+        font-size: 12px;
+        line-height: 18px;
+
+        strong {
+            font-weight: 500;
+        }
+    }
+}
