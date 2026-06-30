@@ -3,7 +3,23 @@
     body-class="collection.best-sellers"
     page-css=true
 }}
-    {{#> hero-banner }}
+    {{#> hero-banner classes="hero-banner--qure-birthday" }}
+       <div class="qure-birthday-video">
+            <video autoplay="" loop="" muted="" playsinline="">
+                <source src="sections/across-image-banner/images/qure-birthday-animation.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container">
+            <article>
+                <h2>26% OFF Sitewide*</h2>
+                <p>Birthday Sale</p>
+                <small>*Excludes bundles, Micro-Infusion System, All-In-One Serum, &amp; Dermal Mist.</small>
+            </article>
+        </div>
+    {{/hero-banner}}
+
+    {{!-- {{#> hero-banner }}
         <picture>
             <source media="(min-width:768px)" srcset="assets/images/page-banner/best-seller-banner.webp">
             <img src="assets/images/page-banner/best-seller-banner-mob.webp" alt="">
@@ -13,7 +29,7 @@
                 <h2>Shop our best sellers</h2>
             </article>
         </div>
-    {{/hero-banner}}
+    {{/hero-banner}} --}}
 
     {{#> breadcrumb }}
         <a href="#">Home</a>

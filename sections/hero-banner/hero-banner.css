@@ -43,6 +43,44 @@
 .hero-banner--holidays article p{
   line-height:1.2;
 }
+.hero-banner--qure-birthday{
+  z-index:1;
+  overflow:hidden;
+  background:#f5f3f4;
+}
+.hero-banner--qure-birthday article{
+  gap:12px;
+  width:min(540px, 70%);
+}
+.hero-banner--qure-birthday article h2{
+  margin-bottom:0;
+  font-size:46px;
+  line-height:1;
+}
+.hero-banner--qure-birthday article small{
+  color:#8b8c8e;
+}
+.hero-banner--qure-birthday .qure-birthday-video{
+  position:absolute;
+  top:50%;
+  right:0;
+  z-index:-1;
+  height:700px;
+  transform:translateY(-58%);
+}
+.hero-banner--qure-birthday .qure-birthday-video:after{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:20%;
+  background:linear-gradient(270deg, transparent, #f5f3f4);
+  content:"";
+}
+.hero-banner--qure-birthday .qure-birthday-video video{
+  width:auto;
+  height:100%;
+}
 @media screen and (max-width:767px){
   .hero-banner article{
     justify-content:start;
@@ -66,5 +104,35 @@
   }
   .hero-banner--holidays article p{
     font-size:14px;
+  }
+  .hero-banner--qure-birthday article{
+    gap:6px;
+    justify-content:center;
+    padding-top:0;
+    padding-left:33%;
+    text-align:left;
+  }
+  .hero-banner--qure-birthday article h2{
+    font-size:28px;
+  }
+  .hero-banner--qure-birthday article small{
+    font-size:14px;
+  }
+  .hero-banner--qure-birthday .qure-birthday-video{
+    right:60%;
+    height:390px;
+  }
+  .hero-banner--qure-birthday .qure-birthday-video:after{
+    right:0;
+    left:auto;
+    background:linear-gradient(90deg, transparent, #f5f3f4);
+  }
+}
+@media screen and (max-width:480px){
+  .hero-banner--qure-birthday article{
+    padding-left:33%;
+  }
+  .hero-banner--qure-birthday .qure-birthday-video{
+    right:42%;
   }
 }
