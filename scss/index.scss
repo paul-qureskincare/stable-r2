@@ -322,13 +322,12 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+        background: #f5f3f4;
 
         @include sm {
             display: flex;
             flex-direction: column-reverse;
             height: auto;
-            background: none;
-            background: #f5f3f4;
         }
 
         picture {
