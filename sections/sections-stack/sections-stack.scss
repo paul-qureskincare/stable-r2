@@ -154,6 +154,20 @@
     }
 }
 
+.page\.rivo-loyalty-landing-page {
+    .sections-stack {
+        gap: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @include sm {
+            gap: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
 // Fix bug with CTA section
 .shopify-section {
     &:has(.qure__sticky-atc),

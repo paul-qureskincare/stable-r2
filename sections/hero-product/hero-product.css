@@ -2768,11 +2768,11 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   max-width:500px;
 }
 .hero-product__optional-subscription:has(input:checked) .e-auto-ships{
-  display:block;
+  visibility:visible;
 }
 .hero-product__optional-subscription .e-auto-ships{
-  display:none;
   align-self:center;
+  visibility:hidden;
 }
 .hero-product__extra{
   display:flex;

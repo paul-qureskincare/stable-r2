@@ -38,6 +38,29 @@
     }}
 
     {{#> across-image-banner
+        classes="across-image-banner--holidays across-image-banner--qure-birthday"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/across-image-banner/images/qure-birthday.webp" />
+            <img src="sections/across-image-banner/images/qure-birthday-mob.webp" alt="Birthday Sale" />
+        </picture>
+        <div class="container">
+            <article>
+                <h1>26% OFF Sitewide</h1>
+                <p>Birthday Sale</p>
+                <a href="#" class="btn btn--primary">Shop Now and Save</a>
+                <small>*Excludes bundles, Micro-Infusion System, All&#8209;In&#8209;One Serum, and Dermal Mist.</small>
+            </article>
+        </div>
+        <div class="qure-birthday-video">
+            <video autoplay="" loop="" muted="" playsinline="">
+                <source src="sections/across-image-banner/images/qure-birthday-animation.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    {{/across-image-banner}}
+
+    {{!-- {{#> across-image-banner
         classes="across-image-banner--holidays across-image-banner--fourth-of-july"
     }}
         <picture>
@@ -60,7 +83,7 @@
                 <p>of testers saw visible results. <strong>After just one treatment!</strong></p>
             </div>
         </div>
-    {{/across-image-banner}}
+    {{/across-image-banner}} --}}
 
     {{!-- {{#> across-image-banner
         classes="across-image-banner--holidays across-image-banner--fathers-day"

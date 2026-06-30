@@ -288,15 +288,15 @@
                                 <div class="swiper-slide">
                                     <div class="slide-image">
                                         <img src="sections/helmet-home/images/helmet-home-1.webp" alt="Q-Renew LLLT Helmet" />
-                                        <div
-                                            class="watch-how-it-works watch-wistia-video"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#reusableWistiaModal"
-                                            data-video-id="05w38biy23"
-                                        >
-                                            <i class="e-icon e-icon-watch"></i>
-                                            <div><strong>Watch:</strong> How It Works</div>
-                                        </div>
+                                        {{> c-wistia
+                                            id="05w38biy23"
+                                            custom='
+                                                <a class="c-wistia__link" href="javascript:;">
+                                                    <i class="e-icon e-icon-watch"></i>
+                                                    <span><strong>Watch:</strong> How It Works</span>
+                                                </a>
+                                            '
+                                        }}
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
