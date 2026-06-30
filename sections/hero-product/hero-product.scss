@@ -358,13 +358,13 @@
 
         &:has(input:checked) {
             .e-auto-ships {
-                display: block;
+                visibility: visible;
             }
         }
 
         .e-auto-ships {
-            display: none;
             align-self: center;
+            visibility: hidden;
         }
     }
 
