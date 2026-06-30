@@ -127,6 +127,11 @@
 .peek-cards-slider .swiper-slide .e-pill-badge{
   color:currentColor;
 }
+.peek-cards-slider--bg{
+  padding-top:60px;
+  padding-bottom:60px;
+  background:#f6f6f7;
+}
 .peek-cards-slider--changes .peek-cards-slider__content{
   grid-template:auto auto 1fr/1fr 65vw;
 }
@@ -160,8 +165,8 @@
   font-size:16px;
 }
 .peek-cards-slider--changes .changes-tile p span{
-  padding:4px 18px;
-  border:1px solid #8b8c8e;
+  padding:10px 16px;
+  border:1px solid #dfe0e0;
   border-radius:50px;
   background:#fff;
 }
@@ -199,6 +204,10 @@
     width:100%;
     border-radius:5px;
   }
+  .peek-cards-slider--bg{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
   .peek-cards-slider--changes .peek-cards-slider__content{
     grid-template-columns:auto;
   }
@@ -210,7 +219,6 @@
     padding:16px;
   }
   .peek-cards-slider--changes .changes-tile p span{
-    padding-top:0;
-    padding-bottom:0;
+    padding:8px 12px;
   }
 }

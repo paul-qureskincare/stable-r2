@@ -418,7 +418,13 @@
                     ]'
                 }}
                 {{> c-moneyback }}
-                {{> c-complete-bundle }}
+                {{> c-complete-bundle
+                    title="THE COMPLETE FILTER BUNDLE"
+                    text="Order today &amp; Receive a FREE Faucet Filter with your Shower Filter (value $129)"
+                    first-image="assets/images/clean-water/qure_water_img1.webp"
+                    second-image="assets/images/clean-water/qure_water_img2.webp"
+                    progress-bar=true
+                }}
                 <div class="c-bundle-included">
                     <p class="c-bundle-included__tile">What’s Included</p>
                     <ul class="c-bundle-included__list">
@@ -449,6 +455,19 @@
                         {{> e-price current="{$dyn}" old="{$dyn}" }}
                     </div>
                 </div>
+                {{> c-optional-subscription
+                    badge="Best Results Together"
+                    product-image="assets/images/led-mask-offer/led-mask-smallmask.webp"
+                    product-name="Q-Rejuvalight Pro LED Mask"
+                    product-price="{$dyn}"
+                    option="subscription"
+                    checked=true
+                    sub-image="assets/images/blue-plus-face-serum/blue-plus-serum-small.webp"
+                    sub-name="<strong>Subscribe</strong> Blue+ Face Serum"
+                    sub-price="First bottle Free"
+                    sub-old-price=true
+                    sub-text="Every 2 months: Receive a new Blue+ Serum · <a href=\"#\">Cancel anytime</a>"
+                }}
             </div>
             <div class="hero-product__extra">
                 <div class="hero-product__best-with">

@@ -1,0 +1,10 @@
+<!-- BETTER TOGETHER -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/better-together/better-together.css" />
+{{/unless}}
+<section class="better-together {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+    <div class="container">
+        {{> @partial-block }}
+    </div>
+</section>
+<!-- BETTER TOGETHER END -->

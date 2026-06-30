@@ -1,7 +1,7 @@
 <div class="c-product-tile">
     <a
         class="c-product-tile__image"
-        style="--image-on-hover: url({{ image-hover }})"
+        {{#if image-hover }} style="--image-on-hover: url({{ image-hover }})"{{/if }}
         href="#"
     >
         <img src="{{ image }}" alt="{{ title }}" />
@@ -40,21 +40,25 @@
             </div>
         {{/if}}
     </a>
-    <div class="c-product-tile__rating">
-        <div class="e-rating-stars" style="--rating: {{ rating-value }};"></div>
-        <a href="#">{{ reviews }} Reviews</a>
-    </div>
+    {{#if reviews }}
+        <div class="c-product-tile__rating">
+            <div class="e-rating-stars" style="--rating: {{ rating-value }};"></div>
+            <a href="#">{{ reviews }} Reviews</a>
+        </div>
+    {{/if }}
     <a class="c-product-tile__name" href="#">{{ name }}</a>
     {{#if desc }}
         <p class="c-product-tile__desc">{{ desc }}</p>
     {{/if}}
-    <div class="c-product-tile__price">
-        {{#if price-strikethrough-old }}
-            {{> e-price current="{$dyn}" old=true strikethrough-old=true }}
-        {{ else }}
-            {{> e-price current="{$dyn}" }}
-        {{/if}}
-    </div>
+    {{#unless hide-price}}
+        <div class="c-product-tile__price">
+            {{#if price-strikethrough-old }}
+                {{> e-price current="{$dyn}" old=true strikethrough-old=true }}
+            {{ else }}
+                {{> e-price current="{$dyn}" }}
+            {{/if}}
+        </div>
+    {{/unless }}
     {{#if button }}
         <form class="c-product-tile__button" action="#">
             <button class="btn btn--primary">{{ button }}</button>

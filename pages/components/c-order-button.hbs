@@ -7,6 +7,9 @@
         {{/if}}
         {{#if arrow }} {{> e-icon icon="arrow" }} {{/if }}
     </button>
+    {{#if subscription-details }}
+        <p><strong>Skip, pause/modify or cancel anytime.</strong> <a href="#">See more details.</a></p>
+    {{/if }}
     {{#unless hide-pay }}
         {{> e-pay-options
             pay-options-label=pay-options-label

@@ -1,0 +1,36 @@
+<div class="c-optional-subscription">
+    <div class="c-optional-subscription__main">
+        {{#if badge }}<span>{{ badge }}</span>{{/if}}
+        <img src="{{ product-image }}" alt="{{ product-name }}" />
+        <p>{{ product-name }}</p>
+        {{> e-price
+            current="{$dyn}"
+            highlight=true
+        }}
+    </div>
+    <label class="c-optional-subscription__option">
+        <input type="checkbox" name="{{ option }}" {{#if checked }}checked{{/if}} />
+        {{#if unchecked-gallery-image }}
+            <input type="hidden" name="unchecked-image" value="{{ unchecked-gallery-image }}" />
+        {{/if }}
+        <div class="custom-checkbox">{{> e-icon icon="checkmark" }}</div>
+        <img src="{{ sub-image }}" alt="{{ sub-name }}" />
+        <p>{{{ sub-name }}}</p>
+        {{> e-price
+            current=sub-price
+            old=sub-old-price
+            highlight=true
+        }}
+        <small>{{{ sub-text }}}</small>
+    </label>
+    {{#if pay-today }}
+        <div class="c-optional-subscription__today">
+            <p>Today you pay </p>
+            <small>First bottle free</small>
+            {{> e-price
+                current="{$dyn}"
+                highlight=true
+            }}
+        </div>
+    {{/if }}
+</div>

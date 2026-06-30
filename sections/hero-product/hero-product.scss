@@ -1,9 +1,10 @@
 @use "@root/mixins" as *;
-
 @use "@elements/e-sticky-thumb-video" as *;
 @use "@elements/e-pill-tabs" as *;
 @use "@elements/e-get-free-shipping" as *;
 @use "@elements/e-quote-card" as *;
+@use "@elements/e-expert-quote-tag" as *;
+@use "@elements/e-auto-ships" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-special-offer" as *;
 @use "@components/c-marked-list" as *;
@@ -28,6 +29,7 @@
 @use "@components/c-approved-by" as *;
 @use "@components/c-note" as *;
 @use "@components/c-upsell-card" as *;
+@use "@components/c-optional-subscription" as *;
 
 .hero-product {
     $root: &;
@@ -343,6 +345,29 @@
         }
     }
 
+    // .hero-product__optional-subscription
+    &__optional-subscription {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 500px;
+
+        @include sm {
+            max-width: none;
+        }
+
+        &:has(input:checked) {
+            .e-auto-ships {
+                display: block;
+            }
+        }
+
+        .e-auto-ships {
+            display: none;
+            align-self: center;
+        }
+    }
+
     // .hero-product__extra
     &__extra {
         display: flex;
@@ -422,6 +447,55 @@
         }
     }
 
+    &__studied {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 24px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        @include sm {
+            display: none;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .c-percent-list {
+            position: relative;
+            z-index: 1;
+            flex-direction: row;
+            font-size: 16px;
+
+            li {
+                @include lg {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        }
+
+        .e-circle-percent {
+            width: 42px;
+            height: 42px;
+            padding: 3px;
+
+            &::before {
+                inset: 1px;
+            }
+
+            span {
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+                background: #f6f6f7;
+            }
+        }
+    }
+
     // .hero-product--secondary
     &--secondary {
         scroll-margin-top: 60px;
@@ -429,6 +503,9 @@
         #{$root}__main {
             .e-pill-badge:first-child {
                 color: #ff5429;
+            }
+
+            .e-pill-badge--md:first-child {
                 border-radius: 5px;
             }
 
@@ -485,6 +562,30 @@
 
             @include sm {
                 grid-column: auto;
+            }
+        }
+    }
+
+    // .hero-product--bg
+    &--bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include sm {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .hero-product__main {
+            padding: 24px;
+            border-radius: 10px;
+            background: #fff;
+
+            @include sm {
+                padding: 0;
+                border-radius: 0;
+                background: none;
             }
         }
     }

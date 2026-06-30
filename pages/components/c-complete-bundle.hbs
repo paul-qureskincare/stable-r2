@@ -1,22 +1,24 @@
 <div class="c-complete-bundle">
     <p>
-        <strong>THE COMPLETE FILTER BUNDLE</strong>
-        Order today &amp; Receive a FREE Faucet Filter with your Shower Filter (value $129)
+        <strong>{{ title }}</strong>
+        {{ text }}
     </p>
     <figure>
-        <img src="assets/images/clean-water/qure_water_img1.webp" alt="" />
-        <figcaption class="e-pill-badge e-pill-badge--sm">$149</figcaption>
+        <img src="{{ first-image }}" alt="First bundle image" />
+        <figcaption class="e-pill-badge e-pill-badge--sm">{$dyn}</figcaption>
     </figure>
     {{> e-icon icon="plus" }}
     <figure>
-        <img src="assets/images/clean-water/qure_water_img2.webp" alt="" />
+        <img src="{{ second-image }}" alt="Second bundle image" />
         <figcaption class="e-pill-badge e-pill-badge--sm">
-            <del>$129</del>
+            <del>{$dyn}</del>
             <strong>Free</strong>
         </figcaption>
     </figure>
-    {{> e-progress
-        label="Limited Time Offer, While Supplies Last"
-        progress="60"
-    }}
+    {{#if progress-bar }}
+        {{> e-progress
+            label="Limited Time Offer, While Supplies Last"
+            progress="60"
+        }}
+    {{/if }}
 </div>

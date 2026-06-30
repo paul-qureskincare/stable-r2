@@ -1,0 +1,102 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/better-together/better-together" as *;
+@use "@sections/bundle-usage/bundle-usage" as *;
+@use "@sections/peek-cards-slider/peek-cards-slider" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+
+
+// Styles for current page only
+.hero-product {
+    h1 {
+        margin-bottom: -16px;
+    }
+
+    .c-complete-bundle {
+        border-color: #dfe0e0;
+
+        .e-pill-badge {
+            border-radius: 10px;
+        }
+    }
+}
+
+.cta-bar {
+    display: none;
+    color: #fff;
+    border: 0;
+    background: #212428;
+
+    @at-root body {
+        &:has(input[name="subscription"]:checked) {
+            .cta-bar {
+                display: block;
+            }
+        }
+    }
+
+    .container {
+        @include sm {
+            flex-direction: column-reverse;
+            gap: 16px;
+            align-items: center;
+        }
+    }
+
+    .btn--primary {
+        --btn-primary-color: #212428;
+        --btn-primary-bg: #fff;
+    }
+
+    // .cta-bar__content
+    &__content {
+        display: grid;
+        grid-template: repeat(2, auto) / 70px 1fr;
+        align-items: center;
+
+        @include sm {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            grid-row: 1 / -1;
+            @include img-fluid;
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            color: inherit;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1;
+
+            @include sm {
+                display: none;
+            }
+
+            span {
+                color: #ff5429;
+                font-weight: normal;
+            }
+        }
+
+        p {
+            align-self: start;
+            font-size: 14px;
+        }
+    }
+
+    // .cta-bar__button
+    &__button {
+        @include sm {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

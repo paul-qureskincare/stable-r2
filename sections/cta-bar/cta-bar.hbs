@@ -41,11 +41,18 @@
                 {{> @partial-block }}
             </div>
         {{/if}}
+        {{#if mask-serum-offer }}
+            <div class="cta-bar__content">
+                {{> @partial-block }}
+            </div>
+        {{/if}}
         <div class="cta-bar__button">
             <button class="btn btn--primary" type="button">{{ button }}</button>
         </div>
     </div>
-    <div class="cta-bar__bottom">580 Units Reserved in last 48 hours</div>
+    {{#unless hide-bottom }}
+        <div class="cta-bar__bottom">580 Units Reserved in last 48 hours</div>
+    {{/unless }}
 </section>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
