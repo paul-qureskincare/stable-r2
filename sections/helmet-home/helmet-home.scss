@@ -63,7 +63,9 @@
         .c-swiper {
             &:not(.c-swiper-thumbs) {
                 .swiper-slide {
-                    min-height: 350px;
+                    @include sm {
+                        min-height: 350px;
+                    }
                 }
             }
         }
@@ -80,10 +82,6 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 10px;
-            }
-
-            .watch-how-it-works {
-                display: none;
             }
 
             .c-wistia {
@@ -112,7 +110,7 @@
                         font-size: 16px;
                     }
 
-                    &:hover {
+                    @include hover {
                         text-decoration: none;
                         background: #fff;
 
