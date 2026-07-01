@@ -648,6 +648,7 @@
   top:28px;
   font-size:14px;
   line-height:18px;
+  white-space:nowrap;
 }
 .flyout-cart__content{
   display:flex;
