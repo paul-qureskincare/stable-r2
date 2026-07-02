@@ -517,6 +517,7 @@
   width:min(var(--bs-offcanvas-width), 100%);
   max-width:none;
   height:100vh;
+  height:100dvh;
   max-height:none;
   padding:0;
   border:0;
