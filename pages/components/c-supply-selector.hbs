@@ -44,6 +44,11 @@
                             </div>
                         {{/if}}
                     </div>
+                    {{#if gift }}
+                        <div class="c-supply-selector__gift">
+                            <div class="gift-notice">{{{ gift }}}</div>
+                        </div>
+                    {{/if}}
                     {{#if tag-name }}
                         <div class="c-supply-selector__tag">
                             {{#if tag-up }}

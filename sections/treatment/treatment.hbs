@@ -18,11 +18,13 @@
         <div class="treatment__form">
             <div class="treatment__box">
                 {{> @partial-block }}
-                <div class="treatment__buy">
-                    <div class="c-buy-block">
-                        {{> c-order-button }}
+                {{#unless custom-treatment-buy }}
+                    <div class="treatment__buy">
+                        <div class="c-buy-block">
+                            {{> c-order-button }}
+                        </div>
                     </div>
-                </div>
+                {{/unless }}
             </div>
         </div>
         <div class="treatment__extra">
