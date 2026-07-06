@@ -11,6 +11,9 @@
   font-family:inherit;
   font-weight:600;
 }
+.hero-qa article h1 em{
+  color:#c7e5db;
+}
 .hero-qa article div{
   display:flex;
   gap:20px;
