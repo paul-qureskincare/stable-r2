@@ -18,6 +18,10 @@
 .c-trusted-video-card .c-wistia img{
   filter:brightness(.7);
 }
+.c-trusted-video-card .c-wistia wistia-player{
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
 .c-trusted-video-card .e-pill-badge{
   position:absolute;
   top:10px;
