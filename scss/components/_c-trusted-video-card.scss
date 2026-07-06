@@ -24,6 +24,11 @@
         img {
             filter: brightness(0.7);
         }
+
+        wistia-player {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
     }
 
     .e-pill-badge {

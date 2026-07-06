@@ -1,7 +1,7 @@
 <div class="c-trusted-video-card">
     {{> c-wistia
         id=id
-        custom=thumbnail
+        custom=(concat '<picture><img src="' thumbnail '" alt="' dr '" /></picture><div class="e-pill-badge e-pill-badge--md">' followers ' Followers</div>')
     }}
     <article>
         <p>"{{ text }}"</p>
