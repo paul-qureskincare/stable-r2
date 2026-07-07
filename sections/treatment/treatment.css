@@ -739,9 +739,6 @@
   font-weight:500;
   background:#212428;
 }
-.c-selector-switcher--dark .e-pill-tabs label:has(input:checked) strong{
-  color:#ff5429;
-}
 .c-selector-switcher--text .e-pill-tabs{
   justify-content:center;
   padding:0;
