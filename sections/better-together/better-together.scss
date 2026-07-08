@@ -62,13 +62,13 @@
             font-weight: 500;
         }
 
-        dl {
+        ul {
             font-size: 14px;
-        }
 
-        dt {
-            color: #91baec;
-            font-weight: 600;
+            strong {
+                display: block;
+                color: #91baec;
+            }
         }
     }
 }

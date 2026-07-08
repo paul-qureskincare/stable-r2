@@ -41,12 +41,12 @@
   font-family:inherit;
   font-weight:500;
 }
-.better-together .swiper-slide dl{
+.better-together .swiper-slide ul{
   font-size:14px;
 }
-.better-together .swiper-slide dt{
+.better-together .swiper-slide ul strong{
+  display:block;
   color:#91baec;
-  font-weight:600;
 }
 @media screen and (max-width:767px){
   .better-together{
