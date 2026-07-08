@@ -30,7 +30,7 @@
         vertical-align: top;
     }
 
-    picture[data-video-id] {
+    picture[data-video-id] { // TODO: Delete the old code when it is possible
         grid-row: 1 / -1;
         @include play;
 
@@ -40,6 +40,14 @@
 
         img {
             border-radius: 10px;
+        }
+    }
+
+    .c-wistia {
+        grid-row: 1 / -1;
+
+        @include sm {
+            grid-row: auto;
         }
     }
 

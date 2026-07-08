@@ -18,6 +18,18 @@
         }
     }
 
+    figure {
+        @include play;
+
+        &::after {
+            font-size: 40px;
+        }
+
+        img {
+            filter: brightness(0.7);
+        }
+    }
+
     .c-wistia {
         border-radius: 0;
 
