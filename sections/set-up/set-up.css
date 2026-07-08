@@ -278,6 +278,9 @@
 .set-up picture[data-video-id] img{
   border-radius:10px;
 }
+.set-up .c-wistia{
+  grid-row:1 /  -1;
+}
 .set-up h2{
   align-self:end;
   margin-bottom:0;
@@ -414,7 +417,7 @@
   .set-up:not(.set-up--no-video) .container{
     grid-template:auto/auto;
   }
-  .set-up picture[data-video-id]{
+  .set-up .c-wistia,.set-up picture[data-video-id]{
     grid-row:auto;
   }
   .set-up h2{

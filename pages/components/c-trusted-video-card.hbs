@@ -1,8 +1,15 @@
 <div class="c-trusted-video-card">
-    {{> c-wistia
-        id=id
-        custom=(concat '<picture><img src="' thumbnail '" alt="' dr '" /></picture><div class="e-pill-badge e-pill-badge--md">' followers ' Followers</div>')
-    }}
+    {{#if url }}
+        <figure class="lvideo" data-url="{{ url }}">
+            <img src="{{ thumbnail }}" alt="{{ dr }}" />
+            <div class="e-pill-badge e-pill-badge--md">{{ followers }} Followers</div>
+        </figure>
+    {{ else }}
+        {{> c-wistia
+            id=id
+            custom=(concat '<picture><img src="' thumbnail '" alt="' dr '" /></picture><div class="e-pill-badge e-pill-badge--md">' followers ' Followers</div>')
+        }}
+    {{/if }}
     <article>
         <p>"{{ text }}"</p>
         <div>
