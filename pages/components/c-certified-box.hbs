@@ -4,5 +4,9 @@
         <li><img src="assets/images/targeted-patches/crt-2.webp" alt="Certified Dermatologists" /></li>
         <li>+50</li>
     </ul>
-    <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients. {{#if link }} <a href="#">{{ link }}</a> {{/if }}</p>
+    {{#if custom }}
+        <p>{{{ custom }}}</p>
+    {{ else }}
+        <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients. {{#if link }} <a href="#">{{ link }}</a> {{/if }}</p>
+    {{/if }}
 </div>
