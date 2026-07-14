@@ -305,6 +305,15 @@
         }
     }
 
+    &__buy {
+        &:has(.c-selector-switcher--text) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+    }
+
     // .treatment__extra
     &__extra {
         display: flex;

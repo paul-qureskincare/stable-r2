@@ -1630,6 +1630,12 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
 .treatment__step .subscription-details a:hover{
   text-decoration:none;
 }
+.treatment__buy:has(.c-selector-switcher--text){
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:center;
+}
 .treatment__extra{
   display:flex;
   flex-direction:column;
