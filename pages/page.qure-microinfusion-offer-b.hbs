@@ -830,25 +830,25 @@
         <div class="treatment__buy">
             <div class="c-buy-block">
                 {{> c-order-button }}
-                <div class="c-selector-switcher c-selector-switcher--text">
-                    <ul class="e-pill-tabs e-pill-tabs--selector">
-                        <li>
-                            <label>
-                                <input name="delivery-type" type="radio" />
-                                One time purchese {$dyn}
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="delivery-type" type="radio" checked />
-                                Subscribe &amp; Save&nbsp;<strong>{$dyn}</strong>
-                            </label>
-                        </li>
-                    </ul>
-                    <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
-                </div>
-                {{> c-certified-box }}
             </div>
+            <div class="c-selector-switcher c-selector-switcher--text">
+                <ul class="e-pill-tabs e-pill-tabs--selector">
+                    <li>
+                        <label>
+                            <input name="delivery-type" type="radio" />
+                            One time purchese {$dyn}
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input name="delivery-type" type="radio" checked />
+                            Subscribe &amp; Save&nbsp;<strong>{$dyn}</strong>
+                        </label>
+                    </li>
+                </ul>
+                <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
+            </div>
+            {{> c-certified-box }}
         </div>
     {{/treatment}}
 
