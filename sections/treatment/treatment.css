@@ -980,59 +980,6 @@
   font-size:24px;
 }
 
-.e-pay-options{
-  display:flex;
-  flex-wrap:wrap;
-  gap:4px;
-  color:#757677;
-  font-size:14px;
-  line-height:1;
-}
-.e-pay-options ul{
-  display:flex;
-  gap:6px;
-  align-self:center;
-  justify-content:center;
-  line-height:1;
-}
-.e-pay-options li{
-  display:flex;
-  align-items:center;
-}
-.e-pay-options img{
-  max-width:100%;
-  height:auto;
-  vertical-align:top;
-}
-
-.c-order-button{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.c-order-button .btn{
-  width:100%;
-}
-.c-order-button .btn .e-icon-arrow{
-  margin-left:4px;
-  font-size:16px;
-  -webkit-text-stroke:.7px;
-}
-.c-order-button .btn+p{
-  color:#8b8c8e;
-  font-size:16px;
-  text-align:center;
-}
-.c-order-button .e-pay-options{
-  justify-content:center;
-}
-.c-order-button p a{
-  text-decoration:underline;
-}
-.c-order-button p a:hover{
-  text-decoration:none;
-}
-
 .c-certified-box{
   display:grid;
   grid-template-columns:-webkit-max-content 1fr;
@@ -1784,9 +1731,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
   .e-features-list .e-icon-one-year{
     font-size:18px;
-  }
-  .e-pay-options{
-    font-size:12px;
   }
   .c-buy-block{
     max-width:none;
