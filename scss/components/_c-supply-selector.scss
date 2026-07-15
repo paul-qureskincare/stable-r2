@@ -1,6 +1,4 @@
 @use "@root/mixins" as *;
-@use "@elements/e-pill-save" as *;
-@use "@elements/e-price" as *;
 @use "@elements/e-declaimer" as *;
 
 .c-supply-selector {
@@ -164,6 +162,7 @@
         }
     }
 
+    // .c-supply-selector__save
     &__save {
         color: #ff5429;
         font-size: 14px;
@@ -182,25 +181,75 @@
         }
     }
 
+    // .c-supply-selector__gift
     &__gift {
-        margin-top: -8px;
-        padding: 0 14px 8px;
+        padding-right: 1px;
+        padding-left: 1px;
         font-size: 14px;
 
-        .gift-notice {
-            display: inline-block;
-            padding-left: 3px;
-            border-radius: 6px;
-            background: #ffeeea;
+        // Hide gift when One time purchase selected
+        @at-root .treatment__form {
+            &:has(.c-selector-switcher li:first-child label input:checked) {
+                #{$root}__gift {
+                    display: none;
+                }
+            }
         }
 
-        .e-icon {
-            padding: 0 3px;
-            color: #ff5429;
-            font-size: 20px;
-            border-radius: 6px 6px 6px 0;
-            background: rgb(255 84 41 / 10%);
+        .gift-notice {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 4px 13px;
+            background: #ffeeea;
+
+            @include sm {
+                gap: 8px;
+            }
+
+            figure {
+                position: relative;
+                flex: 0 0 50px;
+
+                img {
+                    @include img-fluid;
+                }
+            }
+
+            p {
+                strong {
+                    font-size: 14px;
+
+                    @include md {
+                        display: block;
+                    }
+                }
+
+                @include md {
+                    font-size: 12px;
+                }
+            }
+
+            .e-pill-save {
+                --e-pill-save-color: #fff;
+
+                margin-left: auto;
+                color: #ff5429;
+                font-weight: normal;
+                white-space: nowrap;
+            }
+
+            .e-icon {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #ff5429;
+                font-size: 16px;
+                border-radius: 4px 4px 4px 0;
+                background: #ffeeea;
+            }
         }
+
     }
 
     // .c-supply-selector__tag
