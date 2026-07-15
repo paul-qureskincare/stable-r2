@@ -1705,7 +1705,7 @@
   gap:16px;
   align-items:center;
   max-width:500px;
-  padding:36px 10px 16px;
+  padding:32px 10px 16px;
   text-align:center;
   border:1px solid #dfe0e0;
   border-radius:10px;
@@ -1768,6 +1768,28 @@
   font-size:12px;
   border-radius:50%;
   background:#212422;
+}
+.c-exclusive-offer--new{
+  gap:24px;
+  border-color:#8b8c8e;
+}
+.c-exclusive-offer--new .e-double-tag{
+  border-radius:20px;
+}
+.c-exclusive-offer--new .e-icon-plus{
+  background:#b5b6b7;
+}
+.c-exclusive-offer--new .c-exclusive-offer__item img{
+  border:1px solid #b5b6b7;
+  border-radius:10px;
+}
+.c-exclusive-offer--new .c-exclusive-offer__item div{
+  right:50%;
+  bottom:-14px;
+  padding:6px 10px;
+  white-space:nowrap;
+  border-radius:20px;
+  transform:translateX(50%);
 }
 
 .e-progress{
