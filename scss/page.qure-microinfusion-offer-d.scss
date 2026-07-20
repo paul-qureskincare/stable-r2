@@ -17,6 +17,14 @@
 
 
 // Styles for current page only
+body {
+    padding-top: var(--height-header);
+}
+
+.shopify-section:is([id*="announcement_bar"], [id*="announcement-bar"]) {
+    display: none !important;
+}
+
 .sections-stack {
     padding-top: 0;
     padding-bottom: 0;
