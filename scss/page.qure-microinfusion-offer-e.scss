@@ -1,0 +1,56 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/hero-section/hero-section" as *;
+@use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/highlight/highlight" as *;
+@use "@sections/achieve-goals/achieve-goals" as *;
+@use "@sections/features-marquee/features-marquee" as *;
+@use "@sections/why-using/why-using" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/comparison/comparison" as *;
+@use "@sections/comparison-table/comparison-table" as *;
+@use "@sections/set-up/set-up" as *;
+@use "@sections/science-backed/science-backed" as *;
+@use "@sections/guarantee/guarantee" as *;
+@use "@sections/treatment/treatment" as *;
+@use "@sections/should-know/should-know" as *;
+
+
+// Styles for current page only
+body:has(#announcement-bar) {
+    padding-top: var(--height-header);
+
+    .header {
+        top: 0;
+    }
+}
+
+.shopify-section:is([id*="announcement_bar"], [id*="announcement-bar"]) {
+    display: none !important;
+}
+
+.sections-stack {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hero-section {
+    .hero-section__content-header {
+        h1 {
+            line-height: 1.2;
+
+            @include sm {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &:not(.hero-section--secondary) {
+        .hero-section__image {
+            img {
+                object-position: 0 50%;
+            }
+        }
+    }
+}
+
