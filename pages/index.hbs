@@ -4,7 +4,7 @@
     page-css=true
     show-cookies=false
 }}
-    {{> quick-links
+    {{!-- {{> quick-links
         list='[
             {
                 "img": "assets/images/categories/1.webp",
@@ -35,9 +35,26 @@
                 "name": "Dermal Mist"
             }
         ]'
-    }}
+    }} --}}
 
     {{#> across-image-banner
+        classes="across-image-banner--holidays across-image-banner--summer"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/across-image-banner/images/summer.webp" />
+            <img src="sections/across-image-banner/images/summer-mob.webp" alt="Glow With Confidence This Summer" />
+        </picture>
+        <div class="container">
+            <article>
+                <div class="e-pill-badge e-pill-badge--xs">SUMMER SALE LIMITED OFFER</div>
+                <h1>Glow With Confidence This&nbsp;Summer</h1>
+                <p>Buy LED Mask, Get Neck &amp; Décolletage LED <strong>FREE</strong></p>
+                <a href="#" class="btn btn--primary">Buy Now &amp; Save {$DYN}</a>
+            </article>
+        </div>
+    {{/across-image-banner}}
+
+    {{!-- {{#> across-image-banner
         classes="across-image-banner--holidays across-image-banner--qure-birthday"
     }}
         <picture>
@@ -58,7 +75,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-    {{/across-image-banner}}
+    {{/across-image-banner}} --}}
 
     {{!-- {{#> across-image-banner
         classes="across-image-banner--holidays across-image-banner--fourth-of-july"
