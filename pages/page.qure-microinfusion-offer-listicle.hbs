@@ -53,13 +53,11 @@
             <article>
                 <strong>Reason #1</strong>
                 <h2>Your Creams Stop at the Surface</h2>
-                <div class="wistia-embed-video">
-                    <div class="wistia_responsive_padding">
-                        <div class="wistia_responsive_wrapper">
-                            <div class="wistia_embed wistia_async_a1pykz2tp0 seo=false videoFoam=true"></div>
-                        </div>
-                    </div>
-                </div>
+                {{> c-wistia
+                    id="a1pykz2tp0"
+                    inline=true
+                    hide-panel=true
+                }}
                 <div>
                     <p>Here's the truth most skincare brands won't tell you: expensive creams and serums can only sit on top of your skin.</p>
                     <p>Your skin's natural barrier blocks most active ingredients from reaching the deeper layers where they actually work.</p>
@@ -72,11 +70,6 @@
             </article>
         </div>
     </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-        });
-    </script>
     <!-- BASE SECTION END -->
 
     <!-- BASE SECTION -->

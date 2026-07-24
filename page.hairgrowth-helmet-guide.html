@@ -92,9 +92,16 @@
                     <article>
                         <p><strong>The Q-Renew LLLT Helmet</strong> is designed to support you in your journey toward fuller, healthier-looking hair. Whether you're just beginning your routine or maintaining results, this device fits seamlessly into your lifestyle.</p>
                         <p>This guide will show you exactly how to use it, care for it, and get the best results from your treatments.</p>
-                        <picture class="d-lg-none" data-label-text="Watch: Quick Start Guide" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="wvoucso35j">
-                            <img src="assets/images/meet-the-qure-filter/quick-start-guide-helmet.webp" alt="Watch: Quick Start Guide" />
-                        </picture>
+                        <div class="c-wistia c-wistia--custom d-lg-none">
+                            <wistia-player media-id="wvoucso35j" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                <div class="c-wistia__custom">
+                                    <figure>
+                                        <img src="assets/images/meet-the-qure-filter/quick-start-guide-helmet.webp" alt="Watch: Quick Start Guide" />
+                                        <figcaption>Watch: Quick Start Guide</figcaption>
+                                    </figure>
+                                </div>
+                            </wistia-player>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -109,8 +116,8 @@
                                 <option value="" selected disabled>Quick Start Guide</option>
                                 <option value="quick-start-guide">Quick Start Guide</option>
                                 <option value="charging-your-device">Charging Your Device</option>
-                                <option value="care-storage">Care & Storage</option>
-                                <option value="troubleshooting-adjustments">Troubleshooting & Adjustments</option>
+                                <option value="care-storage">Care &amp; Storage</option>
+                                <option value="troubleshooting-adjustments">Troubleshooting &amp; Adjustments</option>
                                 <option value="faq">FAQs</option>
                             </select>
                         </div>
@@ -124,10 +131,10 @@
                                     <button data-bs-toggle="tab" data-bs-target="#charging-your-device-tab" type="button">Charging Your Device</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#care-storage-tab" type="button">Care & Storage</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#care-storage-tab" type="button">Care &amp; Storage</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#troubleshooting-adjustments-tab" type="button">Troubleshooting & Adjustments</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#troubleshooting-adjustments-tab" type="button">Troubleshooting &amp; Adjustments</button>
                                 </li>
                                 <li>
                                     <button data-bs-toggle="tab" data-bs-target="#faq-tab" type="button">FAQs</button>
@@ -153,9 +160,16 @@
                             <div id="quick-start-guide-collapse" class="accordion-collapse show">
                                 <article>
                                     <h2>Quick Start Guide</h2>
-                                    <picture class="d-none d-lg-block" data-label-text="Watch: Quick Start Guide" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="wvoucso35j">
-                                        <img src="assets/images/meet-the-qure-filter/quick-start-guide-helmet.webp" alt="Watch: Quick Start Guide" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom d-none d-lg-block">
+                                        <wistia-player media-id="wvoucso35j" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <figure>
+                                                    <img src="assets/images/meet-the-qure-filter/quick-start-guide-helmet.webp" alt="Watch: Quick Start Guide" />
+                                                    <figcaption>Watch: Quick Start Guide</figcaption>
+                                                </figure>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <p>Ready to begin? To get started with your first treatment, you’ll need the following:</p>
                                     <ul>
                                         <li>Q-Renew LLLT Helmet</li>
@@ -360,8 +374,6 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         loadScriptOnce("guide-content", "sections/guide-content/guide-content.js");
                         loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                        loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                        loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                     });
                 </script>
             </div>

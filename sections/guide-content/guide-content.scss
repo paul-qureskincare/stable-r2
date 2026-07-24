@@ -232,7 +232,8 @@
             font-weight: 500;
         }
 
-        // Image
+        // Image/video
+        .c-wistia,
         picture {
             float: right;
             width: clamp(250px, 50%, 335px);
@@ -246,7 +247,9 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+        }
 
+        picture {
             &[data-video-id],
             &[data-url] {
                 @include play;
@@ -606,10 +609,14 @@
             &[data-video-id],
             &[data-url] {
                 @include play;
+            }
+        }
 
-                &::after {
-                    font-size: 46px;
-                }
+        picture[data-video-id],
+        picture[data-url],
+        .c-wistia__custom picture {
+            &::after {
+                font-size: 46px;
             }
         }
 

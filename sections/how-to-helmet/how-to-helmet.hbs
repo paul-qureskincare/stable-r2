@@ -7,16 +7,15 @@
         <article>
             <h2>{{ title }}</h2>
             {{#if video }}
-                {{#> c-wistia-embed-video
-                    classes=""
+                {{> c-wistia
                     id=video
-                    custom=true
+                    custom='
+                        <div class="c-wistia__link">
+                            <span>Watch the video</span>
+                            <i class="e-icon e-icon-watch"></i>
+                        </div>
+                    '
                 }}
-                    <div class="c-wistia-embed-video__link">
-                        <span>Watch the video</span>
-                        {{> e-icon icon="watch" }}
-                    </div>
-                {{/c-wistia-embed-video}}
             {{/if }}
         </article>
     </div>
@@ -24,9 +23,4 @@
         {{> @partial-block}}
     </div>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-    });
-</script>
 <!-- HOW TO HELMET END -->

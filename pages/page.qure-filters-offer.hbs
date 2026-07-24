@@ -290,12 +290,14 @@
                     </li>
                 </ul>
                 <img src="assets/images/meet-the-qure-filter/shower-1.webp" alt="Shower Filter" />
-                {{#> c-wistia-embed-video
-                    classes=""
+                {{> c-wistia
                     id="fsw2ted2a8"
-                    alt="Meet Shower Filter"
+                    custom='
+                        <picture>
+                            <img src="assets/images/meet-the-qure-filter/shower-2.webp" alt="Shower Filter" />
+                        </picture>
+                    '
                 }}
-                {{/c-wistia-embed-video}}
             </div>
             <div class="c-pill-tabs__pane" id="pill-tabs-faucet">
                 <h6>The Qure Faucet Filter</h6>
@@ -327,12 +329,14 @@
                     </li>
                 </ul>
                 <img src="assets/images/meet-the-qure-filter/shower-3.webp" alt="Faucet Filter" />
-                {{#> c-wistia-embed-video
-                    classes=""
+                {{> c-wistia
                     id="tev066z6pv"
-                    alt="Meet Faucet Filter"
+                    custom='
+                        <picture>
+                            <img src="assets/images/meet-the-qure-filter/faucet-2.webp" alt="Faucet Filter" />
+                        </picture>
+                    '
                 }}
-                {{/c-wistia-embed-video}}
             </div>
         </div>
     {{/meet-filters }}
@@ -745,39 +749,23 @@
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="swiper-slide">
-                    <picture data-url="https://www.youtube.com/watch?v=JELsZmxlAM">
-                        <img src="assets/images/shwr_fau_img1.webp" alt="Youtube video" />
-                    </picture>
-                </div>
-                </div>
-                <div class="swiper-slide">
-                    {{#> c-wistia-embed-video
-                        classes=""
+                    {{> c-wistia
                         id="yvm1h7gbig"
-                        alt="Wistia video"
                     }}
-                    {{/c-wistia-embed-video}}
                 </div>
                 <div class="swiper-slide">
-                    {{#> c-wistia-embed-video
-                        classes=""
+                    {{> c-wistia
                         id="altvn4hlw5"
-                        alt="Wistia video"
                     }}
-                    {{/c-wistia-embed-video}}
                 </div>
                 <div class="swiper-slide">
-                    {{#> c-wistia-embed-video
-                        classes=""
+                    {{> c-wistia
                         id="lxde2943wj"
-                        alt="Wistia video"
                     }}
-                    {{/c-wistia-embed-video}}
                 </div>
                 <div class="swiper-slide">
                     <picture data-url="https://www.youtube.com/watch?v=YulGNwbRp7w">
-                        <img src="assets/images/shwr_fau_img6.webp" alt="Youtube video" />
+                        <img src="assets/images/faucet-creative-brief/shower_review4.webp" alt="Youtube video" />
                     </picture>
                 </div>
             </div>

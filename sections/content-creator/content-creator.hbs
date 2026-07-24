@@ -28,65 +28,40 @@
         <ul class="content-creator__videos">
             <li>
                 {{#eachList '["hh6opekser", "zs3ddb0qly", "0yzue0kewq"]' }}
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id=this
+                    }}
                 {{/eachList}}
             </li>
             <li>
                 {{#eachList '["trdbfz6uid", "4cq20l8zpw", "0e33y0v0ek"]' }}
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id=this
+                    }}
                 {{/eachList}}
             </li>
             <li>
                 {{#eachList '["d9qtjnq5y2", "ruvuftcy1z", "1c3i00qlvo"]' }}
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id=this
+                    }}
                 {{/eachList}}
             </li>
             <li>
                 {{#eachList '["vqqgjovm3v", "7wu0u1d3gk", "ivb0vcg2v8"]' }}
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id=this
+                    }}
                 {{/eachList}}
             </li>
             <li>
                 {{#eachList '["4tx5o3wtrv", "vwtoin6sax"]' }}
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_{{ this }} seo=false videoFoam=true"></div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id=this
+                    }}
                 {{/eachList}}
             </li>
         </ul>
     </div>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-    });
-</script>
 <!-- CONTENT CREATOR END -->

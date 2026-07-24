@@ -2641,6 +2641,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main article,body[cl
 body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[class*="page.qure-microinfusion-offer-men"] .hero-product__main>picture{
   order:2;
 }
+.hero-product__main .c-wistia--custom{
+  max-width:350px;
+}
 .hero-product__main .e-pill-tabs{
   max-width:500px;
 }
@@ -2686,6 +2689,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 }
 .hero-product__gallery .c-swiper img.watch-wistia-video,.hero-product__gallery .c-swiper img[data-url]{
   cursor:pointer;
+}
+.hero-product__gallery .c-swiper .c-wistia__custom picture:after{
+  font-size:68px;
 }
 .hero-product__gallery .c-swiper-thumbs-nav{
   align-self:center;

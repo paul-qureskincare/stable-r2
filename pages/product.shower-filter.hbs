@@ -25,14 +25,14 @@
                             <img src="assets/images/product-shower-filter/shower_filter_4.webp" alt="Qure Shower Filter" />
                         </div>
                         <div class="swiper-slide">
-                            <img
-                                class="watch-wistia-video"
-                                src="assets/images/product-shower-filter/shower_filter_2.webp"
-                                alt="Qure Shower Filter"
-                                data-bs-toggle="modal"
-                                data-bs-target="#reusableWistiaModal"
-                                data-video-id="bwhqvtar9u"
-                            />
+                            {{> c-wistia
+                                id="bwhqvtar9u"
+                                custom='
+                                    <picture>
+                                        <img src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter" />
+                                    </picture>
+                                '
+                            }}
                         </div>
                         <div class="swiper-slide">
                             <img src="assets/images/product-shower-filter/shower_filter_9.webp" alt="Qure Shower Filter" />
@@ -585,72 +585,24 @@
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_0vu4f6h4h8 popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/0vu4f6h4h8/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="0vu4f6h4h8"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_lmnn8fcnp4 popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/lmnn8fcnp4/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="lmnn8fcnp4"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_2427ztggvj popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/2427ztggvj/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="2427ztggvj"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_b79xvfj27c popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/b79xvfj27c/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="b79xvfj27c"
+                    }}
                 </div>
             </div>
             <div class="c-swiper-nav">
@@ -664,14 +616,15 @@
     {{> features-marquee }}
 
     {{#> set-up id="easy_steps" }}
-        <picture
-            data-bs-toggle="modal"
-            data-bs-target="#reusableWistiaModal"
-            data-video-id="fsw2ted2a8"
-        >
-            <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-use-video.webp" />
-            <img src="sections/set-up/images/shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
-        </picture>
+        {{> c-wistia
+            id="fsw2ted2a8"
+            custom='
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-use-video.webp" />
+                    <img src="sections/set-up/images/shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
+                </picture>
+            '
+        }}
         <h2>Set up in 3 easy steps</h2>
         <ol>
             <li>

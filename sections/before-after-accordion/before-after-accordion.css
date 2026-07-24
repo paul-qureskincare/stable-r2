@@ -138,6 +138,7 @@
 }
 .c-trusted-review-card--short{
   gap:10px 24px;
+  padding-bottom:0;
   background:#f6f6f7;
 }
 .c-trusted-review-card--short .e-verified-customer{
@@ -194,6 +195,7 @@
   }
   .c-trusted-review-card--short{
     gap:8px;
+    padding-bottom:0;
     font-size:16px;
   }
   .c-trusted-review-card--short .e-verified-customer{

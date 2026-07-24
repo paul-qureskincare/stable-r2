@@ -55,9 +55,17 @@
 .how-to-helmet .container>article h2{
   margin-bottom:0;
 }
-.how-to-helmet .container>article .c-wistia-embed-video__link{
+.how-to-helmet .container>article .c-wistia-embed-video__link,.how-to-helmet .container>article .c-wistia__link{
+  display:flex;
+  gap:8px;
+  align-items:center;
   margin-right:16px;
   color:#ff5429;
+  font-size:20px;
+  font-weight:600;
+}
+.how-to-helmet .container>article .c-wistia-embed-video__link .e-icon,.how-to-helmet .container>article .c-wistia__link .e-icon{
+  -webkit-text-stroke:.5px;
 }
 .how-to-helmet .container:has(.c-swiper){
   margin-right:0;

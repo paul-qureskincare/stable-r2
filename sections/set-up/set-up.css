@@ -365,7 +365,7 @@
     grid-row:1;
     grid-column:1 /  -1;
   }
-  .set-up--qa:not(.set-up--no-video) picture[data-video-id]{
+  .set-up--qa:not(.set-up--no-video) .c-wistia,.set-up--qa:not(.set-up--no-video) picture[data-video-id]{
     grid-row:2 /  4;
     grid-column:1;
   }

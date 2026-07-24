@@ -29,9 +29,19 @@
                 margin-bottom: 0;
             }
 
+            .c-wistia__link,
             .c-wistia-embed-video__link {
+                display: flex;
+                gap: 8px;
+                align-items: center;
                 margin-right: 16px;
                 color: #ff5429;
+                font-size: 20px;
+                font-weight: 600;
+
+                .e-icon {
+                    -webkit-text-stroke: 0.5px;
+                }
             }
         }
     }

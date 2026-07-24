@@ -125,6 +125,12 @@
                 padding-top: 0 !important;
             }
         }
+
+        .c-wistia {
+           .c-wistia__custom picture::after {
+                font-size: 40px;
+           }
+        }
     }
 
     .e-pill-tabs {

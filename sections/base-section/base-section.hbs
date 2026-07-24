@@ -15,17 +15,7 @@
             {{!-- Video with text --}}
             {{#if video }}
                 {{#parseJson video }}
-                    <figure
-                        {{#if wistia-video }}
-                            class="watch-wistia-video"
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="{{ code }}"
-                        {{ else }}
-                            class="lvideo"
-                            data-url="{{ url }}"
-                        {{/if}}
-                    >
+                    <figure class="lvideo" data-url="{{ url }}">
                         <picture>
                             <img src="{{ picture }}" alt="{{ title }}" />
                         </picture>
@@ -35,16 +25,6 @@
                         </figcaption>
                     </figure>
                 {{/parseJson}}
-            {{/if}}
-            {{!-- Live wistia video --}}
-            {{#if wistia }}
-                <div class="wistia-embed-video">
-                    <div class="wistia_responsive_padding">
-                        <div class="wistia_responsive_wrapper">
-                            <div class="wistia_embed wistia_async_{{ wistia }} seo=false videoFoam=true"></div>
-                        </div>
-                    </div>
-                </div>
             {{/if}}
             {{#if c-wistia }}
                 {{> c-wistia
@@ -121,15 +101,4 @@
         {{/if}}
     </div>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        {{#if wistia }}
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-        {{/if}}
-        {{#if video }}
-            loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-        {{/if}}
-    });
-</script>
 <!-- BASE SECTION END -->

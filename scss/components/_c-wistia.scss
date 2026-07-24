@@ -71,6 +71,45 @@
                 vertical-align: top;
             }
         }
+
+        figure {
+            position: relative;
+            cursor: pointer;
+
+            img {
+                @include img-fluid;
+                border-radius: 10px;
+            }
+
+            figcaption {
+                @include play-icon;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                color: #fff;
+                text-align: left;
+
+                strong {
+                    display: block;
+                    font-size: 20px;
+                }
+
+                &::first-line {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                &::after {
+                    right: 20px;
+                    left: auto;
+                    font-size: 35px;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
     }
 
     // .c-wistia--always-playing

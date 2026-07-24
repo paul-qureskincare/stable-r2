@@ -25,15 +25,18 @@
             <article>
                 <p><strong>Discover how to make the most of the Qure Q-Rejuvalight Pro LED Mask with our creative content guide.</strong></p>
                 <p>This brief will help you understand the key benefits of the Q-Rejuvalight Pro Mask and create content that is engaging and educational. </p>
-                <picture
-                    class="d-lg-none"
-                    data-label-text="Watch: How To Use"
-                    data-bs-toggle="modal"
-                    data-bs-target="#reusableWistiaModal"
-                    data-video-id="j7op01weqs"
-                >
-                    <img src="assets/images/meet-the-qure-filter/quick-start-guide.webp" alt="Usage Instruction video" />
-                </picture>
+                {{> c-wistia
+                    custom-classes="d-lg-none"
+                    id="j7op01weqs"
+                    custom='
+                        <figure>
+                            <img src="assets/images/meet-the-qure-filter/quick-start-guide.webp" alt="Watch: How To Use" />
+                            <figcaption>
+                                Watch: How To Use
+                            </figcaption>
+                        </figure>
+                    '
+                }}
             </article>
         </div>
     </section>
@@ -50,7 +53,7 @@
                         <option value="product-information">Product Information</option>
                         <option value="usage-instructions">Usage Instructions</option>
                         <option value="treatment-modes">Treatment Modes</option>
-                        <option value="product-claims">Product Claims & User Study</option>
+                        <option value="product-claims">Product Claims &amp; User Study</option>
                         <option value="content-requirements">Content Requirements</option>
                         <option value="creative-direction">Creative Direction</option>
                         <option value="content-examples">Content Examples</option>
@@ -86,7 +89,7 @@
                                 data-bs-toggle="tab"
                                 data-bs-target="#product-claims-tab"
                                 type="button"
-                            >Product Claims & User Study</button>
+                            >Product Claims &amp; User Study</button>
                         </li>
                         <li>
                             <button
@@ -176,15 +179,18 @@
                     >
                         <article>
                             <h2>Usage Instructions</h2>
-                            <picture
-                                class="d-none d-lg-block"
-                                data-label-text="Watch: How To Use"
-                                data-bs-toggle="modal"
-                                data-bs-target="#reusableWistiaModal"
-                                data-video-id="j7op01weqs"
-                            >
-                                <img src="assets/images/meet-the-qure-filter/quick-start-guide.webp" alt="Usage Instruction video" />
-                            </picture>
+                            {{> c-wistia
+                                custom-classes="d-none d-lg-block"
+                                id="j7op01weqs"
+                                custom='
+                                    <figure>
+                                        <img src="assets/images/meet-the-qure-filter/quick-start-guide.webp" alt="Watch: How To Use" />
+                                        <figcaption>
+                                            Watch: How To Use
+                                        </figcaption>
+                                    </figure>
+                                '
+                            }}
                             <p>Box out, mask on! To get started with your first treatment, you’ll need the following:</p>
                             <ul>
                                 <li>Q-Rejuvalight Pro LED Mask</li>
@@ -358,14 +364,14 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#product-claims-collapse"
                     >
-                        Product Claims & User Study
+                        Product Claims &amp; User Study
                     </button>
                     <div
                         id="product-claims-collapse"
                         class="accordion-collapse"
                     >
                         <article>
-                            <h2>Product Claims & User Study</h2>
+                            <h2>Product Claims &amp; User Study</h2>
                             <p>Skin Rejuvenation Treatment:</p>
                             <ul>
                                 <li>Helps support natural collagen for smoother, plumper-looking skin</li>
@@ -555,174 +561,54 @@
                         >
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_qnxqysx3sg popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/qnxqysx3sg/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="qnxqysx3sg"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_gw1rne236n popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/gw1rne236n/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="gw1rne236n"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_vkd8so2clv popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/vkd8so2clv/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="vkd8so2clv"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_3dk53o20xw popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/3dk53o20xw/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="3dk53o20xw"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_i688q7ywip popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/i688q7ywip/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="i688q7ywip"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_nmgtj7w4at popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/nmgtj7w4at/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="nmgtj7w4at"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_5kh8ymubw0 popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/5kh8ymubw0/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="5kh8ymubw0"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_wl5y3puch1 popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/wl5y3puch1/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="wl5y3puch1"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_v955rlnldn popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/v955rlnldn/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="v955rlnldn"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_5vgchvxn6l popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/5vgchvxn6l/swatch"
-                                                            alt="Wistia video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="5vgchvxn6l"
+                                    }}
                                 </div>
                             </div>
                             <div class="c-swiper-nav">
@@ -739,8 +625,6 @@
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce('guide-content', 'sections/guide-content/guide-content.js');
                 loadScriptOnce('base-slider', 'sections/base-slider/base-slider.js');
-                loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-                loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             });
         </script>
     </div>

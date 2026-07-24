@@ -691,7 +691,7 @@
 .guide-content article strong{
   font-weight:500;
 }
-.guide-content article picture{
+.guide-content article .c-wistia,.guide-content article picture{
   float:right;
   width:clamp(250px, 50%, 335px);
   margin-bottom:25px;
@@ -969,6 +969,8 @@
   background:rgba(0,0,0,.35);
   transform:translate(-50%, -50%);
   content:"\e90d";
+}
+.guide-content .c-swiper .c-wistia__custom picture:after,.guide-content .c-swiper picture[data-url]:after,.guide-content .c-swiper picture[data-video-id]:after{
   font-size:46px;
 }
 .guide-content #creative-direction-collapse .c-swiper{
@@ -1122,7 +1124,7 @@
   .guide-content article:not(:has(p),:has(ul)){
     display:none;
   }
-  .guide-content article picture{
+  .guide-content article .c-wistia,.guide-content article picture{
     float:none;
     display:block;
     width:100%;

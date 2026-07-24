@@ -11,11 +11,11 @@
                 <h2>Welcome to Qure</h2>
             </div>
             <div class="guide-welcome__video">
-                <div class="wistia_responsive_padding">
-                    <div class="wistia_responsive_wrapper">
-                        <div class="wistia_embed wistia_async_2jl8ah5r5n seo=false videoFoam=true">&nbsp;</div>
-                    </div>
-                </div>
+                {{> c-wistia
+                    id="2jl8ah5r5n"
+                    inline=true
+                    autoplay=true
+                }}
             </div>
             <div class="guide-welcome__card guide-welcome__card--start">
                 <h4>Let's get started</h4>
@@ -31,11 +31,6 @@
             </div>
         </div>
     </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
-        });
-    </script>
     <!-- GUIDE WELCOME END -->
 
     <!-- BASE INFO -->

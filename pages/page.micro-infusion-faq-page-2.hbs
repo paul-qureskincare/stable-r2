@@ -69,14 +69,15 @@
     {{#> set-up
         classes="set-up--qa"
     }}
-        <picture
-            data-bs-toggle="modal"
-            data-bs-target="#reusableWistiaModal"
-            data-video-id="8ymvdqzx92"
-        >
-            <source media="(min-width:768px)" srcset="sections/set-up/images/mi-use-video.webp" />
-            <img src="sections/set-up/images/mi-use-video-mob.webp" alt="See how quick and easy it is to use" />
-        </picture>
+        {{> c-wistia
+            id="8ymvdqzx92"
+            custom='
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up/images/mi-use-video.webp" />
+                    <img src="sections/set-up/images/mi-use-video-mob.webp" alt="See how quick and easy it is to use" />
+                </picture>
+            '
+        }}
         <h2>How Do I Use the Qure Micro-Infusion System?</h2>
         <p>Using the Qure Micro-Infusion System is simple and convenient. Just follow these steps:</p>
         <ol>
@@ -456,7 +457,7 @@
                 </div>
                 <article>
                     <h6>Thrilled with the results!</h6>
-                    <p>"I have been using the mask & microneedling for 6 weeks & am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles."</p>
+                    <p>"I have been using the mask &amp; microneedling for 6 weeks &amp; am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars &amp; overall skin tone &amp; firmness, and a smoothing of fine lines &amp; wrinkles."</p>
                 </article>
             </div>
         </div>

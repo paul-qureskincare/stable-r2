@@ -95,9 +95,16 @@
                     <article>
                         <p><strong>Your new Qure Micro-Infusion device</strong> delivers targeted ingredients deep below the surface, helping reduce the look of fine lines, brighten tone, and boost your natural glow.</p>
                         <p>This guide will walk you through every step so you can get glowing results safely and confidently.</p>
-                        <picture class="d-lg-none" data-label-text="Watch: How To Use" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="6de5pg0r6e">
-                            <img src="assets/images/meet-the-qure-filter/how_to_v15.webp" alt="Usage Instruction video" />
-                        </picture>
+                        <div class="c-wistia c-wistia--custom d-lg-none">
+                            <wistia-player media-id="6de5pg0r6e" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                <div class="c-wistia__custom">
+                                    <figure>
+                                        <img src="assets/images/meet-the-qure-filter/how_to_v15.webp" alt="Watch: How To Use" />
+                                        <figcaption>Watch: How To Use</figcaption>
+                                    </figure>
+                                </div>
+                            </wistia-player>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -112,10 +119,10 @@
                                 <option value="" selected disabled>Quick Start Guide</option>
                                 <option value="quick-start-guide">Quick Start Guide</option>
                                 <option value="learn-about-your-device">Learn About Your Device</option>
-                                <option value="serum-ingredients-information">Serum Ingredients & Information</option>
+                                <option value="serum-ingredients-information">Serum Ingredients &amp; Information</option>
                                 <option value="where-to-use">Where to Use</option>
-                                <option value="schedule-reminders">Schedule & Set Reminders</option>
-                                <option value="care-and-tips">Post-Treatment Care & Tips</option>
+                                <option value="schedule-reminders">Schedule &amp; Set Reminders</option>
+                                <option value="care-and-tips">Post-Treatment Care &amp; Tips</option>
                                 <option value="safety-precautions">Safety Precautions</option>
                                 <option value="faq">FAQs</option>
                             </select>
@@ -130,16 +137,16 @@
                                     <button data-bs-toggle="tab" data-bs-target="#learn-about-your-device-tab" type="button">Learn About Your Device</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#serum-ingredients-information-tab" type="button">Serum Ingredients & Information</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#serum-ingredients-information-tab" type="button">Serum Ingredients &amp; Information</button>
                                 </li>
                                 <li>
                                     <button data-bs-toggle="tab" data-bs-target="#where-to-use-tab" type="button">Where to Use</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#schedule-reminders-tab" type="button">Schedule & Set Reminders</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#schedule-reminders-tab" type="button">Schedule &amp; Set Reminders</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#care-and-tips-tab" type="button">Post-Treatment Care & Tips</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#care-and-tips-tab" type="button">Post-Treatment Care &amp; Tips</button>
                                 </li>
                                 <li>
                                     <button data-bs-toggle="tab" data-bs-target="#safety-precautions-tab" type="button">Safety Precautions</button>
@@ -168,9 +175,16 @@
                             <div id="quick-start-guide-collapse" class="accordion-collapse show">
                                 <article>
                                     <h2>Quick Start Guide</h2>
-                                    <picture class="d-none d-lg-block" data-label-text="Watch: How To Use" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="6de5pg0r6e">
-                                        <img src="assets/images/meet-the-qure-filter/how_to_v15.webp" alt="Usage Instruction video" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom d-none d-lg-block">
+                                        <wistia-player media-id="6de5pg0r6e" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <figure>
+                                                    <img src="assets/images/meet-the-qure-filter/how_to_v15.webp" alt="Watch: How To Use" />
+                                                    <figcaption>Watch: How To Use</figcaption>
+                                                </figure>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <p>To get started with your first treatment, you'll need the following:</p>
                                     <ul>
                                         <li>1 sterile needle head (provided)</li>
@@ -327,10 +341,10 @@
                 <section class="guide-content" id="serum-ingredients-information-tab">
                     <div class="container">
                         <div class="accordion">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#serum-ingredients-information">Serum Ingredients & Information</button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#serum-ingredients-information">Serum Ingredients &amp; Information</button>
                             <div id="serum-ingredients-information" class="accordion-collapse">
                                 <article>
-                                    <h2>Serum Ingredients & Information</h2>
+                                    <h2>Serum Ingredients &amp; Information</h2>
                                     <p>Each Qure Micro-Infusion treatment is powered by a single-use ampoule of concentrated serum, designed to target specific skin concerns with clinically backed ingredients.</p>
                                     <p>These serums are lightweight, fast-absorbing, and free from fragrance, parabens, and harsh actives.</p>
                                 </article>
@@ -351,42 +365,38 @@
                                             <p>Helps to plump skin, reducing the look of fine lines and wrinkles.</p>
                                         </li>
                                     </ul>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serum-ingredients-popup"><span>View full ingredient lists</span> <i class="e-icon e-icon-plus"></i></a>
+                                    <a href="javascript:;" onclick="serumIngredientsPopup.showModal()"><span>View full ingredient lists</span> <i class="e-icon e-icon-plus"></i> </a>
                                 </div>
-                                <div class="modal c-modal c-modal--light" id="serum-ingredients-popup">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                                <dialog class="c-dialog" id="serumIngredientsPopup">
+                                    <div class="c-dialog__content">
+                                        <div class="serum-ingredients-details">
+                                            <ul class="tabs" role="tablist">
+                                                <li>
+                                                    <button class="active" data-bs-toggle="tab" data-bs-target="#dark-spots-tab" type="button">Dark Spots</button>
+                                                </li>
+                                                <li>
+                                                    <button data-bs-toggle="tab" data-bs-target="#wrinkles-tab" type="button">Wrinkles</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content show" id="dark-spots-tab">
+                                                <article>
+                                                    <p>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.</p>
+                                                </article>
                                             </div>
-                                            <div class="modal-body">
-                                                <div class="serum-ingredients-details">
-                                                    <ul class="tabs" role="tablist">
-                                                        <li>
-                                                            <button class="active" data-bs-toggle="tab" data-bs-target="#dark-spots-tab" type="button">Dark Spots</button>
-                                                        </li>
-                                                        <li>
-                                                            <button data-bs-toggle="tab" data-bs-target="#wrinkles-tab" type="button">Wrinkles</button>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tab-content show" id="dark-spots-tab">
-                                                        <article>
-                                                            <p>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.</p>
-                                                        </article>
-                                                    </div>
-                                                    <div class="tab-content" id="wrinkles-tab">
-                                                        <article>
-                                                            <p>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
-                                                        </article>
-                                                    </div>
-                                                    <div class="c-note">
-                                                        <p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>
-                                                    </div>
-                                                </div>
+                                            <div class="tab-content" id="wrinkles-tab">
+                                                <article>
+                                                    <p>Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
+                                                </article>
+                                            </div>
+                                            <div class="c-note">
+                                                <p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <button class="c-dialog__close" type="button" onclick="serumIngredientsPopup.close()">
+                                        <i class="e-icon e-icon-cross"></i>
+                                    </button>
+                                </dialog>
                             </div>
                         </div>
                     </div>
@@ -397,10 +407,10 @@
                 <section class="guide-content" id="schedule-reminders-tab">
                     <div class="container">
                         <div class="accordion">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#schedule-reminders-collapse">Schedule & Set Reminders</button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#schedule-reminders-collapse">Schedule &amp; Set Reminders</button>
                             <div id="schedule-reminders-collapse" class="accordion-collapse">
                                 <article>
-                                    <h2>Schedule & Set Reminders</h2>
+                                    <h2>Schedule &amp; Set Reminders</h2>
                                     <div class="c-app-stores">
                                         <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure&ref=d6cb54b2-d73b-423e-8d66-3b5b3a661340&pli=1" target="_blank" rel="nofollow">
                                             <img src="assets/images/app_store_200x.svg" alt="App Store" />
@@ -614,8 +624,6 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         loadScriptOnce("guide-content", "sections/guide-content/guide-content.js");
                         loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                        loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                        loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                     });
                 </script>
             </div>

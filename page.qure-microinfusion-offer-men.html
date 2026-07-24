@@ -90,7 +90,15 @@
                                     <img src="assets/images/micro-infusion-pdp/mi_mens_1.webp" alt="Micro-Infusion for Men" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="watch-wistia-video" src="assets/images/micro-infusion-pdp/mi_mens_2.webp" alt="Micro-Infusion for Men" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="bmdx4v17fb" />
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="bmdx4v17fb" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture>
+                                                    <img src="assets/images/micro-infusion-pdp/mi_mens_2.webp" alt="Micro-Infusion for Men" />
+                                                </picture>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="assets/images/micro-infusion-pdp/mi_mens_3.webp" alt="Micro-Infusion for Men" />
@@ -162,9 +170,16 @@
                                 <button class="btn btn--primary" type="button">GET SMOOTHER SKIN</button>
                             </div>
                         </div>
-                        <picture data-label-text="Watch: How To Use" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="8ymvdqzx92">
-                            <img src="assets/images/micro-infusion-pdp/how_to_use_men.webp" alt="Watch: How To Use" />
-                        </picture>
+                        <div class="c-wistia c-wistia--custom">
+                            <wistia-player media-id="8ymvdqzx92" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                <div class="c-wistia__custom">
+                                    <figure>
+                                        <img src="assets/images/micro-infusion-pdp/how_to_use_men.webp" alt="Watch: How To Use" />
+                                        <figcaption>Watch: How To Use</figcaption>
+                                    </figure>
+                                </div>
+                            </wistia-player>
+                        </div>
                     </div>
                     <div class="hero-product__extra">
                         <div class="c-jump-to">
@@ -193,8 +208,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("countdown", "assets/js/countdown.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                     loadScriptOnce("gallery-sticky-video", "assets/js/gallery-sticky-video.js");
                     loadScriptOnce("subscription-option", "sections/hero-product/js/subscription-option.js");
                 });
@@ -260,12 +273,9 @@
                 <div class="container">
                     <article>
                         <h2>Qure’s Micro-Infusion goes where your skin cream can’t…</h2>
-                        <div class="wistia-embed-video">
-                            <div class="wistia_responsive_padding">
-                                <div class="wistia_responsive_wrapper">
-                                    <div class="wistia_embed wistia_async_a1pykz2tp0 seo=false videoFoam=true"></div>
-                                </div>
-                            </div>
+                        <div class="c-wistia c-wistia--is-playing c-wistia--always-playing">
+                            <wistia-player media-id="a1pykz2tp0" autoplay="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false" play-bar-control="false" play-pause-control="false" volume-control="false" settings-control="false" fullscreen-control="false"> </wistia-player>
+                            <div class="c-wistia__play"></div>
                         </div>
                         <div>
                             <p>Its tiny, almost painless, microneedles penetrate beyond the skin’s surface increasing serum absorption and delivering powerful active ingredients exactly where they’re needed!</p>
@@ -299,11 +309,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- HIGHLIGHT -->
@@ -366,9 +371,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- FEATURES MARQUEE -->
@@ -434,107 +436,51 @@
                         }'>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_zs3ddb0qly popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/zs3ddb0qly/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="zs3ddb0qly" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_w4iq1fw935 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/w4iq1fw935/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="w4iq1fw935" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_odqq1nfd70 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/odqq1nfd70/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="odqq1nfd70" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_0s0i1yak5q popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/0s0i1yak5q/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="0s0i1yak5q" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_tbijgay3s8 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/tbijgay3s8/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="tbijgay3s8" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_qsa1cc7fi3 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/qsa1cc7fi3/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="qsa1cc7fi3" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_atw6y4k628 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/atw6y4k628/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="atw6y4k628" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_1qdmdzjgoz popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/1qdmdzjgoz/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="1qdmdzjgoz" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                         </div>
@@ -549,8 +495,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->
@@ -574,9 +518,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- WHY USING -->
@@ -632,12 +573,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- BASE SLIDER -->
@@ -671,11 +606,16 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="gzba345nd4">
-                                        <img src="assets/images/trusted-video/trusted_img_9.webp" alt="Dr. Prem Tripati" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="gzba345nd4" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-4.webp" alt="Dr. Prem Tripati" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">654k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
-                                        <p>"With Qure's Micro-Infusion System - consistency is key."</p>
+                                        <p>"With Qure&#x27;s Micro-Infusion System - consistency is key."</p>
                                         <div>
                                             <p>Dr. Prem Tripati</p>
                                             <p><span class="e-checkmark"></span> Facial Plastic Surgeon</p>
@@ -685,9 +625,14 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="ypvcdsgwkx">
-                                        <img src="assets/images/trusted-video/trusted_img_8.webp" alt="Dr. Wallace Nozile" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="ypvcdsgwkx" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-17.webp" alt="Dr. Wallace Nozile" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">64k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
                                         <p>"One of the best ways to treat hyperpigmentation at home."</p>
                                         <div>
@@ -699,9 +644,14 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="3bud7no0j9">
-                                        <img src="assets/images/trusted-video/trusted_img_7.webp" alt="Dr. Davin Lim" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="3bud7no0j9" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-18.webp" alt="Dr. Davin Lim" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">665k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
                                         <p>"With Micro-Infusion, you get to see the results almost instantly."</p>
                                         <div>
@@ -713,11 +663,12 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-url="https://www.youtube.com/watch?v=mVdncsTAXiA">
-                                        <img src="assets/images/trusted-video/dr_dylan.webp" alt="Dr. Dylan Greeney" />
-                                    </picture>
+                                    <figure class="lvideo" data-url="https://www.youtube.com/watch?v&#x3D;mVdncsTAXiA">
+                                        <img src="sections/base-slider/images/trusted-review-thumb-19.webp" alt="Dr. Dylan Greeney" />
+                                        <div class="e-pill-badge e-pill-badge--md">14.9k Followers</div>
+                                    </figure>
                                     <article>
-                                        <p>“This system takes it a step further by increasing hydration and delivering growth factors right where they need to be.”</p>
+                                        <p>"This system takes it a step further by increasing hydration and delivering growth factors right where they need to be."</p>
                                         <div>
                                             <p>Dr. Dylan Greeney</p>
                                             <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
@@ -737,8 +688,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->
@@ -1065,10 +1014,16 @@
             <!-- SET UP -->
             <section class="set-up">
                 <div class="container">
-                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="wxgqgsjjdr">
-                        <source media="(min-width:768px)" srcset="sections/set-up/images/mi-men-use-video.webp" />
-                        <img src="sections/set-up/images/mi-men-use-video-mob.webp" alt="See how quick and easy it is to use" />
-                    </picture>
+                    <div class="c-wistia c-wistia--custom">
+                        <wistia-player media-id="8ymvdqzx92" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                            <div class="c-wistia__custom">
+                                <picture>
+                                    <source media="(min-width:768px)" srcset="sections/set-up/images/mi-men-use-video.webp" />
+                                    <img src="sections/set-up/images/mi-men-use-video-mob.webp" alt="See how quick and easy it is to use" />
+                                </picture>
+                            </div>
+                        </wistia-player>
+                    </div>
                     <h2>See how quick and easy it is to use</h2>
                     <ol>
                         <li>
@@ -1099,12 +1054,6 @@
                     <button class="btn btn--primary" type="button">buy now &amp; SAVE up to 43%</button>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- SET UP END -->
 
             <!-- HIGHLIGHT -->

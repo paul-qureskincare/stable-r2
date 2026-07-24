@@ -191,6 +191,9 @@
   max-height:100%;
   padding-top:0 !important;
 }
+.meet-filters .c-pill-tabs__pane .c-wistia .c-wistia__custom picture:after{
+  font-size:40px;
+}
 .meet-filters .e-pill-tabs{
   background:#fff;
 }
