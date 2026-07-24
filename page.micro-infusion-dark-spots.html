@@ -90,7 +90,15 @@
                                     <img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_9.webp" alt="Micro-Infusion" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="watch-wistia-video" src="assets/images/micro-infusion-pdp/sunil_mi_pdp_2.webp" alt="Micro-Infusion" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="jg8c1a3bee" />
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="t0xzq5gdvm" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture>
+                                                    <img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_2.webp" alt="Micro-Infusion" />
+                                                </picture>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="assets/images/micro-infusion-pdp/B&A-9.webp" alt="Micro-Infusion" />
@@ -186,9 +194,16 @@
                                 <button class="btn btn--primary" type="button">GET SMOOTHER, GLOWING SKIN</button>
                             </div>
                         </div>
-                        <picture data-label-text="Watch: How To Use" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="8ymvdqzx92">
-                            <img src="assets/images/micro-infusion-pdp/how-to-use3.webp" alt="Watch: How To Use" />
-                        </picture>
+                        <div class="c-wistia c-wistia--custom">
+                            <wistia-player media-id="8ymvdqzx92" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                <div class="c-wistia__custom">
+                                    <figure>
+                                        <img src="assets/images/micro-infusion-pdp/how-to-use3.webp" alt="Watch: How To Use" />
+                                        <figcaption>Watch: How To Use</figcaption>
+                                    </figure>
+                                </div>
+                            </wistia-player>
+                        </div>
                     </div>
                     <div class="hero-product__extra">
                         <div class="c-jump-to">
@@ -217,8 +232,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("countdown", "assets/js/countdown.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                     loadScriptOnce("gallery-sticky-video", "assets/js/gallery-sticky-video.js");
                     loadScriptOnce("subscription-option", "sections/hero-product/js/subscription-option.js");
                 });
@@ -284,12 +297,9 @@
                 <div class="container">
                     <article>
                         <h2>Qure’s Micro-Infusion goes where your skin cream can’t…</h2>
-                        <div class="wistia-embed-video">
-                            <div class="wistia_responsive_padding">
-                                <div class="wistia_responsive_wrapper">
-                                    <div class="wistia_embed wistia_async_a1pykz2tp0 seo=false videoFoam=true"></div>
-                                </div>
-                            </div>
+                        <div class="c-wistia c-wistia--is-playing c-wistia--always-playing">
+                            <wistia-player media-id="a1pykz2tp0" autoplay="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false" play-bar-control="false" play-pause-control="false" volume-control="false" settings-control="false" fullscreen-control="false"> </wistia-player>
+                            <div class="c-wistia__play"></div>
                         </div>
                         <div>
                             <p>Its tiny, almost painless, microneedles penetrate beyond the skin's surface to <strong>activate skin regeneration</strong> and deliver powerful active ingredients EXACTLY where they're needed for scar improvement!</p>
@@ -312,11 +322,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- HIGHLIGHT -->
@@ -380,9 +385,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- ACHIEVE GOALS -->
@@ -579,81 +581,39 @@
                         }'>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_zs3ddb0qly popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/zs3ddb0qly/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="zs3ddb0qly" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_v5e5op6ap7 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/v5e5op6ap7/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="v5e5op6ap7" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_zhb1w8ise9 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/zhb1w8ise9/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="zhb1w8ise9" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_opfbh936fc popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/opfbh936fc/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="opfbh936fc" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_nei98l696b popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/nei98l696b/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="nei98l696b" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_jcgxarsfbj popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/jcgxarsfbj/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="jcgxarsfbj" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                         </div>
@@ -668,8 +628,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->
@@ -693,9 +651,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- WHY USING -->
@@ -755,12 +710,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- BASE SLIDER -->
@@ -793,11 +742,16 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="rehxqby0fq">
-                                        <img src="assets/images/trusted-video/home-trusted_img_1.webp" alt="Dr. Alekandra Brown" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="rehxqby0fq" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-1.webp" alt="Dr. Alekandra Brown" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">818k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
-                                        <p>"I like using this between my in-office treatments and it's easy to use, even for beginners."</p>
+                                        <p>"I like using this between my in-office treatments and it&#x27;s easy to use, even for beginners."</p>
                                         <div>
                                             <p>Dr. Alekandra Brown</p>
                                             <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
@@ -807,9 +761,14 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="ug1o3j3d8w">
-                                        <img src="assets/images/trusted-video/trusted_img_5.webp" alt="Dr. Lindsey Zubritsky" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="ug1o3j3d8w" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-2.webp" alt="Dr. Lindsey Zubritsky" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">1.5M Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
                                         <p>"After just a few uses my wrinkles look less visible and my skin brighter and smoother."</p>
                                         <div>
@@ -821,11 +780,16 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="wbf95ywhx4">
-                                        <img src="assets/images/trusted-video/trusted_img_6.webp" alt="Dr. Alexis Stephens" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="wbf95ywhx4" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-3.webp" alt="Dr. Alexis Stephens" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">56.9k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
-                                        <p>"You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin"</p>
+                                        <p>"You can get a clinical treatment at home safely and conveniently... and it&#x27;s particularly beneficial for those with melanin-rich skin."</p>
                                         <div>
                                             <p>Dr. Alexis Stephens</p>
                                             <p><span class="e-checkmark"></span> Internal Medicine Doctor</p>
@@ -835,42 +799,19 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="gzba345nd4">
-                                        <img src="assets/images/trusted-video/trusted_img_9.webp" alt="Dr. Prem Tripati" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="gzba345nd4" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-4.webp" alt="Dr. Prem Tripati" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">654k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
-                                        <p>"With Qure's Micro-Infusion System - consistency is key."</p>
+                                        <p>"With Qure&#x27;s Micro-Infusion System - consistency is key."</p>
                                         <div>
                                             <p>Dr. Prem Tripati</p>
                                             <p><span class="e-checkmark"></span> Facial Plastic Surgeon</p>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="ypvcdsgwkx">
-                                        <img src="assets/images/trusted-video/trusted_img_8.webp" alt="Dr. Wallace Nozile" />
-                                    </picture>
-                                    <article>
-                                        <p>"One of the best ways to treat hyperpigmentation at home."</p>
-                                        <div>
-                                            <p>Dr. Wallace Nozile</p>
-                                            <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="c-trusted-video-card">
-                                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="3bud7no0j9">
-                                        <img src="assets/images/trusted-video/trusted_img_7.webp" alt="Dr. Davin Lim" />
-                                    </picture>
-                                    <article>
-                                        <p>"With Micro-Infusion, you get to see the results almost instantly."</p>
-                                        <div>
-                                            <p>Dr. Davin Lim</p>
-                                            <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
                                         </div>
                                     </article>
                                 </div>
@@ -887,8 +828,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->
@@ -995,7 +934,7 @@
                                     </div>
                                     <article>
                                         <h6>Thrilled with the results!</h6>
-                                        <p>"I have been using the mask & microneedling for 6 weeks & am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles."</p>
+                                        <p>"I have been using the mask &amp; microneedling for 6 weeks &amp; am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars &amp; overall skin tone &amp; firmness, and a smoothing of fine lines &amp; wrinkles."</p>
                                     </article>
                                 </div>
                             </div>
@@ -1311,10 +1250,16 @@
             <!-- SET UP -->
             <section class="set-up">
                 <div class="container">
-                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="8ymvdqzx92">
-                        <source media="(min-width:768px)" srcset="sections/set-up/images/mi-use-video.webp" />
-                        <img src="sections/set-up/images/mi-use-video-mob.webp" alt="See how quick and easy it is to use" />
-                    </picture>
+                    <div class="c-wistia c-wistia--custom">
+                        <wistia-player media-id="8ymvdqzx92" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                            <div class="c-wistia__custom">
+                                <picture>
+                                    <source media="(min-width:768px)" srcset="sections/set-up/images/mi-use-video.webp" />
+                                    <img src="sections/set-up/images/mi-use-video-mob.webp" alt="See how quick and easy it is to use" />
+                                </picture>
+                            </div>
+                        </wistia-player>
+                    </div>
                     <h2>See how quick and easy it is to use</h2>
                     <ol>
                         <li>
@@ -1344,12 +1289,6 @@
                     </ol>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- SET UP END -->
 
             <!-- HIGHLIGHT -->

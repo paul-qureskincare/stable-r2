@@ -190,6 +190,7 @@
             }
         }
 
+        .c-wistia,
         picture[data-video-id] {
             @media screen and (min-width: 768px) {
                 grid-row: 2 / 4;

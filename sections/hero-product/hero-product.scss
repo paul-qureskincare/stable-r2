@@ -242,6 +242,10 @@
             }
         }
 
+        .c-wistia--custom {
+            max-width: 350px;
+        }
+
         .e-pill-tabs {
             max-width: 500px;
 
@@ -313,6 +317,11 @@
                 }
             }
 
+            .c-wistia__custom {
+                picture::after {
+                    font-size: 68px;
+                }
+            }
         }
 
         .c-swiper-thumbs-nav {

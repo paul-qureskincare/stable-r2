@@ -22,13 +22,14 @@
                         <img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_1.webp" alt="Micro-Infusion Facial System" />
                     </div>
                     <div class="swiper-slide">
-                        <img
-                            class="watch-wistia-video"
-                            src="assets/images/micro-infusion-pdp/sunil_mi_pdp_2.webp" alt="Micro-Infusion Facial System"
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="jg8c1a3bee"
-                        />
+                        {{> c-wistia
+                            id="jg8c1a3bee"
+                            custom='
+                                <picture>
+                                    <img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_2.webp" alt="Micro-Infusion Facial System" />
+                                </picture>
+                            '
+                        }}
                     </div>
                     <div class="swiper-slide">
                         <img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_3.webp" alt="Micro-Infusion Facial System" />
@@ -928,113 +929,44 @@
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            class="filter-card-video"
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="rehxqby0fq"
-                        >
-                            <img src="assets/images/trusted-video/home-trusted_img_1.webp" alt="Dr. Alekandra Brown" />
-                        </picture>
-                        <article>
-                            <p>"I like using this between my in-office treatments and it's easy to use, even for beginners." </p>
-                            <div>
-                                <p>Dr. Alekandra Brown</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="rehxqby0fq"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-1.webp"
+                        followers="818k"
+                        text="I like using this between my in-office treatments and it's easy to use, even for beginners."
+                        dr="Dr. Alekandra Brown"
+                        position="Board-Certified Dermatologist"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="ug1o3j3d8w"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_5.webp" alt="Dr. Lindsey Zubritsky" />
-                        </picture>
-                        <article>
-                            <p>"After just a few uses my wrinkles look less visible and my skin brighter and smoother."</p>
-                            <div>
-                                <p>Dr. Lindsey Zubritsky</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="ug1o3j3d8w"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-2.webp"
+                        followers="1.5M"
+                        text="After just a few uses my wrinkles look less visible and my skin brighter and smoother."
+                        dr="Dr. Lindsey Zubritsky"
+                        position="Board-Certified Dermatologist"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="wbf95ywhx4"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_6.webp" alt="Dr. Alexis Stephens" />
-                        </picture>
-                        <article>
-                            <p>"You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin"</p>
-                            <div>
-                                <p>Dr. Alexis Stephens</p>
-                                <p><span class="e-checkmark"></span> Internal Medicine Doctor</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="wbf95ywhx4"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-3.webp"
+                        followers="56.9k"
+                        text="You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin."
+                        dr="Dr. Alexis Stephens"
+                        position="Internal Medicine Doctor"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="gzba345nd4"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_9.webp" alt="Dr. Prem Tripati" />
-                        </picture>
-                        <article>
-                            <p>"With Qure's Micro-Infusion System - consistency is key."</p>
-                            <div>
-                                <p>Dr. Prem Tripati</p>
-                                <p><span class="e-checkmark"></span> Facial Plastic Surgeon</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="ypvcdsgwkx"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_8.webp" alt="Dr. Wallace Nozile" />
-                        </picture>
-                        <article>
-                            <p>"One of the best ways to treat hyperpigmentation at home."</p>
-                            <div>
-                                <p>Dr. Wallace Nozile</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="3bud7no0j9"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_7.webp" alt="Dr. Davin Lim" />
-                        </picture>
-                        <article>
-                            <p>"With Micro-Infusion, you get to see the results almost instantly."</p>
-                            <div>
-                                <p>Dr. Davin Lim</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="gzba345nd4"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-4.webp"
+                        followers="654k"
+                        text="With Qure's Micro-Infusion System - consistency is key."
+                        dr="Dr. Prem Tripati"
+                        position="Facial Plastic Surgeon"
+                    }}
                 </div>
             </div>
             <div class="c-swiper-nav">
@@ -1183,106 +1115,34 @@
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_zs3ddb0qly popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/zs3ddb0qly/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="zs3ddb0qly"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_v5e5op6ap7 popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/v5e5op6ap7/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="v5e5op6ap7"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_zhb1w8ise9 popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/zhb1w8ise9/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="zhb1w8ise9"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_opfbh936fc popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/opfbh936fc/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="opfbh936fc"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_nei98l696b popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/nei98l696b/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="nei98l696b"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="wistia-embed-video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_jcgxarsfbj popover=true seo=false videoFoam=true">
-                                    <div class="wistia_swatch">
-                                        <img
-                                            src="https://fast.wistia.com/embed/medias/jcgxarsfbj/swatch"
-                                            alt="Wistia video thumbnail"
-                                            style="filter: blur(5px);"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{> c-wistia
+                        id="jcgxarsfbj"
+                    }}
                 </div>
             </div>
             <div class="c-swiper-nav">
@@ -1302,14 +1162,15 @@
     {{/text-section}}
 
     {{#> set-up }}
-        <picture
-            data-bs-toggle="modal"
-            data-bs-target="#reusableWistiaModal"
-            data-video-id="8ymvdqzx92"
-        >
-            <source media="(min-width:768px)" srcset="sections/set-up/images/mi-use-video.webp" />
-            <img src="sections/set-up/images/mi-use-video-mob.webp" alt="See how quick and easy it is to use" />
-        </picture>
+        {{> c-wistia
+            id="8ymvdqzx92"
+            custom='
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up/images/mi-use-video.webp" />
+                    <img src="sections/set-up/images/mi-use-video-mob.webp" alt="See how quick and easy it is to use" />
+                </picture>
+            '
+        }}
         <h2>See how quick and easy it is to use</h2>
         <ol>
             <li>

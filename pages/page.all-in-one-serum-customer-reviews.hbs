@@ -79,21 +79,9 @@
                 >
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="wistia-embed-video">
-                                <div class="wistia_responsive_padding">
-                                    <div class="wistia_responsive_wrapper">
-                                        <div class="wistia_embed wistia_async_gt0wr74fyd popover=true seo=false videoFoam=true">
-                                            <div class="wistia_swatch">
-                                                <img
-                                                    src="https://fast.wistia.com/embed/medias/gt0wr74fyd/swatch"
-                                                    alt="Wistia video thumbnail"
-                                                    style="filter: blur(5px);"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {{> c-wistia
+                                id="gt0wr74fyd"
+                            }}
                         </div>
                         <div class="swiper-slide">
                             <picture data-url="https://www.youtube.com/watch?v=wuIjXhlFUTU">
@@ -101,30 +89,14 @@
                             </picture>
                         </div>
                         <div class="swiper-slide">
-                            <div class="wistia-embed-video">
-                                <div class="wistia_responsive_padding">
-                                    <div class="wistia_responsive_wrapper">
-                                        <div class="wistia_embed wistia_async_7ghlcv9xqg popover=true seo=false videoFoam=true">
-                                            <div class="wistia_swatch">
-                                                <img
-                                                    src="https://fast.wistia.com/embed/medias/7ghlcv9xqg/swatch"
-                                                    alt="Wistia video thumbnail"
-                                                    style="filter: blur(5px);"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {{> c-wistia
+                                id="7ghlcv9xqg"
+                            }}
                         </div>
                         <div class="swiper-slide">
-                            <picture
-                                data-bs-toggle="modal"
-                                data-bs-target="#reusableWistiaModal"
-                                data-video-id="cdyj6o3q28"
-                            >
-                                <img src="assets/images/faucet-creative-brief/aio_thumb-4.webp" alt="Video thumbnail" />
-                            </picture>
+                            {{> c-wistia
+                                id="cdyj6o3q28"
+                            }}
                         </div>
                         <div class="swiper-slide">
                             <picture data-url="https://www.youtube.com/watch?v=j0L38mO7XaY">
@@ -148,8 +120,6 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce('base-slider', 'sections/base-slider/base-slider.js');
-                loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-                loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             });
         </script>
         <!-- BASE SLIDER END -->

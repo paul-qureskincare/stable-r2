@@ -365,31 +365,19 @@
                         >
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <picture
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#reusableWistiaModal"
-                                        data-video-id="ttir3xa0s4"
-                                    >
-                                        <img src="assets/images/faucet-creative-brief/target_thumb.webp" alt="Content examples video" />
-                                    </picture>
+                                    {{> c-wistia
+                                        id="ttir3xa0s4"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <picture
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#reusableWistiaModal"
-                                        data-video-id="m465kgkfe7"
-                                    >
-                                        <img src="assets/images/faucet-creative-brief/target_thumb2.webp" alt="Content examples video" />
-                                    </picture>
+                                    {{> c-wistia
+                                        id="m465kgkfe7"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <picture
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#reusableWistiaModal"
-                                        data-video-id="suqimfilsp"
-                                    >
-                                        <img src="assets/images/faucet-creative-brief/target_thumb3.webp" alt="Content examples video" />
-                                    </picture>
+                                    {{> c-wistia
+                                        id="suqimfilsp"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
                                     <picture data-url="https://www.youtube.com/watch?v=9ELWporAa5k">
@@ -397,13 +385,9 @@
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
-                                    <picture
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#reusableWistiaModal"
-                                        data-video-id="s953igmo02"
-                                    >
-                                        <img src="assets/images/faucet-creative-brief/target_thumb5.webp" alt="Content examples video" />
-                                    </picture>
+                                    {{> c-wistia
+                                        id="s953igmo02"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
                                     <picture data-url="https://www.youtube.com/watch?v=Jqw2lZirHz4">
@@ -430,8 +414,6 @@
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce('guide-content', 'sections/guide-content/guide-content.js');
                 loadScriptOnce('base-slider', 'sections/base-slider/base-slider.js');
-                loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-                loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             });
         </script>
     </div>

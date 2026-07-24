@@ -26,15 +26,18 @@
                 <p><strong>Discover how to make the most of the Qure Micro-Infusion System with our creative content guide</strong></p>
                 <p>This brief is designed to guide you in creating engaging, authentic content that highlights how our Micro-Infusion System transforms the skin. </p>
                 <p>You'll be showcasing its ability to visibly improve texture, boost softness, and deliver a lasting, healthy glow—helping your audience see the real, science-backed benefits of this at-home treatment.</p>
-                <picture
-                    class="d-lg-none"
-                    data-label-text="Watch: How To Use"
-                    data-bs-toggle="modal"
-                    data-bs-target="#reusableWistiaModal"
-                    data-video-id="96okj0th48"
-                >
-                    <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
-                </picture>
+                {{> c-wistia
+                    custom-classes="d-lg-none"
+                    id="96okj0th48"
+                    custom='
+                        <figure>
+                            <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
+                            <figcaption>
+                                Usage Instruction video
+                            </figcaption>
+                        </figure>
+                    '
+                }}
             </article>
         </div>
     </section>
@@ -50,11 +53,11 @@
                         <option value="" selected disabled>Product Information</option>
                         <option value="product-information">Product Information</option>
                         <option value="usage-instructions">Usage Instructions</option>
-                        <option value="serum-ingredients-information">Serum Ingredients & Information</option>
+                        <option value="serum-ingredients-information">Serum Ingredients &amp; Information</option>
                         <option value="product-claims">Product Claims</option>
                         <option value="content-requirements">Content Requirements</option>
                         <option value="creative-direction">Creative Direction</option>
-                        <option value="content-angles-ideas">Content Angles & Ideas</option>
+                        <option value="content-angles-ideas">Content Angles &amp; Ideas</option>
                         <option value="content-examples">Content Examples</option>
                     </select>
                 </div>
@@ -81,7 +84,7 @@
                                 data-bs-toggle="tab"
                                 data-bs-target="#serum-ingredients-information-tab"
                                 type="button"
-                            >Serum Ingredients & Information</button>
+                            >Serum Ingredients &amp; Information</button>
                         </li>
                         <li>
                             <button
@@ -109,7 +112,7 @@
                                 data-bs-toggle="tab"
                                 data-bs-target="#content-angles-ideas-tab"
                                 type="button"
-                            >Content Angles & Ideas</button>
+                            >Content Angles &amp; Ideas</button>
                         </li>
                         <li>
                             <button
@@ -187,15 +190,18 @@
                     >
                         <article>
                             <h2>Usage Instructions</h2>
-                            <picture
-                                class="d-none d-lg-block"
-                                data-label-text="Watch: How To Use"
-                                data-bs-toggle="modal"
-                                data-bs-target="#reusableWistiaModal"
-                                data-video-id="96okj0th48"
-                            >
-                                <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
-                            </picture>
+                            {{> c-wistia
+                                custom-classes="d-none d-lg-block"
+                                id="96okj0th48"
+                                custom='
+                                    <figure>
+                                        <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
+                                        <figcaption>
+                                            Usage Instruction video
+                                        </figcaption>
+                                    </figure>
+                                '
+                            }}
                             <p>To get started with your first treatment, you'll need the following:</p>
                             <ul>
                                 <li>Micro-Infusion Device</li>
@@ -362,14 +368,14 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#serum-ingredients-information"
                     >
-                        Serum Ingredients & Information
+                        Serum Ingredients &amp; Information
                     </button>
                     <div
                         id="serum-ingredients-information"
                         class="accordion-collapse"
                     >
                         <article>
-                            <h2>Serum Ingredients & Information</h2>
+                            <h2>Serum Ingredients &amp; Information</h2>
                             <p>Each Qure Micro-Infusion treatment is powered by a single-use ampoule of concentrated serum, designed to target specific skin concerns with clinically backed ingredients.</p>
                             <p>These serums are lightweight, fast-absorbing, and free from fragrance, parabens, and harsh actives.</p>
                         </article>
@@ -390,51 +396,44 @@
                                     <p>Helps to plump skin, reducing the look of fine lines and wrinkles.</p>
                                 </li>
                             </ul>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#serum-ingredients-popup"><span>View full ingredient lists</span> <i class="e-icon e-icon-plus"></i></a>
+                            <a href="javascript:;" onclick="serumIngredientsPopup.showModal()"><span>View full ingredient lists</span> {{> e-icon icon="plus" }}</a>
                         </div>
-                        <div class="modal c-modal c-modal--light" id="serum-ingredients-popup">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="serum-ingredients-details">
-                                            <ul class="tabs" role="tablist">
-                                                <li>
-                                                    <button
-                                                        class="active"
-                                                        data-bs-toggle="tab"
-                                                        data-bs-target="#dark-spots-tab"
-                                                        type="button"
-                                                    >Dark Spots</button>
-                                                </li>
-                                                <li>
-                                                    <button
-                                                        data-bs-toggle="tab"
-                                                        data-bs-target="#wrinkles-tab"
-                                                        type="button"
-                                                    >Wrinkles</button>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content show" id="dark-spots-tab">
-                                                <article>
-                                                    <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Sodium Hyaluronate, Allantoin, Xanthan Gum.</p>
-                                                </article>
-                                            </div>
-                                            <div class="tab-content" id="wrinkles-tab">
-                                                <article>
-                                                    <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, Sh-Oligopeptide-1.</p>
-                                                </article>
-                                            </div>
-                                            <div class="c-note">
-                                                <p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                        {{#> c-dialog
+                            id="serumIngredientsPopup"
+                        }}
+                            <div class="serum-ingredients-details">
+                                <ul class="tabs" role="tablist">
+                                    <li>
+                                        <button
+                                            class="active"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#dark-spots-tab"
+                                            type="button"
+                                        >Dark Spots</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#wrinkles-tab"
+                                            type="button"
+                                        >Wrinkles</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content show" id="dark-spots-tab">
+                                    <article>
+                                        <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Sodium Hyaluronate, Allantoin, Xanthan Gum.</p>
+                                    </article>
+                                </div>
+                                <div class="tab-content" id="wrinkles-tab">
+                                    <article>
+                                        <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, Sh-Oligopeptide-1.</p>
+                                    </article>
+                                </div>
+                                <div class="c-note">
+                                    <p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>
                                 </div>
                             </div>
-                        </div>
+                        {{/c-dialog}}
                     </div>
                 </div>
             </div>
@@ -462,8 +461,8 @@
                             <p>Key claims:</p>
                             <ul>
                                 <li>Single-use disposable needle-heads with 24 karat gold-plated needles minimize the risk of infection and irritation.</li>
-                                <li>Delivers science-backed serums directly to skin to help increase absorption & results.</li>
-                                <li>Little to no downtime & quick recovery of the skin.</li>
+                                <li>Delivers science-backed serums directly to skin to help increase absorption &amp; results.</li>
+                                <li>Little to no downtime &amp; quick recovery of the skin.</li>
                                 <li>Great alternative to in-clinic microneedling.</li>
                                 <li>User study shows that the Micro-Infusion System improves overall skin appearance, with the most noticeable results seen in the appearance of pores and wrinkles.</li>
                             </ul>
@@ -607,14 +606,14 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#content-angles-ideas-collapse"
                     >
-                        Content Angles & Ideas
+                        Content Angles &amp; Ideas
                     </button>
                     <div
                         id="content-angles-ideas-collapse"
                         class="accordion-collapse"
                     >
                         <article>
-                            <h2>Content Angles & Ideas</h2>
+                            <h2>Content Angles &amp; Ideas</h2>
                         </article>
                         <div
                             class="c-swiper"
@@ -753,157 +752,49 @@
                         >
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_zs3ddb0qly popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/zs3ddb0qly/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="zs3ddb0qly"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_zhb1w8ise9 popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/zhb1w8ise9/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="zhb1w8ise9"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_opfbh936fc popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/opfbh936fc/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="opfbh936fc"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_hczgk9ilv0 popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/hczgk9ilv0/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="hczgk9ilv0"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_trzznq47wu popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/trzznq47wu/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="trzznq47wu"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_uqpxdr5gqp popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/uqpxdr5gqp/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="uqpxdr5gqp"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_qwy4595msk popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/qwy4595msk/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="qwy4595msk"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_zbw5az4lxu popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/zbw5az4lxu/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="zbw5az4lxu"
+                                    }}
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="wistia-embed-video">
-                                        <div class="wistia_responsive_padding">
-                                            <div class="wistia_responsive_wrapper">
-                                                <div class="wistia_embed wistia_async_jcgxarsfbj popover=true seo=false videoFoam=true">
-                                                    <div class="wistia_swatch">
-                                                        <img
-                                                            src="https://fast.wistia.com/embed/medias/jcgxarsfbj/swatch"
-                                                            alt="Wistia external video thumbnail"
-                                                            style="filter: blur(5px);"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{> c-wistia
+                                        id="jcgxarsfbj"
+                                    }}
                                 </div>
                             </div>
                             <div class="c-swiper-nav">
@@ -920,8 +811,6 @@
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce('guide-content', 'sections/guide-content/guide-content.js');
                 loadScriptOnce('base-slider', 'sections/base-slider/base-slider.js');
-                loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-                loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             });
         </script>
     </div>

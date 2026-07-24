@@ -49,6 +49,9 @@
 .content-creator__videos .wistia-embed-video{
   min-height:220px;
 }
+.content-creator__videos .c-wistia .c-wistia__play:after{
+  font-size:40px;
+}
 .content-creator .c-dialog{
   max-width:860px;
 }

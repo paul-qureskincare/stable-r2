@@ -92,9 +92,16 @@
                     <article>
                         <p><strong>The Qure Faucet Filter</strong> is designed to remove harmful impurities from your water, ensuring your skin remains clear, hydrated, and free from irritants.</p>
                         <p>This guide will walk you through the installation process so you can start enjoying cleaner, skin-friendly water in just a few minutes.</p>
-                        <picture class="d-lg-none" data-label-text="Watch: How To Install" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="t0xzq5gdvm">
-                            <img src="assets/images/meet-the-qure-filter/how_to_install.webp" alt="Watch: How To Install" />
-                        </picture>
+                        <div class="c-wistia c-wistia--custom d-lg-none">
+                            <wistia-player media-id="t0xzq5gdvm" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                <div class="c-wistia__custom">
+                                    <figure>
+                                        <img src="assets/images/meet-the-qure-filter/how_to_install.webp" alt="Watch: How To Install" />
+                                        <figcaption>Watch: How To Install</figcaption>
+                                    </figure>
+                                </div>
+                            </wistia-player>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -111,8 +118,8 @@
                                 <option value="how-to-replace-the-filter">How To Replace The Filter</option>
                                 <option value="included-box">What's Included In The Box</option>
                                 <option value="water-mode-selection">Water Mode Selection</option>
-                                <option value="care-and-tips">Care & Maintenance</option>
-                                <option value="troubleshooting-adjustments">Troubleshooting & Adjustments</option>
+                                <option value="care-and-tips">Care &amp; Maintenance</option>
+                                <option value="troubleshooting-adjustments">Troubleshooting &amp; Adjustments</option>
                                 <option value="faq">FAQs</option>
                             </select>
                         </div>
@@ -132,10 +139,10 @@
                                     <button data-bs-toggle="tab" data-bs-target="#water-mode-selection-tab" type="button">Water Mode Selection</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#care-and-tips-tab" type="button">Care & Maintenance</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#care-and-tips-tab" type="button">Care &amp; Maintenance</button>
                                 </li>
                                 <li>
-                                    <button data-bs-toggle="tab" data-bs-target="#troubleshooting-adjustments-tab" type="button">Troubleshooting & Adjustments</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#troubleshooting-adjustments-tab" type="button">Troubleshooting &amp; Adjustments</button>
                                 </li>
                                 <li>
                                     <button data-bs-toggle="tab" data-bs-target="#faq-tab" type="button">FAQs</button>
@@ -161,9 +168,16 @@
                             <div id="quick-start-guide-collapse" class="accordion-collapse show">
                                 <article>
                                     <h2>Quick Start Guide</h2>
-                                    <picture class="d-none d-lg-block" data-label-text="Watch: How To Install" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="t0xzq5gdvm">
-                                        <img src="assets/images/meet-the-qure-filter/how_to_install.webp" alt="Watch: How To Install" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom d-none d-lg-block">
+                                        <wistia-player media-id="t0xzq5gdvm" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <figure>
+                                                    <img src="assets/images/meet-the-qure-filter/how_to_install.webp" alt="Watch: How To Install" />
+                                                    <figcaption>Watch: How To Install</figcaption>
+                                                </figure>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <p>To install your new Faucet Filter, you'll need the following:</p>
                                     <ul>
                                         <li>Qure Faucet Filter with 360° nozzle</li>
@@ -282,9 +296,16 @@
                             <div id="how-to-replace-the-filter-collapse" class="accordion-collapse">
                                 <article>
                                     <h2>Quick How To Replace The Filter Guide</h2>
-                                    <picture data-label-text="Watch: How To Replace" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="1no4jx6uxf">
-                                        <img src="assets/images/meet-the-qure-filter/how_to_replace.webp" alt="Watch: How To Replace" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="1no4jx6uxf" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <figure>
+                                                    <img src="assets/images/meet-the-qure-filter/how_to_replace.webp" alt="Watch: How To Replace" />
+                                                    <figcaption>Watch: How To Replace</figcaption>
+                                                </figure>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <p>We recommend replacing your filter every 3 months to ensure optimal filtration.</p>
                                     <p>You may find that water flow slows sooner than this 3 month guideline. In this case, you can replace the filter sooner to maintain strong flow and effective filtration.</p>
                                     <p>To replace the filter, you'll need a new replacement filter cartridge.</p>
@@ -566,8 +587,6 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         loadScriptOnce("guide-content", "sections/guide-content/guide-content.js");
                         loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                        loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                        loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                     });
                 </script>
             </div>

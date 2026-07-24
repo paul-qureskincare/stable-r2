@@ -44,7 +44,6 @@
     &__video {
         grid-area: video;
         @include wistia-inline;
-        min-height: 600px;
     }
 
     &__card {

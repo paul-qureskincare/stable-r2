@@ -30,15 +30,18 @@
             <article>
                 <p><strong>Your new Qure Micro-Infusion device</strong> delivers targeted ingredients deep below the surface, helping reduce the look of fine lines, brighten tone, and boost your natural glow.</p>
                 <p>This guide will walk you through every step so you can get glowing results safely and confidently.</p>
-                <picture
-                    class="d-lg-none"
-                    data-label-text="Watch: How To Use"
-                    data-bs-toggle="modal"
-                    data-bs-target="#reusableWistiaModal"
-                    data-video-id="96okj0th48"
-                >
-                    <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
-                </picture>
+                {{> c-wistia
+                    custom-classes="d-lg-none"
+                    id="96okj0th48"
+                    custom='
+                        <figure>
+                            <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Watch: How To Use" />
+                            <figcaption>
+                                Watch: How To Use
+                            </figcaption>
+                        </figure>
+                    '
+                }}
             </article>
         </div>
     </section>
@@ -54,10 +57,10 @@
                         <option value="" selected disabled>Quick Start Guide</option>
                         <option value="quick-start-guide">Quick Start Guide</option>
                         <option value="learn-about-your-device">Learn About Your Device</option>
-                        <option value="serum-ingredients-information">Serum Ingredients & Information</option>
+                        <option value="serum-ingredients-information">Serum Ingredients &amp; Information</option>
                         <option value="where-to-use">Where to Use</option>
-                        <option value="schedule-reminders">Schedule & Set Reminders</option>
-                        <option value="care-and-tips">Post-Treatment Care & Tips</option>
+                        <option value="schedule-reminders">Schedule &amp; Set Reminders</option>
+                        <option value="care-and-tips">Post-Treatment Care &amp; Tips</option>
                         <option value="safety-precautions">Safety Precautions</option>
                         <option value="faq">FAQs</option>
                     </select>
@@ -85,7 +88,7 @@
                                 data-bs-toggle="tab"
                                 data-bs-target="#serum-ingredients-information-tab"
                                 type="button"
-                            >Serum Ingredients & Information</button>
+                            >Serum Ingredients &amp; Information</button>
                         </li>
                         <li>
                             <button
@@ -99,14 +102,14 @@
                                 data-bs-toggle="tab"
                                 data-bs-target="#schedule-reminders-tab"
                                 type="button"
-                            >Schedule & Set Reminders</button>
+                            >Schedule &amp; Set Reminders</button>
                         </li>
                         <li>
                             <button
                                 data-bs-toggle="tab"
                                 data-bs-target="#care-and-tips-tab"
                                 type="button"
-                            >Post-Treatment Care & Tips</button>
+                            >Post-Treatment Care &amp; Tips</button>
                         </li>
                         <li>
                             <button
@@ -154,15 +157,18 @@
                     >
                         <article>
                             <h2>Quick Start Guide</h2>
-                            <picture
-                                class="d-none d-lg-block"
-                                data-label-text="Watch: How To Use"
-                                data-bs-toggle="modal"
-                                data-bs-target="#reusableWistiaModal"
-                                data-video-id="96okj0th48"
-                            >
-                                <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
-                            </picture>
+                            {{> c-wistia
+                                custom-classes="d-none d-lg-block"
+                                id="96okj0th48"
+                                custom='
+                                    <figure>
+                                        <img src="assets/images/meet-the-qure-filter/how_to-mi.webp" alt="Usage Instruction video" />
+                                        <figcaption>
+                                            Usage Instruction video
+                                        </figcaption>
+                                    </figure>
+                                '
+                            }}
                             <p>To get started with your first treatment, you'll need the following:</p>
                             <ul>
                                 <li>Micro-Infusion Device</li>
@@ -352,14 +358,14 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#serum-ingredients-information"
                     >
-                        Serum Ingredients & Information
+                        Serum Ingredients &amp; Information
                     </button>
                     <div
                         id="serum-ingredients-information"
                         class="accordion-collapse"
                     >
                         <article>
-                            <h2>Serum Ingredients & Information</h2>
+                            <h2>Serum Ingredients &amp; Information</h2>
                             <p>Each Qure Micro-Infusion treatment is powered by a single-use ampoule of concentrated serum, designed to target specific skin concerns with clinically backed ingredients.</p>
                             <p>These serums are lightweight, fast-absorbing, and free from fragrance, parabens, and harsh actives.</p>
                         </article>
@@ -380,51 +386,44 @@
                                     <p>Helps to plump skin, reducing the look of fine lines and wrinkles.</p>
                                 </li>
                             </ul>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#serum-ingredients-popup"><span>View full ingredient lists</span> <i class="e-icon e-icon-plus"></i></a>
+                            <a href="javascript:;" onclick="serumIngredientsPopup.showModal()"><span>View full ingredient lists</span> {{> e-icon icon="plus" }}</a>
                         </div>
-                        <div class="modal c-modal c-modal--light" id="serum-ingredients-popup">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="serum-ingredients-details">
-                                            <ul class="tabs" role="tablist">
-                                                <li>
-                                                    <button
-                                                        class="active"
-                                                        data-bs-toggle="tab"
-                                                        data-bs-target="#dark-spots-tab"
-                                                        type="button"
-                                                    >Dark Spots</button>
-                                                </li>
-                                                <li>
-                                                    <button
-                                                        data-bs-toggle="tab"
-                                                        data-bs-target="#wrinkles-tab"
-                                                        type="button"
-                                                    >Wrinkles</button>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content show" id="dark-spots-tab">
-                                                <article>
-                                                    <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Sodium Hyaluronate, Allantoin, Xanthan Gum.</p>
-                                                </article>
-                                            </div>
-                                            <div class="tab-content" id="wrinkles-tab">
-                                                <article>
-                                                    <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, Sh-Oligopeptide-1.</p>
-                                                </article>
-                                            </div>
-                                            <div class="c-note">
-                                                <p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                        {{#> c-dialog
+                            id="serumIngredientsPopup"
+                        }}
+                            <div class="serum-ingredients-details">
+                                <ul class="tabs" role="tablist">
+                                    <li>
+                                        <button
+                                            class="active"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#dark-spots-tab"
+                                            type="button"
+                                        >Dark Spots</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#wrinkles-tab"
+                                            type="button"
+                                        >Wrinkles</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content show" id="dark-spots-tab">
+                                    <article>
+                                        <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Sodium Hyaluronate, Allantoin, Xanthan Gum.</p>
+                                    </article>
+                                </div>
+                                <div class="tab-content" id="wrinkles-tab">
+                                    <article>
+                                        <p>Rosa Damascena Flower Water, Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, Sh-Oligopeptide-1.</p>
+                                    </article>
+                                </div>
+                                <div class="c-note">
+                                    <p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>
                                 </div>
                             </div>
-                        </div>
+                        {{/c-dialog}}
                     </div>
                 </div>
             </div>
@@ -475,14 +474,14 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#schedule-reminders-collapse"
                     >
-                        Schedule & Set Reminders
+                        Schedule &amp; Set Reminders
                     </button>
                     <div
                         id="schedule-reminders-collapse"
                         class="accordion-collapse"
                     >
                         <article>
-                            <h2>Schedule & Set Reminders</h2>
+                            <h2>Schedule &amp; Set Reminders</h2>
                             {{> c-app-stores }}
                             <p>The Qure app supports your Micro-Infusion routine by keeping everything simple.</p>
                             <p>It helps you track treatments and stay consistent over time, without needing to think about timing or schedules.</p>
@@ -503,14 +502,14 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#care-and-tips-collapse"
                     >
-                        Post-Treatment Care & Tips
+                        Post-Treatment Care &amp; Tips
                     </button>
                     <div
                         id="care-and-tips-collapse"
                         class="accordion-collapse"
                     >
                         <article>
-                            <h2>Post-Treatment Care & Tips</h2>
+                            <h2>Post-Treatment Care &amp; Tips</h2>
                             <p>After your Micro-Infusion treatment, your skin is more absorbent and sensitive. Following the right aftercare helps maximize results and minimize irritation.</p>
                             <p><strong>For the first 24 hours:</strong></p>
                             <ul>
@@ -795,8 +794,6 @@
             document.addEventListener("DOMContentLoaded", function () {
                 loadScriptOnce('guide-content', 'sections/guide-content/guide-content.js');
                 loadScriptOnce('base-slider', 'sections/base-slider/base-slider.js');
-                loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-                loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             });
         </script>
     </div>

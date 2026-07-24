@@ -60,6 +60,9 @@
   font-size:35px;
   transform:none;
 }
+.intro-section article .c-wistia{
+  margin-top:15px;
+}
 .intro-section--simple article{
   padding:0;
   background:none;

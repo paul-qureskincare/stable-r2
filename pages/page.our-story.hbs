@@ -215,113 +215,44 @@
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            class="filter-card-video"
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="rehxqby0fq"
-                        >
-                            <img src="assets/images/trusted-video/home-trusted_img_1.webp" alt="Dr. Alekandra Brown" />
-                        </picture>
-                        <article>
-                            <p>"I like using this between my in-office treatments and it's easy to use, even for beginners." </p>
-                            <div>
-                                <p>Dr. Alekandra Brown</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="rehxqby0fq"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-1.webp"
+                        followers="818k"
+                        text="I like using this between my in-office treatments and it's easy to use, even for beginners."
+                        dr="Dr. Alekandra Brown"
+                        position="Board-Certified Dermatologist"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="ug1o3j3d8w"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_5.webp" alt="Dr. Lindsey Zubritsky" />
-                        </picture>
-                        <article>
-                            <p>"After just a few uses my wrinkles look less visible and my skin brighter and smoother."</p>
-                            <div>
-                                <p>Dr. Lindsey Zubritsky</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="ug1o3j3d8w"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-2.webp"
+                        followers="1.5M"
+                        text="After just a few uses my wrinkles look less visible and my skin brighter and smoother."
+                        dr="Dr. Lindsey Zubritsky"
+                        position="Board-Certified Dermatologist"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="wbf95ywhx4"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_6.webp" alt="Dr. Alexis Stephens" />
-                        </picture>
-                        <article>
-                            <p>"You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin"</p>
-                            <div>
-                                <p>Dr. Alexis Stephens</p>
-                                <p><span class="e-checkmark"></span> Internal Medicine Doctor</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="wbf95ywhx4"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-3.webp"
+                        followers="56.9k"
+                        text="You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin."
+                        dr="Dr. Alexis Stephens"
+                        position="Internal Medicine Doctor"
+                    }}
                 </div>
                 <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="gzba345nd4"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_9.webp" alt="Dr. Prem Tripati" />
-                        </picture>
-                        <article>
-                            <p>"With Qure's Micro-Infusion System - consistency is key."</p>
-                            <div>
-                                <p>Dr. Prem Tripati</p>
-                                <p><span class="e-checkmark"></span> Facial Plastic Surgeon</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="ypvcdsgwkx"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_8.webp" alt="Dr. Wallace Nozile" />
-                        </picture>
-                        <article>
-                            <p>"One of the best ways to treat hyperpigmentation at home."</p>
-                            <div>
-                                <p>Dr. Wallace Nozile</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="c-trusted-video-card">
-                        <picture
-                            data-bs-toggle="modal"
-                            data-bs-target="#reusableWistiaModal"
-                            data-video-id="3bud7no0j9"
-                        >
-                            <img src="assets/images/trusted-video/trusted_img_7.webp" alt="Dr. Davin Lim" />
-                        </picture>
-                        <article>
-                            <p>"With Micro-Infusion, you get to see the results almost instantly."</p>
-                            <div>
-                                <p>Dr. Davin Lim</p>
-                                <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
-                            </div>
-                        </article>
-                    </div>
+                    {{> c-trusted-video-card
+                        id="gzba345nd4"
+                        thumbnail="sections/base-slider/images/trusted-review-thumb-4.webp"
+                        followers="654k"
+                        text="With Qure's Micro-Infusion System - consistency is key."
+                        dr="Dr. Prem Tripati"
+                        position="Facial Plastic Surgeon"
+                    }}
                 </div>
             </div>
             <div class="c-swiper-nav">

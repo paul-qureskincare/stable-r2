@@ -87,9 +87,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- WE SUGGEST -->
@@ -480,16 +477,9 @@
                                 <img src="assets/images/skincare-routine/morning_routine.webp" alt="Meet your new skincare routine" />
                             </div>
                             <div class="skincare-routine__media-item">
-                                <div class="c-wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_klt401yhji seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/klt401yhji/swatch" alt="Meet your new skincare routine" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia c-wistia--is-playing c-wistia--always-playing">
+                                    <wistia-player media-id="klt401yhji" autoplay="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false" play-bar-control="false" play-pause-control="false" volume-control="false" settings-control="false" fullscreen-control="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                         </div>
@@ -692,12 +682,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- BASE SLIDER -->
@@ -730,42 +714,53 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="qnxqysx3sg">
-                                        <img src="assets/images/trusted-video/lmv-1.webp" alt="Dr. Prem Tripathi" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="qnxqysx3sg" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-8.webp" alt="Dr. Prem Tripathi" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">723k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
                                         <p>"Qure has a fully customized mask which has 5 clinical-grade wavelength for aging and acne."</p>
                                         <div>
                                             <p>Dr. Prem Tripathi</p>
-                                            <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                                            <p><span class="e-checkmark"></span> Board Certified Dermatologist</p>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="zd9o2f2jp7">
-                                        <img src="assets/images/trusted-video/dr_shah_dr_max.webp" alt="Dr. Shah & Dr. Maxfield" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="zd9o2f2jp7" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-16.webp" alt="Dr. Shah & Dr. Maxfield" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">3.5M Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
-                                        <p>“Dermal Mist sanitizes and preps your skin, allowing other skincare products to penetrate your skin even further...”</p>
+                                        <p>"Dermal Mist sanitizes and preps your skin, allowing other skincare products to penetrate your skin even further..."</p>
                                         <div>
                                             <p>Dr. Shah &amp; Dr. Maxfield</p>
-                                            <p><span class="e-checkmark"></span> Board-Certified Dermatologists</p>
+                                            <p><span class="e-checkmark"></span> Board Certified Dermatologist</p>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-url="https://www.youtube.com/watch?v=1iXBgh7WPOY">
-                                        <img src="assets/images/trusted-video/skin_dr_review.webp" alt="Dr Shah & Dr. Maxfield" />
-                                    </picture>
+                                    <figure class="lvideo" data-url="https://www.youtube.com/watch?v&#x3D;XtgmSadah48">
+                                        <img src="sections/base-slider/images/trusted-review-thumb-5.webp" alt="Dr. Anthony Youn" />
+                                        <div class="e-pill-badge e-pill-badge--md">5.4M Followers</div>
+                                    </figure>
                                     <article>
-                                        <p>"This serum has awesome ingredients... and is probably the best known peptide complex."</p>
+                                        <p>"This mask actively treats the entire face for clearer and more beautiful skin."</p>
                                         <div>
-                                            <p>Dr Shah &amp; Dr. Maxfield</p>
-                                            <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                                            <p>Dr. Anthony Youn</p>
+                                            <p><span class="e-checkmark"></span> Plastic Surgeon</p>
                                         </div>
                                     </article>
                                 </div>
@@ -782,8 +777,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->

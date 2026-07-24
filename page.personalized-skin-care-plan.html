@@ -87,9 +87,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- WE SUGGEST -->
@@ -484,32 +481,18 @@
                     <article class="skincare-routine__content">
                         <div class="skincare-routine__media">
                             <div class="skincare-routine__media-item show">
-                                <div class="c-wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_klt401yhji seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/klt401yhji/swatch" alt="Watch: Doctorly" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia c-wistia--is-playing c-wistia--always-playing">
+                                    <wistia-player media-id="klt401yhji" autoplay="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false" play-bar-control="false" play-pause-control="false" volume-control="false" settings-control="false" fullscreen-control="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="skincare-routine__media-item">
                                 <img src="assets/images/skincare-routine/weekly.webp" alt="Neck & Décolletage LED Device" />
                             </div>
                             <div class="skincare-routine__media-item">
-                                <div class="c-wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_spbl22fho4 seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/spbl22fho4/swatch" alt="Watch: Doctorly" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia c-wistia--is-playing c-wistia--always-playing">
+                                    <wistia-player media-id="spbl22fho4" autoplay="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false" play-bar-control="false" play-pause-control="false" volume-control="false" settings-control="false" fullscreen-control="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                         </div>
@@ -721,12 +704,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- BASE SLIDER -->
@@ -759,25 +736,35 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="qnxqysx3sg">
-                                        <img src="assets/images/trusted-video/lmv-1.webp" alt="Dr. Prem Tripathi" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="qnxqysx3sg" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-8.webp" alt="Dr. Prem Tripathi" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">723k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
                                         <p>"Qure has a fully customized mask which has 5 clinical-grade wavelength for aging and acne."</p>
                                         <div>
                                             <p>Dr. Prem Tripathi</p>
-                                            <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
+                                            <p><span class="e-checkmark"></span> Board Certified Dermatologist</p>
                                         </div>
                                     </article>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="k1wciiwksf">
-                                        <img src="assets/images/trusted-video/trusted_img_3.webp" alt="Dr. Mona Patel" />
-                                    </picture>
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="k1wciiwksf" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture><img src="sections/base-slider/images/trusted-review-thumb-11.webp" alt="Dr. Mona Patel" /></picture>
+                                                <div class="e-pill-badge e-pill-badge--md">21k Followers</div>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                     <article>
-                                        <p>I personally suffer from tech neck from looking down ar my phone [...] it helps address signs of aging.</p>
+                                        <p>"I often notice tech-neck related lines from looking down at my phone - this product helps improve their appearance over time."</p>
                                         <div>
                                             <p>Dr. Mona Patel</p>
                                             <p><span class="e-checkmark"></span> Internal Medicine Doctor</p>
@@ -787,13 +774,14 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="c-trusted-video-card">
-                                    <picture class="filter-card-video" data-url="https://www.youtube.com/watch?v=1iXBgh7WPOY">
-                                        <img src="assets/images/trusted-video/skin_dr_review.webp" alt="Dr Shah & Dr. Maxfield" />
-                                    </picture>
+                                    <figure class="lvideo" data-url="https://www.youtube.com/watch?v&#x3D;1iXBgh7WPOY">
+                                        <img src="sections/base-slider/images/trusted-review-thumb-13.webp" alt="Dr. Dylan Greeney" />
+                                        <div class="e-pill-badge e-pill-badge--md">394k Followers</div>
+                                    </figure>
                                     <article>
-                                        <p>"This serum has awesome ingredients... and is probably the best known peptide complex."</p>
+                                        <p>"Qure&#x27;s anti-aging treatment gets down deep into your skin to stimulate collagen &amp; makes a big difference..."</p>
                                         <div>
-                                            <p>Dr Shah &amp; Dr. Maxfield</p>
+                                            <p>Dr. Dylan Greeney</p>
                                             <p><span class="e-checkmark"></span> Board-Certified Dermatologist</p>
                                         </div>
                                     </article>
@@ -811,8 +799,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->

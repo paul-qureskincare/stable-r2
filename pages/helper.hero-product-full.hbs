@@ -55,14 +55,14 @@
                             <img src="assets/images/product-shower-filter/faucet_pd-7.webp" alt="Qure faucet filter" />
                         </div>
                         <div class="swiper-slide">
-                            <img
-                                class="watch-wistia-video"
-                                src="assets/images/product-shower-filter/faucet_pd-8.webp"
-                                alt="Qure faucet filter"
-                                data-bs-toggle="modal"
-                                data-bs-target="#reusableWistiaModal"
-                                data-video-id="8ymvdqzx92"
-                            />
+                            {{> c-wistia
+                                id="8ymvdqzx92"
+                                custom='
+                                    <picture>
+                                        <img src="assets/images/product-shower-filter/faucet_pd-8.webp" alt="Video thumbnaul text" />
+                                    </picture>
+                                '
+                            }}
                         </div>
                     </div>
                 </div>
@@ -392,14 +392,18 @@
                     img-second="assets/images/clean-water/ndBox.webp"
                     text="Buy the Q-Rejuvalight Pro and get the Neck &amp; Décolletage LED Device for FREE (value $299)"
                 }}
-                <picture
-                    data-label-text="Watch: How To Use"
-                    data-bs-toggle="modal"
-                    data-bs-target="#reusableWistiaModal"
-                    data-video-id="8ymvdqzx92"
-                >
-                    <img src="assets/images/micro-infusion-pdp/how_to_use_men.webp" alt="Watch: How To Use" />
-                </picture>
+                {{> c-wistia
+                    id="8ymvdqzx92"
+                    custom='
+                        <figure>
+                            <img src="assets/images/micro-infusion-pdp/how_to_use_men.webp" alt="Watch: How To Use" />
+                            <figcaption>
+                                Watch: How To Use
+                            </figcaption>
+                        </figure>
+                    '
+                }}
+
                 {{> c-clinic-metrics
                     title="Clinically Proven Results"
                     list='[
@@ -569,8 +573,6 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             loadScriptOnce('countdown', 'assets/js/countdown.js');
-            loadScriptOnce('wistia-popup', 'assets/js/wistia-popup.js');
-            loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             loadScriptOnce('gallery-sticky-video', 'assets/js/gallery-sticky-video.js');
         });
     </script>

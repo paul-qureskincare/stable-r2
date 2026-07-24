@@ -132,10 +132,12 @@
     // .c-trusted-review-card--short
     &--short {
         gap: 10px 24px;
+        padding-bottom: 0;
         background: #f6f6f7;
 
         @include sm {
             gap: 8px;
+            padding-bottom: 0;
             font-size: 16px;
         }
 

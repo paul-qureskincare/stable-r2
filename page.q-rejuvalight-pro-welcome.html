@@ -77,10 +77,9 @@
                         <h2>Welcome to Qure</h2>
                     </div>
                     <div class="guide-welcome__video">
-                        <div class="wistia_responsive_padding">
-                            <div class="wistia_responsive_wrapper">
-                                <div class="wistia_embed wistia_async_2jl8ah5r5n seo=false videoFoam=true">&nbsp;</div>
-                            </div>
+                        <div class="c-wistia c-wistia--is-playing">
+                            <wistia-player media-id="2jl8ah5r5n" autoplay="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                            <div class="c-wistia__play"></div>
                         </div>
                     </div>
                     <div class="guide-welcome__card guide-welcome__card--start">
@@ -97,11 +96,6 @@
                     </div>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- GUIDE WELCOME END -->
 
             <!-- BASE INFO -->

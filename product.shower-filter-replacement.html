@@ -90,7 +90,15 @@
                                     <img src="assets/images/product-shower-filter/shower_filter_4.webp" alt="Qure Shower Filter Refill" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="watch-wistia-video" src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter Refill" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="bwhqvtar9u" />
+                                    <div class="c-wistia c-wistia--custom">
+                                        <wistia-player media-id="bwhqvtar9u" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                                            <div class="c-wistia__custom">
+                                                <picture>
+                                                    <img src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter Refill" />
+                                                </picture>
+                                            </div>
+                                        </wistia-player>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="assets/images/product-shower-filter/shower_replace1.webp" alt="Qure Shower Filter Refill" />
@@ -420,9 +428,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- BASE SECTION -->
@@ -441,9 +446,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- PROGRESS METRICS -->
@@ -650,9 +652,6 @@
                     </article>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {});
-            </script>
             <!-- BASE SECTION END -->
 
             <!-- LOGOS MARQUEE -->
@@ -768,55 +767,27 @@
                         }'>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_0vu4f6h4h8 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/0vu4f6h4h8/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="0vu4f6h4h8" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_lmnn8fcnp4 popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/lmnn8fcnp4/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="lmnn8fcnp4" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_2427ztggvj popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/2427ztggvj/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="2427ztggvj" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="wistia-embed-video">
-                                    <div class="wistia_responsive_padding">
-                                        <div class="wistia_responsive_wrapper">
-                                            <div class="wistia_embed wistia_async_b79xvfj27c popover=true seo=false videoFoam=true">
-                                                <div class="wistia_swatch">
-                                                    <img src="https://fast.wistia.com/embed/medias/b79xvfj27c/swatch" alt="Wistia video thumbnail" style="filter: blur(5px)" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="c-wistia">
+                                    <wistia-player media-id="b79xvfj27c" wistia-popover="true" end-video-behavior="loop" controls-visible-on-load="false" play-button="false"> </wistia-player>
+                                    <div class="c-wistia__play"></div>
                                 </div>
                             </div>
                         </div>
@@ -831,8 +802,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     loadScriptOnce("base-slider", "sections/base-slider/base-slider.js");
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
                 });
             </script>
             <!-- BASE SLIDER END -->
@@ -874,10 +843,16 @@
             <!-- SET UP -->
             <section class="set-up" id="easy_steps">
                 <div class="container">
-                    <picture data-bs-toggle="modal" data-bs-target="#reusableWistiaModal" data-video-id="bwhqvtar9u">
-                        <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-video.webp" />
-                        <img src="sections/set-up/images/shower-filter-refill-video-mob.webp" alt="Set up in 3 easy steps" />
-                    </picture>
+                    <div class="c-wistia c-wistia--custom">
+                        <wistia-player media-id="bwhqvtar9u" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                            <div class="c-wistia__custom">
+                                <picture>
+                                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-video.webp" />
+                                    <img src="sections/set-up/images/shower-filter-refill-video-mob.webp" alt="Set up in 3 easy steps" />
+                                </picture>
+                            </div>
+                        </wistia-player>
+                    </div>
                     <h2>How to replace your filter refill cartridge</h2>
                     <ol>
                         <li>
@@ -907,12 +882,6 @@
                     </ol>
                 </div>
             </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    loadScriptOnce("wistia-popup", "assets/js/wistia-popup.js");
-                    loadScriptOnce("wistia-script", "https://fast.wistia.com/assets/external/E-v1.js");
-                });
-            </script>
             <!-- SET UP END -->
 
             <!-- COMPARISON -->

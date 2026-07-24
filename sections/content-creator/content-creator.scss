@@ -134,6 +134,12 @@
                 min-height: calc(25vw * 1.5);
             }
         }
+
+        .c-wistia {
+            .c-wistia__play::after {
+                font-size: 40px;
+            }
+        }
     }
 
     .c-dialog {
