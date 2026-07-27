@@ -427,4 +427,78 @@
             }
         }
     }
+
+    // .across-image-banner--summer
+    &--summer {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background: none;
+
+        @include sm {
+            display: flex;
+            flex-direction: column-reverse;
+            height: auto;
+        }
+
+        picture {
+            @include sm {
+                z-index: 1;
+            }
+        }
+
+        article {
+            gap: 24px;
+            margin-left: 0;
+
+            @media screen and (min-width: 1200px) {
+                margin-bottom: auto;
+                padding-top: 70px;
+            }
+
+            @include sm {
+                gap: 12px;
+                margin-left: 0;
+                padding-top: 24px;
+            }
+
+            .e-pill-badge {
+                @include sm {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            h1 {
+                margin-bottom: 0;
+                font-size: 46px;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 16px;
+
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+
+            .btn {
+                --btn-primary-bg: #ff5429;
+                --btn-primary-color: #fff;
+
+                max-width: 360px;
+
+                @include sm {
+                    position: absolute;
+                    right: 16px;
+                    bottom: 32px;
+                    left: 16px;
+                    z-index: 2;
+                    width: auto;
+                    max-width: none;
+                }
+            }
+        }
+    }
 }
