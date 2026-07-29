@@ -333,6 +333,16 @@
         }
     }
 
+    // .c-supply-selector__hot-bottom
+    &__hot-bottom {
+        margin: 0 1px 1px;
+        padding: 4px 14px;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 0 0 9px 9px;
+        background-color: #212428;
+    }
+
     // .c-supply-selector--tiles
     &--tiles {
         .btn--secondary {

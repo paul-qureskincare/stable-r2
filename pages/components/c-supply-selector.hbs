@@ -80,6 +80,9 @@
                             </div>
                         </div>
                     {{/if}}
+                    {{#if free-shipping-hot }}
+                        <div class="c-supply-selector__hot-bottom">🔥 Free shipping on this order</div>
+                    {{/if}}
                 </label>
                 {{#if notify-row }}
                     <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
