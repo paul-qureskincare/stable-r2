@@ -128,7 +128,7 @@
   counter-reset:item;
 }
 .should-know .swiper-slide ol:not(:last-child){
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 .should-know .swiper-slide ol li{
   position:relative;
@@ -150,7 +150,7 @@
   content:counters(item, "");
 }
 .should-know .swiper-slide ol li:not(:last-child){
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .should-know .swiper-slide p:not(:last-child){
   margin-bottom:15px;

@@ -100,7 +100,7 @@
   counter-reset:item;
 }
 .c-faq-accordion__content ol:not(:last-child){
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 .c-faq-accordion__content ol li{
   position:relative;
@@ -122,7 +122,7 @@
   content:counters(item, "");
 }
 .c-faq-accordion__content ol li:not(:last-child){
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .c-faq-accordion__ask-us{
   display:flex;
