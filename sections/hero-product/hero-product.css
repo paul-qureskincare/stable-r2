@@ -613,7 +613,7 @@
   counter-reset:item;
 }
 .c-accordion__content ol:not(:last-child){
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 .c-accordion__content ol li{
   position:relative;
@@ -635,7 +635,7 @@
   content:counters(item, "");
 }
 .c-accordion__content ol li:not(:last-child){
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .c-accordion__content hr{
   margin-top:16px;

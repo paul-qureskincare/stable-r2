@@ -273,7 +273,7 @@
   counter-reset:item;
 }
 .c-step-by-step__list ol:not(:last-child){
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 .c-step-by-step__list ol li{
   position:relative;
@@ -295,7 +295,7 @@
   content:counters(item, "");
 }
 .c-step-by-step__list ol li:not(:last-child){
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .c-step-by-step__item{
   position:relative;
@@ -469,7 +469,7 @@
   counter-reset:item;
 }
 .c-faq-accordion__content ol:not(:last-child){
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 .c-faq-accordion__content ol li{
   position:relative;
@@ -491,7 +491,7 @@
   content:counters(item, "");
 }
 .c-faq-accordion__content ol li:not(:last-child){
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .c-faq-accordion__ask-us{
   display:flex;
@@ -653,11 +653,11 @@
   margin-top:-10px;
 }
 .guide-content article ol{
-  margin-top:15px;
+  margin-top:16px;
   counter-reset:item;
 }
 .guide-content article ol:not(:last-child){
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 .guide-content article ol li{
   position:relative;
@@ -679,7 +679,7 @@
   content:counters(item, "");
 }
 .guide-content article ol li:not(:last-child){
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .guide-content article a{
   color:inherit;
