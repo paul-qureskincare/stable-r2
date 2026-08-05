@@ -6,7 +6,10 @@
     picture {
         display: block;
         transition: opacity 300ms;
-        opacity: 0.55;
+
+        @media (hover:hover) {
+            opacity: 0.55;
+        }
     }
 
     img {

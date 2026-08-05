@@ -167,7 +167,6 @@
 .c-advisory-collapse-card picture{
   display:block;
   transition:opacity .3s;
-  opacity:.55;
 }
 .c-advisory-collapse-card img{
   width:100%;
@@ -791,6 +790,9 @@
   }
 }
 @media (hover:hover){
+  .c-advisory-collapse-card picture{
+    opacity:.55;
+  }
   .c-product-tile__image:hover:after{
     visibility:visible;
     transform:scale(1.02);
