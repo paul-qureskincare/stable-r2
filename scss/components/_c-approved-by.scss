@@ -64,6 +64,20 @@
         }
     }
 
+    p {
+        &:has(.e-rating-stars) {
+            text-align: left;
+        }
+    }
+
+    .e-rating-stars {
+        line-height: 1.2;
+
+        &::after {
+            color: #ff5429;
+        }
+    }
+
     // c-approved-by--secondary
     &--secondary {
         li {
@@ -76,7 +90,7 @@
             }
         }
 
-        span {
+        span:not([class]) {
             padding: 0 8px;
 
             @include sm {

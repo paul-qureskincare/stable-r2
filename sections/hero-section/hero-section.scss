@@ -168,6 +168,129 @@
         }
     }
 
+    &--extended {
+        position: relative;
+
+        .container {
+            // max-height: 555px;
+
+        }
+
+        #{$root}__content {
+            gap: 16px;
+            align-self: center;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #{$root}__content-header {
+            padding-top: 0;
+
+            h1 {
+                font-weight: normal;
+                line-height: 1.1;
+
+                & + .c-approved-by {
+                    margin-bottom: 16px;
+                    line-height: 1;
+
+                    li {
+                        margin-left: -6px;
+                    }
+
+                    img {
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+            }
+
+            svg {
+                width: 65px;
+                margin-bottom: 16px;
+
+                @include sm {
+                    display: none;
+                }
+
+                path {
+                    fill: currentColor !important;
+                }
+            }
+
+            .c-approved-by {
+                text-align: left;
+
+                li {
+                    z-index: unset;
+                }
+
+                img {
+                    width: 36px;
+                    height: 36px;
+
+                    @include sm {
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+
+        #{$root}__content-button {
+            flex-direction: row;
+            gap: 5px;
+
+            .btn {
+                --btn-padding: 12px 15px;
+
+                white-space: nowrap;
+                text-transform: capitalize;
+            }
+
+            .btn--primary {
+                max-width: 250px;
+
+                @include sm {
+                    max-width: none;
+                }
+            }
+        }
+
+        #{$root}__content-footer {
+            padding-top: 8px;
+
+            ul {
+                display: flex;
+                gap: 5px;
+                width: 100%;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    align-items: center;
+                    width: 100%;
+                    padding: 15px;
+                    text-align: center;
+                    border-radius: 8px;
+                    background: #fbfbfb;
+                }
+
+                svg {
+                    width: 41px;
+                    height: auto;
+                }
+
+                span {
+                    max-width: 70px;
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
     &--secondary {
         .container {
             @include sm {
@@ -216,6 +339,67 @@
                 @media screen and (min-width: 768px) {
                     background: #fff;
                 }
+            }
+        }
+    }
+
+    &--third {
+        .container {
+            @include sm {
+                flex-direction: column-reverse;
+                gap: 0;
+            }
+        }
+
+        #{$root}__image {
+            img {
+                object-position: 0 50%;
+            }
+        }
+
+        #{$root}__content {
+            @include sm {
+                padding-bottom: 24px;
+            }
+        }
+
+        #{$root}__content-header {
+            svg {
+                width: 85px;
+                margin-bottom: 16px;
+
+                @include sm {
+                    width: 65px;
+                    margin-bottom: 6px;
+                }
+
+                path {
+                    fill: currentColor !important;
+                }
+            }
+
+            h1 {
+                font-weight: normal;
+            }
+
+            .c-marked-list {
+                text-align: left;
+            }
+        }
+
+        #{$root}__content-button {
+            gap: 0;
+            max-width: 320px;
+
+            .e-pill-badge {
+                --badge-base-color: #fff;
+
+                position: relative;
+                margin-bottom: -11px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                font-size: 14px;
+                background: #ff5429;
             }
         }
     }
