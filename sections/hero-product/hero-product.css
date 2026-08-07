@@ -2174,10 +2174,19 @@
   border-radius:50%;
   box-shadow:0 5px 5px 0 rgba(0,0,0,.25);
 }
+.c-approved-by p:has(.e-rating-stars){
+  text-align:left;
+}
+.c-approved-by .e-rating-stars{
+  line-height:1.2;
+}
+.c-approved-by .e-rating-stars:after{
+  color:#ff5429;
+}
 .c-approved-by--secondary li+li{
   margin-left:-12px;
 }
-.c-approved-by--secondary span{
+.c-approved-by--secondary span:not([class]){
   padding:0 8px;
 }
 .c-approved-by--secondary a{
@@ -3057,7 +3066,7 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-approved-by--secondary li+li{
     margin-left:-8px;
   }
-  .c-approved-by--secondary span{
+  .c-approved-by--secondary span:not([class]){
     padding:0 4px;
   }
   .page\.qure-microinfusion-offer-listicle .c-note{

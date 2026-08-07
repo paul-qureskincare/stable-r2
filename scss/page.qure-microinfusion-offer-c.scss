@@ -35,16 +35,6 @@ body:has(#announcement-bar) {
 }
 
 .hero-section {
-    .hero-section__content-header {
-        h1 {
-            line-height: 1.2;
-
-            @include sm {
-                font-size: 32px;
-            }
-        }
-    }
-
     &:not(.hero-section--secondary) {
         .hero-section__image {
             img {

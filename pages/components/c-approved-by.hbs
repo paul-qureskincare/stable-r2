@@ -7,10 +7,13 @@
             <li><img src="sections/hero-section/images/approved-by-4.webp" alt="Dr. Maxfield" /></li>
         {{/if }}
     </ul>
-    {{#if secondary }}
-        <p>50+ dermatologists <span>&bull;</span> <a href="#"><strong>4.8/5</strong></a> 500k+ customers</p>
+    {{#if custom }}
+        {{{ custom }}}
     {{ else }}
-        <p>Approved by <strong>Dr. Shah</strong> &amp; <strong>Dr. Maxfield</strong></p>
+        {{#if secondary }}
+            <p>50+ dermatologists <span>&bull;</span> <a href="#"><strong>4.8/5</strong></a> 500k+ customers</p>
+        {{ else }}
+            <p>Approved by <strong>Dr. Shah</strong> &amp; <strong>Dr. Maxfield</strong></p>
+        {{/if }}
     {{/if }}
-
 </div>
