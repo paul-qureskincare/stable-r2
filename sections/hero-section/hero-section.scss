@@ -205,16 +205,13 @@
                 }
             }
 
-            svg {
-                width: 65px;
+            .e-icon {
                 margin-bottom: 16px;
+                font-size: 30px;
+                vertical-align: top;
 
                 @include sm {
                     display: none;
-                }
-
-                path {
-                    fill: currentColor !important;
                 }
             }
 
@@ -277,9 +274,8 @@
                     background: #fbfbfb;
                 }
 
-                svg {
-                    width: 41px;
-                    height: auto;
+                .e-icon {
+                    font-size: 38px;
                 }
 
                 span {
@@ -364,17 +360,13 @@
         }
 
         #{$root}__content-header {
-            svg {
-                width: 85px;
+            .e-icon {
                 margin-bottom: 16px;
+                font-size: 40px;
 
                 @include sm {
-                    width: 65px;
                     margin-bottom: 6px;
-                }
-
-                path {
-                    fill: currentColor !important;
+                    font-size: 30px;
                 }
             }
 

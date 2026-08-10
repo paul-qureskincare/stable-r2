@@ -373,12 +373,10 @@
   width:28px;
   height:28px;
 }
-.hero-section--extended .hero-section__content-header svg{
-  width:65px;
+.hero-section--extended .hero-section__content-header .e-icon{
   margin-bottom:16px;
-}
-.hero-section--extended .hero-section__content-header svg path{
-  fill:currentColor !important;
+  font-size:30px;
+  vertical-align:top;
 }
 .hero-section--extended .hero-section__content-header .c-approved-by{
   text-align:left;
@@ -421,9 +419,8 @@
   border-radius:8px;
   background:#fbfbfb;
 }
-.hero-section--extended .hero-section__content-footer ul svg{
-  width:41px;
-  height:auto;
+.hero-section--extended .hero-section__content-footer ul .e-icon{
+  font-size:38px;
 }
 .hero-section--extended .hero-section__content-footer ul span{
   max-width:70px;
@@ -453,12 +450,9 @@
   -o-object-position:0 50%;
      object-position:0 50%;
 }
-.hero-section--third .hero-section__content-header svg{
-  width:85px;
+.hero-section--third .hero-section__content-header .e-icon{
   margin-bottom:16px;
-}
-.hero-section--third .hero-section__content-header svg path{
-  fill:currentColor !important;
+  font-size:40px;
 }
 .hero-section--third .hero-section__content-header h1{
   font-weight:400;
@@ -569,7 +563,7 @@
   .hero-section__content-footer{
     gap:20px;
   }
-  .hero-section--extended .hero-section__content-header svg{
+  .hero-section--extended .hero-section__content-header .e-icon{
     display:none;
   }
   .hero-section--extended .hero-section__content-header .c-approved-by img{
@@ -598,9 +592,9 @@
   .hero-section--third .hero-section__content{
     padding-bottom:24px;
   }
-  .hero-section--third .hero-section__content-header svg{
-    width:65px;
+  .hero-section--third .hero-section__content-header .e-icon{
     margin-bottom:6px;
+    font-size:30px;
   }
   .page\.qure-microinfusion-offer-listicle .hero-section .container{
     flex-direction:column-reverse;
