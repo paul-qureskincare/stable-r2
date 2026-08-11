@@ -716,6 +716,10 @@
   padding:18px 0 12px;
   border-top:1px solid #dfe0e0;
 }
+.flyout-cart__upsells .c-swiper:not([data-swiper]) .swiper-wrapper{
+  flex-direction:column;
+  gap:12px;
+}
 .flyout-cart__upsells .swiper-slide{
   display:flex;
   gap:16px;
