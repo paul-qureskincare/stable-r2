@@ -123,6 +123,17 @@
   text-transform:uppercase;
   border-radius:5px;
 }
+.c-options-selector--line .c-options-selector__list label{
+  flex-direction:row;
+  gap:8px;
+  justify-content:start;
+  min-height:0;
+  padding:8px;
+}
+.c-options-selector--line .c-options-selector__list img{
+  max-width:28px;
+  aspect-ratio:1/1;
+}
 
 .e-declaimer{
   display:block;
@@ -463,6 +474,144 @@
 }
 .c-supply-selector .c-next-batch{
   margin-top:32px;
+}
+
+.c-supply-selector-cards{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:500px;
+}
+.c-supply-selector-cards__title{
+  margin-bottom:0;
+}
+.c-supply-selector-cards__title small{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+.c-supply-selector-cards__content:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card],.c-supply-selector-cards__content:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]{
+  border-color:#212428;
+}
+.c-supply-selector-cards__content:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card]:after,.c-supply-selector-cards__content:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]:after{
+  position:absolute;
+  right:0;
+  bottom:-2px;
+  left:0;
+  height:2px;
+  background:#fff;
+  content:"";
+}
+.c-supply-selector-cards__content .supply-cards-labels{
+  display:flex;
+  gap:8px;
+}
+.c-supply-selector-cards__content .supply-cards-labels li{
+  width:100%;
+}
+.c-supply-selector-cards__content .supply-cards-labels label{
+  position:relative;
+  z-index:1;
+  display:block;
+  padding:12px 16px;
+  font-size:20px;
+  font-weight:600;
+  text-align:center;
+  border:2px solid #d6d6d6;
+  border-bottom:0;
+  border-radius:16px 16px 0 0;
+  background:#fff;
+  cursor:pointer;
+}
+.c-supply-selector-cards__content .supply-cards-labels label .e-pill-badge{
+  --badge-base-color:#ff5429;
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+}
+.c-supply-selector-cards__content .supply-card{
+  position:relative;
+  display:none;
+  font-size:20px;
+  border:2px solid #212428;
+  border-radius:0 0 16px 16px;
+}
+.c-supply-selector-cards__content .supply-card:has(input:checked){
+  display:block;
+}
+.c-supply-selector-cards__content .supply-card input{
+  position:absolute;
+  z-index:-1;
+  visibility:hidden;
+  opacity:0;
+}
+.c-supply-selector-cards__content .supply-card__content{
+  display:grid;
+  grid-template-columns:1fr 110px;
+  padding:24px 32px 24px 16px;
+}
+.c-supply-selector-cards__content .supply-card__details{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:start;
+}
+.c-supply-selector-cards__content .supply-card__details .e-price__main{
+  align-items:end;
+}
+.c-supply-selector-cards__content .supply-card__details .e-price__current{
+  font-size:40px;
+  font-weight:600;
+  line-height:1;
+}
+.c-supply-selector-cards__content .supply-card__details p strong{
+  color:#ff5429;
+}
+.c-supply-selector-cards__content .supply-card__details .c-marked-list{
+  gap:1px;
+}
+.c-supply-selector-cards__content .supply-card__image img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.c-supply-selector-cards__content .supply-card__image figcaption{
+  display:block;
+  color:#8b8c8e;
+  font-size:15px;
+  line-height:1.1;
+  text-align:right;
+}
+.c-supply-selector-cards__content .supply-card__gift .gift-notice{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:16px;
+  font-size:18px;
+  border-radius:14px;
+  background:#ffeeea;
+}
+.c-supply-selector-cards__content .supply-card__gift .gift-notice img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  max-width:50px;
+}
+.c-supply-selector-cards__content .supply-card__gift .gift-notice p strong{
+  display:block;
+  font-size:24px;
+}
+.c-supply-selector-cards__content .supply-card__gift .gift-notice .e-pill-save{
+  --e-pill-save-color:#fff;
+  margin-left:auto;
+  color:#ff5429;
+  white-space:nowrap;
+  text-transform:none;
+}
+.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__details .c-marked-list,.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__gift{
+  display:none;
 }
 
 .c-subscribe-selector{
@@ -1627,6 +1776,56 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   border-radius:10px;
   background:var(--note-bg, #eef7f4);
 }
+.treatment--secondary .treatment__step:after,.treatment--secondary .treatment__steps .c-options-selector__title:before,.treatment--secondary .treatment__steps .c-payment-selector__title:before,.treatment--secondary .treatment__steps .c-subscribe-selector__title:before,.treatment--secondary .treatment__steps .c-supply-selector__title:before,.treatment--secondary .treatment__steps .treatment__tabs-title:before{
+  display:none;
+}
+.treatment--secondary .treatment__buy .c-buy-block{
+  gap:12px;
+  width:100%;
+  text-align:center;
+}
+.treatment--secondary .treatment__buy .c-buy-block ul{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  font-size:12px;
+}
+.treatment--secondary .treatment__buy .c-buy-block ul li{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.treatment--secondary .treatment__buy .c-buy-block ul .e-icon{
+  color:#91baec;
+  vertical-align:top;
+}
+.treatment--secondary .treatment__buy .c-buy-block ul .e-icon-verified-shield{
+  -webkit-text-stroke:.4px;
+}
+.treatment--secondary .treatment__buy .c-buy-block small{
+  margin-top:-4px;
+  color:#7b7b7b;
+  font-size:14px;
+}
+.treatment--secondary .treatment__buy .buyer-opportunity{
+  display:flex;
+  gap:6px;
+}
+.treatment--secondary .treatment__buy .buyer-opportunity li{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  align-items:center;
+  width:100%;
+  padding:8px 16px 12px;
+  font-size:15px;
+  text-align:center;
+  border-radius:12px;
+  background:#f7f7f7;
+}
+.treatment--secondary .treatment__buy .buyer-opportunity .e-icon{
+  font-size:38px;
+}
 @media screen and (min-width:768px){
   .treatment__form{
     grid-row:1 /  -1;
@@ -1653,6 +1852,47 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
     content:"";
   }
 }
+@media screen and (min-width:1120px){
+  .treatment--secondary .treatment__box{
+    padding:50px;
+  }
+}
+@media screen and (max-width:1120px){
+  .c-supply-selector-cards__content .supply-cards-labels label{
+    padding:8px;
+    font-size:16px;
+    border-radius:8px 8px 0 0;
+  }
+  .c-supply-selector-cards__content .supply-card{
+    font-size:14px;
+    border-radius:0 0 8px 8px;
+  }
+  .c-supply-selector-cards__content .supply-card__content{
+    grid-template-columns:1fr 75px;
+    padding:16px 24px 16px 16px;
+  }
+  .c-supply-selector-cards__content .supply-card__details .e-price__main{
+    font-size:18px;
+  }
+  .c-supply-selector-cards__content .supply-card__details .e-price__current{
+    font-size:32px;
+  }
+  .c-supply-selector-cards__content .supply-card__image figcaption{
+    font-size:10px;
+  }
+  .c-supply-selector-cards__content .supply-card__gift .gift-notice{
+    gap:8px;
+    padding:12px;
+    font-size:12px;
+    border-radius:6px;
+  }
+  .c-supply-selector-cards__content .supply-card__gift .gift-notice img{
+    max-width:34px;
+  }
+  .c-supply-selector-cards__content .supply-card__gift .gift-notice p strong{
+    font-size:16px;
+  }
+}
 @media screen and (max-width:991px){
   .c-supply-selector__gift .gift-notice p strong{
     display:block;
@@ -1674,6 +1914,11 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
     height:24px;
     font-size:16px;
   }
+  .treatment--secondary .treatment__buy .buyer-opportunity li{
+    padding-right:12px;
+    padding-left:12px;
+    font-size:12px;
+  }
 }
 @media screen and (max-width:767px){
   .c-options-selector{
@@ -1684,6 +1929,9 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
   .c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
     font-size:12px;
+  }
+  .c-options-selector--line .c-options-selector__list{
+    gap:4px;
   }
   .e-declaimer{
     font-size:14px;
@@ -1703,6 +1951,12 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   .c-supply-selector--tiles .c-supply-selector__main{
     padding-right:2px;
     padding-left:2px;
+  }
+  .c-supply-selector-cards{
+    max-width:none;
+  }
+  .c-supply-selector-cards__title small{
+    font-size:14px;
   }
   .c-subscribe-selector{
     max-width:none;
@@ -1801,5 +2055,8 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
   .treatment__extra,.treatment__questions{
     display:none;
+  }
+  .treatment--secondary .treatment__box{
+    padding:16px;
   }
 }

@@ -2,6 +2,8 @@
 @use "@elements/e-pill-badge" as *;
 
 .c-options-selector {
+    $root: &;
+
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -97,6 +99,27 @@
                 @include sm {
                     font-size: 12px;
                 }
+            }
+        }
+    }
+
+    &--line {
+        #{$root}__list {
+            @include sm {
+                gap: 4px;
+            }
+
+            label {
+                flex-direction: row;
+                gap: 8px;
+                justify-content: start;
+                min-height: 0;
+                padding: 8px;
+            }
+
+            img {
+                max-width: 28px;
+                aspect-ratio: 1/1;
             }
         }
     }

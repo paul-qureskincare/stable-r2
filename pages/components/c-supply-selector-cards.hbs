@@ -1,0 +1,135 @@
+<div class="c-supply-selector-cards">
+    {{#if title }}
+        <p class="c-supply-selector-cards__title">
+            {{ title }}:
+            {{#if small }}<small>{{ small }}</small>{{/if}}
+        </p>
+    {{/if}}
+    <div class="c-supply-selector-cards__content">
+        <ul class="supply-cards-labels">
+            {{#parseJson labels }}
+                <li>
+                    <label for="{{ for }}">
+                        {{ name }}
+                        {{#if best }}<div class="e-pill-badge e-pill-badge--xxs">Best Value</div>{{/if}}
+                    </label>
+                </li>
+            {{/parseJson }}
+        </ul>
+        {{#parseJson cards }}
+            <div class="supply-card">
+                <input type="radio" id="{{ id }}" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                <div class="supply-card__content">
+                    <div class="supply-card__details">
+                        <div class="e-pill-save">Save {$dyn} Today</div>
+                        {{> e-price current="{$dyn}" old="{$dyn}" }}
+                        <p><strong>Just {$dyn}/day for first month</strong></p>
+                        <ul class="c-marked-list c-marked-list--fill">
+                            <li><strong>62% off</strong> every order</li>
+                            <li><strong>HSA/FSA</strong> eligible</li>
+                            <li><strong>Free</strong> shipping today</li>
+                        </ul>
+                    </div>
+                    <figure class="supply-card__image">
+                        <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
+                        <figcaption>{{ desc }}</figcaption>
+                    </figure>
+                </div>
+                {{#if gift }}
+                    <div class="supply-card__gift">
+                        <div class="gift-notice">{{{ gift }}}</div>
+                    </div>
+                {{/if}}
+            </div>
+        {{/parseJson}}
+    </div>
+    {{!--
+    <ul class="c-supply-selector__list">
+        {{#parseJson list }}
+            <li class="c-supply-selector__item">
+                <label class="c-supply-selector__label">
+                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <div class="c-supply-selector__main">
+                        {{#if image }}
+                            <picture class="c-supply-selector__image">
+                                <img src="{{ image }}" alt="{{ name }}" />
+                            </picture>
+                        {{/if}}
+                        <div class="c-supply-selector__name">{{ name }}</div>
+                        <div class="c-supply-selector__price">
+                            {{> e-price
+                                current="{$dyn}"
+                                old=price-old
+                                highlight=price-highlight
+                                strikethrough=price-strikethrough
+                            }}
+                        </div>
+                        <div class="c-supply-selector__desc">{{{ desc }}}</div>
+                        {{#if save-value }}
+                            <div class="c-supply-selector__save">
+                                {{#if price-in-save }}
+                                    <del>{{ price-in-save }}</del>
+                                {{/if}}
+                                {{#if save-pill }}
+                                    <div class="e-pill-save {{#if save-pill-light }}e-pill-save--light{{/if}}">{{ save-value }}</div>
+                                {{ else }}
+                                    {{ save-value }}
+                                {{/if}}
+                            </div>
+                        {{/if}}
+                        {{#if price-final }}
+                            <div class="c-supply-selector__final-price">
+                                {{> e-price current="{$dyn}" }}
+                            </div>
+                        {{/if}}
+                    </div>
+                    {{#if gift }}
+                        <div class="c-supply-selector__gift">
+                            <div class="gift-notice">{{{ gift }}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if tag-name }}
+                        <div class="c-supply-selector__tag">
+                            {{#if tag-up }}
+                                <div class="selector-tag-up">{{{ tag-name }}}</div>
+                            {{ else }}
+                                <div class="selector-tag-down">{{{ tag-name }}}</div>
+                            {{/if}}
+                        </div>
+                    {{/if}}
+                    {{#if kits-left-hot }}
+                        <div class="c-supply-selector__kits-left">
+                            <div class="kits-left kits-left--hot">
+                                <div class="kits-left__name">🔥 Only $14.91 per treatment</div>
+                                <div class="kits-left__items">
+                                    {{> e-icon icon="clock"}}
+                                     164 kits left
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if kits-left-normal }}
+                        <div class="c-supply-selector__kits-left">
+                            <div class="kits-left">
+                                <div class="kits-left__name">Only $37.25 per treatment</div>
+                                <div class="kits-left__items">
+                                    {{> e-icon icon="clock"}}
+                                    201 kits left
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if free-shipping-hot }}
+                        <div class="c-supply-selector__hot-bottom">🔥 Free shipping on this order</div>
+                    {{/if}}
+                </label>
+                {{#if notify-row }}
+                    <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+                {{/if}}
+            </li>
+        {{/parseJson}}
+    </ul>
+    {{#if notify-tiles }}
+        <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+    {{/if}} --}}
+</div>

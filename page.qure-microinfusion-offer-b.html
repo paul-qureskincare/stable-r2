@@ -871,7 +871,7 @@
             <!-- SET UP END -->
 
             <!-- TREATMENT -->
-            <section class="treatment" id="purchase-form">
+            <section class="treatment treatment--secondary" id="purchase-form">
                 <div class="container">
                     <article class="treatment__content">
                         <h2>Choose your treatment</h2>
@@ -886,34 +886,27 @@
                         <div class="treatment__box">
                             <div class="treatment__steps">
                                 <div class="treatment__step">
-                                    <div class="c-options-selector">
+                                    <div class="c-options-selector c-options-selector--line">
                                         <p class="c-options-selector__title">Select Your Product:</p>
                                         <ul class="c-options-selector__list">
                                             <li>
                                                 <label>
+                                                    <input type="radio" name="color" />
+                                                    <img src="sections/treatment/images/dark-spots-small.webp" alt="Brightening" />
+                                                    <span>Brightening</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
                                                     <input type="radio" name="color" checked />
-                                                    <img src="sections/treatment/images/Dark_Spots_4.png" alt="Dark Spots" />
-                                                    <span>Dark Spots</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label>
-                                                    <input type="radio" name="color" />
-                                                    <img src="sections/treatment/images/Mixed_3.png" alt="Wrinkles" />
-                                                    <span>Wrinkles</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label>
-                                                    <input type="radio" name="color" />
-                                                    <img src="sections/treatment/images/Wrinkles_2.png" alt="Mixed" />
-                                                    <span>Mixed</span>
+                                                    <img src="sections/treatment/images/wrinkles-small.webp" alt="Rejuvenating" />
+                                                    <span>Rejuvenating</span>
                                                 </label>
                                             </li>
                                         </ul>
                                         <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
                                     </div>
-                                    <div class="info-items d-sm-none">
+                                    <div class="info-items">
                                         <div class="info-items__item show">
                                             <div class="c-accordion c-accordion--lines">
                                                 <div class="c-accordion__list">
@@ -985,190 +978,102 @@
                                     </div>
                                 </div>
                                 <div class="treatment__step">
-                                    <div class="c-supply-selector">
-                                        <p class="c-supply-selector__title">Select Your Supply:</p>
-                                        <ul class="c-supply-selector__list">
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="supply-new" checked />
-                                                    <div class="c-supply-selector__main">
-                                                        <div class="c-supply-selector__name">6 Month Supply</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">12 Treatments</div>
-                                                        <div class="c-supply-selector__save">
-                                                            <div class="e-pill-save">Save 70%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="c-supply-selector__gift">
-                                                        <div class="gift-notice">
-                                                            <figure><img src="sections/treatment/images/pillowcase-gift.webp" alt="Silk Pillowcase" /> <i class="e-icon e-icon-gift"></i></figure>
-                                                            <p><strong>Free Gift!</strong> Wrinkle-Reducing Silk Pillowcase</p>
-                                                            <div class="e-pill-save">{$dyn} <strong>FREE</strong></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="c-supply-selector__tag">
-                                                        <div class="selector-tag-up">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
-                                                    </div>
-                                                    <div class="c-supply-selector__kits-left">
-                                                        <div class="kits-left kits-left--hot">
-                                                            <div class="kits-left__name">🔥 Only $14.91 per treatment</div>
-                                                            <div class="kits-left__items">
-                                                                <i class="e-icon e-icon-clock"></i>
-                                                                164 kits left
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="supply-new" />
-                                                    <div class="c-supply-selector__main">
-                                                        <div class="c-supply-selector__name">3 Month Supply</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price e-price--highlight">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                    <div class="e-price__old">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">6 Treatments</div>
-                                                        <div class="c-supply-selector__save">
-                                                            <div class="e-pill-save e-pill-save--light">Save 53%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="c-supply-selector__kits-left">
-                                                        <div class="kits-left">
-                                                            <div class="kits-left__name">Only $37.25 per treatment</div>
-                                                            <div class="kits-left__items">
-                                                                <i class="e-icon e-icon-clock"></i>
-                                                                201 kits left
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-supply-selector__item">
-                                                <label class="c-supply-selector__label">
-                                                    <input type="radio" name="supply-new" />
-                                                    <div class="c-supply-selector__main">
-                                                        <div class="c-supply-selector__name">1 Months Supply</div>
-                                                        <div class="c-supply-selector__price">
-                                                            <div class="e-price">
-                                                                <div class="e-price__main">
-                                                                    <div class="e-price__current">{$dyn}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c-supply-selector__desc">2 Micro-Infusion Treatments</div>
-                                                    </div>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="info-items">
-                                        <div class="info-items__item show">
-                                            <details>
-                                                <summary>What is in the 6 Month Supply bundle? <i class="e-icon e-icon-chevron"></i></summary>
-                                                <article>
-                                                    <ul>
-                                                        <li>12 clinically formulated 4ml serums to treat your specific skin concerns (valued at $120)</li>
-                                                        <li>Worldwide shipping (valued at $25)</li>
-                                                        <li>Risk-free 90 day money-back guarantee to trial</li>
-                                                    </ul>
-                                                </article>
-                                            </details>
-                                        </div>
-                                        <div class="info-items__item">
-                                            <details>
-                                                <summary>What is in the 3 Month Supply bundle? <i class="e-icon e-icon-chevron"></i></summary>
-                                                <article>
-                                                    <ul>
-                                                        <li>4 clinically formulated 4ml serums to treat your specific skin concerns (valued at $80)</li>
-                                                        <li>Worldwide shipping (valued at $25)</li>
-                                                        <li>Risk-free 90 day money-back guarantee to trial</li>
-                                                    </ul>
-                                                </article>
-                                            </details>
-                                        </div>
-                                        <div class="info-items__item">
-                                            <details>
-                                                <summary>What is in the 1 Month Supply bundle? <i class="e-icon e-icon-chevron"></i></summary>
-                                                <article>
-                                                    <ul>
-                                                        <li>2 clinically formulated 4ml serums to treat your specific skin concerns (valued at $40)</li>
-                                                        <li>Worldwide shipping (valued at $25)</li>
-                                                    </ul>
-                                                </article>
-                                            </details>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="treatment__step">
-                                    <div class="c-payment-selector">
-                                        <p class="c-payment-selector__title">Select A Payment Option:</p>
-                                        <ul class="c-payment-selector__list">
-                                            <li class="c-payment-selector__item">
-                                                <label class="c-payment-selector__label">
-                                                    <input type="radio" name="payment" checked />
-                                                    <div class="c-payment-selector__name">Pay in full</div>
-                                                    <div class="c-payment-selector__price">
+                                    <div class="c-supply-selector-cards">
+                                        <p class="c-supply-selector-cards__title">Select Your Supply:</p>
+                                        <div class="c-supply-selector-cards__content">
+                                            <ul class="supply-cards-labels">
+                                                <li>
+                                                    <label for="first-supply-card"> 30-day supply </label>
+                                                </li>
+                                                <li>
+                                                    <label for="second-supply-card">
+                                                        90-day supply
+                                                        <div class="e-pill-badge e-pill-badge--xxs">Best Value</div>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="supply-card">
+                                                <input type="radio" id="first-supply-card" name="supply" />
+                                                <div class="supply-card__content">
+                                                    <div class="supply-card__details">
+                                                        <div class="e-pill-save">Save {$dyn} Today</div>
                                                         <div class="e-price">
                                                             <div class="e-price__main">
                                                                 <div class="e-price__current">{$dyn}</div>
                                                                 <div class="e-price__old">{$dyn}</div>
                                                             </div>
                                                         </div>
+                                                        <p><strong>Just {$dyn}/day for first month</strong></p>
+                                                        <ul class="c-marked-list c-marked-list--fill">
+                                                            <li><strong>62% off</strong> every order</li>
+                                                            <li><strong>HSA/FSA</strong> eligible</li>
+                                                            <li><strong>Free</strong> shipping today</li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="c-payment-selector__text">
-                                                        One-time payment with:
-                                                        <img src="assets/images/payment-icons-1.svg" alt="Pay in full" />
+                                                    <figure class="supply-card__image">
+                                                        <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
+                                                        <figcaption>2 treatments every 4 weeks</figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="supply-card__gift">
+                                                    <div class="gift-notice">
+                                                        <img src="sections/treatment/images/pillowcase-gift-2.webp" alt="Silk Pillowcase" />
+                                                        <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                                        <div class="e-pill-save">{$dyn} Free</div>
                                                     </div>
-                                                </label>
-                                            </li>
-                                            <li class="c-payment-selector__item">
-                                                <label class="c-payment-selector__label">
-                                                    <input type="radio" name="payment" />
-                                                    <div class="c-payment-selector__name">Pay today only</div>
-                                                    <div class="c-payment-selector__price">
+                                                </div>
+                                            </div>
+                                            <div class="supply-card">
+                                                <input type="radio" id="second-supply-card" name="supply" checked />
+                                                <div class="supply-card__content">
+                                                    <div class="supply-card__details">
+                                                        <div class="e-pill-save">Save {$dyn} Today</div>
                                                         <div class="e-price">
                                                             <div class="e-price__main">
                                                                 <div class="e-price__current">{$dyn}</div>
+                                                                <div class="e-price__old">{$dyn}</div>
                                                             </div>
                                                         </div>
+                                                        <p><strong>Just {$dyn}/day for first month</strong></p>
+                                                        <ul class="c-marked-list c-marked-list--fill">
+                                                            <li><strong>62% off</strong> every order</li>
+                                                            <li><strong>HSA/FSA</strong> eligible</li>
+                                                            <li><strong>Free</strong> shipping today</li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="c-payment-selector__text">
-                                                        Monthly interest-free payments with:
-                                                        <img src="assets/images/payment-icons-2.svg" alt="Pay today only" />
+                                                    <figure class="supply-card__image">
+                                                        <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
+                                                        <figcaption>6 treatments every 12 weeks</figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="supply-card__gift">
+                                                    <div class="gift-notice">
+                                                        <img src="sections/treatment/images/pillowcase-gift-2.webp" alt="Silk Pillowcase" />
+                                                        <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                                        <div class="e-pill-save">{$dyn} Free</div>
                                                     </div>
-                                                </label>
-                                            </li>
-                                        </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="treatment__buy">
                                 <div class="c-buy-block">
+                                    <ul>
+                                        <li>
+                                            <i class="e-icon e-icon-verified-shield"></i>
+                                            90-day guarantee
+                                        </li>
+                                        <li>
+                                            <i class="e-icon e-icon-double-arrows"></i>
+                                            Swap or cancel anytime
+                                        </li>
+                                    </ul>
                                     <div class="c-order-button">
                                         <button class="btn btn--primary" type="button">Buy Now</button>
-                                        <div class="e-pay-options">
-                                            OR pay 4 monthly payments of {$dyn} with
-                                            <ul>
-                                                <li><img src="assets/images/klarna.svg" alt="Klarna" /></li>
-                                                <li><img src="assets/images/sezzle.svg" alt="Sezzle" /></li>
-                                                <li><img src="assets/images/afterpay.svg" alt="Afterpay" /></li>
-                                                <li><img src="assets/images/flex.svg" alt="Flex" /></li>
-                                            </ul>
-                                        </div>
                                     </div>
+                                    <small>Renews at {$dyn} each 12 weeks. Cancel anytime.</small>
                                 </div>
                                 <div class="c-selector-switcher c-selector-switcher--text">
                                     <ul class="e-pill-tabs e-pill-tabs--selector">
@@ -1187,50 +1092,26 @@
                                     </ul>
                                     <p><i class="e-icon e-icon-rotation-2"></i> Auto-ships · Cancel anytime · No commitment</p>
                                 </div>
+                                <ul class="buyer-opportunity">
+                                    <li>
+                                        <i class="e-icon e-icon-circle-check"></i>
+                                        90-day money-back buarantee
+                                    </li>
+                                    <li>
+                                        <i class="e-icon e-icon-circle-security"></i>
+                                        Clinically &amp; third party tested
+                                    </li>
+                                    <li>
+                                        <i class="e-icon e-icon-circle-delivery"></i>
+                                        Free shipping over&nbsp;$100
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="treatment__extra">
-                        <ul class="e-features-list">
-                            <li>
-                                <i class="e-icon e-icon-guarantee"></i>
-                                30-Day Money-Back Guarantee
-                            </li>
-                            <li>
-                                <i class="e-icon e-icon-shipping-order"></i>
-                                Free Shipping over {$dyn}
-                            </li>
-                            <li>
-                                <i class="e-icon e-icon-proven"></i>
-                                Backed by Science
-                            </li>
-                        </ul>
+                        <ul class="e-features-list"></ul>
                         <div class="treatment__questions">Have questions about {$dyn}? <a href="#" class="btn btn--md btn--secondary">Chat with us!</a></div>
-                        <div class="c-accordion c-accordion--lines">
-                            <div class="c-accordion__list">
-                                <details class="c-accordion__item">
-                                    <summary class="c-accordion__summary">What can it do for your skin</summary>
-                                    <article class="c-accordion__content">
-                                        <p>Designed to support smoother, brighter-looking skin with balanced hydration.</p>
-                                        <p>Helps soften the look of fine lines while improving the appearance of dark spots and uneven tone, leaving skin looking refreshed, plumper, and more luminous.</p>
-                                    </article>
-                                </details>
-                                <details class="c-accordion__item">
-                                    <summary class="c-accordion__summary">All Ingredients</summary>
-                                    <article class="c-accordion__content">
-                                        <p>
-                                            <strong>Dark Spots Serum:</strong><br />
-                                            Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.
-                                        </p>
-                                        <p>
-                                            <strong>Wrinkles Serum:</strong><br />
-                                            Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.
-                                        </p>
-                                        <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
-                                    </article>
-                                </details>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
