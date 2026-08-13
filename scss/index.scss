@@ -490,12 +490,6 @@
                 max-width: 360px;
 
                 @include sm {
-                    position: absolute;
-                    right: 16px;
-                    bottom: 32px;
-                    left: 16px;
-                    z-index: 2;
-                    width: auto;
                     max-width: none;
                 }
             }
