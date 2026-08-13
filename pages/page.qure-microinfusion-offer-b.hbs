@@ -537,69 +537,35 @@
     {{/set-up}}
 
     {{#> treatment
+        classes="treatment--secondary"
         id="purchase-form"
         title="Choose your treatment"
         text="
             <p>All orders are one-time purchases. No extra charges, and no hidden fees.</p>
         "
         picture="sections/treatment/images/MI_6_month_DS.webp"
-        features-list='[
-            {
-                "text": "30-Day Money-Back Guarantee",
-                "icon": "guarantee"
-            },
-            {
-                "text": "Free Shipping over {$dyn}",
-                "icon": "shipping-order"
-            },
-            {
-                "text": "Backed by Science",
-                "icon": "proven"
-            }
-        ]'
-        accordion-list='[
-            {
-                "summary": "What can it do for your skin",
-                "text": "
-                    <p>Designed to support smoother, brighter-looking skin with balanced hydration. </p>
-                    <p>Helps soften the look of fine lines while improving the appearance of dark spots and uneven tone, leaving skin looking refreshed, plumper, and more luminous.</p>
-                "
-            },
-            {
-                "summary": "All Ingredients",
-                "text": "
-                    <p><strong>Dark Spots Serum:</strong><br /> Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, SH-Oligopeptide-1.</p>
-                    <p><strong>Wrinkles Serum:</strong><br /> Odycea Onsen-Sui (Thermal water), Propanediol, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia Leaf/Stem Extract, Water, Butylene Glycol, Hydroxyacetophenone, Copper Tripeptide-1, Beta-Glucan, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Allantoin, Sodium Hyaluronate, Xanthan Gum.</p>
-                    <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
-                "
-            }
-        ]'
         custom-treatment-buy=true
      }}
         <div class="treatment__steps">
             <div class="treatment__step">
                 {{> c-options-selector
+                    line=true
                     title="Select Your Product"
                     list='[
                         {
-                            "img": "sections/treatment/images/Dark_Spots_4.png",
-                            "name": "Dark Spots",
+                            "img": "sections/treatment/images/dark-spots-small.webp",
+                            "name": "Brightening",
+                            "option": "color"
+                        },
+                        {
+                            "img": "sections/treatment/images/wrinkles-small.webp",
+                            "name": "Rejuvenating",
                             "option": "color",
                             "checked": true
-                        },
-                        {
-                            "img": "sections/treatment/images/Mixed_3.png",
-                            "name": "Wrinkles",
-                            "option": "color"
-                        },
-                        {
-                            "img": "sections/treatment/images/Wrinkles_2.png",
-                            "name": "Mixed",
-                            "option": "color"
                         }
                     ]'
                 }}
-                <div class="info-items d-sm-none">
+                <div class="info-items">
                     <div class="info-items__item show">
                         {{> c-accordion
                             type="lines"
@@ -666,104 +632,40 @@
                 </div>
             </div>
             <div class="treatment__step">
-                {{> c-supply-selector
+                {{> c-supply-selector-cards
                     title="Select Your Supply"
-                    list='[
+                    labels='[
                         {
-                            "name": "6 Month Supply",
-                            "desc": "12 Treatments",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-value": "Save 70%",
-                            "tag-up": true,
-                            "tag-name": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "supply-new",
-                            "gift": "
-                                <figure>
-                                    <img src=\"sections/treatment/images/pillowcase-gift.webp\" alt=\"Silk Pillowcase\" />
-                                    <i class=\"e-icon e-icon-gift\"></i>
-                                </figure>
-                                <p><strong>Free Gift!</strong> Wrinkle-Reducing Silk Pillowcase</p>
-                                <div class=\"e-pill-save\">{$dyn} <strong>FREE</strong></div>
-                            ",
-                            "kits-left-hot": true,
-                            "checked": true
+                            "for": "first-supply-card",
+                            "name": "30-day supply"
                         },
                         {
-                            "name": "3 Month Supply",
-                            "desc": "6 Treatments",
-                            "price-old": true,
-                            "price-highlight": true,
-                            "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "Save 53%",
-                            "option": "supply-new",
-                            "kits-left-normal": true
-                        },
-                        {
-                            "name": "1 Months Supply",
-                            "desc": "2 Micro-Infusion Treatments",
-                            "option": "supply-new"
+                            "for": "second-supply-card",
+                            "name": "90-day supply",
+                            "best": true
                         }
                     ]'
-                }}
-                <div class="info-items">
-                    <div class="info-items__item show">
-                        <details>
-                            <summary>What is in the 6 Month Supply bundle? {{> e-icon icon="chevron"}}</summary>
-                            <article>
-                                <ul>
-                                    <li>12 clinically formulated 4ml serums to treat your specific skin concerns (valued at $120)</li>
-                                    <li>Worldwide shipping (valued at $25)</li>
-                                    <li>Risk-free 90 day money-back guarantee to trial</li>
-                                </ul>
-                            </article>
-                        </details>
-                    </div>
-                    <div class="info-items__item">
-                        <details>
-                            <summary>What is in the 3 Month Supply bundle? {{> e-icon icon="chevron"}}</summary>
-                            <article>
-                                <ul>
-                                    <li>4 clinically formulated 4ml serums to treat your specific skin concerns (valued at $80)</li>
-                                    <li>Worldwide shipping (valued at $25)</li>
-                                    <li>Risk-free 90 day money-back guarantee to trial</li>
-                                </ul>
-                            </article>
-                        </details>
-                    </div>
-                    <div class="info-items__item">
-                        <details>
-                            <summary>What is in the 1 Month Supply bundle? {{> e-icon icon="chevron"}}</summary>
-                            <article>
-                                <ul>
-                                    <li>2 clinically formulated 4ml serums to treat your specific skin concerns (valued at $40)</li>
-                                    <li>Worldwide shipping (valued at $25)</li>
-                                </ul>
-                            </article>
-                        </details>
-                    </div>
-                </div>
-            </div>
-            <div class="treatment__step">
-                {{> c-payment-selector
-                    title="Select A Payment Option"
-                    list='[
+                    cards='[
                         {
-                            "name": "Pay in full",
-                            "old-price": true,
-                            "option": "payment",
-                            "checked": true,
-                            "text": "One-time payment with:",
-                            "image": "assets/images/payment-icons-1.svg",
-                            "checked": true
+                            "id": "first-supply-card",
+                            "desc": "2 treatments every 4 weeks",
+                            "option": "supply",
+                            "gift": "
+                                <img src=\"sections/treatment/images/pillowcase-gift-2.webp\" alt=\"Silk Pillowcase\" />
+                                <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                <div class=\"e-pill-save\">{$dyn} Free</div>
+                            "
                         },
                         {
-                            "name": "Pay today only",
-                            "option": "payment",
-                            "text": "Monthly interest-free payments with:",
-                            "image": "assets/images/payment-icons-2.svg"
+                            "id": "second-supply-card",
+                            "desc": "6 treatments every 12 weeks",
+                            "option": "supply",
+                            "gift": "
+                                <img src=\"sections/treatment/images/pillowcase-gift-2.webp\" alt=\"Silk Pillowcase\" />
+                                <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                <div class=\"e-pill-save\">{$dyn} Free</div>
+                            ",
+                            "checked": true
                         }
                     ]'
                 }}
@@ -771,7 +673,18 @@
         </div>
         <div class="treatment__buy">
             <div class="c-buy-block">
-                {{> c-order-button }}
+                <ul>
+                    <li>
+                        {{> e-icon icon="verified-shield" }}
+                        90-day guarantee
+                    </li>
+                    <li>
+                        {{> e-icon icon="double-arrows" }}
+                        Swap or cancel anytime
+                    </li>
+                </ul>
+                {{> c-order-button hide-pay=true }}
+                <small>Renews at {$dyn} each 12 weeks. Cancel anytime.</small>
             </div>
             <div class="c-selector-switcher c-selector-switcher--text">
                 <ul class="e-pill-tabs e-pill-tabs--selector">
@@ -790,7 +703,20 @@
                 </ul>
                 <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
             </div>
-            {{!-- {{> c-certified-box }} --}}
+            <ul class="buyer-opportunity">
+                <li>
+                    {{> e-icon icon="circle-check" }}
+                    90-day money-back buarantee
+                </li>
+                <li>
+                    {{> e-icon icon="circle-security" }}
+                    Clinically &amp; third party tested
+                </li>
+                <li>
+                    {{> e-icon icon="circle-delivery" }}
+                    Free shipping over&nbsp;$100
+                </li>
+            </ul>
         </div>
     {{/treatment}}
 

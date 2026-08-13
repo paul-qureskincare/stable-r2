@@ -2,6 +2,7 @@
 
 @use "@components/c-options-selector" as *;
 @use "@components/c-supply-selector" as *;
+@use "@components/c-supply-selector-cards" as *;
 @use "@components/c-subscribe-selector" as *;
 @use "@components/c-payment-selector" as *;
 @use "@components/c-selector-switcher" as *;
@@ -411,6 +412,101 @@
                 --note-bg: #f6f6f7;
 
                 @include note;
+            }
+        }
+    }
+
+    &--secondary {
+        .treatment__box {
+            @media screen and (min-width: 1120px) {
+                padding: 50px;
+            }
+
+            @include sm {
+                padding: 16px;
+            }
+        }
+
+        .treatment__step {
+            &::after {
+                display: none;
+            }
+        }
+
+        .treatment__steps {
+            .treatment__tabs-title,
+            .c-supply-selector__title,
+            .c-options-selector__title,
+            .c-subscribe-selector__title,
+            .c-payment-selector__title {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        .treatment__buy {
+            .c-buy-block {
+                gap: 12px;
+                width: 100%;
+                text-align: center;
+
+                ul {
+                    display: flex;
+                    gap: 24px;
+                    justify-content: center;
+                    font-size: 12px;
+
+                    li {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                    }
+
+                    .e-icon {
+                        color: #91baec;
+                        vertical-align: top;
+                    }
+
+                    .e-icon-verified-shield {
+                        -webkit-text-stroke: 0.4px;
+                    }
+
+                }
+
+                small {
+                    margin-top: -4px;
+                    color: #7b7b7b;
+                    font-size: 14px;
+                }
+            }
+
+            .buyer-opportunity {
+                display: flex;
+                gap: 6px;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: center;
+                    width: 100%;
+                    padding: 8px 16px 12px;
+                    font-size: 15px;
+                    text-align: center;
+                    border-radius: 12px;
+                    background: #f7f7f7;
+
+                    @include md {
+                        padding-right: 12px;
+                        padding-left: 12px;
+                        font-size: 12px;
+                    }
+                }
+
+                .e-icon {
+                    font-size: 38px;
+                }
             }
         }
     }

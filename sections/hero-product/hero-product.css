@@ -911,6 +911,17 @@
   text-transform:uppercase;
   border-radius:5px;
 }
+.c-options-selector--line .c-options-selector__list label{
+  flex-direction:row;
+  gap:8px;
+  justify-content:start;
+  min-height:0;
+  padding:8px;
+}
+.c-options-selector--line .c-options-selector__list img{
+  max-width:28px;
+  aspect-ratio:1/1;
+}
 
 .e-declaimer{
   display:block;
@@ -2978,6 +2989,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
     font-size:12px;
+  }
+  .c-options-selector--line .c-options-selector__list{
+    gap:4px;
   }
   .e-declaimer{
     font-size:14px;

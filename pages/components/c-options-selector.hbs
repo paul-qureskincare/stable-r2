@@ -1,4 +1,6 @@
-<div class="c-options-selector">
+<div class="c-options-selector
+    {{#if line }}c-options-selector--line{{/if }}
+">
     <p class="c-options-selector__title">{{ title }}:</p>
     <ul class="c-options-selector__list">
         {{#parseJson list }}
