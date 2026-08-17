@@ -17,4 +17,8 @@
         color: #fff;
         background: var(--e-double-tag-color, #ff5429);
     }
+
+    &--pill {
+        border-radius: 100px;
+    }
 }
