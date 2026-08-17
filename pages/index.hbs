@@ -37,7 +37,7 @@
         ]'
     }} --}}
 
-    {{#> across-image-banner
+    {{!-- {{#> across-image-banner
         classes="across-image-banner--holidays across-image-banner--summer"
     }}
         <picture>
@@ -52,7 +52,7 @@
                 <a href="#" class="btn btn--primary">Buy Now &amp; Save {$DYN}</a>
             </article>
         </div>
-    {{/across-image-banner}}
+    {{/across-image-banner}} --}}
 
     {{!-- {{#> across-image-banner
         classes="across-image-banner--holidays across-image-banner--qure-birthday"
@@ -138,6 +138,27 @@
             </article>
         </div>
     {{/across-image-banner}} --}}
+
+    {{#> across-image-banner
+        classes="across-image-banner--holidays across-image-banner--labor-day"
+    }}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/across-image-banner/images/labor-day.webp" />
+            <img src="sections/across-image-banner/images/labor-day-mob.webp" alt="70% OFF Micro-Infusion" />
+        </picture>
+        <div class="container">
+            <article>
+                <div class="e-double-tag e-double-tag--pill">
+                    <strong>LABOR DAY OFFER</strong>
+                    SHOP NOW
+                </div>
+                <img src="sections/across-image-banner/images/labor-day-sale.svg" alt="LABOR DAY SALE" />
+                <h1><span>70% OFF</span> Micro-Infusion</h1>
+                <p>A moment to invest in the skin you work hard for</p>
+                <a href="#" class="btn btn--primary">Buy Now &amp; Save Up to 70%</a>
+            </article>
+        </div>
+    {{/across-image-banner}}
 
     {{> quick-tile-links
         title=""

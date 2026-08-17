@@ -142,7 +142,7 @@
         }
     }
 
-    &--fathers-day {
+    /* &--fathers-day {
         .container {
             @include sm {
                 justify-content: flex-start;
@@ -222,9 +222,10 @@
                 }
             }
         }
-    }
+    } */
 
-    // .across-image-banner--fourth-of-july
+    /* // .across-image-banner--fourth-of-july
+
     &--fourth-of-july {
         background: #f6f6f7;
 
@@ -316,10 +317,10 @@
         strong {
             display: block;
         }
-    }
+    } */
 
 
-    // .across-image-banner--qure-birthday
+    /* // .across-image-banner--qure-birthday
     &--qure-birthday {
         position: relative;
         z-index: 1;
@@ -426,7 +427,7 @@
                 height: 100%;
             }
         }
-    }
+    } */
 
     // .across-image-banner--summer
     &--summer {
@@ -492,6 +493,67 @@
                 @include sm {
                     max-width: none;
                 }
+            }
+        }
+    }
+
+    // .across-image-banner--labor-day
+    &--labor-day {
+        background: #fff;
+
+        article {
+            gap: 24px;
+            margin-left: 0;
+
+            @include sm {
+                gap: 12px;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 46px;
+
+                span {
+                    display: block;
+                    color: #c92127;
+                }
+            }
+
+            & > img {
+                width: 80px;
+                height: auto;
+                vertical-align: top;
+
+                @include sm {
+                    display: none;
+                }
+            }
+
+            .e-double-tag {
+                --e-double-tag-color: #10355d;
+
+                gap: 20px;
+                align-self: start;
+                padding-right: 20px;
+                color: #fff;
+                font-size: 11px;
+                letter-spacing: 0;
+                background: #c92127;
+
+                strong {
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    font-weight: 500;
+                }
+
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .btn {
+                max-width: 360px;
             }
         }
     }

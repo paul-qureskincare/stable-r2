@@ -1622,6 +1622,9 @@
   color:#fff;
   background:var(--e-double-tag-color, #ff5429);
 }
+.e-double-tag--pill{
+  border-radius:100px;
+}
 
 .c-exclusive-offer{
   position:relative;
