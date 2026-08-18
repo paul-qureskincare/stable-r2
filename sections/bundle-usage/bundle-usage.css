@@ -87,10 +87,14 @@
 .bundle-usage .swiper-slide img{
   vertical-align:top;
 }
-.bundle-usage .swiper-slide .e-pill-badge{
+.bundle-usage .swiper-slide .time-badges{
   position:absolute;
   bottom:8px;
   left:8px;
+  display:flex;
+  gap:6px;
+}
+.bundle-usage .swiper-slide .e-pill-badge{
   color:inherit;
   font-size:12px;
   text-transform:uppercase;
