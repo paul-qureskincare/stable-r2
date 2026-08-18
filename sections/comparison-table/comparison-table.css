@@ -120,6 +120,74 @@
   margin-top:24px;
   text-align:center;
 }
+.comparison-table--secondary .comparison-table__content>ul{
+  gap:20px;
+}
+.comparison-table--secondary .comparison-table__content>ul li:not(:first-child){
+  padding-top:20px;
+}
+.comparison-table--secondary .swiper-slide{
+  padding-top:13px;
+}
+.comparison-table--secondary .swiper-slide article{
+  display:grid;
+  grid-template:auto 1fr/1fr 92px;
+  align-items:center;
+  height:100%;
+  margin-top:0;
+  padding-top:24px;
+}
+.comparison-table--secondary .swiper-slide article picture{
+  min-height:0;
+  margin:0;
+}
+.comparison-table--secondary .swiper-slide article h5{
+  grid-row:1;
+  grid-column:1;
+  text-align:left;
+}
+.comparison-table--secondary .swiper-slide article ul{
+  grid-column:1 /  -1;
+  height:100%;
+}
+.comparison-table--secondary .swiper-slide article ul li:last-child{
+  min-height:68px;
+}
+.comparison-table--secondary .swiper-slide article ul li .e-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:2.25em;
+  height:2.25em;
+  color:#91baec;
+  font-size:.5em;
+  vertical-align:top;
+  border:1.5px solid;
+  border-radius:50%;
+}
+.comparison-table--secondary .swiper-slide:first-child article{
+  position:relative;
+  border-radius:0;
+  background:#91baec;
+}
+.comparison-table--secondary .swiper-slide:first-child article:after{
+  position:absolute;
+  top:-13px;
+  right:0;
+  left:0;
+  height:13px;
+  border-radius:10px 10px 0 0;
+  background:#91baec;
+  content:"";
+}
+.comparison-table--secondary .swiper-slide:first-child article .e-icon{
+  color:#91baec;
+}
+@media screen and (min-width:768px){
+  .comparison-table--secondary .c-swiper-nav{
+    display:none;
+  }
+}
 @media screen and (min-width:1200px){
   .comparison-table .c-swiper-nav{
     display:none;
@@ -165,5 +233,27 @@
   }
   .comparison-table .e-declaimer{
     margin-top:16px;
+  }
+  .comparison-table--secondary .swiper-slide{
+    padding-top:0;
+  }
+  .comparison-table--secondary .swiper-slide article{
+    grid-template-columns:1fr;
+    padding-top:16px;
+  }
+  .comparison-table--secondary .swiper-slide article picture{
+    display:none;
+  }
+  .comparison-table--secondary .swiper-slide article h5{
+    text-align:center;
+  }
+  .comparison-table--secondary .swiper-slide article ul li{
+    font-size:14px;
+  }
+  .comparison-table--secondary .swiper-slide article ul li:last-child{
+    min-height:0;
+  }
+  .comparison-table--secondary .swiper-slide:first-child article:after{
+    display:none;
   }
 }

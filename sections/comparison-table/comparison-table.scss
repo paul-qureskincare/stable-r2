@@ -203,4 +203,126 @@
             margin-top: 16px;
         }
     }
+
+    // .comparison-table--secondary
+    &--secondary {
+        #{$root}__content {
+            & > ul {
+                gap: 20px;
+
+                li {
+                    &:not(:first-child) {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .swiper-slide {
+            padding-top: 13px;
+
+            @include sm {
+                padding-top: 0;
+            }
+
+            article {
+                display: grid;
+                grid-template: auto 1fr / 1fr 92px;
+                align-items: center;
+                height: 100%;
+                margin-top: 0;
+                padding-top: 24px;
+
+                @include sm {
+                    grid-template-columns: 1fr;
+                    padding-top: 16px;
+                }
+
+                picture {
+                    min-height: 0;
+                    margin: 0;
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+                h5 {
+                    grid-row: 1;
+                    grid-column: 1;
+                    text-align: left;
+
+                    @include sm {
+                        text-align: center;
+                    }
+                }
+
+                ul {
+                    grid-column: 1 / -1;
+                    height: 100%;
+
+                    li {
+
+                        @include sm {
+                            font-size: 14px;
+                        }
+
+                        &:last-child {
+                            min-height: 68px;
+
+                            @include sm {
+                                min-height: 0;
+                            }
+                        }
+
+                        .e-icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 2.25em;
+                            height: 2.25em;
+                            color: #91baec;
+                            font-size: 0.5em;
+                            vertical-align: top;
+                            border: 1.5px solid;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                article {
+                    position: relative;
+                    border-radius: 0;
+                    background: #91baec;
+
+                    &::after {
+                        position: absolute;
+                        top: -13px;
+                        right: 0;
+                        left: 0;
+                        height: 13px;
+                        border-radius: 10px 10px 0 0;
+                        background: #91baec;
+                        content: '';
+
+                        @include sm {
+                            display: none;
+                        }
+                    }
+
+                    .e-icon {
+                        color: #91baec;
+                    }
+                }
+            }
+        }
+
+        .c-swiper-nav {
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
 }

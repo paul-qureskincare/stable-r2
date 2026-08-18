@@ -24,14 +24,22 @@
                         "prevEl": ".comparison-table .c-swiper-button-prev",
                         "nextEl": ".comparison-table .c-swiper-button-next"
                     },
-                    "breakpoints": {
-                        "768": {
-                            "slidesPerView": 2
-                        },
-                        "1200": {
-                            "slidesPerView": 3
+                    {{#if two-slides }}
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 2
+                            }
                         }
-                    }
+                    {{ else }}
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 2
+                            },
+                            "1200": {
+                                "slidesPerView": 3
+                            }
+                        }
+                    {{/if }}
                 }'
             >
                 <div class="swiper-wrapper">

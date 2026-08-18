@@ -291,6 +291,7 @@
         custom-block='<a href="javascript:;" onclick="readStudyDetails.showModal()">Read study details</a>'
         readStudyDetails=true
     }}
+        <p>Powered by our <strong>50% glycerin</strong> formula.</p>
         {{> c-accordion
             type="lines"
             arrow-icon="true"
@@ -479,6 +480,65 @@
             </div>
         </div>
     {{/complete-system }}
+
+    {{#> comparison-table
+        classes="comparison-table--secondary"
+        title="How It Compares"
+        labels='[
+            {
+                "name": "Glycerin content",
+                "colorize": false
+            },
+            {
+                "name": "Base",
+                "colorize": false
+            },
+            {
+                "name": "After-feel",
+                "colorize": false
+            },
+            {
+                "name": "Skin barrier",
+                "colorize": false
+            },
+            {
+                "name": "Suitable for sensitive skin",
+                "colorize": false
+            }
+        ]'
+        two-slides=true
+    }}
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="assets/images/cleanser/comparison-table-image-1.webp" alt="Qure Cleanser" />
+                </picture>
+                <h5>Qure<br />Cleanser</h5>
+                <ul>
+                    <li>{{> e-icon icon="checkmark"}} <span>50%</span></li>
+                    <li>{{> e-icon icon="checkmark"}} <span>Glycerin-based</span></li>
+                    <li>{{> e-icon icon="checkmark"}} <span>Hydrated, balanced</span></li>
+                    <li>{{> e-icon icon="checkmark"}} <span>+18.5% stronger (6-week study)</span></li>
+                    <li>{{> e-icon icon="checkmark"}} <span>Yes, hypoallergenic, dermatologist reviewed</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="assets/images/cleanser/comparison-table-image-2.webp" alt="High-End CleanserS" />
+                </picture>
+                <h5>High-End<br />Cleansers</h5>
+                <ul>
+                    <li>{{> e-icon icon="cross"}} <span>Up to ~15% at the high end</span></li>
+                    <li>{{> e-icon icon="cross"}} <span>Most leading cleansers are water-based</span></li>
+                    <li>{{> e-icon icon="cross"}} <span>Tight, stripped</span></li>
+                    <li>{{> e-icon icon="cross"}} <span>Not usually disclosed</span></li>
+                    <li>{{> e-icon icon="cross"}} <span>Often not formulated for it</span></li>
+                </ul>
+            </article>
+        </div>
+    {{/comparison-table }}
 
     {{> have-questions
         list='[
