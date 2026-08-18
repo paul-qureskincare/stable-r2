@@ -978,83 +978,89 @@
                                     </div>
                                 </div>
                                 <div class="treatment__step">
-                                    <div class="c-supply-selector-cards">
-                                        <p class="c-supply-selector-cards__title">Select Your Supply:</p>
-                                        <div class="c-supply-selector-cards__content">
-                                            <ul class="supply-cards-labels">
-                                                <li>
-                                                    <label for="first-supply-card"> 30-day supply </label>
-                                                </li>
-                                                <li>
-                                                    <label for="second-supply-card">
-                                                        90-day supply
-                                                        <div class="e-pill-badge e-pill-badge--xxs">Best Value</div>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <div class="supply-card">
-                                                <input type="radio" id="first-supply-card" name="supply" />
-                                                <div class="supply-card__content">
-                                                    <div class="supply-card__details">
-                                                        <div class="e-pill-save">Save {$dyn} Today</div>
-                                                        <div class="e-price">
-                                                            <div class="e-price__main">
-                                                                <div class="e-price__current">{$dyn}</div>
-                                                                <div class="e-price__old">{$dyn}</div>
+                                    <div class="c-supply-selector c-supply-selector--cards">
+                                        <p class="c-supply-selector__title">Select Your Supply:</p>
+                                        <ul class="c-supply-selector__list">
+                                            <li class="c-supply-selector__labels">
+                                                <ul class="supply-cards-labels">
+                                                    <li>
+                                                        <label for="first-supply-card"> 30-day supply </label>
+                                                    </li>
+                                                    <li>
+                                                        <label for="second-supply-card">
+                                                            90-day supply
+                                                            <div class="e-pill-badge e-pill-badge--xxs">Best Value</div>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="c-supply-selector__item">
+                                                <div class="supply-card">
+                                                    <input type="radio" id="first-supply-card" name="supply" />
+                                                    <div class="supply-card__content">
+                                                        <div class="supply-card__details">
+                                                            <div class="e-pill-save">Save {$dyn} Today</div>
+                                                            <div class="e-price">
+                                                                <div class="e-price__main">
+                                                                    <div class="e-price__current">{$dyn}</div>
+                                                                    <div class="e-price__old">{$dyn}</div>
+                                                                </div>
                                                             </div>
+                                                            <p><strong>Just {$dyn}/day for first month</strong></p>
+                                                            <ul class="c-marked-list c-marked-list--fill">
+                                                                <li><strong>62% off</strong> every order</li>
+                                                                <li><strong>HSA/FSA</strong> eligible</li>
+                                                                <li><strong>Free</strong> shipping today</li>
+                                                            </ul>
                                                         </div>
-                                                        <p><strong>Just {$dyn}/day for first month</strong></p>
-                                                        <ul class="c-marked-list c-marked-list--fill">
-                                                            <li><strong>62% off</strong> every order</li>
-                                                            <li><strong>HSA/FSA</strong> eligible</li>
-                                                            <li><strong>Free</strong> shipping today</li>
-                                                        </ul>
+                                                        <figure class="supply-card__image">
+                                                            <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
+                                                            <figcaption>2 treatments every 4 weeks</figcaption>
+                                                        </figure>
                                                     </div>
-                                                    <figure class="supply-card__image">
-                                                        <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
-                                                        <figcaption>2 treatments every 4 weeks</figcaption>
-                                                    </figure>
-                                                </div>
-                                                <div class="supply-card__gift">
-                                                    <div class="gift-notice">
-                                                        <img src="sections/treatment/images/pillowcase-gift-2.webp" alt="Silk Pillowcase" />
-                                                        <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
-                                                        <div class="e-pill-save">{$dyn} Free</div>
+                                                    <div class="supply-card__gift">
+                                                        <div class="gift-notice">
+                                                            <img src="sections/treatment/images/pillowcase-gift-2.webp" alt="Silk Pillowcase" />
+                                                            <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                                            <div class="e-pill-save">{$dyn} Free</div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="supply-card">
-                                                <input type="radio" id="second-supply-card" name="supply" checked />
-                                                <div class="supply-card__content">
-                                                    <div class="supply-card__details">
-                                                        <div class="e-pill-save">Save {$dyn} Today</div>
-                                                        <div class="e-price">
-                                                            <div class="e-price__main">
-                                                                <div class="e-price__current">{$dyn}</div>
-                                                                <div class="e-price__old">{$dyn}</div>
+                                            </li>
+                                            <li class="c-supply-selector__item">
+                                                <div class="supply-card">
+                                                    <input type="radio" id="second-supply-card" name="supply" checked />
+                                                    <div class="supply-card__content">
+                                                        <div class="supply-card__details">
+                                                            <div class="e-pill-save">Save {$dyn} Today</div>
+                                                            <div class="e-price">
+                                                                <div class="e-price__main">
+                                                                    <div class="e-price__current">{$dyn}</div>
+                                                                    <div class="e-price__old">{$dyn}</div>
+                                                                </div>
                                                             </div>
+                                                            <p><strong>Just {$dyn}/day for first month</strong></p>
+                                                            <ul class="c-marked-list c-marked-list--fill">
+                                                                <li><strong>62% off</strong> every order</li>
+                                                                <li><strong>HSA/FSA</strong> eligible</li>
+                                                                <li><strong>Free</strong> shipping today</li>
+                                                            </ul>
                                                         </div>
-                                                        <p><strong>Just {$dyn}/day for first month</strong></p>
-                                                        <ul class="c-marked-list c-marked-list--fill">
-                                                            <li><strong>62% off</strong> every order</li>
-                                                            <li><strong>HSA/FSA</strong> eligible</li>
-                                                            <li><strong>Free</strong> shipping today</li>
-                                                        </ul>
+                                                        <figure class="supply-card__image">
+                                                            <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
+                                                            <figcaption>6 treatments every 12 weeks</figcaption>
+                                                        </figure>
                                                     </div>
-                                                    <figure class="supply-card__image">
-                                                        <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
-                                                        <figcaption>6 treatments every 12 weeks</figcaption>
-                                                    </figure>
-                                                </div>
-                                                <div class="supply-card__gift">
-                                                    <div class="gift-notice">
-                                                        <img src="sections/treatment/images/pillowcase-gift-2.webp" alt="Silk Pillowcase" />
-                                                        <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
-                                                        <div class="e-pill-save">{$dyn} Free</div>
+                                                    <div class="supply-card__gift">
+                                                        <div class="gift-notice">
+                                                            <img src="sections/treatment/images/pillowcase-gift-2.webp" alt="Silk Pillowcase" />
+                                                            <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                                            <div class="e-pill-save">{$dyn} Free</div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

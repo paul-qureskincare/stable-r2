@@ -472,29 +472,13 @@
 .c-supply-selector--delivery .e-price .e-price__main{
   flex-direction:row;
 }
-.c-supply-selector .c-next-batch{
-  margin-top:32px;
+.c-supply-selector--cards .c-supply-selector__list{
+  gap:0;
 }
-
-.c-supply-selector-cards{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  max-width:500px;
-}
-.c-supply-selector-cards__title{
-  margin-bottom:0;
-}
-.c-supply-selector-cards__title small{
-  display:block;
-  color:#8b8c8e;
-  font-size:16px;
-  line-height:1.25;
-}
-.c-supply-selector-cards__content:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card],.c-supply-selector-cards__content:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]{
+.c-supply-selector--cards .c-supply-selector__list:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card],.c-supply-selector--cards .c-supply-selector__list:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]{
   border-color:#212428;
 }
-.c-supply-selector-cards__content:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card]:after,.c-supply-selector-cards__content:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]:after{
+.c-supply-selector--cards .c-supply-selector__list:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card]:after,.c-supply-selector--cards .c-supply-selector__list:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]:after{
   position:absolute;
   right:0;
   bottom:-2px;
@@ -503,14 +487,24 @@
   background:#fff;
   content:"";
 }
-.c-supply-selector-cards__content .supply-cards-labels{
+.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__details .c-marked-list,.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__gift{
+  display:none;
+}
+
+.c-supply-selector--cards .c-supply-selector__item{
+  display:none;
+}
+.c-supply-selector--cards .c-supply-selector__item:has(input:checked){
+  display:block;
+}
+.c-supply-selector--cards .supply-cards-labels{
   display:flex;
   gap:8px;
 }
-.c-supply-selector-cards__content .supply-cards-labels li{
+.c-supply-selector--cards .supply-cards-labels li{
   width:100%;
 }
-.c-supply-selector-cards__content .supply-cards-labels label{
+.c-supply-selector--cards .supply-cards-labels label{
   position:relative;
   z-index:1;
   display:block;
@@ -524,67 +518,63 @@
   background:#fff;
   cursor:pointer;
 }
-.c-supply-selector-cards__content .supply-cards-labels label .e-pill-badge{
+.c-supply-selector--cards .supply-cards-labels label .e-pill-badge{
   --badge-base-color:#ff5429;
   position:absolute;
   top:-12px;
   left:50%;
   transform:translateX(-50%);
 }
-.c-supply-selector-cards__content .supply-card{
+.c-supply-selector--cards .supply-card{
   position:relative;
-  display:none;
   font-size:20px;
   border:2px solid #212428;
   border-radius:0 0 16px 16px;
 }
-.c-supply-selector-cards__content .supply-card:has(input:checked){
-  display:block;
-}
-.c-supply-selector-cards__content .supply-card input{
+.c-supply-selector--cards .supply-card input{
   position:absolute;
   z-index:-1;
   visibility:hidden;
   opacity:0;
 }
-.c-supply-selector-cards__content .supply-card__content{
+.c-supply-selector--cards .supply-card__content{
   display:grid;
   grid-template-columns:1fr 110px;
   padding:24px 32px 24px 16px;
 }
-.c-supply-selector-cards__content .supply-card__details{
+.c-supply-selector--cards .supply-card__details{
   display:flex;
   flex-direction:column;
   gap:12px;
   align-items:start;
 }
-.c-supply-selector-cards__content .supply-card__details .e-price__main{
+.c-supply-selector--cards .supply-card__details .e-price__main{
   align-items:end;
 }
-.c-supply-selector-cards__content .supply-card__details .e-price__current{
+.c-supply-selector--cards .supply-card__details .e-price__current{
   font-size:40px;
   font-weight:600;
   line-height:1;
 }
-.c-supply-selector-cards__content .supply-card__details p strong{
+.c-supply-selector--cards .supply-card__details p strong{
   color:#ff5429;
 }
-.c-supply-selector-cards__content .supply-card__details .c-marked-list{
+.c-supply-selector--cards .supply-card__details .c-marked-list{
   gap:1px;
 }
-.c-supply-selector-cards__content .supply-card__image img{
+.c-supply-selector--cards .supply-card__image img{
   display:block;
   max-width:100%;
   height:auto;
 }
-.c-supply-selector-cards__content .supply-card__image figcaption{
+.c-supply-selector--cards .supply-card__image figcaption{
   display:block;
   color:#8b8c8e;
   font-size:15px;
   line-height:1.1;
   text-align:right;
 }
-.c-supply-selector-cards__content .supply-card__gift .gift-notice{
+.c-supply-selector--cards .supply-card__gift .gift-notice{
   display:flex;
   gap:12px;
   align-items:center;
@@ -593,25 +583,25 @@
   border-radius:14px;
   background:#ffeeea;
 }
-.c-supply-selector-cards__content .supply-card__gift .gift-notice img{
+.c-supply-selector--cards .supply-card__gift .gift-notice img{
   display:block;
   max-width:100%;
   height:auto;
   max-width:50px;
 }
-.c-supply-selector-cards__content .supply-card__gift .gift-notice p strong{
+.c-supply-selector--cards .supply-card__gift .gift-notice p strong{
   display:block;
   font-size:24px;
 }
-.c-supply-selector-cards__content .supply-card__gift .gift-notice .e-pill-save{
+.c-supply-selector--cards .supply-card__gift .gift-notice .e-pill-save{
   --e-pill-save-color:#fff;
   margin-left:auto;
   color:#ff5429;
   white-space:nowrap;
   text-transform:none;
 }
-.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__details .c-marked-list,.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__gift{
-  display:none;
+.c-supply-selector .c-next-batch{
+  margin-top:32px;
 }
 
 .c-subscribe-selector{
@@ -1858,38 +1848,38 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   }
 }
 @media screen and (max-width:1120px){
-  .c-supply-selector-cards__content .supply-cards-labels label{
+  .c-supply-selector--cards .supply-cards-labels label{
     padding:8px;
     font-size:16px;
     border-radius:8px 8px 0 0;
   }
-  .c-supply-selector-cards__content .supply-card{
+  .c-supply-selector--cards .supply-card{
     font-size:14px;
     border-radius:0 0 8px 8px;
   }
-  .c-supply-selector-cards__content .supply-card__content{
+  .c-supply-selector--cards .supply-card__content{
     grid-template-columns:1fr 75px;
     padding:16px 24px 16px 16px;
   }
-  .c-supply-selector-cards__content .supply-card__details .e-price__main{
+  .c-supply-selector--cards .supply-card__details .e-price__main{
     font-size:18px;
   }
-  .c-supply-selector-cards__content .supply-card__details .e-price__current{
+  .c-supply-selector--cards .supply-card__details .e-price__current{
     font-size:32px;
   }
-  .c-supply-selector-cards__content .supply-card__image figcaption{
+  .c-supply-selector--cards .supply-card__image figcaption{
     font-size:10px;
   }
-  .c-supply-selector-cards__content .supply-card__gift .gift-notice{
+  .c-supply-selector--cards .supply-card__gift .gift-notice{
     gap:8px;
     padding:12px;
     font-size:12px;
     border-radius:6px;
   }
-  .c-supply-selector-cards__content .supply-card__gift .gift-notice img{
+  .c-supply-selector--cards .supply-card__gift .gift-notice img{
     max-width:34px;
   }
-  .c-supply-selector-cards__content .supply-card__gift .gift-notice p strong{
+  .c-supply-selector--cards .supply-card__gift .gift-notice p strong{
     font-size:16px;
   }
 }
@@ -1951,12 +1941,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   .c-supply-selector--tiles .c-supply-selector__main{
     padding-right:2px;
     padding-left:2px;
-  }
-  .c-supply-selector-cards{
-    max-width:none;
-  }
-  .c-supply-selector-cards__title small{
-    font-size:14px;
   }
   .c-subscribe-selector{
     max-width:none;
