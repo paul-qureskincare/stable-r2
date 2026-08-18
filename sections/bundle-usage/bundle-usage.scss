@@ -154,10 +154,15 @@
             vertical-align: top;
         }
 
-        .e-pill-badge {
+        .time-badges {
             position: absolute;
             bottom: 8px;
             left: 8px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .e-pill-badge {
             color: inherit;
             font-size: 12px;
             text-transform: uppercase;
