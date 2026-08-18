@@ -1,48 +1,63 @@
-<div class="c-supply-selector-cards">
+<div class="c-supply-selector c-supply-selector--cards">
     {{#if title }}
-        <p class="c-supply-selector-cards__title">
+        <p class="c-supply-selector__title">
             {{ title }}:
             {{#if small }}<small>{{ small }}</small>{{/if}}
         </p>
     {{/if}}
-    <div class="c-supply-selector-cards__content">
-        <ul class="supply-cards-labels">
-            {{#parseJson labels }}
-                <li>
-                    <label for="{{ for }}">
-                        {{ name }}
-                        {{#if best }}<div class="e-pill-badge e-pill-badge--xxs">Best Value</div>{{/if}}
-                    </label>
-                </li>
-            {{/parseJson }}
-        </ul>
+    <ul class="c-supply-selector__list">
+        <li class="c-supply-selector__labels">
+            <ul class="supply-cards-labels">
+                {{#parseJson labels }}
+                    <li>
+                        <label for="{{ for }}">
+                            {{ name }}
+                            {{#if best }}<div class="e-pill-badge e-pill-badge--xxs">Best Value</div>{{/if}}
+                        </label>
+                    </li>
+                {{/parseJson }}
+            </ul>
+        </li>
         {{#parseJson cards }}
-            <div class="supply-card">
-                <input type="radio" id="{{ id }}" name="{{ option }}" {{#if checked }}checked{{/if}} />
-                <div class="supply-card__content">
-                    <div class="supply-card__details">
-                        <div class="e-pill-save">Save {$dyn} Today</div>
-                        {{> e-price current="{$dyn}" old="{$dyn}" }}
-                        <p><strong>Just {$dyn}/day for first month</strong></p>
-                        <ul class="c-marked-list c-marked-list--fill">
-                            <li><strong>62% off</strong> every order</li>
-                            <li><strong>HSA/FSA</strong> eligible</li>
-                            <li><strong>Free</strong> shipping today</li>
-                        </ul>
+            <li class="c-supply-selector__item">
+                {{!-- {{{ labels }}} --}}
+                {{!-- <ul class="supply-cards-labels">
+                    {{#parseJson labels }}
+                        <li>
+                            <label for="{{ for }}">
+                                {{ name }}
+                                {{#if best }}<div class="e-pill-badge e-pill-badge--xxs">Best Value</div>{{/if}}
+                            </label>
+                        </li>
+                    {{/parseJson }}
+                </ul> --}}
+                <div class="supply-card">
+                    <input type="radio" id="{{ id }}" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <div class="supply-card__content">
+                        <div class="supply-card__details">
+                            <div class="e-pill-save">Save {$dyn} Today</div>
+                            {{> e-price current="{$dyn}" old="{$dyn}" }}
+                            <p><strong>Just {$dyn}/day for first month</strong></p>
+                            <ul class="c-marked-list c-marked-list--fill">
+                                <li><strong>62% off</strong> every order</li>
+                                <li><strong>HSA/FSA</strong> eligible</li>
+                                <li><strong>Free</strong> shipping today</li>
+                            </ul>
+                        </div>
+                        <figure class="supply-card__image">
+                            <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
+                            <figcaption>{{ desc }}</figcaption>
+                        </figure>
                     </div>
-                    <figure class="supply-card__image">
-                        <img src="sections/treatment/images/mi-supply.webp" alt="MI" />
-                        <figcaption>{{ desc }}</figcaption>
-                    </figure>
+                    {{#if gift }}
+                        <div class="supply-card__gift">
+                            <div class="gift-notice">{{{ gift }}}</div>
+                        </div>
+                    {{/if}}
                 </div>
-                {{#if gift }}
-                    <div class="supply-card__gift">
-                        <div class="gift-notice">{{{ gift }}}</div>
-                    </div>
-                {{/if}}
-            </div>
+            </li>
         {{/parseJson}}
-    </div>
+    </ul>
     {{!--
     <ul class="c-supply-selector__list">
         {{#parseJson list }}

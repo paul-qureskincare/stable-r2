@@ -1,10 +1,10 @@
 <div class="c-supply-selector {{ classes }}">
-     {{#if title }}
+    {{#if title }}
         <p class="c-supply-selector__title">
             {{ title }}:
             {{#if small }}<small>{{ small }}</small>{{/if}}
         </p>
-     {{/if}}
+    {{/if}}
     <ul class="c-supply-selector__list">
         {{#parseJson list }}
             <li class="c-supply-selector__item">
