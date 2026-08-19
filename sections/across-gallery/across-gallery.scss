@@ -1,0 +1,88 @@
+@use "@root/mixins" as *;
+
+.across-gallery {
+    $root: &;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: auto;
+        max-width: none;
+
+        @include sm {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        p {
+            em {
+                background-color: #c7e5db;
+            }
+        }
+
+        .btn {
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+
+    /* .c-swiper {
+        .swiper-slide {
+            img {
+                @include img-fluid;
+                width: min(30vw, 420px);
+                border: 1px solid #dfe0e0;
+                border-radius: 10px;
+
+                @include sm {
+                    width: min(80vw, 320px);
+                }
+            }
+        }
+    } */
+
+    &__images {
+        display: flex;
+        gap: 6px;
+        overflow: auto;
+        margin-right: -16px;
+        margin-left: -16px;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            flex: 0 0 auto;
+
+            img {
+                @include img-fluid;
+                width: min(30vw, 420px);
+                border: 1px solid #dfe0e0;
+                border-radius: 10px;
+
+                @include sm {
+                    width: min(80vw, 320px);
+                }
+            }
+        }
+    }
+}

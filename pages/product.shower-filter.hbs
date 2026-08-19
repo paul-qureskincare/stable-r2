@@ -113,61 +113,88 @@
                 </article>
                 <hr />
                 {{> c-options-selector
-                    title="Select Your Color"
+                    title="Select the type"
                     list='[
-                        {
-                            "img": "assets/images/product-shower-filter/variant-white-1.webp",
-                            "name": "White",
-                            "option": "color",
-                            "checked": true
-                        },
-                        {
-                            "img": "assets/images/product-shower-filter/variant-black-1.webp",
-                            "name": "Black",
-                            "option": "color"
-                        },
                         {
                             "img": "assets/images/product-shower-filter/variant-silver-1.webp",
-                            "name": "Silver",
-                            "option": "color"
-                        }
-                    ]'
-                }}
-                {{> c-supply-selector
-                    title="Select Your Supply"
-                    list='[
-                        {
-                            "name": "3 Months Supply",
-                            "desc": "Showerhead + 1 Filter",
-                            "price-highlight": false,
-                            "save-pill": false,
-                            "tag-up": false,
-                            "option": "supply"
-                        },
-                        {
-                            "name": "6 Months Supply",
-                            "desc": "Showerhead + 2 Filters",
-                            "price-old": true,
-                            "price-highlight": false,
-                            "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "22% off",
-                            "tag-up": false,
-                            "tag-name": "Popular",
-                            "option": "supply",
+                            "name": "Shower",
+                            "option": "type",
                             "checked": true
                         },
                         {
+                            "img": "assets/images/product-shower-filter/handheld-shower.webp",
+                            "name": "Handheld Shower",
+                            "option": "type"
+                        }
+                    ]'
+                    hide-notify=true
+                }}
+                {{> c-options-selector
+                    color=true
+                    title="Select Color"
+                    list='[
+                        {
+                            "name": "Black",
+                            "value": "black",
+                            "option": "color"
+                        },
+                        {
+                            "name": "White",
+                            "value": "white",
+                            "option": "color"
+                        },
+                        {
+                            "name": "Silver",
+                            "value": "silver",
+                            "option": "color",
+                            "checked": true
+                        }
+                    ]'
+                    hide-notify=true
+                }}
+                {{> c-supply-selector
+                    classes="c-supply-selector--delivery"
+                    title="Select Your Delivery"
+                    list='[
+                        {
+                            "image": "assets/images/product-shower-filter/shower-supply-4-filters.webp",
                             "name": "12 Months Supply",
-                            "desc": "Showerhead + 4 Filters",
+                            "desc": "Shower + 4 Filters",
                             "price-old": true,
-                            "price-highlight": false,
+                            "price-in-save": "{$dyn}",
+                            "price-highlight": true,
+                            "price-special": "{$dyn}",
                             "save-pill": true,
-                            "save-pill-light": true,
-                            "save-value": "47% off",
+                            "save-value": "{dyn}% OFF",
                             "tag-up": false,
                             "tag-name": "Best Value",
-                            "option": "supply"
+                            "option": "subscribe",
+                            "checked": true
+                        },
+                        {
+                            "image": "assets/images/product-shower-filter/shower-supply-2-filters.webp",
+                            "name": "6 Months Supply",
+                            "desc": "Shower + 2 Filters",
+                            "price-old": true,
+                            "price-in-save": "{$dyn}",
+                            "price-highlight": true,
+                            "price-special": "{$dyn}",
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "{dyn}% OFF",
+                            "option": "subscribe"
+                        },
+                        {
+                            "image": "assets/images/product-shower-filter/shower-supply-1-filters.webp",
+                            "name": "3 Months Supply",
+                            "desc": "Shower + 1 Filters",
+                            "price-old": true,
+                            "price-in-save": "{$dyn}",
+                            "price-highlight": true,
+                            "save-pill": true,
+                            "save-pill-light": true,
+                            "save-value": "{dyn}% OFF",
+                            "option": "subscribe"
                         }
                     ]'
                 }}
@@ -325,14 +352,77 @@
         <p>Research has shown tap water is contaminated with over 320* chemicals that your skin is absorbing daily. These micro-contaminants in water can clog pores, dry out and irritate sensitive skin.</p>
     {{/base-section }}
 
-    {{#> base-section
-        classes="base-section--reverse"
+    {{#> across-gallery
+        classes=""
         title="Meet the Qure Faucet Filter"
-        picture="assets/images/banner-with-text/shower_img.webp"
-        button="Shop Now"
     }}
-        <p>At Qure, we believe great skin starts at the source—and that’s the water you use every day. The Qure Shower Filter helps <em>reduce certain chemicals and minerals</em> found in tap water that can linger on your skin after showering.</p>
-    {{/base-section }}
+        <article>
+            <h2>Meet the Qure Shower Filters</h2>
+            <p>At Qure, we believe great skin starts at the source, and that's the water you use every day. Both the Qure Shower Filter and Handheld Shower Filter help <em>reduce certain chemicals</em> and minerals found in tap water that can linger on your skin after showering</p>
+            <a class="btn btn--primary" href="#">Shop Now</a>
+        </article>
+        <ul class="across-gallery__images">
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-1.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-2.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-3.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-4.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-5.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-6.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-7.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-8.webp" alt="Shower Filter Benefits" />
+            </li>
+        </ul>
+        {{!-- <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": "auto",
+                "spaceBetween": 6,
+                "loop": true
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-1.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-2.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-3.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-4.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-5.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-6.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-7.webp" alt="Shower Filter Benefits" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/across-gallery/images/shower-filter-benefits-8.webp" alt="Shower Filter Benefits" />
+                </div>
+            </div>
+        </div> --}}
+    {{/across-gallery }}
 
     {{#> progress-metrics id="improve_skin" }}
         <article>
@@ -619,44 +709,97 @@
 
     {{> features-marquee }}
 
-    {{#> set-up id="easy_steps" }}
+    {{#> set-up-toggle }}
+        <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-first" checked />
+        <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-second" />
         {{> c-wistia
-            id="fsw2ted2a8"
+            custom-classes="c-wistia--first"
+            id="bsfna2u1ja"
             custom='
                 <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-use-video.webp" />
-                    <img src="sections/set-up/images/shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-video.webp" />
+                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
                 </picture>
             '
         }}
+        {{> c-wistia
+            custom-classes="c-wistia--second"
+            id="fsw2ted2a8"
+            custom='
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-video.webp" />
+                    <img src="sections/set-up-toggle/images/shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
+                </picture>
+            '
+        }}
+        <ul class="set-up-toggle__switcher">
+            <li>
+                <label for="set-up-toggle-first">
+                    Handheld Shower
+                    <img src="sections/set-up-toggle/images/handheld-shower.webp" alt="Handheld Shower" />
+                </label>
+            </li>
+            <li>
+                <label for="set-up-toggle-second">
+                    Shower
+                    <img src="sections/set-up-toggle/images/shower.webp" alt="Shower" />
+                </label>
+            </li>
+        </ul>
         <h2>Set up in 3 easy steps</h2>
-        <ol>
+        <ol class="set-up-toggle__steps set-up-toggle__steps--first">
             <li>
                 <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-use-step-1.webp" />
-                    <img src="sections/set-up/images/shower-filter-use-step-1-mob.webp" alt="Detatch" />
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-step-1.webp" />
+                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-step-1-mob.webp" alt="Detatch" />
+                </picture>
+                <h6>Detatch</h6>
+                <p>Unscrew your old handheld shower head from the hose by hand, or with a wrench (included) for more grip if needed.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-step-2.webp" />
+                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-step-2-mob.webp" alt="Fit" />
+                </picture>
+                <h6>Fit</h6>
+                <p>Wrap the plumber's tape (included) around the hose connector.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-step-3.webp" />
+                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-step-3-mob.webp" alt="Secure" />
+                </picture>
+                <h6>Secure</h6>
+                <p>Twist the Qure Handheld Shower Filter onto the hose and tighten it securely with the wrench.</p>
+            </li>
+        </ol>
+        <ol class="set-up-toggle__steps set-up-toggle__steps--second">
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-step-1.webp" />
+                    <img src="sections/set-up-toggle/images/shower-filter-use-step-1-mob.webp" alt="Detatch" />
                 </picture>
                 <h6>Detatch</h6>
                 <p>Unscrew your old shower head by hand, or with a wrench (included) for more grip if needed.</p>
             </li>
             <li>
                 <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-use-step-2.webp" />
-                    <img src="sections/set-up/images/shower-filter-use-step-2-mob.webp" alt="Fit" />
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-step-2.webp" />
+                    <img src="sections/set-up-toggle/images/shower-filter-use-step-2-mob.webp" alt="Fit" />
                 </picture>
                 <h6>Fit</h6>
                 <p>Wrap the plumber tape (included) around the shower pipe.</p>
             </li>
             <li>
                 <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-use-step-3.webp" />
-                    <img src="sections/set-up/images/shower-filter-use-step-3-mob.webp" alt="Secure" />
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-step-3.webp" />
+                    <img src="sections/set-up-toggle/images/shower-filter-use-step-3-mob.webp" alt="Secure" />
                 </picture>
                 <h6>Secure</h6>
                 <p>Twist the Qure Shower Filter onto the pipe and tighten it securely with the wrench.</p>
             </li>
         </ol>
-    {{/set-up}}
+    {{/set-up-toggle }}
 
     {{#> product-settings }}
         <article>
