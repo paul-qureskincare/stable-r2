@@ -1,12 +1,18 @@
 <div class="c-options-selector
     {{#if line }}c-options-selector--line{{/if }}
+    {{#if color }}c-options-selector--color{{/if }}
 ">
     <p class="c-options-selector__title">{{ title }}:</p>
     <ul class="c-options-selector__list">
         {{#parseJson list }}
             <li>
                 <label>
-                    <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    <input
+                        type="radio"
+                        name="{{ option }}"
+                        {{#if value }}value="{{ value }}"{{/if}}
+                        {{#if checked }}checked{{/if}}
+                    />
                     {{#if img2 }}
                         <div class="bundle">
                             <figure>
@@ -19,12 +25,16 @@
                             </figure>
                         </div>
                     {{ else }}
-                        <img src="{{ img }}" alt="{{ name }}" />
+                        {{#if img }}
+                            <img src="{{ img }}" alt="{{ name }}" />
+                        {{/if }}
                     {{/if }}
                     <span>{{ name }}</span>
                 </label>
             </li>
         {{/parseJson}}
     </ul>
-    <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+    {{#unless hide-notify }}
+        <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+    {{/unless }}
 </div>
