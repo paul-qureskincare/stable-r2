@@ -548,18 +548,6 @@
 .c-supply-selector--cards .c-supply-selector__list{
   gap:0;
 }
-.c-supply-selector--cards .c-supply-selector__list:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card],.c-supply-selector--cards .c-supply-selector__list:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]{
-  border-color:#212428;
-}
-.c-supply-selector--cards .c-supply-selector__list:has(#first-supply-card:checked) .supply-cards-labels label[for=first-supply-card]:after,.c-supply-selector--cards .c-supply-selector__list:has(#second-supply-card:checked) .supply-cards-labels label[for=second-supply-card]:after{
-  position:absolute;
-  right:0;
-  bottom:-2px;
-  left:0;
-  height:2px;
-  background:#fff;
-  content:"";
-}
 .treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__details .c-marked-list,.treatment__form:has(.c-selector-switcher li:first-child label input:checked) .supply-card__gift{
   display:none;
 }
@@ -576,6 +564,18 @@
 }
 .c-supply-selector--cards .supply-cards-labels li{
   width:100%;
+}
+.c-supply-selector--cards .supply-cards-labels li.active label{
+  border-color:#212428;
+}
+.c-supply-selector--cards .supply-cards-labels li.active label:after{
+  position:absolute;
+  right:0;
+  bottom:-2px;
+  left:0;
+  height:2px;
+  background:#fff;
+  content:"";
 }
 .c-supply-selector--cards .supply-cards-labels label{
   position:relative;

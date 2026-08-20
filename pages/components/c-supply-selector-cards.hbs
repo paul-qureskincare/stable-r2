@@ -9,7 +9,7 @@
         <li class="c-supply-selector__labels">
             <ul class="supply-cards-labels">
                 {{#parseJson labels }}
-                    <li>
+                    <li {{#if active }}class="active"{{/if }}>
                         <label for="{{ for }}">
                             {{ name }}
                             {{#if best }}<div class="e-pill-badge e-pill-badge--xxs">Best Value</div>{{/if}}
