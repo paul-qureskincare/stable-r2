@@ -32,4 +32,25 @@
         border-radius: 5px;
         background: #f6f6f7;
     }
+
+    &--trustpilot {
+        .e-rating-stars {
+            @include sm {
+                font-size: 14px;
+            }
+
+            &::after {
+                color: #06da8d;
+            }
+        }
+
+        img {
+            width: 104px;
+            height: auto;
+
+            @include sm {
+                width: 72px;
+            }
+        }
+    }
 }

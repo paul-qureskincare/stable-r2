@@ -1,5 +1,15 @@
 <div class="c-moneyback">
-    <img src="sections/helmet-home/images/moneyback_1.webp" alt="Money Back Guarantee" />
-    <strong>Money Back Guarantee</strong>
-    <p>Hair growth isn't instant. That's why we offer a money-back guarantee. If you don't see real results, get a full refund - no questions asked.</p>
+    <img src="
+        {{#if img }}{{ img }}{{ else }}sections/helmet-home/images/moneyback_1.webp{{/if }}
+    " alt="Money Back Guarantee" />
+    <strong>
+        {{#if title }}{{ title }}{{ else }}Money Back Guarantee{{/if }}
+    </strong>
+    <p>
+        {{#if text }}
+            {{{ text }}}
+        {{ else }}
+            Hair growth isn't instant. That's why we offer a money-back guarantee. If you don't see real results, get a full refund - no questions asked.
+        {{/if }}
+    </p>
 </div>

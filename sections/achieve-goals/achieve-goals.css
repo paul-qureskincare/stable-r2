@@ -82,7 +82,7 @@
   -webkit-backdrop-filter:blur(15px);
           backdrop-filter:blur(15px);
 }
-.c-trusted-review-card article,.c-trusted-review-card picture{
+.c-trusted-review-card .e-pill-badge,.c-trusted-review-card article,.c-trusted-review-card picture{
   grid-column:1 /  -1;
 }
 .c-trusted-review-card article{
@@ -94,6 +94,12 @@
 }
 .c-trusted-review-card img{
   width:100%;
+}
+.c-trusted-review-card .e-pill-badge{
+  --badge-base-color:#ff5429;
+  margin-left:24px;
+  font-weight:600;
+  border:1px solid;
 }
 .c-trusted-review-card h6{
   margin-bottom:20px;
@@ -287,6 +293,9 @@
   .c-trusted-review-card article{
     padding:0 16px;
     font-size:16px;
+  }
+  .c-trusted-review-card .e-pill-badge{
+    margin-left:16px;
   }
   .c-trusted-review-card a{
     margin:0 16px;

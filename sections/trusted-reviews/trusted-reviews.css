@@ -1,3 +1,10 @@
+.e-declaimer{
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+}
+
 .e-author{
   display:flex;
   gap:10px;
@@ -82,7 +89,7 @@
   -webkit-backdrop-filter:blur(15px);
           backdrop-filter:blur(15px);
 }
-.c-trusted-review-card article,.c-trusted-review-card picture{
+.c-trusted-review-card .e-pill-badge,.c-trusted-review-card article,.c-trusted-review-card picture{
   grid-column:1 /  -1;
 }
 .c-trusted-review-card article{
@@ -94,6 +101,12 @@
 }
 .c-trusted-review-card img{
   width:100%;
+}
+.c-trusted-review-card .e-pill-badge{
+  --badge-base-color:#ff5429;
+  margin-left:24px;
+  font-weight:600;
+  border:1px solid;
 }
 .c-trusted-review-card h6{
   margin-bottom:20px;
@@ -156,9 +169,6 @@
   margin-bottom:36px;
   text-align:center;
 }
-.trusted-reviews--light .c-trusted-review-card{
-  border:1px solid #dfe0e0;
-}
 .trusted-reviews .c-trusted-review-card{
   max-width:400px;
   height:100%;
@@ -175,6 +185,74 @@
 .trusted-reviews .e-features-list{
   margin-top:12px;
 }
+.trusted-reviews--light .c-trusted-review-card{
+  border:1px solid #dfe0e0;
+}
+.trusted-reviews--trustpilot .container{
+  max-width:none;
+  margin-right:0;
+  padding-right:0;
+}
+.trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
+  padding-right:16px;
+}
+.trusted-reviews--trustpilot .c-trusted-review-card{
+  max-width:none;
+  border:0;
+}
+.trusted-reviews--trustpilot .e-icon-qure{
+  display:block;
+  margin-bottom:12px;
+  font-size:35px;
+  text-align:center;
+}
+.trusted-reviews--trustpilot h2{
+  margin-bottom:12px;
+}
+.trusted-reviews--trustpilot .trustpilot-rating{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+  margin-bottom:12px;
+  padding:8px 12px;
+  font-size:16px;
+  font-weight:600;
+}
+.trusted-reviews--trustpilot .trustpilot-rating a{
+  text-decoration:underline;
+}
+.trusted-reviews--trustpilot .trustpilot-rating .e-rating-stars:after{
+  color:#06da8d;
+}
+.trusted-reviews--trustpilot .trustpilot-rating img{
+  max-width:104px;
+  height:auto;
+  vertical-align:top;
+}
+.trusted-reviews--trustpilot .trustpilot-rating__rating{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.trusted-reviews--trustpilot .e-disclaimer{
+  margin-bottom:32px;
+  display:block;
+  color:#8b8c8e;
+  font-size:16px;
+  line-height:1.25;
+  text-align:center;
+}
+@media screen and (min-width:1200px){
+  .trusted-reviews--trustpilot .container,.trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
+    max-width:calc(100% - (100vw - 1172px) / 2);
+  }
+}
+@media screen and (min-width:1400px){
+  .trusted-reviews--trustpilot .container,.trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
+    max-width:calc(100% - (100vw - 1232px) / 2);
+  }
+}
 @media screen and (max-width:991px){
   .trusted-reviews h2{
     margin-bottom:20px;
@@ -182,8 +260,17 @@
   .trusted-reviews .c-trusted-review-card{
     max-width:50vw;
   }
+  .trusted-reviews--trustpilot .container{
+    padding-right:16px;
+  }
+  .trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
+    padding-right:0;
+  }
 }
 @media screen and (max-width:767px){
+  .e-declaimer{
+    font-size:14px;
+  }
   .c-trusted-review-card{
     gap:16px 6px;
     padding-bottom:16px;
@@ -191,6 +278,9 @@
   .c-trusted-review-card article{
     padding:0 16px;
     font-size:16px;
+  }
+  .c-trusted-review-card .e-pill-badge{
+    margin-left:16px;
   }
   .c-trusted-review-card a{
     margin:0 16px;
@@ -222,5 +312,17 @@
   }
   .trusted-reviews .e-features-list li:first-child{
     display:none;
+  }
+  .trusted-reviews--trustpilot h2{
+    margin-bottom:12px;
+  }
+  .trusted-reviews--trustpilot .e-disclaimer{
+    font-size:14px;
+    margin-bottom:24px;
+  }
+}
+@media (hover:hover){
+  .trusted-reviews--trustpilot .trustpilot-rating a:hover{
+    text-decoration:none;
   }
 }
