@@ -2,9 +2,31 @@
 {{#unless page-css }}
 <link rel="stylesheet" href="sections/trusted-reviews/trusted-reviews.css" />
 {{/unless}}
-<section class="trusted-reviews {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
+<section class="
+        trusted-reviews
+        {{#if trustpilot }}trusted-reviews--trustpilot{{/if }}
+        {{ classes }}
+    "
+    {{#if id }}id="{{ id }}"{{/if}}
+>
     <div class="container">
+        {{#if trustpilot }}{{> e-icon icon="qure"}}{{/if }}
         <h2>{{ title }}</h2>
+        {{#if trustpilot }}
+            <div class="trustpilot-rating">
+                <div class="trustpilot-rating__stars">
+                    <a href="#">Excellent</a>
+                    <div class="e-rating-stars" style="--rating: 4.7;"></div>
+                </div>
+                <div class="trustpilot-rating__rating">
+                    <a href="#">Based on 4.8/5</a> reviews
+                    <img src="assets/images/trustpilot.webp" alt="Trustpilot" />
+                </div>
+            </div>
+            <p class="e-disclaimer">
+                Based on individual user experience. Results may vary.
+            </p>
+        {{/if }}
         <div
             class="c-swiper"
             data-swiper='{
@@ -21,11 +43,11 @@
                 },
                 "breakpoints": {
                     "768": {
-                        "slidesPerView": 2,
-                        "spaceBetween": 24
+                        "slidesPerView": 2
                     },
                     "992": {
-                        "slidesPerView": 3
+                        "spaceBetween": 24,
+                        "slidesPerView": {{#if trustpilot }}3.3{{ else }}3{{/if }}
                     }
                 }
             }'
