@@ -382,6 +382,68 @@
                 <p class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></p>
             </div>
             <div class="treatment__step">
+                {{> c-supply-selector-cards
+                    title="Select Your Supply"
+                    labels='[
+                        {
+                            "for": "first-supply-card",
+                            "name": "30-day supply"
+                        },
+                        {
+                            "for": "second-supply-card",
+                            "name": "90-day supply",
+                            "best": true,
+                            "active": true
+                        }
+                    ]'
+                    cards='[
+                        {
+                            "labels": "
+                                <ul class=\"supply-cards-labels\">
+                                    <li><label for=\"first-supply-card\">30-day supply</label></li>
+                                    <li>
+                                        <label for=\"second-supply-card\">
+                                            90-day supply
+                                            <div class=\"e-pill-badge e-pill-badge--xxs\">Best Value</div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            ",
+                            "id": "first-supply-card",
+                            "desc": "2 treatments every 4 weeks",
+                            "option": "supply",
+                            "gift": "
+                                <img src=\"sections/treatment/images/pillowcase-gift-2.webp\" alt=\"Silk Pillowcase\" />
+                                <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                <div class=\"e-pill-save\">{$dyn} Free</div>
+                            "
+                        },
+                        {
+                            "labels": "
+                                <ul class=\"supply-cards-labels\">
+                                    <li><label for=\"first-supply-card\">30-day supply</label></li>
+                                    <li>
+                                        <label for=\"second-supply-card\">
+                                            90-day supply
+                                            <div class=\"e-pill-badge e-pill-badge--xxs\">Best Value</div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            ",
+                            "id": "second-supply-card",
+                            "desc": "6 treatments every 12 weeks",
+                            "option": "supply",
+                            "gift": "
+                                <img src=\"sections/treatment/images/pillowcase-gift-2.webp\" alt=\"Silk Pillowcase\" />
+                                <p><strong>Free gift!</strong> Sleep-Smooth Silk Pillowcase</p>
+                                <div class=\"e-pill-save\">{$dyn} Free</div>
+                            ",
+                            "checked": true
+                        }
+                    ]'
+                }}
+            </div>
+            <div class="treatment__step">
                 {{> c-payment-selector
                     title="Select A Payment Option"
                     list='[
