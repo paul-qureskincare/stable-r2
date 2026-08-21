@@ -72,7 +72,7 @@
 .accordion-tiles--square article{
   align-items:center;
 }
-.accordion-tiles--square article h2{
+.accordion-tiles--square article:has(a[onclick]) h2{
   grid-column:auto;
   text-align:left;
 }
@@ -130,36 +130,6 @@
   border-radius:50%;
   background:#dfe0e0;
   transform:none;
-}
-.accordion-tiles--full .container{
-  max-width:none;
-  margin-right:0;
-  padding-right:0;
-}
-.accordion-tiles--full article{
-  grid-template-columns:1fr;
-}
-.accordion-tiles--full article h2{
-  padding-right:16px;
-  text-align:center;
-}
-@media screen and (min-width:1200px){
-  .accordion-tiles--full .container,.accordion-tiles--full article h2{
-    max-width:calc(100% - (100vw - 1172px) / 2);
-  }
-}
-@media screen and (min-width:1400px){
-  .accordion-tiles--full .container,.accordion-tiles--full article h2{
-    max-width:calc(100% - (100vw - 1232px) / 2);
-  }
-}
-@media screen and (max-width:991px){
-  .accordion-tiles--full .container{
-    padding-right:16px;
-  }
-  .accordion-tiles--full article h2{
-    padding-right:0;
-  }
 }
 @media screen and (max-width:767px){
   .accordion-tiles article{
