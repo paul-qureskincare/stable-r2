@@ -4,7 +4,6 @@
 {{/unless}}
 <section class="accordion-tiles
     {{#if square }}accordion-tiles--square{{/if }}
-    {{#if full }}accordion-tiles--full{{/if }}
 ">
     <div class="container">
         <article>
@@ -16,7 +15,6 @@
                         "slidesPerView": 1.1,
                         "spaceBetween": 16,
                         "loop": false,
-                        {{#if full }}
                             "pagination": {
                                 "el": ".c-swiper-pagination",
                                 "type": "custom"
@@ -25,13 +23,12 @@
                                 "prevEl": ".c-swiper-button-prev",
                                 "nextEl": ".c-swiper-button-next"
                             },
-                        {{/if }}
                         "breakpoints": {
                             "768": {
                                 "slidesPerView": 2.1
                             },
                             "992": {
-                                "slidesPerView": {{#if full }}3.3{{ else }}3{{/if }},
+                                "slidesPerView": 3,
                                 "spaceBetween": 32
                             }
                         }
@@ -48,13 +45,11 @@
                             </div>
                         {{/parseJson}}
                     </div>
-                    {{#if full }}
-                        <div class="c-swiper-nav">
-                            <button class="c-swiper-button-prev"></button>
-                            <div class="c-swiper-pagination"></div>
-                            <button class="c-swiper-button-next"></button>
-                        </div>
-                    {{/if }}
+                    <div class="c-swiper-nav">
+                        <button class="c-swiper-button-prev"></button>
+                        <div class="c-swiper-pagination"></div>
+                        <button class="c-swiper-button-next"></button>
+                    </div>
                 </div>
             {{ else }}
                 {{#parseJson list }}

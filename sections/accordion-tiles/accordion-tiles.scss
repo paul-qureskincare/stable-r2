@@ -120,9 +120,11 @@
         article {
             align-items: center;
 
-            h2 {
-                grid-column: auto;
-                text-align: left;
+            &:has(a[onclick]) {
+                h2 {
+                    grid-column: auto;
+                    text-align: left;
+                }
             }
 
             a {
@@ -203,47 +205,6 @@
                 border-radius: 50%;
                 background: #dfe0e0;
                 transform: none;
-            }
-        }
-    }
-
-    &--full {
-        .container {
-            max-width: none;
-            margin-right: 0;
-            padding-right: 0;
-
-            @media screen and (min-width: 1200px) {
-                @include max-width(1172px);
-            }
-
-            @media screen and (min-width: 1400px) {
-                @include max-width(1232px);
-            }
-
-            @include md {
-                padding-right: 16px;
-            }
-        }
-
-        article {
-            grid-template-columns: 1fr;
-
-            h2 {
-                padding-right: 16px;
-                text-align: center;
-
-                @media screen and (min-width: 1200px) {
-                    max-width: calc(100% - (100vw - 1172px) / 2);
-                }
-
-                @media screen and (min-width: 1400px) {
-                    max-width: calc(100% - (100vw - 1232px) / 2);
-                }
-
-                @include md {
-                    padding-right: 0;
-                }
             }
         }
     }

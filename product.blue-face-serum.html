@@ -453,6 +453,14 @@
                                 "slidesPerView": 1.1,
                                 "spaceBetween": 16,
                                 "loop": false,
+                                "pagination": {
+                                    "el": ".c-swiper-pagination",
+                                    "type": "custom"
+                                },
+                                "navigation": {
+                                    "prevEl": ".c-swiper-button-prev",
+                                    "nextEl": ".c-swiper-button-next"
+                                },
                                 "breakpoints": {
                                     "768": {
                                         "slidesPerView": 2.1
@@ -485,6 +493,11 @@
                                         <p>Deeply soothing and hydrating, Beta-Glucan helps skin stay comfortable and bounce back faster. It&#x27;s the ingredient that makes repeated LED sessions feel gentle rather than demanding.</p>
                                     </details>
                                 </div>
+                            </div>
+                            <div class="c-swiper-nav">
+                                <button class="c-swiper-button-prev"></button>
+                                <div class="c-swiper-pagination"></div>
+                                <button class="c-swiper-button-next"></button>
                             </div>
                         </div>
                         <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>

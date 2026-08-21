@@ -811,6 +811,14 @@
                                 "slidesPerView": 1.1,
                                 "spaceBetween": 16,
                                 "loop": false,
+                                "pagination": {
+                                    "el": ".c-swiper-pagination",
+                                    "type": "custom"
+                                },
+                                "navigation": {
+                                    "prevEl": ".c-swiper-button-prev",
+                                    "nextEl": ".c-swiper-button-next"
+                                },
                                 "breakpoints": {
                                     "768": {
                                         "slidesPerView": 2.1
@@ -843,6 +851,11 @@
                                         <p>A mild blend of Lactic Acid and Mandelic Acid to help smooth the appearance of rough texture and uneven skin tone, without aggressive resurfacing or downtime.</p>
                                     </details>
                                 </div>
+                            </div>
+                            <div class="c-swiper-nav">
+                                <button class="c-swiper-button-prev"></button>
+                                <div class="c-swiper-pagination"></div>
+                                <button class="c-swiper-button-next"></button>
                             </div>
                         </div>
                         <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>

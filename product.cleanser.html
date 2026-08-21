@@ -622,6 +622,14 @@
                                 "slidesPerView": 1.1,
                                 "spaceBetween": 16,
                                 "loop": false,
+                                "pagination": {
+                                    "el": ".c-swiper-pagination",
+                                    "type": "custom"
+                                },
+                                "navigation": {
+                                    "prevEl": ".c-swiper-button-prev",
+                                    "nextEl": ".c-swiper-button-next"
+                                },
                                 "breakpoints": {
                                     "768": {
                                         "slidesPerView": 2.1
@@ -654,6 +662,11 @@
                                         <p>Natural calming agents with antioxidant benefits. They soothe and protect, making this cleanser gentle enough for daily use on sensitive skin.</p>
                                     </details>
                                 </div>
+                            </div>
+                            <div class="c-swiper-nav">
+                                <button class="c-swiper-button-prev"></button>
+                                <div class="c-swiper-pagination"></div>
+                                <button class="c-swiper-button-next"></button>
                             </div>
                         </div>
                         <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>
