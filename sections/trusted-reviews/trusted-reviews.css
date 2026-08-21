@@ -188,14 +188,6 @@
 .trusted-reviews--light .c-trusted-review-card{
   border:1px solid #dfe0e0;
 }
-.trusted-reviews--trustpilot .container{
-  max-width:none;
-  margin-right:0;
-  padding-right:0;
-}
-.trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
-  padding-right:16px;
-}
 .trusted-reviews--trustpilot .c-trusted-review-card{
   max-width:none;
   border:0;
@@ -232,8 +224,11 @@
 }
 .trusted-reviews--trustpilot .trustpilot-rating__rating{
   display:flex;
-  gap:8px;
+  gap:4px;
   align-items:center;
+}
+.trusted-reviews--trustpilot .trustpilot-rating__rating img{
+  margin-left:4px;
 }
 .trusted-reviews--trustpilot .e-disclaimer{
   margin-bottom:32px;
@@ -243,28 +238,12 @@
   line-height:1.25;
   text-align:center;
 }
-@media screen and (min-width:1200px){
-  .trusted-reviews--trustpilot .container,.trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
-    max-width:calc(100% - (100vw - 1172px) / 2);
-  }
-}
-@media screen and (min-width:1400px){
-  .trusted-reviews--trustpilot .container,.trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
-    max-width:calc(100% - (100vw - 1232px) / 2);
-  }
-}
 @media screen and (max-width:991px){
   .trusted-reviews h2{
     margin-bottom:20px;
   }
   .trusted-reviews .c-trusted-review-card{
     max-width:50vw;
-  }
-  .trusted-reviews--trustpilot .container{
-    padding-right:16px;
-  }
-  .trusted-reviews--trustpilot .e-disclaimer,.trusted-reviews--trustpilot .e-icon-qure,.trusted-reviews--trustpilot .trustpilot-rating,.trusted-reviews--trustpilot h2{
-    padding-right:0;
   }
 }
 @media screen and (max-width:767px){

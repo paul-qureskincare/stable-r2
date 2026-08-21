@@ -76,7 +76,7 @@
 
     // .trusted-reviews--trustpilot
     &--trustpilot {
-        .container {
+        /* .container {
             max-width: none;
             margin-right: 0;
             padding-right: 0;
@@ -111,7 +111,7 @@
             @include md {
                 padding-right: 0;
             }
-        }
+        } */
 
         .c-trusted-review-card {
             max-width: none;
@@ -166,8 +166,12 @@
 
             &__rating {
                 display: flex;
-                gap: 8px;
+                gap: 4px;
                 align-items: center;
+
+                img {
+                    margin-left: 4px;
+                }
             }
         }
 
