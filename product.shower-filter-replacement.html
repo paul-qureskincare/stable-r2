@@ -70,7 +70,7 @@
 
         <!-- SECTIONS STACK -->
         <main class="sections-stack">
-            <!-- BUY SECTION -->
+            <!-- HERO PRODUCT -->
             <section class="hero-product" id="hero-product">
                 <div class="hero-product__container container">
                     <div class="hero-product__gallery">
@@ -181,38 +181,73 @@
                             <div class="e-rating-stars" style="--rating: 4.8"></div>
                             <a href="#"><strong>4.8</strong>/5 Rated by Customers</a>
                         </div>
-                        <p>SHOWER FILTER REFILL CARTRIDGE</p>
-                        <h1>Keep your skin &amp; hair protected with the Shower Filter Refill</h1>
-                        <div class="c-special-offer" data-label="Special Offer">
-                            <div class="e-pill-save">Save 20%</div>
-                        </div>
+                        <p>AVAILABLE FOR SHOWER FILTER &amp; HANDHELD — Select Below</p>
+                        <h1>Keep the Protection Going: Refill Your Shower Filter</h1>
                         <article>
                             <ul>
-                                <li>Replace Shower Filter cartridge every 3 months for consistently hydrated, healthier hair and skin.</li>
-                                <li>Removes up to 99% chlorine, heavy metals &amp; contaminants that harms your skin and hair.</li>
-                                <li>Easy to refill, only 2 minutes, no tools needed.</li>
+                                <li>Removes up to 99% of chlorine, heavy metals &amp; contaminants that dry out skin and damage hair</li>
+                                <li>Ready in under 2 minutes — no tools, no plumber needed</li>
+                                <li>Replace every 3 months to keep your skin and hair consistently protected</li>
                             </ul>
                         </article>
                         <hr />
                         <div class="c-options-selector">
-                            <p class="c-options-selector__title">Select Your Color:</p>
+                            <p class="c-options-selector__title">Select the type:</p>
                             <ul class="c-options-selector__list">
                                 <li>
                                     <label>
-                                        <input type="radio" name="color" checked />
-                                        <img src="assets/images/product-shower-filter/cartiage-1.webp" alt="White" />
-                                        <span>White</span>
+                                        <input type="radio" name="type" />
+                                        <img src="assets/images/product-shower-filter/cartiage-4.webp" alt="Handheld Shower Refill" />
+                                        <span>Handheld Shower Refill</span>
+                                        <div class="c-info">
+                                            <div class="c-info__icon"><i class="e-icon e-icon-i"></i></div>
+                                            <div class="c-info__tooltip">
+                                                <div class="c-info__filter-compatible">
+                                                    <p><span class="e-checkmark"></span> Compatible with</p>
+                                                    <a href="#">
+                                                        <span>Handheld <br />Shower Head</span> <img src="assets/images/product-shower-filter/handheld-shower.webp" alt="Handheld Shower Head" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </label>
                                 </li>
                                 <li>
                                     <label>
-                                        <input type="radio" name="color" />
-                                        <img src="assets/images/product-shower-filter/cartiage-2.webp" alt="Black" />
-                                        <span>Black</span>
+                                        <input type="radio" name="type" checked />
+                                        <img src="assets/images/product-shower-filter/cartiage-3.webp" alt="Shower Refill" />
+                                        <span>Shower Refill</span>
+                                        <div class="c-info">
+                                            <div class="c-info__icon"><i class="e-icon e-icon-i"></i></div>
+                                            <div class="c-info__tooltip">
+                                                <div class="c-info__filter-compatible">
+                                                    <p><span class="e-checkmark"></span> Compatible with</p>
+                                                    <a href="#">
+                                                        <span>Shower <br />Head</span> <img src="assets/images/product-shower-filter/variant-silver-1.webp" alt="Shower Head" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </label>
                                 </li>
                             </ul>
-                            <button class="btn btn--sm btn--secondary" type="button" onclick="notifyAvailable.showModal()">Notify Me When Available</button>
+                        </div>
+                        <div class="c-options-selector c-options-selector--color">
+                            <p class="c-options-selector__title">Select Color:</p>
+                            <ul class="c-options-selector__list">
+                                <li>
+                                    <label>
+                                        <input type="radio" name="color" value="black" />
+                                        <span>Black</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="color" value="white" checked />
+                                        <span>White</span>
+                                    </label>
+                                </li>
+                            </ul>
                         </div>
                         <div class="c-subscribe-selector">
                             <p class="c-subscribe-selector__title">Select Your Delivery:</p>
@@ -220,14 +255,18 @@
                                 <li class="c-subscribe-selector__item">
                                     <label class="c-subscribe-selector__label">
                                         <input type="radio" name="subscribe" checked />
+                                        <div class="c-subscribe-selector__image">
+                                            <img src="assets/images/product-shower-filter/subscribe-selector-cartridge-1.webp" alt="Refill cartridge" />
+                                        </div>
                                         <div class="c-subscribe-selector__name">
                                             Subscribe &amp;
                                             <div class="e-pill-save">Save 20%</div>
                                         </div>
                                         <div class="c-subscribe-selector__price">
-                                            <div class="e-price">
+                                            <div class="e-price e-price--highlight">
                                                 <div class="e-price__main">
                                                     <div class="e-price__current">{$dyn}</div>
+                                                    <div class="e-price__old">{$dyn}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,12 +274,17 @@
                                             <p>Receive a new Filter Refill every 90 days</p>
                                             <small>Skip, pause or cancel anytime. <a href="#">See more details</a></small>
                                         </div>
-                                        <div class="c-subscribe-selector__tag">Best Value <i class="e-icon e-icon-rating-fill"></i></div>
+                                        <div class="c-subscribe-selector__tag">
+                                            <div class="selector-tag-down">Best Value</div>
+                                        </div>
                                     </label>
                                 </li>
                                 <li class="c-subscribe-selector__item">
                                     <label class="c-subscribe-selector__label">
                                         <input type="radio" name="subscribe" />
+                                        <div class="c-subscribe-selector__image">
+                                            <img src="assets/images/product-shower-filter/subscribe-selector-cartridge-1.webp" alt="Refill cartridge" />
+                                        </div>
                                         <div class="c-subscribe-selector__name">One-Time Purchase</div>
                                         <div class="c-subscribe-selector__price">
                                             <div class="e-price">
@@ -387,13 +431,20 @@
                     </div>
                 </div>
             </section>
-            <!-- BUY SECTION END -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("countdown", "assets/js/countdown.js");
+                    loadScriptOnce("gallery-sticky-video", "assets/js/gallery-sticky-video.js");
+                    loadScriptOnce("subscription-option", "sections/hero-product/js/subscription-option.js");
+                });
+            </script>
+            <!-- HERO PRODUCT END -->
 
             <!-- BASE SECTION -->
             <section class="base-section base-section--reverse base-section--grey">
                 <div class="container">
                     <article>
-                        <h2>Do you know what’s in your water?</h2>
+                        <h2>Stop Showering in Chlorine &amp; Heavy Metals, Filter It Out</h2>
 
                         <ul class="features-list">
                             <li>
@@ -430,23 +481,41 @@
             </section>
             <!-- BASE SECTION END -->
 
-            <!-- BASE SECTION -->
-            <section class="base-section base-section--reverse">
+            <!-- ACROSS GALLERY -->
+            <section class="across-gallery">
                 <div class="container">
                     <article>
                         <h2>Maximum filtration, minimal effort</h2>
-                        <picture>
-                            <img src="assets/images/banner-with-text/shower_img.webp" alt="Maximum filtration, minimal effort" />
-                        </picture>
-                        <div>
-                            <p>The Qure Shower Filter is designed to <em>remove up to 99% of chlorine</em> – and other hard water nasties like copper and lead – for healthy skin and hair.</p>
-                            <p>For optimized showering that leaves you feeling (and looking) your best, swap out the filter cartridge every 3 months. This Refill seamlessly fits the Qure Shower Filter system, providing long-lasting filtration benefits.</p>
-                        </div>
-                        <a href="#" class="btn btn--primary">Shop Now</a>
+                        <p>The Qure Shower Filter and Handheld Shower Filter are designed to <em>remove up to 99% of chlorine</em> – and other hard water nasties like copper and lead – for healthy skin and hair.</p>
+                        <p>For optimized showering that leaves you feeling (and looking) your best, swap out the Shower Filter Refill Cartridge every 3 months. This Refill Cartridge seamlessly fits both the Qure Shower Filter and Handheld Shower Filter systems, providing long-lasting filtration benefits.</p>
+                        <a class="btn btn--primary" href="#">Shop Now</a>
                     </article>
+                    <ul class="across-gallery__images">
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-2.webp" alt="Shower Filter Benefits" />
+                        </li>
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-10.webp" alt="Shower Filter Benefits" />
+                        </li>
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-11.webp" alt="Shower Filter Benefits" />
+                        </li>
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-9.webp" alt="Shower Filter Benefits" />
+                        </li>
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-4.webp" alt="Shower Filter Benefits" />
+                        </li>
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-5.webp" alt="Shower Filter Benefits" />
+                        </li>
+                        <li>
+                            <img src="sections/across-gallery/images/shower-filter-benefits-7.webp" alt="Shower Filter Benefits" />
+                        </li>
+                    </ul>
                 </div>
             </section>
-            <!-- BASE SECTION END -->
+            <!-- ACROSS GALLERY END -->
 
             <!-- PROGRESS METRICS -->
             <section class="progress-metrics" id="improve_skin">
@@ -835,10 +904,22 @@
             </script>
             <!-- FEATURES MARQUEE END -->
 
-            <!-- SET UP -->
-            <section class="set-up" id="easy_steps">
+            <!-- SET UP TOGGLE -->
+            <section class="set-up-toggle">
                 <div class="container">
-                    <div class="c-wistia c-wistia--custom">
+                    <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-first" checked />
+                    <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-second" />
+                    <div class="c-wistia c-wistia--custom c-wistia--first">
+                        <wistia-player media-id="bsfna2u1ja" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                            <div class="c-wistia__custom">
+                                <picture>
+                                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-video.webp" />
+                                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
+                                </picture>
+                            </div>
+                        </wistia-player>
+                    </div>
+                    <div class="c-wistia c-wistia--custom c-wistia--second">
                         <wistia-player media-id="bwhqvtar9u" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
                             <div class="c-wistia__custom">
                                 <picture>
@@ -848,8 +929,48 @@
                             </div>
                         </wistia-player>
                     </div>
+                    <ul class="set-up-toggle__switcher">
+                        <li>
+                            <label for="set-up-toggle-first">
+                                Handheld Shower
+                                <img src="sections/set-up-toggle/images/handheld-shower.webp" alt="Handheld Shower" />
+                            </label>
+                        </li>
+                        <li>
+                            <label for="set-up-toggle-second">
+                                Shower
+                                <img src="sections/set-up-toggle/images/shower.webp" alt="Shower" />
+                            </label>
+                        </li>
+                    </ul>
                     <h2>How to replace your filter refill cartridge</h2>
-                    <ol>
+                    <ol class="set-up-toggle__steps set-up-toggle__steps--first">
+                        <li>
+                            <picture>
+                                <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-4.webp" />
+                                <img src="sections/set-up/images/shower-filter-refill-step-4-mob.webp" alt="Remove" />
+                            </picture>
+                            <h6>Remove</h6>
+                            <p>Turn off the water. Open the filter housing and remove the old cartridge.</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-5.webp" />
+                                <img src="sections/set-up/images/shower-filter-refill-step-5-mob.webp" alt="Fit" />
+                            </picture>
+                            <h6>Fit</h6>
+                            <p>Firmly press the new filter into the housing. Screw the cover back clockwise until it's secure.</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-6.webp" />
+                                <img src="sections/set-up/images/shower-filter-refill-step-6-mob.webp" alt="Flush" />
+                            </picture>
+                            <h6>Flush</h6>
+                            <p>Turn on the shower and let the system run for 1–2 minutes to flush out any loose particles.</p>
+                        </li>
+                    </ol>
+                    <ol class="set-up-toggle__steps set-up-toggle__steps--second">
                         <li>
                             <picture>
                                 <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-1.webp" />
@@ -869,15 +990,15 @@
                         <li>
                             <picture>
                                 <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-3.webp" />
-                                <img src="sections/set-up/images/shower-filter-refill-step-3-mob.webp" alt="Secure" />
+                                <img src="sections/set-up/images/shower-filter-refill-step-3-mob.webp" alt="Flush" />
                             </picture>
-                            <h6>Secure</h6>
+                            <h6>Flush</h6>
                             <p>Turn on the shower and let the system run for 1–2 minutes to flush out any loose particles.</p>
                         </li>
                     </ol>
                 </div>
             </section>
-            <!-- SET UP END -->
+            <!-- SET UP TOGGLE END -->
 
             <!-- COMPARISON -->
             <div class="comparison">
@@ -1134,6 +1255,9 @@
         <script src="assets/js/yt-popup.js" defer="defer"></script>
         <script src="assets/js/dialog.js" defer="defer"></script>
         <script src="assets/js/wistia.js" defer="defer"></script>
+        <script src="assets/js/popper.min.js" defer="defer"></script>
+        <script src="assets/js/tippy-bundle.umd.min.js" defer="defer"></script>
+        <script src="assets/js/tippy.js" defer="defer"></script>
         <script src="sections/header/header.js" defer="defer"></script>
         <script src="sections/footer/footer.js" defer="defer"></script>
     </body>

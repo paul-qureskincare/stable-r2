@@ -3,21 +3,70 @@
     body-class="product.shower-filter-replacement"
     page-css=true
 }}
-    <!-- BUY SECTION -->
-    {{!-- <link rel="stylesheet" href="sections/hero-product/hero-product.css" /> --}}
-    <section class="hero-product" id="hero-product">
-        <div class="hero-product__container container">
-            <div class="hero-product__gallery">
+    {{#> hero-product }}
+        <div class="hero-product__gallery">
+            <div
+                class="c-swiper"
+                data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 16,
+                    "navigation": {
+                        "prevEl": "#hero-product .c-swiper-button-prev",
+                        "nextEl": "#hero-product .c-swiper-button-next"
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_filter_4.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-wistia
+                            id="bwhqvtar9u"
+                            custom='
+                                <picture>
+                                    <img src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter Refill" />
+                                </picture>
+                            '
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_replace1.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_filter_3.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_filter_5.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_replace2.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_filter_7.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_filter_8.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_replace3.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_replace4.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/product-shower-filter/shower_replace5.webp" alt="Qure Shower Filter Refill" />
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-thumbs-nav">
+                <button class="c-swiper-button-prev"></button>
                 <div
-                    class="c-swiper"
-                    data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                    class="c-swiper c-swiper-thumbs"
                     data-swiper='{
-                        "slidesPerView": 1,
-                        "spaceBetween": 16,
-                        "navigation": {
-                            "prevEl": "#hero-product .c-swiper-button-prev",
-                            "nextEl": "#hero-product .c-swiper-button-next"
-                        }
+                        "slidesPerView": "auto",
+                        "spaceBetween": 12
                     }'
                 >
                     <div class="swiper-wrapper">
@@ -25,14 +74,7 @@
                             <img src="assets/images/product-shower-filter/shower_filter_4.webp" alt="Qure Shower Filter Refill" />
                         </div>
                         <div class="swiper-slide">
-                            {{> c-wistia
-                                id="bwhqvtar9u"
-                                custom='
-                                    <picture>
-                                        <img src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter Refill" />
-                                    </picture>
-                                '
-                            }}
+                            <img src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter Refill" />
                         </div>
                         <div class="swiper-slide">
                             <img src="assets/images/product-shower-filter/shower_replace1.webp" alt="Qure Shower Filter Refill" />
@@ -63,216 +105,209 @@
                         </div>
                     </div>
                 </div>
-                <div class="c-swiper-thumbs-nav">
-                    <button class="c-swiper-button-prev"></button>
-                    <div
-                        class="c-swiper c-swiper-thumbs"
-                        data-swiper='{
-                            "slidesPerView": "auto",
-                            "spaceBetween": 12
-                        }'
-                    >
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_filter_4.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_filter_2.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_replace1.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_filter_3.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_filter_5.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_replace2.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_filter_7.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_filter_8.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_replace3.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_replace4.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/product-shower-filter/shower_replace5.webp" alt="Qure Shower Filter Refill" />
-                            </div>
-                        </div>
-                    </div>
-                    <button class="c-swiper-button-next"></button>
-                </div>
-            </div>
-            <div class="hero-product__main">
-                {{> c-rating value="4.8" }}
-                <p>SHOWER FILTER REFILL CARTRIDGE</p>
-                <h1>Keep your skin &amp; hair protected with the Shower Filter Refill</h1>
-                {{> c-special-offer hide-price=true }}
-                <article>
-                    <ul>
-                        <li>Replace Shower Filter cartridge every 3 months for consistently hydrated, healthier hair and skin. </li>
-                        <li>Removes up to 99% chlorine, heavy metals &amp; contaminants that harms your skin and hair.</li>
-                        <li>Easy to refill, only 2 minutes, no tools needed.</li>
-                    </ul>
-                </article>
-                <hr />
-                {{> c-options-selector
-                    title="Select Your Color"
-                    list='[
-                        {
-                            "img": "assets/images/product-shower-filter/cartiage-1.webp",
-                            "name": "White",
-                            "option": "color",
-                            "checked": true
-                        },
-                        {
-                            "img": "assets/images/product-shower-filter/cartiage-2.webp",
-                            "name": "Black",
-                            "option": "color"
-                        }
-                    ]'
-                }}
-                {{> c-subscribe-selector
-                    title="Select Your Delivery"
-                    list='[
-                        {
-                            "name": "Subscribe &",
-                            "save": "20%",
-                            "old-price": true,
-                            "tag": "Best Value <i class=\"e-icon e-icon-rating-fill\"></i>",
-                            "option": "subscribe",
-                            "checked": true,
-                            "text": "
-                                <p>Receive a new Filter Refill every 90 days</p>
-                                <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
-                            "
-                        },
-                        {
-                            "name": "One-Time Purchase",
-                            "option": "subscribe",
-                            "text": "
-                                <p> One Time: Faucet + 1 Filter</p>
-                            "
-                        }
-                    ]'
-                }}
-                <div class="c-buy-block">
-                    {{> c-order-button }}
-                    {{> c-certified-box }}
-                    <ul class="e-features-list">
-                        <li>
-                            {{> e-icon icon="guarantee" }}
-                            30-Day Money-Back Guarantee
-                        </li>
-                        <li>
-                            {{> e-icon icon="shipping-order" }}
-                            Free Shipping over {$dyn}
-                        </li>
-                    </ul>
-                </div>
-                {{> c-next-batch }}
-            </div>
-            <div class="hero-product__extra">
-                <div class="hero-product__best-with">
-                    <h6>Get The Best Results With</h6>
-                    <div
-                        class="c-swiper"
-                        data-swiper='{
-                            "slidesPerView": "1.25",
-                            "spaceBetween": 12,
-                            "breakpoints": {
-                                "992": {
-                                    "slidesPerView": 2
-                                }
-                            }
-                        }'
-                    >
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#"><img src="assets/images/product-shower-filter/result-2.webp" alt="Dermal Mist (Duo - 100ml + 15ml)" /></a>
-                                <a href="#">Dermal Mist (Duo - 100ml + 15ml)</a>
-                                <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img src="assets/images/product-shower-filter/faucer_prod.webp" alt="Faucet Filter" /></a>
-                                <a href="#">Faucet Filter</a>
-                                <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{> c-accordion
-                    type="lines"
-                    list='[
-                        {
-                            "summary": "Key Benefits",
-                            "text": "
-                                <p>Healthy skin starts in the shower – we\'re tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that cause dryness, irritation, and brittleness. By filtering your shower water, you create the ideal canvas for your skincare routine, helping both your skin and hair stay hydrated and happy. </p>
-                                <p>Tested to meet NSF water filtration standards, the Qure Shower Filter ensures top safety and quality—so you can enjoy every shower with peace of mind.</p>
-                                <p>Clinically proven to boost skin & scalp moisture after just 8 weeks of daily use.</p>
-                            "
-                        },
-                        {
-                            "summary": "How It Works",
-                            "text": "
-                                <p>Our Triple-Filtration System helps reduce up to 99% of chlorine, heavy metals, and other contaminants in your water.</p>
-                                <p>Here\'s what happens:</p>
-                                <ol>
-                                    <li>Water passes through our triple-filtration system</li>
-                                    <li>Impurities get trapped in the specialized filtration media</li>
-                                    <li>Clean, filtered water flows through your shower head</li>
-                                </ol>
-                                <p>The result? Water that\'s gentler on your skin and hair, without the stuff that can strip away natural moisture.</p>
-                            "
-                        },
-                        {
-                            "summary": "What’s Included In The Box",
-                            "text": "
-                                <p>1 replaceable filter cartridge, which lasts up to 3 months.</p>
-                            "
-                        }
-                    ]'
-                }}
-                {{> c-jump-to
-                    list='[
-                        {
-                            "id": "improve_skin",
-                            "name": "The Results"
-                        },
-                        {
-                            "id": "crystal_clear",
-                            "name": "Reviews"
-                        },
-                        {
-                            "id": "easy_steps",
-                            "name": "How To Use"
-                        },
-                        {
-                            "id": "why_it_works",
-                            "name": "How It Works"
-                        },
-                        {
-                            "id": "faq",
-                            "name": "FAQs"
-                        }
-                    ]'
-                }}
+                <button class="c-swiper-button-next"></button>
             </div>
         </div>
-    </section>
-    <!-- BUY SECTION END -->
+        <div class="hero-product__main">
+            {{> c-rating value="4.8" }}
+            <p>AVAILABLE FOR SHOWER FILTER &amp; HANDHELD — Select Below</p>
+            <h1>Keep the Protection Going: Refill Your Shower Filter</h1>
+            {{!-- {{> c-special-offer hide-price=true }} --}}
+            <article>
+                <ul>
+                    <li>Removes up to 99% of chlorine, heavy metals &amp; contaminants that dry out skin and damage hair</li>
+                    <li>Ready in under 2 minutes — no tools, no plumber needed</li>
+                    <li>Replace every 3 months to keep your skin and hair consistently protected</li>
+                </ul>
+            </article>
+            <hr />
+            {{> c-options-selector
+                title="Select the type"
+                list='[
+                    {
+                        "img": "assets/images/product-shower-filter/cartiage-4.webp",
+                        "name": "Handheld Shower Refill",
+                        "tooltip": "
+                            <div class=\"c-info__filter-compatible\">
+                                <p><span class=\"e-checkmark\"></span> Compatible with</p>
+                                <a href=\"#\">
+                                    <span>Handheld <br />Shower Head</span>
+                                    <img src=\"assets/images/product-shower-filter/handheld-shower.webp\" alt=\"Handheld Shower Head\" />
+                                </a>
+                            </div>
+                        ",
+                        "option": "type"
+                    },
+                    {
+                        "img": "assets/images/product-shower-filter/cartiage-3.webp",
+                        "name": "Shower Refill",
+                        "tooltip": "
+                            <div class=\"c-info__filter-compatible\">
+                                <p><span class=\"e-checkmark\"></span> Compatible with</p>
+                                <a href=\"#\">
+                                    <span>Shower <br />Head</span>
+                                    <img src=\"assets/images/product-shower-filter/variant-silver-1.webp\" alt=\"Shower Head\" />
+                                </a>
+                            </div>
+                        ",
+                        "option": "type",
+                        "checked": true
+                    }
+                ]'
+                hide-notify=true
+            }}
+            {{> c-options-selector
+                color=true
+                title="Select Color"
+                list='[
+                    {
+                        "name": "Black",
+                        "value": "black",
+                        "option": "color"
+                    },
+                    {
+                        "name": "White",
+                        "value": "white",
+                        "option": "color",
+                        "checked": true
+                    }
+                ]'
+                hide-notify=true
+            }}
+            {{> c-subscribe-selector
+                title="Select Your Delivery"
+                list='[
+                    {
+                        "img": "assets/images/product-shower-filter/subscribe-selector-cartridge-1.webp",
+                        "name": "Subscribe &",
+                        "save": "20%",
+                        "price-old": true,
+                        "tag": "Best Value",
+                        "tag-down": true,
+                        "option": "subscribe",
+                        "checked": true,
+                        "text": "
+                            <p>Receive a new Filter Refill every 90 days</p>
+                            <small>Skip, pause or cancel anytime. <a href=\"#\">See more details</a></small>
+                        "
+                    },
+                    {
+                        "img": "assets/images/product-shower-filter/subscribe-selector-cartridge-1.webp",
+                        "name": "One-Time Purchase",
+                        "option": "subscribe",
+                        "text": "
+                            <p> One Time: Faucet + 1 Filter</p>
+                        "
+                    }
+                ]'
+            }}
+            <div class="c-buy-block">
+                {{> c-order-button }}
+                {{> c-certified-box }}
+                <ul class="e-features-list">
+                    <li>
+                        {{> e-icon icon="guarantee" }}
+                        30-Day Money-Back Guarantee
+                    </li>
+                    <li>
+                        {{> e-icon icon="shipping-order" }}
+                        Free Shipping over {$dyn}
+                    </li>
+                </ul>
+            </div>
+            {{> c-next-batch }}
+        </div>
+        <div class="hero-product__extra">
+            <div class="hero-product__best-with">
+                <h6>Get The Best Results With</h6>
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": "1.25",
+                        "spaceBetween": 12,
+                        "breakpoints": {
+                            "992": {
+                                "slidesPerView": 2
+                            }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="assets/images/product-shower-filter/result-2.webp" alt="Dermal Mist (Duo - 100ml + 15ml)" /></a>
+                            <a href="#">Dermal Mist (Duo - 100ml + 15ml)</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="assets/images/product-shower-filter/faucer_prod.webp" alt="Faucet Filter" /></a>
+                            <a href="#">Faucet Filter</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "Key Benefits",
+                        "text": "
+                            <p>Healthy skin starts in the shower – we\'re tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that cause dryness, irritation, and brittleness. By filtering your shower water, you create the ideal canvas for your skincare routine, helping both your skin and hair stay hydrated and happy. </p>
+                            <p>Tested to meet NSF water filtration standards, the Qure Shower Filter ensures top safety and quality—so you can enjoy every shower with peace of mind.</p>
+                            <p>Clinically proven to boost skin & scalp moisture after just 8 weeks of daily use.</p>
+                        "
+                    },
+                    {
+                        "summary": "How It Works",
+                        "text": "
+                            <p>Our Triple-Filtration System helps reduce up to 99% of chlorine, heavy metals, and other contaminants in your water.</p>
+                            <p>Here\'s what happens:</p>
+                            <ol>
+                                <li>Water passes through our triple-filtration system</li>
+                                <li>Impurities get trapped in the specialized filtration media</li>
+                                <li>Clean, filtered water flows through your shower head</li>
+                            </ol>
+                            <p>The result? Water that\'s gentler on your skin and hair, without the stuff that can strip away natural moisture.</p>
+                        "
+                    },
+                    {
+                        "summary": "What’s Included In The Box",
+                        "text": "
+                            <p>1 replaceable filter cartridge, which lasts up to 3 months.</p>
+                        "
+                    }
+                ]'
+            }}
+            {{> c-jump-to
+                list='[
+                    {
+                        "id": "improve_skin",
+                        "name": "The Results"
+                    },
+                    {
+                        "id": "crystal_clear",
+                        "name": "Reviews"
+                    },
+                    {
+                        "id": "easy_steps",
+                        "name": "How To Use"
+                    },
+                    {
+                        "id": "why_it_works",
+                        "name": "How It Works"
+                    },
+                    {
+                        "id": "faq",
+                        "name": "FAQs"
+                    }
+                ]'
+            }}
+        </div>
+    {{/hero-product }}
 
     {{#> base-section
         classes="base-section--reverse base-section--grey"
-        title="Do you know what’s in your water?"
+        title="Stop Showering in Chlorine & Heavy Metals, Filter It Out"
         features-list='
             <ul class="features-list">
                 <li>
@@ -305,15 +340,37 @@
         <p>Research has shown tap water is contaminated with over 320* chemicals that your skin is absorbing daily. These micro-contaminants in water can clog pores, dry out and irritate sensitive skin.</p>
     {{/base-section }}
 
-    {{#> base-section
-        classes="base-section--reverse"
-        title="Maximum filtration, minimal effort"
-        picture="assets/images/banner-with-text/shower_img.webp"
-        button="Shop Now"
-    }}
-        <p>The Qure Shower Filter is designed to <em>remove up to 99% of chlorine</em> – and other hard water nasties like copper and lead – for healthy skin and hair.</p>
-        <p>For optimized showering that leaves you feeling (and looking) your best, swap out the filter cartridge every 3 months. This Refill seamlessly fits the Qure Shower Filter system, providing long-lasting filtration benefits.</p>
-    {{/base-section }}
+    {{#> across-gallery }}
+        <article>
+            <h2>Maximum filtration, minimal effort</h2>
+            <p>The Qure Shower Filter and Handheld Shower Filter are designed to <em>remove up to 99% of chlorine</em> – and other hard water nasties like copper and lead – for healthy skin and hair.</p>
+            <p>For optimized showering that leaves you feeling (and looking) your best, swap out the Shower Filter Refill Cartridge every 3 months. This Refill Cartridge seamlessly fits both the Qure Shower Filter and Handheld Shower Filter systems, providing long-lasting filtration benefits.</p>
+            <a class="btn btn--primary" href="#">Shop Now</a>
+        </article>
+        <ul class="across-gallery__images">
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-2.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-10.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-11.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-9.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-4.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-5.webp" alt="Shower Filter Benefits" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/shower-filter-benefits-7.webp" alt="Shower Filter Benefits" />
+            </li>
+        </ul>
+    {{/across-gallery }}
 
     {{#> progress-metrics id="improve_skin" }}
         <article>
@@ -600,8 +657,21 @@
 
     {{> features-marquee }}
 
-    {{#> set-up id="easy_steps" }}
+    {{#> set-up-toggle }}
+        <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-first" checked />
+        <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-second" />
         {{> c-wistia
+            custom-classes="c-wistia--first"
+            id="bsfna2u1ja"
+            custom='
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-video.webp" />
+                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
+                </picture>
+            '
+        }}
+        {{> c-wistia
+            custom-classes="c-wistia--second"
             id="bwhqvtar9u"
             custom='
                 <picture>
@@ -610,8 +680,48 @@
                 </picture>
             '
         }}
+        <ul class="set-up-toggle__switcher">
+            <li>
+                <label for="set-up-toggle-first">
+                    Handheld Shower
+                    <img src="sections/set-up-toggle/images/handheld-shower.webp" alt="Handheld Shower" />
+                </label>
+            </li>
+            <li>
+                <label for="set-up-toggle-second">
+                    Shower
+                    <img src="sections/set-up-toggle/images/shower.webp" alt="Shower" />
+                </label>
+            </li>
+        </ul>
         <h2>How to replace your filter refill cartridge</h2>
-        <ol>
+        <ol class="set-up-toggle__steps set-up-toggle__steps--first">
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-4.webp" />
+                    <img src="sections/set-up/images/shower-filter-refill-step-4-mob.webp" alt="Remove" />
+                </picture>
+                <h6>Remove</h6>
+                <p>Turn off the water. Open the filter housing and remove the old cartridge.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-5.webp" />
+                    <img src="sections/set-up/images/shower-filter-refill-step-5-mob.webp" alt="Fit" />
+                </picture>
+                <h6>Fit</h6>
+                <p>Firmly press the new filter into the housing. Screw the cover back clockwise until it's secure.</p>
+            </li>
+            <li>
+                <picture>
+                    <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-6.webp" />
+                    <img src="sections/set-up/images/shower-filter-refill-step-6-mob.webp" alt="Flush" />
+                </picture>
+                <h6>Flush</h6>
+                <p>Turn on the shower and let the system run for 1–2 minutes to flush out any loose particles.</p>
+            </li>
+        </ol>
+        <ol class="set-up-toggle__steps set-up-toggle__steps--second">
             <li>
                 <picture>
                     <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-1.webp" />
@@ -631,13 +741,13 @@
             <li>
                 <picture>
                     <source media="(min-width:768px)" srcset="sections/set-up/images/shower-filter-refill-step-3.webp" />
-                    <img src="sections/set-up/images/shower-filter-refill-step-3-mob.webp" alt="Secure" />
+                    <img src="sections/set-up/images/shower-filter-refill-step-3-mob.webp" alt="Flush" />
                 </picture>
-                <h6>Secure</h6>
+                <h6>Flush</h6>
                 <p>Turn on the shower and let the system run for 1–2 minutes to flush out any loose particles.</p>
             </li>
         </ol>
-    {{/set-up}}
+    {{/set-up-toggle }}
 
     {{#> comparison
         title="Why choose Qure?"

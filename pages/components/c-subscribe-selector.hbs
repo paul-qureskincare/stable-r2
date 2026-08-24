@@ -5,6 +5,11 @@
             <li class="c-subscribe-selector__item">
                 <label class="c-subscribe-selector__label">
                     <input type="radio" name="{{ option }}" {{#if checked }}checked{{/if}} />
+                    {{#if img }}
+                        <div class="c-subscribe-selector__image">
+                            <img src="{{ img }}" alt="Refill cartridge" />
+                        </div>
+                    {{/if}}
                     <div class="c-subscribe-selector__name">
                         {{ name }} {{#if save }}<div class="e-pill-save">Save {{ save }}</div>{{/if}}
                     </div>
@@ -20,7 +25,15 @@
                     <div class="c-subscribe-selector__text">
                         {{{ text }}}
                     </div>
-                    {{#if tag }}<div class="c-subscribe-selector__tag">{{{ tag }}}</div>{{/if}}
+                    {{#if tag }}
+                        <div class="c-subscribe-selector__tag">
+                            {{#if tag-down }}
+                                <div class="selector-tag-down">{{{ tag }}}</div>
+                            {{ else }}
+                                {{{ tag }}}
+                            {{/if}}
+                        </div>
+                    {{/if}}
                 </label>
             </li>
         {{/parseJson}}

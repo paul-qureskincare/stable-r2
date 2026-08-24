@@ -1,0 +1,91 @@
+@use "@root/mixins" as *;
+
+.c-info {
+    $root: &;
+
+    display: inline-block;
+
+    .tippy-box {
+        border-radius: 8px;
+        box-shadow: 0 1px 16px -2px rgb(27 33 44 / 24%);
+        background: #fff;
+
+        &[data-placement^="top"] {
+            & >.tippy-arrow {
+                &::before {
+                    border-width: 8px 16px 0
+                }
+            }
+        }
+
+        .tippy-arrow {
+            width: 32px;
+            height: 8px;
+            color: #fff;
+        }
+    }
+
+    .tippy-content {
+        padding: 12px;
+    }
+
+    // .c-info__icon
+    &__icon {
+        width: 16px;
+        height: 16px;
+        font-size: 8px;
+        line-height: 16px;
+        text-align: center;
+        border-radius: 16px;
+        background: #c7e5db;
+
+        @include sm {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+        }
+    }
+
+    // .c-info__tooltip
+    &__tooltip {
+        display: none;
+    }
+
+    // .c-info__filter-compatible
+    &__filter-compatible {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 175px;
+        color: #212428;
+
+        p {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            color: #8b8c8e;
+            font-size: 12px;
+
+            @include sm {
+                font-size: 16px;
+            }
+        }
+
+        a {
+            display: grid;
+            grid-template-columns: 1fr 38px;
+            gap: 16px;
+            align-items: center;
+            text-decoration: underline;
+
+            @include hover {
+                text-decoration: none;
+            }
+
+            @include sm {
+                grid-template-columns: 1fr 60px;
+                font-size: 18px;
+            }
+        }
+    }
+}
