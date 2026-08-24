@@ -15,7 +15,7 @@
   margin-left:auto;
   text-align:center;
 }
-.across-gallery article h2{
+.across-gallery article h2,.across-gallery article p{
   margin-bottom:0;
 }
 .across-gallery article p em{

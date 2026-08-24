@@ -30,6 +30,11 @@
                         {{/if }}
                     {{/if }}
                     <span>{{ name }}</span>
+                    {{#if tooltip }}
+                        {{> c-info
+                            content=tooltip
+                        }}
+                    {{/if }}
                 </label>
             </li>
         {{/parseJson}}

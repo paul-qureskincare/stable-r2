@@ -877,6 +877,7 @@
   gap:14px;
   align-items:center;
   justify-content:center;
+  height:100%;
   min-height:132px;
   padding:14px;
   border-radius:10px;
@@ -886,6 +887,9 @@
 .c-options-selector ul label:has(input:checked),.c-options-selector__list label:has(input:checked){
   box-shadow:inset 0 0 0 1px currentcolor,0 0 0 1px currentcolor;
   background:#f6f6f7;
+}
+.c-options-selector ul label>span,.c-options-selector__list label>span{
+  text-align:center;
 }
 .c-options-selector ul input,.c-options-selector__list input{
   position:absolute;
@@ -918,6 +922,11 @@
   text-transform:uppercase;
   border-radius:5px;
 }
+.c-options-selector ul .c-info,.c-options-selector__list .c-info{
+  position:absolute;
+  top:8px;
+  right:8px;
+}
 .c-options-selector--line .c-options-selector__list label{
   flex-direction:row;
   gap:8px;
@@ -937,7 +946,6 @@
   z-index:1;
   flex-direction:row;
   gap:8px;
-  justify-content:start;
   min-height:0;
   padding:10px 20px;
 }
@@ -1478,6 +1486,9 @@
   gap:12px;
   max-width:500px;
 }
+.c-subscribe-selector:has(.selector-tag-down) .c-subscribe-selector__title{
+  margin-bottom:0;
+}
 .c-subscribe-selector__title{
   margin-bottom:16px;
 }
@@ -1495,7 +1506,7 @@
   grid-template-columns:repeat(2, auto);
   gap:4px 10px;
   width:100%;
-  padding:12px 14px;
+  padding:16px;
   border-radius:10px;
   box-shadow:inset 0 0 0 1px #dfe0e0;
   cursor:pointer;
@@ -1506,20 +1517,38 @@
   visibility:hidden;
   opacity:0;
 }
+.c-subscribe-selector__label:has(img){
+  grid-template:repeat(2, auto)/50px repeat(2, auto);
+}
+.c-subscribe-selector__label:has(img) .c-subscribe-selector__text{
+  grid-column:2;
+}
 .c-subscribe-selector__label:has(input:checked){
   box-shadow:inset 0 0 0 1px currentcolor,0 0 0 1px currentcolor;
   background:#f6f6f7;
+}
+.c-subscribe-selector__label:has(input:not(:checked)){
+  grid-template:auto/repeat(2, auto);
 }
 .c-subscribe-selector__label:has(input:not(:checked)) .e-pill-save{
   color:inherit;
   font-weight:500;
   background:#f6f6f7;
 }
-.c-subscribe-selector__label:has(input:not(:checked)) .c-subscribe-selector__tag,.c-subscribe-selector__label:has(input:not(:checked)) .c-subscribe-selector__text,.c-subscribe-selector__label:has(input:not(:checked)) .e-price__old{
+.c-subscribe-selector__label:has(input:not(:checked)) .c-subscribe-selector__image,.c-subscribe-selector__label:has(input:not(:checked)) .c-subscribe-selector__tag,.c-subscribe-selector__label:has(input:not(:checked)) .c-subscribe-selector__text,.c-subscribe-selector__label:has(input:not(:checked)) .e-price__old{
   display:none;
 }
 .c-subscribe-selector__label:has(input:not(:checked)) .e-price--highlight .e-price__current{
   color:inherit;
+}
+.c-subscribe-selector__image{
+  grid-row:1 /  -1;
+  align-self:center;
+}
+.c-subscribe-selector__image img{
+  display:block;
+  max-width:100%;
+  height:auto;
 }
 .c-subscribe-selector__name{
   display:flex;
@@ -1603,6 +1632,36 @@
 .c-subscribe-selector__tag .e-icon{
   font-size:10px;
   vertical-align:top;
+}
+.c-subscribe-selector__tag:has(.selector-tag-down){
+  display:block;
+  padding:0;
+  color:#fff;
+  background:none;
+}
+.c-subscribe-selector__tag .selector-tag-down{
+  margin-bottom:-14px;
+  padding:1px 14px;
+  border-radius:0 0 5px 5px;
+  background:#ff5429;
+}
+.c-subscribe-selector__tag .selector-tag-down:after,.c-subscribe-selector__tag .selector-tag-down:before{
+  position:absolute;
+  top:0;
+  width:0;
+  height:0;
+  border-style:solid;
+  content:"";
+}
+.c-subscribe-selector__tag .selector-tag-down:before{
+  left:-6px;
+  border-width:0 0 6px 6px;
+  border-color:transparent transparent #ce3812;
+}
+.c-subscribe-selector__tag .selector-tag-down:after{
+  right:-6px;
+  border-width:6px 0 0 6px;
+  border-color:transparent transparent transparent #ce3812;
 }
 
 .c-payment-selector{
@@ -3251,6 +3310,16 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-options-selector ul .bundle .e-pill-badge,.c-options-selector__list .bundle .e-pill-badge{
     font-size:12px;
   }
+  .c-options-selector ul .c-info,.c-options-selector__list .c-info{
+    top:0;
+    right:0;
+  }
+  .c-options-selector ul .c-info .c-info__icon,.c-options-selector__list .c-info .c-info__icon{
+    box-sizing:content-box;
+    border:8px solid transparent;
+    border-radius:100px;
+    background-clip:padding-box;
+  }
   .c-options-selector--color .c-options-selector__list,.c-options-selector--line .c-options-selector__list{
     gap:4px;
   }
@@ -3285,6 +3354,15 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .c-subscribe-selector{
     max-width:none;
+  }
+  .c-subscribe-selector__label:has(img) .c-subscribe-selector__text{
+    grid-column:1 /  -1;
+  }
+  .c-subscribe-selector__label:has(input:checked){
+    grid-template:auto/repeat(2, auto);
+  }
+  .c-subscribe-selector__image{
+    display:none;
   }
   .c-payment-selector__text{
     gap:2px;
