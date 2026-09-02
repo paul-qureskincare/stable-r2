@@ -302,6 +302,7 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
 .across-image-banner article h1,.across-image-banner article h2{
   margin-bottom:0;
   color:inherit;
+  line-height:1.15;
 }
 .across-image-banner article .btn{
   margin-top:5px;
