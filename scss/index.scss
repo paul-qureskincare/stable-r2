@@ -557,4 +557,101 @@
             }
         }
     }
+
+    // .across-image-banner--blue-plus
+    &--blue-plus {
+        background: #fff;
+
+        .container {
+            @include banner-height(500, 1440);
+
+            @include sm {
+                height: auto;
+            }
+        }
+
+        picture {
+            @include sm {
+                position: static;
+            }
+        }
+
+        img {
+            @include sm {
+                object-position: top center;
+            }
+        }
+
+        article {
+            display: flex;
+            gap: 20px;
+            width: min(360px, 50%);
+            margin-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            @include md {
+                gap: 10px;
+            }
+
+            @include sm {
+                position: relative;
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                text-align: left;
+            }
+
+            .btn {
+                margin-top: 0;
+            }
+
+            small {
+                color: #8b8c8e;
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+
+        .free-gift {
+            position: absolute;
+            bottom: 36px;
+            left: 56%;
+            width: 119px;
+            border: 4px solid #f6f6f7;
+            border-radius: 50%;
+            background: #f6f6f7;
+
+            @include md {
+                bottom: 16px;
+                width: 89px;
+                border-width: 2px;
+            }
+
+            @include sm {
+                right: 10px;
+                bottom: 100%;
+                left: auto;
+                margin-bottom: -24px;
+            }
+
+            img {
+                @include img-fluid;
+                border-radius: 50%;
+            }
+
+            .e-pill-save {
+                position: absolute;
+                bottom: 4px;
+                left: 50%;
+                font-size: 16px;
+                white-space: nowrap;
+                transform: translateX(-50%);
+
+                @include md {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
