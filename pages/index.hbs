@@ -401,7 +401,27 @@
         </div>
     {{/trusted-reviews }}
 
-    {{> daily-cleanser }}
+    {{!-- {{> daily-cleanser }} --}}
+
+    {{#> promo-strip classes="promo-strip--blue-plus" }}
+        <picture>
+            <source media="(min-width:768px)" srcset="sections/promo-strip/images/blue-plus.webp" />
+            <img src="assets/images/cleanser/daily-cleanser-bg-mob.webp" alt="Daily Cleanser" />
+        </picture>
+        <div class="container">
+            <article>
+                <h3>Save $100 on LED mask &amp; Get&nbsp;Free Blue+ Serum</h3>
+                <p>Visibly firmer, more radiant skin as the seasons change</p>
+                <a class="btn btn--primary" href="#">Buy Now</a>
+            </article>
+        </div>
+        <div class="free-gift">
+            <div class="e-pill-badge e-pill-badge--fill">Free Gift</div>
+            <div class="e-pill-badge e-pill-badge--ghost">{$DYN} Value</div>
+            <img src="sections/promo-strip/images/blue-plus-free-gift.webp" alt="Free Gift" />
+        </div>
+    {{/promo-strip }}
+
 
     {{#> top-rated
         title="Top Rated Products"
