@@ -614,6 +614,17 @@
                     }
                 }
 
+                div {
+                    small {
+                        color: #8b8c8e;
+                        vertical-align: bottom;
+
+                        @include sm {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
                 p {
                     strong {
                         color: #ff5429;
