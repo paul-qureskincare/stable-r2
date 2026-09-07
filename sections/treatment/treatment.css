@@ -637,6 +637,10 @@
   font-weight:600;
   line-height:1;
 }
+.c-supply-selector--cards .supply-card__details div small{
+  color:#8b8c8e;
+  vertical-align:bottom;
+}
 .c-supply-selector--cards .supply-card__details p strong{
   color:#ff5429;
 }
@@ -2099,6 +2103,9 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   .c-supply-selector--tiles .c-supply-selector__main{
     padding-right:2px;
     padding-left:2px;
+  }
+  .c-supply-selector--cards .supply-card__details div small{
+    font-size:18px;
   }
   .c-subscribe-selector{
     max-width:none;
