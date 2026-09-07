@@ -64,8 +64,6 @@
 }
 .announcement-bar-offer-countdown{
   width:100%;
-  padding-top:2px;
-  padding-bottom:2px;
 }
 .announcement-bar-offer-countdown .container{
   display:flex;
@@ -120,6 +118,7 @@ body:has(.announcement-bar){
   }
   .announcement-bar-offer-countdown .container{
     flex-direction:column;
+    gap:2px;
     justify-content:center;
     min-height:54px;
   }
@@ -150,8 +149,5 @@ body:has(.announcement-bar){
   }
   .announcement-bar-offer-countdown .e-countdown>div[data-key=seconds]:after{
     content:"S";
-  }
-  body:has(.announcement-bar){
-    --height-bar:66px;
   }
 }

@@ -71,8 +71,8 @@
     // .announcement-bar-offer-countdown
     &-offer-countdown {
         width: 100%;
-        padding-top: 2px;
-        padding-bottom: 2px;
+        // padding-top: 2px;
+        // padding-bottom: 2px;
 
         @include md {
             font-size: 14px;
@@ -85,6 +85,7 @@
 
             @include sm {
                 flex-direction: column;
+                gap: 2px;
                 justify-content: center;
                 min-height: 54px;
             }
@@ -175,9 +176,9 @@
     @at-root body:has(.announcement-bar) {
         --height-bar: 50px;
 
-        @include sm {
+        /* @include sm {
             --height-bar: 66px;
-        }
+        } */
     }
 }
 
