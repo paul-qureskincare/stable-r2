@@ -1933,25 +1933,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
   color:#7b7b7b;
   font-size:14px;
 }
-.treatment--secondary .treatment__buy .buyer-opportunity{
-  display:flex;
-  gap:6px;
-}
-.treatment--secondary .treatment__buy .buyer-opportunity li{
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-  align-items:center;
-  width:100%;
-  padding:8px 16px 12px;
-  font-size:15px;
-  text-align:center;
-  border-radius:12px;
-  background:#f7f7f7;
-}
-.treatment--secondary .treatment__buy .buyer-opportunity .e-icon{
-  font-size:38px;
-}
 @media screen and (min-width:768px){
   .treatment__form{
     grid-row:1 /  -1;
@@ -2045,11 +2026,6 @@ body[class*="page.micro-infusion-faq-page"] .treatment--announcement:before{
     width:24px;
     height:24px;
     font-size:16px;
-  }
-  .treatment--secondary .treatment__buy .buyer-opportunity li{
-    padding-right:12px;
-    padding-left:12px;
-    font-size:12px;
   }
 }
 @media screen and (max-width:767px){
