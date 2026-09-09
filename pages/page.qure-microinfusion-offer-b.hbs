@@ -726,20 +726,22 @@
                 </ul>
                 <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
             </div>
-            <ul class="buyer-opportunity">
-                <li>
-                    {{> e-icon icon="circle-check" }}
-                    90-day money-back buarantee
-                </li>
-                <li>
-                    {{> e-icon icon="circle-security" }}
-                    Clinically &amp; third party tested
-                </li>
-                <li>
-                    {{> e-icon icon="circle-delivery" }}
-                    Free shipping over&nbsp;$100
-                </li>
-            </ul>
+            {{> e-small-tiles-group
+                list='[
+                    {
+                        "icon": "circle-check",
+                        "name": "90-day money-back guarantee"
+                    },
+                    {
+                        "icon": "circle-security",
+                        "name": "Clinically & third party tested"
+                    },
+                    {
+                        "icon": "circle-delivery",
+                        "name": "Free shipping over $100"
+                    }
+                ]'
+            }}
         </div>
     {{/treatment}}
 
