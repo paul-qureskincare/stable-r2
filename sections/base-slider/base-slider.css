@@ -790,9 +790,6 @@
   }
 }
 @media (hover:hover){
-  .c-advisory-collapse-card picture{
-    opacity:.55;
-  }
   .c-product-tile__image:hover:after{
     visibility:visible;
     transform:scale(1.02);

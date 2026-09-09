@@ -486,7 +486,7 @@
         #{$root}__list {
             gap: 0;
 
-            @at-root .treatment__form {
+            @at-root .treatment__form, .hero-product__main {
                 &:has(.c-selector-switcher li:first-child label input:checked) {
                     .supply-card__details .c-marked-list,
                     .supply-card__gift {
