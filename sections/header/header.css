@@ -70,6 +70,9 @@ body:has(#announcement-bar) .header{
   height:35px;
   vertical-align:top;
 }
+.header__logo path{
+  fill:#fff;
+}
 .header__menu{
   display:flex;
   flex:1 1 0;
