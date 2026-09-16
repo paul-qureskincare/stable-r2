@@ -403,7 +403,7 @@
 
     {{!-- {{> daily-cleanser }} --}}
 
-    {{#> promo-strip classes="promo-strip--blue-plus" }}
+    {{!-- {{#> promo-strip classes="promo-strip--blue-plus" }}
         <picture>
             <source media="(min-width:768px)" srcset="sections/promo-strip/images/blue-plus.webp" />
             <img src="assets/images/cleanser/daily-cleanser-bg-mob.webp" alt="Daily Cleanser" />
@@ -420,8 +420,42 @@
             <div class="e-pill-badge e-pill-badge--ghost">{$DYN} Value</div>
             <img src="sections/promo-strip/images/blue-plus-free-gift.webp" alt="Free Gift" />
         </div>
+    {{/promo-strip }} --}}
+
+    {{#> promo-strip classes="promo-strip--against-cancer" }}
+        <picture>
+            <source media="(min-width:768px)" srcset="sections/promo-strip/images/against-cancer.webp" />
+            <img src="sections/promo-strip/images/against-cancer-mob.webp" alt="Join Us in the Fight Against Breast Cancer" />
+        </picture>
+        <div class="container">
+            <article>
+                <h6>{{> e-icon icon="ribbon" }} STRONGER <strong>TOGETHER</strong></h6>
+                <h3>Join Us in the Fight Against Breast Cancer</h3>
+                <p>$3 from every purchase goes to <em>National Breast Cancer Foundation.</em></p>
+                <a class="btn btn--primary" href="#">Support Now</a>
+            </article>
+        </div>
+        <div class="free-gift">
+            <div class="e-pill-badge e-pill-badge--fill">FREE TOTE BAG</div>
+            <img src="sections/promo-strip/images/against-cancer-gift.webp" alt="Free tote bag" />
+            <p>$3 from every purchase goes to <em>National Breast Cancer Foundation.</em></p>
+        </div>
     {{/promo-strip }}
 
+    {{#> promo-strip classes="promo-strip--against-cancer" }}
+        <picture>
+            <source media="(min-width: 992px)" srcset="sections/promo-strip/images/against-cancer.webp" />
+            <img src="sections/promo-strip/images/against-cancer-mob.webp" alt="Join Us in the Fight Against Breast Cancer" />
+        </picture>
+        <div class="container">
+            <article>
+                <h6>{{> e-icon icon="ribbon" }} STRONGER <strong>TOGETHER</strong></h6>
+                <h3>Join Us in the Fight Against Breast Cancer</h3>
+                <p>$3 from every purchase goes to <em>National Breast Cancer Foundation.</em></p>
+                <a class="btn btn--primary" href="#">Support Now</a>
+            </article>
+        </div>
+    {{/promo-strip }}
 
     {{#> top-rated
         title="Top Rated Products"
