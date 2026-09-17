@@ -2717,6 +2717,15 @@
 .c-optional-subscription__option:has(input:checked) .custom-checkbox .e-icon{
   opacity:1;
 }
+.c-optional-subscription__option:has(input:disabled){
+  grid-template-columns:auto 1fr auto;
+}
+.c-optional-subscription__option:has(input:disabled) .custom-checkbox{
+  display:none;
+}
+.c-optional-subscription__option:has(input:disabled) small{
+  grid-column:2 /  -1;
+}
 .c-optional-subscription__option .custom-checkbox{
   display:flex;
   flex:0 0 auto;
