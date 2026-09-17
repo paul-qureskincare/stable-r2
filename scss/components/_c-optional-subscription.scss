@@ -107,6 +107,18 @@
             }
         }
 
+        &:has(input:disabled) {
+            grid-template-columns: auto 1fr auto;
+
+            .custom-checkbox {
+                display: none;
+            }
+
+            small {
+                grid-column: 2 / -1;
+            }
+        }
+
         .custom-checkbox {
             display: flex;
             flex: 0 0 auto;
