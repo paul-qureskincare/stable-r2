@@ -1,0 +1,74 @@
+@use "@root/mixins" as *;
+
+.e-ingredient-info {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 24px 12px;
+    border-radius: 5px;
+    background: #f6f6f7;
+
+    h6 {
+        margin-right: -70px;
+        margin-bottom: 0;
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #212428;
+        font-size: 14px;
+    }
+
+    // .e-ingredient-info__row
+    &__row {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    // .e-ingredient-info__text
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .e-ingredient-info__counter
+    &__counter {
+        flex: 0 0 auto;
+        min-width: 60px;
+        color: var(--accent-color, #91baec);
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1;
+        text-align: right;
+    }
+
+    // .e-ingredient-info__track
+    &__track {
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: #e3e5e7;
+    }
+
+    // .e-ingredient-info__fill
+    &__fill {
+        width: 0;
+        height: 100%;
+        border-radius: 1.5px;
+        background: var(--accent-color, #91baec);
+        transition: width 1.5s ease;
+    }
+
+    // hook for the scroll-into-view reveal: JS toggles this on the block to fill the bar and count up the text
+    &--in-view {
+        #{$root}__fill {
+            width: calc(var(--percent) * 1%);
+        }
+    }
+}

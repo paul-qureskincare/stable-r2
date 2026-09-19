@@ -1,0 +1,319 @@
+.e-component-pointer{
+  --top:0;
+  --left:0;
+  --line-size:0;
+  position:absolute;
+  top:var(--top);
+  left:var(--left);
+  display:flex;
+  align-items:center;
+  opacity:.5;
+}
+.e-component-pointer:has(.active){
+  opacity:1;
+}
+.e-component-pointer:has(.active):before{
+  border-color:#91baec;
+}
+.e-component-pointer:before{
+  flex:none;
+  width:24px;
+  height:24px;
+  border:7px solid rgba(121,125,124,.4);
+  border-radius:50%;
+  background:#212428;
+  background-clip:content-box;
+  content:"";
+}
+.e-component-pointer hr{
+  flex-grow:1;
+  width:var(--line-size);
+  margin:0 10px 0 0;
+  opacity:1;
+  border-top-color:#91baec;
+}
+.e-component-pointer a{
+  color:inherit;
+  line-height:1;
+}
+.e-component-pointer--vertical{
+  flex-direction:column;
+}
+.e-component-pointer--vertical hr{
+  margin-bottom:5px;
+}
+.e-component-pointer--reverse{
+  flex-direction:row-reverse;
+}
+.e-component-pointer--reverse hr{
+  margin-right:0;
+  margin-left:10px;
+}
+.e-component-pointer--vertical-reverse{
+  flex-direction:column-reverse;
+}
+.e-component-pointer--vertical-reverse hr{
+  margin-top:5px;
+}
+.e-component-pointer--vertical hr,.e-component-pointer--vertical-reverse hr{
+  width:auto;
+  height:var(--line-size);
+  margin-right:0;
+  border-top:0;
+  border-left:1px solid #91baec;
+}
+
+.c-product-components{
+  position:relative;
+}
+.c-product-components img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
+  --top:20%;
+  --left:13%;
+  --line-size:310px;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#pp-filter"]){
+  --top:3%;
+  --left:-1%;
+  --line-size:30px;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]){
+  --top:45%;
+  --left:48%;
+  --line-size:110px;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#asp-descaler"]){
+  --top:75%;
+  --left:2.5%;
+  --line-size:30px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
+  --top:25%;
+  --left:50%;
+  --line-size:100px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
+  --top:50%;
+  --left:3%;
+  --line-size:60px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
+  --top:65%;
+  --left:50%;
+  --line-size:100px;
+}
+
+.features-overview .container{
+  display:grid;
+  grid-template:repeat(3, auto)/repeat(2, 1fr);
+  gap:20px 60px;
+}
+.features-overview h2{
+  grid-column:1 /  -1;
+}
+.features-overview .c-benefit-grid .e-icon-fine-lines,.features-overview .c-benefit-grid .e-icon-verified-shield{
+  -webkit-text-stroke:.5px;
+}
+.features-overview .c-product-components{
+  align-self:center;
+}
+.features-overview .c-product-components--blue-serum img{
+  animation:scale-pulse 10s infinite;
+}
+@keyframes scale-pulse{
+  0%{
+    transform:scale(1);
+  }
+  10%{
+    transform:scale(.8);
+  }
+  20%{
+    transform:scale(.8);
+  }
+  30%{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(1);
+  }
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer{
+  align-items:start;
+  animation:opacity-pulse 10s infinite;
+}
+@keyframes opacity-pulse{
+  0%{
+    opacity:1;
+  }
+  10%{
+    opacity:0;
+  }
+  20%{
+    opacity:0;
+  }
+  30%{
+    opacity:1;
+  }
+  to{
+    opacity:1;
+  }
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer:before{
+  border-color:rgba(145,186,236,.2);
+  background:rgba(145,186,236,.5);
+  background-clip:content-box;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer hr{
+  position:relative;
+  display:block;
+  overflow:visible;
+  height:1px;
+  margin-top:12px;
+  border:0;
+  background:rgba(145,186,236,.5);
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer div{
+  display:flex;
+  flex-direction:column;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer strong{
+  white-space:nowrap;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer small{
+  color:#91baec;
+  font-size:16px;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(2){
+  --top:20%;
+  --left:0;
+  --line-size:100px;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(2) small{
+  max-width:12cqw;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(3){
+  --top:35%;
+  --left:70%;
+  --line-size:20px;
+}
+.features-overview .c-product-components--blue-serum .e-component-pointer:last-child{
+  --top:65%;
+  --left:55%;
+  --line-size:50px;
+}
+@media screen and (min-width:768px){
+  .features-overview .c-benefit-grid{
+    grid-column:1;
+  }
+  .features-overview .c-product-components{
+    grid-row:2 /  -1;
+    grid-column:2;
+  }
+}
+@media screen and (max-width:1120px){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
+    --line-size:290px;
+  }
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]){
+    --line-size:100px;
+  }
+}
+@media screen and (max-width:991px){
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
+    --line-size:55vw;
+  }
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]){
+    --line-size:22vw;
+  }
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#asp-descaler"]){
+    --left:1%;
+    --line-size:20px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]){
+    --line-size:20vw;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
+    --line-size:30vw;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
+    --line-size:20vw;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer{
+    flex-direction:column;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer:before{
+    display:none;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer hr{
+    align-self:center;
+    margin:0 0 6px;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer hr:before{
+    position:absolute;
+    top:50%;
+    left:0;
+    width:10px;
+    height:10px;
+    margin-top:-5px;
+    border:1px solid #c7e5db;
+    border-radius:50%;
+    background:#91baec;
+    content:" ";
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer div{
+    width:100%;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(2){
+    --top:2%;
+    --line-size:100%;
+    width:60%;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(2) small{
+    max-width:180px;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(3){
+    --left:64%;
+    --line-size:100%;
+    width:35%;
+    text-align:right;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer:nth-child(3) small{
+    max-width:140px;
+    margin-left:auto;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer:last-child{
+    --left:54%;
+    --line-size:100%;
+    width:42%;
+    text-align:right;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer--reverse{
+    flex-direction:column-reverse;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer--reverse hr{
+    margin-top:6px;
+  }
+  .features-overview .c-product-components--blue-serum .e-component-pointer--reverse hr:before{
+    right:0;
+    left:auto;
+  }
+}
+@media screen and (max-width:767px){
+  .e-component-pointer a{
+    font-size:14px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
+    --line-size:15vw;
+  }
+  .features-overview .container{
+    grid-template-columns:auto;
+    gap:0;
+  }
+  .features-overview .c-product-components{
+    margin-top:24px;
+  }
+}

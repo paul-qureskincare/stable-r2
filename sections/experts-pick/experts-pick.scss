@@ -1,0 +1,67 @@
+@use "@root/mixins" as *;
+@use "@elements/e-ingredient-info" as *;
+
+.experts-pick {
+    $root: &;
+
+    .container {
+        display: grid;
+        grid-template: repeat(2, auto) / 1fr 340px;
+        gap: 20px 60px;
+        min-height: 0;
+
+        @include md {
+            column-gap: 40px;
+        }
+
+        @include sm {
+            grid-template: auto / auto;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        h2 {
+        }
+
+        p {
+            max-width: 650px;
+        }
+
+        em {
+            font-style: normal;
+            background: #c7e5db;
+        }
+    }
+
+    picture {
+        grid-row: 1 / -1;
+        grid-column: 2;
+        align-self: center;
+
+        @include sm {
+            grid-row: auto;
+            grid-column: auto;
+        }
+
+        img {
+            @include img-fluid;
+            width: 100%;
+            vertical-align: top;
+            border-radius: 10px;
+        }
+    }
+
+    .ingredient-tiles {
+        display: flex;
+        gap: 10px;
+        align-self: end;
+
+        @include md {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+@use "@root/mixins" as *;
+
+.c-customer-video-card {
+    $root: &;
+
+    overflow: hidden;
+    aspect-ratio: 117 / 160;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @include hover {
+        figure {
+            &::after {
+                background: rgb(33 36 40 / 60%);
+            }
+        }
+    }
+
+    figure {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            margin-left: 1px;
+            color: #fff;
+            font-size: 14px;
+            @include icon;
+            transform: translate(-50%, -50%);
+            content: "\e997";
+
+            @include sm {
+                inset: auto 29px 30px auto;
+                transform: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 43px;
+            height: 43px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: rgb(33 36 40 / 20%);
+            transform: translate(-50%, -50%);
+            content: '';
+            @include transition;
+
+            @include sm {
+                inset: auto 16px 16px auto;
+                transform: none;
+            }
+        }
+
+        figcaption {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: grid;
+            grid-template: auto 1fr / 30% 1fr;
+            column-gap: 12px;
+            padding: 24px;
+            color: #fff;
+            font-size: 14px;
+
+            @include sm {
+                grid-template: auto / auto;
+                gap: 0;
+                font-size: 18px;
+            }
+
+            &::before {
+                @include sm {
+                    position: absolute;
+                    top: -16px;
+                    left: 24px;
+                    color: #fff;
+                    font-size: 70px;
+                    line-height: 1;
+                    opacity: 0.6;
+                    content: "“";
+                }
+            }
+
+            &::after {
+                content: unset;
+            }
+
+            p {
+                grid-row: 1 / -1;
+                grid-column: 2;
+
+                @include sm {
+                    max-width: 80%;
+                }
+
+                &::before {
+                    content: "“";
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    content: "”";
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+            }
+
+            span {
+                @include sm {
+                    display: none;
+                }
+            }
+
+            small {
+                opacity: 0.7;
+
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+    }
+}
