@@ -74,10 +74,10 @@
 .c-accordion__content strong{
   font-weight:500;
 }
-.c-accordion__content ul:not(.c-marked-list,.c-percent-list){
+.c-accordion__content ul:not([class]){
   padding-left:24px;
 }
-.c-accordion__content ul:not(.c-marked-list,.c-percent-list) li{
+.c-accordion__content ul:not([class]) li{
   padding-left:4px;
   list-style:disc;
 }

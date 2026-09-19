@@ -1,13 +1,26 @@
 // Sections styles on current page
 @use "@sections/hero-product/hero-product" as *;
+@use "@sections/features-overview/features-overview" as *;
+@use "@sections/ingredients-video/ingredients-video" as *;
+@use "@sections/experts-pick/experts-pick" as *;
 @use "@sections/logos-marquee/logos-marquee" as *;
 @use "@sections/accordion-tiles/accordion-tiles" as *;
-@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/customers-video/customers-video" as *;
 @use "@sections/features-marquee/features-marquee" as *;
 @use "@sections/comparison-table/comparison-table" as *;
 @use "@sections/complete-system/complete-system" as *;
 
 // Styles for current page only
+.hero-product__main {
+    article:not(.show-more) {
+        .collapsed-list {
+            li:nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+    }
+}
+
 .across-image-banner {
     .container {
         @include sm {

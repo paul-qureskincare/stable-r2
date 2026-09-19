@@ -72,11 +72,38 @@
             </div>
         </div>
         <div class="hero-product__main">
-            {{> c-rating custom="Backed by Dermatologists" light=true }}
+            {{> c-rating value="4.8" }}
             <p>DESIGNED FOR SKIN THAT USES LED</p>
             <h1>Blue+ Face Serum</h1>
             <article>
-                <p>A methylene blue–powered serum that helps your skin make the most of every LED session while delivering antioxidant support for calmer, fresher-looking skin.</p>
+                <ul class="collapsed-list">
+                    <li>
+                        <span>Enhances how skin responds to LED light</span>
+                        <p>Enhances how skin responds to LED light USP Methylene Blue is a cosmetic photosensitizer that helps convert LED light into a stronger skin response — so every Q-Rejuvalight Pro session works harder, without increasing intensity or heat.</p>
+                    </li>
+                    <li>
+                        <span>Helps target the appearance of congestion &amp; blemishes</span>
+                        <p>Helps target the appearance of congestion &amp; blemishes Paired with Blue Light (Skin-Clearing Mode), it supports skin-clearing activity for a clearer-looking complexion — without harsh or drying actives.</p>
+                    </li>
+                    <li>
+                        <span>Hydrates and soothes while it protects</span>
+                        <p>Hydrates and soothes while it protects Sodium Hyaluronate and Aloe Vera support hydration, while Methylene Blue and Vitamin E work as antioxidants — helping protect skin from the visible effects of everyday environmental stressors.</p>
+                    </li>
+                    <li>
+                        <span>Soothes skin from daily digital blue light exposure</span>
+                        <p>Soothes skin from daily digital blue light exposure Calendula iActive helps comfort skin exposed to screens all day — phones, laptops, and everyday digital blue light — with no LED mask required.</p>
+                    </li>
+                    <li>
+                        <span>Lightweight, fast-absorbing, fits any routine</span>
+                        <p>Lightweight, fast-absorbing, fits any routine An ultra-lightweight, fast-absorbing texture that layers easily under makeup or the rest of your routine, with or without an LED session.</p>
+                    </li>
+                </ul>
+                <a
+                    href="javascript:;"
+                    onclick="this.textContent=this.closest('article').classList.toggle('show-more')?'Show less':'Show more'"
+                >
+                   Show more
+                </a>
             </article>
             <ul class="e-pill-tabs e-pill-tabs--selector">
                 <li>
@@ -168,6 +195,37 @@
                     {
                         "summary": "Key Benefits",
                         "text": "
+                            <p>A next-generation antioxidant that visibly transforms skin:</p>
+                            <ul class=\"c-benefit-grid c-benefit-grid--sm\">
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-check-circle\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Clarity & Tone</strong>
+                                        <p class=\"c-benefit-grid__text\">Evens out tone over time</p>
+                                    </div>
+                                </li>
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-sun\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Radiant Glow</strong>
+                                        <p class=\"c-benefit-grid__text\">Less fatigued, more vibrant</p>
+                                    </div>
+                                </li>
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-droplet\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Radiant Glow</strong>
+                                        <p class=\"c-benefit-grid__text\">Less fatigued, more vibrant</p>
+                                    </div>
+                                </li>
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-shield\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Long-Term Resilience</strong>
+                                        <p class=\"c-benefit-grid__text\">Calmer, stronger skin</p>
+                                    </div>
+                                </li>
+                            </ul>
                             <p>Blue+ Face Serum is designed for skin used with LED light therapy, with ingredients chosen to support skin exposed to light so your routine stays comfortable and consistent. It\'s lightweight, absorbs quickly, and sits comfortably on skin during LED use.</p>
                             <p>Visible benefits include:</p>
                             <ul>
@@ -232,28 +290,117 @@
         </div>
     {{/hero-product }}
 
+    {{#> features-overview
+        title="Meet the active blue"
+    }}
+        <article>
+            <p>A smarter ritual for skin that lives under LEDs, screens, and everyday light.</p>
+        </article>
+        <div class="c-product-components c-product-components--blue-serum">
+            <img src="sections/features-overview/images/blue.webp" alt="Blue+ Face Serum" />
+            <div class="e-component-pointer e-component-pointer--reverse">
+                <hr />
+                <div>
+                    <strong>Methylene Blue</strong>
+                    <small>A powerful antioxidant that enhances LED response</small>
+                </div>
+            </div>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Beta-Glucan</strong>
+                    <small>Deeply soothing and hydrating</small>
+                </div>
+            </div>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Calendula iActive</strong>
+                    <small>Calming properties</small>
+                </div>
+            </div>
+        </div>
+        {{> c-benefit-grid
+            list='[
+                {
+                    "icon":"fine-lines",
+                    "title":"The Color Story",
+                    "text":"That signature blue isn\'t a filter or added dye - it\'s the ingredient itself, Methylene Blue. What you see is literally the active."
+                },
+                {
+                    "icon":"verified-shield",
+                    "title":"Primes skin for LED",
+                    "text":"Methylene blue is a cosmetic photosensitizer - it helps skin respond more effectively to every LED session. Same routine. More from it. Deeper synergy with every red and blue light session."
+                },
+                {
+                    "icon":"antioxidant",
+                    "title":"Antioxidant Support",
+                    "text":"Powerful antioxidant support with zero harsh or drying actives. Helps support skin exposed to daily blue light from your phone, laptop, and everything in between."
+                },
+                {
+                    "icon":"droplet",
+                    "title":"Hydration Boost",
+                    "text":"Helps skin retain moisture, leaving it visibly plumper and more balanced after each use."
+                }
+            ]'
+        }}
+    {{/features-overview }}
+
     {{#> base-section
         classes="base-section--reverse"
-        title="Skincare that works in sync with LED light"
+        title="A Daily Antioxidant, Backed by Scienc"
         c-wistia="qk92k5wrnj"
         c-wistia-inline=true
         c-wistia-hide-panel=true
         button="Shop Now"
     }}
-        <p>LED therapy works by delivering light energy into the skin. But what you apply before your session matters.</p>
-        <p>Many serums are designed for overnight repair or active treatment — not for repeated light exposure. Some can Interfere with LED light therapy, be irritating, or simply weren’t formulated with LED in mind.</p>
-        <p>Blue+ is different.</p>
-        <p>It uses methylene blue, an antioxidant studied in light-exposure contexts, in a lightweight formula designed to sit comfortably on skin during LED sessions.</p>
+        <p>Skin faces constant stress — from pollution, blue light, and everyday oxidative damage. Most serums only focus on repair after the fact.</p>
+        <p>Blue+ is different. It's built around methylene blue, a next-generation antioxidant studied for calming the look of stressed skin, evening the look of tone, and supporting long-term resilience.</p>
+        <p>It's lightweight, fast-absorbing, and fits into any routine — morning or night.</p>
+        <p>Already using LED light therapy? Blue+ is formulated to sit comfortably on skin during sessions, too.</p>
     {{/base-section }}
 
-    {{#> base-section
-        classes="base-section--small-media"
-        title="Trusted and Recommended by Experts"
-        picture="assets/images/experts/dr-shah-maxfield-2.webp"
-        pill-badge=true
-    }}
-        <p>“Methylene blue has been studied for how it interacts with cellular energy and light-dependent processes, making it <em>a great ingredient in skincare</em> designed for use with LED light therapy.”</p>
-    {{/base-section }}
+    {{#> ingredients-video classes="ingredients-video--blue-serum" }}
+        <div class="ingredients-video__source">
+            {{> c-wistia
+                id="5p8ej4e9m3"
+                inline=true
+                autoplay=true
+                hide-panel=true
+            }}
+        </div>
+    {{/ingredients-video }}
+
+    {{#> experts-pick }}
+        <article>
+            <div class="e-pill-badge">
+                <span class="e-checkmark"></span>
+                Dermatologist Reviewed
+            </div>
+            <h2>Recommended by Experts</h2>
+            <p>“Methylene blue has been studied for how it interacts with cellular energy and light-dependent processes, making it <em>a great ingredient in skincare</em> — and a smart addition for anyone using LED light therapy.”</p>
+        </article>
+        <picture>
+            <img src="assets/images/experts/dr-shah-maxfield-3.webp" alt="Recommended by Experts" />
+        </picture>
+        <div class="ingredient-tiles">
+            {{> e-ingredient-info
+                name="Clarity & Tone"
+                description="Evens out tone over time"
+                percent="100"
+            }}
+            {{> e-ingredient-info
+                name="Radiant Glow"
+                description="Less fatigued, more vibrant"
+                percent="100"
+            }}
+            {{> e-ingredient-info
+                name="Smooth Texture"
+                description="Softer with consistent use"
+                percent="100"
+            }}
+        </div>
+    {{/experts-pick }}
 
     {{> features-marquee }}
 
@@ -296,6 +443,96 @@
         {{/c-dialog }}
     {{/accordion-tiles}}
 
+    {{#> customers-video }}
+        <div class="container">
+            <h2>Confident skin starts here</h2>
+            <button class="customers-video-prev">{{>e-icon icon="arrow" }}</button>
+            <button class="customers-video-next">{{>e-icon icon="arrow" }}</button>
+        </div>
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.2,
+                "spaceBetween": 6,
+                "loop": false,
+                "navigation": {
+                    "prevEl": ".customers-video-prev",
+                    "nextEl": ".customers-video-next"
+                },
+                "breakpoints": {
+                    "480": {
+                        "slidesPerView": 2.2
+                    },
+                    "768": {
+                        "slidesPerView": 3
+                    },
+                    "992": {
+                        "slidesPerView": 4
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        url="https://www.youtube.com/watch?v=wuIjXhlFUTU"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+            </div>
+        </div>
+    {{/customers-video }}
+
     {{#> across-image-banner }}
         <picture>
             <source media="(min-width: 768px)" srcset="assets/images/blue-plus-face-serum/blue-bg-image-1.webp" />
@@ -314,12 +551,7 @@
     {{#> base-section
         classes="base-section--reverse base-section--simple-grid"
         title="Designed to last and built to refill"
-        c-wistia="tj97vrxlon"
-        c-wistia-custom='
-            <picture>
-                <img src="assets/images/blue-plus-face-serum/blue-video-thumbnail-1.webp" alt="Video thumbnaul text" />
-            </picture>
-        '
+        picture="assets/images/blue-plus-face-serum/blue-video-thumbnail-2.webp"
     }}
         <p>Our new refillable system means less waste and better value over time.</p>
         <ol class="normal">

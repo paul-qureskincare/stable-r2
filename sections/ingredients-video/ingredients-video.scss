@@ -1,0 +1,42 @@
+@use "@root/mixins" as *;
+
+.ingredients-video {
+    $root: &;
+
+    &--blue-serum {
+        background: #d9d9d9;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        // .ingredients-video__source
+        #{$root}__source {
+            position: relative;
+            max-width: 380px;
+
+            &::before,
+            &::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+                width: 30px;
+                content: '';
+            }
+
+            &::before {
+                left: 0;
+                background: linear-gradient(to left, transparent, #d9d9d9);
+            }
+
+            &::after {
+                right: 0;
+                background: linear-gradient(to right, transparent, #d9d9d9);
+            }
+        }
+    }
+}
