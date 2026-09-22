@@ -1,0 +1,51 @@
+@use "@root/mixins" as *;
+@use "@components/c-customer-video-card" as *;
+
+.customers-video {
+    $root: &;
+
+
+    .container {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        margin-bottom: 0;
+
+        @include sm {
+            max-width: 200px;
+        }
+    }
+
+    .customers-video-prev,
+    .customers-video-next {
+        flex: none;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        color: inherit;
+        border: 0;
+        border-radius: 4px;
+        background: none;
+
+        @include hover {
+            background: rgb(217 217 217 / 30%);
+        }
+
+        &:disabled {
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    }
+
+    .customers-video-prev {
+        margin-left: auto;
+
+        .e-icon {
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<!-- EXPERTS PICK -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/experts-pick/experts-pick.css" />
+{{/unless}}
+<section class="experts-pick {{ classes }}">
+    <div class="container">
+        {{> @partial-block }}
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce("experts-pick", "sections/experts-pick/experts-pick.js");
+    });
+</script>
+<!-- EXPERTS PICK END -->

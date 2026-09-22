@@ -1,0 +1,11 @@
+<ul class="c-benefit-grid{{#if sm }} c-benefit-grid--sm{{/if}}">
+    {{#parseJson list }}
+        <li class="c-benefit-grid__item">
+            <span class="c-benefit-grid__icon">{{> e-icon icon=icon }}</span>
+            <div class="c-benefit-grid__content">
+                <strong class="c-benefit-grid__title">{{ title }}</strong>
+                <p class="c-benefit-grid__text">{{ text }}</p>
+            </div>
+        </li>
+    {{/parseJson}}
+</ul>

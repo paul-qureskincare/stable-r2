@@ -1,0 +1,101 @@
+@use "@root/mixins" as *;
+
+.c-benefit-grid {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+
+    // .c-benefit-grid__item
+    &__item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    // .c-benefit-grid__icon
+    &__icon {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 100px;
+        background: #f4f8fd;
+
+        .e-icon {
+            color: var(--color-ice, #91baec);
+            font-size: 16px;
+        }
+    }
+
+    // .c-benefit-grid__content
+    &__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    // .c-benefit-grid__title
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    // .c-benefit-grid__text
+    &__text {
+        font-size: 18px;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    // .c-benefit-grid--sm
+    &--sm {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+
+        // .c-benefit-grid--sm .c-benefit-grid__item
+        #{$root}__item {
+            gap: 10px;
+            align-items: center;
+        }
+
+        // .c-benefit-grid--sm .c-benefit-grid__icon
+        #{$root}__icon {
+            width: 36px;
+            height: 36px;
+
+            .e-icon {
+                font-size: 18px;
+            }
+        }
+
+        // .c-benefit-grid--sm .c-benefit-grid__content
+        #{$root}__content {
+            gap: 2px;
+        }
+
+        // .c-benefit-grid--sm .c-benefit-grid__title
+        #{$root}__title {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        // .c-benefit-grid--sm .c-benefit-grid__text
+        #{$root}__text {
+            color: #6b7078;
+            font-size: 12px;
+        }
+    }
+}
