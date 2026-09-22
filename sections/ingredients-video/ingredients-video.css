@@ -1,0 +1,29 @@
+.ingredients-video--blue-serum{
+  background:#d9d9d9;
+}
+.ingredients-video--blue-serum .container{
+  display:flex;
+  justify-content:center;
+  padding-right:0;
+  padding-left:0;
+}
+.ingredients-video--blue-serum .ingredients-video__source{
+  position:relative;
+  max-width:380px;
+}
+.ingredients-video--blue-serum .ingredients-video__source:after,.ingredients-video--blue-serum .ingredients-video__source:before{
+  position:absolute;
+  top:0;
+  bottom:0;
+  z-index:1;
+  width:30px;
+  content:"";
+}
+.ingredients-video--blue-serum .ingredients-video__source:before{
+  left:0;
+  background:linear-gradient(270deg, transparent, #d9d9d9);
+}
+.ingredients-video--blue-serum .ingredients-video__source:after{
+  right:0;
+  background:linear-gradient(90deg, transparent, #d9d9d9);
+}

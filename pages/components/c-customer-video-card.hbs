@@ -1,0 +1,28 @@
+<div class="c-customer-video-card">
+    {{#if url }}
+        <figure class="lvideo" data-url="{{ url }}">
+            <img src="{{ thumbnail }}" alt="{{ name }}" />
+            <figcaption>
+                <span>{{ name }}</span>
+                <p>{{ text }}</p>
+                <small>Verified Buyer</small>
+            </figcaption>
+        </figure>
+    {{ else }}
+        {{> c-wistia
+            id=id
+            custom=(
+                concat '
+                    <figure>
+                        <img src="' thumbnail '" alt="' name '" />
+                        <figcaption>
+                            <span>' name '</span>
+                            <p>' text '</p>
+                            <small>Verified Buyer</small>
+                        </figcaption>
+                    </figure>
+                '
+            )
+        }}
+    {{/if }}
+</div>
