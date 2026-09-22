@@ -1,0 +1,55 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/why-it-works/why-it-works" as *;
+@use "@sections/accordion-tiles/accordion-tiles" as *;
+// @use "@sections/across-gallery/across-gallery" as *;
+// @use "@sections/progress-metrics/progress-metrics" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+// @use "@sections/logos-marquee/logos-marquee" as *;
+// @use "@sections/features-marquee/features-marquee" as *;
+// @use "@sections/set-up-toggle/set-up-toggle" as *;
+// @use "@sections/product-settings/product-settings" as *;
+// @use "@sections/comparison/comparison" as *;
+
+// Styles for current page only
+.hero-product {
+    .c-accordion {
+        .e-icon {
+            color: #91baec;
+            font-size: 16px;
+        }
+
+        .e-declaimer {
+            display: flex;
+            gap: 6px;
+            font-size: 12px;
+
+        }
+
+        p {
+            &:has(.e-icon-snow) {
+                display: flex;
+                gap: 6px;
+                line-height: 16px;
+            }
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                &:not(:last-child) {
+                    td {
+                        padding-bottom: 16px;
+                    }
+                }
+            }
+
+            td {
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
