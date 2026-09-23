@@ -362,12 +362,22 @@
 
     {{#> ingredients-video classes="ingredients-video--blue-serum" }}
         <div class="ingredients-video__source">
-            {{> c-wistia
-                id="5p8ej4e9m3"
-                inline=true
-                autoplay=true
-                hide-panel=true
-            }}
+            <div class="d-none d-sm-block">
+                {{> c-wistia
+                    id="zftm6ecnt6"
+                    inline=true
+                    autoplay=true
+                    hide-panel=true
+                }}
+            </div>
+            <div class="d-sm-none">
+                {{> c-wistia
+                    id="8rkjozy7ch"
+                    inline=true
+                    autoplay=true
+                    hide-panel=true
+                }}
+            </div>
         </div>
     {{/ingredients-video }}
 
