@@ -25,13 +25,7 @@
     }
 
     h6 {
-        &:first-child {
-            margin-bottom: 16px;
-            color: #b5b6b7;
-            font-family: inherit;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
+        @include small-first-title;
     }
 
     // .why-it-works__main

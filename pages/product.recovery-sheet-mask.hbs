@@ -27,6 +27,12 @@
                     <div class="swiper-slide">
                         <img src="assets/images/recovery-mask/mask-big-tile-4.webp" alt="Recovery+ Sheet Mask" />
                     </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/recovery-mask/mask-big-tile-4.webp" alt="Recovery+ Sheet Mask" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/recovery-mask/mask-big-tile-4.webp" alt="Recovery+ Sheet Mask" />
+                    </div>
                 </div>
             </div>
             <div class="c-swiper-thumbs-nav">
@@ -44,6 +50,12 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="assets/images/recovery-mask/mask-big-tile-3.webp" alt="Recovery+ Sheet Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/recovery-mask/mask-big-tile-4.webp" alt="Recovery+ Sheet Mask" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/recovery-mask/mask-big-tile-4.webp" alt="Recovery+ Sheet Mask" />
                         </div>
                         <div class="swiper-slide">
                             <img src="assets/images/recovery-mask/mask-big-tile-4.webp" alt="Recovery+ Sheet Mask" />
@@ -368,23 +380,39 @@
     {{/why-it-works }}
 
     {{#> accordion-tiles
+        small-title="FORMULATED WITH PURPOSE"
         title="Powerful Ingredients"
         square=true
         list='[
             {
-                "image": "glycerin-tile",
+                "image": "methylene-blue-2-tile",
                 "summary": "Hydration",
-                "text": "A proven humectant that attracts and holds moisture in the skin, leaving skin feeling hydrated, comfortable, and balanced after rinse off."
+                "html": "
+                    <h6>Polyglutamic Acid</h6>
+                    <p>Helps lock in moisture, reduce moisture loss, and leave skin looking visibly plumper and more hydrated.</p>
+                    <h6>Sodium Hyaluronate</h6>
+                    <p>A form of hyaluronic acid that helps attract and retain moisture for softer, more hydrated-looking skin.</p>
+                "
             },
             {
-                "image": "lactic-acid-tile",
+                "image": "niacinamide-2-tile",
                 "summary": "Calming",
-                "text": "A gentle exfoliating acid that helps refine the look of skin texture and boost radiance over time. Used at a skin friendly level, lactic acid supports smoother looking skin without the harsh feel of traditional exfoliating cleansers."
+                "html": "
+                    <h6>Beta-Glucan</h6>
+                    <p>Helps calm the appearance of visible redness and support the skin’s moisture barrier.</p>
+                    <h6>Centella Asiatica</h6>
+                    <p>A well-known soothing botanical that helps calm stressed-looking skin and support the skin barrier.</p>
+                "
             },
             {
-                "image": "aloe-vera-tile",
+                "image": "beta-glucan-3-tile",
                 "summary": "Protection",
-                "text": "Natural calming agents with antioxidant benefits. They soothe and protect, making this cleanser gentle enough for daily use on sensitive skin."
+                "html": "
+                    <h6>Ectoin</h6>
+                    <p>Helps protect skin from environmental stressors and support the skin barrier.</p>
+                    <h6>Allantoin</h6>
+                    <p>Helps soothe dry, stressed skin, reduce visible flaking, and leave skin feeling softer and more comfortable.</p>
+                "
             }
         ]'
     }}
@@ -392,7 +420,7 @@
         {{#> c-dialog
             id="fullIngredient"
         }}
-            <p><strong>Cleanser Ingredients</strong></p>
+            <p><strong>Recovery+ Sheet Mask Ingredients</strong></p>
             <p>Glycerin, Aqua (Water), Sodium Cocoyl Glutamate, Disodium Cocoamphodiacetate, Lactic Acid, Sodium Chloride, Squalane, Aloe Barbadensis Leaf Juice Powder, Panthenol, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Xanthan Gum, Sodium Phytate, Caprylhydroxamic Acid, Glyceryl Caprylate</p>
             <hr />
             <ul class="c-marked-list c-marked-list--fill">
@@ -406,9 +434,232 @@
         {{/c-dialog }}
     {{/accordion-tiles }}
 
+    {{> features-marquee }}
+
+    {{#> experts-pick }}
+        <article>
+            <h6>TRUSTED BY PROFESSIONALS</h6>
+            <h2>Recommended by Experts</h2>
+            <p>“We recommend the Recovery+ Sheet Mask after Micro-Infusion because it provides an immediate cooling sensation, helps calm the appearance of visible redness, and delivers a blend of hydrating ingredients to leave skin feeling soothed, replenished, and comfortable.”</p>
+        </article>
+        <picture>
+            <img src="assets/images/experts/dr-shah-maxfield-3.webp" alt="Recommended by Experts" />
+        </picture>
+        <div class="ingredient-tiles">
+            {{> e-ingredient-info
+                name="Clarity & Tone"
+                description="Evens out tone over time"
+                percent="100"
+            }}
+            {{> e-ingredient-info
+                name="Radiant Glow"
+                description="Less fatigued, more vibrant"
+                percent="100"
+            }}
+            {{> e-ingredient-info
+                name="Smooth Texture"
+                description="Softer with consistent use"
+                percent="100"
+            }}
+        </div>
+    {{/experts-pick }}
+
+    {{#> across-gallery }}
+        <article>
+            <h6>FOR YOUR SKIN’S NEEDS</h6>
+            <h2>When to Use</h2>
+            <p>Give your skin an extra boost of hydration and comfort whenever it feels dry, stressed, or in need of a reset.</p>
+            <ul>
+                <li><div class="e-pill-badge e-pill-badge--sm">When skin feels dry</div></li>
+                <li><div class="e-pill-badge e-pill-badge--sm">After Micro-Infusion</div></li>
+                <li><div class="e-pill-badge e-pill-badge--sm">After travel</div></li>
+                <li><div class="e-pill-badge e-pill-badge--sm">Post-treatment care</div></li>
+                <li><div class="e-pill-badge e-pill-badge--sm">After sun exposure</div></li>
+                <li><div class="e-pill-badge e-pill-badge--sm">Before a big event</div></li>
+                <li><div class="e-pill-badge e-pill-badge--sm">During seasonal dryness</div></li>
+            </ul>
+        </article>
+        <ul class="across-gallery__images">
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-1.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-2.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-3.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-4.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-5.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-6.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-7.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+            <li>
+                <img src="sections/across-gallery/images/recovery-mask-8.webp" alt="Recovery+ Sheet Mask" />
+            </li>
+        </ul>
+    {{/across-gallery }}
+
+    {{#> text-section
+        classes="text-section--row"
+    }}
+        <h2>Kind to skin. Serious&nbsp;about&nbsp;recovery.</h2>
+        <p>Developed for skin after Micro-Infusion, as well as dry, sensitive, and stressed skin. The formula and ultra-soft TENCEL material are designed to sit comfortably on skin while delivering soothing hydration.</p>
+        <a class="btn btn--primary" href="#">Shop Now</a>
+    {{/text-section }}
+
+    {{#> base-slider
+        classes="base-slider--why-work"
+        small-title="THE QURE APPROACH"
+        title="Why it Exists"
+    }}
+        <div
+            class="c-swiper"
+            data-swiper='{
+                "slidesPerView": 1.1,
+                "spaceBetween": 16,
+                "loop": false,
+                "pagination": {
+                    "el": ".c-swiper-pagination",
+                    "type": "custom"
+                },
+                "navigation": {
+                    "prevEl": ".c-swiper-button-prev",
+                    "nextEl": ".c-swiper-button-next"
+                },
+                "breakpoints": {
+                    "768": {
+                        "slidesPerView": 2
+                    },
+                    "992": {
+                        "slidesPerView": 3
+                    }
+                }
+            }'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="sections/base-slider/images/why-work-recovery-mask-1.webp" alt="A post-treatment step, not an extra." />
+                    <h6>A post-treatment step, not an extra.</h6>
+                    <p>After Micro-Infusion, a cooling mask is standard aftercare in clinics, not optional. Recovery+ brings that same step home.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/base-slider/images/why-work-recovery-mask-2.webp" alt="Cool on contact. Calm by morning." />
+                    <h6>Cool on contact. Calm by morning.</h6>
+                    <p>30 ml of a concentrated hydration stack, polyglutamic acid, beta-glucan, cica, ectoin, sealed into a soft TENCEL sheet that hugs the face without pilling or discomfort.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="sections/base-slider/images/why-work-recovery-mask-3.webp" alt="Safe on the skin that needs it most." />
+                    <h6>Safe on the skin that needs it most.</h6>
+                    <p>HRIPT-tested and dermatologist-approved for sensitive and reactive skin, because post-Micro-Infusion skin has zero room for irritation.</p>
+                </div>
+            </div>
+            <div class="c-swiper-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div class="c-swiper-pagination"></div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+        <a class="btn btn--primary-grey" href="#">Get Started</a>
+    {{/base-slider }}
+
+    {{#> usage-steps }}
+        <div class="container">
+            <article>
+                <h6>SIMPLE 15-MINUTE RITUAL</h6>
+                <h2>How to Use</h2>
+                <div class="e-pill-badge e-pill-badge--fill">
+                    {{> e-icon icon="snow" }}
+                    <div><span>Pro tip</span> Refrigerate sealed pouch for cooling</div>
+                </div>
+            </article>
+        </div>
+        <div class="container">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.1,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2.2,
+                            "spaceBetween": 24
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture data-index="1">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/mages/usage-steps-recovery-mask-1.webp" />
+                            <img src="sections/usage-steps/mages/usage-steps-recovery-mask-1-mob.webp" alt="1. Prepare" />
+                        </picture>
+                        <article>
+                            <h6>1. Prepare</h6>
+                            <p>After Micro-Infusion, apply the mask directly to skin. If using it on its own, start with clean, dry skin.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="2">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/mages/usage-steps-recovery-mask-2.webp" />
+                            <img src="sections/usage-steps/mages/usage-steps-recovery-mask-2-mob.webp" alt="2. Take the mask out" />
+                        </picture>
+                        <article>
+                            <h6>2. Take the mask out</h6>
+                            <p>Carefully unfold the mask and smooth it over your face, aligning the eye and mouth openings.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="3">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/mages/usage-steps-recovery-mask-3.webp" />
+                            <img src="sections/usage-steps/mages/usage-steps-recovery-mask-3-mob.webp" alt="3. Place mask on face" />
+                        </picture>
+                        <article>
+                            <h6>3. Place mask on face</h6>
+                            <p>Leave the mask on for 15-20 minutes while you relax.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="4">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/mages/usage-steps-recovery-mask-4.webp" />
+                            <img src="sections/usage-steps/mages/usage-steps-recovery-mask-4-mob.webp" alt="4. Do not rinse" />
+                        </picture>
+                        <article>
+                            <h6>4. Do not rinse</h6>
+                            <p>Gently remove and discard the mask. Do not rinse. Pat or massage any remaining serum into the skin until absorbed.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/usage-steps }}
+
     {{#> trusted-reviews
         classes="trusted-reviews--ba-slider"
-        title="Results you’ll see with your own eyes"
+        small-title="BACKED BY TESTING"
+        title="Evidence"
+        disabled-touch=true
     }}
         <div class="swiper-slide">
             <div class="c-trusted-review-card">
@@ -435,212 +686,13 @@
         </div>
         <div class="swiper-slide">
             <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result2.webp" alt="Hydrated more than ever" />
-                </picture>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/england_f.webp" alt="Hanna L." />
-                    Hanna L.
-                </div>
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <article>
-                    <h6>Hydrated more than ever</h6>
-                    <p>“I never had major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin always felt so dry no matter what moisturizer I used. I didn't change anything in my skincare routine except filtered water. I'm never washing my face with anything less than Q-urified water because my skin feels so much better.”</p>
-                </article>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result3.webp" alt="Acne and dryness gone" />
-                </picture>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Josie K." />
-                    Josie K.
-                </div>
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <article>
-                    <h6>Acne and dryness gone</h6>
-                    <p>“My skin looks much clearer thanks to Qure! I use the LED mask and water filter daily and...my complexion looks so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!”</p>
-                </article>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result4.webp" alt="Skin and hair are glowing" />
-                </picture>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Adele M." />
-                    Adele M.
-                </div>
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <article>
-                    <h6>Skin and hair are glowing</h6>
-                    <p>“I have been using this filter for a few weeks now and my hair is SO much healthier. Much more smooth, less frizzy, looks glossier and the shedding has reduced. And actually I'm even seeing my skin look more hydrated and glowier - bonus!!”</p>
-                </article>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result5.webp" alt="Source of my unclear skin" />
-                </picture>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Kim L." />
-                    Kim L.
-                </div>
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <article>
-                    <h6>Source of my unclear skin</h6>
-                    <p>“I didn’t realize how big impact water has on our skin... I almost got used to my skin never getting better than mediocre, but this Water Filter is a game changer in my skincare routine.”</p>
-                </article>
-            </div>
-        </div>
-    {{/trusted-reviews }}
-
-    {{#> base-section
-        classes="base-section--reverse base-section--grey"
-        title="Do you know what’s in your water?"
-        features-list='
-            <ul class="features-list">
-                <li>
-                    <i class="e-icon e-icon-limescale"></i>
-                    Limescale
-                </li>
-                <li>
-                    <i class="e-icon e-icon-heavy-metals"></i>
-                    Heavy Metals
-                </li>
-                <li>
-                    <i class="e-icon e-icon-chlorine"></i>
-                    Chlorine
-                </li>
-                <li>
-                    <i class="e-icon e-icon-micro-plastics"></i>
-                    Micro-plastics
-                </li>
-                <li>
-                    <i class="e-icon e-icon-copper"></i>
-                    Copper
-                </li>
-                <li>
-                    <i class="e-icon e-icon-micro-organisms"></i>
-                    Micro-organisms
-                </li>
-            </ul>
-        '
-    }}
-        <p>Research has shown tap water is contaminated with over 320* chemicals that your skin is absorbing daily. These micro-contaminants in water can clog pores, dry out and irritate sensitive skin.</p>
-    {{/base-section }}
-
-    {{#> across-gallery }}
-        <article>
-            <h2>Meet the Recovery+ Sheet Masks</h2>
-            <p>At Qure, we believe great skin starts at the source, and that's the water you use every day. Both the Recovery+ Sheet Mask and Handheld Shower Filter help <em>reduce certain chemicals</em> and minerals found in tap water that can linger on your skin after showering</p>
-            <a class="btn btn--primary" href="#">Shop Now</a>
-        </article>
-        <ul class="across-gallery__images">
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-1.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-2.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-3.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-4.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-5.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-6.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-7.webp" alt="Shower Filter Benefits" />
-            </li>
-            <li>
-                <img src="sections/across-gallery/images/shower-filter-benefits-8.webp" alt="Shower Filter Benefits" />
-            </li>
-        </ul>
-    {{/across-gallery }}
-
-    {{#> progress-metrics id="improve_skin" }}
-        <article>
-            <h2>Improve skin and scalp hydration in just 8&nbsp;weeks</h2>
-            <p>The Recovery+ Sheet Mask demonstrated visible improvements after two months of daily filtered showers.</p>
-        </article>
-        <div class="c-pill-tabs">
-            <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
-                <li>
-                    <button
-                        class="active"
-                        type="button"
-                        data-bs-toggle="tab"
-                        data-bs-target="#pill-tabs-before"
-                    >
-                        Before
-                    </button>
-                </li>
-                <li>
-                    <button
-                        type="button"
-                        data-bs-toggle="tab"
-                        data-bs-target="#pill-tabs-after"
-                    >
-                        After
-                    </button>
-                </li>
-            </ul>
-            <div class="c-pill-tabs__pane show" id="pill-tabs-before">
-                <img src="assets/images/improve-skin/graph_before.webp" alt="Before" />
-            </div>
-            <div class="c-pill-tabs__pane" id="pill-tabs-after">
-                <img src="assets/images/improve-skin/graph_after.webp" alt="After" />
-            </div>
-        </div>
-        <div>
-            {{> c-percent-list
-                list='[
-                    {
-                        "value": 83,
-                        "text": "say skin and hair feel softer"
-                    },
-                    {
-                        "value": 80,
-                        "text": "noticed feeling reduced scalp dryness, irritation, or flakiness"
-                    },
-                    {
-                        "value": 83,
-                        "text": "reported fewer signs of skin irritation including redness or breakouts"
-                    }
-                ]'
-            }}
-            <small>Skin and scalp hydration measured using instrumental testing in a consumer use study. Individual results may vary.</small>
-        </div>
-    {{/progress-metrics }}
-
-    {{#> trusted-reviews title="The results are crystal clear" }}
-        <div class="swiper-slide">
-            <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result1.webp" alt="Restored my curls!" />
-                </picture>
+                {{> c-ba-slider
+                    before-image="sections/trusted-reviews/images/ba-slider-1-before.webp"
+                    after-image="sections/trusted-reviews/images/ba-slider-1-after.webp"
+                    before-label="Before"
+                    after-label="After 4 weeks"
+                    position="50"
+                }}
                 <div class="e-author">
                     <img src="assets/images/review-slider/america_f.webp" alt="Briony R." />
                     Briony R.
@@ -650,123 +702,176 @@
                     Verified customer
                 </div>
                 <article>
-                    <h6>Restored my curls!</h6>
-                    <p>“When I discovered the curly girl method, I thought I had cracked the code to perfectly defined curls. Then one day my curls stopped curling, they became week, lump and shine free. I did some research and realized it was my water. I saw a big difference after only one wash - it turned out I had a bunch of build up on my hair. Thank you Qure for saving my curls!”</p>
+                    <h6>Younger skin</h6>
+                    <p>"The results are so so great. My sun damage is gone. My confidence at 50 years old is booming."</p>
                 </article>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result2.webp" alt="Hydrated more than ever" />
-                </picture>
+                {{> c-ba-slider
+                    before-image="sections/trusted-reviews/images/ba-slider-1-before.webp"
+                    after-image="sections/trusted-reviews/images/ba-slider-1-after.webp"
+                    before-label="Before"
+                    after-label="After 4 weeks"
+                    position="50"
+                }}
                 <div class="e-author">
-                    <img src="assets/images/review-slider/england_f.webp" alt="Hanna L." />
-                    Hanna L.
+                    <img src="assets/images/review-slider/america_f.webp" alt="Briony R." />
+                    Briony R.
                 </div>
                 <div class="e-verified-customer">
                     <div class="e-checkmark"></div>
                     Verified customer
                 </div>
                 <article>
-                    <h6>Hydrated more than ever</h6>
-                    <p>“I never had major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin always felt so dry no matter what moisturizer I used. I didn't change anything in my skincare routine except filtered water. I'm never washing my face with anything less than Q-urified water because my skin feels so much better.”</p>
+                    <h6>Younger skin</h6>
+                    <p>"The results are so so great. My sun damage is gone. My confidence at 50 years old is booming."</p>
                 </article>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result3.webp" alt="Acne and dryness gone" />
-                </picture>
+                {{> c-ba-slider
+                    before-image="sections/trusted-reviews/images/ba-slider-1-before.webp"
+                    after-image="sections/trusted-reviews/images/ba-slider-1-after.webp"
+                    before-label="Before"
+                    after-label="After 4 weeks"
+                    position="50"
+                }}
                 <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Josie K." />
-                    Josie K.
+                    <img src="assets/images/review-slider/america_f.webp" alt="Briony R." />
+                    Briony R.
                 </div>
                 <div class="e-verified-customer">
                     <div class="e-checkmark"></div>
                     Verified customer
                 </div>
                 <article>
-                    <h6>Acne and dryness gone</h6>
-                    <p>“My skin looks much clearer thanks to Qure! I use the LED mask and water filter daily and...my complexion looks so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!”</p>
-                </article>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result4.webp" alt="Skin and hair are glowing" />
-                </picture>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Adele M." />
-                    Adele M.
-                </div>
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <article>
-                    <h6>Skin and hair are glowing</h6>
-                    <p>“I have been using this filter for a few weeks now and my hair is SO much healthier. Much more smooth, less frizzy, looks glossier and the shedding has reduced. And actually I'm even seeing my skin look more hydrated and glowier - bonus!!”</p>
-                </article>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="c-trusted-review-card">
-                <picture>
-                    <img src="assets/images/review-slider/shower-result5.webp" alt="Source of my unclear skin" />
-                </picture>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Kim L." />
-                    Kim L.
-                </div>
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <article>
-                    <h6>Source of my unclear skin</h6>
-                    <p>“I didn’t realize how big impact water has on our skin... I almost got used to my skin never getting better than mediocre, but this Water Filter is a game changer in my skincare routine.”</p>
+                    <h6>Younger skin</h6>
+                    <p>"The results are so so great. My sun damage is gone. My confidence at 50 years old is booming."</p>
                 </article>
             </div>
         </div>
     {{/trusted-reviews }}
 
-    {{#> base-section
-        classes="base-section--small-media"
-        title="Trusted and Recommended by Experts"
-        picture="assets/images/experts/doctor_shah_desk.webp"
-        pill-badge=true
+    {{#> complete-system
+        classes="complete-system--bg"
+        title="Complete the Qure system"
     }}
-        <p>“How do you <em>reduce the things in your water that may be causing issues</em> with your skin?</p>
-        <p>This Qure filter is incredible – <em>it’s the only filter I personally use</em> to [reduce] chlorine and anything else that’s going to make your water harsh for your skin.”</p>
-    {{/base-section }}
+        <ol class="complete-system__scale c-swiper-steps">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <div class="complete-system__items">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.4,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "steps-selector": ".c-swiper-steps",
+                    "watchSlidesProgress": true,
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 24
+                        },
+                        "992": {
+                            "slidesPerView": 4
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/cleanser.webp"
+                            image-hover="/sections/complete-system/images/cleanser-hover.webp"
+                            reviews="31"
+                            name="Daily Gel Cleanser"
+                            desc="Cleanses thoroughly while helping skin stay calm and balanced."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/dermal-mist.webp"
+                            image-hover="/sections/complete-system/images/dermal-mist-hover.webp"
+                            reviews="72"
+                            name="Dermal Mist"
+                            desc="Kills bacteria and prepares skin for a safer Micro-Infusion treatment."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/micro-infusion.webp"
+                            image-hover="/sections/complete-system/images/micro-infusion-hover.webp"
+                            reviews="196"
+                            name="Micro-Infusion"
+                            desc="Activates your skin’s renewal process and helps improve the look of fine lines, texture, and uneven tone."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/recovery-mask.webp"
+                            image-hover="/sections/complete-system/images/recovery-mask-hover.webp"
+                            reviews="32"
+                            name="Recovery+ Sheet Mask"
+                            desc="Developed for skin after Micro-Infusion, as well as dry, sensitive, and stressed skin. The formula and ultra-soft TENCEL material are designed to sit comfortably on skin while delivering soothing hydration."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/complete-system }}
 
-    {{> logos-marquee }}
-
-
-
-    {{#> base-slider id="crystal_clear" title="Confident skin starts here" }}
+    {{#> customers-video }}
+        <div class="container">
+            <h2>Confident skin starts here</h2>
+            <button class="customers-video-prev">{{>e-icon icon="arrow" }}</button>
+            <button class="customers-video-next">{{>e-icon icon="arrow" }}</button>
+        </div>
         <div
             class="c-swiper"
             data-swiper='{
                 "slidesPerView": 1.2,
-                "spaceBetween": 16,
+                "spaceBetween": 6,
                 "loop": false,
-                "pagination": {
-                    "el": ".c-swiper-pagination",
-                    "type": "custom"
-                },
                 "navigation": {
-                    "prevEl": ".c-swiper-button-prev",
-                    "nextEl": ".c-swiper-button-next"
+                    "prevEl": ".customers-video-prev",
+                    "nextEl": ".customers-video-next"
                 },
                 "breakpoints": {
                     "480": {
                         "slidesPerView": 2.2
                     },
                     "768": {
+                        "slidesPerView": 3
+                    },
+                    "992": {
                         "slidesPerView": 4
                     }
                 }
@@ -774,206 +879,64 @@
         >
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    {{> c-wistia
-                        id="0vu4f6h4h8"
-                        inert=true
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
                     }}
                 </div>
                 <div class="swiper-slide">
-                    {{> c-wistia
-                        id="lmnn8fcnp4"
-                        inert=true
+                    {{> c-customer-video-card
+                        url="https://www.youtube.com/watch?v=wuIjXhlFUTU"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
                     }}
                 </div>
                 <div class="swiper-slide">
-                    {{> c-wistia
-                        id="2427ztggvj"
-                        inert=true
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
                     }}
                 </div>
                 <div class="swiper-slide">
-                    {{> c-wistia
-                        id="b79xvfj27c"
-                        inert=true
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
                     }}
                 </div>
-            </div>
-            <div class="c-swiper-nav">
-                <button class="c-swiper-button-prev"></button>
-                <div class="c-swiper-pagination"></div>
-                <button class="c-swiper-button-next"></button>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> c-customer-video-card
+                        id="opfbh936fc"
+                        thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                        name="Ellie V."
+                        text="I've seen a huge change in my skin. The dullness is gone and my fine lines are visibly softened."
+                    }}
+                </div>
             </div>
         </div>
-    {{/base-slider }}
-
-    {{> features-marquee }}
-
-    {{#> set-up-toggle }}
-        <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-first" checked />
-        <input type="radio" name="set-up-toggle-radio" id="set-up-toggle-second" />
-        {{> c-wistia
-            custom-classes="c-wistia--first"
-            id="bsfna2u1ja"
-            custom='
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-video.webp" />
-                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
-                </picture>
-            '
-        }}
-        {{> c-wistia
-            custom-classes="c-wistia--second"
-            id="fsw2ted2a8"
-            custom='
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-video.webp" />
-                    <img src="sections/set-up-toggle/images/shower-filter-use-video-mob.webp" alt="Set up in 3 easy steps" />
-                </picture>
-            '
-        }}
-        <ul class="set-up-toggle__switcher">
-            <li>
-                <label for="set-up-toggle-first">
-                    Handheld Shower
-                    <img src="sections/set-up-toggle/images/handheld-shower.webp" alt="Handheld Shower" />
-                </label>
-            </li>
-            <li>
-                <label for="set-up-toggle-second">
-                    Shower
-                    <img src="sections/set-up-toggle/images/shower.webp" alt="Shower" />
-                </label>
-            </li>
-        </ul>
-        <h2>Set up in 3 easy steps</h2>
-        <ol class="set-up-toggle__steps set-up-toggle__steps--first">
-            <li>
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-step-1.webp" />
-                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-step-1-mob.webp" alt="Detatch" />
-                </picture>
-                <h6>Detatch</h6>
-                <p>Unscrew your old handheld shower head from the hose by hand, or with a wrench (included) for more grip if needed.</p>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-step-2.webp" />
-                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-step-2-mob.webp" alt="Fit" />
-                </picture>
-                <h6>Fit</h6>
-                <p>Wrap the plumber's tape (included) around the hose connector.</p>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/handheld-shower-filter-use-step-3.webp" />
-                    <img src="sections/set-up-toggle/images/handheld-shower-filter-use-step-3-mob.webp" alt="Secure" />
-                </picture>
-                <h6>Secure</h6>
-                <p>Twist the Qure Handheld Shower Filter onto the hose and tighten it securely with the wrench.</p>
-            </li>
-        </ol>
-        <ol class="set-up-toggle__steps set-up-toggle__steps--second">
-            <li>
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-step-1.webp" />
-                    <img src="sections/set-up-toggle/images/shower-filter-use-step-1-mob.webp" alt="Detatch" />
-                </picture>
-                <h6>Detatch</h6>
-                <p>Unscrew your old shower head by hand, or with a wrench (included) for more grip if needed.</p>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-step-2.webp" />
-                    <img src="sections/set-up-toggle/images/shower-filter-use-step-2-mob.webp" alt="Fit" />
-                </picture>
-                <h6>Fit</h6>
-                <p>Wrap the plumber tape (included) around the shower pipe.</p>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width:768px)" srcset="sections/set-up-toggle/images/shower-filter-use-step-3.webp" />
-                    <img src="sections/set-up-toggle/images/shower-filter-use-step-3-mob.webp" alt="Secure" />
-                </picture>
-                <h6>Secure</h6>
-                <p>Twist the Recovery+ Sheet Mask onto the pipe and tighten it securely with the wrench.</p>
-            </li>
-        </ol>
-    {{/set-up-toggle }}
-
-    {{#> product-settings }}
-        <article>
-            <h2>Adjust the flow and angle</h2>
-            <p>Transform your shower with our rotatable filter and three customizable water flow settings, giving you the perfect angle and flow for every preference.</p>
-        </article>
-        {{> c-lifetime-warranty }}
-        <div class="c-pill-tabs">
-            <h6>Choose from three flow settings</h6>
-            <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
-                <li>
-                    <button
-                        class="active"
-                        type="button"
-                        data-bs-toggle="tab"
-                        data-bs-target="#pill-tabs-rainfall"
-                    >
-                        Rainfall
-                    </button>
-                </li>
-                <li>
-                    <button
-                        type="button"
-                        data-bs-toggle="tab"
-                        data-bs-target="#pill-tabs-massage"
-                    >
-                        Massage
-                    </button>
-                </li>
-                <li>
-                    <button
-                        type="button"
-                        data-bs-toggle="tab"
-                        data-bs-target="#pill-tabs-spray"
-                    >
-                        Power Spray
-                    </button>
-                </li>
-            </ul>
-            <div class="c-pill-tabs__pane show" id="pill-tabs-rainfall">
-                <img src="assets/images/shower_rainfall.webp" alt="Rainfall" />
-            </div>
-            <div class="c-pill-tabs__pane" id="pill-tabs-massage">
-                <img src="assets/images/shower_massage.webp" alt="Massage" />
-            </div>
-            <div class="c-pill-tabs__pane" id="pill-tabs-spray">
-                <img src="assets/images/shower_spray.webp" alt="Power Spray" />
-            </div>
-        </div>
-    {{/product-settings }}
-
-    {{#> comparison
-        title="Why choose Qure?"
-        picture-first="assets/images/eye-patches/compare_filter1.webp"
-        picture-second="assets/images/eye-patches/compare_filter2.webp"
-        name-first="Recovery+ Sheet Mask"
-        name-second="Alternative Filters"
-        list-first='[
-            "Reduces chlorine and heavy metals*",
-            "Three-step filtration system",
-            "Exceeds NSF-177 certifications ",
-            "Customizable water flow",
-            "Backed by a lifetime warranty"
-        ]'
-        list-second='[
-            "May reduce some chlorine and metals",
-            "Standard filtration system",
-            "Limited third-party testing information",
-            "No customization options",
-            "Limited or no warranty"
-        ]'
-        declaimer="*Based on laboratory testing under controlled conditions. Performance may vary depending on water quality and usage."
-    }}
-        <p>Recovery+ Sheet Mask removes more contaminants than standard showerheads, and provides better water quality than alternative filters.</p>
-    {{/comparison }}
+    {{/customers-video }}
 
     {{> have-questions
         list='[

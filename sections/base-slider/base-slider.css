@@ -783,6 +783,16 @@
   .base-slider--why-work .c-swiper:not(:first-child){
     margin-top:0;
   }
+  .base-slider--why-work .swiper-slide{
+    padding:16px;
+  }
+  .base-slider--why-work .swiper-slide h6{
+    font-size:18px;
+    text-align:left;
+  }
+  .base-slider--why-work .swiper-slide p{
+    font-size:16px;
+  }
   .base-slider--why-work .btn{
     grid-row:auto;
     grid-column:auto;

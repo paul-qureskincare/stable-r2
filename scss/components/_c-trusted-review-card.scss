@@ -6,7 +6,7 @@
     $root: &;
 
     display: grid;
-    grid-template: repeat(3, auto) / repeat(2, 1fr);
+    grid-template: repeat(3, auto) / 1fr auto;
     gap: 24px 6px;
     align-content: start;
     overflow: hidden;

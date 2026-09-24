@@ -52,7 +52,7 @@
 
 .c-trusted-review-card{
   display:grid;
-  grid-template:repeat(3, auto)/repeat(2, 1fr);
+  grid-template:repeat(3, auto)/1fr auto;
   gap:24px 6px;
   align-content:start;
   overflow:hidden;
@@ -82,7 +82,7 @@
   -webkit-backdrop-filter:blur(15px);
           backdrop-filter:blur(15px);
 }
-.c-trusted-review-card .e-pill-badge,.c-trusted-review-card article,.c-trusted-review-card picture{
+.c-trusted-review-card .c-ba-slider,.c-trusted-review-card .e-pill-badge,.c-trusted-review-card article,.c-trusted-review-card picture{
   grid-column:1 /  -1;
 }
 .c-trusted-review-card article{

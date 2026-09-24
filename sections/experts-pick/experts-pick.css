@@ -64,6 +64,14 @@
   flex-direction:column;
   gap:12px;
 }
+.experts-pick article h6:first-child{
+  margin-bottom:16px;
+  color:#b5b6b7;
+  font-family:inherit;
+  font-size:14px;
+  text-transform:uppercase;
+  margin-bottom:0;
+}
 .experts-pick article p{
   max-width:650px;
 }
@@ -101,6 +109,14 @@
 @media screen and (max-width:767px){
   .experts-pick .container{
     grid-template:auto/auto;
+  }
+  .experts-pick article h2{
+    text-align:center;
+  }
+  .experts-pick article h6:first-child{
+    margin-bottom:8px;
+    margin-bottom:-4px;
+    text-align:center;
   }
   .experts-pick picture{
     grid-row:auto;

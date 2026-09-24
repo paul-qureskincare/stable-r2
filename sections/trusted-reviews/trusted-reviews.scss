@@ -17,6 +17,13 @@
         }
     }
 
+    .container {
+        & > h6 {
+            @include small-first-title;
+            text-align: center;
+        }
+    }
+
     h2 {
         margin-bottom: 36px;
         text-align: center;
@@ -25,6 +32,7 @@
             margin-bottom: 20px;
         }
     }
+
 
     .c-trusted-review-card {
         max-width: 400px;

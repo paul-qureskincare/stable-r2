@@ -817,6 +817,85 @@
 
     {{> features-marquee }}
 
+    {{#> usage-steps }}
+        <div class="container">
+            <article>
+                <h2>Restore your hair health in just 12 minutes a day</h2>
+                {{> c-wistia
+                    id="wvoucso35j"
+                    custom='
+                        <div class="c-wistia__link">
+                            <span>Watch the video</span>
+                            <i class="e-icon e-icon-watch"></i>
+                        </div>
+                    '
+                }}
+            </article>
+        </div>
+        <div class="container">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.1,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2.2,
+                            "spaceBetween": 24
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture data-index="1">
+                            <source media="(min-width:768px)" srcset="assets/images/across-slider/steps-to-use-1.webp" />
+                            <img src="assets/images/across-slider/steps-to-use-1-mob.webp" alt="1. Prepare" />
+                        </picture>
+                        <article>
+                            <h6>1. Prepare</h6>
+                            <p>Start with clean, dry hair and place the helmet comfortably on your head.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="2">
+                            <source media="(min-width:768px)" srcset="assets/images/across-slider/steps-to-use-2.webp" />
+                            <img src="assets/images/across-slider/steps-to-use-2-mob.webp" alt="2. Treatment" />
+                        </picture>
+                        <article>
+                            <h6>2. Treatment</h6>
+                            <p>Press start, select your zone, and relax for 12 minutes while the lights work.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="3">
+                            <source media="(min-width:768px)" srcset="assets/images/across-slider/steps-to-use-3.webp" />
+                            <img src="assets/images/across-slider/steps-to-use-3-mob.webp" alt="3. Aftercare" />
+                        </picture>
+                        <article>
+                            <h6>3. Aftercare</h6>
+                            <p>The helmet shuts off automatically; remove and store until your next session.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/usage-steps }}
+
     {{#> how-to-helmet
         title="Restore your hair health in just 12 minutes a day"
         video="wvoucso35j"

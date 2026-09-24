@@ -1,0 +1,173 @@
+@use "@root/mixins" as *;
+
+.usage-steps {
+    $root: &;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include sm {
+        gap: 24px;
+    }
+
+    .container {
+        & > article {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+
+            @include sm {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            h6 {
+                @include small-first-title;
+
+                &:first-child {
+                    margin-bottom: 0;
+
+                    @include sm {
+                        margin-bottom: -8px;
+                    }
+                }
+            }
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            .c-wistia__link {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                margin-right: 16px;
+                color: #ff5429;
+                font-size: 20px;
+                font-weight: 600;
+
+                .e-icon {
+                    -webkit-text-stroke: 0.5px;
+                }
+            }
+
+            .e-pill-badge {
+                grid-row: 1 / -1;
+                grid-column: 2;
+                gap: 4px;
+                margin-left: auto;
+                padding: 8px 12px;
+                font-size: 14px;
+
+                @include sm {
+                    grid-row: auto;
+                    grid-column: auto;
+                    margin-right: auto;
+                }
+            }
+
+            &:has(h6:first-child) {
+                display: grid;
+                grid-template: repeat(2, auto) / repeat(2, auto);
+                gap: 16px;
+                align-items: center;
+                justify-content: unset;
+
+                @include sm {
+                    grid-template: auto / auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .container:has(.c-swiper) {
+        margin-right: 0;
+        padding-right: 0;
+
+        @media screen and (min-width: 1200px) {
+            @include max-width(1172px);
+        }
+
+        @media screen and (min-width: 1400px) {
+            @include max-width(1232px);
+        }
+
+        @include sm {
+            padding-right: 16px;
+        }
+    }
+
+    .c-swiper {
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+        overflow: hidden;
+        max-width: 100vw;
+
+        picture {
+            position: relative;
+
+            @include sm {
+                flex: none;
+                width: 100px;
+            }
+
+            &[data-index] {
+                &::before {
+                    top: 12px;
+                    left: 12px;
+                    @include index-number;
+                    color: #212428;
+                    font-size: 20px;
+                    background: #fff;
+                    content: attr(data-index);
+
+                    @include sm {
+                        top: 5px;
+                        left: 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+
+            @include sm {
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        article {
+            padding-top: 24px;
+        }
+
+        h6 {
+            margin-bottom: 8px;
+            font-family: inherit;
+            font-weight: 500;
+        }
+    }
+
+    .c-swiper-nav {
+        padding-right: 16px;
+
+        @media screen and (min-width: 1200px) {
+            @include side-space("padding-right", 1172px);
+        }
+
+        @media screen and (min-width: 1400px) {
+            @include side-space("padding-right", 1232px);
+        }
+    }
+}

@@ -4,13 +4,16 @@
 {{/unless}}
 <section class="base-slider {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
+        {{#if small-title }}
+            <h6>{{ small-title }}</h6>
+        {{/if }}
         {{#if title }}
             <h2>{{ title }}</h2>
-        {{/if}}
+        {{/if }}
         {{> @partial-block }}
         {{#if button }}
             <a class="btn btn--primary" href="#">{{ button }}</a>
-        {{/if}}
+        {{/if }}
     </div>
 </section>
 <!-- BASE SLIDER END -->
