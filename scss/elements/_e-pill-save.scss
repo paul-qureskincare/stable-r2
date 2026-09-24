@@ -17,4 +17,8 @@
         color: var(--e-pill-save-color);
         background: hsl(from var(--e-pill-save-color) h s calc(l + 37));
     }
+
+    &--bf {
+        background: linear-gradient(75deg, #ff4e22 0%, #ff4e22 65%, #ff8566 90%);
+    }
 }

@@ -2,13 +2,22 @@
 {{!-- <link rel="stylesheet" href="sections/cart/cart.css" /> --}}
 <dialog class="flyout-cart" id="cartCanvas">
     <div id="cart-dynamic-content" class="flyout-cart__dynamic">
-        <div class="cart-countdown-time" data-countdown-time="15" data-timeout-message="Time is up!">
+        {{!-- <div class="cart-countdown-time" data-countdown-time="15" data-timeout-message="Time is up!">
             <span><strong>IN HIGH DEMAND</strong> | Items reserved for:</span>
             <span class="cart-counter">
                 <span class="cart-counter-block countdown-timer-minute">00</span>
                 <span class="cart-counter-block countdown-timer-sec">00</span>
             </span>
             <span class="countdown-message"></span>
+        </div> --}}
+        <div class="flyout-cart__bf-countdown">
+            <p>Black Friday Sale Ends In:</p>
+            <div class="e-countdown" data-deadline="2026-11-30 23:59:59">
+                <div data-key="d">00</div>
+                <div data-key="h">00</div>
+                <div data-key="m">00</div>
+                <div data-key="s">00</div>
+            </div>
         </div>
         <div class="flyout-cart__wrapper">
             <div class="flyout-cart__header">
@@ -22,7 +31,7 @@
                 </button>
             </div>
             <div class="flyout-cart__content">
-                <div class="flyout-cart__gifts">
+                {{!-- <div class="flyout-cart__gifts">
                     <p>You're $21 way from a FREE Silk Pillowcase (worth $79)</p>
                     <ul style="--gifts-progress: 40%;">
                         <li class="active" style="--gifts-icon-pos: 20%">
@@ -38,6 +47,19 @@
                             <!-- <i class="e-icon e-icon-patches"></i> -->
                             <!-- <i class="e-icon e-icon-mist"></i> -->
                             <span>$400</span>
+                        </li>
+                    </ul>
+                </div> --}}
+                <div class="flyout-cart__unlocked">
+                    <p>You’ve unlocked:</p>
+                    <ul >
+                        <li class="unlocked">
+                            <small>Free Shipping</small>
+                            <span>{{> e-icon icon="truck" }}</span>
+                        </li>
+                        <li>
+                            <small>Free Pillowcase</small>
+                            <span>{{> e-icon icon="pillow" }}</span>
                         </li>
                     </ul>
                 </div>
@@ -191,6 +213,14 @@
                         </label>
                     </div>
                     <ul class="cart-footer__summary">
+                        <li>
+                            <div><div class="e-pill-save e-pill-save--bf">BLACK FRIDAY SAVINGS</div></div>
+                            <div class="e-price e-price--highlight">
+                                <div class="e-price__main">
+                                    <div class="e-price__current">$287</div>
+                                </div>
+                            </div>
+                        </li>
                         <li>
                             <div><div class="e-pill-save">Exclusive savings</div></div>
                             <div class="e-price e-price--highlight">
