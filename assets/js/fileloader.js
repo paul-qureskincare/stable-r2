@@ -13,7 +13,6 @@
 
    const sectionsToLoad = [
       { file: './site-header.html', targetId: 'site-header' },
-      { file: './site-header-new.html', targetId: 'site-header-new' },
       { file: './site-footer.html', targetId: 'site-footer' },
       { file: './site-cart-drawer.html', targetId: 'site-cart-drawer' },
    ];
