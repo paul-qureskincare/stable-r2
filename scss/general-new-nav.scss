@@ -35,7 +35,7 @@
 @use "@components/c-info" as *;
 
 // Sections
-@use "@sections/header-new/header-new" as *;
+@use "@sections/header/header" as *;
 @use "@sections/cart/cart" as *;
 @use "@sections/footer-benefits/footer-benefits" as *;
 @use "@sections/footer-promo/footer-promo" as *;
@@ -49,8 +49,3 @@
 @use "@sections/base-slider/base-slider" as *;
 @use "@sections/have-questions/have-questions" as *;
 @use "@sections/text-section/text-section" as *;
-
-
-.announcement-bar {
-    background: #FFEEEA !important;
-}

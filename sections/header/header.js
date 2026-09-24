@@ -105,8 +105,18 @@
         const btn = e.target.closest('#hamburger');
         if (!btn) return;
 
-        const open = document.body.classList.toggle(MOBILE_OPEN_CLASS);
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.add(MOBILE_OPEN_CLASS);
+        btn.setAttribute('aria-expanded', 'true');
+    });
+
+    // Close on dismiss button click
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('#dismiss-menu');
+        if (!btn) return;
+
+        document.body.classList.remove(MOBILE_OPEN_CLASS);
+        const hamburgerBtn = document.getElementById('hamburger');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'false');
     });
 
     // Close on resize
