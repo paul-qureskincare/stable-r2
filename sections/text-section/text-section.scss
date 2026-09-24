@@ -278,6 +278,40 @@
         }
     }
 
+    // .text-section--row
+    &--row {
+        article {
+            display: grid;
+            grid-template: repeat(2, auto) / 1fr 32%;
+            column-gap: 60px;
+            align-items: center;
+            max-width: none;
+            text-align: left;
+
+            @include sm {
+                grid-template: auto / auto;
+                text-align: center;
+            }
+
+            .btn {
+                grid-row: 1 / -1;
+                grid-column: 2;
+
+                @include sm {
+                    grid-row: auto;
+                    grid-column: auto;
+                    margin-top: 24px;
+                }
+            }
+
+            p {
+                @include sm {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
     /* stylelint-disable-next-line selector-class-pattern */
     body.page\.exclusive-holiday-bundle-deal & {
         padding-top: 60px;

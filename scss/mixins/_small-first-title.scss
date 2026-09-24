@@ -1,0 +1,15 @@
+@use "media" as *;
+
+@mixin small-first-title {
+    &:first-child {
+        margin-bottom: 16px;
+        color: #b5b6b7;
+        font-family: inherit;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        @include sm {
+            margin-bottom: 8px;
+        }
+    }
+}

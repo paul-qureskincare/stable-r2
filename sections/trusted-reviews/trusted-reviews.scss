@@ -1,11 +1,12 @@
 @use "@root/mixins" as *;
 @use "@elements/e-declaimer" as *;
 @use "@components/c-trusted-review-card" as *;
+@use "@components/c-ba-slider" as *;
 
 .trusted-reviews {
     $root: &;
 
-    &:not(.trusted-reviews--light) {
+    &:not(.trusted-reviews--light, .trusted-reviews--ba-slider) {
         padding-top: 60px;
         padding-bottom: 60px;
         background: #f6f6f7;
@@ -13,6 +14,13 @@
         @include sm {
             padding-top: 40px;
             padding-bottom: 40px;
+        }
+    }
+
+    .container {
+        & > h6 {
+            @include small-first-title;
+            text-align: center;
         }
     }
 
@@ -24,6 +32,7 @@
             margin-bottom: 20px;
         }
     }
+
 
     .c-trusted-review-card {
         max-width: 400px;
@@ -182,6 +191,35 @@
 
             @include sm {
                 margin-bottom: 24px;
+            }
+        }
+    }
+
+    &--ba-slider {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: none;
+
+        @include sm {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .c-trusted-review-card {
+            row-gap: 16px;
+            border: 0;
+
+            h6 {
+                margin-bottom: 14px;
+            }
+
+            .e-author,
+            .e-verified-customer {
+                margin: 0;
+            }
+
+            article {
+                padding: 0;
             }
         }
     }

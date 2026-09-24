@@ -11,6 +11,7 @@
 >
     <div class="container">
         {{#if trustpilot }}{{> e-icon icon="qure"}}{{/if }}
+        {{#if small-title }}<h6>{{ small-title }}</h6>{{/if }}
         <h2>{{ title }}</h2>
         {{#if trustpilot }}
             <div class="trustpilot-rating">
@@ -33,6 +34,7 @@
                 "slidesPerView": 1.1,
                 "spaceBetween": 16,
                 "loop": false,
+                {{#if disabled-touch }}"allowTouchMove": false,{{/if }}
                 "pagination": {
                     "el": ".c-swiper-pagination",
                     "type": "custom"
@@ -43,12 +45,12 @@
                 },
                 "breakpoints": {
                     "768": {
+                        {{#if disabled-touch }}"allowTouchMove": true,{{/if }}
                         "slidesPerView": 2
                     },
                     "992": {
                         "spaceBetween": 24,
                         "slidesPerView": 3
-                        {{!-- "slidesPerView": {{#if trustpilot }}3.3{{ else }}3{{/if }} --}}
                     }
                 }
             }'
@@ -79,4 +81,9 @@
         {{/if}}
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('ba-slider', 'assets/js/c-ba-slider.js');
+    });
+</script>
 <!-- TRUSTED REVIEWS END -->

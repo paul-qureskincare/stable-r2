@@ -168,6 +168,19 @@ body.page\.our-story .text-section--stats ul span{
   text-decoration:none;
   border-bottom-color:transparent;
 }
+.text-section--row article{
+  display:grid;
+  grid-template:repeat(2, auto)/1fr 32%;
+  -moz-column-gap:60px;
+       column-gap:60px;
+  align-items:center;
+  max-width:none;
+  text-align:left;
+}
+.text-section--row article .btn{
+  grid-row:1 /  -1;
+  grid-column:2;
+}
 body.page\.exclusive-holiday-bundle-deal .text-section{
   padding-top:60px;
   padding-bottom:60px;
@@ -251,6 +264,18 @@ body.page\.contact-us .text-section article a:hover{
   .text-section--stats .footnote{
     flex-direction:column;
     gap:8px;
+  }
+  .text-section--row article{
+    grid-template:auto/auto;
+    text-align:center;
+  }
+  .text-section--row article .btn{
+    grid-row:auto;
+    grid-column:auto;
+    margin-top:24px;
+  }
+  .text-section--row article p{
+    font-size:16px;
   }
   body.page\.exclusive-holiday-bundle-deal .text-section{
     padding-top:40px;

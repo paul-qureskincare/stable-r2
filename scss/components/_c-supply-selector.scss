@@ -88,7 +88,7 @@
 
         &:has(picture) {
             #{$root}__main {
-                grid-template: repeat(2, auto) / 50px 1fr auto;
+                grid-template: repeat(2, auto) / 65px 1fr auto;
             }
 
             #{$root}__image {
@@ -450,11 +450,11 @@
     // .c-supply-selector--delivery
     &--delivery {
         #{$root}__label {
-            &:has(picture) {
+            /* &:has(picture) {
                 #{$root}__main {
                     grid-template-columns: 65px 1fr auto;
                 }
-            }
+            } */
 
             &:not(:has(#{$root}__save del)) {
                 .e-price {

@@ -7,6 +7,7 @@
 ">
     <div class="container">
         <article>
+            {{#if small-title }}<h6>{{ small-title }}</h6>{{/if }}
             <h2>{{ title }}</h2>
             {{#if square }}
                 <div
@@ -40,7 +41,11 @@
                                 <img src="sections/accordion-tiles/images/{{ image }}.webp" alt="{{ summary }}" />
                                 <details>
                                     <summary>{{ summary }} {{> e-icon icon="plus"}}</summary>
+                                    {{#if html }}
+                                        {{{ html }}}
+                                    {{ else }}
                                     <p>{{ text }}</p>
+                                    {{/if }}
                                 </details>
                             </div>
                         {{/parseJson}}

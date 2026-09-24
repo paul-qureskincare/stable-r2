@@ -106,6 +106,55 @@
   --left:50%;
   --line-size:100px;
 }
+.c-product-components--recovery-mask .e-component-pointer{
+  align-items:start;
+  opacity:1;
+}
+.c-product-components--recovery-mask .e-component-pointer:before{
+  border-color:rgba(145,186,236,.2);
+  background:#91baec;
+  background-clip:content-box;
+}
+.c-product-components--recovery-mask .e-component-pointer hr{
+  position:relative;
+  display:block;
+  overflow:visible;
+  width:100%;
+  height:1px;
+  margin-top:12px;
+  border:0;
+  background:rgba(145,186,236,.5);
+}
+.c-product-components--recovery-mask .e-component-pointer div{
+  display:flex;
+  flex-direction:column;
+}
+.c-product-components--recovery-mask .e-component-pointer strong{
+  white-space:nowrap;
+}
+.c-product-components--recovery-mask .e-component-pointer small{
+  color:#91baec;
+  font-size:.9em;
+}
+.c-product-components--recovery-mask .e-component-pointer:nth-child(2){
+  --top:20%;
+  --left:auto;
+  right:0;
+  width:50%;
+  text-align:right;
+}
+.c-product-components--recovery-mask .e-component-pointer:nth-child(3){
+  --top:45%;
+  --left:5%;
+  width:35%;
+}
+.c-product-components--recovery-mask .e-component-pointer:last-child{
+  --top:55%;
+  --left:auto;
+  right:0;
+  width:44%;
+  text-align:right;
+}
 
 .why-it-works .container{
   display:flex;
@@ -116,6 +165,13 @@
 }
 .why-it-works h2{
   margin-bottom:32px;
+}
+.why-it-works h6:first-child{
+  margin-bottom:16px;
+  color:#b5b6b7;
+  font-family:inherit;
+  font-size:14px;
+  text-transform:uppercase;
 }
 .why-it-works__main{
   display:grid;
@@ -128,6 +184,33 @@
 }
 .why-it-works__according .c-accordion__item .e-icon{
   font-size:24px;
+}
+.why-it-works__according .c-accordion__item .e-icon-verified-shield{
+  -webkit-text-stroke:.4px;
+}
+.why-it-works__according .c-accordion__item .e-icon-waves-2{
+  -webkit-text-stroke:.15px;
+}
+.why-it-works__components:has(.c-product-components--recovery-mask){
+  position:relative;
+  align-self:start;
+}
+.why-it-works__components:has(.c-product-components--recovery-mask) .e-pill-badge{
+  --badge-base-color:#3a4a61;
+  --badge-fill-color:rgba(233,240,251,.9);
+  position:absolute;
+  bottom:15%;
+  left:0;
+}
+.why-it-works__components:has(.c-product-components--recovery-mask) .e-pill-badge .e-icon{
+  color:#42669f;
+}
+.why-it-works__components:has(.c-product-components--recovery-mask) .e-declaimer{
+  position:absolute;
+  top:100%;
+  left:22%;
+  margin-top:-30px;
+  font-size:14px;
 }
 @media screen and (max-width:1120px){
   .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
@@ -157,6 +240,9 @@
   .c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]){
     --line-size:20vw;
   }
+  .c-product-components--recovery-mask .e-component-pointer:last-child{
+    --top:35%;
+  }
   .why-it-works__main{
     grid-template-columns:auto;
     gap:0;
@@ -169,13 +255,51 @@
   .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]){
     --line-size:15vw;
   }
+  .c-product-components--recovery-mask .e-component-pointer div{
+    font-size:14px;
+  }
+  .c-product-components--recovery-mask .e-component-pointer:nth-child(2){
+    --top:10%;
+    width:56%;
+  }
+  .c-product-components--recovery-mask .e-component-pointer:nth-child(3){
+    --top:65%;
+    --left:auto;
+    right:0;
+    width:45%;
+    text-align:right;
+  }
+  .c-product-components--recovery-mask .e-component-pointer--reverse{
+    flex-direction:row;
+  }
+  .c-product-components--recovery-mask .e-component-pointer--reverse hr{
+    margin-right:10px;
+    margin-left:0;
+  }
   .why-it-works .container{
     gap:24px;
   }
   .why-it-works h2{
     margin-bottom:16px;
   }
+  .why-it-works h6:first-child{
+    margin-bottom:8px;
+  }
   .why-it-works__components{
     order:-1;
+  }
+  .why-it-works__components:has(.c-product-components--recovery-mask) .e-pill-badge{
+    right:0;
+    bottom:18%;
+    left:auto;
+    font-size:14px;
+  }
+  .why-it-works__components:has(.c-product-components--recovery-mask) .e-declaimer{
+    position:static;
+    max-width:230px;
+    margin-top:12px;
+    margin-bottom:8px;
+    padding-left:6px;
+    border-left:1px solid #dfe0e0;
   }
 }

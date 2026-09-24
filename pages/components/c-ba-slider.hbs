@@ -1,0 +1,23 @@
+<div class="c-ba-slider" style="--position: {{or position 50}}%;">
+    <figure class="c-ba-slider__image-before">
+        <img src="{{ before-image }}" alt="Before and after result" />
+        {{#if before-label }}<figcaption>{{ before-label }}</figcaption>{{/if}}
+    </figure>
+    <figure class="c-ba-slider__image-after">
+        <img src="{{ after-image }}" alt="Before and after result" />
+        {{#if after-label }}<figcaption>{{ after-label }}</figcaption>{{/if}}
+    </figure>
+    <input
+        class="c-ba-slider__input"
+        type="range"
+        min="0"
+        max="100"
+        step="1"
+        value="{{or position 50}}"
+        aria-label="{{ slider-label }}"
+    />
+    <div class="c-ba-slider__arrows">
+        {{> e-icon icon="arrow-back" }}
+        {{> e-icon icon="arrow" }}
+    </div>
+</div>

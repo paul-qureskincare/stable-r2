@@ -1,0 +1,198 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/why-it-works/why-it-works" as *;
+@use "@sections/accordion-tiles/accordion-tiles" as *;
+@use "@sections/experts-pick/experts-pick" as *;
+@use "@sections/across-gallery/across-gallery" as *;
+@use "@sections/usage-steps/usage-steps" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/complete-system/complete-system" as *;
+@use "@sections/features-marquee/features-marquee" as *;
+@use "@sections/customers-video/customers-video" as *;
+
+// Styles for current page only
+.hero-product {
+    .c-accordion {
+        .e-icon {
+            color: #91baec;
+            font-size: 16px;
+        }
+
+        .e-declaimer {
+            display: flex;
+            gap: 6px;
+            font-size: 12px;
+
+        }
+
+        p {
+            &:has(.e-icon-snow) {
+                display: flex;
+                gap: 6px;
+                line-height: 16px;
+            }
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                &:not(:last-child) {
+                    td {
+                        padding-bottom: 16px;
+                    }
+                }
+            }
+
+            td {
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.across-gallery {
+    .container {
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    article {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(2, auto);
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: left;
+
+        @media (max-width: 1400px) {
+            max-width: 1140px;
+        }
+
+        @include lg {
+            max-width: none;
+        }
+
+        @include sm {
+            grid-template: auto / auto;
+            gap: 16px;
+            text-align: center;
+        }
+
+        h6 {
+            @include small-first-title;
+
+            &:first-child {
+                margin-bottom: 0;
+
+                @include sm {
+                    margin-bottom: -8px;
+                }
+            }
+        }
+
+        p {
+            max-width: 400px;
+            color: #8b8c8e;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            grid-row: 1 / -1;
+            grid-column: 2;
+            gap: 10px;
+            align-items: center;
+            place-content: center flex-end;
+            max-width: 526px;
+            margin-left: auto;
+
+            @include sm {
+                flex-wrap: nowrap;
+                grid-row: auto;
+                grid-column: auto;
+                justify-content: start;
+                overflow: auto;
+                margin-right: -16px;
+                scrollbar-width: none;
+            }
+        }
+
+        .e-pill-badge {
+            --badge-base-color: #3a4a61;
+
+            padding: 8px;
+            font-size: 14px;
+        }
+    }
+}
+
+.base-slider {
+    .container {
+        grid-template-rows: repeat(3, auto);
+        row-gap: 0;
+        align-items: center;
+    }
+
+    h6 {
+        @include small-first-title;
+        text-align: left;
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    h2 {
+        margin-bottom: 24px;
+
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    .btn {
+        grid-row: 1 / 3;
+        margin-bottom: 24px;
+
+        @include sm {
+            grid-row: auto;
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+    }
+
+    .c-swiper {
+        grid-row: 3;
+
+        @include sm {
+            grid-row: auto;
+        }
+    }
+
+    .swiper-slide {
+        img {
+             aspect-ratio: 25 / 19;
+        }
+    }
+}
+
+.usage-steps {
+     .container {
+        & > article {
+            .e-pill-badge {
+                --badge-base-color: #212428;
+                --badge-fill-color: #e9f0fb;
+
+                .e-icon, span {
+                    color: #91baec;
+                }
+            }
+        }
+    }
+}

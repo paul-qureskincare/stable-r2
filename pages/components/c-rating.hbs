@@ -7,7 +7,7 @@
     {{#if custom }}
         <span>{{ custom }} {{#if value }}<strong>{{ value }}</strong>/5{{/if }}</span>
     {{ else }}
-        <a href="#"><strong>{{ value }}</strong>/5 Rated by Customers</a>
+        <a href="#"><strong>{{ value }}</strong>/5 {{#if reviews }}• {{ reviews }} reviews{{ else }}Rated by Customers{{/if }}</a>
     {{/if }}
     {{#if trustpilot }}
         <img src="assets/images/trustpilot.webp" alt="Trustpilot" />

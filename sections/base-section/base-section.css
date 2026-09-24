@@ -460,6 +460,17 @@
 .c-accordion__content p:not(:last-child),.c-accordion__content ul:not(:last-child){
   margin-bottom:16px;
 }
+.c-accordion__content ul h3{
+  margin-bottom:0;
+  font-family:inherit;
+  font-size:1.135em;
+  font-weight:400;
+}
+.c-accordion__content ul:has(h3){
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
 .c-accordion__content a{
   color:inherit;
   text-decoration:underline;

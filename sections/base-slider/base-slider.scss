@@ -171,6 +171,10 @@
             border-radius: 10px;
             background: #f6f6f7;
 
+            @include sm {
+                padding: 16px;
+            }
+
             img {
                 max-width: 250px;
                 height: auto;
@@ -183,6 +187,17 @@
                 margin-bottom: 0;
                 font-family: inherit;
                 font-weight: 600;
+
+                @include sm {
+                    font-size: 18px;
+                    text-align: left;
+                }
+            }
+
+            p {
+                @include sm {
+                    font-size: 16px;
+                }
             }
         }
 

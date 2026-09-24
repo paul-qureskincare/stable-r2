@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    align-items: flex-start;
     list-style: none;
 
     // .c-benefit-grid__item
@@ -29,6 +30,10 @@
         .e-icon {
             color: var(--color-ice, #91baec);
             font-size: 16px;
+        }
+
+        .e-icon-waves-2 {
+            -webkit-text-stroke: 0.5px;
         }
     }
 
@@ -69,6 +74,7 @@
         #{$root}__item {
             gap: 10px;
             align-items: center;
+            max-width: 210px;
         }
 
         // .c-benefit-grid--sm .c-benefit-grid__icon
