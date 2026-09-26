@@ -4,7 +4,7 @@
 {{/unless}}
 <div id="announcement-bar" class="announcement-bar">
     <div class="announcement-bar-content">
-        <div
+        {{!-- <div
             class="c-swiper"
             data-swiper='{
                 "slidesPerView": 1,
@@ -32,6 +32,32 @@
                             }}
                         </div>
                     </div>
+                </div>
+            </div>
+        </div> --}}
+        <div class="bf-reward-progress">
+            <p class="bf-reward-progress__text">You’re $40 away from <strong>Free Silk Pillowcase</strong> worth $99!</p>
+            <div class="bf-reward-progress__unlocked">
+                <ul>
+                    <li class="unlocked">
+                        {{> e-icon icon="checkmark" }}
+                        <small>Free Shipping</small>
+                        <span>{{> e-icon icon="truck" }}</span>
+                    </li>
+                    <li>
+                        <div style="--reward-progress: 70%;"></div>
+                        <small>Free Pillowcase</small>
+                        <span>{{> e-icon icon="pillow-fill" }}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bf-reward-progress__countdown">
+                <p>Black Friday Sale Ends In:</p>
+                <div class="e-countdown" data-deadline="2026-11-30 23:59:59">
+                    <div data-key="d">00</div>
+                    <div data-key="h">00</div>
+                    <div data-key="m">00</div>
+                    <div data-key="s">00</div>
                 </div>
             </div>
         </div>
