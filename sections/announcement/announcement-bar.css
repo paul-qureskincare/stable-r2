@@ -30,6 +30,9 @@
   width:100%;
   background:#ffeeea;
 }
+.announcement-bar:has(.bf-reward-progress){
+  background:#fff;
+}
 .announcement-bar .c-swiper{
   margin:0;
   padding:0;
@@ -92,17 +95,189 @@
   line-height:10px;
   letter-spacing:0;
 }
+.announcement-bar .bf-reward-progress{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  width:100%;
+  max-width:1232px;
+  margin-right:auto;
+  margin-left:auto;
+  padding-right:16px;
+  padding-left:16px;
+  font-size:14px;
+}
+.announcement-bar .bf-reward-progress__unlocked{
+  padding:4px;
+  border-radius:100px;
+  box-shadow:0 0 2px 0 rgba(0,0,0,.2);
+}
+.announcement-bar .bf-reward-progress__unlocked ul{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  border-radius:30px;
+}
+.announcement-bar .bf-reward-progress__unlocked ul li{
+  display:flex;
+  gap:4px;
+  align-items:center;
+  padding:4px;
+  border-radius:30px;
+}
+.announcement-bar .bf-reward-progress__unlocked ul li.unlocked{
+  padding-left:8px;
+  box-shadow:0 0 4px rgba(0,0,0,.12);
+  background:#ffeeea;
+}
+.announcement-bar .bf-reward-progress__unlocked ul li.unlocked .e-icon-checkmark{
+  font-size:8px;
+}
+.announcement-bar .bf-reward-progress__unlocked ul li.unlocked small{
+  background:none;
+  -webkit-text-fill-color:unset;
+}
+.announcement-bar .bf-reward-progress__unlocked ul li.unlocked span{
+  color:#fff;
+  border-color:#ff5429;
+  background:#ff5429;
+}
+.announcement-bar .bf-reward-progress__unlocked ul li:has(div[style]) span{
+  color:#a6a6a6;
+}
+.announcement-bar .bf-reward-progress__unlocked ul div[style]{
+  position:relative;
+  width:50px;
+  height:4px;
+  border-radius:10px;
+  background:#d9d9d9;
+}
+.announcement-bar .bf-reward-progress__unlocked ul div[style]:before{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  z-index:1;
+  width:var(--reward-progress);
+  border-radius:10px;
+  background:#ff5429;
+  content:" ";
+}
+.announcement-bar .bf-reward-progress__unlocked ul small{
+  font-size:12px;
+  background:linear-gradient(90deg, #a6a6a6, #d9d9d9 50%, #a6a6a6 95%);
+  -webkit-background-clip:text;
+          background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.announcement-bar .bf-reward-progress__unlocked ul span{
+  display:flex;
+  flex:none;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  color:#d9d9d9;
+  font-size:10px;
+  border:1px solid;
+  border-radius:50%;
+}
+.announcement-bar .bf-reward-progress__countdown{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  margin-left:auto;
+}
+.announcement-bar .bf-reward-progress__countdown .e-countdown [data-key]{
+  gap:0;
+  width:40px;
+  color:#ff5429;
+  font-size:25px;
+  font-weight:300;
+  letter-spacing:0;
+}
+.announcement-bar .bf-reward-progress__countdown .e-countdown [data-key]:after{
+  color:#b5b6b7;
+  font-size:8px;
+}
+.announcement-bar .bf-reward-progress__countdown .e-countdown [data-key]:not(:first-child){
+  border-color:#dfe0e0;
+}
 body:has(.announcement-bar){
   --height-bar:50px;
+}
+body:has(.announcement-bar .bf-reward-progress) .header{
+  border-top:1px solid #f7f7f7;
 }
 
 .announcement-bar.scroll-hiding{
   transform:translateY(-100px);
 }
 
+@media screen and (min-width:992px){
+  .announcement-bar .bf-reward-progress__unlocked ul:not(:has(li:not(.unlocked))){
+    gap:4px;
+    box-shadow:0 0 4px rgba(0,0,0,.12);
+    background:#ffeeea;
+  }
+  .announcement-bar .bf-reward-progress__unlocked ul:not(:has(li:not(.unlocked))) li{
+    box-shadow:none;
+  }
+}
+
+@media screen and (max-width:1400px){
+  .announcement-bar .bf-reward-progress{
+    max-width:1172px;
+  }
+}
+
+@media screen and (max-width:1120px){
+  .announcement-bar .bf-reward-progress{
+    gap:8px;
+  }
+}
+
 @media screen and (max-width:991px){
   .announcement-bar-offer-countdown{
     font-size:14px;
+  }
+  .announcement-bar .bf-reward-progress{
+    flex-direction:column;
+  }
+  .announcement-bar .bf-reward-progress__unlocked{
+    padding:2px;
+  }
+  .announcement-bar .bf-reward-progress__unlocked ul{
+    gap:8px;
+  }
+  .announcement-bar .bf-reward-progress__unlocked ul li{
+    padding:2px;
+  }
+  .announcement-bar .bf-reward-progress__unlocked ul li.unlocked{
+    padding-left:4px;
+  }
+  .announcement-bar .bf-reward-progress__unlocked ul span{
+    width:18px;
+    height:18px;
+  }
+  .announcement-bar .bf-reward-progress__countdown{
+    gap:2px;
+    margin-left:unset;
+  }
+  .announcement-bar .bf-reward-progress__countdown p{
+    font-size:12px;
+    font-weight:300;
+  }
+  .announcement-bar .bf-reward-progress__countdown .e-countdown [data-key]{
+    width:24px;
+    font-size:14px;
+    font-weight:400;
+  }
+  .announcement-bar .bf-reward-progress__countdown .e-countdown [data-key]:after{
+    display:none;
+  }
+  body:has(.announcement-bar .bf-reward-progress){
+    --height-bar:96px;
   }
 }
 
