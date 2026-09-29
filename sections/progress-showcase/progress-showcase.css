@@ -1,0 +1,124 @@
+.progress-showcase .container{
+  display:grid;
+  grid-template:auto 1fr auto/1fr 1fr;
+  -moz-column-gap:80px;
+       column-gap:80px;
+}
+.progress-showcase .e-pill-badge{
+  --badge-base-color:#ff5429;
+  border:1px solid;
+}
+.progress-showcase [data-swiper-thumbs]{
+  grid-row:1 /  -1;
+  grid-column:2;
+  margin:0;
+  padding:0;
+}
+.progress-showcase h2{
+  max-width:400px;
+}
+.progress-showcase .c-swiper-metrics{
+  margin-bottom:24px;
+}
+.progress-showcase .c-swiper-metrics .swiper-slide{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc{
+  position:relative;
+  margin-top:auto;
+  margin-bottom:10px;
+}
+.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc:after{
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  height:40px;
+  border-radius:12px;
+  background:#f2f2f2;
+  content:"";
+}
+.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc>div{
+  position:relative;
+  z-index:1;
+  width:var(--progress-value);
+  padding-bottom:50px;
+  border-right:1px solid #252525;
+}
+.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc>div:after{
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:-1;
+  height:40px;
+  border-radius:12px 0 0 12px;
+  background:#c7e5db;
+  content:"";
+}
+.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc h6{
+  font-size:56px;
+  line-height:1;
+}
+.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc p{
+  font-size:16px;
+}
+.progress-showcase .c-swiper-metrics .swiper-slide small{
+  display:block;
+  color:#6d6d6d;
+  font-size:14px;
+}
+.progress-showcase__nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#666;
+  text-align:center;
+}
+.progress-showcase__nav button{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:0;
+  color:#252525;
+  font-size:16px;
+  border:0;
+  background:none;
+}
+.progress-showcase__nav button:first-child .e-icon{
+  transform:rotate(180deg);
+}
+.progress-showcase__nav button:disabled{
+  opacity:.5;
+}
+.progress-showcase__nav .e-icon{
+  font-size:12px;
+  vertical-align:top;
+  -webkit-text-stroke:.5px;
+}
+.progress-showcase__nav-pagination{
+  display:flex;
+  justify-content:center;
+  font-size:14px;
+}
+@media screen and (max-width:991px){
+  .progress-showcase .container{
+    -moz-column-gap:60px;
+         column-gap:60px;
+  }
+}
+@media screen and (max-width:767px){
+  .progress-showcase .container{
+    grid-template:auto/auto;
+    row-gap:24px;
+  }
+  .progress-showcase [data-swiper-thumbs]{
+    grid-row:auto;
+    grid-column:auto;
+  }
+  .progress-showcase .c-swiper-metrics,.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc,.progress-showcase h2{
+    margin-bottom:0;
+  }
+}

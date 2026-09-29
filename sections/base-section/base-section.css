@@ -710,6 +710,14 @@
   padding-left:4px;
   list-style:disc;
 }
+.base-section article .c-marked-list:not(:last-child){
+  margin-bottom:16px;
+}
+.base-section article .c-marked-list li:before{
+  color:#212426;
+  border:0;
+  background:#c7e5db;
+}
 .base-section article ol{
   counter-reset:item;
 }
@@ -771,6 +779,10 @@
 }
 .base-section article .c-note{
   margin-bottom:20px;
+}
+.base-section article small{
+  display:block;
+  font-size:14px;
 }
 .base-section:has(.e-pill-badge) article h2{
   align-self:center;

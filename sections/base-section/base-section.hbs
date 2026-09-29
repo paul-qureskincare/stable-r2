@@ -5,11 +5,11 @@
 <section class="base-section {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         <article>
-            <h2>{{ title }}</h2>
+            {{#if title }}<h2>{{{ title }}}</h2>{{/if }}
             {{!-- Simple image --}}
             {{#if picture }}
                 <picture>
-                    <img src="{{ picture }}" alt="{{ title }}" />
+                    <img src="{{ picture }}" alt="{{{ title }}}" />
                 </picture>
             {{/if}}
             {{!-- Video with text --}}

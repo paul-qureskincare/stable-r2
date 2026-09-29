@@ -48,6 +48,18 @@
 .press-reviews .c-swiper-thumbs .swiper-slide.swiper-slide-thumb-active img{
   opacity:1;
 }
+.press-reviews--light{
+  padding-top:0;
+  padding-bottom:0;
+  background:none;
+}
+.press-reviews--light h4{
+  font-family:inherit;
+  font-weight:300;
+}
+.press-reviews--light h6{
+  display:none;
+}
 @media screen and (max-width:991px){
   .press-reviews .container{
     gap:24px;
@@ -64,5 +76,9 @@
   .press-reviews .c-swiper-thumbs{
     width:100%;
     max-width:none;
+  }
+  .press-reviews--light{
+    padding-top:0;
+    padding-bottom:0;
   }
 }

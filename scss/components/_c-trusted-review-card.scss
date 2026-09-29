@@ -73,7 +73,6 @@
         --badge-base-color: #ff5429;
 
         margin-left: 24px;
-        font-weight: 600;
         border: 1px solid;
 
         @include sm {
@@ -140,6 +139,20 @@
         @include sm {
             margin-right: 16px;
             font-size: 12px;
+        }
+    }
+
+    &:not(:has(.e-verified-customer)) {
+        grid-template: auto / auto;
+
+        p {
+            font-size: 18px;
+        }
+
+        small {
+            display: block;
+            margin-top: 16px;
+            font-size: 16px;
         }
     }
 

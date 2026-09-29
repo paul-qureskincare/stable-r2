@@ -2,7 +2,11 @@
 {{#unless page-css }}
     <link rel="stylesheet" href="sections/have-questions/have-questions.css" />
 {{/unless}}
-<div class="have-questions" id="faq">
+<div class="
+    have-questions
+    {{#if light }}have-questions--light{{/if }}
+    "
+    id="faq">
     <div class="container">
         <h2>Have questions?</h2>
         {{#if text }}
@@ -13,9 +17,19 @@
         {{> c-accordion
             list=list
             type="lines"
-            button=true
+            button=false
             devices-technical=devices-technical
         }}
+        {{#unless hide-advisor }}
+            <a class="team-advisor" href="#">
+                <figure>
+                    <img src="assets/images/advisor.webp" alt="Get free skin consultation" />
+                    <figcaption>{{> e-icon icon="q" }}</figcaption>
+                </figure>
+                <strong>Get free skin consultation</strong>
+                <span>Chat with our skincare team for personalized advice</span>
+            </a>
+        {{/unless }}
     </div>
 </div>
 <!-- HAVE QUESTIONS END -->

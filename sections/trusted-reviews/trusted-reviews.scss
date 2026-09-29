@@ -223,4 +223,47 @@
             }
         }
     }
+
+    &--dotted-nav {
+        .c-swiper-nav {
+            gap: 8px;
+        }
+
+        .c-swiper-button-prev,
+        .c-swiper-button-next {
+            color: #fff;
+            border-color: #212428;
+            background: #212428;
+            -webkit-text-stroke: 1px;
+
+            @include hover {
+                color: #212428;
+                border-color: #c8e6dc;
+                background: #c8e6dc;
+            }
+
+            &:disabled {
+                color: #212428;
+                background: #fff;
+            }
+        }
+
+        .c-swiper-pagination {
+            order: -1;
+            gap: 8px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            margin: 0 !important;
+            border: 1px solid #212428;
+            background: #fff;
+            opacity: 1;
+
+            &.swiper-pagination-bullet-active {
+                background: #212428;
+            }
+        }
+    }
 }

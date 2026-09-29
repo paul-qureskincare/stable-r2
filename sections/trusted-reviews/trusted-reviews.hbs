@@ -5,6 +5,7 @@
 <section class="
         trusted-reviews
         {{#if trustpilot }}trusted-reviews--trustpilot{{/if }}
+        {{#if dotted-nav }}trusted-reviews--dotted-nav{{/if }}
         {{ classes }}
     "
     {{#if id }}id="{{ id }}"{{/if}}
@@ -37,7 +38,7 @@
                 {{#if disabled-touch }}"allowTouchMove": false,{{/if }}
                 "pagination": {
                     "el": ".c-swiper-pagination",
-                    "type": "custom"
+                    {{#if dotted-nav }}"clickable": true{{ else }}"type": "custom"{{/if }}
                 },
                 "navigation": {
                     "prevEl": ".c-swiper-button-prev",
