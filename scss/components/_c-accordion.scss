@@ -95,14 +95,15 @@
                 margin-bottom: 16px;
             }
 
-            h3 {
+            em {
+                display: block;
                 margin-bottom: 0;
                 font-family: inherit;
                 font-size: 1.135em;
                 font-weight: normal;
             }
 
-            &:has(h3) {
+            &:has(em) {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
