@@ -59,4 +59,79 @@
             margin-top: 40px;
         }
     }
+
+    .team-advisor {
+        display: grid;
+        grid-template: repeat(2, auto) / 73px 1fr;
+        gap: 0 24px;
+        align-items: center;
+        margin-top: 24px;
+        padding: 24px;
+        text-decoration: none;
+        border-radius: 8px;
+        background: #f3f3f3;
+
+        @include sm {
+            grid-template-columns: 60px 1fr;
+            gap: 8px 16px;
+            padding: 16px;
+        }
+
+        @include hover {
+            strong {
+                text-decoration: none;
+            }
+        }
+
+        figure {
+            position: relative;
+            grid-row: 1 / -1;
+        }
+
+        figcaption {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            font-size: 16px;
+            border: 1px solid #fff;
+            border-radius: 2px;
+            background: #cde6dd;
+        }
+
+        img {
+            @include img-fluid;
+            border-radius: 50%;
+        }
+
+        strong {
+            font-size: 20px;
+            text-decoration: underline;
+
+            @include sm {
+                font-size: 18px;
+            }
+        }
+
+        span {
+            @include sm {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &--light {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: none;
+
+        @include sm {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
 }

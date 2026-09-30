@@ -105,7 +105,6 @@
 .c-trusted-review-card .e-pill-badge{
   --badge-base-color:#ff5429;
   margin-left:24px;
-  font-weight:600;
   border:1px solid;
 }
 .c-trusted-review-card h6{
@@ -148,6 +147,17 @@
 .c-trusted-review-card .e-verified-customer{
   margin-right:24px;
   margin-left:auto;
+}
+.c-trusted-review-card:not(:has(.e-verified-customer)){
+  grid-template:auto/auto;
+}
+.c-trusted-review-card:not(:has(.e-verified-customer)) p{
+  font-size:18px;
+}
+.c-trusted-review-card:not(:has(.e-verified-customer)) small{
+  display:block;
+  margin-top:16px;
+  font-size:16px;
 }
 .c-trusted-review-card--short{
   gap:10px 24px;
@@ -337,6 +347,34 @@
 .trusted-reviews--ba-slider .c-trusted-review-card article{
   padding:0;
 }
+.trusted-reviews--dotted-nav .c-swiper-nav{
+  gap:8px;
+}
+.trusted-reviews--dotted-nav .c-swiper-button-next,.trusted-reviews--dotted-nav .c-swiper-button-prev{
+  color:#fff;
+  border-color:#212428;
+  background:#212428;
+  -webkit-text-stroke:1px;
+}
+.trusted-reviews--dotted-nav .c-swiper-button-next:disabled,.trusted-reviews--dotted-nav .c-swiper-button-prev:disabled{
+  color:#212428;
+  background:#fff;
+}
+.trusted-reviews--dotted-nav .c-swiper-pagination{
+  order:-1;
+  gap:8px;
+}
+.trusted-reviews--dotted-nav .swiper-pagination-bullet{
+  width:10px;
+  height:10px;
+  margin:0 !important;
+  border:1px solid #212428;
+  background:#fff;
+  opacity:1;
+}
+.trusted-reviews--dotted-nav .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background:#212428;
+}
 @media screen and (max-width:991px){
   .trusted-reviews h2{
     margin-bottom:20px;
@@ -409,5 +447,10 @@
 @media (hover:hover){
   .trusted-reviews--trustpilot .trustpilot-rating a:hover{
     text-decoration:none;
+  }
+  .trusted-reviews--dotted-nav .c-swiper-button-next:hover,.trusted-reviews--dotted-nav .c-swiper-button-prev:hover{
+    color:#212428;
+    border-color:#c8e6dc;
+    background:#c8e6dc;
   }
 }

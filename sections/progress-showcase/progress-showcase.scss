@@ -1,0 +1,157 @@
+@use "@root/mixins" as *;
+
+.progress-showcase {
+    $root: &;
+
+    .container {
+        display: grid;
+        grid-template: auto 1fr auto / 1fr 1fr;
+        column-gap: 80px;
+
+        @include md {
+            column-gap: 60px;
+        }
+
+        @include sm {
+            grid-template: auto / auto;
+            row-gap: 24px;
+        }
+    }
+
+    .e-pill-badge {
+        --badge-base-color: #ff5429;
+
+        border: 1px solid;
+    }
+
+    [data-swiper-thumbs] {
+        grid-row: 1 / -1;
+        grid-column: 2;
+        margin: 0;
+        padding: 0;
+
+        @include sm {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+
+    h2 {
+        max-width: 400px;
+
+        @include sm {
+            margin-bottom: 0;
+        }
+    }
+
+    .c-swiper-metrics {
+        margin-bottom: 24px;
+
+        @include sm {
+            margin-bottom: 0;
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .progress-desc {
+                position: relative;
+                margin-top: auto;
+                margin-bottom: 10px;
+
+                @include sm {
+                    margin-bottom: 0;
+                }
+
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    height: 40px;
+                    border-radius: 12px;
+                    background: #f2f2f2;
+                    content: '';
+                }
+
+                & > div {
+                    position: relative;
+                    z-index: 1;
+                    width: var(--progress-value);
+                    padding-bottom: 50px;
+                    border-right: 1px solid #252525;
+
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: -1;
+                        height: 40px;
+                        border-radius: 12px 0 0 12px;
+                        background: #c7e5db;
+                        content: '';
+                    }
+                }
+
+                h6 {
+                    font-size: 56px;
+                    line-height: 1;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            small {
+                display: block;
+                color: #6d6d6d;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #666;
+        text-align: center;
+
+        button {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 0;
+            color: #252525;
+            font-size: 16px;
+            border: 0;
+            background: none;
+
+            &:first-child {
+                .e-icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+
+        .e-icon {
+            font-size: 12px;
+            vertical-align: top;
+            -webkit-text-stroke: 0.5px;
+        }
+    }
+
+    &__nav-pagination {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+    }
+}

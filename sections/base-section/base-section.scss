@@ -132,6 +132,20 @@
             }
         }
 
+        .c-marked-list {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            li {
+                &::before {
+                    color: #212426;
+                    border: 0;
+                    background: #c7e5db;
+                }
+            }
+        }
+
         ol {
             @include numeric-list;
 
@@ -142,6 +156,11 @@
 
         .c-note {
             margin-bottom: 20px;
+        }
+
+        small {
+            display: block;
+            font-size: 14px;
         }
 
         @at-root #{$root}:has(.e-pill-badge) {

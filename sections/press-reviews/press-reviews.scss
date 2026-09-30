@@ -79,4 +79,24 @@
             }
         }
     }
+
+    &--light {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: none;
+
+        @include sm {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        h4 {
+            font-family: inherit;
+            font-weight: 300;
+        }
+
+        h6 {
+            display: none;
+        }
+    }
 }
