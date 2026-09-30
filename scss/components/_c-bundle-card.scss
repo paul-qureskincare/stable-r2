@@ -20,15 +20,22 @@
             border-radius: 10px 10px 0 0;
         }
 
-        .e-pill-save {
+        .e-pill-save,
+        .e-bf-badge {
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 20px;
 
             @include sm {
                 top: 4px;
                 right: 6px;
+            }
+        }
+
+        .e-pill-save {
+            font-size: 20px;
+
+            @include sm {
                 font-size: 12px;
             }
         }

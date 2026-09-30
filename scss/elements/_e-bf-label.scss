@@ -1,0 +1,15 @@
+@use "@root/mixins" as *;
+
+.e-bf-label {
+    img {
+        @include img-fluid;
+    }
+
+    &--sm {
+
+    }
+
+    &--md {
+        width: 136px;
+    }
+}
