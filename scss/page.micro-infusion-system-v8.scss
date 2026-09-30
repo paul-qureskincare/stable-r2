@@ -1,27 +1,15 @@
 // Sections styles on current page
 @use "@sections/hero-product/hero-product" as *;
-@use "@sections/progress-metrics/progress-metrics" as *;
+@use "@sections/progress-showcase/progress-showcase" as *;
+@use "@sections/expert-feature/expert-feature" as *;
+@use "@sections/mi-overview/mi-overview" as *;
 @use "@sections/trusted-reviews/trusted-reviews" as *;
-@use "@sections/award-winning/award-winning" as *;
-@use "@sections/accordion-tiles/accordion-tiles" as *;
+@use "@sections/mi-ingredients/mi-ingredients" as *;
+@use "@sections/experts-grid/experts-grid" as *;
 @use "@sections/press-reviews/press-reviews" as *;
-@use "@sections/features-marquee/features-marquee" as *;
-@use "@sections/guarantee/guarantee" as *;
 @use "@sections/set-up/set-up" as *;
 
-// @use "@sections/why-using/why-using" as *;
-// @use "@sections/comparison-table/comparison-table" as *;
-// @use "@sections/comparison/comparison" as *;
-
 // Styles for current page only
-.sections-stack {
-    padding-bottom: 0;
-
-    @include sm {
-        padding-bottom: 0;
-    }
-}
-
 .hero-product__main {
     & > p:first-of-type {
         max-width: 500px;
@@ -67,34 +55,10 @@
     }
 }
 
-.guarantee {
-    article {
-        display: grid;
-        grid-template: repeat(2, auto) / 120px minmax(400px, 600px);
-        row-gap: 16px;
-        max-width: none;
-        padding: 40px 30px;
-        text-align: left;
-        border-radius: 24px;
-        background: url("../images/micro-infusion-pdp/mi-money-back-guarantee-bg.webp") no-repeat 50% 50%;
-        background-size: cover;
-
-        @include sm {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-            padding: 16px;
-            background: #dde3e6;
-        }
-
-        h2 {
-            line-height: 1;
-        }
-
-        img {
-            grid-row: 1 / -1;
-            @include img-fluid;
+.base-section {
+    article{
+        & > picture {
+            order: unset;
         }
     }
 }
