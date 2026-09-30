@@ -91,10 +91,12 @@
   vertical-align:top;
   border-radius:10px 10px 0 0;
 }
-.c-bundle-card__image .e-pill-save{
+.c-bundle-card__image .e-bf-badge,.c-bundle-card__image .e-pill-save{
   position:absolute;
   top:10px;
   right:10px;
+}
+.c-bundle-card__image .e-pill-save{
   font-size:20px;
 }
 .c-bundle-card__main{
@@ -303,9 +305,11 @@
   .e-pay-options{
     font-size:12px;
   }
-  .c-bundle-card__image .e-pill-save{
+  .c-bundle-card__image .e-bf-badge,.c-bundle-card__image .e-pill-save{
     top:4px;
     right:6px;
+  }
+  .c-bundle-card__image .e-pill-save{
     font-size:12px;
   }
   .c-bundle-card__main{
