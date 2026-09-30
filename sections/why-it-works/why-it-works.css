@@ -140,19 +140,19 @@
   --top:20%;
   --left:auto;
   right:0;
-  width:50%;
+  width:40%;
   text-align:right;
 }
 .c-product-components--recovery-mask .e-component-pointer:nth-child(3){
-  --top:45%;
-  --left:5%;
-  width:35%;
+  --top:40%;
+  --left:0;
+  width:30%;
 }
 .c-product-components--recovery-mask .e-component-pointer:last-child{
   --top:55%;
   --left:auto;
   right:0;
-  width:44%;
+  width:35%;
   text-align:right;
 }
 
@@ -199,7 +199,7 @@
   --badge-base-color:#3a4a61;
   --badge-fill-color:rgba(233,240,251,.9);
   position:absolute;
-  bottom:15%;
+  bottom:2%;
   left:0;
 }
 .why-it-works__components:has(.c-product-components--recovery-mask) .e-pill-badge .e-icon{
@@ -207,10 +207,11 @@
 }
 .why-it-works__components:has(.c-product-components--recovery-mask) .e-declaimer{
   position:absolute;
-  top:100%;
-  left:22%;
-  margin-top:-30px;
+  top:84%;
+  right:0;
+  left:0;
   font-size:14px;
+  text-align:center;
 }
 @media screen and (max-width:1120px){
   .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]){
@@ -241,7 +242,8 @@
     --line-size:20vw;
   }
   .c-product-components--recovery-mask .e-component-pointer:last-child{
-    --top:35%;
+    --top:25%;
+    width:40%;
   }
   .why-it-works__main{
     grid-template-columns:auto;
@@ -259,14 +261,14 @@
     font-size:14px;
   }
   .c-product-components--recovery-mask .e-component-pointer:nth-child(2){
-    --top:10%;
+    --top:5%;
     width:56%;
   }
   .c-product-components--recovery-mask .e-component-pointer:nth-child(3){
-    --top:65%;
+    --top:58%;
     --left:auto;
     right:0;
-    width:45%;
+    width:40%;
     text-align:right;
   }
   .c-product-components--recovery-mask .e-component-pointer--reverse{
@@ -300,6 +302,7 @@
     margin-top:12px;
     margin-bottom:8px;
     padding-left:6px;
+    text-align:left;
     border-left:1px solid #dfe0e0;
   }
 }
