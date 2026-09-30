@@ -141,28 +141,28 @@
                 --left: auto;
 
                 right: 0;
-                width: 50%;
+                width: 40%;
                 text-align: right;
 
                 @include sm {
-                    --top: 10%;
+                    --top: 5%;
 
                     width: 56%;
                 }
             }
 
             &:nth-child(3) {
-                --top: 45%;
-                --left: 5%;
+                --top: 40%;
+                --left: 0;
 
-                width: 35%;
+                width: 30%;
 
                 @include sm {
-                    --top: 65%;
+                    --top: 58%;
                     --left: auto;
 
                     right: 0;
-                    width: 45%;
+                    width: 40%;
                     text-align: right;
                 }
             }
@@ -172,11 +172,13 @@
                 --left: auto;
 
                 right: 0;
-                width: 44%;
+                width: 35%;
                 text-align: right;
 
                 @include md {
-                    --top: 35%;
+                    --top: 25%;
+
+                    width: 40%;
                 }
             }
         }

@@ -140,19 +140,19 @@
   --top:20%;
   --left:auto;
   right:0;
-  width:50%;
+  width:40%;
   text-align:right;
 }
 .c-product-components--recovery-mask .e-component-pointer:nth-child(3){
-  --top:45%;
-  --left:5%;
-  width:35%;
+  --top:40%;
+  --left:0;
+  width:30%;
 }
 .c-product-components--recovery-mask .e-component-pointer:last-child{
   --top:55%;
   --left:auto;
   right:0;
-  width:44%;
+  width:35%;
   text-align:right;
 }
 
@@ -292,7 +292,8 @@
     --line-size:20vw;
   }
   .c-product-components--recovery-mask .e-component-pointer:last-child{
-    --top:35%;
+    --top:25%;
+    width:40%;
   }
   .features-overview .c-product-components--blue-serum .e-component-pointer{
     flex-direction:column;
@@ -365,14 +366,14 @@
     font-size:14px;
   }
   .c-product-components--recovery-mask .e-component-pointer:nth-child(2){
-    --top:10%;
+    --top:5%;
     width:56%;
   }
   .c-product-components--recovery-mask .e-component-pointer:nth-child(3){
-    --top:65%;
+    --top:58%;
     --left:auto;
     right:0;
-    width:45%;
+    width:40%;
     text-align:right;
   }
   .c-product-components--recovery-mask .e-component-pointer--reverse{
