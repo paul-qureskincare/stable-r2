@@ -1,670 +1,670 @@
-.e-discount-badge{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  align-items:center;
-  justify-content:center;
-  width:1em;
-  height:1em;
-  color:#fff;
-  font-weight:500;
-  line-height:1;
-  border-radius:100px;
-  background:var(--discount-color, #212428);
+.e-discount-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 100px;
+  background: var(--discount-color, #212428);
 }
-.e-discount-badge span{
-  font-size:.41em;
-  line-height:.8;
+.e-discount-badge span {
+  font-size: .41em;
+  line-height: .8;
 }
-.e-discount-badge:after,.e-discount-badge:before{
-  font-size:.145em;
-  text-transform:uppercase;
+.e-discount-badge:after,.e-discount-badge:before {
+  font-size: .145em;
+  text-transform: uppercase;
 }
-.e-discount-badge:before{
-  content:attr(data-text-top);
+.e-discount-badge:before {
+  content: attr(data-text-top);
 }
-.e-discount-badge:after{
-  content:attr(data-text-bottom);
-}
-
-.e-features-list{
-  display:flex;
-  gap:24px;
-  justify-content:center;
-  font-size:14px;
-}
-.e-features-list li{
-  display:flex;
-  gap:6px;
-  align-items:center;
-  line-height:1.1;
-}
-.e-features-list .e-icon-guarantee{
-  font-size:30px;
-}
-.e-features-list .e-icon-shipping-order{
-  font-size:22px;
-}
-.e-features-list .e-icon-proven{
-  font-size:28px;
-}
-.e-features-list .e-icon-checkmark{
-  font-size:10px;
-}
-.e-features-list .e-icon-one-year{
-  font-size:24px;
+.e-discount-badge:after {
+  content: attr(data-text-bottom);
 }
 
-.e-pill-badge{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  width:-webkit-max-content;
-  width:-moz-max-content;
-  width:max-content;
-  padding:10px 20px;
-  color:var(--badge-base-color, #8b8c8e);
-  font-size:18px;
-  font-weight:500;
-  letter-spacing:.32px;
-  text-transform:capitalize;
-  border-radius:30px;
-  background:hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
+.e-features-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  font-size: 14px;
 }
-.e-pill-badge .e-checkmark{
-  font-size:1em;
+.e-features-list li {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  line-height: 1.1;
 }
-.e-pill-badge .e-icon-checkmark{
-  font-size:.6em;
+.e-features-list .e-icon-guarantee {
+  font-size: 30px;
 }
-.e-pill-badge--sm,.e-pill-badge--small{
-  gap:6px;
-  padding:4px 12px;
-  font-size:16px;
-  letter-spacing:normal;
+.e-features-list .e-icon-shipping-order {
+  font-size: 22px;
 }
-.e-pill-badge--sm .e-checkmark,.e-pill-badge--small .e-checkmark{
-  margin-left:-4px;
+.e-features-list .e-icon-proven {
+  font-size: 28px;
 }
-.e-pill-badge--xs{
-  gap:6px;
-  padding:2px 12px;
-  font-size:16px;
-  letter-spacing:normal;
+.e-features-list .e-icon-checkmark {
+  font-size: 10px;
 }
-.e-pill-badge--xs .e-checkmark{
-  margin-left:-4px;
-}
-.e-pill-badge--xxs{
-  gap:4px;
-  padding:0 10px;
-  font-size:16px;
-  letter-spacing:normal;
-}
-.e-pill-badge--fill{
-  color:var(--badge-base-color, #fff);
-  background:var(--badge-fill-color, #ff5429);
+.e-features-list .e-icon-one-year {
+  font-size: 24px;
 }
 
-.c-certified-box{
-  display:grid;
-  grid-template-columns:-webkit-max-content 1fr;
-  grid-template-columns:max-content 1fr;
-  gap:10px;
-  align-items:center;
-  max-width:415px;
-  padding:10px 20px;
-  font-size:14px;
-  line-height:18px;
-  text-align:left;
-  border-radius:5px;
-  background:#f6f6f7;
+.e-pill-badge {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 20px;
+  color: var(--badge-base-color, #8b8c8e);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: .32px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  background: hsl(from currentcolor h calc(s * 3) calc(l + (100 - l) * .95));
 }
-.c-certified-box ul{
-  display:flex;
-  align-items:center;
+.e-pill-badge .e-checkmark {
+  font-size: 1em;
 }
-.c-certified-box ul li{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  width:32px;
-  height:32px;
-  font-size:12px;
-  font-weight:600;
-  border:1px solid #f6f6f7;
-  border-radius:50%;
-  background:#c8e6dc;
+.e-pill-badge .e-icon-checkmark {
+  font-size: .6em;
 }
-.c-certified-box ul li+li{
-  margin-left:-8px;
+.e-pill-badge--sm,.e-pill-badge--small {
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 16px;
+  letter-spacing: normal;
 }
-.c-certified-box ul li img{
-  width:inherit;
-  max-height:inherit;
+.e-pill-badge--sm .e-checkmark,.e-pill-badge--small .e-checkmark {
+  margin-left: -4px;
 }
-.c-certified-box a{
-  color:inherit;
-  text-decoration:underline;
+.e-pill-badge--xs {
+  gap: 6px;
+  padding: 2px 12px;
+  font-size: 16px;
+  letter-spacing: normal;
 }
-.c-certified-box a:hover{
-  text-decoration:none;
+.e-pill-badge--xs .e-checkmark {
+  margin-left: -4px;
 }
-.c-certified-box--light{
-  background:#fff;
+.e-pill-badge--xxs {
+  gap: 4px;
+  padding: 0 10px;
+  font-size: 16px;
+  letter-spacing: normal;
 }
-
-.c-app-stores{
-  display:inline-flex;
-  flex-direction:column;
-  gap:12px;
-}
-.c-app-stores a{
-  width:100%;
-}
-.c-app-stores img{
-  width:100%;
-  height:auto;
-  vertical-align:top;
-}
-.c-app-stores--row{
-  flex-direction:row;
+.e-pill-badge--fill {
+  color: var(--badge-base-color, #fff);
+  background: var(--badge-fill-color, #ff5429);
 }
 
-.c-buy-block{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  max-width:500px;
+.c-certified-box {
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  gap: 10px;
+  align-items: center;
+  max-width: 415px;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  border-radius: 5px;
+  background: #f6f6f7;
 }
-.c-buy-block .c-certified-box{
-  margin-right:auto;
-  margin-left:auto;
+.c-certified-box ul {
+  display: flex;
+  align-items: center;
 }
-.c-buy-block>p:has(a){
-  font-size:16px;
-  line-height:1.2;
-  text-align:center;
+.c-certified-box ul li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #f6f6f7;
+  border-radius: 50%;
+  background: #c8e6dc;
 }
-.c-buy-block>p:has(a) strong{
-  display:block;
+.c-certified-box ul li+li {
+  margin-left: -8px;
 }
-.c-buy-block>p:has(a) a{
-  color:inherit;
-  text-decoration:underline;
+.c-certified-box ul li img {
+  width: inherit;
+  max-height: inherit;
 }
-.c-buy-block>p:has(a) a:hover{
-  text-decoration:none;
+.c-certified-box a {
+  color: inherit;
+  text-decoration: underline;
 }
-.c-buy-block .e-get-free-shipping{
-  margin-bottom:8px;
+.c-certified-box a:hover {
+  text-decoration: none;
 }
-.c-buy-block .e-auto-ships{
-  align-self:center;
-}
-.c-buy-block .one-time-purchase{
-  display:block;
-  font-size:16px;
-  text-align:center;
-  text-decoration:underline;
-}
-.c-buy-block .one-time-purchase:hover{
-  text-decoration:none;
-}
-.c-buy-block__payment-logos{
-  text-align:center;
-}
-.c-buy-block__payment-logos img{
-  width:100%;
-  max-width:256px;
-  vertical-align:top;
-}
-
-.c-marked-list{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.c-marked-list li{
-  position:relative;
-  padding-left:1.75em;
-  line-height:1.25;
-}
-.c-marked-list li:before{
-  position:absolute;
-  top:0;
-  left:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:2.25em;
-  height:2.25em;
-  color:#91baec;
-  font-size:.5em;
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  vertical-align:top;
-  border:1.5px solid;
-  border-radius:50%;
-  content:"\e901";
-}
-.c-marked-list--fill li:before{
-  color:#fff;
-  background:#91baec;
+.c-certified-box--light {
+  background: #fff;
 }
 
-.across-image-banner{
-  position:relative;
-  z-index:1;
+.c-app-stores {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
 }
-body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
-  margin-bottom:-60px;
+.c-app-stores a {
+  width: 100%;
 }
-.across-image-banner .container{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  min-height:-webkit-min-content;
-  min-height:-moz-min-content;
-  min-height:min-content;
-  height:34.7222222222vw;
-  max-height:500px;
+.c-app-stores img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
 }
-.across-image-banner picture{
-  position:absolute;
-  inset:0;
-  z-index:-1;
-}
-.across-image-banner picture img{
-  display:block;
-  -o-object-fit:cover;
-     object-fit:cover;
-  width:100%;
-  height:100%;
-}
-.across-image-banner article{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  width:100%;
-  max-width:550px;
-  padding-top:60px;
-  padding-bottom:60px;
-}
-.across-image-banner article h1,.across-image-banner article h2{
-  margin-bottom:0;
-  color:inherit;
-  line-height:1.15;
-}
-.across-image-banner article .btn{
-  margin-top:5px;
-}
-.across-image-banner article small{
-  width:100%;
-  max-width:450px;
-  margin-top:-2px;
-  font-size:16px;
-  line-height:1;
-  text-align:center;
-}
-.across-image-banner--hero:has(.c-inline-product-box){
-  margin-bottom:-60px;
-}
-.across-image-banner--hero article .btn{
-  max-width:450px;
-}
-.across-image-banner--hero article:has(.c-inline-product-box){
-  max-width:565px;
-}
-.across-image-banner--hero .c-certified-box{
-  background:#fff;
-}
-.across-image-banner--hero .c-app-stores{
-  max-width:300px;
-}
-.across-image-banner--hero .c-inline-product-box{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  padding:32px;
-  border-radius:10px;
-  background:#fff;
-}
-.across-image-banner--hero .c-inline-product-box .e-price{
-  font-size:inherit;
-}
-.across-image-banner--hero .c-inline-product-box .e-pill-save{
-  font-size:16px;
-  background:#ff5429;
-}
-.across-image-banner--hero .c-inline-product-box ul{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.across-image-banner--hero .c-inline-product-box ul li{
-  position:relative;
-  padding-left:1.75em;
-  line-height:1.25;
-}
-.across-image-banner--hero .c-inline-product-box ul li:before{
-  position:absolute;
-  top:0;
-  left:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:2.25em;
-  height:2.25em;
-  color:#91baec;
-  font-size:.5em;
-  font-family:icomoon;
-  font-weight:400;
-  font-style:normal;
-  font-variant:normal;
-  line-height:1;
-  text-transform:none;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  speak:never;
-  vertical-align:top;
-  border:1.5px solid;
-  border-radius:50%;
-  content:"\e901";
-}
-.across-image-banner--hero .c-inline-product-box ul{
-  gap:16px;
-}
-.across-image-banner--hero .c-inline-product-box .c-buy-block{
-  max-width:none;
-}
-.across-image-banner--hero .c-inline-product-box .btn{
-  padding-right:16px;
-  padding-left:16px;
-}
-.across-image-banner--hero .c-buy-block{
-  gap:12px;
-  width:100%;
-  max-width:450px;
-  margin-top:12px;
-}
-.across-image-banner--hero .c-buy-block .btn{
-  width:100%;
-  max-width:none;
-  margin-top:0;
-}
-.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container{
-  height:38.1944444444vw;
-  max-height:550px;
-  align-items:center;
-  justify-content:start;
-}
-.page\.all-in-one-serum-customer-reviews .across-image-banner--hero article,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero article,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero article,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero article,.page\.reviews .across-image-banner--hero article{
-  flex-direction:column-reverse;
-  gap:32px;
-  align-items:center;
-}
-.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.reviews .across-image-banner--hero .trustpilot-rating{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.reviews .across-image-banner--hero .trustpilot-rating ul{
-  display:flex;
-  gap:2px;
-  font-size:24px;
-}
-.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.reviews .across-image-banner--hero .trustpilot-rating ul li{
-  color:#dcdce6;
-  line-height:1;
-  background:#fff;
-}
-.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child){
-  color:#73cf11;
-}
-.across-image-banner--reverse .container{
-  align-items:flex-end;
-  height:27.7777777778vw;
-  max-height:400px;
-}
-.across-image-banner--reverse .container article{
-  max-width:605px;
-  font-size:16px;
-}
-.across-image-banner--reverse .container article h6{
-  margin-bottom:0;
-  color:inherit;
-  font-family:inherit;
-  font-size:inherit;
-  font-weight:600;
-}
-.across-image-banner--reverse .container article h6+p{
-  margin-top:-16px;
-}
-.page\.dermal-mist-brief .across-image-banner--reverse article,.page\.faucet-creative-brief .across-image-banner--reverse article,.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article{
-  max-width:440px;
+.c-app-stores--row {
+  flex-direction: row;
 }
 
-.page\.microinfusion-safety-guide .across-image-banner--reverse .container,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse .container{
-  position:relative;
+.c-buy-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
-  max-width:480px;
+.c-buy-block .c-certified-box {
+  margin-right: auto;
+  margin-left: auto;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p{
-  max-width:340px;
+.c-buy-block>p:has(a) {
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
-  position:absolute;
-  right:-40px;
-  bottom:-60px;
-  width:210px;
+.c-buy-block>p:has(a) strong {
+  display: block;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse figure img,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure img{
-  max-width:100%;
-  height:auto;
+.c-buy-block>p:has(a) a {
+  color: inherit;
+  text-decoration: underline;
+}
+.c-buy-block>p:has(a) a:hover {
+  text-decoration: none;
+}
+.c-buy-block .e-get-free-shipping {
+  margin-bottom: 8px;
+}
+.c-buy-block .e-auto-ships {
+  align-self: center;
+}
+.c-buy-block .one-time-purchase {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: underline;
+}
+.c-buy-block .one-time-purchase:hover {
+  text-decoration: none;
+}
+.c-buy-block__payment-logos {
+  text-align: center;
+}
+.c-buy-block__payment-logos img {
+  width: 100%;
+  max-width: 256px;
+  vertical-align: top;
 }
 
-.page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
-  max-width:480px;
+.c-marked-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.across-image-banner--text article{
-  display:block;
+.c-marked-list li {
+  position: relative;
+  padding-left: 1.75em;
+  line-height: 1.25;
 }
-.across-image-banner--text article h2{
-  margin-bottom:16px;
+.c-marked-list li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25em;
+  height: 2.25em;
+  color: #91baec;
+  font-size: .5em;
+  font-family: icomoon;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  speak: never;
+  vertical-align: top;
+  border: 1.5px solid;
+  border-radius: 50%;
+  content: "\e901";
 }
-.across-image-banner--sm .container{
-  height:18.75vw;
-  max-height:270px;
+.c-marked-list--fill li:before {
+  color: #fff;
+  background: #91baec;
 }
-.across-image-banner--light-tech{
-  color:#fff;
+
+.across-image-banner {
+  position: relative;
+  z-index: 1;
 }
-.across-image-banner--light-tech .btn{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  justify-content:center;
-  max-width:300px;
+body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner {
+  margin-bottom: -60px;
 }
-.across-image-banner--light-tech .btn .e-icon{
-  width:18px;
-  height:18px;
-  padding:3px;
-  font-size:8px;
-  border:2px solid;
-  border-radius:50%;
-  -webkit-text-stroke:1px;
+.across-image-banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  height: 34.7222222222vw;
+  max-height: 500px;
 }
-.across-image-banner--light-tech picture img{
-  filter:brightness(.5);
+.across-image-banner picture {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
-@media screen and (max-width:1199px){
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article{
-    max-width:540px;
+.across-image-banner picture img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.across-image-banner article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 550px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.across-image-banner article h1,.across-image-banner article h2 {
+  margin-bottom: 0;
+  color: inherit;
+  line-height: 1.15;
+}
+.across-image-banner article .btn {
+  margin-top: 5px;
+}
+.across-image-banner article small {
+  width: 100%;
+  max-width: 450px;
+  margin-top: -2px;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+}
+.across-image-banner--hero:has(.c-inline-product-box) {
+  margin-bottom: -60px;
+}
+.across-image-banner--hero article .btn {
+  max-width: 450px;
+}
+.across-image-banner--hero article:has(.c-inline-product-box) {
+  max-width: 565px;
+}
+.across-image-banner--hero .c-certified-box {
+  background: #fff;
+}
+.across-image-banner--hero .c-app-stores {
+  max-width: 300px;
+}
+.across-image-banner--hero .c-inline-product-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 10px;
+  background: #fff;
+}
+.across-image-banner--hero .c-inline-product-box .e-price {
+  font-size: inherit;
+}
+.across-image-banner--hero .c-inline-product-box .e-pill-save {
+  font-size: 16px;
+  background: #ff5429;
+}
+.across-image-banner--hero .c-inline-product-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.across-image-banner--hero .c-inline-product-box ul li {
+  position: relative;
+  padding-left: 1.75em;
+  line-height: 1.25;
+}
+.across-image-banner--hero .c-inline-product-box ul li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25em;
+  height: 2.25em;
+  color: #91baec;
+  font-size: .5em;
+  font-family: icomoon;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  speak: never;
+  vertical-align: top;
+  border: 1.5px solid;
+  border-radius: 50%;
+  content: "\e901";
+}
+.across-image-banner--hero .c-inline-product-box ul {
+  gap: 16px;
+}
+.across-image-banner--hero .c-inline-product-box .c-buy-block {
+  max-width: none;
+}
+.across-image-banner--hero .c-inline-product-box .btn {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.across-image-banner--hero .c-buy-block {
+  gap: 12px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 12px;
+}
+.across-image-banner--hero .c-buy-block .btn {
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container {
+  height: 38.1944444444vw;
+  max-height: 550px;
+  align-items: center;
+  justify-content: start;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero article,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero article,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero article,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero article,.page\.reviews .across-image-banner--hero article {
+  flex-direction: column-reverse;
+  gap: 32px;
+  align-items: center;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating,.page\.reviews .across-image-banner--hero .trustpilot-rating {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul,.page\.reviews .across-image-banner--hero .trustpilot-rating ul {
+  display: flex;
+  gap: 2px;
+  font-size: 24px;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li,.page\.reviews .across-image-banner--hero .trustpilot-rating ul li {
+  color: #dcdce6;
+  line-height: 1;
+  background: #fff;
+}
+.page\.all-in-one-serum-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child),.page\.reviews .across-image-banner--hero .trustpilot-rating ul li:not(:last-child) {
+  color: #73cf11;
+}
+.across-image-banner--reverse .container {
+  align-items: flex-end;
+  height: 27.7777777778vw;
+  max-height: 400px;
+}
+.across-image-banner--reverse .container article {
+  max-width: 605px;
+  font-size: 16px;
+}
+.across-image-banner--reverse .container article h6 {
+  margin-bottom: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+.across-image-banner--reverse .container article h6+p {
+  margin-top: -16px;
+}
+.page\.dermal-mist-brief .across-image-banner--reverse article,.page\.faucet-creative-brief .across-image-banner--reverse article,.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article {
+  max-width: 440px;
+}
+
+.page\.microinfusion-safety-guide .across-image-banner--reverse .container,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse .container {
+  position: relative;
+}
+.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article {
+  max-width: 480px;
+}
+.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p {
+  max-width: 340px;
+}
+.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: 210px;
+}
+.page\.microinfusion-safety-guide .across-image-banner--reverse figure img,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article {
+  max-width: 480px;
+}
+.across-image-banner--text article {
+  display: block;
+}
+.across-image-banner--text article h2 {
+  margin-bottom: 16px;
+}
+.across-image-banner--sm .container {
+  height: 18.75vw;
+  max-height: 270px;
+}
+.across-image-banner--light-tech {
+  color: #fff;
+}
+.across-image-banner--light-tech .btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+}
+.across-image-banner--light-tech .btn .e-icon {
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  font-size: 8px;
+  border: 2px solid;
+  border-radius: 50%;
+  -webkit-text-stroke: 1px;
+}
+.across-image-banner--light-tech picture img {
+  filter: brightness(.5);
+}
+@media screen and (max-width:1199px) {
+  .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article {
+    max-width: 540px;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
-    right:16px;
+  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+    right: 16px;
   }
 }
-@media screen and (max-width:1120px){
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
-    bottom:-40px;
+@media screen and (max-width:1120px) {
+  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+    bottom: -40px;
   }
 }
-@media screen and (max-width:991px){
-  .e-discount-badge:after,.e-discount-badge:before{
-    font-size:14px;
+@media screen and (max-width:991px) {
+  .e-discount-badge:after,.e-discount-badge:before {
+    font-size: 14px;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure{
-    width:120px;
+  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+    width: 120px;
   }
-  .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
-    max-width:340px;
+  .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article {
+    max-width: 340px;
   }
-  .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
-    max-width:440px;
+  .page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article {
+    max-width: 440px;
   }
 }
-@media screen and (max-width:767px){
-  .e-features-list{
-    gap:8px;
+@media screen and (max-width:767px) {
+  .e-features-list {
+    gap: 8px;
   }
-  .e-features-list li{
-    gap:4px;
+  .e-features-list li {
+    gap: 4px;
   }
-  .e-features-list .e-icon-guarantee{
-    font-size:24px;
+  .e-features-list .e-icon-guarantee {
+    font-size: 24px;
   }
-  .e-features-list .e-icon-shipping-order{
-    font-size:16px;
+  .e-features-list .e-icon-shipping-order {
+    font-size: 16px;
   }
-  .e-features-list .e-icon-one-year{
-    font-size:18px;
+  .e-features-list .e-icon-one-year {
+    font-size: 18px;
   }
-  .c-buy-block{
-    max-width:none;
+  .c-buy-block {
+    max-width: none;
   }
-  .c-marked-list li{
-    font-size:16px;
+  .c-marked-list li {
+    font-size: 16px;
   }
-  body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner{
-    margin-bottom:-40px;
+  body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner {
+    margin-bottom: -40px;
   }
-  .across-image-banner .container{
-    height:133.3333333333vw;
-    max-height:500px;
+  .across-image-banner .container {
+    height: 133.3333333333vw;
+    max-height: 500px;
   }
-  .across-image-banner article{
-    max-width:none;
-    padding-top:40px;
-    padding-bottom:40px;
-    text-align:center;
+  .across-image-banner article {
+    max-width: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
   }
-  .across-image-banner article .btn{
-    width:100%;
+  .across-image-banner article .btn {
+    width: 100%;
   }
-  .across-image-banner article small{
-    display:none;
+  .across-image-banner article small {
+    display: none;
   }
-  .across-image-banner--hero:has(.c-inline-product-box){
-    margin-bottom:-40px;
+  .across-image-banner--hero:has(.c-inline-product-box) {
+    margin-bottom: -40px;
   }
-  .across-image-banner--hero .container{
-    justify-content:flex-start;
+  .across-image-banner--hero .container {
+    justify-content: flex-start;
   }
-  body[class*=index] .across-image-banner--hero .container{
-    justify-content:center;
+  body[class*=index] .across-image-banner--hero .container {
+    justify-content: center;
   }
-  .across-image-banner--hero:has(.c-buy-block) article{
-    text-align:left;
+  .across-image-banner--hero:has(.c-buy-block) article {
+    text-align: left;
   }
-  .across-image-banner--hero article .btn{
-    margin:0 auto;
+  .across-image-banner--hero article .btn {
+    margin: 0 auto;
   }
-  body[class*=index] .across-image-banner--hero article .btn{
-    max-width:265px;
+  body[class*=index] .across-image-banner--hero article .btn {
+    max-width: 265px;
   }
-  .across-image-banner--hero .c-certified-box{
-    margin-right:auto;
-    margin-left:auto;
+  .across-image-banner--hero .c-certified-box {
+    margin-right: auto;
+    margin-left: auto;
   }
-  .across-image-banner--hero .c-app-stores{
-    align-self:center;
+  .across-image-banner--hero .c-app-stores {
+    align-self: center;
   }
-  .across-image-banner--hero .c-inline-product-box{
-    margin-bottom:200px;
-    padding:24px 16px;
+  .across-image-banner--hero .c-inline-product-box {
+    margin-bottom: 200px;
+    padding: 24px 16px;
   }
-  .across-image-banner--hero .c-inline-product-box ul li{
-    font-size:16px;
+  .across-image-banner--hero .c-inline-product-box ul li {
+    font-size: 16px;
   }
-  .across-image-banner--hero .c-inline-product-box .btn{
-    font-size:18px;
+  .across-image-banner--hero .c-inline-product-box .btn {
+    font-size: 18px;
   }
-  .across-image-banner--hero .c-buy-block{
-    margin:6px auto 0;
+  .across-image-banner--hero .c-buy-block {
+    margin: 6px auto 0;
   }
-  body[class*=index] .across-image-banner--hero{
-    color:#fff;
+  body[class*=index] .across-image-banner--hero {
+    color: #fff;
   }
-  body[class*=index] .across-image-banner--hero .btn{
-    --btn-primary-bg:#fff;
-    --btn-primary-color:#212428;
+  body[class*=index] .across-image-banner--hero .btn {
+    --btn-primary-bg: #fff;
+    --btn-primary-color: #212428;
   }
-  .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container{
-    height:106.6666666667vw;
-    max-height:400px;
+  .page\.all-in-one-serum-customer-reviews .across-image-banner--hero .container,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero .container,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero .container,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero .container,.page\.reviews .across-image-banner--hero .container {
+    height: 106.6666666667vw;
+    max-height: 400px;
   }
-  .page\.all-in-one-serum-customer-reviews .across-image-banner--hero article,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero article,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero article,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero article,.page\.reviews .across-image-banner--hero article{
-    gap:24px;
-    padding-top:50px;
+  .page\.all-in-one-serum-customer-reviews .across-image-banner--hero article,.page\.micro-infusion-targeted-patches-customer-reviews .across-image-banner--hero article,.page\.neck-decolletage-led-customer-reviews .across-image-banner--hero article,.page\.q-rejuvalight-pro-customer-reviews .across-image-banner--hero article,.page\.reviews .across-image-banner--hero article {
+    gap: 24px;
+    padding-top: 50px;
   }
-  .across-image-banner--reverse .container{
-    justify-content:flex-end;
-    height:106.6666666667vw;
-    max-height:400px;
+  .across-image-banner--reverse .container {
+    justify-content: flex-end;
+    height: 106.6666666667vw;
+    max-height: 400px;
   }
-  .across-image-banner--reverse .container article{
-    color:#fff;
-    text-align:left;
+  .across-image-banner--reverse .container article {
+    color: #fff;
+    text-align: left;
   }
-  .page\.dermal-mist-brief .across-image-banner--reverse article,.page\.faucet-creative-brief .across-image-banner--reverse article,.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article{
-    max-width:none;
+  .page\.dermal-mist-brief .across-image-banner--reverse article,.page\.faucet-creative-brief .across-image-banner--reverse article,.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article {
+    max-width: none;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p{
-    max-width:210px;
+  .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p {
+    max-width: 210px;
   }
-  .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article{
-    max-width:none;
+  .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article {
+    max-width: none;
   }
-  .across-image-banner--text .container{
-    height:auto;
-    max-height:none;
+  .across-image-banner--text .container {
+    height: auto;
+    max-height: none;
   }
-  .across-image-banner--text picture{
-    position:static;
+  .across-image-banner--text picture {
+    position: static;
   }
-  .across-image-banner--text article{
-    padding-top:24px;
-    padding-bottom:0;
-    text-align:left;
+  .across-image-banner--text article {
+    padding-top: 24px;
+    padding-bottom: 0;
+    text-align: left;
   }
-  .across-image-banner--sm .container{
-    justify-content:flex-start;
-    height:66.6074600355vw;
-    max-height:375px;
+  .across-image-banner--sm .container {
+    justify-content: flex-start;
+    height: 66.6074600355vw;
+    max-height: 375px;
   }
-  .across-image-banner--light-tech .btn{
-    max-width:none;
+  .across-image-banner--light-tech .btn {
+    max-width: none;
   }
 }
