@@ -1,0 +1,64 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/progress-showcase/progress-showcase" as *;
+@use "@sections/expert-feature/expert-feature" as *;
+@use "@sections/mi-overview/mi-overview" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/mi-ingredients/mi-ingredients" as *;
+@use "@sections/experts-grid/experts-grid" as *;
+@use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/set-up/set-up" as *;
+
+// Styles for current page only
+.hero-product__main {
+    & > p:first-of-type {
+        max-width: 500px;
+        font-size: inherit;
+        text-transform: none;
+    }
+
+    article {
+        max-width: 335px;
+        padding-top: 12px;
+        border-top: 1px solid #dfe0e0;
+
+        ul {
+            gap: 12px;
+
+            li {
+                display: flex;
+                gap: 12px;
+                padding-left: 0;
+                font-size: 14px;
+
+                &::before {
+                    display: none;
+                }
+
+                .e-icon {
+                    font-size: 16px;
+                }
+
+                .e-icon-balances,
+                .e-icon-verified-shield {
+                    -webkit-text-stroke: 0.2px;
+                }
+            }
+        }
+    }
+}
+
+.hero-product__extra {
+    .c-certified-box,
+    .c-moneyback {
+        max-width: none;
+    }
+}
+
+.base-section {
+    article{
+        & > picture {
+            order: unset;
+        }
+    }
+}
