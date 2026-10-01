@@ -255,6 +255,10 @@
                 --btn-primary-color-hover: #fff;
 
                 align-self: center;
+
+                @include sm {
+                    align-self: start;
+                }
             }
         }
 
