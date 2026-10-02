@@ -1,0 +1,21 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/progress-showcase/progress-showcase" as *;
+@use "@sections/expert-feature/expert-feature" as *;
+@use "@sections/mi-overview/mi-overview" as *;
+@use "@sections/treatment/treatment" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/mi-ingredients/mi-ingredients" as *;
+@use "@sections/experts-grid/experts-grid" as *;
+@use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/set-up/set-up" as *;
+
+// Styles for current page only
+
+.base-section {
+    article{
+        & > picture {
+            order: unset;
+        }
+    }
+}
