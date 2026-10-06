@@ -31,7 +31,7 @@
 }
 .e-pill-badge--xs {
   gap: 6px;
-  padding: 2px 12px;
+  padding: 2px 8px;
   font-size: 16px;
   letter-spacing: normal;
 }
@@ -40,7 +40,7 @@
 }
 .e-pill-badge--xxs {
   gap: 4px;
-  padding: 0 10px;
+  padding: 0 6px;
   font-size: 16px;
   letter-spacing: normal;
 }
@@ -1002,6 +1002,64 @@
   max-width: 235px;
   margin: 0 auto;
 }
+.base-section--mi-buy article {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.base-section--mi-buy .c-buy-block {
+  width: 100%;
+}
+.base-section--mi-buy .c-buy-block small {
+  color: rgba(34,32,47,.6);
+  text-align: center;
+}
+.base-section--mi-buy .mi-supply {
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  padding: 20px 14px 20px 52px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+.base-section--mi-buy .mi-supply:before {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  outline: 2px solid #212428;
+  background: #212428;
+  content: "";
+}
+.base-section--mi-buy .mi-supply input {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+.base-section--mi-buy .mi-supply .e-pill-badge {
+  position: absolute;
+  top: -15px;
+  left: 42px;
+  border: 2px solid #fff;
+}
+.base-section--mi-buy .mi-supply__main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.base-section--mi-buy .mi-supply__main .e-price__main {
+  flex-direction: row-reverse;
+}
+.base-section--mi-buy .mi-supply__desc p {
+  font-size: 16px;
+}
+.base-section--mi-buy .mi-supply__desc .c-marked-list {
+  gap: 8px;
+  font-size: 14px;
+}
 .base-section:has(.btn):has(.c-percent-list) article {
   grid-template-rows: auto repeat(2, minmax(-webkit-min-content, 0)) auto;
   grid-template-rows: auto repeat(2, minmax(min-content, 0)) auto;
@@ -1170,6 +1228,25 @@ body[class="product.face-serum"] .base-section article:has(.circle-icons-list) p
   }
   .base-section--404 h2 {
     text-align: center;
+  }
+  .base-section--mi-buy:has(.e-pill-badge) article {
+    text-align: left;
+  }
+  .base-section--mi-buy article {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+  .base-section--mi-buy .mi-supply {
+    margin-top: 16px;
+    padding-left: 44px;
+  }
+  .base-section--mi-buy .mi-supply:before {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+  .base-section--mi-buy .mi-supply .e-pill-badge {
+    left: 34px;
   }
   .base-section:has(.btn):has(.c-percent-list) article {
     grid-template-rows: auto;

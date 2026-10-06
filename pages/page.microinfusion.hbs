@@ -868,7 +868,12 @@
                     ]'
                 }}
                     <li>
-                        <img src="sections/experts-grid/images/{{ img }}.webp" alt="{{ name }}" />
+                        <figure>
+                            <img src="sections/experts-grid/images/{{ img }}.webp" alt="{{ name }}" />
+                            {{#if q }}
+                                <figcaption>{{> e-icon icon="q" }}</figcaption>
+                            {{/if }}
+                        </figure>
                         <div>
                             <strong>{{ name }}</strong>
                             <small>{{ position }}</small>

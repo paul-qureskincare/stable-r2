@@ -84,6 +84,30 @@
                     </ul>
                 </div>
             {{/if}}
+            {{#if mi-supply }}
+                <div class="c-buy-block">
+                    <div class="mi-supply">
+                        <input type="radio" name="mi-supply" checked />
+                        <span class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">Save 62% • Best Value</span>
+                        <div class="mi-supply__main">
+                            3 Month Supply
+                            {{> e-price current="{$dyn}" old="{$dyn}" }}
+                        </div>
+                        <div class="mi-supply__desc">
+                            <p>2 treatments • $49.50/treatment</p>
+                            <ul class="c-marked-list">
+                                <li>Free shipping</li>
+                                <li>Pause or cancel anytime</li>
+                            </ul>
+                        </div>
+                    </div>
+                    {{> c-order-button
+                        button="Add to Cart"
+                        hide-pay=true
+                    }}
+                    <small>We recommend 3 months of consistent use for best results.</small>
+                </div>
+            {{/if}}
             {{#if custom-block }}
                 {{{ custom-block }}}
             {{/if}}

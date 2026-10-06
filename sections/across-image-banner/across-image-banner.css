@@ -88,7 +88,7 @@
 }
 .e-pill-badge--xs {
   gap: 6px;
-  padding: 2px 12px;
+  padding: 2px 8px;
   font-size: 16px;
   letter-spacing: normal;
 }
@@ -97,7 +97,7 @@
 }
 .e-pill-badge--xxs {
   gap: 4px;
-  padding: 0 10px;
+  padding: 0 6px;
   font-size: 16px;
   letter-spacing: normal;
 }

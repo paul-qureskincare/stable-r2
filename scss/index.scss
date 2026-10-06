@@ -1,8 +1,15 @@
 // Sections styles on current page
+@use "@sections/top-products/top-products" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/experts-grid/experts-grid" as *;
+@use "@sections/our-story/our-story" as *;
+@use "@sections/qure-journal/qure-journal" as *;
+@use "@sections/we-online/we-online" as *;
+
+// TODO: Old sections, need to delete after update page on live
 @use "@sections/quick-links/quick-links" as *;
 @use "@sections/quick-tile-links/quick-tile-links" as *;
 @use "@sections/press-reviews/press-reviews" as *;
-@use "@sections/trusted-reviews/trusted-reviews" as *;
 @use "@sections/top-rated/top-rated" as *;
 @use "@sections/get-qure/get-qure" as *;
 @use "@sections/features-marquee/features-marquee" as *;
@@ -10,7 +17,6 @@
 @use "@sections/our-community/our-community" as *;
 @use "@sections/daily-cleanser/daily-cleanser" as *;
 @use "@sections/promo-strip/promo-strip" as *;
-
 
 // Styles for current page only
 
@@ -651,6 +657,35 @@
 
                 @include md {
                     font-size: 12px;
+                }
+            }
+        }
+    }
+
+    // .across-image-banner--quiz
+    &--quiz {
+        color: #fff;
+
+        img {
+            @include sm {
+                object-position: 50% 25%;
+            }
+        }
+
+        .container {
+            @include banner-height(550, 1440);
+
+            @include sm {
+                @include banner-height(575, 375);
+            }
+
+            article {
+                align-items: start;
+                max-width: min(550px, 50%);
+
+                @include sm {
+                    max-width: none;
+                    text-align: center;
                 }
             }
         }
