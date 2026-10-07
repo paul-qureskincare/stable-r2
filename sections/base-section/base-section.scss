@@ -524,6 +524,107 @@
         }
     }
 
+    &--mi-buy {
+        &:has(.e-pill-badge) {
+            article {
+                @include sm {
+                    text-align: left;
+                }
+            }
+        }
+
+        article {
+            column-gap: 32px;
+
+            @include sm {
+                column-gap: 24px;
+            }
+        }
+
+        .c-buy-block {
+            width: 100%;
+
+            small {
+                color: rgb(34 32 47 / 60%);
+                text-align: center;
+            }
+        }
+
+        .mi-supply {
+            position: relative;
+            margin-top: 32px;
+            margin-bottom: 8px;
+            padding: 20px 14px 20px 52px;
+            border: 2px solid;
+            border-radius: 10px;
+
+            @include sm {
+                margin-top: 16px;
+                padding-left: 44px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 20px;
+                left: 14px;
+                width: 20px;
+                height: 20px;
+                border: 4px solid #fff;
+                border-radius: 50%;
+                outline: 2px solid #212428;
+                background: #212428;
+                content: '';
+
+                @include sm {
+                    width: 16px;
+                    height: 16px;
+                    border-width: 3px;
+                }
+            }
+
+            input {
+                position: absolute;
+                z-index: -1;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .e-pill-badge {
+                position: absolute;
+                top: -15px;
+                left: 42px;
+                border: 2px solid #fff;
+
+                @include sm {
+                    left: 34px;
+                }
+            }
+
+            // .mi-supply__main
+            &__main {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                .e-price__main {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            // .mi-supply__desc
+            &__desc {
+                p {
+                    font-size: 16px;
+                }
+
+                .c-marked-list {
+                    gap: 8px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     // When section has button and percent list
     &:has(.btn):has(.c-percent-list) {
         article {

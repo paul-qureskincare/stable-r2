@@ -1,0 +1,68 @@
+@use "@root/mixins" as *;
+
+.qure-journal {
+    $root: &;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include sm {
+            gap: 24px;
+        }
+    }
+
+    hgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    h6 {
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .swiper-slide {
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+            padding: 15px 15px 25px;
+            border: 1px solid var(--bg-light);
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                border: 1px solid var(--input-border-color);
+                border-radius: 8px;
+            }
+
+            small {
+                color: #8b8c8e;
+                font-size: 16px;
+            }
+
+            h3 {
+                margin-bottom: 0;
+                font-family: inherit;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            a {
+                width: 100%;
+                margin-top: auto;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+}

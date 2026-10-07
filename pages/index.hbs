@@ -181,7 +181,7 @@
         </div>
     {{/across-image-banner}}
 
-    {{> quick-tile-links
+    {{!-- {{> quick-tile-links
         title=""
         list='[
             {
@@ -210,70 +210,75 @@
                 "name": "Micro-Infusion System"
             }
         ]'
-    }}
+    }} --}}
 
-    {{#> press-reviews }}
-        <div
-            class="c-swiper"
-            data-swiper-thumbs=".press-reviews .c-swiper-thumbs"
-            data-swiper='{
-                "slidesPerView": 1,
-                "spaceBetween": 16,
-                "loop": true,
-                "autoplay": {
-                    "delay": 5000
-                }
-            }'
-        >
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <h4>“The professional grade is the perfect addition to any at-home skincare routine.”</h4>
-                </div>
-                <div class="swiper-slide">
-                    <h4>“My skin actually seems considerable brighter and smoother! It’s simple, fast, and effective enough to become a daily habit.”</h4>
-                </div>
-                <div class="swiper-slide">
-                    <h4>“The results are blatant — my glow after using the treatment speaks for itself. You'll notice hydrated, radiant, and healthy-looking skin.”</h4>
-                </div>
-                <div class="swiper-slide">
-                    <h4>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”</h4>
-                </div>
-                <div class="swiper-slide">
-                    <h4> “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</h4>
-                </div>
-            </div>
-        </div>
-        <div class="c-swiper c-swiper-thumbs"
-            data-swiper='{
-                "slidesPerView": 3,
-                "spaceBetween": 30,
-                "breakpoints": {
-                    "992": {
-                        "slidesPerView": 5,
-                        "spaceBetween": 50
-                    }
-                }
-            }'
-        >
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="assets/images/press_slider/vogue-black.svg" alt="Vogue" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/press_slider/women-health.svg" alt="Women Health" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/press_slider/popsugar.svg" alt="Popsugar" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/press_slider/cosmopolitan.svg" alt="Cosmopolitan" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/press_slider/gq.svg" alt="QG" />
-                </div>
-            </div>
-        </div>
-    {{/press-reviews}}
+    {{#> top-products }}
+        <h2>Get the Qure</h2>
+        <ul>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="sections/top-products/images/mi.webp" alt="Micro-Infusion System" />
+                        <figcaption>
+                            <small>Micro-Infusion System</small>
+                            <span class="e-pill-badge e-pill-badge--xs">#1 Bestseller</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="sections/top-products/images/helmet.webp" alt="Helmet" />
+                        <figcaption>
+                            <small>Helmet</small>
+                            <span class="e-pill-badge e-pill-badge--xs">New</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="sections/top-products/images/led-mask.webp" alt="LED Mask" />
+                        <figcaption>
+                            <small>LED Mask</small>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="sections/top-products/images/shower-filter.webp" alt="Shower Filter" />
+                        <figcaption>
+                            <small>Shower Filter</small>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="sections/top-products/images/bundles.webp" alt="Bundles" />
+                        <figcaption>
+                            <small>Bundles</small>
+                            <span class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">57% OFF</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    {{/top-products }}
+
+    {{#> base-section
+        classes="base-section--reverse base-section--mi-buy"
+        title="Micro-Infusion System"
+        picture="assets/images/banner-with-text/micro_infusion_system.webp"
+        mi-supply=true
+    }}
+        <p>Reveal smoother-, firmer-, more radiant-looking skin at home. Micro-Infusion Rejuvenating is designed to help visibly refresh tired-looking skin with a simple treatment that pairs your Micro- Infusion device with the Blue Serum for glow, hydration, and rejuvenation.</p>
+    {{/base-section }}
 
     {{#> trusted-reviews
         classes="trusted-reviews--light"
@@ -422,7 +427,7 @@
         </div>
     {{/promo-strip }} --}}
 
-    {{#> promo-strip classes="promo-strip--against-cancer" }}
+    {{!-- {{#> promo-strip classes="promo-strip--against-cancer" }}
         <picture>
             <source media="(min-width:768px)" srcset="sections/promo-strip/images/against-cancer.webp" />
             <img src="sections/promo-strip/images/against-cancer-mob.webp" alt="Join Us in the Fight Against Breast Cancer" />
@@ -455,106 +460,129 @@
                 <a class="btn btn--primary" href="#">Support Now</a>
             </article>
         </div>
-    {{/promo-strip }}
+    {{/promo-strip }} --}}
 
-    {{#> top-rated
-        title="Top Rated Products"
+    {{#> experts-grid classes="experts-grid--awards" }}
+        <article>
+            <h2>Award winning, critically-acclaimed, &amp; backed&nbsp;by&nbsp;experts</h2>
+            <ol>
+                <li><img src="assets/images/awards/newbeauty.webp" alt="NewBeauty 100 – What's Next in Beauty 2025" /></li>
+                <li><img src="assets/images/awards/prevention.webp" alt="Prevention Australia Beauty Awards 2024" /></li>
+                <li><img src="assets/images/awards/bazaar.webp" alt="Harper's Bazaar Best Beauty Tools 2026" /></li>
+                <li><img src="assets/images/awards/who-what-wear.webp" alt="Who What Wear 100 Beauty Awards 2026 Winner" /></li>
+                <li><img src="assets/images/awards/customers.webp" alt="Qure – 500K Happy Customers 2026" /></li>
+            </ol>
+            <ul>
+                {{#parseJson
+                    '[
+                        {
+                            "img": "shah",
+                            "name": "Dr. Shah",
+                            "position": "Dermatologist",
+                            "q": true
+                        },
+                        {
+                            "img": "maxfield",
+                            "name": "Dr. Maxfield",
+                            "position": "Dermatologist",
+                            "q": true
+                        },
+                        {
+                            "img": "brown",
+                            "name": "Dr. Alekandra Brown",
+                            "position": "Dermatologist",
+                            "q": true
+                        },
+                        {
+                            "img": "zubritsky",
+                            "name": "Dr. Lindsey Zubritsky",
+                            "position": "Dermatologist",
+                            "q": true
+                        },
+                        {
+                            "img": "stephens",
+                            "name": "Dr. Alexis Stephens",
+                            "position": "Internal Medicine Doctor",
+                            "q": true
+                        },
+                        {
+                            "img": "tripati",
+                            "name": "Dr. Prem Tripati",
+                            "position": "Facial Plastic Surgeon",
+                            "q": true
+                        }
+                    ]'
+                }}
+                    <li>
+                        <figure>
+                            <img src="sections/experts-grid/images/{{ img }}.webp" alt="{{ name }}" />
+                            {{#if q }}
+                                <figcaption>{{> e-icon icon="q" }}</figcaption>
+                            {{/if }}
+                        </figure>
+                        <div>
+                            <strong>{{ name }}</strong>
+                            <small>{{ position }}</small>
+                        </div>
+                    </li>
+                {{/parseJson}}
+            </ul>
+        </article>
+    {{/experts-grid }}
+
+    {{#> across-image-banner
+        classes="across-image-banner--reverse across-image-banner--quiz"
     }}
-        {{> c-product-tile
-            image="sections/complete-system/images/micro-infusion.webp"
-            image-hover="/sections/complete-system/images/micro-infusion-hover.webp"
-            reviews="196"
-            name="Micro-Infusion"
-            bestseller=true
-        }}
-        {{> c-product-tile
-            image="sections/complete-system/images/led-mask.webp"
-            image-hover="/sections/complete-system/images/led-mask-hover.webp"
-            reviews="283"
-            name="Q-Rejuvalight Pro LED Mask"
-        }}
-        {{> c-product-tile
-            image="sections/complete-system/images/all-in-one.webp"
-            image-hover="/sections/complete-system/images/all-in-one-hover.webp"
-            reviews="180"
-            name="All-In-One Face Serum"
-        }}
-        {{> c-product-tile
-            image="sections/complete-system/images/mi-target-patches.webp"
-            image-hover="/sections/complete-system/images/mi-target-patches-hover.webp"
-            reviews="157"
-            name="Micro-Infusion Targeted Patches"
-            badge="Trending"
-        }}
-    {{/top-rated}}
+        <picture>
+            <source media="(min-width: 768px)" srcset="sections/across-image-banner/images/quiz.webp" />
+            <img src="sections/across-image-banner/images/quiz-mob.webp" />
+        </picture>
+        <div class="container">
+            <article>
+                <h2>Not sure where to start?<br /> Take our Skin Quiz and uncover what your skin needs.</h2>
+                <a class="btn btn--primary-white" href="#">Take the Quiz</a>
+            </article>
+        </div>
+    {{/across-image-banner}}
 
-    {{#> get-qure
-        title="Get Qure"
-    }}
-        <p>Reclaim your confidence at any age, no matter what your skin concern is.</p>
-        <ul>
-            <li>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="assets/images/get-qure/gq-1.webp" />
-                    <img src="assets/images/get-qure/gq-mob-1.webp" />
-                </picture>
-                <h6>Signs of aging, fine lines and wrinkles</h6>
-                <a class="btn btn--primary-white" href="#">Shop Now</a>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="assets/images/get-qure/gq-2.webp" />
-                    <img src="assets/images/get-qure/gq-mob-2.webp" />
-                </picture>
-                <h6>Dark spots and uneven skin tone</h6>
-                <a class="btn btn--primary-white" href="#">Shop Now</a>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="assets/images/get-qure/gq-3.webp" />
-                    <img src="assets/images/get-qure/gq-mob-3.webp" />
-                </picture>
-                <h6>Large pores and textured skin</h6>
-                <a class="btn btn--primary-white" href="#">Shop Now</a>
-            </li>
-            <li>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="assets/images/get-qure/gq-4.webp" />
-                    <img src="assets/images/get-qure/gq-mob-4.webp" />
-                </picture>
-                <h6>Acne breakouts and&nbsp;blemishes</h6>
-                <a class="btn btn--primary-white" href="#">Shop Now</a>
-            </li>
-        </ul>
-    {{/get-qure}}
+    {{#> our-story }}
+        <div class="our-story__content">
+            <hgroup class="our-story__heading">
+                <h6>Our Story</h6>
+                <h2>The Science Behind The Qure</h2>
+            </hgroup>
+            <article class="our-story__author">
+                <figure>
+                    <img src="sections/our-story/images/kristina-orlic-edmonds.webp" alt="Kristina Orlic Edmonds" />
+                    <figcaption>
+                        <strong>Kristina Orlic Edmonds</strong>
+                        <span>Co-Founder, Qure</span>
+                    </figcaption>
+                </figure>
+                <p>From clinically studied ingredients to rigorous testing and manufacturing, we obsess over every detail so you can feel confident about what you're putting on your skin.</p>
+            </article>
+        </div>
+        <a class="our-story__media" href="#">
+            <img src="sections/our-story/images/explore-the-science.webp" alt="Explore the science" />
+            <span class="our-story__button">
+                Explore the science
+                <span>{{> e-icon icon="play-triangle" }}</span>
+            </span>
+        </a>
+    {{/our-story }}
 
-    {{> features-marquee }}
-
-    {{#> base-section
-        classes="base-section--small-media"
-        title="Trusted and Recommended by Experts"
-        video='[
-            {
-                "url": "https://www.youtube.com/watch?v=mVdncsTAXiA",
-                "picture": "assets/images/experts/dr_shah_max_clean.webp",
-                "label-main": "Dr. Shah & Dr. Maxfield",
-                "label-secondary": "Board Certified Dermatologists"
-            }
-        ]'
-        pill-badge=true
-    }}
-        <p>“This treatment is an at-home option for those who want to <em>avoid the hassle or cost of going to the office</em>”.</p>
-    {{/base-section }}
-
-    {{#> base-slider
-        classes="base-slider--tree-cards"
-        title=""
-    }}
+    {{#> qure-journal }}
+        <article>
+            <hgroup>
+                <h6>Our expert blog</h6>
+                <h2>Qure journal</h2>
+            </hgroup>
+        </article>
         <div
             class="c-swiper"
             data-swiper='{
                 "slidesPerView": 1.1,
-                "spaceBetween": 13,
+                "spaceBetween": 16,
                 "loop": false,
                 "pagination": {
                     "el": ".c-swiper-pagination",
@@ -566,56 +594,70 @@
                 },
                 "breakpoints": {
                     "768": {
-                        "slidesPerView": 2
+                        "slidesPerView": 3
                     },
                     "1200": {
-                        "slidesPerView": 3,
-                        "spaceBetween": 16
+                        "slidesPerView": 4
                     }
                 }
             }'
         >
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    {{> c-trusted-video-card
-                        id="rehxqby0fq"
-                        thumbnail="sections/base-slider/images/trusted-review-thumb-1.webp"
-                        followers="818k"
-                        text="I like using this between my in-office treatments and it's easy to use, even for beginners."
-                        dr="Dr. Alekandra Brown"
-                        position="Board-Certified Dermatologist"
-                    }}
-                </div>
-                <div class="swiper-slide">
-                    {{> c-trusted-video-card
-                        id="ug1o3j3d8w"
-                        thumbnail="sections/base-slider/images/trusted-review-thumb-2.webp"
-                        followers="1.5M"
-                        text="After just a few uses my wrinkles look less visible and my skin brighter and smoother."
-                        dr="Dr. Lindsey Zubritsky"
-                        position="Board-Certified Dermatologist"
-                    }}
-                </div>
-                <div class="swiper-slide">
-                    {{> c-trusted-video-card
-                        id="wbf95ywhx4"
-                        thumbnail="sections/base-slider/images/trusted-review-thumb-3.webp"
-                        followers="56.9k"
-                        text="You can get a clinical treatment at home safely and conveniently... and it's particularly beneficial for those with melanin-rich skin."
-                        dr="Dr. Alexis Stephens"
-                        position="Internal Medicine Doctor"
-                    }}
-                </div>
-                <div class="swiper-slide">
-                    {{> c-trusted-video-card
-                        id="gzba345nd4"
-                        thumbnail="sections/base-slider/images/trusted-review-thumb-4.webp"
-                        followers="654k"
-                        text="With Qure's Micro-Infusion System - consistency is key."
-                        dr="Dr. Prem Tripati"
-                        position="Facial Plastic Surgeon"
-                    }}
-                </div>
+                {{#parseJson
+                    '[
+                        {
+                            "img": "1",
+                            "title": "What You Eat Can Reduce Premature Aging by 10% Over 15 Years",
+                            "text": "Did you know... There\'s definitely something to the notion that beauty begins on the inside. If you\'re not eating right, your skin will show it..."
+                        },
+                        {
+                            "img": "2",
+                            "title": "What You Eat Can Reduce Premature Aging by 10% Over 15 Years",
+                            "text": "Did you know... There\'s definitely something to the notion that beauty begins on the inside. If you\'re not eating right, your skin will show it..."
+                        },
+                        {
+                            "img": "3",
+                            "title": "Qure LED Mask Vs CurrentBody",
+                            "text": "Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We\'ve compared the devices, and the short version is this: they\'re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs."
+                        },
+                        {
+                            "img": "4",
+                            "title": "Qure LED Mask vs Dr Dennis Gross",
+                            "text": "Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We\'ve compared the devices, and the short version is this: they\'re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs."
+                        },
+                        {
+                            "img": "1",
+                            "title": "What You Eat Can Reduce Premature Aging by 10% Over 15 Years",
+                            "text": "Did you know... There\'s definitely something to the notion that beauty begins on the inside. If you\'re not eating right, your skin will show it..."
+                        },
+                        {
+                            "img": "2",
+                            "title": "What You Eat Can Reduce Premature Aging by 10% Over 15 Years",
+                            "text": "Did you know... There\'s definitely something to the notion that beauty begins on the inside. If you\'re not eating right, your skin will show it..."
+                        },
+                        {
+                            "img": "3",
+                            "title": "Qure LED Mask Vs CurrentBody",
+                            "text": "Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We\'ve compared the devices, and the short version is this: they\'re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs."
+                        },
+                        {
+                            "img": "4",
+                            "title": "Qure LED Mask vs Dr Dennis Gross",
+                            "text": "Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We\'ve compared the devices, and the short version is this: they\'re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs."
+                        }
+                    ]'
+                }}
+                    <div class="swiper-slide">
+                        <article>
+                            <img src="sections/qure-journal/images/journal-image-{{ img }}.webp" alt="{{ title }}" />
+                            <small>6 min read</small>
+                            <h3>{{ title }}</h3>
+                            <p>{{ text }}</p>
+                            <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                        </article>
+                    </div>
+                {{/parseJson}}
+
             </div>
             <div class="c-swiper-nav">
                 <button class="c-swiper-button-prev"></button>
@@ -623,29 +665,21 @@
                 <button class="c-swiper-button-next"></button>
             </div>
         </div>
-    {{/base-slider }}
+    {{/qure-journal }}
 
-    {{#> base-section
-        classes="base-section--reverse"
-        title="Why we started Qure"
-        picture="assets/images/banner-with-text/skincare_rev.webp"
-        button="Read Our Story"
-    }}
-        <p>We had one belief: Feeling good in your skin is a fundamental right — not a luxury. Because how you feel in your skin affects how you show up in your life.</p>
-        <p>As a brother-and-sister duo, we saw that <em>clinically proven skincare</em> was often expensive, or out of reach for many people.</p>
-        <p>So we set out to remove unnecessary barriers and make effective <em>science-backed treatments</em> accessible from home.</p>
-    {{/base-section }}
-
-    {{> board-advisors
-        title="Meet our board of advisors"
-        text="At Qure Skincare, we are proud to have a team of esteemed Dermatologists guiding our mission to deliver high-quality skincare solutions."
-        advisory-1="I like that they put a lot of R&D into their products - Ultimately, I think that they care a lot about the products they are putting out"
-        advisory-2="Qure do studies on this, taking a look at how effective it is, so you can have confidence it’s going to help what you’re doing for your skincare routine"
-        advisory-3="I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures."
-        advisory-4="What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create"
-    }}
-
-    {{> take-quiz }}
-
-    {{> our-community }}
+    {{#> we-online }}
+        <h2>As Seen On The Internet</h2>
+        <a href="#">
+            <img src="sections/we-online/images/avatar.webp" alt="@qureskincare" />
+            <strong>@qureskincare</strong>
+            <span>257K followers</span>
+        </a>
+        <ul>
+            <li><a href="#"><img src="sections/we-online/images/post-1.webp" alt="" /></a></li>
+            <li><a href="#"><img src="sections/we-online/images/post-2.webp" alt="" /></a></li>
+            <li><a href="#"><img src="sections/we-online/images/post-3.webp" alt="" /></a></li>
+            <li><a href="#"><img src="sections/we-online/images/post-4.webp" alt="" /></a></li>
+        </ul>
+        <a class="btn btn--secondary" href="#">Join Our Community</a>
+    {{/we-online }}
 {{/default }}

@@ -30,6 +30,32 @@
             overflow: hidden;
             border: 1px solid rgb(80 0 11 / 5%);
             border-radius: 24px;
+            container-type: inline-size;
+        }
+
+        figure {
+            position: relative;
+        }
+
+        figcaption {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.25em;
+            height: 1.25em;
+            font-size: 36px;
+            border: 1px solid #fff;
+            border-radius: 2px;
+            background: #cde6dd;
+
+            @include sm {
+                right: 4px;
+                bottom: 4px;
+                font-size: 16px;
+            }
         }
 
         img {
@@ -39,11 +65,13 @@
         div {
             display: flex;
             flex-direction: column;
+            gap: 8px;
             padding: 22px 24px;
-            font-size: min(28px, 2cqw);
+            font-size: min(24px, 7cqw);
             line-height: 1.1;
 
             @include sm {
+                gap: 4px;
                 padding: 12px;
             }
         }
@@ -64,6 +92,51 @@
                 font-size: 12px;
             }
         }
+    }
 
+    &--awards {
+        article {
+            display: grid;
+            grid-template: repeat(2, auto) / repeat(2, auto);
+            gap: 32px;
+            align-items: center;
+
+            @include sm {
+                grid-template: auto / auto;
+            }
+        }
+
+        h2 {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        ol {
+            display: flex;
+            gap: 8px;
+            overflow: auto;
+
+            img {
+                max-height: 80px;
+
+                @media screen and (min-width: 768px) {
+                    @include img-fluid;
+                }
+
+                @include sm {
+                    max-height: 95px;
+                }
+            }
+        }
+
+        ul {
+            grid-column: 1 / -1;
+            margin-top: 0;
+
+            @include sm {
+                grid-column: auto;
+                margin-top: 0;
+            }
+        }
     }
 }
