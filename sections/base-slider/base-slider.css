@@ -620,10 +620,6 @@
 .base-slider .swiper-slide>picture,.base-slider .swiper-slide>picture img {
   height: 100%;
 }
-.base-slider .swiper-slide .c-product-tile__price {
-  display: flex;
-  justify-content: center;
-}
 .base-slider .swiper-slide .c-trusted-video-card {
   max-width: 340px;
 }
