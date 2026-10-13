@@ -3,6 +3,9 @@
   gap: 40px;
   justify-content: space-between;
 }
+.our-story .wistia_click_to_play {
+  width: 100%;
+}
 .our-story__content {
   display: flex;
   flex-direction: column;
