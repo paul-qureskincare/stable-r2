@@ -562,13 +562,18 @@
                 <p>From clinically studied ingredients to rigorous testing and manufacturing, we obsess over every detail so you can feel confident about what you're putting on your skin.</p>
             </article>
         </div>
-        <a class="our-story__media" href="#">
-            <img src="sections/our-story/images/explore-the-science.webp" alt="Explore the science" />
-            <span class="our-story__button">
-                Explore the science
-                <span>{{> e-icon icon="play-triangle" }}</span>
-            </span>
-        </a>
+        {{> c-wistia
+            id="z9uwdp291u"
+            custom='
+                <div class="our-story__media">
+                    <img src="sections/our-story/images/explore-the-science.webp" alt="Explore the science" />
+                    <div class="our-story__button">
+                        Explore the science
+                        <span><i class="e-icon e-icon-play-triangle"></i></span>
+                    </div>
+                </div>
+            '
+        }}
     {{/our-story }}
 
     {{#> qure-journal }}
