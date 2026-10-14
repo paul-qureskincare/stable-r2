@@ -1,6 +1,9 @@
-<div class="c-special-offer"{{#unless hide-label }} data-label="Special Offer"{{/unless}}>
+<div
+    class="c-special-offer{{#if bf }} c-special-offer--bf{{/if }}"
+    {{#unless hide-label }} data-label="{{#if label }}{{ label }}{{ else }}Special Offer{{/if }}"{{/unless }}
+>
     {{#unless hide-price }}
-    {{> e-price current="{$dyn}" old="{$dyn}" }}
+        {{> e-price current="{$dyn}" old="{$dyn}" }}
     {{/unless}}
-    <div class="e-pill-save">{{#if pill-text}}{{ pill-text }}{{ else }}Save 20%{{/if }}</div>
+    <div class="e-pill-save">{{#if pill-text }}{{ pill-text }}{{ else }}Save 20%{{/if }}</div>
 </div>

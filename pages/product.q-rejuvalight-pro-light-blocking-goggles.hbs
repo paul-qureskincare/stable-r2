@@ -59,7 +59,10 @@
             <article>
                 <p>Qure’s light blocking protective eyewear has been specifically designed to work seamlessly with the Q-Rejuvalight Pro LED mask, providing the utmost protection during treatment whilst still offering the convenience of being able to multitask. </p>
             </article>
-            {{> c-special-offer }}
+            {{> c-special-offer
+                bf=true
+                label="Black Friday"
+            }}
             <div class="c-buy-block">
                 {{> c-order-button }}
                 {{> c-certified-box }}
@@ -74,7 +77,15 @@
                     </li>
                 </ul>
             </div>
-            {{> c-save-up }}
+            {{!-- {{> c-save-up }} --}}
+            {{> c-save-up-bf
+                link="#"
+                tag="limited time"
+                image="assets/images/bf-26/bg-limited-time-offer.webp"
+                title="UP TO 57% OFF"
+                text="Save with Black Friday bundle deals"
+            }}
+
         </div>
     {{/hero-product}}
 

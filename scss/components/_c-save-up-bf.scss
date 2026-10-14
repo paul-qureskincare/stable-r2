@@ -1,0 +1,87 @@
+@use "@root/mixins" as *;
+
+.c-save-up-bf {
+    $root: &;
+
+    position: relative;
+    display: grid;
+    grid-template: auto auto / auto 1fr auto;
+    gap: 6px 16px;
+    align-content: center;
+    align-items: center;
+    max-width: 500px;
+    padding-right: 24px;
+    border: 1px solid #dfe0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(33 36 40 / 15%);
+    background: #fff;
+    @include transition;
+
+    @include hover {
+        text-decoration: none;
+        background: var(--btn-primary-bg-hover);
+    }
+
+    @include sm {
+        gap: 4px 12px;
+        padding-right: 16px;
+    }
+
+    picture {
+        grid-row: 1 / -1;
+        width: 100px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @include sm {
+            width: 80px;
+        }
+    }
+
+    .e-pill-save {
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        background: linear-gradient(40deg, #ff4e22 65%, #ff8566 90%);
+
+        @include sm {
+            right: 12px;
+            font-size: 14px;
+        }
+    }
+
+    strong {
+        align-self: end;
+        font-size: 20px;
+
+        @include sm {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        grid-column: 2;
+        align-self: start;
+        margin: 0;
+        font-size: 18px;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    .e-icon-arrow {
+        grid-area: 1 / -1 / -1;
+        font-size: 20px;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+}
