@@ -2846,6 +2846,45 @@
   font-size: 12px;
 }
 
+.c-blue-serum-free {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  width: min(500px, 100%);
+  padding: 12px 12px 12px 32px;
+  border-radius: 10px;
+  background: #f6f6f7;
+}
+.c-blue-serum-free strong {
+  max-width: 300px;
+  margin-bottom: 8px;
+}
+.c-blue-serum-free .e-pill-save {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.c-blue-serum-free .e-declaimer {
+  font-size: 10px;
+}
+.c-blue-serum-free picture {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  width: min(210px, 45%);
+}
+.c-blue-serum-free picture img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-product__container {
   display: grid;
   grid-template: auto 1fr/repeat(2, 1fr);
@@ -3302,6 +3341,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-supply-selector__gift .gift-notice p {
     font-size: 12px;
   }
+  .c-blue-serum-free picture {
+    width: 26%;
+  }
   .hero-product--reverse .hero-product__container {
     -moz-column-gap: 60px;
          column-gap: 60px;
@@ -3558,6 +3600,12 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .c-optional-subscription__today {
     padding: 6px;
+  }
+  .c-blue-serum-free {
+    padding-left: 24px;
+  }
+  .c-blue-serum-free strong {
+    font-size: 16px;
   }
   .hero-product__container {
     grid-template: auto/auto;
