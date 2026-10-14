@@ -137,4 +137,22 @@
             }
         }
     }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / -1;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+
+        .c-order-button {
+            width: min(330px, 100%);
+        }
+
+        small {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
 }

@@ -1,0 +1,155 @@
+@use "@root/mixins" as *;
+@use "@elements/e-quote-card" as *;
+@use "@components/c-product-components" as *;
+
+.bundled-together {
+    $root: &;
+
+    .container {
+        display: grid;
+        grid-template: auto minmax(min-content, 0) auto / repeat(2, 1fr);
+        gap: 32px 60px;
+        align-items: center;
+
+        @include sm {
+            grid-template: auto / auto;
+            gap: 24px;
+        }
+    }
+
+    h2 {
+        align-self: end;
+        max-width: 400px;
+        margin-bottom: 0;
+
+        @include sm {
+            max-width: none;
+        }
+    }
+
+    .c-product-components {
+        grid-row: 1 / -1;
+        grid-column: 2;
+
+        @include sm {
+            grid-row: auto;
+            grid-column: auto;
+        }
+
+        // .c-product-components--hair
+        &--hair {
+            .e-component-pointer {
+                --left: auto;
+
+                right: 10%;
+                align-items: start;
+                text-align: right;
+                opacity: 1;
+
+                @include md {
+                    right: 0;
+                }
+
+                &::before {
+                    border-color: rgb(139 140 142 / 20%);
+                    background: #6f5c5b;
+                    background-clip: content-box;
+                }
+
+                hr {
+                    position: relative;
+                    display: block;
+                    overflow: visible;
+                    width: 100%;
+                    height: 1px;
+                    margin-top: 12px;
+                    border: 0;
+                    background: rgb(139 140 142 / 50%);
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include sm {
+                        font-size: 14px;
+                    }
+                }
+
+                strong {
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    white-space: nowrap;
+
+                    @include md {
+                        font-size: 16px;
+                        font-weight: normal;
+                    }
+                }
+
+                .e-pill-badge {
+                    --badge-base-color: #212428;
+
+                    background: rgb(82 63 58 / 20%);
+
+                    @include md {
+                        font-size: 12px;
+                    }
+                }
+
+                small {
+                    color: #8b8c8e;
+                    font-size: 0.9em;
+                }
+
+                &:nth-child(2) {
+                    --top: 15%;
+
+                    width: 80%;
+
+                    @include md {
+                        width: 90%;
+                    }
+                }
+
+                &:nth-child(3) {
+                    --top: 41%;
+
+                    width: 65%;
+
+                    @include md {
+                        width: 75%;
+                    }
+                }
+
+                &:last-child {
+                    --top: 67%;
+
+                    width: 80%;
+
+                    @include md {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .e-quote-card {
+        max-width: 400px;
+
+        @include sm {
+            max-width: none;
+        }
+    }
+
+    .btn {
+        align-self: start;
+        max-width: 340px;
+
+        @include sm {
+            max-width: none;
+        }
+    }
+}

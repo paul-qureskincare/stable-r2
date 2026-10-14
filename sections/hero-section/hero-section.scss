@@ -1,5 +1,7 @@
 @use "@root/mixins" as *;
 
+@use "@elements/e-short-features-list" as *;
+@use "@elements/e-expert-quote-tag" as *;
 @use "@components/c-approved-by" as *;
 @use "@components/c-info-bar" as *;
 @use "@components/c-marked-list" as *;

@@ -1,0 +1,104 @@
+@use "@root/mixins" as *;
+
+.routine-steps {
+    $root: &;
+
+    .container {
+        display: grid;
+        grid-template: repeat(2, auto) / 3fr 2fr;
+        gap: 32px;
+
+        @include sm {
+            grid-template: auto / auto;
+            gap: 24px;
+        }
+    }
+
+    &__titles {
+        grid-column: 1 / -1;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        h6 {
+            color: #8b8c8e;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+        }
+    }
+
+    &__swiper {
+        display: grid;
+        grid-template: repeat(2, auto) / 1fr auto;
+        gap: 16px;
+        align-items: center;
+        min-width: 0;
+        padding: 10px 16px;
+        border: 1px solid #dfe0e0;
+        border-radius: 12px;
+
+        @include sm {
+            padding: 0;
+            border: 0;
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        .e-pill-badge {
+            --badge-base-color: #212428;
+
+            background: #dfe0e0;
+
+            @include md {
+                font-size: 12px;
+            }
+        }
+
+        .c-swiper {
+            grid-column: 1 / -1;
+            // margin: 0;
+            // padding: 0;
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        picture {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #dfe0e0;
+            border-radius: 10px;
+            background: #f6f6f7;
+
+            &[data-index] {
+                &::before {
+                    top: 8px;
+                    left: 8px;
+                    @include index-number;
+                    color: #212428;
+                    font-size: 16px;
+                    background: #dfe0e0;
+                    content: attr(data-index);
+
+                    @include sm {
+                        top: 5px;
+                        left: 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}

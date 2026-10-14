@@ -1,0 +1,381 @@
+.e-quote-card {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 24px 120px 24px 40px;
+  border-radius: 5px;
+  background: #f6f6f7;
+}
+.e-quote-card .e-icon {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  color: #c7e5db;
+  font-size: 8px;
+}
+.e-quote-card picture {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 120px;
+}
+.e-quote-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.e-quote-card div {
+  font-size: 16px;
+}
+.e-quote-card div:last-child {
+  margin-top: 10px;
+}
+.e-quote-card div small {
+  color: #8b8c8e;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.e-component-pointer {
+  --top: 0;
+  --left: 0;
+  --line-size: 0;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  display: flex;
+  align-items: center;
+  opacity: .5;
+}
+.e-component-pointer:has(.active) {
+  opacity: 1;
+}
+.e-component-pointer:has(.active):before {
+  border-color: #91baec;
+}
+.e-component-pointer:before {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border: 7px solid rgba(121,125,124,.4);
+  border-radius: 50%;
+  background: #212428;
+  background-clip: content-box;
+  content: "";
+}
+.e-component-pointer hr {
+  flex-grow: 1;
+  width: var(--line-size);
+  margin: 0 10px 0 0;
+  opacity: 1;
+  border-top-color: #91baec;
+}
+.e-component-pointer a {
+  color: inherit;
+  line-height: 1;
+}
+.e-component-pointer--vertical {
+  flex-direction: column;
+}
+.e-component-pointer--vertical hr {
+  margin-bottom: 5px;
+}
+.e-component-pointer--reverse {
+  flex-direction: row-reverse;
+}
+.e-component-pointer--reverse hr {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.e-component-pointer--vertical-reverse {
+  flex-direction: column-reverse;
+}
+.e-component-pointer--vertical-reverse hr {
+  margin-top: 5px;
+}
+.e-component-pointer--vertical hr,.e-component-pointer--vertical-reverse hr {
+  width: auto;
+  height: var(--line-size);
+  margin-right: 0;
+  border-top: 0;
+  border-left: 1px solid #91baec;
+}
+
+.c-product-components {
+  position: relative;
+}
+.c-product-components img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]) {
+  --top: 20%;
+  --left: 13%;
+  --line-size: 310px;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#pp-filter"]) {
+  --top: 3%;
+  --left: -1%;
+  --line-size: 30px;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]) {
+  --top: 45%;
+  --left: 48%;
+  --line-size: 110px;
+}
+.c-product-components--faucet-filter .e-component-pointer:has([href="#asp-descaler"]) {
+  --top: 75%;
+  --left: 2.5%;
+  --line-size: 30px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]) {
+  --top: 25%;
+  --left: 50%;
+  --line-size: 100px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]) {
+  --top: 50%;
+  --left: 3%;
+  --line-size: 60px;
+}
+.c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]) {
+  --top: 65%;
+  --left: 50%;
+  --line-size: 100px;
+}
+.c-product-components--recovery-mask .e-component-pointer {
+  align-items: start;
+  opacity: 1;
+}
+.c-product-components--recovery-mask .e-component-pointer:before {
+  border-color: rgba(145,186,236,.2);
+  background: #91baec;
+  background-clip: content-box;
+}
+.c-product-components--recovery-mask .e-component-pointer hr {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 1px;
+  margin-top: 12px;
+  border: 0;
+  background: rgba(145,186,236,.5);
+}
+.c-product-components--recovery-mask .e-component-pointer div {
+  display: flex;
+  flex-direction: column;
+}
+.c-product-components--recovery-mask .e-component-pointer strong {
+  white-space: nowrap;
+}
+.c-product-components--recovery-mask .e-component-pointer small {
+  color: #91baec;
+  font-size: .9em;
+}
+.c-product-components--recovery-mask .e-component-pointer:nth-child(2) {
+  --top: 20%;
+  --left: auto;
+  right: 0;
+  width: 40%;
+  text-align: right;
+}
+.c-product-components--recovery-mask .e-component-pointer:nth-child(3) {
+  --top: 40%;
+  --left: 0;
+  width: 30%;
+}
+.c-product-components--recovery-mask .e-component-pointer:last-child {
+  --top: 55%;
+  --left: auto;
+  right: 0;
+  width: 35%;
+  text-align: right;
+}
+
+.bundled-together .container {
+  display: grid;
+  grid-template: auto minmax(-webkit-min-content, 0) auto/repeat(2, 1fr);
+  grid-template: auto minmax(min-content, 0) auto/repeat(2, 1fr);
+  gap: 32px 60px;
+  align-items: center;
+}
+.bundled-together h2 {
+  align-self: end;
+  max-width: 400px;
+  margin-bottom: 0;
+}
+.bundled-together .c-product-components {
+  grid-row: 1/-1;
+  grid-column: 2;
+}
+.bundled-together .c-product-components--hair .e-component-pointer {
+  --left: auto;
+  right: 10%;
+  align-items: start;
+  text-align: right;
+  opacity: 1;
+}
+.bundled-together .c-product-components--hair .e-component-pointer:before {
+  border-color: rgba(139,140,142,.2);
+  background: #6f5c5b;
+  background-clip: content-box;
+}
+.bundled-together .c-product-components--hair .e-component-pointer hr {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 1px;
+  margin-top: 12px;
+  border: 0;
+  background: rgba(139,140,142,.5);
+}
+.bundled-together .c-product-components--hair .e-component-pointer div {
+  display: flex;
+  flex-direction: column;
+}
+.bundled-together .c-product-components--hair .e-component-pointer strong {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  white-space: nowrap;
+}
+.bundled-together .c-product-components--hair .e-component-pointer .e-pill-badge {
+  --badge-base-color: #212428;
+  background: rgba(82,63,58,.2);
+}
+.bundled-together .c-product-components--hair .e-component-pointer small {
+  color: #8b8c8e;
+  font-size: .9em;
+}
+.bundled-together .c-product-components--hair .e-component-pointer:nth-child(2) {
+  --top: 15%;
+  width: 80%;
+}
+.bundled-together .c-product-components--hair .e-component-pointer:nth-child(3) {
+  --top: 41%;
+  width: 65%;
+}
+.bundled-together .c-product-components--hair .e-component-pointer:last-child {
+  --top: 67%;
+  width: 80%;
+}
+.bundled-together .e-quote-card {
+  max-width: 400px;
+}
+.bundled-together .btn {
+  align-self: start;
+  max-width: 340px;
+}
+@media screen and (max-width:1120px) {
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]) {
+    --line-size: 290px;
+  }
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]) {
+    --line-size: 100px;
+  }
+}
+@media screen and (max-width:991px) {
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]) {
+    --line-size: 55vw;
+  }
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#nok-filter"]) {
+    --line-size: 22vw;
+  }
+  .c-product-components--faucet-filter .e-component-pointer:has([href="#asp-descaler"]) {
+    --left: 1%;
+    --line-size: 20px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#carbon-fiber"]) {
+    --line-size: 20vw;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]) {
+    --line-size: 30vw;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#fof-filter"]) {
+    --line-size: 20vw;
+  }
+  .c-product-components--recovery-mask .e-component-pointer:last-child {
+    --top: 25%;
+    width: 40%;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer {
+    right: 0;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer strong {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer .e-pill-badge {
+    font-size: 12px;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer:nth-child(2) {
+    width: 90%;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer:nth-child(3) {
+    width: 75%;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer:last-child {
+    width: 90%;
+  }
+}
+@media screen and (max-width:767px) {
+  .e-quote-card {
+    padding: 36px 100px 16px 16px;
+  }
+  .e-quote-card .e-icon {
+    top: 16px;
+    left: 16px;
+  }
+  .e-quote-card picture {
+    right: -20px;
+    width: 140px;
+  }
+  .e-component-pointer a {
+    font-size: 14px;
+  }
+  .c-product-components--shower-filter .e-component-pointer:has([href="#kdf-filter"]) {
+    --line-size: 15vw;
+  }
+  .c-product-components--recovery-mask .e-component-pointer div {
+    font-size: 14px;
+  }
+  .c-product-components--recovery-mask .e-component-pointer:nth-child(2) {
+    --top: 5%;
+    width: 56%;
+  }
+  .c-product-components--recovery-mask .e-component-pointer:nth-child(3) {
+    --top: 58%;
+    --left: auto;
+    right: 0;
+    width: 40%;
+    text-align: right;
+  }
+  .c-product-components--recovery-mask .e-component-pointer--reverse {
+    flex-direction: row;
+  }
+  .c-product-components--recovery-mask .e-component-pointer--reverse hr {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+  .bundled-together .container {
+    grid-template: auto/auto;
+    gap: 24px;
+  }
+  .bundled-together h2 {
+    max-width: none;
+  }
+  .bundled-together .c-product-components {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .bundled-together .c-product-components--hair .e-component-pointer div {
+    font-size: 14px;
+  }
+  .bundled-together .btn,.bundled-together .e-quote-card {
+    max-width: none;
+  }
+}
