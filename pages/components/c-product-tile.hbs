@@ -5,7 +5,7 @@
         href="#"
     >
         <img src="{{ image }}" alt="{{ title }}" />
-        {{#if (or day night) }}
+        {{#if (or day night weekly) }}
             <div class="c-product-tile__time">
                 {{#if day }}
                     <div class="e-pill-badge e-pill-badge--sm">
@@ -17,6 +17,12 @@
                     <div class="e-pill-badge e-pill-badge--sm">
                         <i class="e-icon e-icon-pm"></i>
                         Night
+                    </div>
+                {{/if}}
+                {{#if weekly }}
+                    <div class="e-pill-badge e-pill-badge--sm">
+                        <i class="e-icon e-icon-calendar"></i>
+                        Weekly
                     </div>
                 {{/if}}
             </div>

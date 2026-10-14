@@ -176,6 +176,21 @@
 .mi-ingredients__card .c-accordion .c-accordion__summary:after {
   font-size: 16px;
 }
+.mi-ingredients__button {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/-1;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.mi-ingredients__button .c-order-button {
+  width: min(330px, 100%);
+}
+.mi-ingredients__button small {
+  font-size: 14px;
+  text-align: center;
+}
 @media screen and (max-width:991px) {
   .mi-ingredients__card {
     grid-template-columns: 70px 1fr;

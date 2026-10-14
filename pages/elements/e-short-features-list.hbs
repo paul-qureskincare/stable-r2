@@ -1,0 +1,8 @@
+<ul class="e-short-features-list">
+    {{#parseJson list }}
+        <li>
+            {{> e-icon icon=icon }}
+            {{{ name }}}
+        </li>
+    {{/parseJson}}
+</ul>

@@ -1,0 +1,92 @@
+// Sections styles on current page
+@use "@sections/hero-section/hero-section" as *;
+@use "@sections/bundled-together/bundled-together" as *;
+@use "@sections/mi-ingredients/mi-ingredients" as *;
+@use "@sections/routine-steps/routine-steps" as *;
+@use "@sections/usage-steps/usage-steps" as *;
+@use "@sections/treatment/treatment" as *;
+@use "@sections/complete-system/complete-system" as *;
+
+// Styles for current page only
+.sections-stack {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hero-section {
+    &__content {
+        max-width: 450px;
+        margin-right: auto;
+    }
+
+    &__content-button {
+        .btn {
+            text-transform: capitalize;
+        }
+    }
+
+    &:not(.hero-section--secondary) {
+        .hero-section__image {
+            img {
+                object-position: 0 50%;
+            }
+        }
+    }
+}
+
+.mi-ingredients {
+    .mi-ingredients__card {
+        grid-template-columns: 1fr 90px;
+        column-gap: 12px;
+
+        img {
+            grid-column: 2;
+        }
+
+        article {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .e-pill-badge {
+            --badge-base-color: #523f3a;
+            --badge-fill-color: rgb(82 63 58 / 20%);
+
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        h6 {
+            color: #8b8c8e;
+        }
+
+        ul {
+            li {
+                max-width: 110px;
+            }
+        }
+    }
+}
+
+.usage-steps {
+    .container > article .c-wistia__link {
+        color: #8b8c8e;
+    }
+}
+
+.base-section--haircare {
+    .c-wistia {
+        container-type: inline-size;
+
+        &::after {
+            position: absolute;
+            right: 16px;
+            bottom: 8px;
+            width: 18cqw;
+            aspect-ratio: 1 / 1;
+            background: url("../images/hair/sterile-needles-stamp.webp") 0 0 no-repeat;
+            background-size: contain;
+            content: '';
+        }
+    }
+}

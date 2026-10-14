@@ -1,0 +1,24 @@
+@use "@root/mixins" as *;
+
+.e-short-features-list {
+    display: flex;
+    gap: 8px;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+
+        & + li {
+            padding-left: 9px;
+            border-left: 1px solid #f2f2f2;
+        }
+    }
+
+    .e-icon {
+        font-size: 32px;
+    }
+}
