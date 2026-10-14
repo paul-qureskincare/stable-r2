@@ -311,6 +311,15 @@
 .c-special-offer .e-price__main {
   flex-direction: row-reverse;
 }
+.c-special-offer--bf[data-label]:before {
+  color: #ff5429;
+  background: none;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+.c-special-offer--bf .e-pill-save {
+  background: linear-gradient(40deg, #ff4e22 65%, #ff8566 90%);
+}
 
 .c-marked-list {
   display: flex;
@@ -1885,6 +1894,53 @@
   align-items: center;
 }
 
+.c-save-up-bf {
+  position: relative;
+  display: grid;
+  grid-template: auto auto/auto 1fr auto;
+  gap: 6px 16px;
+  align-content: center;
+  align-items: center;
+  max-width: 500px;
+  padding-right: 24px;
+  border: 1px solid #dfe0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(33,36,40,.15);
+  background: #fff;
+  transition: all .2s linear;
+}
+.c-save-up-bf picture {
+  grid-row: 1/-1;
+  width: 100px;
+}
+.c-save-up-bf picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.c-save-up-bf .e-pill-save {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  font-size: 16px;
+  letter-spacing: .1em;
+  background: linear-gradient(40deg, #ff4e22 65%, #ff8566 90%);
+}
+.c-save-up-bf strong {
+  align-self: end;
+  font-size: 20px;
+}
+.c-save-up-bf p {
+  grid-column: 2;
+  align-self: start;
+  margin: 0;
+  font-size: 18px;
+}
+.c-save-up-bf .e-icon-arrow {
+  grid-area: 1/-1/-1;
+  font-size: 20px;
+}
+
 .e-double-tag {
   display: inline-flex;
   gap: 16px;
@@ -3396,6 +3452,23 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .c-payment-selector__text,.c-save-up {
     flex-direction: column;
   }
+  .c-save-up-bf {
+    gap: 4px 12px;
+    padding-right: 16px;
+  }
+  .c-save-up-bf picture {
+    width: 80px;
+  }
+  .c-save-up-bf .e-pill-save {
+    right: 12px;
+    font-size: 14px;
+  }
+  .c-save-up-bf strong {
+    font-size: 18px;
+  }
+  .c-save-up-bf .e-icon-arrow,.c-save-up-bf p {
+    font-size: 16px;
+  }
   .c-exclusive-offer {
     max-width: none;
   }
@@ -3569,5 +3642,11 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   .e-sticky-thumb-video.expanded {
     width: 155.5555555556px;
     height: 280px;
+  }
+}
+@media(hover:hover) {
+  .c-save-up-bf:hover {
+    text-decoration: none;
+    background: var(--btn-primary-bg-hover);
   }
 }

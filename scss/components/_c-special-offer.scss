@@ -55,4 +55,20 @@
                 var(--discount-color) 100%
         );
     } */
+
+    // .c-special-offer--bf
+    &--bf {
+        &[data-label] {
+            &::before {
+                color: #ff5429;
+                background: none;
+                background-clip: unset;
+                -webkit-text-fill-color: unset;
+            }
+        }
+
+        .e-pill-save {
+            background: linear-gradient(40deg, #ff4e22 65%, #ff8566 90%);
+        }
+    }
 }
