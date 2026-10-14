@@ -1,0 +1,57 @@
+@use "@root/mixins" as *;
+
+.c-blue-serum-free {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    width: min(500px, 100%);
+    padding: 12px 12px 12px 32px;
+    border-radius: 10px;
+    background: #f6f6f7;
+
+    @include sm {
+        padding-left: 24px;
+    }
+
+    strong {
+        max-width: 300px;
+        margin-bottom: 8px;
+
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    .e-pill-save {
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+
+    .e-declaimer {
+        font-size: 10px;
+    }
+
+    picture {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 0;
+        width: min(210px, 45%);
+
+        @include md {
+            width: 26%;
+        }
+
+        img {
+            display: block;
+            object-fit: contain;
+            object-position: 50% 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

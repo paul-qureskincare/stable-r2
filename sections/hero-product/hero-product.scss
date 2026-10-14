@@ -31,6 +31,7 @@
 @use "@components/c-note" as *;
 @use "@components/c-upsell-card" as *;
 @use "@components/c-optional-subscription" as *;
+@use "@components/c-blue-serum-free" as *;
 
 .hero-product {
     $root: &;
