@@ -436,7 +436,7 @@
         }
     } */
 
-    // .across-image-banner--summer
+    /* // .across-image-banner--summer
     &--summer {
         position: relative;
         z-index: 1;
@@ -502,9 +502,9 @@
                 }
             }
         }
-    }
+    } */
 
-    // .across-image-banner--labor-day
+    /* // .across-image-banner--labor-day
     &--labor-day {
         background: #fff;
 
@@ -563,7 +563,7 @@
                 max-width: 360px;
             }
         }
-    }
+    } */
 
     // .across-image-banner--blue-plus
     &--blue-plus {
@@ -686,6 +686,70 @@
                 @include sm {
                     max-width: none;
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    // .across-image-banner--bf
+    &--bf {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background: #f6f6f7;
+
+        @include sm {
+            display: flex;
+            flex-direction: column-reverse;
+            height: auto;
+        }
+
+        picture {
+            @include sm {
+                z-index: 1;
+            }
+        }
+
+        article {
+            gap: 24px;
+            align-items: center;
+            margin-left: 0;
+
+            @include sm {
+                gap: 12px;
+                margin-left: 0;
+                padding-top: 24px;
+                padding-bottom: 0;
+            }
+
+            img {
+                @include img-fluid;
+                max-width: 190px;
+
+                @include md {
+                    max-width: 140px;
+                }
+            }
+
+            h1 {
+                margin-bottom: 0;
+                font-size: 46px;
+
+                span {
+                    color: #ff4e22;
+                }
+            }
+
+            p {
+                margin-top: -8px;
+                margin-bottom: 16px;
+                font-size: 20px;
+
+                @include sm {
+                    max-width: 80%;
+                    margin-top: 0;
+                    margin-bottom: 8px;
+                    font-size: 18px;
                 }
             }
         }
