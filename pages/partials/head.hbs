@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} - Qure</title>
+    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+    {{> css-vars }}
+    <link href="assets/css/fonts.css" rel="stylesheet" />
+    <link href="assets/css/general.css" rel="stylesheet" />
+    {{#if page-css }}
+        <link href="assets/css/{{ body-class }}.css" rel="stylesheet" />
+    {{/if}}
+    <!-- Loading HTML Files -->
+   <script src="assets/js/fileloader.js"></script>
+</head>

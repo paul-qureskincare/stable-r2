@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+
+{{> head }}
+
+<body class="{{ body-class }}">
+    <!-- PAGE HEADER -->
+    <div id="site-header"></div>
+    <!-- PAGE HEADER END -->
+
+    {{#> sections-stack }}
+        {{> @partial-block}}
+    {{/sections-stack }}
+
+    {{> scripts }}
+</body>
+</html>

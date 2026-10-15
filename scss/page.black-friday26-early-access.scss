@@ -1,0 +1,20 @@
+// Sections styles on current page
+@use "@sections/bf-early-access/bf-early-access" as *;
+
+
+// Styles for current page only
+html {
+    scrollbar-gutter: unset;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sections-stack {
+    flex-grow: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+}

@@ -1,0 +1,49 @@
+{{#> light
+    title="Early Access BF 26"
+    body-class="page.black-friday26-early-access"
+    page-css=true
+}}
+    {{#> bf-early-access }}
+        <div class="bf-early-access__content">
+            <div class="container">
+                <article>
+                    <hgroup>
+                        {{> e-bf-label lg=true }}
+                        <h1>Buy before anyone else whilst stocks last. <span>Save up to 57%</span></h1>
+                    </hgroup>
+                    <div class="c-subscribe-form">
+                        <label for="early-access-password">Enter early with your unique password:</label>
+                        <form>
+                            <input type="password" id="early-access-password" name="password" placeholder="Password" />
+                            <button>{{> e-icon icon="arrow" }}</button>
+                        </form>
+                    </div>
+                    <picture>
+                        <img src="sections/bf-early-access/images/inline.webp" alt="Early Access BF 26" />
+                    </picture>
+                    <div class="bf-early-access__countdown">
+                        <p>{{> e-icon icon="clock" }} Sale opens for everyone in:</p>
+                        <div class="e-countdown" data-deadline="2026-11-30 23:59:59">
+                            <div data-key="days">00</div>
+                            <div data-key="hours">00</div>
+                            <div data-key="minutes">00</div>
+                            <div data-key="seconds">00</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="bf-early-access__bottom">
+            <div class="container">
+                <p>© 2025 Qure™ Skincare. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <picture class="bf-early-access__bg">
+            <img src="sections/bf-early-access/images/bg.webp" alt="Early Access BF 26" />
+        </picture>
+    {{/bf-early-access }}
+{{/light }}

@@ -1,0 +1,13 @@
+<!-- BF EARLY ACCESS -->
+{{#unless page-css }}
+<link rel="stylesheet" href="sections/bf-early-access/bf-early-access.css" />
+{{/unless}}
+<section class="bf-early-access">
+    {{> @partial-block }}
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadScriptOnce('countdown', 'assets/js/countdown.js');
+    });
+</script>
+<!-- BF EARLY ACCESS END -->
