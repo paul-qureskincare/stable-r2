@@ -3,7 +3,8 @@
 
  // TODO: When header will be done, need move this var to _vars.scss
 :root {
-    --height-header: 75px;
+    // --height-header: 75px;
+    --height-header: 60px;
 
     @include md {
         --height-header: 55px;
@@ -70,7 +71,7 @@
     &__logo {
         margin-right: -16px;
         margin-left: -16px;
-        padding: 16px;
+        padding: 12px 16px;
         color: inherit;
         line-height: 1;
 
@@ -100,20 +101,15 @@
 
         a {
             display: flex;
-            padding-top: 19px;
-            padding-bottom: 19px;
+            padding-top: 16px;
+            padding-bottom: 16px;
             color: inherit;
             cursor: pointer;
-            transition: opacity linear 200ms;
-            opacity: 0.5;
+            transition: color linear 200ms;
 
             @include hover {
+                color: #7c7e80;
                 text-decoration: none;
-                opacity: 1;
-
-                span:not([class]) {
-                    text-decoration: underline;
-                }
             }
 
             &[data-target] {
@@ -133,9 +129,6 @@
                 }
 
                 &.active {
-                    text-decoration: underline;
-                    opacity: 1;
-
                     &::after {
                         transform: rotate(-90deg)
                     }
@@ -362,7 +355,7 @@
     &__content-container {
         display: flex;
         gap: 32px;
-        padding: 50px 16px;
+        padding: 30px 16px;
 
         @include md {
             flex-direction: column;
