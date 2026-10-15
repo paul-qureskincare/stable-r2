@@ -12,4 +12,12 @@
     &--md {
         width: 136px;
     }
+
+    &--lg {
+        width: 184px;
+
+        @include sm {
+            width: 145px;
+        }
+    }
 }

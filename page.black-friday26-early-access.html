@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Early Access BF 26 - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link href="assets/css/fonts.css" rel="stylesheet" />
+        <link href="assets/css/general.css" rel="stylesheet" />
+        <link href="assets/css/page.black-friday26-early-access.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
+
+    <body class="page.black-friday26-early-access">
+        <!-- PAGE HEADER -->
+        <div id="site-header"></div>
+        <!-- PAGE HEADER END -->
+
+        <!-- SECTIONS STACK -->
+        <main class="sections-stack">
+            <!-- BF EARLY ACCESS -->
+            <section class="bf-early-access">
+                <div class="bf-early-access__content">
+                    <div class="container">
+                        <article>
+                            <hgroup>
+                                <div class="e-bf-label e-bf-label--lg">
+                                    <img src="assets/images/bf-26/bf-label-lg.webp" alt="Black Friday" />
+                                </div>
+                                <h1>Buy before anyone else whilst stocks last. <span>Save up to 57%</span></h1>
+                            </hgroup>
+                            <div class="c-subscribe-form">
+                                <label for="early-access-password">Enter early with your unique password:</label>
+                                <form>
+                                    <input type="password" id="early-access-password" name="password" placeholder="Password" />
+                                    <button><i class="e-icon e-icon-arrow"></i></button>
+                                </form>
+                            </div>
+                            <picture>
+                                <img src="sections/bf-early-access/images/inline.webp" alt="Early Access BF 26" />
+                            </picture>
+                            <div class="bf-early-access__countdown">
+                                <p><i class="e-icon e-icon-clock"></i> Sale opens for everyone in:</p>
+                                <div class="e-countdown" data-deadline="2026-11-30 23:59:59">
+                                    <div data-key="days">00</div>
+                                    <div data-key="hours">00</div>
+                                    <div data-key="minutes">00</div>
+                                    <div data-key="seconds">00</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="bf-early-access__bottom">
+                    <div class="container">
+                        <p>© 2025 Qure™ Skincare. All rights reserved.</p>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <picture class="bf-early-access__bg">
+                    <img src="sections/bf-early-access/images/bg.webp" alt="Early Access BF 26" />
+                </picture>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("countdown", "assets/js/countdown.js");
+                });
+            </script>
+            <!-- BF EARLY ACCESS END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
+
+        <!-- SCRIPTS -->
+        <script src="https://fast.wistia.com/player.js" defer="defer"></script>
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="assets/js/swiper.js" defer="defer"></script>
+        <script src="assets/js/yt-popup.js" defer="defer"></script>
+        <script src="assets/js/dialog.js" defer="defer"></script>
+        <script src="assets/js/wistia.js" defer="defer"></script>
+        <script src="assets/js/popper.min.js" defer="defer"></script>
+        <script src="assets/js/tippy-bundle.umd.min.js" defer="defer"></script>
+        <script src="assets/js/tippy.js" defer="defer"></script>
+        <script src="sections/header/header.js" defer="defer"></script>
+        <script src="sections/footer/footer.js" defer="defer"></script>
+    </body>
+</html>

@@ -1,20 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ title }} - Qure</title>
-    <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
-    {{> css-vars }}
-    <link href="assets/css/fonts.css" rel="stylesheet" />
-    <link href="assets/css/general.css" rel="stylesheet" />
-    {{#if page-css }}
-        <link href="assets/css/{{ body-class }}.css" rel="stylesheet" />
-    {{/if}}
-    <!-- Loading HTML Files -->
-   <script src="assets/js/fileloader.js"></script>
-</head>
+{{> head }}
 
 <body class="{{ body-class }}">
     <!-- PAGE HEADER -->
@@ -70,23 +57,6 @@
         </div>
     </dialog>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            loadScriptOnce('cart-counter', 'assets/js/cart-counter.js');
-        });
-    </script>
-
-    <!-- SCRIPTS -->
-    <script src="https://fast.wistia.com/player.js" defer="defer"></script>
-    <script src="assets/js/vendor.js" defer="defer"></script>
-    <script src="assets/js/swiper.js" defer="defer"></script>
-    <script src="assets/js/yt-popup.js" defer="defer"></script>
-    <script src="assets/js/dialog.js" defer="defer"></script>
-    <script src="assets/js/wistia.js" defer="defer"></script>
-    <script src="assets/js/popper.min.js" defer="defer"></script>
-    <script src="assets/js/tippy-bundle.umd.min.js" defer="defer"></script>
-    <script src="assets/js/tippy.js" defer="defer"></script>
-    <script src="sections/header/header.js" defer="defer"></script>
-    <script src="sections/footer/footer.js" defer="defer"></script>
+    {{> scripts }}
 </body>
 </html>
