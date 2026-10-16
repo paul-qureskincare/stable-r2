@@ -1,0 +1,20 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/why-using/why-using" as *;
+@use "@sections/progress-metrics/progress-metrics" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/why-it-work/why-it-work" as *;
+@use "@sections/features-marquee/features-marquee" as *;
+@use "@sections/set-up/set-up" as *;
+@use "@sections/comparison-table/comparison-table" as *;
+@use "@sections/comparison/comparison" as *;
+
+// Styles for current page only
+.sections-stack {
+    padding-bottom: 0;
+
+    @include sm {
+        padding-bottom: 0;
+    }
+}
