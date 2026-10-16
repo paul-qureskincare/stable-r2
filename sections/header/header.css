@@ -16,7 +16,7 @@
 }
 
 :root {
-  --height-header: 75px;
+  --height-header: 60px;
 }
 
 .header {
@@ -54,7 +54,7 @@ body:has(#announcement-bar) .header {
 .header__logo {
   margin-right: -16px;
   margin-left: -16px;
-  padding: 16px;
+  padding: 12px 16px;
   color: inherit;
   line-height: 1;
 }
@@ -71,12 +71,11 @@ body:has(#announcement-bar) .header {
 }
 .header__menu a {
   display: flex;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: inherit;
   cursor: pointer;
-  transition: opacity .2s linear;
-  opacity: .5;
+  transition: color .2s linear;
 }
 .header__menu a[data-target] {
   position: relative;
@@ -101,10 +100,6 @@ body:has(#announcement-bar) .header {
   transform: rotate(90deg);
   transition: all .2s linear;
   content: "\e900";
-}
-.header__menu a[data-target].active {
-  text-decoration: underline;
-  opacity: 1;
 }
 .header__menu a[data-target].active:after {
   transform: rotate(-90deg);
@@ -179,7 +174,7 @@ body:has(#announcement-bar) .header {
 .header__content-container {
   display: flex;
   gap: 32px;
-  padding: 50px 16px;
+  padding: 30px 16px;
 }
 .header__content-title {
   align-self: center;
@@ -518,11 +513,8 @@ body:has(#announcement-bar) .header {
 }
 @media(hover:hover) {
   .header__menu a:hover {
+    color: #7c7e80;
     text-decoration: none;
-    opacity: 1;
-  }
-  .header__menu a:hover span:not([class]) {
-    text-decoration: underline;
   }
   .header__content-cards li a:hover {
     text-decoration: none;
