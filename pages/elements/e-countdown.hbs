@@ -1,6 +1,11 @@
-<div class="e-countdown" data-deadline="{{ deadline }}" {{#if color }} {{{ color }}} {{/if}}>
-    <div data-key="days">00</div>
-    <div data-key="hours">00</div>
-    <div data-key="minutes">00</div>
-    <div data-key="seconds">00</div>
+<div
+    class="e-countdown"
+    data-start-date="{{ start }}"
+    data-offer-days="{{ days }}"
+    {{#if color }} {{{ color }}} {{/if}}
+>
+    <div data-key="{{#if short }}d{{ else }}days{{/if}}">00</div>
+    <div data-key="{{#if short }}h{{ else }}hours{{/if}}">00</div>
+    <div data-key="{{#if short }}m{{ else }}minutes{{/if}}">00</div>
+    <div data-key="{{#if short }}s{{ else }}seconds{{/if}}">00</div>
 </div>
