@@ -1,131 +1,103 @@
 (function () {
-    function loadScript(src) {
-      return new Promise(function (resolve, reject) {
-        var existing = document.querySelector('script[src="' + src + '"]');
-        if (existing) { resolve(); return; }
-        var s = document.createElement('script');
-        s.src = src;
-        s.onload = resolve;
-        s.onerror = reject;
-        document.head.appendChild(s);
-      });
-    }
-
-    var intervals = new WeakMap();
-
-    loadScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js")
-      .then(function () {
-        return loadScript("https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data-10-year-range.min.js");
-      })
-      .then(function () {
-        initAllCountdowns();
-        setupMutationObserver();
-      });
+    var TZ = 'America/Los_Angeles';
+    var DAY_MS = 86400000;
+    var SCOPE_SELECTOR = '.e-countdown';
 
     function pad2(n) {
-      return String(n).padStart(2, '0');
+        return String(n).padStart(2, '0');
     }
 
-    function initCountdownElement(root) {
-      if (typeof moment === "undefined" || typeof moment.tz !== "function") {
-        console.error("moment-timezone not loaded");
-        return;
-      }
+    // Returns the current LA wall-clock time as a "fake-UTC" timestamp
+    // (Date.UTC built from LA Y/M/D h:m:s). Comparing this against another
+    // value built the same way gives an accurate ms diff regardless of
+    // the visitor's local timezone and DST.
+    function nowLAMs() {
+        var parts = new Intl.DateTimeFormat('en-US', {
+            timeZone: TZ,
+            year: 'numeric', month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit', second: '2-digit',
+            hour12: false
+        }).formatToParts(new Date());
 
-      if (!root || root.dataset.countdownInitialized === '1') return;
+        var get = function (type) {
+            var p = parts.find(function (x) { return x.type === type; });
+            return parseInt(p.value, 10);
+        };
 
-      var children = root.querySelectorAll(':scope > div[data-key]');
-      if (children.length < 4) return;
+        var hour = get('hour');
+        if (hour === 24) hour = 0;
 
-      root.dataset.countdownInitialized = '1';
+        return Date.UTC(get('year'), get('month') - 1, get('day'), hour, get('minute'), get('second'));
+    }
 
-      var daysEl    = children[0];
-      var hoursEl   = children[1];
-      var minutesEl = children[2];
-      var secondsEl = children[3];
+    // Parses a YYYY-MM-DD start date as LA midnight, in the same
+    // "fake-UTC" reference frame used by nowLAMs().
+    function parseStartLAMs(str) {
+        if (!str) return null;
+        var m = String(str).trim().match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (!m) return null;
+        return Date.UTC(parseInt(m[1], 10), parseInt(m[2], 10) - 1, parseInt(m[3], 10), 0, 0, 0);
+    }
 
-      var deadlineAttr = root.getAttribute('data-deadline');
+    function updateCountdown(root) {
+        var children = root.querySelectorAll(':scope > div[data-key]');
+        if (children.length < 4) return false;
 
-      var days = (typeof customDays !== 'undefined') ? customDays : 0;
+        var offerDays = parseInt(root.getAttribute('data-offer-days'), 10) || 0;
+        if (offerDays <= 0) return false;
 
-      var defaultEnd = moment().tz("America/Los_Angeles")
-        .add(days, 'days')
-        .add(11, 'hours')
-        .add(59, 'minutes')
-        .add(59, 'seconds');
+        var startMs = parseStartLAMs(root.getAttribute('data-start-date'));
+        var fullMs = offerDays * DAY_MS;
+        var nowMs = nowLAMs();
+        var diffMs;
 
-      var endTime = (deadlineAttr && deadlineAttr.trim() !== '')
-        ? moment.tz(deadlineAttr, "America/Los_Angeles")
-        : defaultEnd;
-
-      function render() {
-        var now = moment().tz("America/Los_Angeles");
-        var diffSeconds = Math.max(0, endTime.diff(now, 'seconds'));
-
-        var d = Math.floor(diffSeconds / (24 * 3600));
-        diffSeconds -= d * 24 * 3600;
-        var h = Math.floor(diffSeconds / 3600);
-        diffSeconds -= h * 3600;
-        var m = Math.floor(diffSeconds / 60);
-        var s = diffSeconds - m * 60;
-
-        daysEl.textContent    = pad2(d);
-        hoursEl.textContent   = pad2(h);
-        minutesEl.textContent = pad2(m);
-        secondsEl.textContent = pad2(s);
-      }
-
-      render();
-      var timerId = setInterval(function () {
-        render();
-        if (endTime.diff(moment().tz("America/Los_Angeles")) <= 0) {
-          clearInterval(timerId);
-          intervals.delete(root);
+        if (startMs !== null) {
+            if (nowMs < startMs) {
+                // Promo has not started yet — freeze on full duration.
+                diffMs = fullMs;
+            } else {
+                diffMs = (startMs + fullMs) - nowMs;
+            }
+        } else {
+            // No start date configured — fall back to "now + N days" per element.
+            if (typeof root._countdownEnd !== 'number') {
+                root._countdownEnd = nowMs + fullMs;
+            }
+            diffMs = root._countdownEnd - nowMs;
         }
-      }, 1000);
-      intervals.set(root, timerId);
+
+        if (diffMs < 0) diffMs = 0;
+
+        var totalSeconds = Math.floor(diffMs / 1000);
+        var d = Math.floor(totalSeconds / 86400);
+        totalSeconds -= d * 86400;
+        var h = Math.floor(totalSeconds / 3600);
+        totalSeconds -= h * 3600;
+        var mm = Math.floor(totalSeconds / 60);
+        var s = totalSeconds - mm * 60;
+
+        children[0].textContent = pad2(d);
+        children[1].textContent = pad2(h);
+        children[2].textContent = pad2(mm);
+        children[3].textContent = pad2(s);
+
+        return diffMs > 0;
     }
 
-    function initAllCountdowns() {
-      document.querySelectorAll('.e-countdown').forEach(initCountdownElement);
+    function tick() {
+        // Re-query each tick so Swiper-cloned slides (loop mode) update too.
+        var roots = document.querySelectorAll(SCOPE_SELECTOR);
+        roots.forEach(updateCountdown);
     }
 
-    function clearCountdownElement(el) {
-      var id = intervals.get(el);
-      if (id) {
-        clearInterval(id);
-        intervals.delete(el);
-      }
+    function init() {
+        tick();
+        setInterval(tick, 1000);
     }
 
-    function setupMutationObserver() {
-      var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-          mutation.addedNodes.forEach(function (node) {
-            if (node.nodeType !== 1) return;
-            if (node.matches && node.matches('.e-countdown')) {
-              initCountdownElement(node);
-            } else if (node.querySelectorAll) {
-              node.querySelectorAll('.e-countdown').forEach(initCountdownElement);
-            }
-          });
-
-          mutation.removedNodes.forEach(function (node) {
-            if (node.nodeType !== 1) return;
-            if (node.matches && node.matches('.e-countdown')) {
-              clearCountdownElement(node);
-            } else if (node.querySelectorAll) {
-              node.querySelectorAll('.e-countdown').forEach(clearCountdownElement);
-            }
-          });
-        });
-      });
-
-      observer.observe(document.documentElement || document.body, {
-        childList: true,
-        subtree: true
-      });
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
-
-    window.initCountdowns = initAllCountdowns;
-  })();  
+})();

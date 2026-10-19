@@ -23,12 +23,10 @@
                     </picture>
                     <div class="bf-early-access__countdown">
                         <p>{{> e-icon icon="clock" }} Sale opens for everyone in:</p>
-                        <div class="e-countdown" data-deadline="2026-11-30 23:59:59">
-                            <div data-key="days">00</div>
-                            <div data-key="hours">00</div>
-                            <div data-key="minutes">00</div>
-                            <div data-key="seconds">00</div>
-                        </div>
+                        {{> e-countdown
+                            start="2026-10-19"
+                            days="46"
+                        }}
                     </div>
                 </article>
             </div>
