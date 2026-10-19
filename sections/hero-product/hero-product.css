@@ -3077,6 +3077,7 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   margin-left: auto;
 }
 .hero-product__main .subscription-details {
+  max-width: 500px;
   margin: -16px 0 0;
   font-size: 14px;
   text-align: center;

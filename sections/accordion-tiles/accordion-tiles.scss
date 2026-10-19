@@ -129,7 +129,7 @@
                 }
             }
 
-            &:has(h6) {
+            &:has(h6:first-child) {
                 @media screen and (min-width: 768px) {
                     grid-template-rows: repeat(3, auto);
 

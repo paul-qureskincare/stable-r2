@@ -25,14 +25,15 @@
         width: 26px;
         height: 26px;
         border-radius: 100px;
-        background: #f4f8fd;
+        background: #f6f6f7;
 
         .e-icon {
-            color: var(--color-ice, #91baec);
+            color: #8b8c8e;
             font-size: 16px;
         }
 
-        .e-icon-waves-2 {
+        .e-icon-waves-2,
+        .e-icon-micro-stamping {
             -webkit-text-stroke: 0.5px;
         }
     }

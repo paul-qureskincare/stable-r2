@@ -1,0 +1,921 @@
+{{#> default
+    title="Hair Renewal Serum"
+    body-class="product.hair-renewal-serum"
+    page-css=true
+}}
+    {{#> hero-product }}
+        <div class="hero-product__gallery">
+            <div
+                class="c-swiper"
+                data-swiper-thumbs="#hero-product .c-swiper-thumbs"
+                data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 16,
+                    "navigation": {
+                        "prevEl": "#hero-product .c-swiper-button-prev",
+                        "nextEl": "#hero-product .c-swiper-button-next"
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-1.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-2.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-3.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-4.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-5.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-6.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-7.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-8.webp" alt="Hair Renewal Serum" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hair/hair-serum-big-tile-9.webp" alt="Hair Renewal Serum" />
+                    </div>
+                </div>
+            </div>
+            <div class="c-swiper-thumbs-nav">
+                <button class="c-swiper-button-prev"></button>
+                <div
+                    class="c-swiper c-swiper-thumbs"
+                    data-swiper='{
+                        "slidesPerView": "auto",
+                        "spaceBetween": 12
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-1.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-2.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-3.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-4.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-5.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-6.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-7.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-8.webp" alt="Hair Renewal Serum" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/hair/hair-serum-big-tile-9.webp" alt="Hair Renewal Serum" />
+                        </div>
+                    </div>
+                </div>
+                <button class="c-swiper-button-next"></button>
+            </div>
+        </div>
+        <div class="hero-product__main">
+            {{> c-rating
+                light=true
+                trustpilot=true
+                value="4.8"
+            }}
+            <div>Daily Support for Micro-Infusion Pro Hair System</div>
+            <h1>Hair Renewal Serum</h1>
+            <article>
+                <ul>
+                    <li>Targets the appearance of thinning for visibly denser-looking hair</li>
+                    <li>Supports thicker, fuller-looking hair with consistent daily use</li>
+                    <li>Keeps the scalp hydrated, conditioned and refreshed between treatments</li>
+                </ul>
+            </article>
+            <ul class="c-pills-group">
+                <li class="e-pill-badge">Pairs With Q-Renew Helmet</li>
+                <li class="e-pill-badge">Feel Confident</li>
+                <li class="e-pill-badge">Dermatologist Tested</li>
+            </ul>
+            <hr />
+            {{> c-supply-selector
+                classes=""
+                title="Subscribe & Save"
+                list='[
+                    {
+                        "image": "assets/images/hair/mi-pro-hair-1-month-box.webp",
+                        "name": "3 Month Supply",
+                        "desc": "1 Bottle · 60 mL <small>Ships every 3 months</small>",
+                        "price-old": true,
+                        "save-pill": true,
+                        "save-value": "{dyn}% OFF",
+                        "tag-up": false,
+                        "tag-name": "Best Results",
+                        "option": "subscribe",
+                        "checked": true
+                    }
+                ]'
+            }}
+            <div class="subscription-details">Skip, pause or cancel anytime. <a href="#">See more details</a></div>
+            <div class="c-buy-block">
+                {{> c-order-button button="Buy Now & Save {$dyn}%" }}
+                <div class="c-selector-switcher c-selector-switcher--text">
+                    <ul class="e-pill-tabs e-pill-tabs--selector">
+                        <li>
+                            <label>
+                                <input name="delivery-type" type="radio" />
+                                One Time Purchase {$dyn}
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="delivery-type" type="radio" checked />
+                                Subscribe &amp; Save
+                            </label>
+                        </li>
+                    </ul>
+                    <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-product__extra">
+            <div class="hero-product__best-with">
+                <h6>Upgrade Your Results</h6>
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": "1.25",
+                        "spaceBetween": 12,
+                        "breakpoints": {
+                            "992": {
+                                "slidesPerView": 2
+                            }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="assets/images/hair/mi-2-device-rejuvenating-2.webp" alt="Micro-Infusion Pro Hair" /></a>
+                            <a href="#">Micro-Infusion Pro Hair</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="assets/images/helmet-brief/helmet-small.webp" alt="Q-Renew Helmet" /></a>
+                            <a href="#">Q-Renew Helmet</a>
+                            <button class="btn btn--primary btn--sm">Add - {$dyn}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "Key Benefits",
+                        "text": "
+                            <p>The Hair Renewal Serum combines pea sprout extract, peptides and niacinamide in a lightweight daily formula designed to support the appearance of fuller, denser-looking hair over time.</p>
+                            <p>Visible benefits include:</p>
+                            <ul>
+                                <li>Helps improve the appearance of thinning areas</li>
+                                <li>Supports thicker, fuller-looking hair with consistent use</li>
+                                <li>Helps improve the appearance of scalp vitality and hair fullness</li>
+                                <li>Leaves the scalp feeling hydrated, conditioned and refreshed</li>
+                            </ul>
+                            <ul class=\"c-benefit-grid c-benefit-grid--sm\">
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-wand\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Targets the Look of Thinning</strong>
+                                        <p class=\"c-benefit-grid__text\">Helps improve the appearance of thinning areas for denser-looking hair.</p>
+                                    </div>
+                                </li>
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-waves-2\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Fuller-Looking Hair</strong>
+                                        <p class=\"c-benefit-grid__text\">Supports the appearance of thicker, fuller-looking hair with consistent use.</p>
+                                    </div>
+                                </li>
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-micro-stamping\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Scalp Vitality</strong>
+                                        <p class=\"c-benefit-grid__text\">Peptides and clover flower extract help support the appearance of scalp vitality and hair fullness.</p>
+                                    </div>
+                                </li>
+                                <li class=\"c-benefit-grid__item\">
+                                    <span class=\"c-benefit-grid__icon\"><i class=\"e-icon e-icon-droplet\"></i></span>
+                                    <div class=\"c-benefit-grid__content\">
+                                        <strong class=\"c-benefit-grid__title\">Daily Scalp Hydration</strong>
+                                        <p class=\"c-benefit-grid__text\">Niacinamide helps condition and hydrate the scalp, leaving it feeling refreshed.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        "
+                    },
+                    {
+                        "summary": "How To Use",
+                        "text": "
+                            <p>The Hair Renewal Serum is designed to fit easily into your daily routine, with each application taking less than a minute. <br />Start with a clean, dry scalp. If you use the Q-Renew Helmet, complete your helmet session first.</p>
+                            <p>Apply a few drops directly to the scalp, focusing on areas where hair appears thinner. <br />Gently massage the serum into and around the scalp. <br />Apply once daily, except on your Micro-Infusion treatment day. For best visible results, apply consistently over several weeks.</p>
+                        "
+                    },
+                    {
+                        "summary": "Full ingredient list",
+                        "text": "
+                            <p>Hair Renewal Serum:</p>
+                            <p>Water (Aqua), Propanediol, PEG-40 Hydrogenated Castor Oil, Niacinamide, Pisum Sativum (Pea) Sprout Extract, Curcuma Longa (Turmeric) Root Extract, Acetyl Tetrapeptide-3, Trifolium Pratense (Clover) Flower Extract, Glycine, Zinc Chloride, Camellia Sinensis Leaf Extract, Larix Europaea Wood Extract, Pyrrolidinyl Diaminopyrimidine Oxide, Ethylhexylglycerin, Caffeine, Cyclodextrin, Mentha Piperita (Peppermint) Oil, Dihydroxypropyl Arginine HCl, Copper Tripeptide-1, Phenoxyethanol, Butylene Glycol, Dextran, Xanthan Gum.</p>
+                            <ul class=\"c-marked-list\">
+                                <li>Vegan and cruelty-free</li>
+                                <li>Suitable for sensitive skin </li>
+                            </ul>
+                        "
+                    }
+                ]'
+            }}
+            {{> e-quote-card
+                image="assets/images/experts/dr-shah-quote.webp"
+                quote="A nightly serum that hydrates the scalp and supports fuller-looking hair — pairs weekly with the Micro-Infusion Pro Hair System."
+                name="Dr. Shah"
+                position="Dermatologist"
+            }}
+            {{> c-certified-box }}
+        </div>
+    {{/hero-product }}
+
+    {{#> experts-pick }}
+        <div class="e-pill-badge">
+            <span class="e-checkmark"></span>
+            Dermatologist Reviewed
+        </div>
+        <article>
+            <h2>Recommended by Experts</h2>
+            <p>"<strong>Fuller-looking hair starts with the scalp.</strong> I like that this serum pairs pea sprout extract with peptides and niacinamide, targeting the look of thinning while keeping the scalp hydrated every day."</p>
+        </article>
+        <picture>
+            <img src="assets/images/experts/dr-shah-maxfield-3.webp" alt="Recommended by Experts" />
+        </picture>
+    {{/experts-pick }}
+
+    {{> logos-marquee }}
+
+    {{#> features-overview
+        title="Formulated With Purpose"
+    }}
+        <article>
+            <p>Three hero actives, one daily ritual for fuller, denser-looking hair with consistent use.</p>
+        </article>
+        <div class="c-product-components c-product-components--hair-serum">
+            <picture>
+                <source media="(min-width: 768px)" srcset="sections/features-overview/images/hair-serum.webp">
+                <img src="sections/features-overview/images/hair-serum-mob.webp" alt="Hair Renewal Serum">
+            </picture>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Pisum Sativum (Pea) Sprout Extract</strong>
+                    <small>Denser, fuller-looking hair</small>
+                </div>
+            </div>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Acetyl Tetrapeptide-3 / Clover Flower Extract</strong>
+                    <small>Scalp vitality &amp; fullness</small>
+                </div>
+            </div>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Niacinamide</strong>
+                    <small>Daily scalp hydration</small>
+                </div>
+            </div>
+        </div>
+        {{> c-benefit-grid
+            list='[
+                {
+                    "icon":"wand",
+                    "title":"Targets the Look of Thinning",
+                    "text":"Pisum Sativum (Pea) Sprout Extract leads the formula. It helps target the look of thinning areas, supporting visibly denser, fuller-looking hair over time."
+                },
+                {
+                    "icon":"micro-stamping",
+                    "title":"Scalp Vitality & Fullness",
+                    "text":"Acetyl Tetrapeptide-3 and Clover Flower Extract help improve the appearance of scalp vitality and hair fullness. With consistent use, hair appears fuller and more resilient-looking."
+                },
+                {
+                    "icon":"droplet",
+                    "title":"Daily Scalp Hydration",
+                    "text":"Niacinamide helps condition and hydrate the scalp, keeping it feeling refreshed, comfortable and balanced every day."
+                },
+                {
+                    "icon":"snow-thin",
+                    "title":"The Cooling Story",
+                    "text":"That fresh, cooling tingle isn\'t just a nice touch. It comes from peppermint oil and caffeine, giving your daily scalp ritual an invigorating feel you\'ll look forward to."
+                }
+            ]'
+        }}
+    {{/features-overview }}
+
+    {{> features-marquee }}
+
+    {{#> accordion-tiles
+        title="Meet the Actives"
+        square=true
+        list='[
+            {
+                "image": "methylene-blue-3-tile",
+                "summary": "Pisum Sativum (Pea) Sprout Extract",
+                "html": "
+                    <p>The hero ingredient, with the strongest approved claims. It speaks directly to the customer’s main concern: the look of thinning hair.</p>
+                "
+            },
+            {
+                "image": "niacinamide-3-tile",
+                "summary": "Acetyl Tetrapeptide-3 & Clover Flower",
+                "html": "
+                    <p>Supports the fullness story while adding a scalp vitality benefit. Together with pea sprout extract, they form the core of the formula.</p>
+                "
+            },
+            {
+                "image": "beta-glucan-4-tile",
+                "summary": "Niacinamide",
+                "html": "
+                    <p>Supports daily scalp hydration, making it a key ingredient for everyday use. Customers already know and trust it.</p>
+                "
+            },
+            {
+                "image": "beta-glucan-5-tile",
+                "summary": "Mentha Piperita (Peppermint) Oil",
+                "html": "
+                    <p>Provides a cooling, invigorating sensation with every application.</p>
+                "
+            },
+            {
+                "image": "beta-glucan-6-tile",
+                "summary": "Caffeine",
+                "html": "
+                    <p>Provides an awakening feel on the scalp, with antioxidant properties.</p>
+                "
+            }
+        ]'
+    }}
+        <a href="javascript:;" onclick="fullIngredient.showModal()">View Full Ingredient List</a>
+        {{#> c-dialog
+            id="fullIngredient"
+        }}
+            <p><strong>Hair Renewal Serum Ingredients</strong></p>
+            <p>Water (Aqua), Propylene Glycol, PEG-40 Hydrogenated Castor Oil, Niacinamide, Pyrrolidinyl Diaminopyrimidine Oxide, Butylene Glycol, Glycerin, Ethylhexylglycerin, Mentha Piperita (Peppermint) Oil, Cyclodextrin, Caffeine, Curcuma Longa (Turmeric) Root Extract, Copper Tripeptide-1, Dihydroxypropyl Arginine HCl, Xanthan Gum, Phenoxyethanol, Pisum Sativum (Pea) Sprout Extract, Larix Europaea Wood Extract, Sodium Benzoate, Glycine, Sodium Metabisulfite, Dextran, Camellia Sinensis Leaf Extract, Zinc Chloride, Trifolium Pratense (Clover) Flower Extract, Acetyl Tetrapeptide-3.</p>
+            <hr />
+            <ul class="c-marked-list c-marked-list--fill">
+                <li>Paraben-free</li>
+                <li>Sulfate-free</li>
+                <li>Mineral oil-free</li>
+                <li>Water-based</li>
+                <li>Leave-in formula (no rinse)</li>
+            </ul>
+        {{/c-dialog }}
+    {{/accordion-tiles }}
+
+    {{#> usage-steps }}
+        <div class="container">
+            <article>
+                <h2>Support fuller-looking hair with one simple nightly step</h2>
+                {{> c-wistia
+                    id="jhwgazmjv8"
+                    custom='
+                        <div class="c-wistia__link">
+                            <span>Watch the video</span>
+                            <i class="e-icon e-icon-watch"></i>
+                        </div>
+                    '
+                }}
+            </article>
+        </div>
+        <div class="container">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.1,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2.2,
+                            "spaceBetween": 24
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture data-index="1">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/images/usage-steps-mi-hair-serum-1.webp" />
+                            <img src="sections/usage-steps/images/usage-steps-mi-hair-serum-1-mob.webp" alt="1. Prepare" />
+                        </picture>
+                        <article>
+                            <h6>1. Prepare</h6>
+                            <p>Start with a clean, dry scalp. If you use the Q-Renew Helmet, complete your session first.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="2">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/images/usage-steps-mi-hair-serum-2.webp" />
+                            <img src="sections/usage-steps/images/usage-steps-mi-hair-serum-2-mob.webp" alt="2. Apply" />
+                        </picture>
+                        <article>
+                            <h6>2. Apply</h6>
+                            <p>Apply 4–6 drops directly to the scalp, focusing on areas where hair appears thinner.</p>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture data-index="3">
+                            <source media="(min-width:768px)" srcset="sections/usage-steps/images/usage-steps-mi-hair-serum-3.webp" />
+                            <img src="sections/usage-steps/images/usage-steps-mi-hair-serum-3-mob.webp" alt="3. Massage In" />
+                        </picture>
+                        <article>
+                            <h6>3. Massage In</h6>
+                            <p>Gently massage the serum into the scalp. Don't rinse. Repeat nightly on nights between Micro-Infusion treatments.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/usage-steps }}
+
+    {{#> base-section
+        classes=""
+        title="A Daily Serum for Fuller-Looking Hair"
+        picture="assets/images/hair/mi-hair-serum-text.webp"
+        button="Shop Now"
+    }}
+        <p>Hair goes through a lot, from heat styling and everyday stress to the natural effects of time. Most hair products focus on the strands, but fuller-looking hair starts with the scalp.</p>
+        <p>The Hair Renewal Serum is built around pea sprout extract, peptides and niacinamide to help target the look of thinning, support the appearance of denser, fuller-looking hair and keep the scalp hydrated.</p>
+        <p>Its lightweight formula is easy to apply with the dropper and takes less than a minute a day.</p>
+        <p><strong>Already using the Q-Renew Helmet? The Hair Renewal Serum fits seamlessly into your routine. Use the Helmet first, then apply the serum.</strong></p>
+    {{/base-section }}
+
+    {{#> bundled-together }}
+        <h2>Why We Chose This Formula</h2>
+        <div class="c-product-components c-product-components--hair">
+            <picture>
+                <img src="assets/images/hair/mi-hair-bungle.webp" alt="Why We Chose This Formula" />
+            </picture>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Hair Renewal Serum <span class="e-pill-badge e-pill-badge--xxs">Nightly</span></strong>
+                    <small>Helps provide lasting scalp hydration</small>
+                </div>
+            </div>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Micro-Infusion Pro Hair <span class="e-pill-badge e-pill-badge--xxs">Weekly</span></strong>
+                    <small>Helps target the appearance of thinning areas</small>
+                </div>
+            </div>
+            <div class="e-component-pointer">
+                <hr />
+                <div>
+                    <strong>Together <span class="e-pill-badge e-pill-badge--xxs">Weekly + Nightly</span></strong>
+                    <small>Visibly fuller, more resilient-looking hair</small>
+                </div>
+            </div>
+        </div>
+        <article>
+            <p>Micro-Infusion Pro weekly, Hair Renewal Serum nightly — complete scalp care in 5 minutes. Built around pea sprout extract to support denser, fuller-looking hair over time. </p>
+            <p>Paired with Acetyl Tetrapeptide-3, clover flower extract and caffeine for scalp vitality and an invigorating feel. Niacinamide and Copper Tripeptide-1 round out the formula, conditioning and hydrating the scalp.</p>
+            {{> e-quote-card
+                image="assets/images/experts/dr-shah-quote.webp"
+                quote="It's a simple, at-home system that is both quick and highly effective."
+                name="Dr. Shah"
+                position="Dermatologist"
+            }}
+        </article>
+        <a href="#buy_box" class="btn btn--primary">Shop Now</a>
+    {{/bundled-together }}
+
+    {{#> mi-ingredients }}
+        <article class="mi-ingredients__text">
+            <h2>Two products. Complete care.</h2>
+            <p>Use Micro-Infusion Pro weekly, and Hair Renewal Serum nightly, for complete scalp care.</p>
+        </article>
+        <div class="mi-ingredients__card">
+            <img src="sections/mi-ingredients/images/mi-2-device-rejuvenating-1.webp" alt="Thinning Areas" />
+            <article>
+                <span class="e-pill-badge e-pill-badge--xxs e-pill-badge--fill">Weekly</span>
+                <h3>Thinning Areas</h3>
+                <h6>MICRO-INFUSION PRO HAIR SYSTEM</h6>
+                <p>Creates precise micro-channels at the scalp surface to help deliver serum actives where they’re needed.</p>
+                <ul>
+                    <li>
+                        {{> e-icon icon="hair" }}
+                        Targets the look of thinning
+                    </li>
+                    <li>
+                        {{> e-icon icon="micro-stamping" }}
+                        Supports denser, fuller-looking hair
+                    </li>
+                    <li>
+                        {{> e-icon icon="fast" }}
+                        5-minute weekly treatment
+                    </li>
+                </ul>
+            </article>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "All Ingredients",
+                        "text": "
+                            <p>Pisum Sativum (Pea) Sprout Extract<br /> Helps target the look of thinning, for visibly denser-looking hair.</p>
+                            <p>Acetyl Tetrapeptide-3 / Clover Flower Extract<br /> Helps improve the appearance of scalp vitality and hair fullness.</p>
+                            <p>Copper Tripeptide-1<br /> Supports the look of stronger, resilient-looking hair.</p>
+                            <p>Niacinamide<br /> Helps condition and hydrate the scalp.</p>
+                            <p>Caffeine<br /> Provides an energizing, invigorating sensation on the scalp.</p>
+                            <p>Larix / Green Tea / Zinc / Glycine Complex<br /> Helps the scalp look and feel more balanced with regular use.</p>
+                            <p>Pyrrolidinyl Diaminopyrimidine Oxide<br /> Supports the look of smoother, more resilient-looking strands.</p>
+                            <p>Dihydroxypropyl Arginine HCl<br /> Supports a smoother, more comfortable-feeling scalp.</p>
+                            <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+        <div class="mi-ingredients__card">
+            <img src="sections/mi-ingredients/images/mi-2-device-rejuvenating-2.webp" alt="Scalp Hydration" />
+            <article>
+                <span class="e-pill-badge e-pill-badge--xxs e-pill-badge--fill">Nightly</span>
+                <h3>Scalp Hydration</h3>
+                <h6>HAIR RENEWAL SERUM</h6>
+                <p>A lightweight, dropper-applied serum for nightly use on non-infusion nights.</p>
+                <ul>
+                    <li>
+                        {{> e-icon icon="smooths" }}
+                        Conditions &amp; hydrates scalp
+                    </li>
+                    <li>
+                        {{> e-icon icon="cooling" }}
+                        Invigorating, cooling feel
+                    </li>
+                    <li>
+                        {{> e-icon icon="deeply-hydrates" }}
+                        Antioxidant-rich formula
+                    </li>
+                </ul>
+            </article>
+            {{> c-accordion
+                type="lines"
+                list='[
+                    {
+                        "summary": "All Ingredients",
+                        "text": "
+                            <p>Pisum Sativum (Pea) Sprout Extract<br /> Helps target the look of thinning, for visibly denser-looking hair.</p>
+                            <p>Acetyl Tetrapeptide-3 / Clover Flower Extract<br /> Helps improve the appearance of scalp vitality and hair fullness.</p>
+                            <p>Copper Tripeptide-1<br /> Supports the look of stronger, resilient-looking hair.</p>
+                            <p>Niacinamide<br /> Helps condition and hydrate the scalp.</p>
+                            <p>Caffeine<br /> Provides an energizing, invigorating sensation on the scalp.</p>
+                            <p>Larix / Green Tea / Zinc / Glycine Complex<br /> Helps the scalp look and feel more balanced with regular use.</p>
+                            <p>Pyrrolidinyl Diaminopyrimidine Oxide<br /> Supports the look of smoother, more resilient-looking strands.</p>
+                            <p>Dihydroxypropyl Arginine HCl<br /> Supports a smoother, more comfortable-feeling scalp.</p>
+                            <p>Peppermint Oil (Hair Renewal Serum only)<br /> Delivers a cooling, refreshing feel on application.</p>
+                            <small>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</small>
+                        "
+                    }
+                ]'
+            }}
+        </div>
+        <div class="mi-ingredients__button">
+            {{> c-order-button
+                button="Add Full System to Cart"
+                hide-pay=true
+            }}
+            <small>30-Day Money-Back Guarantee &bull; Free US Shipping</small>
+        </div>
+    {{/mi-ingredients }}
+
+    {{#> comparison-table
+        title="Your hair-care options, compared"
+        labels='[
+            {
+                "name": "Active Blend",
+                "colorize": false
+            },
+            {
+                "name": "Multi-Benefit Approach",
+                "colorize": false
+            },
+            {
+                "name": "Scalp Support",
+                "colorize": false
+            },
+            {
+                "name": "Treatment Format",
+                "colorize": false
+            }
+        ]'
+    }}
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="sections/comparison-table/images/mi-hair-serum-1.webp" alt="Hair Renewal Serum" />
+                </picture>
+                <h5>Hair Renewal <br />Serum</h5>
+                <ul>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Peptides + copper peptide +&nbsp;caffeine +&nbsp;niacinamide</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Fuller-looking hair +&nbsp;scalp conditioning</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Hydrates while supporting hair fullness</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Targeted nightly leave-on serum</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="sections/comparison-table/images/mi-hair-serum-2.webp" alt="Typical Multi-Active Scalp Serum" />
+                </picture>
+                <h5>Typical Multi-Active <br />Scalp Serum</h5>
+                <ul>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Peptides + selected botanical actives</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Benefits vary by formula</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Usually focused on hair density/fullness</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Daily leave-on serum</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="swiper-slide">
+            <article>
+                <picture>
+                    <img src="sections/comparison-table/images/mi-hair-serum-3.webp" alt="Botanical Hair & Scalp Oil" />
+                </picture>
+                <h5>Botanical Hair <br />&amp; Scalp Oil</h5>
+                <ul>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Primarily botanical oils +&nbsp;extracts</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Primarily nourishment +&nbsp;conditioning</span></li>
+                    <li>{{> e-icon icon="cross-fill"}} <span>Mainly conditions dry scalp&nbsp;+&nbsp;hair</span></li>
+                    <li>{{> e-icon icon="checkmark-fill"}} <span>Oil applied to scalp +&nbsp;hair</span></li>
+                </ul>
+            </article>
+        </div>
+    {{/comparison-table }}
+
+    {{#> complete-system
+        title="Complete your Qure Hair System"
+        button-text="Add the complete routine"
+    }}
+        <ol class="complete-system__scale c-swiper-steps">
+            <li><span>Restrict</span></li>
+            <li><span>Refresh</span></li>
+            <li><span>Replenish</span></li>
+            <li><span>Repair</span></li>
+        </ol>
+        <div class="complete-system__items">
+            <div
+                class="c-swiper"
+                data-swiper='{
+                    "slidesPerView": 1.4,
+                    "spaceBetween": 16,
+                    "loop": false,
+                    "pagination": {
+                        "el": ".c-swiper-pagination",
+                        "type": "custom"
+                    },
+                    "navigation": {
+                        "prevEl": ".c-swiper-button-prev",
+                        "nextEl": ".c-swiper-button-next"
+                    },
+                    "steps-selector": ".c-swiper-steps",
+                    "watchSlidesProgress": true,
+                    "breakpoints": {
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 24
+                        },
+                        "992": {
+                            "slidesPerView": 4
+                        }
+                    }
+                }'
+            >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/shower-filter.webp"
+                            image-hover="/sections/complete-system/images/shower-filter.webp"
+                            reviews="28"
+                            name="Shower Filter"
+                            desc="Cleanse with filtered water to help reduce potential irritants and remove unwanted impurities from your hair and scalp."
+                            day=true
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/helmet.webp"
+                            image-hover="/sections/complete-system/images/helmet.webp"
+                            reviews="31"
+                            name="Q-Renew Helmet"
+                            desc="Use 5-7* per week, always on a clean, dry scalp and always before applying any serum."
+                            night=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/mi-hair.webp"
+                            image-hover="/sections/complete-system/images/mi-hair.webp"
+                            reviews="32"
+                            name="Micro-Infusion Pro Hair System"
+                            desc="Use 1* per week. On this day: Can use Helmet first."
+                            weekly=true
+                        }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{> c-product-tile
+                            image="sections/complete-system/images/hair-renewal-serum.webp"
+                            image-hover="/sections/complete-system/images/hair-renewal-serum.webp"
+                            reviews="283"
+                            name="Hair Renewal Serum"
+                            desc="Use every night except the Micro-Infusion night. On regular nights: Helmet first → Hair Renewal Serum second."
+                            night=true
+                        }}
+                    </div>
+                </div>
+                <div class="c-swiper-nav">
+                    <button class="c-swiper-button-prev"></button>
+                    <div class="c-swiper-pagination"></div>
+                    <button class="c-swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+    {{/complete-system }}
+
+    {{> have-questions
+        list='[
+            {
+                "summary": "What is the Hair Renewal Serum?",
+                "text": "
+                    <p>A daily scalp serum with pea sprout extract, peptides and niacinamide, designed to support the appearance of fuller, denser-looking hair over time. The 60 mL dropper bottle makes it easy to apply directly to targeted areas of the scalp.</p>
+                "
+            },
+            {
+                "summary": "What are the benefits?",
+                "text": "
+                    <p>With consistent use, the Hair Renewal Serum may help with:</p>
+                    <ul>
+                        <li>The look of thinning areas</li>
+                        <li>Visibly fuller, denser-looking hair</li>
+                        <li>A hydrated, conditioned scalp</li>
+                        <li>A refreshing, invigorating scalp feel</li>
+                    </ul>
+                "
+            },
+            {
+                "summary": "Who is it for?",
+                "text": "
+                    <p>Anyone who wants fuller, denser-looking hair, especially if you’ve noticed the appearance of thinning around the part, crown or hairline.</p>
+                "
+            },
+            {
+                "summary": "How do I use it?",
+                "text": "
+                    <p>Apply a few drops directly onto a clean, dry scalp and gently massage into and around the area.</p>
+                "
+            },
+            {
+                "summary": "Where on the scalp should I apply it?",
+                "text": "
+                    <p>Focus on areas where you’ve noticed the appearance of thinning, such as the part line, crown or hairline, then gently massage into and around the scalp.</p>
+                "
+            },
+            {
+                "summary": "How often should I use it?",
+                "text": "
+                    <p>Apply nightly. If you’re also using the Micro-Infusion Pro Hair System, skip the serum on your weekly treatment night.</p>
+                "
+            },
+            {
+                "summary": "Do I need to use it every day?",
+                "text": "
+                    <p>For best visible results, yes — apart from your weekly Micro-Infusion treatment night, if you’re using both products together. The appearance of fuller, denser-looking hair takes time, so consistent use is important.</p>
+                "
+            },
+            {
+                "summary": "What if I miss a day?",
+                "text": "
+                    <p>No problem. Continue with your next application as usual. There’s no need to double up.</p>
+                "
+            },
+            {
+                "summary": "How quickly will I see results?",
+                "text": "
+                    <p>Visible changes take time. The Hair Renewal Serum is designed to support the appearance of fuller, denser-looking hair over several weeks of consistent daily use.</p>
+                "
+            },
+            {
+                "summary": "Can I use it with the Q-Renew Helmet?",
+                "text": "
+                    <p>Yes. They’re designed to work together. Use the Q-Renew Helmet first on a clean, dry scalp, then apply the Hair Renewal Serum.</p>
+                "
+            },
+            {
+                "summary": "Can I use it with the Micro-Infusion Pro Hair System?",
+                "text": "
+                    <p>Yes. Apply the Hair Renewal Serum nightly on non-infusion nights. Skip it on your weekly Micro-Infusion treatment day to keep the scalp conditioned and cared for between treatments.</p>
+                "
+            },
+            {
+                "summary": "What’s the difference between the Hair Renewal Serum and the Micro-Infusion Hair Serum?",
+                "text": "
+                    <p>Both formulas share the same core actives. The Micro-Infusion Hair Serum is formulated for your weekly Micro-Infusion treatment, while the Hair Renewal Serum is your daily scalp step and also contains peppermint oil for a cooling, invigorating feel.</p>
+                "
+            },
+            {
+                "summary": "I’ve tried other hair products before. What makes this different?",
+                "text": "
+                    <p>It combines several key actives in one lightweight daily step: pea sprout extract to target the look of thinning, peptides and clover flower extract to support the appearance of scalp vitality and hair fullness, and niacinamide for daily scalp conditioning and hydration.</p>
+                "
+            },
+            {
+                "summary": "What are the key ingredients?",
+                "text": "
+                    <p>
+                        Pea Sprout Extract: Helps target the look of thinning for denser-looking hair<br />
+                        Acetyl Tetrapeptide-3 & Clover Flower Extract: Help support the appearance of scalp vitality and hair fullness<br />
+                        Niacinamide: Helps condition and hydrate the scalp<br />
+                        Caffeine & Peppermint Oil: Provide an invigorating, cooling scalp sensation
+                    </p>
+                "
+            },
+            {
+                "summary": "Why does the serum contain peppermint oil?",
+                "text": "
+                    <p>Peppermint oil provides a refreshing, cooling sensation that makes the daily scalp ritual feel invigorating. It is included only in the Hair Renewal Serum, not in the Micro-Infusion Hair Serum.</p>
+                "
+            },
+            {
+                "summary": "What does it feel like on the scalp?",
+                "text": "
+                    <p>Peppermint oil and caffeine provide a cooling, invigorating sensation. A light tingling sensation may occur on application.</p>
+                "
+            },
+            {
+                "summary": "Will it make my hair look greasy?",
+                "text": "
+                    <p>The lightweight formula is designed for easy daily scalp application and should not weigh hair down.</p>
+                "
+            },
+            {
+                "summary": "Can I use it on color-treated hair?",
+                "text": "
+                    <p>Yes. The serum can be used on color-treated hair and does not interfere with hair color.</p>
+                "
+            },
+            {
+                "summary": "How long does one bottle last?",
+                "text": "
+                    <p>One 60 mL bottle should last approximately 3 months with regular daily use.</p>
+                "
+            },
+            {
+                "summary": "Is it safe to use?",
+                "text": "
+                    <p>The formula has been dermatologically tested for skin and scalp tolerability.* As with any new product, patch test first and stop use if irritation occurs.</p>
+                "
+            }
+        ]'
+    }}
+
+    {{#> cta-bar
+        name="Hair Renewal Serum"
+        color-selector=false
+        button="Buy Now & Save {$dyn}%"
+    }}
+    {{/cta-bar}}
+{{/default }}
