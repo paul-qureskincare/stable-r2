@@ -8,6 +8,7 @@
         display: grid;
         grid-template: repeat(2, auto) / 1fr 340px;
         gap: 20px 60px;
+        align-items: center;
         min-height: 0;
 
         @include md {
@@ -17,6 +18,10 @@
         @include sm {
             grid-template: auto / auto;
         }
+    }
+
+    .e-pill-badge {
+        align-self: end;
     }
 
     article {
@@ -78,6 +83,18 @@
 
         @include md {
             flex-direction: column;
+        }
+    }
+
+    &:has(.e-pill-badge) {
+        article {
+            align-self: start;
+
+            h2 {
+                @include sm {
+                    text-align: left;
+                }
+            }
         }
     }
 }

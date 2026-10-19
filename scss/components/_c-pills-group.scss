@@ -1,0 +1,15 @@
+@use "@root/mixins" as *;
+
+.c-pills-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .e-pill-badge {
+        padding: 6px 12px;
+        color: #212428;
+        font-size: 12px;
+        border: 1px solid #dfe0e0;
+        background: #fbfbfb;
+    }
+}

@@ -57,7 +57,11 @@
   display: grid;
   grid-template: repeat(2, auto)/1fr 340px;
   gap: 20px 60px;
+  align-items: center;
   min-height: 0;
+}
+.experts-pick .e-pill-badge {
+  align-self: end;
 }
 .experts-pick article {
   display: flex;
@@ -97,6 +101,9 @@
   gap: 10px;
   align-self: end;
 }
+.experts-pick:has(.e-pill-badge) article {
+  align-self: start;
+}
 @media screen and (max-width:991px) {
   .experts-pick .container {
     -moz-column-gap: 40px;
@@ -121,5 +128,8 @@
   .experts-pick picture {
     grid-row: auto;
     grid-column: auto;
+  }
+  .experts-pick:has(.e-pill-badge) article h2 {
+    text-align: left;
   }
 }
