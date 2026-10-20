@@ -1,17 +1,6 @@
 @use "@root/mixins" as *;
 @use "@elements/e-hamburger" as *;
 
- // TODO: When header will be done, need move this var to _vars.scss
-:root {
-    // --height-header: 75px;
-    --height-header: 60px;
-
-    @include md {
-        --height-header: 55px;
-    }
-}
-
-
 .header {
     $root: &;
 
@@ -140,12 +129,6 @@
                 gap: 4px;
                 align-items: center;
             }
-
-            /* &:hover,
-            &.active {
-                text-decoration: none;
-                -webkit-text-stroke-width: 0.5px;
-            } */
         }
 
         .e-pill-save {
@@ -371,6 +354,7 @@
 
         @include md {
             align-self: start;
+            width: 100%;
         }
 
         h3 {
@@ -388,8 +372,16 @@
             width: 100%;
             max-width: 200px;
 
-            @include sm {
+            @include md {
                 display: none;
+            }
+        }
+
+        .bf-bundles {
+            display: none;
+
+            @include md {
+                display: block;
             }
         }
     }
@@ -638,6 +630,81 @@
         background-clip: text;
         animation: flare 5s linear infinite;
         -webkit-text-fill-color: transparent;
+    }
+
+    .bf-bundles {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding: 10px 16px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 100px;
+        background: #5c2c22;
+
+        @include md {
+            margin-top: 16px;
+            padding: 20px 24px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background: radial-gradient(#ff5429, transparent 60%);
+            animation: bf-bundles-line 5s linear infinite;
+            opacity: 0.6;
+            content: "";
+            offset-path: inset(1px round 100px);
+        }
+
+        &::after {
+            position: absolute;
+            inset: 3px;
+            z-index: -1;
+            border-radius: 100px;
+            background: #212428;
+            content: "";
+        }
+
+        &:active {
+            color: inherit;
+            background: #ffeeea;
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                background: #ffeeea;
+            }
+        }
+
+        @include hover {
+            color: inherit;
+            background: #ffeeea;
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                background: #ffeeea;
+            }
+        }
+
+        @keyframes bf-bundles-line {
+            to {
+                offset-distance: 100%;
+            }
+        }
     }
 
     &.scroll-hiding {
