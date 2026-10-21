@@ -104,6 +104,14 @@
 .experts-pick:has(.e-pill-badge) article {
   align-self: start;
 }
+.experts-pick--grey {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #f6f6f7;
+}
+.experts-pick--grey .e-pill-badge {
+  background: #fff;
+}
 @media screen and (max-width:991px) {
   .experts-pick .container {
     -moz-column-gap: 40px;
@@ -111,6 +119,10 @@
   }
   .experts-pick .ingredient-tiles {
     flex-direction: column;
+  }
+  .experts-pick--grey {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width:767px) {
@@ -131,5 +143,18 @@
   }
   .experts-pick:has(.e-pill-badge) article h2 {
     text-align: left;
+  }
+  .experts-pick--grey {
+    text-align: center;
+  }
+  .experts-pick--grey:has(.e-pill-badge) article h2 {
+    text-align: center;
+  }
+  .experts-pick--grey picture {
+    order: -1;
+  }
+  .experts-pick--grey .e-pill-badge {
+    order: 1;
+    margin: 0 auto;
   }
 }

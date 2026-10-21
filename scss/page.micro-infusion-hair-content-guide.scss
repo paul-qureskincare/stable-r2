@@ -1,0 +1,41 @@
+// Sections styles on current page
+@use "@sections/intro-section/intro-section" as *;
+@use "@sections/guide-menu/guide-menu" as *;
+@use "@sections/guide-content/guide-content" as *;
+@use "@sections/experts-pick/experts-pick" as *;
+
+// Styles for current page only
+.sections-stack {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.across-image-banner {
+    .container {
+        article {
+            max-width: 480px;
+
+            @include sm {
+                max-width: none;
+            }
+        }
+    }
+}
+
+#product-information-tab {
+    article {
+        p:has(.e-icon) {
+            display: flex;
+            gap: 12px;
+        }
+
+        .e-icon {
+            flex: none;
+            font-size: 22px;
+        }
+    }
+}
+
+.experts-pick {
+    width: 100%;
+}
