@@ -17,4 +17,9 @@ body {
     flex-grow: 1;
     padding-top: 0;
     padding-bottom: 0;
+
+    .shopify-section {
+        display: flex;
+        flex-grow: 1;
+    }
 }
