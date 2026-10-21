@@ -120,7 +120,7 @@
             </details>
         {{/if }}
         {{#parseJson list }}
-            <details class="c-accordion__item">
+            <details class="c-accordion__item"{{#if ../name }} name="{{ ../name }}"{{/if }}>
                 <summary class="c-accordion__summary">
                     {{#if icon }}{{> e-icon icon=icon }}{{/if}}{{ summary }}
                 </summary>

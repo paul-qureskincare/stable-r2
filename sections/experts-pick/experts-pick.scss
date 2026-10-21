@@ -97,4 +97,45 @@
             }
         }
     }
+
+    &--grey {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #f6f6f7;
+
+        @include md {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @include sm {
+            text-align: center;
+        }
+
+
+    &:has(.e-pill-badge) {
+        article {
+            h2 {
+                @include sm {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+        picture {
+            @include sm {
+                order: -1;
+            }
+        }
+
+        .e-pill-badge {
+            background: #fff;
+
+            @include sm {
+                order: 1;
+                margin: 0 auto;
+            }
+        }
+    }
 }
