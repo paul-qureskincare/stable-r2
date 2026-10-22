@@ -691,6 +691,74 @@
         }
     }
 
+    // .across-image-banner--mask
+    &--mask {
+        position: relative;
+        color: inherit;
+        background: linear-gradient(304deg, #F7FBFF 22.58%, #FDFFFF 64.33%);
+
+        picture {
+            @include sm {
+                display: none;
+            }
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            object-fit: cover;
+            object-position: 50% 85%;
+            width: min(50%, 630px);
+            height: 100%;
+
+            @include sm {
+                right: auto;
+                left: 0;
+                object-position: 50% 70%;
+                width: 100%;
+            }
+        }
+
+        .container {
+            @include banner-height(550, 1440);
+
+            @include sm {
+                justify-content: flex-start;
+                @include banner-height(600, 375);
+            }
+        }
+
+        article {
+            display: flex;
+            gap: 20px;
+            width: min(460px, 50%);
+            margin-left: 0;
+
+            @include md {
+                gap: 10px;
+                width: 100%;
+            }
+
+            .e-pill-save {
+                margin-right: auto;
+
+                @include sm {
+                    margin-left: auto;
+                }
+            }
+
+            .btn {
+                max-width: 360px;
+
+                @include sm {
+                    align-self: center;
+                }
+            }
+        }
+    }
+
     // .across-image-banner--bf
     &--bf {
         position: relative;
