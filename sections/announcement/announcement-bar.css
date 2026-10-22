@@ -34,6 +34,7 @@
   background: #fff;
 }
 .announcement-bar .c-swiper {
+  flex-grow: 1;
   margin: 0;
   padding: 0;
 }
@@ -43,7 +44,7 @@
 .announcement-bar-content {
   font-size: 16px;
 }
-.announcement-bar-content,.announcement-bar-link,.announcement-bar-offer-countdown {
+.announcement-bar-content,.announcement-bar-link,.announcement-bar-offer-countdown,.announcement-bar-text {
   display: flex;
   align-items: center;
   width: 100%;
@@ -65,6 +66,13 @@
   border-radius: 40px;
   background: #ff5429;
 }
+.announcement-bar-text {
+  text-align: center;
+}
+.announcement-bar-text a {
+  color: inherit;
+  font-weight: 600;
+}
 .announcement-bar-offer-countdown {
   width: 100%;
 }
@@ -81,9 +89,6 @@
 .announcement-bar-offer-countdown a {
   color: inherit;
   font-weight: 600;
-}
-.announcement-bar-offer-countdown a:hover {
-  text-decoration: underline;
 }
 .announcement-bar-offer-countdown .e-countdown {
   margin-left: auto;

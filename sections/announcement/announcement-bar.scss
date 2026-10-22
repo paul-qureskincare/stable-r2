@@ -13,6 +13,7 @@
     }
 
     .c-swiper {
+        flex-grow: 1;
         margin: 0;
         padding: 0;
     }
@@ -36,6 +37,8 @@
 
     // .announcement-bar-link
     &-link,
+    // .announcement-bar-text
+    &-text,
      // .announcement-bar-offer-countdown
     &-offer-countdown {
         display: flex;
@@ -69,6 +72,16 @@
             @include sm {
                 font-size: 12px;
             }
+        }
+    }
+
+    // .announcement-bar-text
+    &-text {
+        text-align: center;
+
+        a {
+            color: inherit;
+            font-weight: 600;
         }
     }
 
@@ -108,10 +121,6 @@
         a {
             color: inherit;
             font-weight: 600;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
 
         .e-countdown {
