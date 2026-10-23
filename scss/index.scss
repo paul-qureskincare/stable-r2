@@ -5,8 +5,9 @@
 @use "@sections/our-story/our-story" as *;
 @use "@sections/qure-journal/qure-journal" as *;
 @use "@sections/we-online/we-online" as *;
+@use "@sections/promo-strip/promo-strip" as *;
 
-// TODO: Old sections, need to delete after update page on live
+/* // TODO: Old sections, need to delete after update page on live
 @use "@sections/quick-links/quick-links" as *;
 @use "@sections/quick-tile-links/quick-tile-links" as *;
 @use "@sections/press-reviews/press-reviews" as *;
@@ -16,7 +17,7 @@
 @use "@sections/take-quiz/take-quiz" as *;
 @use "@sections/our-community/our-community" as *;
 @use "@sections/daily-cleanser/daily-cleanser" as *;
-@use "@sections/promo-strip/promo-strip" as *;
+ */
 
 // Styles for current page only
 
@@ -695,7 +696,11 @@
     &--mask {
         position: relative;
         color: inherit;
-        background: linear-gradient(304deg, #F7FBFF 22.58%, #FDFFFF 64.33%);
+        background: linear-gradient(304deg, #f7fbff 45%, #fdffff 85%);
+
+        @include sm {
+            background: #f9feff;
+        }
 
         picture {
             @include sm {
@@ -712,6 +717,7 @@
             object-position: 50% 85%;
             width: min(50%, 630px);
             height: 100%;
+            mix-blend-mode: multiply;
 
             @include sm {
                 right: auto;
