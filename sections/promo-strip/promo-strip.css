@@ -177,6 +177,30 @@
 .promo-strip--against-cancer:not(:has(.free-gift)) article p {
   display: block;
 }
+.promo-strip--recovery-mask {
+  overflow: hidden;
+  background: linear-gradient(304deg, #f7fbff 45%, #fdffff 85%);
+}
+.promo-strip--recovery-mask video {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 160px;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+.promo-strip--recovery-mask .container {
+  max-width: 1140px;
+}
+.promo-strip--recovery-mask article {
+  grid-template: repeat(3, auto)/1fr min(270px, 25%);
+}
+.promo-strip--recovery-mask h3,.promo-strip--recovery-mask p {
+  max-width: 60%;
+}
+.promo-strip--recovery-mask .e-pill-save {
+  margin-right: auto;
+}
 @media screen and (max-width:1199px) {
   .promo-strip--blue-plus .free-gift {
     top: auto;
@@ -306,5 +330,14 @@
   }
   .promo-strip--against-cancer:not(:has(.free-gift)) article h3 {
     max-width: 84%;
+  }
+  .promo-strip--recovery-mask {
+    background: #f9feff;
+  }
+  .promo-strip--recovery-mask video {
+    top: 0;
+    right: -55px;
+    left: auto;
+    width: 250px;
   }
 }
