@@ -32,6 +32,7 @@
 @use "@components/c-upsell-card" as *;
 @use "@components/c-optional-subscription" as *;
 @use "@components/c-blue-serum-free" as *;
+@use "@components/c-gift-included-box" as *;
 
 .hero-product {
     $root: &;
@@ -164,6 +165,7 @@
         & > hr {
             max-width: 500px;
             margin: 0;
+            border-bottom: 0;
             opacity: 0.4;
 
             @include sm {
@@ -280,7 +282,9 @@
             }
         }
 
-
+        .c-gift-included-box {
+            max-width: 500px;
+        }
     }
 
     // .hero-product__gallery

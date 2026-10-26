@@ -47,6 +47,12 @@
         }
     }
 
+    &__text {
+        em {
+            background: #c7e5db;
+        }
+    }
+
     &__features {
         grid-column: 2;
         padding: 32px;
@@ -115,5 +121,4 @@
             }
         }
     }
-
 }

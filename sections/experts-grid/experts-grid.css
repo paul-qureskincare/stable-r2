@@ -7,19 +7,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+.experts-grid .c-swiper,.experts-grid ul {
   margin-top: 40px;
   text-align: left;
 }
-.experts-grid ul li {
+.experts-grid .swiper-slide,.experts-grid ul li {
   overflow: hidden;
   border: 1px solid rgba(80,0,11,.05);
   border-radius: 24px;
   container-type: inline-size;
 }
-.experts-grid ul figure {
+.experts-grid .swiper-slide figure,.experts-grid ul li figure {
   position: relative;
 }
-.experts-grid ul figcaption {
+.experts-grid .swiper-slide figcaption,.experts-grid ul li figcaption {
   position: absolute;
   right: 12px;
   bottom: 12px;
@@ -33,12 +35,12 @@
   border-radius: 2px;
   background: #cde6dd;
 }
-.experts-grid ul img {
+.experts-grid .swiper-slide img,.experts-grid ul li img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.experts-grid ul div {
+.experts-grid .swiper-slide div,.experts-grid ul li div {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -46,10 +48,10 @@
   font-size: min(24px, 7cqw);
   line-height: 1.1;
 }
-.experts-grid ul strong {
+.experts-grid .swiper-slide strong,.experts-grid ul li strong {
   font-family: inherit;
 }
-.experts-grid ul small {
+.experts-grid .swiper-slide small,.experts-grid ul li small {
   font-size: .7em;
   opacity: .5;
 }
@@ -89,21 +91,23 @@
   .experts-grid ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+  }
+  .experts-grid .c-swiper,.experts-grid ul {
     margin-top: 24px;
   }
-  .experts-grid ul figcaption {
+  .experts-grid .swiper-slide figcaption,.experts-grid ul li figcaption {
     right: 4px;
     bottom: 4px;
     font-size: 16px;
   }
-  .experts-grid ul div {
+  .experts-grid .swiper-slide div,.experts-grid ul li div {
     gap: 4px;
     padding: 12px;
   }
-  .experts-grid ul strong {
+  .experts-grid .swiper-slide strong,.experts-grid ul li strong {
     font-size: 16px;
   }
-  .experts-grid ul small {
+  .experts-grid .swiper-slide small,.experts-grid ul li small {
     font-size: 12px;
   }
   .experts-grid--awards article {

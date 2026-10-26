@@ -325,4 +325,46 @@
             }
         }
     }
+
+    // .comparison-table--equal-rows (height rows by script)
+    &--equal-rows {
+        #{$root}__content {
+            & > ul {
+                gap: 12px;
+                padding: 32px 32px 24px;
+
+                @include sm {
+                    padding: 24px 16px 16px;
+                }
+
+                li {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:first-child) {
+                        padding-top: 0;
+                        border-top: 0;
+
+                        &::before {
+                            position: absolute;
+                            top: -6px;
+                            right: 0;
+                            left: 0;
+                            border-top: 1px solid #dfe0e0;
+                            content: '';
+                        }
+                    }
+                }
+            }
+
+            article ul {
+                justify-content: flex-end;
+
+                li {
+                    flex: none;
+                }
+            }
+        }
+    }
 }
