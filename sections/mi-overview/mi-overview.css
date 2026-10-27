@@ -22,6 +22,9 @@
 .mi-overview__video .c-wistia wistia-player {
   max-height: 700px;
 }
+.mi-overview__text em {
+  background: #c7e5db;
+}
 .mi-overview__features {
   grid-column: 2;
   padding: 32px;

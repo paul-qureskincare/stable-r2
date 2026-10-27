@@ -1,0 +1,76 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/features-overview/features-overview" as *;
+@use "@sections/mi-overview/mi-overview" as *;
+@use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/experts-grid/experts-grid" as *;
+@use "@sections/mi-ingredients/mi-ingredients" as *;
+@use "@sections/set-up/set-up" as *;
+@use "@sections/features-marquee/features-marquee" as *;
+@use "@sections/accordion-tiles/accordion-tiles" as *;
+@use "@sections/bundled-together/bundled-together" as *;
+@use "@sections/comparison-table/comparison-table" as *;
+@use "@sections/complete-system/complete-system" as *;
+
+// Styles for current page only
+.sections-stack {
+    padding-bottom: 0;
+}
+
+.c-benefit-grid {
+    &__icon {
+        background: #f4f8fd;
+    }
+
+    .e-icon {
+        color: #91baec;
+        font-size: 16px;
+    }
+}
+
+.hero-product {
+    &__extra {
+        .e-quote-card {
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .c-certified-box {
+            max-width: none;
+            margin-top: -24px;
+
+            @include sm {
+                margin-top: -12px;
+            }
+        }
+
+        .c-benefit-grid__item {
+            max-width: 240px;
+        }
+    }
+}
+
+.mi-ingredients {
+    .mi-ingredients__card {
+        grid-template-columns: 1fr 90px;
+        column-gap: 12px;
+
+        img {
+            grid-column: 2;
+        }
+
+        article {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .e-pill-badge {
+            --badge-base-color: #523f3a;
+            --badge-fill-color: rgb(82 63 58 / 20%);
+
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    }
+}

@@ -28,9 +28,10 @@
         width: 100%;
         @include img-fluid;
         vertical-align: top;
+        border-radius: 10px;
     }
 
-    picture[data-video-id] { // TODO: Delete the old code when it is possible
+    /* picture[data-video-id] { // TODO: Delete the old code when it is possible
         grid-row: 1 / -1;
         @include play;
 
@@ -41,9 +42,9 @@
         img {
             border-radius: 10px;
         }
-    }
+    } */
 
-    .c-wistia {
+    .c-wistia, picture {
         grid-row: 1 / -1;
 
         @include sm {

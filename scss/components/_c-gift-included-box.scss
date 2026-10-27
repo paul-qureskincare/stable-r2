@@ -1,0 +1,84 @@
+@use "@root/mixins" as *;
+
+.c-gift-included-box {
+    $root: &;
+
+    position: relative;
+    padding: 6px;
+    border: 1px solid #212428;
+    border-radius: 10px;
+
+    .e-pill-save {
+        position: absolute;
+        top: -9px;
+        right: 16px;
+        font-size: 12px;
+    }
+
+    // .c-gift-included-box__content
+    &__content {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        padding: 12px;
+        border-radius: 10px;
+        background: #f6f6f7;
+
+        img {
+            flex-shrink: 0;
+            object-fit: contain;
+            width: 28px;
+            height: 33px;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        // info
+        div {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        strong {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        // price
+        p {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin: 0;
+            color: #ff5429;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1;
+            white-space: nowrap;
+
+            @include sm {
+                flex-direction: column-reverse;
+                gap: 2px;
+                align-items: flex-end;
+            }
+
+            span:first-child {
+                @include sm {
+                    font-weight: 500;
+                }
+            }
+
+            span:last-child {
+                padding: 4px 8px;
+                border-radius: 40px;
+                background: #fff;
+            }
+        }
+    }
+}

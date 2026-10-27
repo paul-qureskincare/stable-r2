@@ -2885,6 +2885,66 @@
   height: 100%;
 }
 
+.c-gift-included-box {
+  position: relative;
+  padding: 6px;
+  border: 1px solid #212428;
+  border-radius: 10px;
+}
+.c-gift-included-box .e-pill-save {
+  position: absolute;
+  top: -9px;
+  right: 16px;
+  font-size: 12px;
+}
+.c-gift-included-box__content {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f6f6f7;
+}
+.c-gift-included-box__content img {
+  flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 28px;
+  height: 33px;
+  border-radius: 4px;
+  background: #fff;
+}
+.c-gift-included-box__content div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+.c-gift-included-box__content strong {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+.c-gift-included-box__content p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  color: #ff5429;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.c-gift-included-box__content p span:last-child {
+  padding: 4px 8px;
+  border-radius: 40px;
+  background: #fff;
+}
+
 .hero-product__container {
   display: grid;
   grid-template: auto 1fr/repeat(2, 1fr);
@@ -2997,6 +3057,7 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main article,body[cl
 .hero-product__main>hr {
   max-width: 500px;
   margin: 0;
+  border-bottom: 0;
   opacity: .4;
 }
 .hero-product__main .purchase-form-wrapper {
@@ -3088,6 +3149,9 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 }
 .hero-product__main .subscription-details a:hover {
   text-decoration: none;
+}
+.hero-product__main .c-gift-included-box {
+  max-width: 500px;
 }
 .hero-product__gallery {
   position: relative;
@@ -3607,6 +3671,14 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .c-blue-serum-free strong {
     font-size: 16px;
+  }
+  .c-gift-included-box__content p {
+    flex-direction: column-reverse;
+    gap: 2px;
+    align-items: flex-end;
+  }
+  .c-gift-included-box__content p span:first-child {
+    font-weight: 500;
   }
   .hero-product__container {
     grid-template: auto/auto;
