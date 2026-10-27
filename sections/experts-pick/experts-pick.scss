@@ -98,6 +98,12 @@
         }
     }
 
+    &:has(.ingredient-tiles) {
+        .container {
+            grid-template-rows: repeat(3, auto);
+        }
+    }
+
     &--grey {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -112,16 +118,15 @@
             text-align: center;
         }
 
-
-    &:has(.e-pill-badge) {
-        article {
-            h2 {
-                @include sm {
-                    text-align: center;
+        &:has(.e-pill-badge) {
+            article {
+                h2 {
+                    @include sm {
+                        text-align: center;
+                    }
                 }
             }
         }
-    }
 
         picture {
             @include sm {
