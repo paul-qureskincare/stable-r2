@@ -104,6 +104,9 @@
 .experts-pick:has(.e-pill-badge) article {
   align-self: start;
 }
+.experts-pick:has(.ingredient-tiles) .container {
+  grid-template-rows: repeat(3, auto);
+}
 .experts-pick--grey {
   padding-top: 60px;
   padding-bottom: 60px;
