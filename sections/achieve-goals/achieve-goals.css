@@ -92,6 +92,9 @@
 .c-trusted-review-card article p {
   font-size: 16px;
 }
+.c-trusted-review-card picture img {
+  aspect-ratio: 3/2;
+}
 .c-trusted-review-card img {
   width: 100%;
 }
