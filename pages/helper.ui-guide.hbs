@@ -31,16 +31,108 @@
             <li class="nav-item">
                 <a class="nav-link active" href="#components" data-bs-toggle="tab">Components</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#helpers" data-bs-toggle="tab">Helpers</a>
+            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane" id="typography">
-                <h1>H1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <h2>H2Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <h3>H3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                <h4>H4 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                <h5>H5 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                <h6>H6 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos accusantium earum asperiores suscipit facilis quas aliquam, iusto, laudantium repudiandae, quam nostrum repellendus eligendi in cumque dignissimos commodi tempore quo culpa rem voluptate? Soluta nam repellendus alias? Dolore placeat, tempora amet fugiat iste dolores quasi maiores repudiandae suscipit incidunt, cupiditate, nulla a enim! Eveniet odit atque quibusdam incidunt placeat eum impedit aliquid voluptatem sequi eligendi doloribus qui quam veniam minima, quae expedita! Ipsum laboriosam accusamus ex mollitia repellendus facilis omnis quam porro! Itaque ex quidem blanditiis aperiam perferendis cupiditate nesciunt assumenda temporibus veritatis. Architecto necessitatibus ab deserunt vel reprehenderit perferendis.</p>
+
+                <h5 class="ui-title">Font families</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Family</th><th>Usage</th><th>Weights</th></tr></thead>
+                    <tbody>
+                        <tr><th>Canela<small>--heading-font-family</small></th><td>Headings, accent text</td><td><div class="ui-specimen" style="font-family: Canela;"><span style="font-weight:100">Thin 100</span> &nbsp; <span style="font-weight:300">Light 300</span> &nbsp; <span style="font-weight:400">Regular 400</span> &nbsp; <span style="font-weight:500">Medium 500</span></div></td></tr>
+                        <tr><th>TT Commons<small>--base-font-family</small></th><td>Body text, buttons, UI</td><td><div class="ui-specimen" style="font-family: 'TT Commons';"><span>Regular 400</span> &nbsp; <em>Italic 400</em> &nbsp; <span style="font-weight:500">Medium 500</span> &nbsp; <span style="font-weight:600">DemiBold 600</span> &nbsp; <span style="font-weight:700">Bold 700</span></div></td></tr>
+                        <tr><th>icomoon</th><td>Icon font</td><td><div class="ui-specimen"><i class="e-icon e-icon-cart"></i> <i class="e-icon e-icon-user"></i> <i class="e-icon e-icon-gift"></i> <i class="e-icon e-icon-checkmark"></i> &mdash; see the Icons tab</div></td></tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Defined in <code>base/_fonts.scss</code>. <code>strong</code> is 600. Base text: 18px / 1.25, weight 400, TT Commons.</p>
+
+                <h5 class="ui-title">Headings</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Tag / class</th><th>Specimen</th><th>Desktop</th><th>&le; 991px</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>h1</code> / <code>.h1</code><small>--font-h1(-mob)</small></th><td><div class="ui-specimen"><h1>The quick brown fox jumps</h1></div></td><td>46px</td><td>32px</td></tr>
+                        <tr><th><code>h2</code> / <code>.h2</code><small>--font-h2(-mob)</small></th><td><div class="ui-specimen"><h2>The quick brown fox jumps</h2></div></td><td>38px</td><td>28px</td></tr>
+                        <tr><th><code>h3</code> / <code>.h3</code><small>--font-h3(-mob)</small></th><td><div class="ui-specimen"><h3>The quick brown fox jumps</h3></div></td><td>32px</td><td>24px</td></tr>
+                        <tr><th><code>h4</code> / <code>.h4</code><small>--font-h4(-mob)</small></th><td><div class="ui-specimen"><h4>The quick brown fox jumps</h4></div></td><td>28px</td><td>18px</td></tr>
+                        <tr><th><code>h5</code> / <code>.h5</code><small>--font-h5(-mob)</small></th><td><div class="ui-specimen"><h5>The quick brown fox jumps</h5></div></td><td>24px</td><td>20px</td></tr>
+                        <tr><th><code>h6</code> / <code>.h6</code><small>--font-h6(-mob)</small></th><td><div class="ui-specimen"><h6>The quick brown fox jumps</h6></div></td><td>20px</td><td>20px</td></tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Canela, weight 300, color <code>--heading-color</code> (#212428), margin-bottom 0.5rem. Classes <code>.h1</code>&ndash;<code>.h6</code> give the same look to any tag. h6 has no mobile override. Line-height vars <code>--font-hN-lh</code> are declared with <code>list-style</code> instead of <code>line-height</code> in <code>base/_typography.scss</code>, so they currently do nothing.</p>
+
+                <h5 class="ui-title">Body text</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Element</th><th>Specimen</th><th>Size</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>p</code></th><td><div class="ui-specimen"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos accusantium earum asperiores suscipit facilis quas aliquam.</p></div></td><td>18px / 1.25, 400</td></tr>
+                        <tr><th><code>strong</code></th><td><div class="ui-specimen"><strong>Bold text inside a paragraph</strong></div></td><td>600</td></tr>
+                        <tr><th><code>em</code> / <code>i</code></th><td><div class="ui-specimen"><em>Italic text</em></div></td><td>TT Commons Italic</td></tr>
+                        <tr><th><code>a</code></th><td><div class="ui-specimen"><a href="#">Link text</a> (underline on hover)</div></td><td>inherits color</td></tr>
+                        <tr><th><code>small</code> / <code>--small-font-size</code></th><td><div class="ui-specimen" style="font-size:14px;">Small text</div></td><td>14px</td></tr>
+                        <tr><th><code>.e-declaimer</code></th><td><div class="ui-specimen"><span class="e-declaimer">Disclaimer text, grey</span></div></td><td>16px / 1.25 (14px on mobile), #8b8c8e</td></tr>
+                    </tbody>
+                </table>
+
+                <h5 class="ui-title">Font weights</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Weight</th><th>Specimen</th><th>Used for</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>100</code><small>Thin</small></th><td><div class="ui-specimen"><span style="font-family:'TT Commons';font-weight:100">TT Commons &mdash; The quick brown fox jumps</span> &nbsp;&nbsp; <span style="font-family:Canela;font-weight:100">Canela &mdash; The quick brown fox jumps</span></div></td><td>Canela only</td></tr>
+                        <tr><th><code>300</code><small>Light</small></th><td><div class="ui-specimen"><span style="font-family:'TT Commons';font-weight:300">TT Commons &mdash; The quick brown fox jumps</span> &nbsp;&nbsp; <span style="font-family:Canela;font-weight:300">Canela &mdash; The quick brown fox jumps</span></div></td><td>Canela headings</td></tr>
+                        <tr><th><code>400 / normal</code><small>Regular</small></th><td><div class="ui-specimen"><span style="font-family:'TT Commons';font-weight:400">TT Commons &mdash; The quick brown fox jumps</span> &nbsp;&nbsp; <span style="font-family:Canela;font-weight:400">Canela &mdash; The quick brown fox jumps</span></div></td><td>Body text</td></tr>
+                        <tr><th><code>500</code><small>Medium</small></th><td><div class="ui-specimen"><span style="font-family:'TT Commons';font-weight:500">TT Commons &mdash; The quick brown fox jumps</span> &nbsp;&nbsp; <span style="font-family:Canela;font-weight:500">Canela &mdash; The quick brown fox jumps</span></div></td><td>Pills, tags, labels</td></tr>
+                        <tr><th><code>600</code><small>DemiBold</small></th><td><div class="ui-specimen"><span style="font-family:'TT Commons';font-weight:600">TT Commons &mdash; The quick brown fox jumps</span> &nbsp;&nbsp; <span style="font-family:Canela;font-weight:600">Canela &mdash; The quick brown fox jumps</span></div></td><td>Buttons, strong</td></tr>
+                        <tr><th><code>700 / bold</code><small>Bold</small></th><td><div class="ui-specimen"><span style="font-family:'TT Commons';font-weight:700">TT Commons &mdash; The quick brown fox jumps</span> &nbsp;&nbsp; <span style="font-family:Canela;font-weight:700">Canela &mdash; The quick brown fox jumps</span></div></td><td>TT Commons</td></tr>
+                    </tbody>
+                </table>
+
+                <h5 class="ui-title">Font-size utilities</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Class</th><th>Specimen</th><th>Size</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>.fs-9</code></th><td><div class="ui-specimen"><span class="fs-9">Skin that looks and feels its best</span></div></td><td>9px</td></tr>
+                        <tr><th><code>.fs-10</code></th><td><div class="ui-specimen"><span class="fs-10">Skin that looks and feels its best</span></div></td><td>10px</td></tr>
+                        <tr><th><code>.fs-11</code></th><td><div class="ui-specimen"><span class="fs-11">Skin that looks and feels its best</span></div></td><td>11px</td></tr>
+                        <tr><th><code>.fs-12</code></th><td><div class="ui-specimen"><span class="fs-12">Skin that looks and feels its best</span></div></td><td>12px</td></tr>
+                        <tr><th><code>.fs-13</code></th><td><div class="ui-specimen"><span class="fs-13">Skin that looks and feels its best</span></div></td><td>13px</td></tr>
+                        <tr><th><code>.fs-14</code></th><td><div class="ui-specimen"><span class="fs-14">Skin that looks and feels its best</span></div></td><td>14px</td></tr>
+                        <tr><th><code>.fs-16</code></th><td><div class="ui-specimen"><span class="fs-16">Skin that looks and feels its best</span></div></td><td>16px</td></tr>
+                        <tr><th><code>.fs-18</code></th><td><div class="ui-specimen"><span class="fs-18">Skin that looks and feels its best</span></div></td><td>18px</td></tr>
+                        <tr><th><code>.fs-20</code></th><td><div class="ui-specimen"><span class="fs-20">Skin that looks and feels its best</span></div></td><td>20px</td></tr>
+                        <tr><th><code>.fs-22</code></th><td><div class="ui-specimen"><span class="fs-22">Skin that looks and feels its best</span></div></td><td>22px</td></tr>
+                        <tr><th><code>.fs-24</code></th><td><div class="ui-specimen"><span class="fs-24">Skin that looks and feels its best</span></div></td><td>24px</td></tr>
+                        <tr><th><code>.fs-26</code></th><td><div class="ui-specimen"><span class="fs-26">Skin that looks and feels its best</span></div></td><td>26px</td></tr>
+                        <tr><th><code>.fs-28</code></th><td><div class="ui-specimen"><span class="fs-28">Skin that looks and feels its best</span></div></td><td>28px</td></tr>
+                        <tr><th><code>.fs-30</code></th><td><div class="ui-specimen"><span class="fs-30">Skin that looks and feels its best</span></div></td><td>30px</td></tr>
+                        <tr><th><code>.fs-32</code></th><td><div class="ui-specimen"><span class="fs-32">Skin that looks and feels its best</span></div></td><td>32px</td></tr>
+                        <tr><th><code>.fs-34</code></th><td><div class="ui-specimen"><span class="fs-34">Skin that looks and feels its best</span></div></td><td>34px</td></tr>
+                        <tr><th><code>.fs-38</code></th><td><div class="ui-specimen"><span class="fs-38">Skin that looks and feels its best</span></div></td><td>38px</td></tr>
+                        <tr><th><code>.fs-46</code></th><td><div class="ui-specimen"><span class="fs-46">Skin that looks and feels its best</span></div></td><td>46px</td></tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Every size also exists per breakpoint: <code>.fs-sm-*</code> (&ge;576px), <code>.fs-md-*</code> (&ge;768px), <code>.fs-lg-*</code> (&ge;992px), <code>.fs-xl-*</code> (&ge;1200px), <code>.fs-xxl-*</code> (&ge;1400px), e.g. <code>fs-16 fs-lg-20</code>. All use <code>!important</code>.</p>
+
+                <h5 class="ui-title">Font sizes used in SCSS</h5>
+                <ul class="ui-chips"><li><strong>6px</strong><span>&times;5</span></li><li><strong>8px</strong><span>&times;16</span></li><li><strong>9px</strong><span>&times;6</span></li><li><strong>10px</strong><span>&times;22</span></li><li><strong>11px</strong><span>&times;7</span></li><li><strong>12px</strong><span>&times;89</span></li><li><strong>13px</strong><span>&times;12</span></li><li><strong>14px</strong><span>&times;172</span></li><li><strong>15px</strong><span>&times;4</span></li><li><strong>16px</strong><span>&times;236</span></li><li><strong>18px</strong><span>&times;77</span></li><li><strong>20px</strong><span>&times;92</span></li><li><strong>22px</strong><span>&times;18</span></li><li><strong>24px</strong><span>&times;24</span></li><li><strong>25px</strong><span>&times;5</span></li><li><strong>26px</strong><span>&times;11</span></li><li><strong>28px</strong><span>&times;19</span></li><li><strong>30px</strong><span>&times;16</span></li><li><strong>32px</strong><span>&times;13</span></li><li><strong>33px</strong><span>&times;1</span></li><li><strong>34px</strong><span>&times;15</span></li><li><strong>35px</strong><span>&times;8</span></li><li><strong>36px</strong><span>&times;7</span></li><li><strong>38px</strong><span>&times;10</span></li><li><strong>40px</strong><span>&times;14</span></li><li><strong>42px</strong><span>&times;1</span></li><li><strong>43px</strong><span>&times;1</span></li><li><strong>45px</strong><span>&times;2</span></li><li><strong>46px</strong><span>&times;17</span></li><li><strong>50px</strong><span>&times;3</span></li><li><strong>52px</strong><span>&times;1</span></li><li><strong>55px</strong><span>&times;1</span></li><li><strong>56px</strong><span>&times;1</span></li><li><strong>60px</strong><span>&times;3</span></li><li><strong>68px</strong><span>&times;1</span></li><li><strong>70px</strong><span>&times;1</span></li><li><strong>80px</strong><span>&times;1</span></li><li><strong>90px</strong><span>&times;1</span></li><li><strong>99px</strong><span>&times;1</span></li></ul>
+                <p class="ui-el__note">How many times each <code>font-size: Npx</code> appears in SCSS (components, sections, pages). The most common are 16px, 14px, 20px, 12px, 18px. Non-standard sizes (6, 8, 15, 25, 33, 35, 43, 45, 52&ndash;99px) are one-offs and are not part of the <code>.fs-*</code> scale.</p>
+
+                <h5 class="ui-title">Text colors</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Variable</th><th>Color</th><th>Specimen</th><th>Usage</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>--heading-color / --qure-charcoal</code></th><td><span class="ui-swatch" style="background:#212428"></span> <code>#212428</code></td><td><div class="ui-specimen" style="color:#212428;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>Headings, main text</td></tr>
+                        <tr><th><code>--charcoal-light / --border-color</code></th><td><span class="ui-swatch" style="background:#8b8c8e"></span> <code>#8b8c8e</code></td><td><div class="ui-specimen" style="color:#8b8c8e;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>Secondary text, disclaimers</td></tr>
+                        <tr><th><code>--color-green</code></th><td><span class="ui-swatch" style="background:#008763"></span> <code>#008763</code></td><td><div class="ui-specimen" style="color:#008763;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>Success, accent</td></tr>
+                        <tr><th><code>--color-orange / --discount-color</code></th><td><span class="ui-swatch" style="background:#ff5429"></span> <code>#ff5429</code></td><td><div class="ui-specimen" style="color:#ff5429;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>Discounts, highlights</td></tr>
+                        <tr><th><code>--color-ice</code></th><td><span class="ui-swatch" style="background:#91baec"></span> <code>#91baec</code></td><td><div class="ui-specimen" style="color:#91baec;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>Stars, links accent</td></tr>
+                        <tr><th><code>--base-color</code></th><td><span class="ui-swatch" style="background:#c8e6dc"></span> <code>#c8e6dc</code></td><td><div class="ui-specimen" style="color:#c8e6dc;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>Mint accent</td></tr>
+                        <tr><th><code>--white-color</code></th><td><span class="ui-swatch" style="background:#fff"></span> <code>#fff</code></td><td class="is-dark"><div class="ui-specimen" style="color:#fff;font-weight:500">Aa &mdash; The quick brown fox jumps</div></td><td>On dark backgrounds</td></tr>
+                    </tbody>
+                </table>
+
             </div>
             <div class="tab-pane" id="icons">
                 <p><strong>Base icons</strong></p>
@@ -104,250 +196,2390 @@
                 </ul>
             </div>
             <div class="tab-pane" id="elements">
-                <div class="e-checkmark"></div>
-                <div class="e-pill-save">Save 52%</div>
-                <div class="e-pill-badge">
-                    <span class="e-checkmark"></span>
-                    Dermatologist Reviewed
-                </div>
-                <div class="e-pill-badge e-pill-badge--sm">
-                    <i class="e-icon e-icon-pm"></i>
-                    PM Routine
-                </div>
-                <div class="e-pill-badge e-pill-badge--xs" style="color: #227d5f;">
-                    <i class="e-icon e-icon-checkmark"></i>
-                    Complete routine
-                </div>
-                <ul class="e-pill-tabs" role="tablist">
-                    <li>
-                        <button
-                            type="button"
-                            data-bs-toggle="tab"
-                            data-bs-target="#[id]"
-                        >
-                            User Results
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            class="active"
-                            type="button"
-                            data-bs-toggle="tab"
-                            data-bs-target="#[id]"
-                        >
-                            Clinical Data
-                        </button>
-                    </li>
-                </ul>
-                <br />
-                Price: {{> e-price current="{$dyn}" }}
-                <div class="e-verified-customer">
-                    <div class="e-checkmark"></div>
-                    Verified customer
-                </div>
-                <div class="e-author">
-                    <img src="assets/images/review-slider/america_f.webp" alt="Kim L." />
-                    Kim L.
-                </div>
-                <div class="e-double-tag"><strong>Exclusive</strong> Offer</div>
-                <div class="e-quantity" data-e-quantity>
-                    <button type="button" data-e-quantity-action="decrement">
-                        <i class="e-icon e-icon-minus"></i>
-                    </button>
-                    <input type="number" name="qty" value="1" min="1" readonly />
-                    <button type="button" data-e-quantity-action="increment">
-                        <i class="e-icon e-icon-plus"></i>
-                    </button>
-                </div>
-                <div class="e-quantity e-quantity--pill-xl" data-e-quantity style="width: 200px">
-                    <button type="button" data-e-quantity-action="decrement">
-                        <i class="e-icon e-icon-minus"></i>
-                    </button>
-                    <input type="number" name="qty" value="1" min="1" readonly />
-                    <button type="button" data-e-quantity-action="increment">
-                        <i class="e-icon e-icon-plus"></i>
-                    </button>
-                </div>
+
+                {{!-- e-icon --}}
+                <section class="ui-el">
+                    <h5>e-icon</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="font-size: 32px;">
+                                {{> e-icon icon="cart" }}
+                                {{> e-icon icon="user" }}
+                                {{> e-icon icon="gift" }}
+                            </div>
+                            <figcaption>e-icon e-icon-{name} (full list on the Icons tab)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-checkmark --}}
+                <section class="ui-el">
+                    <h5>e-checkmark</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="font-size: 24px;">
+                                <div class="e-checkmark"></div>
+                            </div>
+                            <figcaption>size = font-size</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-pill-save --}}
+                <section class="ui-el">
+                    <h5>e-pill-save</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-pill-save">Save 52%</div></div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-pill-save e-pill-save--light">Save 52%</div></div>
+                            <figcaption>--light</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-pill-save e-pill-save--bf">Save 52%</div></div>
+                            <figcaption>--bf</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-pill-save" style="--e-pill-save-color: #008763;">Save 52%</div></div>
+                            <figcaption>var --e-pill-save-color</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-pill-badge --}}
+                <section class="ui-el">
+                    <h5>e-pill-badge</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge">
+                                    <span class="e-checkmark"></span>
+                                    Dermatologist Reviewed
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge e-pill-badge--sm">
+                                    <i class="e-icon e-icon-pm"></i>
+                                    PM Routine
+                                </div>
+                            </div>
+                            <figcaption>--sm / --small</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge e-pill-badge--xs" style="--badge-base-color: #227d5f;">
+                                    <i class="e-icon e-icon-checkmark"></i>
+                                    Complete routine
+                                </div>
+                            </div>
+                            <figcaption>--xs</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge e-pill-badge--xxs">Chlorine</div>
+                            </div>
+                            <figcaption>--xxs</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge e-pill-badge--fill">Limited Time Offer</div>
+                            </div>
+                            <figcaption>--fill</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge e-pill-badge--sm" style="--badge-base-color: #ff5429;"><strong>LOCK IN 59% OFF FOR LIFE</strong></div>
+                            </div>
+                            <figcaption>var --badge-base-color</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-pill-badge e-pill-badge--fill" style="--badge-fill-color: #008763;">Free Shipping</div>
+                            </div>
+                            <figcaption>--fill + var --badge-fill-color</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Used in markup but no styles yet: <code>--md</code>, <code>--ghost</code></p>
+                </section>
+
+                {{!-- e-pill-tabs --}}
+                <section class="ui-el">
+                    <h5>e-pill-tabs</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="e-pill-tabs" role="tablist">
+                                    <li>
+                                        <button type="button" data-bs-toggle="tab" data-bs-target="#[id]">User Results</button>
+                                    </li>
+                                    <li>
+                                        <button class="active" type="button" data-bs-toggle="tab" data-bs-target="#[id]">Clinical Data</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <figcaption>default (button.active)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="e-pill-tabs e-pill-tabs--selector">
+                                    <li>
+                                        <label>
+                                            <input name="ui-guide-delivery" type="radio" />
+                                            One Time Purchase
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input name="ui-guide-delivery" type="radio" checked />
+                                            Subscribe &amp; Save
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <figcaption>--selector (label + radio)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-price --}}
+                <section class="ui-el">
+                    <h5>e-price</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> e-price current="$129.00" }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> e-price current="$129.00" highlight=true }}</div>
+                            <figcaption>--highlight</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-price e-price--profit">
+                                    <div class="e-price__main">
+                                        <div class="e-price__current">$129.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>--profit</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-price e-price--highlight">
+                                    <div class="e-price__main">
+                                        <div class="e-price__current">$129.00</div>
+                                        <div class="e-price__old">$199.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>__current + __old</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-price e-price--strikethrough">
+                                    <div class="e-price__main">
+                                        <div class="e-price__current">$129.00</div>
+                                        <div class="e-price__old">$199.00</div>
+                                    </div>
+                                    <div class="e-price__final">$99.00</div>
+                                </div>
+                            </div>
+                            <figcaption>--strikethrough + __final</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-price e-price--strikethrough-old">
+                                    <div class="e-price__main">
+                                        <div class="e-price__current">$129.00</div>
+                                        <div class="e-price__old">$199.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>--strikethrough-old</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Partial <code>e-price</code> hardcodes <code>{$dyn}</code> for old/final, so variants with old/final are shown as raw HTML. <code>--special</code> exists but has no styles. Class <code>.highlight-price</code> / <code>.savings-price</code> can be set on <code>__current</code>.</p>
+                </section>
+
+                {{!-- e-verified-customer --}}
+                <section class="ui-el">
+                    <h5>e-verified-customer</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-verified-customer">
+                                    <div class="e-checkmark"></div>
+                                    Verified customer
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-verified-customer" style="--e-verified-customer-bg: #f6f6f7;">
+                                    <div class="e-checkmark"></div>
+                                    Verified customer
+                                </div>
+                            </div>
+                            <figcaption>var --e-verified-customer-bg</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-author --}}
+                <section class="ui-el">
+                    <h5>e-author</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-author">
+                                    <img src="assets/images/review-slider/america_f.webp" alt="Kim L." />
+                                    Kim L.
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-double-tag --}}
+                <section class="ui-el">
+                    <h5>e-double-tag</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-double-tag"><strong>Exclusive</strong> Offer</div></div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-double-tag e-double-tag--pill"><strong>Exclusive</strong> Offer</div></div>
+                            <figcaption>--pill</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-double-tag" style="--e-double-tag-color: #008763;"><strong>Exclusive</strong> Offer</div></div>
+                            <figcaption>var --e-double-tag-color</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-bundle-tag --}}
+                <section class="ui-el">
+                    <h5>e-bundle-tag</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-bundle-tag"><strong>Bundle</strong> Save 20%</div></div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-bundle-tag" style="--e-bundle-tag-color: #008763;"><strong>Bundle</strong> Save 20%</div></div>
+                            <figcaption>var --e-bundle-tag-color</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-discount-badge --}}
+                <section class="ui-el">
+                    <h5>e-discount-badge</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="font-size: 120px;">
+                                <div class="e-discount-badge" data-text-top="Save" data-text-bottom="today"><span>50%</span></div>
+                            </div>
+                            <figcaption>size = font-size, texts via data-text-top / data-text-bottom</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="font-size: 120px;">
+                                <div class="e-discount-badge" style="--discount-color: #ff5429;" data-text-top="Save" data-text-bottom="today"><span>50%</span></div>
+                            </div>
+                            <figcaption>var --discount-color</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-circle-percent --}}
+                <section class="ui-el">
+                    <h5>e-circle-percent</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> e-circle-percent value="90" }}</div>
+                            <figcaption>value</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> e-circle-percent value="45" label="4.5" }}</div>
+                            <figcaption>label (custom text)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo"><div class="e-circle-percent" style="--percent-value: 70; --circle-border-color: #91baec;"><span>70%</span></div></div>
+                            <figcaption>var --circle-border-color</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-rating-stars --}}
+                <section class="ui-el">
+                    <h5>e-rating-stars</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="font-size: 20px;">
+                                <div class="e-rating-stars" style="--rating: 4.5;"></div>
+                            </div>
+                            <figcaption>var --rating (0–5), size = font-size</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="font-size: 20px;">
+                                <div class="e-rating-stars" style="--rating: 3;"></div>
+                            </div>
+                            <figcaption>--rating: 3</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-quantity --}}
+                <section class="ui-el">
+                    <h5>e-quantity</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="e-quantity" data-e-quantity>
+                                    <button type="button" data-e-quantity-action="decrement">
+                                        <i class="e-icon e-icon-minus"></i>
+                                    </button>
+                                    <input type="number" name="qty" value="1" min="1" readonly />
+                                    <button type="button" data-e-quantity-action="increment">
+                                        <i class="e-icon e-icon-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="e-quantity e-quantity--pill-xl" data-e-quantity>
+                                    <button type="button" data-e-quantity-action="decrement">
+                                        <i class="e-icon e-icon-minus"></i>
+                                    </button>
+                                    <input type="number" name="qty" value="1" min="1" readonly />
+                                    <button type="button" data-e-quantity-action="increment">
+                                        <i class="e-icon e-icon-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <figcaption>--pill-xl</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-switcher --}}
+                <section class="ui-el">
+                    <h5>e-switcher</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <label class="e-switcher">
+                                    <input type="checkbox" name="ui-guide-switch-1" />
+                                    <span></span>
+                                </label>
+                            </div>
+                            <figcaption>off</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                <label class="e-switcher">
+                                    <input type="checkbox" name="ui-guide-switch-2" checked />
+                                    <span></span>
+                                </label>
+                            </div>
+                            <figcaption>checked</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-progress --}}
+                <section class="ui-el">
+                    <h5>e-progress</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-progress label="Selling fast" progress="60" }}
+                            </div>
+                            <figcaption>default (progress)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-progress
+                                    label="Low Stock"
+                                    small="Due to high demand, this offer is only available while stock lasts."
+                                    progress="82"
+                                    low-stock=true
+                                }}
+                            </div>
+                            <figcaption>--low-stock + small</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">The <code>--nearly-full</code> modifier is currently commented out in the partial (<code>_e-progress--nearly-full</code>).</p>
+                </section>
+
+                {{!-- e-countdown --}}
+                <section class="ui-el">
+                    <h5>e-countdown</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                {{> e-countdown start="2026-10-19" days="46" }}
+                            </div>
+                            <figcaption>default (start, days)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">
+                                {{> e-countdown start="2026-10-19" days="46" short=true }}
+                            </div>
+                            <figcaption>short</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--dark">
+                                {{> e-countdown start="2026-10-19" days="46" color='style="color: #fff;"' }}
+                            </div>
+                            <figcaption>color (raw attribute)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-ingredient-info --}}
+                <section class="ui-el">
+                    <h5>e-ingredient-info</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-ingredient-info
+                                    name="Clarity & Tone"
+                                    description="Evens out tone over time"
+                                    percent="100"
+                                }}
+                            </div>
+                            <figcaption>default (percent)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-ingredient-info
+                                    name="Smooth Texture"
+                                    description="Softer with consistent use"
+                                    percent="70"
+                                    color="#008763"
+                                }}
+                            </div>
+                            <figcaption>color (var --accent-color)</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Animates through <code>--in-view</code> (toggled by JS on scroll).</p>
+                </section>
+
+                {{!-- e-get-free-shipping --}}
+                <section class="ui-el">
+                    <h5>e-get-free-shipping</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-get-free-shipping text="Order today to lock in your deal and get FREE Shipping" }}
+                            </div>
+                            <figcaption>default (text)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-auto-ships --}}
+                <section class="ui-el">
+                    <h5>e-auto-ships</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> e-auto-ships }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> e-auto-ships link="See more details" }}</div>
+                            <figcaption>link</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-pay-options --}}
+                <section class="ui-el">
+                    <h5>e-pay-options</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> e-pay-options }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> e-pay-options pay-options-label="Pay later with" }}</div>
+                            <figcaption>pay-options-label</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-declaimer --}}
+                <section class="ui-el">
+                    <h5>e-declaimer</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <p class="e-declaimer">For post-Micro-Infusion care, or whenever skin needs extra comfort.</p>
+                            </div>
+                            <figcaption>default (also available as @mixin e-declaimer)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-features-list --}}
+                <section class="ui-el">
+                    <h5>e-features-list</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="e-features-list">
+                                    <li>
+                                        {{> e-icon icon="guarantee" }}
+                                        30-Day Money-Back Guarantee
+                                    </li>
+                                    <li>
+                                        {{> e-icon icon="shipping-order" }}
+                                        Free Shipping over $50
+                                    </li>
+                                </ul>
+                            </div>
+                            <figcaption>default (icons with tuned sizes: guarantee, shipping-order, proven, checkmark, one-year)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-short-features-list --}}
+                <section class="ui-el">
+                    <h5>e-short-features-list</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-short-features-list
+                                    list='[
+                                        {
+                                            "icon": "micro-stamping",
+                                            "name": "Precision Micro-Stamping Technology"
+                                        },
+                                        {
+                                            "icon": "cooling",
+                                            "name": "Cooling Comfort"
+                                        },
+                                        {
+                                            "icon": "fast",
+                                            "name": "Fast Results"
+                                        }
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>default (list: icon, name)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-small-tiles-group --}}
+                <section class="ui-el">
+                    <h5>e-small-tiles-group</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-small-tiles-group
+                                    list='[
+                                        {
+                                            "icon": "circle-check",
+                                            "name": "90-day money-back guarantee"
+                                        },
+                                        {
+                                            "icon": "circle-delivery",
+                                            "name": "Free shipping"
+                                        },
+                                        {
+                                            "icon": "circle-security",
+                                            "name": "Secure checkout"
+                                        }
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>default (list: icon, name; also applies to .buyer-opportunity)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-steps-list --}}
+                <section class="ui-el">
+                    <h5>e-steps-list</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="e-steps-list">
+                                    <li>
+                                        <strong>Stamp</strong>
+                                        <p>Patented 24k gold needles create micro-channels.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Infuse</strong>
+                                        <p>Clinically formulated serum flows directly into the dermis, not on top of it.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Glow</strong>
+                                        <p>Skin looks smoother and more radiant over time.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <figcaption>default (numbers via counter)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-scale --}}
+                <section class="ui-el">
+                    <h5>e-scale</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="e-scale">
+                                    <li style="--graduation-color: #840d43">Infrared <span>(880 nm)</span></li>
+                                    <li style="--graduation-color: #b80e0d">Deep Red <span>(660 nm)</span></li>
+                                    <li style="--graduation-color: #f5181e">Red <span>(630 nm)</span></li>
+                                    <li style="--graduation-color: #fd8e15">Amber <span>(605 nm)</span></li>
+                                </ul>
+                            </div>
+                            <figcaption>var --graduation-color on li</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-quote-card --}}
+                <section class="ui-el">
+                    <h5>e-quote-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-quote-card
+                                    image="assets/images/experts/dr-shah-quote.webp"
+                                    quote="Qure cares a lot about the products they are putting out."
+                                    name="Dr. Shah"
+                                    position="Dermatologist"
+                                }}
+                            </div>
+                            <figcaption>default (image, quote, name, position)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-expert-quote-tag --}}
+                <section class="ui-el">
+                    <h5>e-expert-quote-tag</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                {{> e-expert-quote-tag
+                                    image="assets/images/experts/expert-quote-tag.webp"
+                                    quote="Science-backed and works well with light therapy."
+                                    author="Dr.Shah"
+                                    role="Board-Certified Dermatologist"
+                                }}
+                            </div>
+                            <figcaption>default (image, quote, author, role)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-experts-quote-inline --}}
+                <section class="ui-el">
+                    <h5>e-experts-quote-inline</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> e-experts-quote-inline
+                                    image="assets/images/experts/experts-maxfield-shah-quote-inline.webp"
+                                    quote="These results are from participants in our user study. This is what consistent use looks like"
+                                }}
+                            </div>
+                            <figcaption>default (image, quote)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-top-posts --}}
+                <section class="ui-el">
+                    <h5>e-top-posts</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="e-top-posts">
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/blogs/pop_post_1.webp" alt="Does Drinking Water Help Clear Your Skin?" />
+                                            <span>#skin</span>
+                                            <p>Does Drinking Water Help Clear Your Skin?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/blogs/pop_post_2.webp" alt="Benefits of Peptides for the Skin" />
+                                            <span>#skincare</span>
+                                            <p>Benefits of Peptides for the Skin</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-bf-badge --}}
+                <section class="ui-el">
+                    <h5>e-bf-badge</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> e-bf-badge silver=true md=true value="31" after="off" }}</div>
+                            <figcaption>silver + --md</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> e-bf-badge silver=true lg=true value="34" before="up to" after="off" }}</div>
+                            <figcaption>silver + --lg, before / after</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Only the <code>silver</code> image exists (<code>bf-badge-silver.webp</code>); <code>--sm</code> has no styles.</p>
+                </section>
+
+                {{!-- e-bf-label --}}
+                <section class="ui-el">
+                    <h5>e-bf-label</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> e-bf-label md=true }}</div>
+                            <figcaption>--md</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> e-bf-label lg=true }}</div>
+                            <figcaption>--lg</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note"><code>--sm</code> is declared but has no styles and no <code>bf-label-sm.webp</code> image.</p>
+                </section>
+
+                {{!-- e-component-pointer --}}
+                <section class="ui-el">
+                    <h5>e-component-pointer</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--stage">
+                                <div class="e-component-pointer" style="--top: 20px; --left: 20px; --line-size: 60px;">
+                                    <hr />
+                                    <a href="#">Carbon Fiber Layer</a>
+                                </div>
+                            </div>
+                            <figcaption>default (vars --top, --left, --line-size)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--stage">
+                                <div class="e-component-pointer e-component-pointer--reverse" style="--top: 20px; --left: 150px; --line-size: 60px;">
+                                    <hr />
+                                    <a href="#">KDF-55 Layer</a>
+                                </div>
+                            </div>
+                            <figcaption>--reverse</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--stage">
+                                <div class="e-component-pointer e-component-pointer--vertical" style="--top: 10px; --left: 20px; --line-size: 60px;">
+                                    <hr />
+                                    <a href="#">ASP-Descaler</a>
+                                </div>
+                            </div>
+                            <figcaption>--vertical</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--stage">
+                                <div class="e-component-pointer e-component-pointer--vertical-reverse" style="--top: 10px; --left: 20px; --line-size: 60px;">
+                                    <hr />
+                                    <a href="#">PP Filter</a>
+                                </div>
+                            </div>
+                            <figcaption>--vertical-reverse</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-sticky-thumb-video --}}
+                <section class="ui-el">
+                    <h5>e-sticky-thumb-video</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--stage" style="width: 220px; height: 220px;">
+                                {{> e-sticky-thumb-video link="https://embed-ssl.wistia.com/deliveries/8f6d91b28ba7df92bcbcb43c882f0bf62e778bc5.bin?disposition=attachment&filename=led-mask-pdp-video.mp4" }}
+                            </div>
+                            <figcaption>default (link); .expanded state via JS</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-hamburger --}}
+                <section class="ui-el">
+                    <h5>e-hamburger</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--dark">
+                                <div class="e-hamburger">
+                                    <div class="e-hamburger__line"></div>
+                                    <div class="e-hamburger__line"></div>
+                                    <div class="e-hamburger__line"></div>
+                                </div>
+                            </div>
+                            <figcaption>default (__line)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- e-logo --}}
+                <section class="ui-el">
+                    <h5>e-logo</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 120px;">
+                                {{> e-logo }}
+                            </div>
+                            <figcaption>svg, size = width</figcaption>
+                        </figure>
+                    </div>
+                </section>
 
             </div>
             <div class="tab-pane" id="buttons">
-                Buttons
+
+                <h5 class="ui-title">Variants &times; sizes</h5>
+                <table class="ui-table">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th><code>--sm</code> <small>.btn-sm</small></th>
+                            <th>default</th>
+                            <th><code>--md</code> <small>.btn-md</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <th><code>.btn</code><small>Same look as --primary</small></th>
+                                <td><button class="btn btn--sm" type="button">Button</button></td><td><button class="btn" type="button">Button</button></td><td><button class="btn btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn--primary</code><small>Default</small></th>
+                                <td><button class="btn btn--primary btn--sm" type="button">Button</button></td><td><button class="btn btn--primary" type="button">Button</button></td><td><button class="btn btn--primary btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn--primary-grey</code><small>Grey background</small></th>
+                                <td><button class="btn btn--primary btn--primary-grey btn--sm" type="button">Button</button></td><td><button class="btn btn--primary btn--primary-grey" type="button">Button</button></td><td><button class="btn btn--primary btn--primary-grey btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn--primary-white</code><small>For dark backgrounds</small></th>
+                                <td class="is-dark"><button class="btn btn--primary-white btn--sm" type="button">Button</button></td><td class="is-dark"><button class="btn btn--primary-white" type="button">Button</button></td><td class="is-dark"><button class="btn btn--primary-white btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn--secondary</code><small>Outline</small></th>
+                                <td><button class="btn btn--secondary btn--sm" type="button">Button</button></td><td><button class="btn btn--secondary" type="button">Button</button></td><td><button class="btn btn--secondary btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn--light</code><small>Light grey, 10px radius</small></th>
+                                <td><button class="btn btn--light btn--sm" type="button">Button</button></td><td><button class="btn btn--light" type="button">Button</button></td><td><button class="btn btn--light btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn--link</code><small>Underlined text</small></th>
+                                <td><button class="btn btn--link btn--sm" type="button">Button</button></td><td><button class="btn btn--link" type="button">Button</button></td><td><button class="btn btn--link btn--md" type="button">Button</button></td>
+                            </tr>
+                            <tr>
+                                <th><code>.btn-reset</code><small>Resets button styles</small></th>
+                                <td><button class="btn btn-reset btn--sm" type="button">Button</button></td><td><button class="btn btn-reset" type="button">Button</button></td><td><button class="btn btn-reset btn--md" type="button">Button</button></td>
+                            </tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Base class is always <code>.btn</code> (works on <code>button</code> and <code>a</code>). The variant class is added on top; sizes combine with every variant. <code>.btn</code> alone already gets the primary look.</p>
+
+                <h5 class="ui-title">Tags, icons and states</h5>
+                <table class="ui-table">
+                    <thead>
+                        <tr><th>Case</th><th>Preview</th><th>Markup</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Link as button</th>
+                            <td><a class="btn btn--primary" href="#">Link button</a></td>
+                            <td><code>&lt;a class="btn btn--primary" href="#"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <th>With icon</th>
+                            <td><button class="btn btn--primary" type="button">Shop Now {{> e-icon icon="arrow" }}</button></td>
+                            <td><code>&lt;i class="e-icon e-icon-arrow"&gt;&lt;/i&gt;</code> inside the button (partial <code>e-icon</code>)</td>
+                        </tr>
+                        <tr>
+                            <th>Icon, small secondary</th>
+                            <td><button class="btn btn--secondary btn--sm" type="button">Ask us {{> e-icon icon="arrow" }}</button></td>
+                            <td><code>btn btn--secondary btn--sm</code></td>
+                        </tr>
+                        <tr>
+                            <th>Icon on dark</th>
+                            <td class="is-dark"><button class="btn btn--primary-white" type="button">Shop Now {{> e-icon icon="arrow" }}</button></td>
+                            <td><code>btn btn--primary-white</code></td>
+                        </tr>
+                        <tr>
+                            <th>Disabled</th>
+                            <td><button class="btn btn--primary" type="button" disabled>Disabled</button></td>
+                            <td>no dedicated styles</td>
+                        </tr>
+                        <tr>
+                            <th>Close</th>
+                            <td><button class="btn-close" type="button">{{> e-icon icon="cross" }}</button></td>
+                            <td><code>btn-close</code></td>
+                        </tr>
+                        <tr>
+                            <th>Order button</th>
+                            <td style="width: 360px;">{{> c-order-button }}</td>
+                            <td>partial <code>c-order-button</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h5 class="ui-title">Customizing with CSS variables</h5>
+                <table class="ui-table">
+                    <thead>
+                        <tr><th>Variables</th><th>Preview</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th><code>--btn-primary-bg</code> <code>--btn-primary-color</code></th>
+                            <td><button class="btn" type="button" style="--btn-primary-bg: #ff5429; --btn-primary-color: #fff;">Custom color</button></td>
+                        </tr>
+                        <tr>
+                            <th><code>--btn-primary-bg-hover</code> <code>--btn-primary-color-hover</code></th>
+                            <td><button class="btn" type="button" style="--btn-primary-bg-hover: #ff5429; --btn-primary-color-hover: #fff;">Hover me</button></td>
+                        </tr>
+                        <tr>
+                            <th><code>--btn-padding</code> <code>--btn-font-size</code></th>
+                            <td><button class="btn" type="button" style="--btn-padding: 12px 24px; --btn-font-size: 16px;">Custom size</button></td>
+                        </tr>
+                        <tr>
+                            <th><code>--btn-secondary-border-color</code> <code>--btn-secondary-bg-hover</code></th>
+                            <td><button class="btn btn--secondary" type="button" style="--btn-secondary-border-color: #ff5429; --btn-secondary-bg-hover: #ffeeea;">Custom border</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="tab-pane fade show active" id="components">
-                {{> c-accordion
-                    list='[
-                        {
-                            "summary": "Question title 1",
-                            "text": "<p>Answer text to question 1</p>"
-                        },
-                        {
-                            "summary": "Question title 2",
-                            "text": "<p>Answer text to question 1</p>"
-                        },
-                        {
-                            "summary": "Question title 3",
-                            "text": "<p>Answer text to question 1</p>"
-                        }
-                    ]'
-                }}
-                {{> c-accordion
-                    type="lines"
-                    list='[
-                        {
-                            "summary": "Question title 1",
-                            "text": "<p>Answer text to question 1</p>"
-                        },
-                        {
-                            "summary": "Question title 2",
-                            "text": "<p>Answer text to question 1</p>"
-                        },
-                        {
-                            "summary": "Question title 3",
-                            "text": "<p>Answer text to question 1</p>"
-                        }
-                    ]'
-                }}
-                <br />
-                {{> c-rating value="4.7" }}
-                <br />
-                {{> c-order-button }}
-                <br />
-                {{> c-certified-box }}
-                <br />
-                {{> c-next-batch }}
-                <br />
-                {{> c-percent-list
-                    list='[
-                        {
-                            "value": 100,
-                            "text": "experienced visibly thicker hair strands after 16 weeks"
-                        },
-                        {
-                            "value": 90,
-                            "text": "showed improvements in hair density and thickness"
-                        },
-                        {
-                            "value": 90,
-                            "text": "saw a visible increase in active growth-phase hairs"
-                        }
-                    ]'
-                }}
-                <br />
-                {{> c-special-offer }}
-                <br />
-                {{> c-limited-offer }}
-                <br />
-                {{> c-save-up }}
-                <br />
-                {{> c-exclusive-offer
-                    tag-first="Exclusive"
-                    tag-second="Offer"
-                    img-first="assets/images/clean-water/ledBox.webp"
-                    img-second="assets/images/clean-water/ndBox.webp"
-                    text="Buy the Q-Rejuvalight Pro and get the Neck &amp; Décolletage LED Device for FREE (value $299)"
-                }}
-                <br />
-                {{> c-clinic-metrics
-                    title="Clinically Proven Results"
-                    list='[
-                        {
-                            "value": "90%",
-                            "text": "agree skin feels hydrated"
-                        },
-                        {
-                            "value": "83%",
-                            "text": "agree skin feels softer"
-                        },
-                        {
-                            "value": "70%",
-                            "text": "agree hair feels less frizzy"
-                        }
-                    ]'
-                }}
-                <br />
-                {{> c-moneyback }}
-                <br />
-                {{> c-lifetime-warranty }}
-                <br />
-                <h4>Videos wistia</h4>
-                <div style="display: inline-block; width: 300px;">
-                    {{> c-wistia
-                        id="jlz3itwzrb"
-                        inline=true
-                    }}
-                </div>
-                <div style="display: inline-block; width: 300px;">
-                    {{> c-wistia
-                        id="jlz3itwzrb"
-                        inline=true
-                        autoplay=true
-                    }}
-                </div>
-                <div style="display: inline-block; width: 300px;">
-                    {{> c-wistia
-                        id="jlz3itwzrb"
-                        inert=true
-                    }}
-                </div>
-                <br />
-                <div style="display: inline-block; width: 604px;">
-                    {{> c-wistia
-                        id="8kldazu7xg"
-                        play-content='
-                            <div class="e-pill-badge e-pill-badge--sm">
-                                <i class="e-icon e-icon-watch"></i>
-                                <div><strong>Watch:</strong> Doctorly</div>
+
+                {{!-- c-accordion --}}
+                <section class="ui-el">
+                    <h5>c-accordion</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-accordion
+                                    name="ui-guide-accordion-1"
+                                    list='[
+                                        {"summary": "Question title 1", "text": "<p>Answer text to question 1</p>"},
+                                        {"summary": "Question title 2", "text": "<p>Answer text to question 2</p>"}
+                                    ]'
+                                }}
                             </div>
-                        '
-                    }}
+                            <figcaption>default (list: summary, text; name groups items)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-accordion
+                                    type="lines"
+                                    list='[
+                                        {"summary": "Question title 1", "text": "<p>Answer text to question 1</p>"},
+                                        {"summary": "Question title 2", "text": "<p>Answer text to question 2</p>"}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>type="lines" → --lines</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-accordion
+                                    arrow-icon=true
+                                    list='[
+                                        {"summary": "Question title 1", "text": "<p>Answer text to question 1</p>"},
+                                        {"summary": "Question title 2", "text": "<p>Answer text to question 2</p>"}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>arrow-icon → --arrow-icon</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-accordion
+                                    list='[
+                                        {"icon": "shield", "summary": "Item with icon", "text": "<p>Answer text</p>"}
+                                    ]'
+                                    button=true
+                                    link="See all questions"
+                                }}
+                            </div>
+                            <figcaption>item icon, button (__ask-us), link (__link)</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Also supports <code>devices-technical=true</code> (hardcoded technical specifications item with tabs).</p>
+                </section>
+
+                {{!-- c-faq-accordion --}}
+                <section class="ui-el">
+                    <h5>c-faq-accordion</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-faq-accordion">
+                                    <div class="c-faq-accordion__list">
+                                        <details class="c-faq-accordion__item">
+                                            <summary class="c-faq-accordion__summary">When can I expect my package?</summary>
+                                            <div class="c-faq-accordion__content">
+                                                <p>We are working closely with our partners to ensure your order reaches you as quickly as possible.</p>
+                                            </div>
+                                        </details>
+                                        <details class="c-faq-accordion__item">
+                                            <summary class="c-faq-accordion__summary">How do I track my order?</summary>
+                                            <div class="c-faq-accordion__content">
+                                                <p>You will receive a tracking link by email once your order ships.</p>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default (details / summary)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-faq-accordion c-faq-accordion--lines">
+                                    <div class="c-faq-accordion__list">
+                                        <details class="c-faq-accordion__item">
+                                            <summary class="c-faq-accordion__summary">When can I expect my package?</summary>
+                                            <div class="c-faq-accordion__content">
+                                                <p>We are working closely with our partners to ensure your order reaches you as quickly as possible.</p>
+                                            </div>
+                                        </details>
+                                    </div>
+                                    <div class="c-faq-accordion__ask-us">Don't see your question? <a href="#" class="btn btn-sm btn--secondary">Ask us <i class="e-icon e-icon-arrow"></i></a></div>
+                                </div>
+                            </div>
+                            <figcaption>--lines + __ask-us</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">The FAQs page still uses the old version: <code>__header button</code> + <code>__body.collapse</code> (Bootstrap collapse).</p>
+                </section>
+
+                {{!-- c-advisory-collapse-card --}}
+                <section class="ui-el">
+                    <h5>c-advisory-collapse-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 320px;">
+                                <div class="c-advisory-collapse-card">
+                                    <article data-bs-toggle="collapse" data-bs-target="#ui-guide-advisory">
+                                        <picture>
+                                            <img src="assets/images/board-advisory/shah.webp" alt="Dr. Shah" />
+                                        </picture>
+                                        <p>Dr. Shah <br /> Board Certified Dermatologist</p>
+                                    </article>
+                                    <div class="collapse" id="ui-guide-advisory">
+                                        <p>“I like that they put a lot of R&amp;D into their products.”</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default (article + .collapse)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-rating --}}
+                <section class="ui-el">
+                    <h5>c-rating</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> c-rating value="4.7" }}</div>
+                            <figcaption>default (--bg), value</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-rating value="4.7" light=true }}</div>
+                            <figcaption>light (no --bg)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-rating value="4.7" reviews="1,375" }}</div>
+                            <figcaption>reviews</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-rating value="4.8" light=true custom="Rated" }}</div>
+                            <figcaption>custom text</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-rating value="4.7" trustpilot=true }}</div>
+                            <figcaption>trustpilot → --trustpilot</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-order-button --}}
+                <section class="ui-el">
+                    <h5>c-order-button</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 360px;">{{> c-order-button }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 360px;">{{> c-order-button button="Shop Now" arrow=true hide-pay=true }}</div>
+                            <figcaption>button, arrow, hide-pay</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 360px;">{{> c-order-button subscription-details=true pay-options-label="Buy Now, Pay Later available" }}</div>
+                            <figcaption>subscription-details, pay-options-label</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-buy-block --}}
+                <section class="ui-el">
+                    <h5>c-buy-block</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 400px;">
+                                <div class="c-buy-block">
+                                    {{> c-order-button }}
+                                    <div class="c-buy-block__payment-logos">
+                                        <img src="assets/images/full-payment-logos.svg" alt="Full payment logos" />
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default + __payment-logos</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-certified-box --}}
+                <section class="ui-el">
+                    <h5>c-certified-box</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 400px;">{{> c-certified-box }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 400px;">{{> c-certified-box link="Learn more" }}</div>
+                            <figcaption>link</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 400px;">{{> c-certified-box custom="<strong>Custom</strong> text goes here." }}</div>
+                            <figcaption>custom (HTML)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--dark" style="width: 400px;">
+                                <div class="c-certified-box c-certified-box--light">
+                                    <ul>
+                                        <li><img src="assets/images/targeted-patches/crt-1.webp" alt="Certified Dermatologists" /></li>
+                                        <li><img src="assets/images/targeted-patches/crt-2.webp" alt="Certified Dermatologists" /></li>
+                                        <li>+50</li>
+                                    </ul>
+                                    <p><strong>50+ Board Certified Dermatologists</strong> recommend Qure to their patients.</p>
+                                </div>
+                            </div>
+                            <figcaption>--light (raw HTML, no partial modifier)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-approved-by --}}
+                <section class="ui-el">
+                    <h5>c-approved-by</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> c-approved-by }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-approved-by secondary=true }}</div>
+                            <figcaption>secondary → --secondary</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-approved-by custom="<p>Custom <strong>text</strong></p>" }}</div>
+                            <figcaption>custom (HTML)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-next-batch --}}
+                <section class="ui-el">
+                    <h5>c-next-batch</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 400px;">{{> c-next-batch }}</div>
+                            <figcaption>default (static placeholders)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-percent-list --}}
+                <section class="ui-el">
+                    <h5>c-percent-list</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-percent-list
+                                    list='[
+                                        {"value": 100, "text": "experienced visibly thicker hair strands after 16 weeks"},
+                                        {"value": 90, "text": "showed improvements in hair density and thickness"}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>default (list: value, text, label)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-percent-list
+                                    columns=true
+                                    list='[
+                                        {"value": 83, "text": "say skin feels softer"},
+                                        {"value": 90, "text": "say skin feels hydrated"},
+                                        {"value": 70, "label": "4.5", "text": "custom label"}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>columns → --columns</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-clinic-metrics --}}
+                <section class="ui-el">
+                    <h5>c-clinic-metrics</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-clinic-metrics
+                                    title="Clinically Proven Results"
+                                    list='[
+                                        {"value": "90%", "text": "agree skin feels hydrated"},
+                                        {"value": "83%", "text": "agree skin feels softer"},
+                                        {"value": "70%", "text": "agree hair feels less frizzy"}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>default (title, list: value, text)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-special-offer --}}
+                <section class="ui-el">
+                    <h5>c-special-offer</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-special-offer }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-special-offer bf=true label="Black Friday" pill-text="Save 57%" }}</div>
+                            <figcaption>bf → --bf, label, pill-text</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-special-offer hide-label=true hide-price=true }}</div>
+                            <figcaption>hide-label, hide-price</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-limited-offer / c-save-up / c-save-up-bf --}}
+                <section class="ui-el">
+                    <h5>c-limited-offer</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-limited-offer }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-save-up</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-save-up }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-save-up-bf</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-save-up-bf
+                                    link="#"
+                                    tag="limited time"
+                                    image="assets/images/bf-26/bg-limited-time-offer.webp"
+                                    title="UP TO 57% OFF"
+                                    text="Save with Black Friday bundle deals"
+                                }}
+                            </div>
+                            <figcaption>default (link, tag, image, title, text)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-exclusive-offer --}}
+                <section class="ui-el">
+                    <h5>c-exclusive-offer</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-exclusive-offer
+                                    tag-first="Exclusive"
+                                    tag-second="Offer"
+                                    img-first="assets/images/clean-water/ledBox.webp"
+                                    img-second="assets/images/clean-water/ndBox.webp"
+                                    text="Buy the Q-Rejuvalight Pro and get the Neck &amp; Décolletage LED Device for FREE (value $299)"
+                                }}
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-exclusive-offer
+                                    new=true
+                                    tag-first="Exclusive"
+                                    tag-second="Offer"
+                                    img-first="assets/images/clean-water/ledBox.webp"
+                                    img-second="assets/images/clean-water/ndBox.webp"
+                                    text="Buy the Q-Rejuvalight Pro and get the Neck &amp; Décolletage LED Device for FREE (value $299)"
+                                }}
+                            </div>
+                            <figcaption>new → --new</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-complete-bundle / c-bundle-included / c-blue-serum-free / c-gift-included-box --}}
+                <section class="ui-el">
+                    <h5>c-complete-bundle</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-complete-bundle
+                                    title="THE COMPLETE FILTER BUNDLE"
+                                    text="Order today &amp; Receive a FREE Faucet Filter with your Shower Filter (value $129)"
+                                    first-image="assets/images/clean-water/qure_water_img1.webp"
+                                    second-image="assets/images/clean-water/qure_water_img2.webp"
+                                }}
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-complete-bundle
+                                    title="THE COMPLETE FILTER BUNDLE"
+                                    text="Order today &amp; Receive a FREE Faucet Filter with your Shower Filter (value $129)"
+                                    first-image="assets/images/clean-water/qure_water_img1.webp"
+                                    second-image="assets/images/clean-water/qure_water_img2.webp"
+                                    progress-bar=true
+                                }}
+                            </div>
+                            <figcaption>progress-bar</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-bundle-included</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-bundle-included">
+                                    <p class="c-bundle-included__tile">What’s Included</p>
+                                    <ul class="c-bundle-included__list">
+                                        <li>
+                                            <a href="#">
+                                                <img src="assets/images/led-mask-offer/q-rejuvalight.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                                            </a>
+                                            <div>
+                                                <a href="#">Q-Rejuvalight Pro LED Mask</a>
+                                                <small>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</small>
+                                                {{> e-price current="$399.00" }}
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="assets/images/led-mask-offer/led-device.webp" alt="Neck & Décolletage LED Device" />
+                                            </a>
+                                            <div>
+                                                <a href="#">Neck &amp; Décolletage LED Device</a>
+                                                <small>Clinically proven to smooth and firm where aging shows first.</small>
+                                                {{> e-price current="FREE" highlight=true }}
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                    <div class="c-bundle-included__amount">
+                                        <p>INSTANT SAVINGS: $299</p>
+                                        {{> e-price current="$399.00" highlight=true }}
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default (__tile, __list, __amount)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-blue-serum-free</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-blue-serum-free
+                                    title="FREE Blue+ Face Serum With <br />Q-Rejuvalight Pro LED Mask"
+                                    value="Value $79"
+                                    note="No code needed. Auto added in cart."
+                                    image="assets/images/blue-plus-face-serum/blue-free.webp"
+                                    image-mob="assets/images/blue-plus-face-serum/blue-free-mob.webp"
+                                    image-alt="Blue+ Face Serum"
+                                }}
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-gift-included-box</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-gift-included-box
+                                    badge="Gift included"
+                                    image="sections/treatment/images/scalp-hydration-small.png"
+                                    title="Hair Renewal Serum"
+                                    description="Helps provide lasting scalp hydration"
+                                    label="First bottle Free"
+                                    price="<del>$79.00</del> Free"
+                                }}
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-moneyback / c-lifetime-warranty --}}
+                <section class="ui-el">
+                    <h5>c-moneyback</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-moneyback }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-moneyback title="Custom title" text="Custom <strong>text</strong>." }}</div>
+                            <figcaption>img, title, text (HTML)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-lifetime-warranty</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">{{> c-lifetime-warranty }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-lifetime-warranty c-lifetime-warranty--vertical">
+                                    {{> e-icon icon="verified-shield" }}
+                                    <p>Covered by our Lifetime Warranty <br /> Your purchase is protected for life</p>
+                                </div>
+                            </div>
+                            <figcaption>--vertical (raw HTML, no partial modifier)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-benefit-grid --}}
+                <section class="ui-el">
+                    <h5>c-benefit-grid</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-benefit-grid
+                                    list='[
+                                        {"icon": "fine-lines", "title": "The Color Story", "text": "That signature blue is the ingredient itself."},
+                                        {"icon": "verified-shield", "title": "Primes skin for LED", "text": "Helps skin respond more effectively to every LED session."}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>default (list: icon, title, text)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-benefit-grid
+                                    sm=true
+                                    list='[
+                                        {"icon": "fine-lines", "title": "The Color Story", "text": "That signature blue is the ingredient itself."},
+                                        {"icon": "verified-shield", "title": "Primes skin for LED", "text": "Helps skin respond more effectively to every LED session."}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>sm → --sm</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-app-stores --}}
+                <section class="ui-el">
+                    <h5>c-app-stores</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">{{> c-app-stores }}</div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo">{{> c-app-stores row=true }}</div>
+                            <figcaption>row → --row</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-jump-to --}}
+                <section class="ui-el">
+                    <h5>c-jump-to</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-jump-to
+                                    list='[
+                                        {"id": "improve_skin", "name": "The Results"},
+                                        {"id": "crystal_clear", "name": "Reviews"},
+                                        {"id": "easy_steps", "name": "How To Use"}
+                                    ]'
+                                }}
+                            </div>
+                            <figcaption>default (list: id, name)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-info --}}
+                <section class="ui-el">
+                    <h5>c-info</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="min-width: 200px; min-height: 80px;">{{> c-info content="Tooltip <strong>content</strong>" }}</div>
+                            <figcaption>default (content, HTML; tooltip on hover)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-info-bar / c-note / c-marked-list / c-hr-with-text --}}
+                <section class="ui-el">
+                    <h5>c-info-bar</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-info-bar"><strong>Limited Time Offer:</strong> Save Up to 70%</div></div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-info-bar c-info-bar--fill"><strong>Limited Time Offer:</strong> Save Up to 70%</div></div>
+                            <figcaption>--fill</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-info-bar c-info-bar--alert"><strong>Limited Time Offer:</strong> Save Up to 70%</div></div>
+                            <figcaption>--alert</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-note</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-note"><p><strong>Tip:</strong> You should hear 2 clicks when the filter is correctly installed.</p></div></div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-note c-note--info"><p>Remember to <strong>add a personal touch</strong> to the messaging.</p></div></div>
+                            <figcaption>--info</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-note c-note--warning"><p><strong>Light sensitivity test:</strong> We recommend performing a test 24 hours before first use.</p></div></div>
+                            <figcaption>--warning</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-note c-note--triangle">
+                                    <h6>No Compliments in 70 Days? Full Refund.</h6>
+                                    <p>If your skin doesn't look &amp; feel noticeably better, we'll give you every penny back.</p>
+                                </div>
+                            </div>
+                            <figcaption>--triangle</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-marked-list</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="c-marked-list">
+                                    <li>5-minute treatment</li>
+                                    <li>No appointments or travel</li>
+                                </ul>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="c-marked-list c-marked-list--fill">
+                                    <li>Fragrance-free</li>
+                                    <li>Silicone-free</li>
+                                </ul>
+                            </div>
+                            <figcaption>--fill</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-hr-with-text</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide"><div class="c-hr-with-text"><span>Or</span></div></div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- c-pills-group / c-pills-nav / c-pill-tabs / c-selector-switcher --}}
+                <section class="ui-el">
+                    <h5>c-pills-group</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="c-pills-group">
+                                    <li class="e-pill-badge">Pairs With Q-Renew Helmet</li>
+                                    <li class="e-pill-badge">Feel Confident</li>
+                                    <li class="e-pill-badge">Dermatologist Tested</li>
+                                </ul>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-pills-nav</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <ul class="c-pills-nav">
+                                    <li><a href="#">Micro-Infusion System</a></li>
+                                    <li><a href="#" class="active">Q-Rejuvalight Pro</a></li>
+                                    <li><a href="#">All-In-One Serum</a></li>
+                                </ul>
+                            </div>
+                            <figcaption>default (a.active)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-pill-tabs</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-pill-tabs">
+                                    <ul class="c-pill-tabs__buttons e-pill-tabs" role="tablist">
+                                        <li>
+                                            <button class="active" type="button" data-bs-toggle="tab" data-bs-target="#ui-guide-pill-tab-1">Before</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" data-bs-toggle="tab" data-bs-target="#ui-guide-pill-tab-2">After</button>
+                                        </li>
+                                    </ul>
+                                    <div class="c-pill-tabs__pane show" id="ui-guide-pill-tab-1">
+                                        <img src="assets/images/improve-skin/graph_before.webp" alt="Before" />
+                                    </div>
+                                    <div class="c-pill-tabs__pane" id="ui-guide-pill-tab-2">
+                                        <img src="assets/images/improve-skin/graph_after.webp" alt="After" />
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default (__buttons + __pane)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-selector-switcher</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-selector-switcher">
+                                    <ul class="e-pill-tabs e-pill-tabs--selector">
+                                        <li><label><input name="ui-guide-sw-1" type="radio" />One time purchase</label></li>
+                                        <li><label><input name="ui-guide-sw-1" type="radio" checked />Subscribe &amp; Save</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-selector-switcher c-selector-switcher--text">
+                                    <ul class="e-pill-tabs e-pill-tabs--selector">
+                                        <li><label><input name="ui-guide-sw-2" type="radio" />One time purchase</label></li>
+                                        <li><label><input name="ui-guide-sw-2" type="radio" checked />Subscribe &amp; Save</label></li>
+                                    </ul>
+                                    <p>{{> e-icon icon="rotation-2" }} Auto-ships · Cancel anytime · No commitment</p>
+                                </div>
+                            </div>
+                            <figcaption>--text</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide ui-el__demo--dark">
+                                <div class="c-selector-switcher c-selector-switcher--dark">
+                                    <ul class="e-pill-tabs e-pill-tabs--selector">
+                                        <li><label><input name="ui-guide-sw-3" type="radio" />One time purchase</label></li>
+                                        <li><label><input name="ui-guide-sw-3" type="radio" checked />Subscribe &amp; Save</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <figcaption>--dark</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-optional-subscription</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                {{> c-optional-subscription
+                                    badge="Best Results Together"
+                                    product-image="assets/images/led-mask-offer/led-mask-smallmask.webp"
+                                    product-name="Q-Rejuvalight Pro LED Mask"
+                                    option="ui-subscription"
+                                    checked=true
+                                    sub-image="assets/images/blue-plus-face-serum/blue-plus-serum-small.webp"
+                                    sub-name="<strong>Subscribe</strong> Blue+ Face Serum"
+                                    sub-price="First bottle Free"
+                                    sub-old-price=true
+                                    sub-text="Every 2 months: Receive a new Blue+ Serum · <a href=\"#\">Cancel anytime</a>"
+                                    pay-today=true
+                                }}
+                            </div>
+                            <figcaption>default (+ pay-today)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- cards --}}
+                <section class="ui-el">
+                    <h5>c-product-tile</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">
+                                {{> c-product-tile
+                                    image="assets/images/top-products/q-rejuvalight-pro-facewear.webp"
+                                    image-hover="assets/images/top-products/q-rejuvalight-pro-facewear-hover.webp"
+                                    rating-value="4.6"
+                                    reviews="1,375"
+                                    name="Q-Rejuvalight Pro Facewear"
+                                    desc="FDA-cleared LED mask"
+                                    bestseller=true
+                                    price-strikethrough-old=true
+                                    button="Buy Now"
+                                }}
+                            </div>
+                            <figcaption>bestseller, price-strikethrough-old, reviews, desc, button</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">
+                                {{> c-product-tile
+                                    image="assets/images/top-products/q-rejuvalight-pro-facewear.webp"
+                                    name="Q-Rejuvalight Pro Facewear"
+                                    day=true
+                                    night=true
+                                    badge="New"
+                                    hide-price=true
+                                }}
+                            </div>
+                            <figcaption>day / night / weekly, badge, badge-blue, hsa-fsa, hide-price</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-upsell-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">
+                                {{> c-upsell-card
+                                    image="assets/images/blue-plus-face-serum/bundle-thumbnail.webp"
+                                    name="Qure LED Routine Set"
+                                    text="Visibly reduce redness and signs of aging with our Q-Rejuvalight Pro LED Mask and Blue+ Face Serum duo."
+                                }}
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-bundle-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 360px;">
+                                {{#> c-bundle-card }}
+                                    <div class="c-bundle-card__image">
+                                        <img src="assets/images/offer-bundle/Skin_Confidence_System.jpg" alt="Skin Confidence System" />
+                                    </div>
+                                    <article class="c-bundle-card__main">
+                                        {{> c-rating value="4.8" light=true custom="Rated" }}
+                                        <h6>Skin Confidence System</h6>
+                                        {{> e-price current="$329.00" old="" highlight=true }}
+                                    </article>
+                                    {{> c-order-button pay-options-label="Buy Now, Pay Later available" }}
+                                {{/c-bundle-card }}
+                            </div>
+                            <figcaption>block partial (__image, __main + c-order-button)</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note"><code>_c-bundle-card-old.scss</code> is not used anywhere (legacy).</p>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-suggest-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 400px;">
+                                {{#> c-suggest-card
+                                    title="Q-Rejuvalight Pro Facewear"
+                                    image="assets/images/skincare-plan/q-rej-product.webp"
+                                    image-hover="assets/images/skincare-plan/hov_img_1.webp"
+                                    results="assets/images/skincare-plan/transform_aging_97.webp"
+                                    desc="A hands-free LED light therapy mask that uses clinically proven wavelengths."
+                                    video="jwKN4SH4yz8"
+                                    quot-strong="I noticed results straight away!"
+                                    quot-small="Now I can’t go a day without the mask."
+                                    id="uiGuideSuggestCard"
+                                }}
+                                    <ul class="c-marked-list">
+                                        <li>FDA-cleared device designed to treat wrinkles.</li>
+                                        <li>Customizable treatment on 5 facial areas.</li>
+                                    </ul>
+                                {{/c-suggest-card }}
+                            </div>
+                            <figcaption>block partial; results, added=true, doctor-review=true</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-cart-tile</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 420px;">
+                                <div class="c-cart-tile">
+                                    <a href="#" class="c-cart-tile__image">
+                                        <img src="assets/images/pd-2.webp" alt="Micro-Infusion 1 Month Bundle" />
+                                    </a>
+                                    <h2 class="c-cart-tile__name"><a href="#">Micro-Infusion 1 Month Bundle (Hydra-Soothing)</a></h2>
+                                    <div class="c-cart-tile__reviews">
+                                        <div class="e-rating-stars" style="--rating: 4.5;"></div>
+                                        <a href="#">78 Reviews</a>
+                                    </div>
+                                    <div class="c-cart-tile__available">
+                                        <span class="e-checkmark"></span>
+                                        In stock. Shipped within 2 days
+                                    </div>
+                                    <div class="c-cart-tile__footer">
+                                        <div class="c-cart-tile__price">
+                                            <div class="e-price">
+                                                <div class="e-price__main">
+                                                    <div class="e-price__old">$199.00</div>
+                                                    <div class="e-price__current">$129.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-cart-tile__pcs">
+                                            <div class="e-quantity" data-e-quantity>
+                                                <button type="button" data-e-quantity-action="decrement"><i class="e-icon e-icon-minus"></i></button>
+                                                <input type="number" name="qty" value="1" min="0" readonly />
+                                                <button type="button" data-e-quantity-action="increment"><i class="e-icon e-icon-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="c-cart-tile__remove">
+                                        <i class="e-icon e-icon-cross"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <figcaption>default (also __pre-order)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-post-tile</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 340px;">
+                                {{> c-post-tile
+                                    image="assets/images/blogs/article_1.webp"
+                                    tag="Skincare"
+                                    date="Oct 20, 2025"
+                                    read="5 min read"
+                                    title="Does Drinking Water Help Clear Your Skin?"
+                                }}
+                            </div>
+                            <figcaption>default (image, tag, date, read, title)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-visual-compare-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 340px;">
+                                <div class="c-visual-compare-card">
+                                    <picture>
+                                        <img src="assets/images/after-before/q_rejuv_ab_1.webp" alt="Proven to visually improve" />
+                                    </picture>
+                                    <article>
+                                        <p>Proven to visually improve</p>
+                                        <span>Fine Lines &amp; Wrinkles</span>
+                                    </article>
+                                </div>
+                            </div>
+                            <figcaption>default (var --c-visual-compare-card-pill-color)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-testimonial-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 380px;">
+                                <div class="c-testimonial-card">
+                                    <div class="c-testimonial-card__header">
+                                        <div class="c-testimonial-card__header-name">Hendri H.</div>
+                                        <div class="c-testimonial-card__header-verified">
+                                            <span class="e-checkmark"></span>
+                                            Verified review
+                                        </div>
+                                        <div class="c-testimonial-card__header-date">10/20/25</div>
+                                    </div>
+                                    <div class="c-testimonial-card__content">
+                                        <div class="c-testimonial-card__content-rating">
+                                            <div class="e-rating-stars" style="--rating: 4.5;"></div>
+                                        </div>
+                                        <div class="c-testimonial-card__content-title">Loveeeeeeeeee</div>
+                                        <div class="c-testimonial-card__content-text">
+                                            <p>Easy to use and made my skin smoother. I can see the results already.</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="c-testimonial-card__footer">
+                                        <p><strong>Skin Type:</strong> Combination</p>
+                                        <p><strong>Skin Concerns:</strong> Fine Lines and Wrinkles</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-trusted-review-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 360px; align-items: flex-start;">
+                                {{> c-trusted-review-card
+                                    before="sections/trusted-reviews/images/c-trusted-review-card-before-1.webp"
+                                    after="sections/trusted-reviews/images/c-trusted-review-card-after-1.webp"
+                                    flag="assets/images/review-slider/america_f.webp"
+                                    user="Ellie"
+                                    user-letter="V"
+                                    title="My skin returned to life!"
+                                    text="I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE!"
+                                    link-img="assets/images/review-slider/micro-infusion-facial-system.webp"
+                                    link-text="Micro-Infusion Facial System"
+                                }}
+                            </div>
+                            <figcaption>default (link-img, link-text optional)</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">The <code>--short</code> modifier is used in raw HTML (see <code>page.micro-infusion-dark-spots</code>).</p>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-trusted-video-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 350px;">
+                                {{> c-trusted-video-card
+                                    id="rehxqby0fq"
+                                    thumbnail="sections/base-slider/images/trusted-review-thumb-1.webp"
+                                    followers="818k"
+                                    text="I like using this between my in-office treatments and it's easy to use, even for beginners."
+                                    dr="Dr. Lindsey Zubritsky"
+                                    position="Board-Certified Dermatologist"
+                                }}
+                            </div>
+                            <figcaption>default (Wistia id; url → plain .lvideo)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-customer-video-card</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">
+                                {{> c-customer-video-card
+                                    id="opfbh936fc"
+                                    thumbnail="sections/customers-video/images/customer-video-card-1.webp"
+                                    name="Ellie V."
+                                    text="I've seen a huge change in my skin. The dullness is gone."
+                                }}
+                            </div>
+                            <figcaption>default (Wistia id; url → plain .lvideo)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- ba slider --}}
+                <section class="ui-el">
+                    <h5>c-ba-slider</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 360px;">
+                                {{> c-ba-slider
+                                    before-image="sections/trusted-reviews/images/ba-slider-1-before.webp"
+                                    after-image="sections/trusted-reviews/images/ba-slider-1-after.webp"
+                                    before-label="Before"
+                                    after-label="After 4 weeks"
+                                    position="50"
+                                }}
+                            </div>
+                            <figcaption>default (position, labels, slider-label)</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- product components --}}
+                <section class="ui-el">
+                    <h5>c-product-components</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 640px;">
+                                <div class="c-product-components c-product-components--faucet-filter">
+                                    <img src="sections/why-it-works/images/faucet-filter.webp" alt="Qure faucet filter" />
+                                    <div class="e-component-pointer">
+                                        <hr />
+                                        <a href="#">Carbon Fiber Layer</a>
+                                    </div>
+                                    <div class="e-component-pointer e-component-pointer--vertical-reverse">
+                                        <hr />
+                                        <a href="#">PP Filter</a>
+                                    </div>
+                                    <div class="e-component-pointer">
+                                        <hr />
+                                        <a href="#">NOK Ultra Filter</a>
+                                    </div>
+                                    <div class="e-component-pointer e-component-pointer--vertical">
+                                        <hr />
+                                        <a href="#">ASP-Descaler</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>--faucet-filter</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 640px;">
+                                <div class="c-product-components c-product-components--shower-filter">
+                                    <img src="sections/why-it-works/images/shower-filter.webp" alt="Qure Shower Filter Refill" />
+                                    <div class="e-component-pointer">
+                                        <hr />
+                                        <a href="#">Carbon Fiber Layer</a>
+                                    </div>
+                                    <div class="e-component-pointer e-component-pointer--reverse">
+                                        <hr />
+                                        <a href="#">KDF-55 Layer</a>
+                                    </div>
+                                    <div class="e-component-pointer">
+                                        <hr />
+                                        <a href="#">Filter of Future</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>--shower-filter</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Also <code>--recovery-mask</code> (see <code>product.recovery-sheet-mask</code>).</p>
+                </section>
+
+                {{!-- misc --}}
+                <section class="ui-el">
+                    <h5>c-step-by-step</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-step-by-step">
+                                    <div class="c-step-by-step__title">Step-By-Step Guide</div>
+                                    <div class="c-step-by-step__list">
+                                        <ol>
+                                            <li>Ensure your hair is clean, dry, and worn down.</li>
+                                            <li>Unplug the helmet from the charging base.</li>
+                                            <li>Use the LCD screen to select your treatment zone.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-follow-us</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <div class="c-follow-us">
+                                    <h2>Follow Us</h2>
+                                    <ul>
+                                        <li><a href="#"><i class="e-icon e-icon-instagram"></i></a></li>
+                                        <li><a href="#"><i class="e-icon e-icon-facebook"></i></a></li>
+                                        <li><a href="#"><i class="e-icon e-icon-tiktok"></i></a></li>
+                                        <li><a href="#"><i class="e-icon e-icon-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-subscribe-form</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo ui-el__demo--wide">
+                                <div class="c-subscribe-form">
+                                    <p>Get the latest from Qure</p>
+                                    <form>
+                                        <input type="email" placeholder="Your Email" />
+                                        <button>{{> e-icon icon="arrow" }}</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <figcaption>default</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="ui-el">
+                    <h5>c-swiper</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 420px;">
+                                <div
+                                    class="c-swiper"
+                                    data-swiper='{
+                                        "slidesPerView": 1,
+                                        "spaceBetween": 16,
+                                        "pagination": {"el": "#components .c-swiper-demo-pagination", "clickable": true}
+                                    }'
+                                >
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_1.webp" alt="Slide 1" /></div>
+                                        <div class="swiper-slide"><img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_2.webp" alt="Slide 2" /></div>
+                                        <div class="swiper-slide"><img src="assets/images/micro-infusion-pdp/sunil_mi_pdp_3.webp" alt="Slide 3" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption>wrapper over Swiper, config in data-swiper (JSON); thumbs via data-swiper-thumbs + .c-swiper-thumbs</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                {{!-- dialog --}}
+                <section class="ui-el">
+                    <h5>c-dialog</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo">
+                                <button class="btn btn--primary" type="button" onclick="uiGuideDialog.showModal()">Open dialog</button>
+                                {{#> c-dialog id="uiGuideDialog" message="Dialog <strong>message</strong>" disclaimer="Dialog disclaimer text" }}
+                                    <p>Dialog content goes here.</p>
+                                {{/c-dialog }}
+                            </div>
+                            <figcaption>block partial (id, message, disclaimer, classes)</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Modifiers in SCSS: <code>--column</code>, <code>--klaviyo</code>, <code>--notify-available</code>, <code>--right-side</code> (via <code>classes</code>). <code>c-modal</code> is the legacy Bootstrap modal used by the layout (Wistia popup) and is not shown here.</p>
+                </section>
+
+                {{!-- wistia --}}
+                <section class="ui-el">
+                    <h5>c-wistia</h5>
+                    <div class="ui-el__grid">
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">{{> c-wistia id="jlz3itwzrb" inline=true }}</div>
+                            <figcaption>inline</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">{{> c-wistia id="jlz3itwzrb" inline=true autoplay=true }}</div>
+                            <figcaption>inline + autoplay → --is-playing</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">{{> c-wistia id="jlz3itwzrb" inert=true }}</div>
+                            <figcaption>popup (default), inert</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 604px;">
+                                {{> c-wistia
+                                    id="8kldazu7xg"
+                                    play-content='
+                                        <div class="e-pill-badge e-pill-badge--sm">
+                                            <i class="e-icon e-icon-watch"></i>
+                                            <div><strong>Watch:</strong> Doctorly</div>
+                                        </div>
+                                    '
+                                }}
+                            </div>
+                            <figcaption>play-content (HTML)</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 300px;">
+                                {{> c-wistia
+                                    id="rehxqby0fq"
+                                    custom='
+                                        <picture>
+                                            <img src="assets/images/trusted-video/home-trusted_img_1.webp" alt="Video thumbnail" />
+                                        </picture>
+                                    '
+                                }}
+                            </div>
+                            <figcaption>custom (HTML) → --custom; poster, aspect</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="ui-el__demo" style="width: 604px;">
+                                {{> c-wistia
+                                    id="wvoucso35j"
+                                    custom='
+                                        <a class="c-wistia__link" href="javascript:;">
+                                            <span>Watch the video</span>
+                                            <i class="e-icon e-icon-watch"></i>
+                                        </a>
+                                    '
+                                }}
+                            </div>
+                            <figcaption>custom link</figcaption>
+                        </figure>
+                    </div>
+                    <p class="ui-el__note">Also <code>hide-panel</code> (--always-playing), <code>custom-classes</code>. The legacy <code>c-wistia-embed-video</code> partial is not used in markup.</p>
+                </section>
+
+            </div>
+            <div class="tab-pane" id="helpers">
+
+                <h3 class="ui-section">Media queries</h3>
+                <div class="ui-live" data-live-width>
+                    <div class="ui-live__width"><strong data-live-px>0</strong>px</div>
+                    <ul class="ui-chips">
+                        <li data-live-mq="(max-width: 767px)"><strong>sm</strong><span>&le; 767px</span></li>
+                        <li data-live-mq="(max-width: 991px)"><strong>md</strong><span>&le; 991px</span></li>
+                        <li data-live-mq="(max-width: 1120px)"><strong>lg</strong><span>&le; 1120px</span></li>
+                        <li data-live-mq="(max-width: 1199px)"><strong>xl</strong><span>&le; 1199px</span></li>
+                        <li data-live-mq="(min-width: 768px)"><strong>min 768</strong><span>&ge; 768px</span></li>
+                        <li data-live-mq="(min-width: 992px)"><strong>min 992</strong><span>&ge; 992px</span></li>
+                        <li data-live-mq="(min-width: 1200px)"><strong>min 1200</strong><span>&ge; 1200px</span></li>
+                        <li data-live-mq="(min-width: 1400px)"><strong>min 1400</strong><span>&ge; 1400px</span></li>
+                        <li data-live-mq="(hover: hover)"><strong>hover</strong><span>mouse</span></li>
+                    </ul>
                 </div>
-                <div style="display: inline-block; width: 300px;">
-                    {{> c-wistia
-                        id="rehxqby0fq"
-                        custom='
-                            <picture>
-                                <img src="assets/images/trusted-video/home-trusted_img_1.webp" alt="Video thumbnaul text" />
-                            </picture>
-                        '
-                        _poster="assets/images/trusted-video/home-trusted_img_1.webp"
-                        _aspect="1.6"
-                    }}
-                </div>
-                <div style="display: inline-block; width: 604px;">
-                    {{> c-wistia
-                        id="wvoucso35j"
-                        custom='
-                            <a class="c-wistia__link" href="javascript:;">
-                                <span>Watch the video</span>
-                                <i class="e-icon e-icon-watch"></i>
-                            </a>
-                        '
-                    }}
-                </div>
-                <br /><br />
-                <div style="display: inline-block; width: 350px;">
-                    {{> c-trusted-video-card
-                        id="rehxqby0fq"
-                        thumbnail="sections/base-slider/images/trusted-review-thumb-1.webp"
-                        followers="818k"
-                        text="I like using this between my in-office treatments and it's easy to use, even for beginners."
-                        dr="Dr. Lindsey Zubritsky"
-                        position="Board-Certified Dermatologist"
-                    }}
-                </div>
-                <div style="display: inline-block; width: 360px; vertical-align: top;">
-                    {{> c-trusted-review-card
-                        before="sections/trusted-reviews/images/c-trusted-review-card-before-1.webp"
-                        after="sections/trusted-reviews/images/c-trusted-review-card-after-1.webp"
-                        flag="assets/images/review-slider/america_f.webp"
-                        user="Ellie"
-                        user-letter="V"
-                        title="My skin returned to life!"
-                        text="I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. I really see the change in my skin. Outstanding job QURE!"
-                        link-img="assets/images/review-slider/micro-infusion-facial-system.webp"
-                        link-text="Micro-Infusion Facial System"
-                    }}
-                </div>
+                <p class="ui-el__note">Live indicator: resize the window, active queries are highlighted.</p>
+
+                <h5 class="ui-title">SCSS mixins (<code>mixins/_media.scss</code>)</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Mixin</th><th>Media query</th><th>Meaning</th><th>Used</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>@include sm { … }</code></th><td><code>@media screen and (max-width: 767px)</code></td><td>Mobile</td><td>1016</td></tr>
+                        <tr><th><code>@include md { … }</code></th><td><code>@media screen and (max-width: 991px)</code></td><td>Tablet and below</td><td>270</td></tr>
+                        <tr><th><code>@include lg { … }</code></th><td><code>@media screen and (max-width: 1120px)</code></td><td>Small laptop and below</td><td>25</td></tr>
+                        <tr><th><code>@include xl { … }</code></th><td><code>@media screen and (max-width: 1199px)</code></td><td>Laptop and below</td><td>17</td></tr>
+                        <tr><th><code>@include hover { … }</code></th><td><code>@media (hover: hover) { &:hover { … } }</code></td><td>Hover only on devices with a mouse</td><td>25</td></tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Mixins are <strong>desktop-first</strong> (<code>max-width</code>). Use them via <code>@use "@root/mixins" as *;</code>.</p>
+
+                <h5 class="ui-title">Raw media queries in SCSS</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Query</th><th>Used</th><th>Note</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>min-width: 768px</code></th><td>45</td><td>Desktop-up overrides (mobile-first)</td></tr>
+                        <tr><th><code>min-width: 1200px</code></th><td>25</td><td>Wide desktop</td></tr>
+                        <tr><th><code>min-width: 1400px</code></th><td>19</td><td>Extra wide</td></tr>
+                        <tr><th><code>min-width: 992px</code></th><td>10</td><td>Tablet landscape and up</td></tr>
+                        <tr><th><code>max-width: 480px</code></th><td>7</td><td>Small phones</td></tr>
+                        <tr><th><code>max-width: 1400px</code></th><td>2</td><td>Below extra wide</td></tr>
+                        <tr><th><code>min-width: 576px</code></th><td>1</td><td>Used by <code>.fs-sm-*</code></td></tr>
+                        <tr><th><code>min-width: 1120px</code></th><td>1</td><td>One-off</td></tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Prefer the mixins; raw queries are mostly <code>min-width</code> overrides. Breakpoints are not fully unified across the project: mixins use 767 / 991 / 1120 / 1199, utilities (<code>.d-*</code>, <code>.fs-*</code>) use 576 / 768 / 992 / 1200 / 1400 with <code>min-width</code>.</p>
+
+                <h3 class="ui-section">Display</h3>
+                <h5 class="ui-title">Base classes <code>.d-{value}</code></h5>
+                <table class="ui-table">
+                    <thead><tr><th>Class</th><th>CSS</th><th>Demo</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>.d-none</code></th><td><code>display: none !important</code></td><td><span class="ui-note">element is hidden</span></td></tr>
+                        <tr><th><code>.d-inline</code></th><td><code>display: inline !important</code></td><td><div class="ui-box"><span class="ui-tag d-inline">A</span><span class="ui-tag d-inline">B</span></div></td></tr>
+                        <tr><th><code>.d-inline-block</code></th><td><code>display: inline-block !important</code></td><td><div class="ui-box"><span class="ui-tag d-inline-block">A</span><span class="ui-tag d-inline-block">B</span></div></td></tr>
+                        <tr><th><code>.d-block</code></th><td><code>display: block !important</code></td><td><div class="ui-box"><span class="ui-tag d-block">A</span><span class="ui-tag d-block">B</span></div></td></tr>
+                        <tr><th><code>.d-flex</code></th><td><code>display: flex !important</code></td><td><div class="ui-box"><div class="ui-tag-wrap d-flex"><span class="ui-tag">A</span><span class="ui-tag">B</span></div></div></td></tr>
+                        <tr><th><code>.d-grid</code></th><td><code>display: grid !important</code></td><td><div class="ui-box"><div class="ui-tag-wrap d-grid"><span class="ui-tag">A</span><span class="ui-tag">B</span></div></div></td></tr>
+                        <tr><th><code>.d-inline-flex</code></th><td><code>display: inline-flex !important</code></td><td><div class="ui-box"><div class="ui-tag-wrap d-inline-flex"><span class="ui-tag">A</span><span class="ui-tag">B</span></div></div></td></tr>
+                    </tbody>
+                </table>
+
+                <h5 class="ui-title">Responsive show / hide</h5>
+                <table class="ui-table">
+                    <thead><tr><th>Classes</th><th>Rule</th><th>Demo (resize the window)</th></tr></thead>
+                    <tbody>
+                        <tr><th><code>d-none</code></th><td>Hidden always</td><td><div class="ui-demo"><span class="ui-demo__item d-none">Visible</span></div></td></tr>
+                        <tr><th><code>d-block</code></th><td>Visible always</td><td><div class="ui-demo"><span class="ui-demo__item d-block">Visible</span></div></td></tr>
+                        <tr><th><code>d-none d-sm-block</code></th><td>Visible from 768px</td><td><div class="ui-demo"><span class="ui-demo__item d-none d-sm-block">Visible</span></div></td></tr>
+                        <tr><th><code>d-none d-md-block</code></th><td>Visible from 992px</td><td><div class="ui-demo"><span class="ui-demo__item d-none d-md-block">Visible</span></div></td></tr>
+                        <tr><th><code>d-none d-lg-block</code></th><td>Visible from 1200px</td><td><div class="ui-demo"><span class="ui-demo__item d-none d-lg-block">Visible</span></div></td></tr>
+                        <tr><th><code>d-sm-none</code></th><td>Hidden from 768px</td><td><div class="ui-demo"><span class="ui-demo__item d-sm-none">Visible</span></div></td></tr>
+                        <tr><th><code>d-md-none</code></th><td>Hidden from 992px</td><td><div class="ui-demo"><span class="ui-demo__item d-md-none">Visible</span></div></td></tr>
+                        <tr><th><code>d-lg-none</code></th><td>Hidden from 1200px</td><td><div class="ui-demo"><span class="ui-demo__item d-lg-none">Visible</span></div></td></tr>
+                    </tbody>
+                </table>
+                <p class="ui-el__note">Pattern: <code>.d-{breakpoint}-{value}</code> with breakpoints <code>sm</code> (&ge;768px), <code>md</code> (&ge;992px), <code>lg</code> (&ge;1200px) and values <code>none, inline, inline-block, block, flex, grid, inline-flex</code> (defined in <code>base/_display.scss</code>). Classes are mobile-first: <code>d-none d-md-block</code> hides below 992px and shows from 992px. Most used in markup: <code>d-none</code>, <code>d-lg-none</code> / <code>d-lg-block</code>, <code>d-sm-none</code> / <code>d-sm-block</code>.</p>
+
             </div>
         </div>
     </div>
@@ -359,5 +2591,53 @@
     <script src="assets/js/countdown.js" defer="defer"></script>
     <script src="assets/js/quantity.js" defer="defer"></script>
     <script src="assets/js/wistia.js" defer="defer"></script>
+    <script src="assets/js/swiper.js" defer="defer"></script>
+    <script src="assets/js/c-ba-slider.js" defer="defer"></script>
+    <script src="assets/js/dialog.js" defer="defer"></script>
+    <script>
+        // Live indicators for the Helpers tab (media queries and display classes)
+        (function () {
+            var px = document.querySelector("[data-live-px]");
+            var mqItems = [].slice.call(document.querySelectorAll("[data-live-mq]"));
+            function update() {
+                if (px) px.textContent = window.innerWidth;
+                mqItems.forEach(function (li) {
+                    li.classList.toggle("is-on", window.matchMedia(li.dataset.liveMq).matches);
+                });
+            }
+
+            window.addEventListener("resize", update);
+            window.addEventListener("load", update);
+            document.querySelectorAll('.nav-tabs [data-bs-toggle="tab"]').forEach(function (a) {
+                a.addEventListener("click", function () { setTimeout(update, 50); });
+            });
+            update();
+        })();
+
+    </script>
+    <script>
+        // Keeps the active top-level tab in the URL hash, so a page refresh reopens the same tab
+        (function () {
+            var links = document.querySelectorAll(".nav-tabs .nav-link");
+
+            links.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    history.replaceState(null, "", link.getAttribute("href"));
+                });
+            });
+
+            window.addEventListener("load", function () {
+                var link = document.querySelector('.nav-tabs .nav-link[href="' + location.hash + '"]');
+                if (link && !link.classList.contains("active")) link.click();
+                window.scrollTo(0, 0);
+            });
+        })();
+
+        // Plays the e-ingredient-info reveal for the demos (the real one lives in sections/experts-pick)
+        document.querySelectorAll(".e-ingredient-info").forEach(function (item) {
+            item.classList.add("e-ingredient-info--in-view");
+            item.querySelector(".e-ingredient-info__counter").textContent = item.dataset.percent + "%";
+        });
+    </script>
 </body>
 </html>
