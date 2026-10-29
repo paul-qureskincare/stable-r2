@@ -5,8 +5,76 @@
 @use "@elements/e-author" as *;
 @use "@elements/e-double-tag" as *;
 @use "@elements/e-quantity" as *;
+@use "@elements/e-auto-ships" as *;
+@use "@elements/e-bundle-tag" as *;
+@use "@elements/e-circle-percent" as *;
+@use "@elements/e-component-pointer" as *;
+@use "@elements/e-countdown" as *;
+@use "@elements/e-declaimer" as *;
+@use "@elements/e-discount-badge" as *;
+@use "@elements/e-expert-quote-tag" as *;
+@use "@elements/e-experts-quote-inline" as *;
+@use "@elements/e-features-list" as *;
+@use "@elements/e-get-free-shipping" as *;
+@use "@elements/e-hamburger" as *;
+@use "@elements/e-ingredient-info" as *;
+@use "@elements/e-pay-options" as *;
+@use "@elements/e-progress" as *;
+@use "@elements/e-quote-card" as *;
+@use "@elements/e-rating-stars" as *;
+@use "@elements/e-scale" as *;
+@use "@elements/e-short-features-list" as *;
+@use "@elements/e-steps-list" as *;
+@use "@elements/e-sticky-thumb-video" as *;
+@use "@elements/e-switcher" as *;
+@use "@elements/e-top-posts" as *;
 
 // Components
+@use "@components/c-accordion" as *;
+@use "@components/c-advisory-collapse-card" as *;
+@use "@components/c-app-stores" as *;
+@use "@components/c-approved-by" as *;
+@use "@components/c-ba-slider" as *;
+@use "@components/c-benefit-grid" as *;
+@use "@components/c-blue-serum-free" as *;
+@use "@components/c-bundle-card" as *;
+@use "@components/c-bundle-included" as *;
+@use "@components/c-buy-block" as *;
+@use "@components/c-cart-tile" as *;
+@use "@components/c-certified-box" as *;
+@use "@components/c-complete-bundle" as *;
+@use "@components/c-customer-video-card" as *;
+@use "@components/c-dialog" as *;
+@use "@components/c-faq-accordion" as *;
+@use "@components/c-follow-us" as *;
+@use "@components/c-gift-included-box" as *;
+@use "@components/c-hr-with-text" as *;
+@use "@components/c-info-bar" as *;
+@use "@components/c-info" as *;
+@use "@components/c-jump-to" as *;
+@use "@components/c-marked-list" as *;
+@use "@components/c-note" as *;
+@use "@components/c-optional-subscription" as *;
+@use "@components/c-order-button" as *;
+@use "@components/c-percent-list" as *;
+@use "@components/c-pill-tabs" as *;
+@use "@components/c-pills-group" as *;
+@use "@components/c-pills-nav" as *;
+@use "@components/c-post-tile" as *;
+@use "@components/c-product-components" as *;
+@use "@components/c-product-tile" as *;
+@use "@components/c-save-up-bf" as *;
+@use "@components/c-selector-switcher" as *;
+@use "@components/c-step-by-step" as *;
+@use "@components/c-subscribe-form" as *;
+@use "@components/c-suggest-card" as *;
+@use "@components/c-swiper" as *;
+@use "@components/c-testimonial-card" as *;
+@use "@components/c-trusted-video-card" as *;
+@use "@components/c-upsell-card" as *;
+@use "@components/c-visual-compare-card" as *;
+@use "@components/c-wistia-embed-video" as *;
+@use "@components/c-wistia" as *;
 @use "@components/c-rating" as *;
 @use "@components/c-next-batch" as *;
 @use "@components/c-special-offer" as *;
@@ -77,11 +145,272 @@
 }
 
 
-#elements {
-    &.show {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
+#elements,
+#components {
+    .ui-el {
+        padding: 24px 0;
+        border-bottom: 1px solid #dee2e6;
+
+        h5 {
+            margin-bottom: 16px;
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+        // .ui-el__grid
+        &__grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 32px;
+            align-items: flex-start;
+
+            figure {
+                margin: 0;
+            }
+
+            figcaption {
+                margin-top: 8px;
+                color: #8b8c8e;
+                font-family: monospace;
+                font-size: 13px;
+            }
+        }
+
+        // .ui-el__demo
+        &__demo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 40px;
+            padding: 16px;
+            border: 1px dashed #dee2e6;
+            border-radius: 8px;
+
+            // .ui-el__demo--wide
+            &--wide {
+                display: block;
+                width: 520px;
+                max-width: 100%;
+            }
+
+            // .ui-el__demo--dark
+            &--dark {
+                color: #fff;
+                background: #212428;
+            }
+
+            // .ui-el__demo--stage
+            &--stage {
+                display: block;
+                width: 240px;
+                height: 120px;
+            }
+        }
+
+        // .ui-el__note
+        &__note {
+            margin-top: 16px;
+            color: #8b8c8e;
+            font-size: 14px;
+        }
     }
+}
+
+.ui-title {
+    margin: 32px 0 12px;
+    font-size: 20px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.ui-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    font-size: 18px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+
+    th,
+    td {
+        padding: 16px 20px;
+        text-align: left;
+        vertical-align: middle;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    thead th {
+        color: #8b8c8e;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        background: #f6f6f7;
+    }
+
+    tbody tr:last-child {
+        th,
+        td {
+            border-bottom: 0;
+        }
+    }
+
+    tbody th {
+        font-weight: 500;
+    }
+
+    td + td,
+    th + th {
+        border-left: 1px solid #dee2e6;
+    }
+
+    small {
+        display: block;
+        margin-top: 4px;
+        color: #8b8c8e;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    code {
+        font-size: 16px;
+    }
+
+    .is-dark {
+        background: #212428;
+    }
+}
+
+.ui-specimen {
+    font-size: 18px;
+
+    h1, h2, h3, h4, h5, h6, p {
+        margin: 0;
+    }
+}
+
+.ui-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    li {
+        display: flex;
+        gap: 6px;
+        align-items: baseline;
+        padding: 6px 12px;
+        font-size: 14px;
+        border: 1px solid #dee2e6;
+        border-radius: 100px;
+    }
+
+    span {
+        color: #8b8c8e;
+        font-size: 12px;
+    }
+}
+
+.ui-swatch {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+}
+
+.ui-section {
+    margin: 40px 0 16px;
+    padding-bottom: 12px;
+    font-size: 28px;
+    border-bottom: 2px solid #212428;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.ui-live {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    align-items: center;
+    padding: 16px 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: #f6f6f7;
+
+    &__width {
+        font-size: 32px;
+        line-height: 1;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    .ui-chips li {
+        opacity: 0.45;
+        background: #fff;
+        transition: all 0.2s;
+
+        &.is-on {
+            opacity: 1;
+            border-color: #008763;
+            background: #c7e5db;
+        }
+    }
+}
+
+.ui-demo {
+    display: grid;
+    min-width: 160px;
+
+    &::before {
+        grid-area: 1 / 1;
+        padding: 4px 12px;
+        color: #8b8c8e;
+        font-size: 16px;
+        text-align: center;
+        border: 1px dashed #8b8c8e;
+        border-radius: 100px;
+        content: "hidden";
+    }
+
+    &__item {
+        grid-area: 1 / 1;
+        padding: 4px 12px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid #008763;
+        border-radius: 100px;
+        background: #008763;
+    }
+}
+
+.ui-box {
+    padding: 8px;
+    border: 1px dashed #8b8c8e;
+}
+
+.ui-tag {
+    padding: 2px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background: #c7e5db;
+}
+
+.ui-tag-wrap {
+    gap: 6px;
+}
+
+.ui-note {
+    color: #8b8c8e;
+    font-size: 16px;
 }
