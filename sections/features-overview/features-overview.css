@@ -308,10 +308,10 @@
   --top: 67%;
   width: 65%;
 }
-.features-overview .c-product-components--mi-hair {
+.features-overview .c-product-components--mi-hair,.features-overview .c-product-components--mi-pro {
   container-type: inline-size;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer {
+.features-overview .c-product-components--mi-hair .e-component-pointer,.features-overview .c-product-components--mi-pro .e-component-pointer {
   --left: auto;
   --line-size: 100%;
   right: 0;
@@ -322,34 +322,28 @@
   text-align: right;
   opacity: 1;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:not(.e-component-pointer--reverse) {
+.features-overview .c-product-components--mi-hair .e-component-pointer:not(.e-component-pointer--reverse),.features-overview .c-product-components--mi-pro .e-component-pointer:not(.e-component-pointer--reverse) {
   --left: 0;
   right: auto;
   grid-template-columns: 1fr 24px;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:not(.e-component-pointer--reverse):before {
+.features-overview .c-product-components--mi-hair .e-component-pointer:not(.e-component-pointer--reverse):before,.features-overview .c-product-components--mi-pro .e-component-pointer:not(.e-component-pointer--reverse):before {
   grid-row: 2;
   grid-column: 2;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:not(.e-component-pointer--reverse) div {
+.features-overview .c-product-components--mi-hair .e-component-pointer:not(.e-component-pointer--reverse) div,.features-overview .c-product-components--mi-pro .e-component-pointer:not(.e-component-pointer--reverse) div {
   align-items: start;
   text-align: left;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:before {
-  border-color: rgba(199,229,219,.4);
-  background: #c7e5db;
-  background-clip: content-box;
-}
-.features-overview .c-product-components--mi-hair .e-component-pointer hr {
+.features-overview .c-product-components--mi-hair .e-component-pointer hr,.features-overview .c-product-components--mi-pro .e-component-pointer hr {
   position: relative;
   display: block;
   overflow: visible;
   height: 1px;
   margin: 0;
   border: 0;
-  background: #c7e5db;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer div {
+.features-overview .c-product-components--mi-hair .e-component-pointer div,.features-overview .c-product-components--mi-pro .e-component-pointer div {
   display: flex;
   flex-direction: column;
   grid-row: 1;
@@ -357,21 +351,44 @@
   align-items: end;
   text-align: right;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer small {
+.features-overview .c-product-components--mi-hair .e-component-pointer small,.features-overview .c-product-components--mi-pro .e-component-pointer small {
   color: #8b8c8e;
   font-size: .9em;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(2) {
+.features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(2),.features-overview .c-product-components--mi-pro .e-component-pointer:nth-child(2) {
   --top: 20%;
   width: 60%;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(3) {
+.features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(3),.features-overview .c-product-components--mi-pro .e-component-pointer:nth-child(3) {
   --top: 45%;
   width: 50%;
 }
-.features-overview .c-product-components--mi-hair .e-component-pointer:last-child {
+.features-overview .c-product-components--mi-hair .e-component-pointer:last-child,.features-overview .c-product-components--mi-pro .e-component-pointer:last-child {
   --top: 62%;
   width: 35%;
+}
+.features-overview .c-product-components--mi-pro .e-component-pointer:before {
+  border-color: rgba(199,209,229,.4);
+  background: #91baec;
+  background-clip: content-box;
+}
+.features-overview .c-product-components--mi-pro .e-component-pointer hr {
+  background: #91baec;
+}
+.features-overview .c-product-components--mi-pro .e-component-pointer strong {
+  color: #91baec;
+}
+.features-overview .c-product-components--mi-pro .e-component-pointer small {
+  max-width: 160px;
+  color: inherit;
+}
+.features-overview .c-product-components--mi-hair .e-component-pointer:before {
+  border-color: rgba(199,229,219,.4);
+  background: #c7e5db;
+  background-clip: content-box;
+}
+.features-overview .c-product-components--mi-hair .e-component-pointer hr {
+  background: #c7e5db;
 }
 @media screen and (min-width:768px) {
   .features-overview .c-benefit-grid {
@@ -490,19 +507,19 @@
     right: 0;
     left: auto;
   }
-  .features-overview .c-product-components--mi-hair .e-component-pointer strong {
+  .features-overview .c-product-components--mi-hair .e-component-pointer strong,.features-overview .c-product-components--mi-pro .e-component-pointer strong {
     max-width: 150px;
   }
-  .features-overview .c-product-components--mi-hair .e-component-pointer small {
+  .features-overview .c-product-components--mi-hair .e-component-pointer small,.features-overview .c-product-components--mi-pro .e-component-pointer small {
     max-width: 120px;
   }
-  .features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(2) {
+  .features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(2),.features-overview .c-product-components--mi-pro .e-component-pointer:nth-child(2) {
     --top: 18%;
   }
-  .features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(3) {
+  .features-overview .c-product-components--mi-hair .e-component-pointer:nth-child(3),.features-overview .c-product-components--mi-pro .e-component-pointer:nth-child(3) {
     --top: 35%;
   }
-  .features-overview .c-product-components--mi-hair .e-component-pointer:last-child {
+  .features-overview .c-product-components--mi-hair .e-component-pointer:last-child,.features-overview .c-product-components--mi-pro .e-component-pointer:last-child {
     --top: 55%;
   }
 }

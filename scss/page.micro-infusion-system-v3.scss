@@ -62,3 +62,17 @@
         }
     }
 }
+
+.expert-feature {
+    @include sm {
+        margin-bottom: 170px;
+        color: #fff;
+        background: #212428;
+    }
+
+    .expert-card {
+         @include sm {
+            margin-bottom: -200px;
+        }
+    }
+}

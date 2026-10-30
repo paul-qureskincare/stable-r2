@@ -108,8 +108,13 @@
 
             small {
                 display: block;
+                margin-top: -24px;
                 color: #6d6d6d;
                 font-size: 14px;
+
+                @include sm {
+                    margin-top: -16px;
+                }
             }
         }
     }
