@@ -67,6 +67,7 @@
 }
 .progress-showcase .c-swiper-metrics .swiper-slide small {
   display: block;
+  margin-top: -24px;
   color: #6d6d6d;
   font-size: 14px;
 }
@@ -120,5 +121,8 @@
   }
   .progress-showcase .c-swiper-metrics,.progress-showcase .c-swiper-metrics .swiper-slide .progress-desc,.progress-showcase h2 {
     margin-bottom: 0;
+  }
+  .progress-showcase .c-swiper-metrics .swiper-slide small {
+    margin-top: -16px;
   }
 }
