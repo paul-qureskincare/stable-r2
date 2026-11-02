@@ -23,7 +23,10 @@
   border-radius: 10px;
 }
 .qure-journal .swiper-slide article img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  aspect-ratio: 16/9;
   border: 1px solid var(--input-border-color);
   border-radius: 8px;
 }
