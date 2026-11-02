@@ -9,9 +9,25 @@
   grid-template: repeat(2, auto)/repeat(2, 1fr);
   gap: 40px 80px;
 }
+.expert-feature:has(h6) .container {
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+}
 .expert-feature h2 {
   margin-bottom: 0;
   color: inherit;
+}
+.expert-feature h6:first-child {
+  margin-bottom: 16px;
+  color: #b5b6b7;
+  font-family: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: -24px;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  text-transform: none;
 }
 .expert-feature .expert-card {
   position: relative;
@@ -81,21 +97,21 @@
 }
 @media screen and (max-width:767px) {
   .expert-feature {
-    margin-bottom: 170px;
     padding-top: 40px;
     padding-bottom: 40px;
-    color: #fff;
-    background: #212428;
   }
   .expert-feature .container {
     grid-template: auto/auto;
     gap: 20px;
     align-items: center;
   }
+  .expert-feature h6:first-child {
+    margin-bottom: 8px;
+    margin-bottom: -8px;
+  }
   .expert-feature .expert-card {
     grid-row: auto;
     grid-column: auto;
-    margin-bottom: -200px;
     padding: 20px 15px;
   }
   .expert-feature .expert-card blockquote {

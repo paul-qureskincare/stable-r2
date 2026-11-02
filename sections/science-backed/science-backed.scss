@@ -223,4 +223,37 @@
         }
     }
 
+    // .science-backed--single-with-text
+    &--single-with-text {
+        #{$root}__content {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            max-width: none;
+
+            @include sm {
+                grid-template-columns: auto;
+            }
+
+            picture {
+                img {
+                    @include img-fluid;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        #{$root}__text {
+            grid-row: 1;
+            grid-column: 1 / -1;
+            max-width: none;
+        }
+
+        #{$root}__data {
+            ul {
+                li {
+                    max-width: 110px;
+                }
+            }
+        }
+    }
 }

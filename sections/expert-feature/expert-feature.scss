@@ -9,11 +9,8 @@
     background: #f6f6f7;
 
     @include sm {
-        margin-bottom: 170px;
         padding-top: 40px;
         padding-bottom: 40px;
-        color: #fff;
-        background: #212428;
     }
 
     .container {
@@ -32,9 +29,33 @@
         }
     }
 
+    &:has(h6) {
+        .container {
+            grid-template-rows: repeat(3, auto);
+            // row-gap: 16px;
+            align-items: center;
+        }
+    }
+
     h2 {
         margin-bottom: 0;
         color: inherit;
+    }
+
+    h6 {
+        @include small-first-title;
+
+        &:first-child {
+            margin-bottom: -24px;
+            color: inherit;
+            font-size: inherit;
+            font-weight: 400;
+            text-transform: none;
+
+            @include sm {
+                margin-bottom: -8px;
+            }
+        }
     }
 
     .expert-card {
@@ -61,7 +82,6 @@
         @include sm {
             grid-row: auto;
             grid-column: auto;
-            margin-bottom: -200px;
             padding: 20px 15px;
         }
 

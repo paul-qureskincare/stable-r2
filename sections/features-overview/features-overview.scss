@@ -349,7 +349,9 @@
             }
         }
 
+        // .c-product-components--mi-pro
         // .c-product-components--mi-hair
+        &--mi-pro,
         &--mi-hair {
             container-type: inline-size;
 
@@ -382,12 +384,6 @@
                     }
                 }
 
-                &::before {
-                    border-color: rgb(199 229 219 / 40%);
-                    background: #c7e5db;
-                    background-clip: content-box;
-                }
-
                 hr {
                     position: relative;
                     display: block;
@@ -395,7 +391,6 @@
                     height: 1px;
                     margin: 0;
                     border: 0;
-                    background: #c7e5db;
                 }
 
                 div {
@@ -450,6 +445,45 @@
                     @include md {
                         --top: 55%;
                     }
+                }
+            }
+        }
+
+        // .c-product-components--mi-pro
+        &--mi-pro {
+            .e-component-pointer {
+                &::before {
+                    border-color: rgb(199 209 229 / 40%);
+                    background: #91baec;
+                    background-clip: content-box;
+                }
+
+                hr {
+                    background: #91baec;
+                }
+
+                strong {
+                    color: #91baec;
+                }
+
+                small {
+                    max-width: 160px;
+                    color: inherit;
+                }
+            }
+        }
+
+        // .c-product-components--mi-hair
+        &--mi-hair {
+            .e-component-pointer {
+                &::before {
+                    border-color: rgb(199 229 219 / 40%);
+                    background: #c7e5db;
+                    background-clip: content-box;
+                }
+
+                hr {
+                    background: #c7e5db;
                 }
             }
         }
