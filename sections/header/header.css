@@ -97,6 +97,9 @@ body:has(#announcement-bar) .header {
   transition: all .2s linear;
   content: "\e900";
 }
+.header__menu a[data-target].active {
+  color: #7c7e80;
+}
 .header__menu a[data-target].active:after {
   transform: rotate(-90deg);
 }

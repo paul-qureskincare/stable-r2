@@ -118,6 +118,8 @@
                 }
 
                 &.active {
+                    color: #7c7e80;
+
                     &::after {
                         transform: rotate(-90deg)
                     }
