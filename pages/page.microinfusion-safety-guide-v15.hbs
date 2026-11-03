@@ -3,9 +3,9 @@
     body-class="page.microinfusion-safety-guide-v15"
     page-css=true
 }}
-    <!-- ACROSS IMAGE BANNER -->
-    {{!-- <link rel="stylesheet" href="sections/across-image-banner/across-image-banner.css" /> --}}
-    <section class="across-image-banner across-image-banner--hero across-image-banner--reverse">
+    {{#> across-image-banner
+        classes="across-image-banner--hero across-image-banner--reverse"
+    }}
         <picture>
             <source media="(min-width:768px)" srcset="sections/across-image-banner/images/micro-infusion-banner-15.webp" />
             <img src="sections/across-image-banner/images/micro-infusion-banner-mob-15.webp" alt="Get started with Micro-Infusion" />
@@ -20,8 +20,7 @@
                 <img src="sections/across-image-banner/images/micro-infusion-bottles-15.webp" alt="" />
             </figure>
         </div>
-    </section>
-    <!-- ACROSS IMAGE BANNER END -->
+    {{/across-image-banner}}
 
     <!-- INTRO SECTION -->
     {{!-- <link rel="stylesheet" href="sections/intro-section/intro-section.css" /> --}}

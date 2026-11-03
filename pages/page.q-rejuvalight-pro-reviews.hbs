@@ -3,9 +3,9 @@
     body-class="page.q-rejuvalight-pro-reviews"
     page-css=true
 }}
-    <!-- ACROSS IMAGE BANNER -->
-    {{!-- <link rel="stylesheet" href="sections/across-image-banner/across-image-banner.css" /> --}}
-    <section class="across-image-banner across-image-banner--hero">
+    {{#> across-image-banner
+        classes="across-image-banner--hero"
+    }}
         <picture>
             <source media="(min-width:768px)" srcset="assets/images/page-banner/derma-hero.webp" />
             <img src="assets/images/page-banner/derma-hero-mob.webp" alt="Trusted by doctors for healthier, radiant skin" />
@@ -23,8 +23,7 @@
                 </div>
             </article>
         </div>
-    </section>
-    <!-- ACROSS IMAGE BANNER END -->
+    {{/across-image-banner}}
 
     <!-- PILLS NAVIGATION -->
         {{!-- <link rel="stylesheet" href="sections/pills-nav/pills-nav.css" /> --}}
