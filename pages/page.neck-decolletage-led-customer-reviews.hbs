@@ -3,9 +3,9 @@
     body-class="page.neck-decolletage-led-customer-reviews"
     page-css=true
 }}
-    <!-- ACROSS IMAGE BANNER -->
-    {{!-- <link rel="stylesheet" href="sections/across-image-banner/across-image-banner.css" /> --}}
-    <section class="across-image-banner across-image-banner--hero">
+    {{#> across-image-banner
+        classes="across-image-banner--hero"
+    }}
         <picture>
             <source media="(min-width:768px)" srcset="assets/images/page-banner/customer_reviews_banner.webp" />
             <img src="assets/images/page-banner/customer_reviews_banner_mob.webp" alt="500K+ Happy Customers" />
@@ -25,8 +25,7 @@
                 </div>
             </article>
         </div>
-    </section>
-    <!-- ACROSS IMAGE BANNER END -->
+    {{/across-image-banner}}
 
     <!-- PILLS NAVIGATION -->
     {{!-- <link rel="stylesheet" href="sections/pills-nav/pills-nav.css" /> --}}
