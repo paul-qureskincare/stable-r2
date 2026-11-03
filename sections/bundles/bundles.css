@@ -76,6 +76,8 @@
 
 .c-bundle-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid #dfe0e0;
   border-radius: 10px;
@@ -101,6 +103,7 @@
 }
 .c-bundle-card__main {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   gap: 12px;
   padding: 16px;
@@ -115,6 +118,9 @@
   margin-bottom: 0;
   font-family: inherit;
   font-weight: 400;
+}
+.c-bundle-card__main .e-price {
+  margin-top: auto;
 }
 .c-bundle-card .c-order-button {
   padding: 8px 16px 16px;
@@ -300,6 +306,13 @@
   font-weight: 500;
   line-height: 1.2;
   text-align: center;
+}
+.bundles__item {
+  display: flex;
+  flex-direction: column;
+}
+.bundles__item .c-bundle-card {
+  flex-grow: 1;
 }
 @media screen and (max-width:767px) {
   .e-pay-options {

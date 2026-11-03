@@ -60,8 +60,11 @@
 
     // .bundles__item
     &__item {
+        display: flex;
+        flex-direction: column;
 
+        .c-bundle-card {
+            flex-grow: 1;
+        }
     }
-
-
 }
