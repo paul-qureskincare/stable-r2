@@ -37,6 +37,9 @@
   width: 100%;
   line-height: 1;
 }
+.cta-bar__button .btn span {
+  display: contents;
+}
 .cta-bar__selector {
   position: relative;
   display: flex;
