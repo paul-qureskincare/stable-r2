@@ -1,8 +1,10 @@
 // Sections styles on current page
 @use "@sections/hero-product/hero-product" as *;
+@use "@sections/expert-feature/expert-feature" as *;
 @use "@sections/features-overview/features-overview" as *;
 @use "@sections/mi-overview/mi-overview" as *;
 @use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
 @use "@sections/experts-grid/experts-grid" as *;
 @use "@sections/mi-ingredients/mi-ingredients" as *;
 @use "@sections/set-up/set-up" as *;
