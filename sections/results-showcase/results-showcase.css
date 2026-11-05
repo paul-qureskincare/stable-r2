@@ -34,6 +34,27 @@
   scale: 1.3;
   -webkit-text-stroke: .15px;
 }
+.results-showcase__text .trustpilot-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.results-showcase__text .trustpilot-rating img {
+  max-width: 140px;
+  height: auto;
+  vertical-align: top;
+}
+.results-showcase__text .trustpilot-rating ul {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  color: #06da8d;
+}
+.results-showcase__text .trustpilot-rating ul .e-icon-trustpilot {
+  font-size: 24px;
+}
 .results-showcase__swiper .swiper-slide img {
   border-radius: 10px;
   transition: all .2s linear;

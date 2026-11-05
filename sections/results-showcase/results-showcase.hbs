@@ -5,7 +5,20 @@
 <section class="results-showcase {{ classes }}" {{#if id }}id="{{ id }}"{{/if}}>
     <div class="container">
         <article class="results-showcase__text">
-            <div class="e-rating-stars" style="--rating: 4.5;"></div>
+            {{#if trustpilot }}
+                <div class="trustpilot-rating">
+                    <img src="assets/images/trustpilot.webp" alt="Trustpilot" />
+                    <ul>
+                        <li><i class="e-icon e-icon-trustpilot"></i></li>
+                        <li><i class="e-icon e-icon-trustpilot"></i></li>
+                        <li><i class="e-icon e-icon-trustpilot"></i></li>
+                        <li><i class="e-icon e-icon-trustpilot"></i></li>
+                        <li><i class="e-icon e-icon-trustpilot"></i></li>
+                    </ul>
+                </div>
+            {{ else }}
+                <div class="e-rating-stars" style="--rating: 4.5;"></div>
+            {{/if }}
             <small>200,000+ Confident Customers</small>
             <h2>{{ title }}</h2>
             <ul>

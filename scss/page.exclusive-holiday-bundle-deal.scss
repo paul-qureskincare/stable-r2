@@ -9,3 +9,10 @@
 @use "@sections/learn-more/learn-more" as *;
 
 // Styles for current page only
+.hero-product__main {
+    .e-features-list {
+        @include sm {
+            display: flex;
+        }
+    }
+}

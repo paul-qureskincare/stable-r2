@@ -11,6 +11,10 @@
     border: 1px solid #dfe0e0;
     border-radius: 10px;
 
+    &:has(.e-pill-save--bf) {
+        overflow: unset;
+    }
+
     // .c-bundle-card__image
     &__image {
         position: relative;
@@ -39,6 +43,22 @@
 
             @include sm {
                 font-size: 12px;
+            }
+        }
+
+        .e-pill-save--bf {
+            top: -10px;
+            right: auto;
+            left: 12px;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+
+            @include sm {
+                top: -9px;
+                right: auto;
+                left: 6px;
+                font-size: 11px;
+                letter-spacing: 0.6px;
             }
         }
     }

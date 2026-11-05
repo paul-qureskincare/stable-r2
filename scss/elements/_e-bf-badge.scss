@@ -22,6 +22,12 @@
         width: 82px;
     }
 
+    // .e-bf-badge--exclusive
+    &--exclusive {
+        color: #fff;
+        filter: drop-shadow(5px -3px 5px rgb(255 84 41 / 30%));
+    }
+
     // .e-bf-badge__content
     &__content {
         position: absolute;

@@ -2,15 +2,24 @@
     class="
         e-bf-badge
         {{#if silver }}e-bf-badge--silver{{/if }}
+        {{#if exclusive }}e-bf-badge--exclusive{{/if }}
         {{#if sm }}e-bf-badge--sm{{/if }}
         {{#if md }}e-bf-badge--md{{/if }}
         {{#if lg }}e-bf-badge--lg{{/if }}
     "
 >
-    <img
-        src="assets/images/bf-26/{{#if silver }}bf-badge-silver{{/if }}.webp"
-        alt="Black Friday"
-    />
+    {{#if silver }}
+        <img
+            src="assets/images/bf-26/bf-badge-silver.webp"
+            alt="Black Friday"
+        />
+    {{/if }}
+    {{#if exclusive }}
+        <img
+            src="assets/images/bf-26/bf-badge-exclusive.svg"
+            alt="Black Friday Exclusive Offer"
+        />
+    {{/if }}
     <div class="e-bf-badge__content">
         {{#if before }}<span>{{ before }}</span>{{/if }}
         <strong>{{ value }}%</strong>

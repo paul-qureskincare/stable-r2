@@ -2973,6 +2973,9 @@ body[class*="page.exclusive-holiday-bundle-deal"] .hero-product__container {
 .hero-product__main h1 {
   margin-bottom: -5px;
 }
+.hero-product__main h1 span {
+  color: #ff5429;
+}
 .hero-product__main>.e-price {
   font-size: 22px;
   font-weight: 500;
@@ -3152,6 +3155,33 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 }
 .hero-product__main .c-gift-included-box {
   max-width: 500px;
+}
+.hero-product__main .hero-product__bf-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+}
+.hero-product__main .hero-product__bf-countdown p {
+  background: linear-gradient(77deg, #ff4e22 3.28%, #ff4e22 66.42%, #ff8566 89.06%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-product__main .hero-product__bf-countdown .e-countdown [data-key] {
+  gap: 0;
+  width: 40px;
+  color: #ff5429;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+.hero-product__main .hero-product__bf-countdown .e-countdown [data-key]:after {
+  color: #b5b6b7;
+  font-size: 8px;
+}
+.hero-product__main .hero-product__bf-countdown .e-countdown [data-key]:not(:first-child) {
+  border-color: #dfe0e0;
 }
 .hero-product__gallery {
   position: relative;
@@ -3715,6 +3745,12 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .hero-product__main .e-pill-tabs {
     max-width: 100%;
+  }
+  .hero-product__main .hero-product__bf-countdown {
+    max-width: none;
+  }
+  .hero-product__main .hero-product__bf-countdown p {
+    font-size: 14px;
   }
   .hero-product__gallery {
     gap: 12px;
