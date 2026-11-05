@@ -2950,9 +2950,6 @@
   grid-template: auto 1fr/repeat(2, 1fr);
   gap: 40px 60px;
 }
-body[class*="page.exclusive-holiday-bundle-deal"] .hero-product__container {
-  align-items: center;
-}
 .hero-product__main {
   display: flex;
   flex-direction: column;
