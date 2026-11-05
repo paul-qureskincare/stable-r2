@@ -195,6 +195,7 @@
         }
     }
 
+    // .trusted-reviews--ba-slider
     &--ba-slider {
         padding-top: 0;
         padding-bottom: 0;
@@ -224,6 +225,23 @@
         }
     }
 
+    // .trusted-reviews--short-cards
+    &--short-cards {
+        .c-trusted-review-card {
+            gap: 16px;
+            padding-bottom: 16px;
+
+            article {
+                padding-left: 16px;
+            }
+
+            small {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // .trusted-reviews--dotted-nav
     &--dotted-nav {
         .c-swiper-nav {
             gap: 8px;

@@ -350,6 +350,16 @@
 .trusted-reviews--ba-slider .c-trusted-review-card article {
   padding: 0;
 }
+.trusted-reviews--short-cards .c-trusted-review-card {
+  gap: 16px;
+  padding-bottom: 16px;
+}
+.trusted-reviews--short-cards .c-trusted-review-card article {
+  padding-left: 16px;
+}
+.trusted-reviews--short-cards .c-trusted-review-card small {
+  margin-top: 0;
+}
 .trusted-reviews--dotted-nav .c-swiper-nav {
   gap: 8px;
 }
