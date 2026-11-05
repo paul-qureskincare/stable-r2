@@ -16,3 +16,11 @@
         padding-bottom: 0;
     }
 }
+
+.hero-product__main {
+    .e-features-list {
+        @include sm {
+            display: flex;
+        }
+    }
+}

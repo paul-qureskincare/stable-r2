@@ -83,6 +83,10 @@
 
         h1 {
             margin-bottom: -5px;
+
+            span {
+                color: #ff5429;
+            }
         }
 
         & > .e-price {
@@ -284,6 +288,57 @@
 
         .c-gift-included-box {
             max-width: 500px;
+        }
+
+        #{$root}__bf-countdown {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 500px;
+
+            @include sm {
+                max-width: none;
+            }
+
+            p {
+                background: linear-gradient(77deg, #ff4e22 3.28%, #ff4e22 66.42%, #ff8566 89.06%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+
+            .e-countdown {
+                [data-key] {
+                    gap: 0;
+                    width: 40px;
+                    color: #ff5429;
+                    font-size: 25px;
+                    font-weight: 300;
+                    letter-spacing: 0;
+
+                    /* @include md {
+                        width: 24px;
+                        font-size: 14px;
+                        font-weight: 400;
+                    } */
+
+                    &::after {
+                        color: #b5b6b7;
+                        font-size: 8px;
+
+                       /*  @include md {
+                            display: none;
+                        } */
+                    }
+
+                    &:not(:first-child) {
+                        border-color: #dfe0e0;
+                    }
+                }
+            }
         }
     }
 
