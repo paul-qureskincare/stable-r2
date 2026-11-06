@@ -201,6 +201,54 @@
 .promo-strip--recovery-mask .e-pill-save {
   margin-right: auto;
 }
+.promo-strip--bf-bundles {
+  color: #fff;
+  background: #212428;
+}
+.promo-strip--bf-bundles article {
+  grid-template: repeat(2, auto)/1fr 26% 23%;
+  gap: 16px 4%;
+  padding-left: 3%;
+}
+.promo-strip--bf-bundles article .bundles-list {
+  position: relative;
+  grid-row: 1/-1;
+  width: 100%;
+  container-type: inline-size;
+}
+.promo-strip--bf-bundles article .bundles-list ul {
+  display: flex;
+  gap: 12px;
+}
+.promo-strip--bf-bundles article .bundles-list li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: all .2s linear;
+}
+.promo-strip--bf-bundles article .e-bf-badge {
+  position: absolute;
+  top: 50%;
+  left: -10cqw;
+  z-index: 1;
+  width: 22cqw;
+  transform: translateY(-50%);
+}
+.promo-strip--bf-bundles article h3 {
+  align-self: end;
+  color: inherit;
+}
+.promo-strip--bf-bundles article h3 span {
+  color: #ff5429;
+}
+.promo-strip--bf-bundles article p {
+  grid-column: 2;
+  align-self: start;
+}
+.promo-strip--bf-bundles article .btn {
+  grid-column: 3;
+}
 @media screen and (max-width:1199px) {
   .promo-strip--blue-plus .free-gift {
     top: auto;
@@ -277,6 +325,16 @@
   .promo-strip--against-cancer:not(:has(.free-gift)) picture {
     display: none;
   }
+  .promo-strip--bf-bundles article {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+  .promo-strip--bf-bundles article .e-bf-badge {
+    left: -7cqw;
+  }
+  .promo-strip--bf-bundles article .btn {
+    display: none;
+  }
 }
 @media screen and (max-width:767px) {
   .promo-strip .container {
@@ -339,5 +397,30 @@
     right: -55px;
     left: auto;
     width: 250px;
+  }
+  .promo-strip--bf-bundles article {
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 16px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .promo-strip--bf-bundles article .bundles-list {
+    max-width: 310px;
+    margin-bottom: 32px;
+  }
+  .promo-strip--bf-bundles article h3 {
+    align-self: unset;
+  }
+  .promo-strip--bf-bundles article p {
+    align-self: unset;
+    max-width: none;
+  }
+}
+@media(hover:hover) {
+  .promo-strip--bf-bundles article .bundles-list li img:hover {
+    transform: scale(1.03);
   }
 }

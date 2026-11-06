@@ -418,4 +418,103 @@
             margin-right: auto;
         }
     }
+
+    // .promo-strip--bf-bundles
+    &--bf-bundles {
+        color: #fff;
+        background: #212428;
+
+        article {
+            grid-template: repeat(2, auto) / 1fr 26% 23%;
+            gap: 16px 4%;
+            padding-left: 3%;
+
+            @include md {
+                grid-template-columns: repeat(2, 1fr);
+                text-align: center;
+            }
+
+            @include sm {
+                gap: 8px;
+                align-items: center;
+                width: 100%;
+                margin: 0 auto;
+                padding-bottom: 16px;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .bundles-list {
+                position: relative;
+                grid-row: 1 / -1;
+                width: 100%;
+                container-type: inline-size;
+
+                @include sm {
+                    max-width: 310px;
+                    margin-bottom: 32px;
+                }
+
+                ul {
+                    display: flex;
+                    gap: 12px;
+
+                }
+
+                li img {
+                    @include img-fluid;
+                    border-radius: 10px;
+                    @include transition;
+
+                    @include hover {
+                        transform: scale(1.03);
+                    }
+                }
+            }
+
+            .e-bf-badge {
+                position: absolute;
+                top: 50%;
+                left: -10cqw;
+                z-index: 1;
+                width: 22cqw;
+                transform: translateY(-50%);
+
+                @include md {
+                    left: -7cqw;
+                }
+            }
+
+            h3 {
+                align-self: end;
+                color: inherit;
+
+                @include sm {
+                    align-self: unset;
+                }
+
+                span {
+                    color: #ff5429;
+                }
+            }
+
+            p {
+                grid-column: 2;
+                align-self: start;
+
+                @include sm {
+                    align-self: unset;
+                    max-width: none;
+                }
+            }
+
+            .btn {
+                grid-column: 3;
+
+                @include md {
+                    display: none;
+                }
+            }
+        }
+    }
 }
