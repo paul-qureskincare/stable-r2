@@ -3,7 +3,21 @@
     body-class="collection.best-sellers"
     page-css=true
 }}
-    {{#> hero-banner classes="hero-banner--qure-birthday" }}
+    {{#> hero-banner classes="hero-banner--bf" }}
+       <picture>
+            <source media="(min-width:768px)" srcset="assets/images/page-banner/bf-26.webp">
+            <img src="assets/images/page-banner/bf-26-mob.webp" alt="">
+        </picture>
+        <div class="container">
+            <article>
+                <img src="assets/images/bf-26/bf-sale-label.webp" alt="BLACK FRIDAY Sale" />
+                <h2>Save <span>Up to 72%</span></h2>
+                <p>Shop our biggest sale of the year.</p>
+            </article>
+        </div>
+    {{/hero-banner}}
+
+    {{!-- {{#> hero-banner classes="hero-banner--qure-birthday" }}
        <div class="qure-birthday-video">
             <video autoplay="" loop="" muted="" playsinline="">
                 <source src="sections/across-image-banner/images/qure-birthday-animation.webm" type="video/webm">
@@ -17,7 +31,7 @@
                 <small>*Excludes bundles, Micro-Infusion System, All-In-One Serum, &amp; Dermal Mist.</small>
             </article>
         </div>
-    {{/hero-banner}}
+    {{/hero-banner}} --}}
 
     {{!-- {{#> hero-banner }}
         <picture>
