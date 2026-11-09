@@ -210,6 +210,11 @@
 .comparison-table--equal-rows .comparison-table__content article ul li {
   flex: none;
 }
+.comparison-table--light {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+}
 @media screen and (min-width:768px) {
   .comparison-table--secondary .c-swiper-nav {
     display: none;
@@ -285,5 +290,9 @@
   }
   .comparison-table--equal-rows .comparison-table__content>ul {
     padding: 24px 16px 16px;
+  }
+  .comparison-table--light {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

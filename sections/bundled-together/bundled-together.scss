@@ -133,6 +133,109 @@
                 }
             }
         }
+
+        // .c-product-components--mi-hair
+        &--mi-hair {
+            .e-component-pointer {
+                --left: auto;
+
+                right: 10%;
+                align-items: start;
+                text-align: right;
+                opacity: 1;
+
+                @include md {
+                    right: 0;
+                }
+
+                &::before {
+                    border-color: rgb(139 140 142 / 20%);
+                    background: #6f5c5b;
+                    background-clip: content-box;
+                }
+
+                hr {
+                    position: relative;
+                    display: block;
+                    overflow: visible;
+                    width: 100%;
+                    height: 1px;
+                    margin-top: 12px;
+                    border: 0;
+                    background: rgb(139 140 142 / 50%);
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include sm {
+                        font-size: 14px;
+                    }
+                }
+
+                strong {
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    white-space: nowrap;
+
+                    @include md {
+                        font-size: 16px;
+                        font-weight: normal;
+                    }
+                }
+
+                .e-pill-badge {
+                    --badge-base-color: #212428;
+
+                    background: rgb(82 63 58 / 20%);
+
+                    @include md {
+                        font-size: 12px;
+                    }
+                }
+
+                small {
+                    color: #8b8c8e;
+                    font-size: 0.9em;
+                }
+
+                &:nth-child(2) {
+                    --top: 12%;
+
+                    width: 70%;
+
+                    @include md {
+                        width: 80%;
+                    }
+                }
+
+                &:nth-child(3) {
+                    --top: 55%;
+
+                    width: 68%;
+
+                    @include md {
+                        width: 80%;
+                    }
+                }
+
+                &:last-child {
+                    --top: 80%;
+
+                    width: 68%;
+
+                    @include md {
+                        width: 80%;
+                    }
+
+                    small {
+                        margin-left: -65px;
+                    }
+                }
+            }
+        }
     }
 
     .e-quote-card {
