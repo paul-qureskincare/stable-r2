@@ -367,4 +367,16 @@
             }
         }
     }
+
+    // .comparison-table--light
+    &--light {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: none;
+
+        @include sm {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
 }

@@ -262,6 +262,61 @@
   --top: 67%;
   width: 80%;
 }
+.bundled-together .c-product-components--mi-hair .e-component-pointer {
+  --left: auto;
+  right: 10%;
+  align-items: start;
+  text-align: right;
+  opacity: 1;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer:before {
+  border-color: rgba(139,140,142,.2);
+  background: #6f5c5b;
+  background-clip: content-box;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer hr {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 1px;
+  margin-top: 12px;
+  border: 0;
+  background: rgba(139,140,142,.5);
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer div {
+  display: flex;
+  flex-direction: column;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer strong {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  white-space: nowrap;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer .e-pill-badge {
+  --badge-base-color: #212428;
+  background: rgba(82,63,58,.2);
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer small {
+  color: #8b8c8e;
+  font-size: .9em;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer:nth-child(2) {
+  --top: 12%;
+  width: 70%;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer:nth-child(3) {
+  --top: 55%;
+  width: 68%;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer:last-child {
+  --top: 80%;
+  width: 68%;
+}
+.bundled-together .c-product-components--mi-hair .e-component-pointer:last-child small {
+  margin-left: -65px;
+}
 .bundled-together .e-quote-card {
   max-width: 400px;
 }
@@ -320,6 +375,19 @@
   .bundled-together .c-product-components--hair .e-component-pointer:last-child {
     width: 90%;
   }
+  .bundled-together .c-product-components--mi-hair .e-component-pointer {
+    right: 0;
+  }
+  .bundled-together .c-product-components--mi-hair .e-component-pointer strong {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .bundled-together .c-product-components--mi-hair .e-component-pointer .e-pill-badge {
+    font-size: 12px;
+  }
+  .bundled-together .c-product-components--mi-hair .e-component-pointer:last-child,.bundled-together .c-product-components--mi-hair .e-component-pointer:nth-child(2),.bundled-together .c-product-components--mi-hair .e-component-pointer:nth-child(3) {
+    width: 80%;
+  }
 }
 @media screen and (max-width:767px) {
   .e-quote-card {
@@ -371,7 +439,7 @@
     grid-row: auto;
     grid-column: auto;
   }
-  .bundled-together .c-product-components--hair .e-component-pointer div {
+  .bundled-together .c-product-components--hair .e-component-pointer div,.bundled-together .c-product-components--mi-hair .e-component-pointer div {
     font-size: 14px;
   }
   .bundled-together .btn,.bundled-together .e-quote-card {

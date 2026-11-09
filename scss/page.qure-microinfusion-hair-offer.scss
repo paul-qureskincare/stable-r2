@@ -5,6 +5,7 @@
 @use "@sections/routine-steps/routine-steps" as *;
 @use "@sections/usage-steps/usage-steps" as *;
 @use "@sections/treatment/treatment" as *;
+@use "@sections/comparison-table/comparison-table" as *; // TODO: Must be delete after updated page on live
 @use "@sections/complete-system/complete-system" as *;
 
 // Styles for current page only
@@ -94,5 +95,15 @@
             background-size: contain;
             content: '';
         }
+    }
+}
+
+.comparison-table {
+    margin-top: -60px;
+    margin-bottom: -60px;
+
+    @include sm {
+        margin-top: -40px;
+        margin-bottom: -40px;
     }
 }
