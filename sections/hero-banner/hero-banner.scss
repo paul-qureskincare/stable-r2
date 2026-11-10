@@ -165,4 +165,71 @@
             }
         }
     }
+
+    // .hero-banner--bf
+    &--bf {
+        color: #fff;
+        background: #212428;
+
+        picture {
+            @include sm {
+                position: static;
+            }
+        }
+
+        article {
+            justify-content: center;
+            width: 44%;
+            margin-left: auto;
+            text-align: center;
+
+            @include lg {
+                width: 42%;
+            }
+
+            @include md {
+                width: 40%;
+            }
+
+            @include sm {
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                padding-bottom: 24px;
+            }
+
+            img {
+                @include img-fluid;
+                max-width: 143px;
+                margin: 0 auto 20px;
+
+                @include sm {
+                    display: none;
+                }
+            }
+
+            h2 {
+                margin-bottom: 12px;
+                color: inherit;
+
+                @include sm {
+                    margin-bottom: 8px;
+                }
+
+                span {
+                    background: linear-gradient(77deg, #ff4e22 3%, #ff4e22 15%, #ff8566 90%);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            p {
+                line-height: 1.2;
+
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
