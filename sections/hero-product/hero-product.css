@@ -2962,6 +2962,12 @@
 .hero-product__main .e-double-tag {
   margin-right: auto;
 }
+.hero-product__main .e-bf-label {
+  margin-bottom: -16px;
+}
+.hero-product__main .e-bf-label img {
+  max-height: 34px;
+}
 .hero-product__main>p:first-of-type {
   margin-bottom: 0;
   font-size: 16px;
