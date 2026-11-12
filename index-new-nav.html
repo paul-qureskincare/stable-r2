@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home - New Navigation - Qure</title>
+        <link rel="shortcut icon" href="assets/images/qure_32x32.webp" type="image/png" />
+        <style>
+            :root {
+                --primary-color: #212428;
+                --discount-color: #ff5429;
+            }
+        </style>
+        <link href="assets/css/fonts.css" rel="stylesheet" />
+        <link href="assets/css/general-new-nav.css" rel="stylesheet" />
+        <link href="assets/css/index.css" rel="stylesheet" />
+        <!-- Loading HTML Files -->
+        <script src="assets/js/fileloader.js"></script>
+    </head>
+
+    <body class="index">
+        <!-- PAGE HEADER (NEW NAVIGATION) -->
+        <div id="site-header-new"></div>
+        <!-- PAGE HEADER END -->
+
+        <!-- ANNOUNCEMENT BAR -->
+        <div id="announcement-bar" class="announcement-bar">
+            <div class="announcement-bar-content">
+                <div class="bf-reward-progress">
+                    <p class="bf-reward-progress__text">You’re $40 away from <strong>Free Silk Pillowcase</strong> worth $99!</p>
+                    <div class="bf-reward-progress__unlocked">
+                        <ul>
+                            <li class="unlocked">
+                                <i class="e-icon e-icon-checkmark"></i>
+                                <small>Free Shipping</small>
+                                <span><i class="e-icon e-icon-truck"></i> </span>
+                            </li>
+                            <li>
+                                <div style="--reward-progress: 70%"></div>
+                                <small>Free Pillowcase</small>
+                                <span><i class="e-icon e-icon-pillow-fill"></i> </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bf-reward-progress__countdown">
+                        <p>Black Friday Sale Ends In:</p>
+                        <div class="e-countdown" data-start-date="2026-10-19" data-offer-days="46">
+                            <div data-key="d">00</div>
+                            <div data-key="h">00</div>
+                            <div data-key="m">00</div>
+                            <div data-key="s">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("countdown", "assets/js/countdown.js");
+            });
+        </script>
+        <!-- ANNOUNCEMENT BAR END -->
+
+        <!-- SECTIONS STACK -->
+        <main class="sections-stack">
+            <!-- ACROSS IMAGE BANNER -->
+            <section class="across-image-banner across-image-banner--holidays across-image-banner--bf-video">
+                <video autoplay="" loop="" muted="" playsinline="">
+                    <source src="sections/across-image-banner/images/bf-best-sellers.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="container">
+                    <article>
+                        <img src="assets/images/bf-26/bf-sale-label.webp" alt="BLACK FRIDAY Sale" />
+                        <h1>Save Up to <span>70%</span></h1>
+                        <p>The same science-backed rituals, at the best price of the year.</p>
+                        <a href="#" class="btn btn--primary-white">Shop Best Sellers</a>
+                    </article>
+                </div>
+            </section>
+            <!-- ACROSS IMAGE BANNER END -->
+
+            <!-- ACROSS IMAGE BANNER -->
+            <section class="across-image-banner across-image-banner--holidays across-image-banner--bf">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="assets/images/bf-26/bf-home.webp" />
+                    <img src="assets/images/bf-26/bf-home-mob.webp" alt="Glow With Confidence This Summer" />
+                </picture>
+                <div class="container">
+                    <article>
+                        <img src="assets/images/bf-26/bf-bundles-label.webp" alt="BLACK FRIDAY bundles" />
+                        <h1>Save Up to <span>57%</span></h1>
+                        <p>Your favourite skincare. Perfectly bundled together.</p>
+                        <a href="#" class="btn btn--primary">Shop Bundles Now</a>
+                    </article>
+                </div>
+            </section>
+            <!-- ACROSS IMAGE BANNER END -->
+
+            <!-- TOP PRODUCTS -->
+            <section class="top-products">
+                <div class="container">
+                    <h2>Get the Qure</h2>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="sections/top-products/images/mi.webp" alt="Micro-Infusion System" />
+                                    <figcaption>
+                                        <small>Micro-Infusion System</small>
+                                        <span class="e-pill-badge e-pill-badge--xs">#1 Bestseller</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="sections/top-products/images/helmet.webp" alt="Helmet" />
+                                    <figcaption>
+                                        <small>Helmet</small>
+                                        <span class="e-pill-badge e-pill-badge--xs">New</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="sections/top-products/images/led-mask.webp" alt="LED Mask" />
+                                    <figcaption>
+                                        <small>LED Mask</small>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="sections/top-products/images/shower-filter.webp" alt="Shower Filter" />
+                                    <figcaption>
+                                        <small>Shower Filter</small>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="sections/top-products/images/bundles.webp" alt="Bundles" />
+                                    <figcaption>
+                                        <small>Bundles</small>
+                                        <span class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">57% OFF</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- TOP PRODUCTS END -->
+
+            <!-- BASE SECTION -->
+            <section class="base-section base-section--reverse base-section--mi-buy">
+                <div class="container">
+                    <article>
+                        <h2>Micro-Infusion System</h2>
+                        <picture>
+                            <img src="assets/images/banner-with-text/micro_infusion_system.webp" alt="Micro-Infusion System" />
+                        </picture>
+                        <div>
+                            <p>Reveal smoother-, firmer-, more radiant-looking skin at home. Micro-Infusion Rejuvenating is designed to help visibly refresh tired-looking skin with a simple treatment that pairs your Micro- Infusion device with the Blue Serum for glow, hydration, and rejuvenation.</p>
+                        </div>
+                        <div class="c-buy-block">
+                            <div class="mi-supply">
+                                <input type="radio" name="mi-supply" checked />
+                                <span class="e-pill-badge e-pill-badge--xs e-pill-badge--fill">Save 62% • Best Value</span>
+                                <div class="mi-supply__main">
+                                    3 Month Supply
+                                    <div class="e-price">
+                                        <div class="e-price__main">
+                                            <div class="e-price__current">{$dyn}</div>
+                                            <div class="e-price__old">{$dyn}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mi-supply__desc">
+                                    <p>2 treatments • $49.50/treatment</p>
+                                    <ul class="c-marked-list">
+                                        <li>Free shipping</li>
+                                        <li>Pause or cancel anytime</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="c-order-button">
+                                <button class="btn btn--primary" type="button">Add to Cart</button>
+                            </div>
+                            <small>We recommend 3 months of consistent use for best results.</small>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- BASE SECTION END -->
+
+            <!-- TRUSTED REVIEWS -->
+            <section class="trusted-reviews trusted-reviews--light">
+                <div class="container">
+                    <h2>Results you’ll see with your own eyes</h2>
+                    <div
+                        class="c-swiper"
+                        data-swiper='{
+                            "slidesPerView": 1.1,
+                            "spaceBetween": 16,
+                            "loop": false,
+                            "pagination": {
+                                "el": ".c-swiper-pagination",
+                                "type": "custom"
+                            },
+                            "navigation": {
+                                "prevEl": ".c-swiper-button-prev",
+                                "nextEl": ".c-swiper-button-next"
+                            },
+                            "breakpoints": {
+                                "768": {
+                                    "slidesPerView": 2
+                                },
+                                "992": {
+                                    "spaceBetween": 24,
+                                    "slidesPerView": 3
+                                }
+                            }
+                        }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="assets/images/review-slider/ellie_6_treatments.webp" alt="My skin returned to life!" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="assets/images/review-slider/america_f.webp" alt="Kim L." />
+                                        Kim L.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>My skin returned to life!</h6>
+                                        <p>“I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. I really see the change in my skin. Outstanding job QURE!”</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="assets/images/review-slider/micro-infusion-facial-system.webp" alt="Micro-Infusion Facial System" />
+                                        <small>Ellie uses...</small>
+                                        <span>Micro-Infusion Facial System</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="assets/images/review-slider/mona-p.webp" alt="Fade after just two treatments" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="assets/images/review-slider/america_f.webp" alt="Mona P." />
+                                        Mona P.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Fade after just two treatments</h6>
+                                        <p>“I personally think my products absorbed better, my skin looks a bit brighter and that larger acne scar on my right cheek has started to fade after just TWO treatments!”</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="assets/images/review-slider/q-rejuvalight-pro-led-mask.webp" alt="Q-Rejuvalight Pro LED Mask" />
+                                        <small>Mona uses...</small>
+                                        <span>Q-Rejuvalight Pro LED Mask</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="assets/images/review-slider/andrea.webp" alt="Definitely be re-ordering" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="assets/images/review-slider/america_f.webp" alt="Andrea G." />
+                                        Andrea G.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Definitely be re-ordering</h6>
+                                        <p>“Still a newbie but so far so great! I have dermarolled for more than a decade -still do with .25 at least one a week. I’ve avoided getting a pen because there’s so much involved- but the Qure system is just awesome. So easy and user friendly and my skin loves the serum! Doing my third treatment Saturday and will definitely be re-ordering 🤗</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="assets/images/review-slider/micro-infusion-facial-system.webp" alt="Micro-Infusion Facial System" />
+                                        <small>Andrea uses...</small>
+                                        <span>Micro-Infusion Facial System</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="assets/images/review-slider/jessica-k.webp" alt="Thrilled with the results!" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="assets/images/review-slider/america_f.webp" alt="Jessica K." />
+                                        Jessica K.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Thrilled with the results!</h6>
+                                        <p>"I have been using the mask &amp; microneedling for 6 weeks &amp; am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles."</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="assets/images/review-slider/micro-infusion-targeted-patches.webp" alt="Micro-Infusion Targeted Patches" />
+                                        <small>Jessica uses...</small>
+                                        <span>Micro-Infusion Targeted Patches</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="c-trusted-review-card">
+                                    <picture>
+                                        <img src="assets/images/review-slider/ela-o.webp" alt="Shocked at the results" />
+                                    </picture>
+                                    <div class="e-author">
+                                        <img src="assets/images/review-slider/america_f.webp" alt="Ela O." />
+                                        Ela O.
+                                    </div>
+                                    <div class="e-verified-customer">
+                                        <div class="e-checkmark"></div>
+                                        Verified customer
+                                    </div>
+                                    <article>
+                                        <h6>Shocked at the results</h6>
+                                        <p>“Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment! Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>
+                                    </article>
+                                    <a href="#">
+                                        <img src="assets/images/review-slider/neck-decolletage-led-device.webp" alt="Neck & Décolletage LED Device" />
+                                        <small>Ela uses...</small>
+                                        <span>Neck &amp; Décolletage LED Device</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-swiper-nav">
+                            <button class="c-swiper-button-prev"></button>
+                            <div class="c-swiper-pagination"></div>
+                            <button class="c-swiper-button-next"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    loadScriptOnce("ba-slider", "assets/js/c-ba-slider.js");
+                });
+            </script>
+            <!-- TRUSTED REVIEWS END -->
+
+            <!-- PROMO STRIP -->
+            <section class="promo-strip promo-strip--bf-bundles">
+                <div class="container">
+                    <article>
+                        <div class="bundles-list">
+                            <div class="e-bf-badge e-bf-badge--exclusive e-bf-badge--md">
+                                <img src="assets/images/bf-26/bf-badge-exclusive.svg" alt="Black Friday Exclusive Offer" />
+                                <div class="e-bf-badge__content">
+                                    <span>up to</span>
+                                    <strong>60%</strong>
+                                    <span>off</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="sections/promo-strip/images/bf-bundle-1.webp" alt="BF bundle" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="sections/promo-strip/images/bf-bundle-2.webp" alt="BF bundle" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="sections/promo-strip/images/bf-bundle-3.webp" alt="BF bundle" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Bundles <span>60%</span></h3>
+                        <p>Your Favorite Products, Perfectly Bundled</p>
+                        <a href="#" class="btn btn--primary-white">Shop Bundles Now</a>
+                    </article>
+                </div>
+            </section>
+            <!-- PROMO STRIP END -->
+
+            <!-- EXPERTS GRID -->
+            <section class="experts-grid experts-grid--awards">
+                <div class="container">
+                    <article>
+                        <h2>Award winning, critically-acclaimed, &amp; backed&nbsp;by&nbsp;experts</h2>
+                        <ol>
+                            <li><img src="assets/images/awards/newbeauty.webp" alt="NewBeauty 100 – What's Next in Beauty 2025" /></li>
+                            <li><img src="assets/images/awards/prevention.webp" alt="Prevention Australia Beauty Awards 2024" /></li>
+                            <li><img src="assets/images/awards/bazaar.webp" alt="Harper's Bazaar Best Beauty Tools 2026" /></li>
+                            <li><img src="assets/images/awards/who-what-wear.webp" alt="Who What Wear 100 Beauty Awards 2026 Winner" /></li>
+                            <li><img src="assets/images/awards/customers.webp" alt="Qure – 500K Happy Customers 2026" /></li>
+                        </ol>
+                        <ul>
+                            <li>
+                                <figure>
+                                    <img src="sections/experts-grid/images/shah.webp" alt="Dr. Shah" />
+                                    <figcaption><i class="e-icon e-icon-q"></i></figcaption>
+                                </figure>
+                                <div>
+                                    <strong>Dr. Shah</strong>
+                                    <small>Dermatologist</small>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="sections/experts-grid/images/maxfield.webp" alt="Dr. Maxfield" />
+                                    <figcaption><i class="e-icon e-icon-q"></i></figcaption>
+                                </figure>
+                                <div>
+                                    <strong>Dr. Maxfield</strong>
+                                    <small>Dermatologist</small>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="sections/experts-grid/images/brown.webp" alt="Dr. Alekandra Brown" />
+                                    <figcaption><i class="e-icon e-icon-q"></i></figcaption>
+                                </figure>
+                                <div>
+                                    <strong>Dr. Alekandra Brown</strong>
+                                    <small>Dermatologist</small>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="sections/experts-grid/images/zubritsky.webp" alt="Dr. Lindsey Zubritsky" />
+                                    <figcaption><i class="e-icon e-icon-q"></i></figcaption>
+                                </figure>
+                                <div>
+                                    <strong>Dr. Lindsey Zubritsky</strong>
+                                    <small>Dermatologist</small>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="sections/experts-grid/images/stephens.webp" alt="Dr. Alexis Stephens" />
+                                    <figcaption><i class="e-icon e-icon-q"></i></figcaption>
+                                </figure>
+                                <div>
+                                    <strong>Dr. Alexis Stephens</strong>
+                                    <small>Internal Medicine Doctor</small>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="sections/experts-grid/images/tripati.webp" alt="Dr. Prem Tripati" />
+                                    <figcaption><i class="e-icon e-icon-q"></i></figcaption>
+                                </figure>
+                                <div>
+                                    <strong>Dr. Prem Tripati</strong>
+                                    <small>Facial Plastic Surgeon</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <!-- EXPERTS GRID END -->
+
+            <!-- ACROSS IMAGE BANNER -->
+            <section class="across-image-banner across-image-banner--reverse across-image-banner--quiz">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="sections/across-image-banner/images/quiz.webp" />
+                    <img src="sections/across-image-banner/images/quiz-mob.webp" />
+                </picture>
+                <div class="container">
+                    <article>
+                        <h2>
+                            Not sure where to start?<br />
+                            Take our Skin Quiz and uncover what your skin needs.
+                        </h2>
+                        <a class="btn btn--primary-white" href="#">Take the Quiz</a>
+                    </article>
+                </div>
+            </section>
+            <!-- ACROSS IMAGE BANNER END -->
+
+            <!-- OUR STORY -->
+            <section class="our-story">
+                <div class="container">
+                    <div class="our-story__content">
+                        <hgroup class="our-story__heading">
+                            <h6>Our Story</h6>
+                            <h2>The Science Behind The Qure</h2>
+                        </hgroup>
+                        <article class="our-story__author">
+                            <figure>
+                                <img src="sections/our-story/images/kristina-orlic-edmonds.webp" alt="Kristina Orlic Edmonds" />
+                                <figcaption>
+                                    <strong>Kristina Orlic Edmonds</strong>
+                                    <span>Co-Founder, Qure</span>
+                                </figcaption>
+                            </figure>
+                            <p>From clinically studied ingredients to rigorous testing and manufacturing, we obsess over every detail so you can feel confident about what you're putting on your skin.</p>
+                        </article>
+                    </div>
+                    <div class="c-wistia c-wistia--custom">
+                        <wistia-player media-id="z9uwdp291u" wistia-popover="true" popover-content="link" end-video-behavior="loop" controls-visible-on-load="false" play-button="false">
+                            <div class="c-wistia__custom">
+                                <div class="our-story__media">
+                                    <img src="sections/our-story/images/explore-the-science.webp" alt="Explore the science" />
+                                    <div class="our-story__button">
+                                        Explore the science
+                                        <span><i class="e-icon e-icon-play-triangle"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </wistia-player>
+                    </div>
+                </div>
+            </section>
+            <!-- OUR STORY END -->
+
+            <!-- QURE JOURNAL -->
+            <section class="qure-journal">
+                <div class="container">
+                    <article>
+                        <hgroup>
+                            <h6>Our expert blog</h6>
+                            <h2>Qure journal</h2>
+                        </hgroup>
+                    </article>
+                    <div
+                        class="c-swiper"
+                        data-swiper='{
+                            "slidesPerView": 1.1,
+                            "spaceBetween": 16,
+                            "loop": false,
+                            "pagination": {
+                                "el": ".c-swiper-pagination",
+                                "type": "custom"
+                            },
+                            "navigation": {
+                                "prevEl": ".c-swiper-button-prev",
+                                "nextEl": ".c-swiper-button-next"
+                            },
+                            "breakpoints": {
+                                "768": {
+                                    "slidesPerView": 3
+                                },
+                                "1200": {
+                                    "slidesPerView": 4
+                                }
+                            }
+                        }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-1.webp" alt="What You Eat Can Reduce Premature Aging by 10% Over 15 Years" />
+                                    <small>6 min read</small>
+                                    <h3>What You Eat Can Reduce Premature Aging by 10% Over 15 Years</h3>
+                                    <p>Did you know... There&#x27;s definitely something to the notion that beauty begins on the inside. If you&#x27;re not eating right, your skin will show it...</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-2.webp" alt="What You Eat Can Reduce Premature Aging by 10% Over 15 Years" />
+                                    <small>6 min read</small>
+                                    <h3>What You Eat Can Reduce Premature Aging by 10% Over 15 Years</h3>
+                                    <p>Did you know... There&#x27;s definitely something to the notion that beauty begins on the inside. If you&#x27;re not eating right, your skin will show it...</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-3.webp" alt="Qure LED Mask Vs CurrentBody" />
+                                    <small>6 min read</small>
+                                    <h3>Qure LED Mask Vs CurrentBody</h3>
+                                    <p>Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We&#x27;ve compared the devices, and the short version is this: they&#x27;re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs.</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-4.webp" alt="Qure LED Mask vs Dr Dennis Gross" />
+                                    <small>6 min read</small>
+                                    <h3>Qure LED Mask vs Dr Dennis Gross</h3>
+                                    <p>Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We&#x27;ve compared the devices, and the short version is this: they&#x27;re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs.</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-1.webp" alt="What You Eat Can Reduce Premature Aging by 10% Over 15 Years" />
+                                    <small>6 min read</small>
+                                    <h3>What You Eat Can Reduce Premature Aging by 10% Over 15 Years</h3>
+                                    <p>Did you know... There&#x27;s definitely something to the notion that beauty begins on the inside. If you&#x27;re not eating right, your skin will show it...</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-2.webp" alt="What You Eat Can Reduce Premature Aging by 10% Over 15 Years" />
+                                    <small>6 min read</small>
+                                    <h3>What You Eat Can Reduce Premature Aging by 10% Over 15 Years</h3>
+                                    <p>Did you know... There&#x27;s definitely something to the notion that beauty begins on the inside. If you&#x27;re not eating right, your skin will show it...</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-3.webp" alt="Qure LED Mask Vs CurrentBody" />
+                                    <small>6 min read</small>
+                                    <h3>Qure LED Mask Vs CurrentBody</h3>
+                                    <p>Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We&#x27;ve compared the devices, and the short version is this: they&#x27;re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs.</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <img src="sections/qure-journal/images/journal-image-4.webp" alt="Qure LED Mask vs Dr Dennis Gross" />
+                                    <small>6 min read</small>
+                                    <h3>Qure LED Mask vs Dr Dennis Gross</h3>
+                                    <p>Deciding between the Qure LED mask vs CurrentBody? Both are FDA-cleared, support glowier skin, and both cost a fair bit more than a drugstore serum. We&#x27;ve compared the devices, and the short version is this: they&#x27;re made for slightly different people. One leans into speed, easy routine fit, and customization for individual skin needs.</p>
+                                    <a class="btn btn--secondary btn--md" href="#">Read Article</a>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="c-swiper-nav">
+                            <button class="c-swiper-button-prev"></button>
+                            <div class="c-swiper-pagination"></div>
+                            <button class="c-swiper-button-next"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- QURE JOURNAL END -->
+
+            <!-- WE ONLINE -->
+            <section class="we-online">
+                <div class="container">
+                    <h2>As Seen On The Internet</h2>
+                    <a href="#">
+                        <img src="sections/we-online/images/avatar.webp" alt="@qureskincare" />
+                        <strong>@qureskincare</strong>
+                        <span>257K followers</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="sections/we-online/images/post-1.webp" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="sections/we-online/images/post-2.webp" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="sections/we-online/images/post-3.webp" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="sections/we-online/images/post-4.webp" alt="" /></a>
+                        </li>
+                    </ul>
+                    <a class="btn btn--secondary" href="#">Join Our Community</a>
+                </div>
+            </section>
+            <!-- WE ONLINE END -->
+        </main>
+        <!-- SECTIONS STACK END -->
+
+        <!-- FOOTER BENEFITS -->
+        <section class="footer-benefits">
+            <div class="container">
+                <div
+                    class="c-swiper"
+                    data-swiper='{
+                        "slidesPerView": 1,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "autoplay": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 3
+                            },
+                            "991": {
+                                "slidesPerView": 4
+                            }
+                        }
+                    }'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-box"></i>
+                            <h6>Free US Shipping</h6>
+                            <p>Enjoy free delivery when you spend $100 USD or more.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-restart"></i>
+                            <h6>Easy 30-Day Returns</h6>
+                            <p>Changed your mind? Return it within 30 days for a refund.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-gift"></i>
+                            <h6>Qure Rewards</h6>
+                            <p>Earn points every time you shop for exclusive gifts and discounts.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="e-icon e-icon-benefits-headphone"></i>
+                            <h6>24/7 Customer Support</h6>
+                            <p>Our team is ready to help you, anytime you need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER BENEFITS END -->
+        <!-- CART AND FOOTER -->
+        <div id="site-footer"></div>
+        <div id="site-cart-drawer"></div>
+
+        <!-- Reusable modal for all the wistia videos for all the tab contents -->
+        <div class="modal c-modal c-modal--wistia" id="reusableWistiaModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="wistiaVideoContainer" class="c-modal__video"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog class="c-dialog c-dialog--notify-available" id="notifyAvailable">
+            <div class="c-dialog__content">
+                <form action="#">
+                    <i class="e-icon e-icon-qure"></i>
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/images/notify.webm" type="video/webm" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <h5>Get Notified When It's Back In Stock</h5>
+                    <p>Enter your email address below</p>
+                    <input type="text" class="form-control" placeholder="Enter your email address" />
+                    <button class="btn btn--primary" type="button">Notify Me</button>
+                </form>
+            </div>
+        </dialog>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                loadScriptOnce("cart-counter", "assets/js/cart-counter.js");
+            });
+        </script>
+
+        <!-- SCRIPTS -->
+        <script src="https://fast.wistia.com/player.js" defer="defer"></script>
+        <script src="assets/js/vendor.js" defer="defer"></script>
+        <script src="assets/js/swiper.js" defer="defer"></script>
+        <script src="assets/js/yt-popup.js" defer="defer"></script>
+        <script src="assets/js/dialog.js" defer="defer"></script>
+        <script src="assets/js/wistia.js" defer="defer"></script>
+        <script src="assets/js/popper.min.js" defer="defer"></script>
+        <script src="assets/js/tippy-bundle.umd.min.js" defer="defer"></script>
+        <script src="assets/js/tippy.js" defer="defer"></script>
+        <script src="sections/header/header.js" defer="defer"></script>
+        <script src="sections/footer/footer.js" defer="defer"></script>
+        <script src="sections/header-new/header-new.js" defer="defer"></script>
+    </body>
+</html>

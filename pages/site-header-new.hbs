@@ -1,0 +1,478 @@
+<!-- HEADER NEW -->
+<header class="header-new" id="header-new">
+    <div class="header-new__bar">
+        <button class="header-new__burger" type="button" aria-label="Open menu" aria-controls="header_new_drawer" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a class="header-new__logo" href="index-new-nav.html" aria-label="Qure">
+            {{> e-logo }}
+        </a>
+        <nav class="header-new__nav">
+            <button class="header-new__nav-link" type="button" data-target="nav_shop_products">
+                <span>Shop Products</span>
+                <svg width="12" height="6" viewBox="0 0 13.5 7.81" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+            </button>
+            <button class="header-new__nav-link" type="button" data-target="nav_shop_benefit">
+                <span>Shop by Benefit</span>
+                <svg width="12" height="6" viewBox="0 0 13.5 7.81" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+            </button>
+            <button class="header-new__nav-link" type="button" data-target="nav_help_support">
+                <span>Help &amp; Support</span>
+                <svg width="12" height="6" viewBox="0 0 13.5 7.81" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+            </button>
+            <button class="header-new__nav-link" type="button" data-target="nav_learn_more">
+                <span>Learn More</span>
+                <svg width="12" height="6" viewBox="0 0 13.5 7.81" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+            </button>
+        </nav>
+        <div class="header-new__actions">
+            <a class="header-new__account" href="#">My Account</a>
+            <button class="header-new__icon header-new__search" type="button" aria-label="Search">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2501 19.2501L15.2718 15.2718M17.4167 10.0833C17.4167 14.1334 14.1334 17.4167 10.0833 17.4167C6.03324 17.4167 2.75 14.1334 2.75 10.0833C2.75 6.03324 6.03324 2.75 10.0833 2.75C14.1334 2.75 17.4167 6.03324 17.4167 10.0833Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+            </button>
+            <a class="header-new__icon header-new__cart show-flyout-cart" href="javascript:;" aria-label="Cart">
+                <svg class="header-new__cart-desktop" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="header-new-bag"><path fill="#fff" d="M22.11 8.49H7.74c-.22 0-.43.12-.6.34-.16.22-.27.52-.29.84l-.71 15.72c0 .18.02.35.06.51.04.17.11.31.19.44.09.12.18.22.29.28.11.07.23.1.35.09h15.92c.24 0 .47-.14.64-.39.17-.25.26-.58.26-.94l-.85-15.73c-.03-.33-.13-.62-.3-.84-.16-.21-.38-.33-.6-.33Z" /></mask>
+                    <path d="M22.11 8.49H7.74c-.22 0-.43.12-.6.34-.16.22-.27.52-.29.84l-.71 15.72c0 .18.02.35.06.51.04.17.11.31.19.44.09.12.18.22.29.28.11.07.23.1.35.09h15.92c.24 0 .47-.14.64-.39.17-.25.26-.58.26-.94l-.85-15.73c-.03-.33-.13-.62-.3-.84-.16-.21-.38-.33-.6-.33Z" stroke="currentColor" stroke-width="3.4" mask="url(#header-new-bag)" />
+                    <path d="M11.16 12.66V7.75a3.835 3.62 0 0 1 7.67 0v4.91" stroke="currentColor" stroke-width="1.7" />
+                </svg>
+                <svg class="header-new__cart-mobile" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.537 7.63966H22.101L22.489 7.68766L22.841 7.82966C23.036 7.93866 23.222 8.09566 23.381 8.30366C23.634 8.63566 23.808 9.08966 23.849 9.58766L23.85 9.61066L24.702 25.3457L24.704 25.3917C24.704 25.9227 24.55 26.4287 24.298 26.8037C24.14 27.0377 23.95 27.2167 23.749 27.3407L23.378 27.5067L22.962 27.5677H7.07597L6.64697 27.5217L6.25997 27.3607C6.04897 27.2367 5.85297 27.0547 5.69297 26.8157C5.55997 26.6187 5.45297 26.3837 5.38397 26.1247C5.31997 25.8857 5.28997 25.6297 5.29497 25.3737L5.29597 25.3537L5.99997 9.63166L6.00197 9.60666C6.03897 9.10566 6.21197 8.64766 6.46497 8.31266C6.62397 8.10166 6.80997 7.94266 7.00597 7.83366L7.35797 7.68866L7.74097 7.63966H9.46397C9.49197 6.26366 10.075 4.94766 11.099 3.97266C12.134 2.98766 13.537 2.43066 15 2.43066C16.464 2.43066 17.866 2.98766 18.901 3.97266C19.925 4.94766 20.508 6.26366 20.537 7.63966ZM9.46297 9.33866L7.81997 9.33966C7.74597 9.43766 7.70997 9.57566 7.69797 9.72166L6.99497 25.4267C6.99397 25.5157 7.00497 25.6037 7.02697 25.6867C7.04497 25.7547 7.06897 25.8167 7.10297 25.8677H22.877L22.887 25.8547C22.966 25.7377 23.001 25.5777 23.003 25.4117L22.153 9.70666C22.139 9.56566 22.103 9.43366 22.032 9.33866H20.538V12.6567C20.538 13.1257 20.157 13.5067 19.688 13.5067C19.219 13.5067 18.838 13.1257 18.838 12.6567V9.33866H11.162V12.6567C11.163 13.1257 10.782 13.5067 10.313 13.5067C9.84297 13.5067 9.46297 13.1257 9.46297 12.6567V9.33866ZM18.836 7.63966C18.808 6.72466 18.41 5.85366 17.729 5.20366C17.005 4.51466 16.023 4.13066 15 4.13066C13.977 4.13066 12.995 4.51466 12.272 5.20366C11.59 5.85366 11.193 6.72466 11.164 7.63966H18.836Z" fill="currentColor" /></svg>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Shop Products -->
+    <div class="header-new__dropdown" id="nav_shop_products">
+        <div class="header-new__dropdown-inner">
+            <div class="header-new__categories">
+                <ul>
+                    <li>
+                        <button class="header-new__category is-active" type="button" data-panel="nav_panel_micro_infusion">
+                            <img src="sections/header-new/images/nav-cat-micro-infusion.webp" alt="" width="40" height="40" />
+                            <span>Micro-Infusion System</span>
+                            <span class="header-new__badge">Bestseller</span>
+                            <svg width="6" height="12" viewBox="0 0 7.81 13.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L0.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="header-new__category" type="button" data-panel="nav_panel_led">
+                            <img src="sections/header-new/images/nav-cat-led.webp" alt="" width="40" height="40" />
+                            <span>LED Light Therapy</span>
+                            <svg width="6" height="12" viewBox="0 0 7.81 13.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L0.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="header-new__category" type="button" data-panel="nav_panel_water_filters">
+                            <img src="sections/header-new/images/nav-cat-water-filters.webp" alt="" width="40" height="40" />
+                            <span>Water Filters</span>
+                            <svg width="6" height="12" viewBox="0 0 7.81 13.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L0.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="header-new__category" type="button" data-panel="nav_panel_hair">
+                            <img src="sections/header-new/images/nav-cat-hair.webp" alt="" width="40" height="40" />
+                            <span>Thicker Hair System</span>
+                            <svg width="6" height="12" viewBox="0 0 7.81 13.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L0.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="header-new__category" type="button" data-panel="nav_panel_serums">
+                            <img src="sections/header-new/images/nav-cat-serums.webp" alt="" width="40" height="40" />
+                            <span>Serums &amp; Skincare</span>
+                            <svg width="6" height="12" viewBox="0 0 7.81 13.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L6.75 6.75L0.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="header-new__category" href="page.exclusive-holiday-bundle-deal.html">
+                            <img src="sections/header-new/images/nav-cat-bundle.webp" alt="" width="40" height="40" />
+                            <span>Bundle &amp; Save</span>
+                            <span class="header-new__badge header-new__badge--sale">Save up to 57%</span>
+                        </a>
+                    </li>
+                </ul>
+                <a class="btn btn--primary header-new__shop-all" href="collection.best-sellers.html">Shop all</a>
+            </div>
+
+            <div class="header-new__panels">
+                <div class="header-new__panel is-active" id="nav_panel_micro_infusion">
+                    <div class="header-new__panel-body">
+                        <h4 class="header-new__panel-title">Micro-Infusion System</h4>
+                        <ul class="header-new__products header-new__products--loose">
+                        <li>
+                            <a href="page.microinfusion.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-micro-infusion-1.webp" alt="" width="21" height="48" />
+                                    <img src="sections/header-new/images/nav-micro-infusion-2.webp" alt="" width="21" height="46" />
+                                </span>
+                                <span>Micro-Infusion System</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.microinfusion-hair.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-micro-infusion-pro-hair.webp" alt="" width="15" height="49" />
+                                </span>
+                                <span>Micro-Infusion Pro Hair</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="header-new__promo">
+                        <img src="sections/header-new/images/nav-promo-micro-infusion.webp" alt="" width="357" height="376" loading="lazy" />
+                    </div>
+                </div>
+                <div class="header-new__panel" id="nav_panel_led">
+                    <div class="header-new__panel-body">
+                        <h4 class="header-new__panel-title">LED Light Therapy</h4>
+                        <ul class="header-new__products">
+                            <li>
+                                <a href="product.q-rejuvalight-pro-facewear.html">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-led-mask.webp" alt="" width="44" height="44" />
+                                    </span>
+                                    <span>Q-Rejuvalight Mask</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.neck-decolletage-led.html">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-neck-decolletage.webp" alt="" width="44" height="34" />
+                                    </span>
+                                    <span>Neck &amp; Décolletage System</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-new__promo">
+                        <img src="sections/header-new/images/nav-promo-led.webp" alt="" width="357" height="376" loading="lazy" />
+                    </div>
+                </div>
+                <div class="header-new__panel" id="nav_panel_water_filters">
+                    <div class="header-new__panel-body">
+                        <h4 class="header-new__panel-title">Water Filters</h4>
+                        <ul class="header-new__products">
+                            <li>
+                                <a href="product.faucet-filter.html">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-faucet-filter.webp" alt="" width="44" height="44" />
+                                    </span>
+                                    <span>Faucet Filter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.shower-filter.html">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-shower-filter.webp" alt="" width="44" height="33" />
+                                    </span>
+                                    <span>Shower Filter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-hand-shower-filter.webp" alt="" width="44" height="40" />
+                                    </span>
+                                    <span>Hand Shower Filter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-new__promo">
+                        <img src="sections/header-new/images/nav-promo-water-filters.webp" alt="" width="357" height="376" loading="lazy" />
+                    </div>
+                </div>
+                <div class="header-new__panel" id="nav_panel_hair">
+                    <div class="header-new__panel-body">
+                        <h4 class="header-new__panel-title">Thicker Hair System</h4>
+                        <ul class="header-new__products">
+                            <li>
+                                <a href="product.hairgrowth-helmet.html">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-hair-helmet.webp" alt="" width="44" height="44" />
+                                    </span>
+                                    <span>Q-Renew LLLT Helmet</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.hair-renewal-serum.html">
+                                    <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-hair-renewal-serum.webp" alt="" width="18" height="52" />
+                                    </span>
+                                    <span>Hair Renewal Serum</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-new__promo">
+                        <img src="sections/header-new/images/nav-promo-hair.webp" alt="" width="357" height="376" loading="lazy" />
+                    </div>
+                </div>
+                <div class="header-new__panel" id="nav_panel_serums">
+                    <div class="header-new__panel-body">
+                        <h4 class="header-new__panel-title">Serums &amp; Skincare</h4>
+                        <ul class="header-new__products">
+                        <li>
+                            <a href="product.all-in-one-serum.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-all-in-one-serum.webp" alt="" width="44" height="44" />
+                                </span>
+                                <span>All-In-One Serum</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.blue-face-serum.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-blue-face-serum.webp" alt="" width="44" height="44" />
+                                </span>
+                                <span>Blue+ Face Serum</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.recovery-sheet-mask.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-recovery-sheet-mask.webp" alt="" width="44" height="44" />
+                                </span>
+                                <span>Recovery+ Sheet Mask</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.cleanser.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-cleanser.webp" alt="" width="44" height="44" />
+                                </span>
+                                <span>Cleanser</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.dermal-mist.html">
+                                <span class="header-new__thumb">
+                                    <img src="sections/header-new/images/nav-dermal-mist.webp" alt="" width="44" height="44" />
+                                </span>
+                                <span>Derma Mist</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="header-new__promo">
+                        <img src="sections/header-new/images/nav-promo-serums.webp" alt="" width="357" height="376" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shop by Benefit -->
+    <div class="header-new__dropdown" id="nav_shop_benefit">
+        <div class="header-new__dropdown-inner header-new__dropdown-inner--column">
+            <h4 class="header-new__dropdown-title">Shop by Benefit</h4>
+            <ul class="header-new__benefits">
+                <li>
+                    <a class="header-new__benefit" href="collection.best-sellers.html">
+                        <span>Age Defense</span>
+                        <img src="sections/header-new/images/nav-benefit-age-defense.webp" alt="" width="172" height="132" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a class="header-new__benefit" href="collection.best-sellers.html">
+                        <span>Hair Repair</span>
+                        <img src="sections/header-new/images/nav-benefit-hair-repair.webp" alt="" width="156" height="132" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a class="header-new__benefit" href="collection.best-sellers.html">
+                        <span>Bright &amp; Even Tone</span>
+                        <img src="sections/header-new/images/nav-benefit-bright-even-tone.webp" alt="" width="172" height="132" loading="lazy" />
+                    </a>
+                </li>
+                <li>
+                    <a class="header-new__benefit" href="collection.best-sellers.html">
+                        <span>Clear-Looking Skin</span>
+                        <img src="sections/header-new/images/nav-benefit-clear-looking-skin.webp" alt="" width="172" height="132" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mobile menu (below 992px), opened by the burger -->
+    <div class="header-new__drawer" id="header_new_drawer">
+        <div class="header-new__drawer-top">
+            <a class="header-new__drawer-logo" href="index-new-nav.html" aria-label="Qure">
+                {{> e-logo }}
+            </a>
+            <button class="header-new__drawer-close" type="button" aria-label="Close menu">
+                <svg width="28" height="28" viewBox="0 0 27.51 27.51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.71 0.71L26.8 26.8M26.8 0.71L0.71 26.8" stroke="currentColor" stroke-width="2" /></svg>
+            </button>
+        </div>
+        <div class="header-new__drawer-body">
+            <div class="header-new__acc is-open">
+                <button class="header-new__acc-head" type="button" aria-expanded="true">
+                    <span>Shop Products</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+                <ul class="header-new__acc-body header-new__mob-cats">
+                    <li class="header-new__mob-cat">
+                        <a class="header-new__mob-cat-head" href="page.microinfusion.html">
+                            <img src="sections/header-new/images/nav-cat-micro-infusion-mob.webp" alt="" width="46" height="47" loading="lazy" />
+                            <span>Micro-Infusion System</span>
+                            <span class="header-new__badge">Bestseller</span>
+                        </a>
+                    </li>
+                    <li class="header-new__mob-cat">
+                        <button class="header-new__mob-cat-head" type="button" aria-expanded="false">
+                            <img src="sections/header-new/images/nav-cat-led-mob.webp" alt="" width="46" height="47" loading="lazy" />
+                            <span>LED Light Therapy</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </button>
+                        <ul class="header-new__mob-products">
+                            <li>
+                                <a href="product.q-rejuvalight-pro-facewear.html">
+                                    <img src="sections/header-new/images/nav-led-mask-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Q-Rejuvalight Mask</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.neck-decolletage-led.html">
+                                    <img src="sections/header-new/images/nav-neck-decolletage-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Neck &amp; Décolletage System</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-new__mob-cat">
+                        <button class="header-new__mob-cat-head" type="button" aria-expanded="false">
+                            <img src="sections/header-new/images/nav-cat-water-filters-mob.webp" alt="" width="46" height="47" loading="lazy" />
+                            <span>Water Filters</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </button>
+                        <ul class="header-new__mob-products">
+                            <li>
+                                <a href="product.faucet-filter.html">
+                                    <img src="sections/header-new/images/nav-faucet-filter-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Faucet Filter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.shower-filter.html">
+                                    <img src="sections/header-new/images/nav-shower-filter-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Shower Filter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="sections/header-new/images/nav-hand-shower-filter-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Hand Shower Filter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-new__mob-cat">
+                        <a class="header-new__mob-cat-head" href="product.hairgrowth-helmet.html">
+                            <img class="header-new__img-multiply" src="sections/header-new/images/nav-cat-hair-mob.webp" alt="" width="46" height="47" loading="lazy" />
+                            <span>Q-Renew LLLT Helmet</span>
+                        </a>
+                    </li>
+                    <li class="header-new__mob-cat">
+                        <button class="header-new__mob-cat-head" type="button" aria-expanded="false">
+                            <img src="sections/header-new/images/nav-cat-serums-mob.webp" alt="" width="46" height="47" loading="lazy" />
+                            <span>Serums &amp; Skincare</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </button>
+                        <ul class="header-new__mob-products">
+                            <li>
+                                <a href="product.all-in-one-serum.html">
+                                    <img src="sections/header-new/images/nav-all-in-one-serum-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>All-In-One Serum</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.blue-face-serum.html">
+                                    <img src="sections/header-new/images/nav-blue-face-serum-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Blue+ Face Serum</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.cleanser.html">
+                                    <img src="sections/header-new/images/nav-cleanser-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Cleanser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.dermal-mist.html">
+                                    <img src="sections/header-new/images/nav-dermal-mist-mob.webp" alt="" width="27" height="28" loading="lazy" />
+                                    <span>Derma Mist</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-new__mob-cat">
+                        <a class="header-new__mob-cat-head" href="page.exclusive-holiday-bundle-deal.html">
+                            <img src="sections/header-new/images/nav-cat-bundle-mob.webp" alt="" width="46" height="47" loading="lazy" />
+                            <span>Bundle &amp; Save</span>
+                            <span class="header-new__badge header-new__badge--sale">Save up to 57%</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-new__acc">
+                <button class="header-new__acc-head" type="button" aria-expanded="false">
+                    <span>Shop by Benefit</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+                <ul class="header-new__acc-body header-new__mob-benefits">
+                    <li>
+                        <a class="header-new__mob-benefit header-new__mob-benefit--age" href="collection.best-sellers.html">
+                            <span>Age Defense</span>
+                            <img src="sections/header-new/images/nav-benefit-age-defense-mob.webp" alt="" width="97" height="64" loading="lazy" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="header-new__mob-benefit header-new__mob-benefit--hair" href="collection.best-sellers.html">
+                            <span>Hair Repair</span>
+                            <img src="sections/header-new/images/nav-benefit-hair-repair-mob.webp" alt="" width="68" height="68" loading="lazy" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="header-new__mob-benefit header-new__mob-benefit--bright" href="collection.best-sellers.html">
+                            <span>Bright &amp;<br />Even Tone</span>
+                            <img src="sections/header-new/images/nav-benefit-bright-even-tone-mob.webp" alt="" width="60" height="60" loading="lazy" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="header-new__mob-benefit header-new__mob-benefit--clear" href="collection.best-sellers.html">
+                            <span>Clear-Looking<br />Skin</span>
+                            <img src="sections/header-new/images/nav-benefit-clear-looking-skin-mob.webp" alt="" width="104" height="69" loading="lazy" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn--primary header-new__drawer-shop-all" href="collection.best-sellers.html">Shop all</a>
+            <div class="header-new__quiz">
+                <p>Not sure what's right for you?</p>
+                <a class="btn btn--primary-white" href="#">Take quiz</a>
+            </div>
+        </div>
+        <ul class="header-new__drawer-links">
+            <li>
+                <a href="#">
+                    <span>Help &amp; Support</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>Learn More</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>My Account</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+<!-- HEADER NEW END -->

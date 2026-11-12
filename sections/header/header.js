@@ -169,7 +169,8 @@
     };
 
     const resolveHeaderEls = () => {
-        if (!header || !header.isConnected) header = document.getElementById('header');
+        // #header-new — the new navigation (test page), hides the same way
+        if (!header || !header.isConnected) header = document.getElementById('header') || document.getElementById('header-new');
         if (!announcementBar || !announcementBar.isConnected) announcementBar = document.getElementById('announcement-bar');
         if (!guideMenuSelect || !guideMenuSelect.isConnected) guideMenuSelect = document.querySelector('.guide-menu__select');
         ensureTransformTransition(header);

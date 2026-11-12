@@ -1,0 +1,980 @@
+@use "@root/mixins" as *;
+
+// The new header is taller than the old one (88px vs 60px on desktop),
+// so the page offset (body padding-top) follows it.
+:root {
+    @media screen and (min-width: 992px) {
+        --height-header: 88px;
+    }
+}
+
+.header-new {
+    $root: &;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: var(--height-header);
+    color: #212428;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+
+    body:has(#announcement-bar) & {
+        top: var(--height-bar);
+    }
+
+    // scrolling down hides the header together with the announcement bar (sections/header/header.js)
+    &.scroll-hiding {
+        transform: translateY(-200px);
+    }
+
+    // .header-new__bar
+    &__bar {
+        display: flex;
+        gap: 52px;
+        align-items: center;
+        height: 100%;
+        padding: 0 64px;
+
+        @include xl {
+            gap: 32px;
+            padding: 0 32px;
+        }
+
+        // mobile: burger | logo | cart
+        @include md {
+            gap: 16px;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+    }
+
+    // .header-new__burger — mobile only, opens .header-new__drawer
+    &__burger {
+        display: none;
+
+        @include md {
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            gap: 7px;
+            width: 27px;
+            padding: 0;
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+
+        span {
+            width: 24px;
+            height: 2.5px;
+            border-radius: 100px;
+            background: #1e1d1f;
+        }
+    }
+
+    // .header-new__logo
+    &__logo {
+        flex: none;
+        color: inherit;
+        line-height: 1;
+
+        // the logo sits 2px below the bar centre in the mobile frame
+        @include md {
+            margin-top: 4px;
+        }
+
+        svg {
+            display: block;
+            width: 94px;
+            height: auto;
+
+            @include md {
+                width: 64px;
+            }
+        }
+    }
+
+    // .header-new__nav
+    &__nav {
+        display: flex;
+        flex: 1 1 0;
+        gap: 30px;
+        align-items: center;
+        align-self: stretch;
+        min-width: 0;
+
+        @include lg {
+            gap: 20px;
+        }
+
+        @include md {
+            display: none;
+        }
+    }
+
+    // .header-new__nav-link
+    &__nav-link {
+        position: relative;
+        display: flex;
+        flex: none;
+        gap: 8px;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        color: inherit;
+        font-size: 18px;
+        white-space: nowrap;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        transition: color linear 200ms;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+            left: 0;
+            height: 2px;
+            background: #212428;
+            opacity: 0;
+            transition: opacity linear 200ms;
+            content: "";
+        }
+
+        svg {
+            flex: none;
+            transition: transform linear 200ms;
+        }
+
+        @include hover {
+            color: #7c7e80;
+        }
+
+        // .header-new__nav-link.is-open
+        &.is-open {
+            color: #7c7e80;
+            font-weight: 500;
+
+            &::after {
+                opacity: 1;
+            }
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .header-new__actions
+    &__actions {
+        display: flex;
+        flex: none;
+        gap: 24px;
+        align-items: center;
+        margin-left: auto;
+
+        @include md {
+            margin-left: 0;
+        }
+    }
+
+    // .header-new__account
+    &__account {
+        color: inherit;
+        font-size: 17px;
+        white-space: nowrap;
+        transition: color linear 200ms;
+
+        @include hover {
+            color: #7c7e80;
+            text-decoration: none;
+        }
+
+        @include md {
+            display: none;
+        }
+    }
+
+    // .header-new__icon
+    &__icon {
+        position: relative;
+        display: block;
+        padding: 0;
+        color: inherit;
+        line-height: 1;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        transition: color linear 200ms;
+
+        @include hover {
+            color: #7c7e80;
+        }
+
+        svg {
+            display: block;
+        }
+    }
+
+    // .header-new__search — no search in the mobile bar
+    &__search {
+        @include md {
+            display: none;
+        }
+    }
+
+    // .header-new__cart
+    &__cart {
+        // mobile: the 30px icon takes a 25px slot, as in the frame
+        @include md {
+            margin: 0 -2.5px;
+            color: #1e1d1f;
+        }
+
+        // the mobile frame uses a different bag icon
+        #{$root}__cart-mobile {
+            display: none;
+        }
+
+        @include md {
+            #{$root}__cart-desktop {
+                display: none;
+            }
+
+            #{$root}__cart-mobile {
+                display: block;
+            }
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 0;
+            left: 22px;
+            font-size: 10px;
+            line-height: 1;
+        }
+    }
+
+    // .header-new__dropdown — desktop only, opened by header-new.js (.is-open)
+    &__dropdown {
+        position: absolute;
+        top: calc(100% + 1px); // below the header border
+        right: 0;
+        left: 0;
+        visibility: hidden;
+        border-bottom: 1px solid #ececec;
+        background: #fff;
+        opacity: 0;
+        transition: opacity linear 200ms, visibility linear 200ms;
+
+        @include md {
+            display: none;
+        }
+
+        // .header-new__dropdown.is-open
+        &.is-open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    // .header-new__dropdown-inner
+    &__dropdown-inner {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        padding: 32px 64px;
+
+        @include xl {
+            gap: 32px;
+            padding: 32px;
+        }
+    }
+
+    // .header-new__dropdown-inner--column — title above the content
+    &__dropdown-inner--column {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+
+        @include xl {
+            gap: 24px;
+        }
+    }
+
+    // .header-new__dropdown-title
+    &__dropdown-title {
+        margin: 0;
+        color: #212428;
+        font-family: var(--base-font-family);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    // .header-new__benefits
+    &__benefits {
+        display: flex;
+        gap: 16px;
+
+        li {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+    }
+
+    // .header-new__benefit
+    &__benefit {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 132px;
+        padding: 20px;
+        overflow: hidden;
+        color: #212428;
+        font-size: 19px;
+        line-height: 24px;
+        border-radius: 8px;
+        background: #f8f8f8;
+        transition: background-color linear 200ms;
+
+        @include hover {
+            color: #212428;
+            text-decoration: none;
+            background: rgba(199, 231, 220, 0.2);
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+            width: 135px;
+
+            @include xl {
+                width: 45%;
+            }
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 132px;
+
+            // narrow cards: shrink the whole cut-out image, never crop or stretch it
+            @include xl {
+                max-width: 55%;
+                height: auto;
+                max-height: 132px;
+            }
+        }
+    }
+
+    // .header-new__categories
+    &__categories {
+        position: relative;
+        display: flex;
+        flex: 0 0 356px;
+        flex-direction: column;
+        gap: 14px;
+        padding-right: 41px;
+        box-sizing: content-box;
+
+        @include xl {
+            padding-right: 33px;
+        }
+
+        // divider between categories and panels
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 376px;
+            background: #ececec;
+            content: "";
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    // .header-new__category
+    &__category {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        height: 56px;
+        padding: 0 12px;
+        color: #212428;
+        font-size: 17px;
+        line-height: 20px;
+        text-align: left;
+        border: 0;
+        border-radius: 8px;
+        background: #f8f8f8;
+        cursor: pointer;
+        transition: background-color linear 200ms;
+
+        @include hover {
+            color: #212428;
+            text-decoration: none;
+            background: rgba(199, 231, 220, 0.2);
+        }
+
+        // .header-new__category.is-active
+        &.is-active {
+            background: rgba(199, 231, 220, 0.2);
+        }
+
+        img {
+            flex: none;
+            width: 40px;
+            height: 40px;
+        }
+
+        span:not([class]) {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        svg {
+            flex: none;
+        }
+    }
+
+    // .header-new__badge
+    &__badge {
+        flex: none;
+        padding: 3px 8px;
+        color: #212428;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1.2;
+        white-space: nowrap;
+        border-radius: 100px;
+        background: #c7e5db;
+
+        // .header-new__badge--sale
+        &--sale {
+            color: #fff;
+            background: #f6876f;
+        }
+    }
+
+    // .header-new__shop-all
+    &__shop-all {
+        --btn-padding: 14px 50px;
+
+        width: 100%;
+    }
+
+    // .header-new__panels — one panel per category: product list + promo photo
+    &__panels {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    // .header-new__panel
+    &__panel {
+        display: none;
+        gap: 40px;
+        align-items: flex-start;
+
+        @include xl {
+            gap: 32px;
+        }
+
+        // .header-new__panel.is-active
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    // .header-new__panel-body
+    &__panel-body {
+        flex: 0 1 473px;
+        min-width: 0;
+        padding-top: 8px;
+    }
+
+    // .header-new__panel-title
+    &__panel-title {
+        margin: 0;
+        padding-bottom: 16px;
+        color: #212428;
+        font-family: var(--base-font-family);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        border-bottom: 1px solid #ececec;
+    }
+
+    // .header-new__products
+    &__products {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 16px;
+
+        // .header-new__products--loose
+        &--loose {
+            gap: 16px;
+        }
+
+        a {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            height: 64px;
+            color: #212428;
+            font-size: 17px;
+            line-height: 20px;
+            transition: color linear 200ms;
+
+            @include hover {
+                color: #7c7e80;
+                text-decoration: none;
+            }
+        }
+    }
+
+    // .header-new__thumb
+    &__thumb {
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+        background: #f8f8f8;
+    }
+
+    // .header-new__promo
+    &__promo {
+        flex: 0 1 357px;
+        min-width: 0;
+        margin-left: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #f8f8f8 0%, #fefcfd 43.788%, #fff 100%);
+
+        @include lg {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 376px;
+            object-fit: cover;
+        }
+    }
+
+    // .header-new__drawer — mobile menu, full screen over the page (header-new.js toggles .is-open)
+    &__drawer {
+        display: none;
+
+        @include md {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            display: block;
+            visibility: hidden;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            color: #000;
+            background: #fff;
+            opacity: 0;
+            transition: opacity linear 200ms, visibility linear 200ms;
+        }
+
+        // .header-new__drawer.is-open
+        &.is-open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    // .header-new__drawer-top
+    &__drawer-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 16px 0;
+    }
+
+    // .header-new__drawer-logo
+    &__drawer-logo {
+        display: block;
+        color: #212428;
+
+        svg {
+            display: block;
+            width: 74px;
+            height: auto;
+        }
+    }
+
+    // .header-new__drawer-close
+    &__drawer-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        color: #000;
+        border: 0;
+        background: none;
+        cursor: pointer;
+
+        svg {
+            width: 27.51px;
+            height: 27.51px;
+        }
+    }
+
+    // .header-new__drawer-body
+    &__drawer-body {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 20px 24px;
+    }
+
+    // .header-new__acc — collapsible group (Shop Products / Shop by Benefit)
+    &__acc {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    // .header-new__acc-head
+    &__acc-head {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 22px;
+        text-align: left;
+        border: 0;
+        border-bottom: 1px solid #ececec;
+        background: none;
+        cursor: pointer;
+
+        span {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        svg {
+            flex: none;
+            transition: transform linear 200ms;
+
+            #{$root}__acc.is-open & {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .header-new__acc-body
+    &__acc-body {
+        display: none;
+
+        #{$root}__acc.is-open & {
+            display: flex;
+        }
+    }
+
+    // .header-new__mob-cats
+    &__mob-cats {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    // .header-new__mob-cat
+    &__mob-cat {
+        overflow: hidden;
+        border-radius: 8px;
+        background: #f8f8f8;
+
+        // the drawer badge is larger than the desktop one
+        #{$root}__badge {
+            padding: 1px 10px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    // .header-new__mob-cat-head
+    &__mob-cat-head {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        width: 100%;
+        height: 64px;
+        padding: 0 12px 0 16px;
+        color: #000;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: left;
+        border: 0;
+        background: none;
+        cursor: pointer;
+
+        @include hover {
+            color: #000;
+            text-decoration: none;
+        }
+
+        img {
+            flex: none;
+            width: 46.377px;
+            height: 46.765px;
+        }
+
+        // product photo on a white background: blend it into the card, as in the frame
+        #{$root}__img-multiply {
+            mix-blend-mode: multiply;
+        }
+
+        span:not([class]) {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        svg {
+            flex: none;
+            transition: transform linear 200ms, opacity linear 200ms;
+        }
+
+        // opened category: the header fades, the arrow turns up
+        #{$root}__mob-cat.is-open & {
+            img,
+            span:not([class]),
+            svg {
+                opacity: 0.3;
+            }
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .header-new__mob-products
+    &__mob-products {
+        display: none;
+
+        #{$root}__mob-cat.is-open & {
+            display: block;
+        }
+
+        a {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 5px 16px 20px 36px;
+            color: #000;
+            font-size: 18px;
+            line-height: 21px;
+
+            @include hover {
+                color: #7c7e80;
+                text-decoration: none;
+            }
+        }
+
+        li:first-child a {
+            padding-top: 20px;
+            border-top: 1px solid #fff;
+        }
+
+        img {
+            flex: none;
+            width: 27.345px;
+            height: 27.573px;
+        }
+    }
+
+    // .header-new__mob-benefits
+    &__mob-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+
+        #{$root}__acc.is-open & {
+            display: grid;
+        }
+    }
+
+    // .header-new__mob-benefit
+    &__mob-benefit {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        padding: 0 4px 0 17px;
+        overflow: hidden;
+        color: #000;
+        font-size: 16px;
+        line-height: 18px; // 1.1 rounded by Figma: two lines are 36px in the frame
+        border-radius: 8px;
+        background: #f8f8f8;
+
+        @include hover {
+            color: #000;
+            text-decoration: none;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        img {
+            position: absolute;
+            max-width: none;
+        }
+
+        // .header-new__mob-benefit--age
+        &--age {
+            span {
+                width: 85px;
+            }
+
+            img {
+                right: -15.42px;
+                bottom: -3.56px;
+                width: 97.152px;
+                height: 64.12px;
+            }
+        }
+
+        // .header-new__mob-benefit--hair
+        &--hair {
+            span {
+                width: 76px;
+            }
+
+            img {
+                top: 0;
+                right: -8.91px;
+                width: 68px;
+                height: 68px;
+            }
+        }
+
+        // .header-new__mob-benefit--bright
+        &--bright {
+            span {
+                width: 88px;
+            }
+
+            img {
+                right: -0.5px;
+                bottom: 0;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        // .header-new__mob-benefit--clear
+        &--clear {
+            span {
+                letter-spacing: 0.32px;
+                white-space: nowrap;
+            }
+
+            img {
+                right: -1.5px;
+                bottom: -7px;
+                width: 104px;
+                height: 69px;
+            }
+        }
+    }
+
+    // .header-new__drawer-shop-all
+    &__drawer-shop-all {
+        --btn-padding: 14px 50px;
+
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    // .header-new__quiz
+    &__quiz {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        height: 89px;
+        margin-top: 16px;
+        padding: 0 14px;
+        border-radius: 8px;
+        background: #c7e5db;
+
+        p {
+            flex: none;
+            width: 152px;
+            margin: 0;
+            color: #212428;
+            font-family: var(--heading-font-family);
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.16;
+            text-transform: capitalize;
+        }
+
+        .btn {
+            --btn-padding: 14px 0;
+
+            flex: 1 1 0;
+            min-width: 0;
+            white-space: nowrap;
+        }
+    }
+
+    // .header-new__drawer-links
+    &__drawer-links {
+        padding: 0 6px 50px;
+
+        li {
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px 11px; // 45px row including the border, as in the frame
+            color: #000;
+            font-size: 18px;
+            line-height: 21px;
+
+            @include hover {
+                color: #7c7e80;
+                text-decoration: none;
+            }
+        }
+
+        svg {
+            flex: none;
+        }
+    }
+}
+
+// page scroll is locked while the mobile menu is open
+.header-new-locked {
+    overflow: hidden;
+}
