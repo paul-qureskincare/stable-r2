@@ -1003,11 +1003,14 @@
   margin: 0 auto;
 }
 .base-section--mi-buy article {
+  grid-template-columns: 1fr 490px;
   -moz-column-gap: 32px;
        column-gap: 32px;
+  align-items: start;
 }
 .base-section--mi-buy .c-buy-block {
   width: 100%;
+  margin-top: 10px;
 }
 .base-section--mi-buy .c-buy-block small {
   color: rgba(34,32,47,.6);
@@ -1017,7 +1020,7 @@
   position: relative;
   margin-top: 32px;
   margin-bottom: 8px;
-  padding: 20px 14px 20px 52px;
+  padding: 24px 16px 24px 52px;
   border: 2px solid;
   border-radius: 10px;
 }

@@ -674,7 +674,7 @@
         }
 
         .container {
-            @include banner-height(550, 1440);
+            @include banner-height(600, 1440);
 
             @include sm {
                 @include banner-height(575, 375);
@@ -682,12 +682,18 @@
 
             article {
                 align-items: start;
-                max-width: min(550px, 50%);
+                max-width: min(498px, 50%);
 
                 @include sm {
-                    max-width: none;
+                    align-items: center;
+                    max-width: 80%;
+                    margin: 0 auto;
                     text-align: center;
                 }
+            }
+
+            .btn {
+                max-width: 210px;
             }
         }
     }
@@ -778,6 +784,10 @@
             height: auto;
         }
 
+        .container {
+            @include banner-height(550, 1440);
+        }
+
         picture {
             @include sm {
                 z-index: 1;
@@ -798,10 +808,10 @@
 
             img {
                 @include img-fluid;
-                max-width: 190px;
+                max-height: 46px;
 
                 @include md {
-                    max-width: 140px;
+                    max-height: 30px;
                 }
             }
 
