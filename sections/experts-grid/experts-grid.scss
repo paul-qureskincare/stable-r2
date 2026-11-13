@@ -20,7 +20,7 @@
 
         @include sm {
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            gap: 16px;
         }
     }
 
@@ -35,8 +35,8 @@
 
     .swiper-slide, ul li {
         overflow: hidden;
-        border: 1px solid rgb(80 0 11 / 5%);
-        border-radius: 24px;
+        border: 2px solid #dfe0e0;
+        border-radius: 10px;
         container-type: inline-size;
 
         figure {
@@ -72,7 +72,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            padding: 22px 24px;
+            padding: 10cqw 8cqw 11cqw;
             font-size: min(24px, 7cqw);
             line-height: 1.1;
 
@@ -84,14 +84,16 @@
 
         strong {
             font-family: inherit;
+            font-weight: 500;
 
             @include sm {
                 font-size: 16px;
+                font-weight: 600;
             }
         }
 
         small {
-            font-size: 0.7em;
+            font-size: 0.9em;
             opacity: 0.5;
 
             @include sm {
@@ -103,12 +105,13 @@
     &--awards {
         article {
             display: grid;
-            grid-template: repeat(2, auto) / repeat(2, auto);
-            gap: 32px;
+            grid-template: repeat(2, auto) / 1fr 40%;
+            gap: 44px 32px;
             align-items: center;
 
             @include sm {
                 grid-template: auto / auto;
+                row-gap: 32px;
             }
         }
 

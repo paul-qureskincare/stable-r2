@@ -14,8 +14,8 @@
 }
 .experts-grid .swiper-slide,.experts-grid ul li {
   overflow: hidden;
-  border: 1px solid rgba(80,0,11,.05);
-  border-radius: 24px;
+  border: 2px solid #dfe0e0;
+  border-radius: 10px;
   container-type: inline-size;
 }
 .experts-grid .swiper-slide figure,.experts-grid ul li figure {
@@ -44,21 +44,22 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 22px 24px;
+  padding: 10cqw 8cqw 11cqw;
   font-size: min(24px, 7cqw);
   line-height: 1.1;
 }
 .experts-grid .swiper-slide strong,.experts-grid ul li strong {
   font-family: inherit;
+  font-weight: 500;
 }
 .experts-grid .swiper-slide small,.experts-grid ul li small {
-  font-size: .7em;
+  font-size: .9em;
   opacity: .5;
 }
 .experts-grid--awards article {
   display: grid;
-  grid-template: repeat(2, auto)/repeat(2, auto);
-  gap: 32px;
+  grid-template: repeat(2, auto)/1fr 40%;
+  gap: 44px 32px;
   align-items: center;
 }
 .experts-grid--awards h2 {
@@ -90,7 +91,7 @@
   }
   .experts-grid ul {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 16px;
   }
   .experts-grid .c-swiper,.experts-grid ul {
     margin-top: 24px;
@@ -106,12 +107,14 @@
   }
   .experts-grid .swiper-slide strong,.experts-grid ul li strong {
     font-size: 16px;
+    font-weight: 600;
   }
   .experts-grid .swiper-slide small,.experts-grid ul li small {
     font-size: 12px;
   }
   .experts-grid--awards article {
     grid-template: auto/auto;
+    row-gap: 32px;
   }
   .experts-grid--awards ol img {
     max-height: 95px;
