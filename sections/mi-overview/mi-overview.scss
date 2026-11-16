@@ -121,4 +121,29 @@
             }
         }
     }
+
+    // .mi-overview--simple
+    &--simple {
+        .container {
+            grid-template-rows: repeat(2, auto);
+        }
+
+        #{$root}__titles {
+            grid-column: unset;
+            align-self: end;
+            text-align: left;
+
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+
+        #{$root}__features {
+            grid-row: 1 / -1;
+
+            @include sm {
+                grid-row: unset;
+            }
+        }
+    }
 }

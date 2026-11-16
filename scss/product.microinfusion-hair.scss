@@ -19,14 +19,22 @@
     padding-bottom: 0;
 }
 
-.c-benefit-grid {
-    &__icon {
-        background: #f4f8fd;
-    }
+.base-section {
+    .c-accordion {
+        .c-accordion__item {
+            border-bottom-color: #dfe0e0;
 
-    .e-icon {
-        color: #91baec;
-        font-size: 16px;
+            .e-icon {
+                color: #91baec;
+                font-size: 16px;
+                background: #f4f8fd;
+            }
+        }
+
+        .c-accordion__content {
+            display: block;
+            padding-left: 36px;
+        }
     }
 }
 

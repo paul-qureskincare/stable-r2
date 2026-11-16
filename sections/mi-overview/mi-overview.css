@@ -58,6 +58,20 @@
   font-size: 20px;
   line-height: 1.2;
 }
+.mi-overview--simple .container {
+  grid-template-rows: repeat(2, auto);
+}
+.mi-overview--simple .mi-overview__titles {
+  grid-column: unset;
+  align-self: end;
+  text-align: left;
+}
+.mi-overview--simple .mi-overview__titles h2 {
+  margin-bottom: 0;
+}
+.mi-overview--simple .mi-overview__features {
+  grid-row: 1/-1;
+}
 @media screen and (max-width:991px) {
   .mi-overview__features h3 {
     margin-bottom: 24px;
@@ -98,5 +112,8 @@
   }
   .mi-overview__features ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .mi-overview--simple .mi-overview__features {
+    grid-row: unset;
   }
 }
