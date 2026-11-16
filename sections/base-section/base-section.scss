@@ -628,6 +628,20 @@
         }
     }
 
+    &--product-details {
+        article {
+            grid-template-rows: repeat(2, auto);
+        }
+
+        .c-accordion {
+            .e-icon {
+                padding: 5px;
+                border-radius: 100px;
+                background: #f6f6f7;
+            }
+        }
+    }
+
     // When section has button and percent list
     &:has(.btn):has(.c-percent-list) {
         article {
