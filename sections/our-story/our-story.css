@@ -9,7 +9,7 @@
 .our-story__content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 46px;
   align-items: flex-start;
 }
 .our-story__heading {
@@ -19,6 +19,7 @@
   max-width: 622px;
 }
 .our-story__heading h6 {
+  margin-bottom: 0;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;

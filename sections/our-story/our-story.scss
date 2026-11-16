@@ -22,7 +22,7 @@
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 46px;
         align-items: flex-start;
 
         @include sm {
@@ -38,6 +38,7 @@
         max-width: 622px;
 
         h6 {
+            margin-bottom: 0;
             font-family: inherit;
             font-size: 18px;
             font-weight: normal;
