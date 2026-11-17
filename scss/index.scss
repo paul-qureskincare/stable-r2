@@ -926,4 +926,115 @@
             }
         }
     }
+
+    // .across-image-banner--holiday-bundles
+    &--holiday-bundles {
+        overflow: hidden;
+        background: #dfe8f4;
+
+        .container {
+            max-width: 1440px;
+            padding-right: 16px;
+            padding-left: min(150px, 10.42vw);
+            @include banner-height(550, 1440);
+
+            @include sm {
+                justify-content: flex-start;
+                height: calc(100vw * 522 / 375);
+                max-height: none;
+                padding: 20px;
+            }
+        }
+
+        picture {
+            @include sm {
+                // the light top of the mobile frame, behind the text
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0 0 auto;
+                    height: 171px;
+                    background: linear-gradient(to bottom, #dde6fa 36.538%, rgba(221, 230, 250, 0));
+                }
+            }
+        }
+
+        article {
+            gap: 16px;
+            align-items: flex-start;
+            width: auto;
+            max-width: none;
+            padding: 0;
+
+            @include sm {
+                gap: 12px;
+                align-items: center;
+            }
+
+            .e-pill-badge {
+                justify-content: center;
+                width: 268px;
+                height: 32px;
+                padding: 0 10px;
+                color: #1f1fb0;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: normal;
+                white-space: nowrap;
+                text-transform: uppercase;
+                background: #e9f1fb;
+            }
+
+            h1 {
+                color: #212428;
+                font-size: 46px;
+                line-height: 52px;
+
+                @include md {
+                    font-size: 38px;
+                    line-height: 44px;
+                }
+
+                @include sm {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+
+                br {
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+                span {
+                    color: #ff5429;
+
+                    @include sm {
+                        display: block;
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: min(400px, 40vw);
+                height: 60px;
+                margin-top: 16px;
+                padding: 0 50px;
+                font-size: 20px;
+                line-height: 24px;
+
+                @include md {
+                    margin-top: 8px;
+                }
+
+                @include sm {
+                    width: 100%;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
 }
