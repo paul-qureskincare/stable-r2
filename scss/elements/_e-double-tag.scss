@@ -18,7 +18,18 @@
         background: var(--e-double-tag-color, #ff5429);
     }
 
+    // .e-double-tag--pill
     &--pill {
         border-radius: 100px;
     }
+
+    // .e-double-tag--holidays
+    &--holidays {
+        background: #e9f1fb;
+
+        strong {
+            background: #1f1fb0;
+        }
+    }
+
 }

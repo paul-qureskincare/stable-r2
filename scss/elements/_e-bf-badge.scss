@@ -28,6 +28,15 @@
         filter: drop-shadow(5px -3px 5px rgb(255 84 41 / 30%));
     }
 
+    // .e-bf-badge--holidays
+    &--holidays {
+        aspect-ratio: 1 / 1;
+        color: #1f1fb0;
+        border-radius: 50%;
+        box-shadow: -3px 4px 6px 0 rgb(31 31 176 / 40%);
+        background: #dcecff;
+    }
+
     // .e-bf-badge__content
     &__content {
         position: absolute;

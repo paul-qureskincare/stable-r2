@@ -1961,6 +1961,12 @@
 .e-double-tag--pill {
   border-radius: 100px;
 }
+.e-double-tag--holidays {
+  background: #e9f1fb;
+}
+.e-double-tag--holidays strong {
+  background: #1f1fb0;
+}
 
 .c-exclusive-offer {
   position: relative;
@@ -3166,7 +3172,7 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   max-width: 500px;
 }
 .hero-product__main .hero-product__bf-countdown p {
-  background: linear-gradient(77deg, #ff4e22 3.28%, #ff4e22 66.42%, #ff8566 89.06%);
+  background: linear-gradient(77deg, #ff4e22 3%, #ff4e22 65%, #ff8566 90%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3185,6 +3191,24 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
 }
 .hero-product__main .hero-product__bf-countdown .e-countdown [data-key]:not(:first-child) {
   border-color: #dfe0e0;
+}
+.hero-product__main .hero-product__bf-countdown.holidays {
+  padding: 12px 24px;
+  border: 1px solid #8181ff;
+  border-radius: 100px;
+  box-shadow: 0 0 15px 0 rgba(31,31,176,.2);
+}
+.hero-product__main .hero-product__bf-countdown.holidays p {
+  background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-product__main .hero-product__bf-countdown.holidays .e-countdown [data-key] {
+  color: #1f1fb0;
+}
+.hero-product__main .hero-product__bf-countdown.holidays .e-countdown [data-key]:after {
+  color: #91baec;
 }
 .hero-product__gallery {
   position: relative;
@@ -3754,6 +3778,10 @@ body[class*="page.qure-microinfusion-offer"] .hero-product__main>picture,body[cl
   }
   .hero-product__main .hero-product__bf-countdown p {
     font-size: 14px;
+  }
+  .hero-product__main .hero-product__bf-countdown.holidays {
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .hero-product__gallery {
     gap: 12px;
