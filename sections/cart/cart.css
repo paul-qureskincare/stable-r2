@@ -517,6 +517,18 @@
 .flyout-cart__bf-countdown .e-countdown [data-key]:not(:first-child) {
   border-color: #dfe0e0;
 }
+.flyout-cart__bf-countdown.holidays p {
+  background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.flyout-cart__bf-countdown.holidays .e-countdown [data-key] {
+  color: #1f1fb0;
+}
+.flyout-cart__bf-countdown.holidays .e-countdown [data-key]:after {
+  color: #91baec;
+}
 .flyout-cart__dynamic,.flyout-cart__wrapper {
   display: flex;
   flex-grow: 1;
@@ -666,6 +678,13 @@
   border: 1px solid #8b8c8e;
   border-radius: 50%;
   background: #f6f6f7;
+}
+.flyout-cart__unlocked.holiday ul li.unlocked {
+  background: #dcecff;
+}
+.flyout-cart__unlocked.holiday ul li.unlocked span {
+  border-color: #1f1fb0;
+  background: #1f1fb0;
 }
 .flyout-cart__content {
   display: flex;
