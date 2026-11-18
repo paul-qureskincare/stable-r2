@@ -379,7 +379,8 @@
             }
         }
 
-        .bf-bundles {
+        .bf-bundles,
+        .holidays-bundles {
             display: none;
 
             @include md {
@@ -634,16 +635,17 @@
         -webkit-text-fill-color: transparent;
     }
 
-    .bf-bundles {
+    .bf-bundles,
+    .holidays-bundles {
         position: relative;
         z-index: 1;
         overflow: hidden;
         padding: 10px 16px;
-        color: #fff;
+        color: var(--bundles-color);
         font-size: 16px;
         text-align: center;
         border-radius: 100px;
-        background: #5c2c22;
+        background: var(--bundles-border);
 
         @include md {
             margin-top: 16px;
@@ -660,7 +662,7 @@
             width: 100px;
             height: 100px;
             text-align: center;
-            background: radial-gradient(#ff5429, transparent 60%);
+            background: radial-gradient(var(--bundles-glow), transparent 60%);
             animation: bf-bundles-line 5s linear infinite;
             opacity: 0.6;
             content: "";
@@ -669,43 +671,61 @@
 
         &::after {
             position: absolute;
-            inset: 3px;
+            inset: var(--bundles-inset);
             z-index: -1;
             border-radius: 100px;
-            background: #212428;
+            background: var(--bundles-bg);
             content: "";
         }
 
         &:active {
             color: inherit;
-            background: #ffeeea;
+            background: var(--bundles-hover-bg);
 
             &::before {
                 opacity: 0;
             }
 
             &::after {
-                background: #ffeeea;
+                background: var(--bundles-hover-bg);
             }
         }
 
         @include hover {
             color: inherit;
-            background: #ffeeea;
+            background: var(--bundles-hover-bg);
 
             &::before {
                 opacity: 0;
             }
 
             &::after {
-                background: #ffeeea;
+                background: var(--bundles-hover-bg);
             }
         }
+    }
 
-        @keyframes bf-bundles-line {
-            to {
-                offset-distance: 100%;
-            }
+    .bf-bundles {
+        --bundles-color: #fff;
+        --bundles-border: #5c2c22;
+        --bundles-glow: #ff5429;
+        --bundles-inset: 3px;
+        --bundles-bg: #212428;
+        --bundles-hover-bg: #ffeeea;
+    }
+
+    .holidays-bundles {
+        --bundles-color: #1f1fb0;
+        --bundles-border: #d5dcf4;
+        --bundles-glow: #7174cf;
+        --bundles-inset: 2px;
+        --bundles-bg: #e9f1fb;
+        --bundles-hover-bg: #e9f1fb;
+    }
+
+    @keyframes bf-bundles-line {
+        to {
+            offset-distance: 100%;
         }
     }
 

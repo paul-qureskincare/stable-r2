@@ -186,7 +186,7 @@ body:has(#announcement-bar) .header {
   width: 100%;
   max-width: 200px;
 }
-.header__content-title .bf-bundles {
+.header__content-title .bf-bundles,.header__content-title .holidays-bundles {
   display: none;
 }
 .header__content-cards {
@@ -310,18 +310,18 @@ body:has(#announcement-bar) .header {
   animation: flare 5s linear infinite;
   -webkit-text-fill-color: transparent;
 }
-.header .bf-bundles {
+.header .bf-bundles,.header .holidays-bundles {
   position: relative;
   z-index: 1;
   overflow: hidden;
   padding: 10px 16px;
-  color: #fff;
+  color: var(--bundles-color);
   font-size: 16px;
   text-align: center;
   border-radius: 100px;
-  background: #5c2c22;
+  background: var(--bundles-border);
 }
-.header .bf-bundles:before {
+.header .bf-bundles:before,.header .holidays-bundles:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -329,29 +329,45 @@ body:has(#announcement-bar) .header {
   width: 100px;
   height: 100px;
   text-align: center;
-  background: radial-gradient(#ff5429, transparent 60%);
+  background: radial-gradient(var(--bundles-glow), transparent 60%);
   animation: bf-bundles-line 5s linear infinite;
   opacity: .6;
   content: "";
   offset-path: inset(1px round 100px);
 }
-.header .bf-bundles:after {
+.header .bf-bundles:after,.header .holidays-bundles:after {
   position: absolute;
-  inset: 3px;
+  inset: var(--bundles-inset);
   z-index: -1;
   border-radius: 100px;
-  background: #212428;
+  background: var(--bundles-bg);
   content: "";
 }
-.header .bf-bundles:active {
+.header .bf-bundles:active,.header .holidays-bundles:active {
   color: inherit;
-  background: #ffeeea;
+  background: var(--bundles-hover-bg);
 }
-.header .bf-bundles:active:before {
+.header .bf-bundles:active:before,.header .holidays-bundles:active:before {
   opacity: 0;
 }
-.header .bf-bundles:active:after {
-  background: #ffeeea;
+.header .bf-bundles:active:after,.header .holidays-bundles:active:after {
+  background: var(--bundles-hover-bg);
+}
+.header .bf-bundles {
+  --bundles-color: #fff;
+  --bundles-border: #5c2c22;
+  --bundles-glow: #ff5429;
+  --bundles-inset: 3px;
+  --bundles-bg: #212428;
+  --bundles-hover-bg: #ffeeea;
+}
+.header .holidays-bundles {
+  --bundles-color: #1f1fb0;
+  --bundles-border: #d5dcf4;
+  --bundles-glow: #7174cf;
+  --bundles-inset: 2px;
+  --bundles-bg: #e9f1fb;
+  --bundles-hover-bg: #e9f1fb;
 }
 @keyframes bf-bundles-line {
   to {
@@ -489,7 +505,7 @@ body:has(#announcement-bar) .header {
   .header__content-title .btn {
     display: none;
   }
-  .header__content-title .bf-bundles {
+  .header__content-title .bf-bundles,.header__content-title .holidays-bundles {
     display: block;
   }
   .header__content-cards li {
@@ -555,7 +571,7 @@ body:has(#announcement-bar) .header {
   .header__account-link,.header__shop-all-button {
     display: block;
   }
-  .header .bf-bundles {
+  .header .bf-bundles,.header .holidays-bundles {
     margin-top: 16px;
     padding: 20px 24px;
     font-size: 18px;
@@ -575,14 +591,14 @@ body:has(#announcement-bar) .header {
     text-decoration: none;
     background-color: #f2f2f2;
   }
-  .header .bf-bundles:hover {
+  .header .bf-bundles:hover,.header .holidays-bundles:hover {
     color: inherit;
-    background: #ffeeea;
+    background: var(--bundles-hover-bg);
   }
-  .header .bf-bundles:hover:before {
+  .header .bf-bundles:hover:before,.header .holidays-bundles:hover:before {
     opacity: 0;
   }
-  .header .bf-bundles:hover:after {
-    background: #ffeeea;
+  .header .bf-bundles:hover:after,.header .holidays-bundles:hover:after {
+    background: var(--bundles-hover-bg);
   }
 }
