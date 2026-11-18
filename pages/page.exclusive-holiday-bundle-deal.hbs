@@ -4,6 +4,10 @@
     page-css=true
 }}
     {{#> hero-product }}
+         <div class="hero-product__main d-sm-none">
+            <div class="e-double-tag e-double-tag--pill e-double-tag--holidays"><strong>Holiday</strong> Bundles</div>
+            <h1>Save Up to 60% on Certified&nbsp;Skincare Solutions</h1>
+        </div>
         <div class="hero-product__gallery">
             <div
                 class="c-swiper"
@@ -90,9 +94,9 @@
             </div>
         </div>
         <div class="hero-product__main">
-            {{> e-bf-label md=true }}
-            {{!-- <div class="e-double-tag"><strong>Holiday</strong> Bundles</div> --}}
-            <h1><span>Save Up to 60%</span> on Certified&nbsp;Skincare Solutions</h1>
+            {{!-- {{> e-bf-label md=true }} --}}
+            <div class="e-double-tag e-double-tag--pill e-double-tag--holidays d-none d-sm-inline-flex"><strong>Holiday</strong> Bundles</div>
+            <h1 class="d-none d-sm-block">Save Up to 60% on Certified&nbsp;Skincare Solutions</h1>
             <article>
                 <p>Backed by the most respected peer-reviewed Dermatologist Journals and scientific studies that prove; Qure’s skincare works.</p>
             </article>
@@ -112,8 +116,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="hero-product__bf-countdown">
-                <p>Black Friday Sale Ends In:</p>
+            <div class="hero-product__bf-countdown holidays ">
+                {{!-- <p>Black Friday Sale Ends In:</p> --}}
+                <p>Holiday Sale Ends In:</p>
                 {{> e-countdown
                     start="2026-10-19"
                     days="46"
@@ -222,7 +227,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="lineRefinePro.showModal()">
                     {{> e-bf-badge
-                        exclusive=true
+                        holidays=true
                         md=true
                         value="72"
                         after="off"
@@ -390,7 +395,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="lineRefineAdvanced.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="34"
                         after="off"
@@ -566,7 +571,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="lineRefineEssentials.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="39"
                         after="off"
@@ -770,7 +775,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="fadeFirmPro.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="30"
                         after="off"
@@ -940,7 +945,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="fadeFirmAdvanced.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="45"
                         after="off"
@@ -1108,7 +1113,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="fadeFirmEssentials.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="38"
                         after="off"
@@ -1264,7 +1269,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="breakoutControlAdvanced.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="57"
                         after="off"
@@ -1444,7 +1449,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="breakoutControlPro.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="29"
                         after="off"
@@ -1621,7 +1626,7 @@
             {{#> c-bundle-card }}
                 <div class="c-bundle-card__image" onclick="breakoutControlEssentials.showModal()">
                     {{> e-bf-badge
-                        silver=true
+                        holidays=true
                         md=true
                         value="52"
                         after="off"
