@@ -381,6 +381,40 @@
                 }
             }
         }
+
+        // .bf-reward-progress--holidays
+        &--holidays {
+            .bf-reward-progress__unlocked {
+                ul {
+                    li {
+                        &.unlocked {
+                            background: #e9f1fb;
+
+                            span {
+                                border-color: #1f1fb0;
+                                background: #1f1fb0;
+                            }
+                        }
+                    }
+
+                    div[style] {
+                        &::before {
+                            background: #1f1fb0;
+                        }
+                    }
+                }
+            }
+
+            .e-countdown {
+                [data-key] {
+                    color: #1f1fb0;
+
+                    &::after {
+                        color: #91baec;
+                    }
+                }
+            }
+        }
     }
 
     @at-root body:has(.announcement-bar) {

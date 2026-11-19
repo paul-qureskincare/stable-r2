@@ -315,6 +315,23 @@
             }
         }
 
+        &.holidays {
+            p {
+                background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .e-countdown {
+                [data-key] {
+                    color: #1f1fb0;
+
+                    &::after {
+                        color: #91baec;
+                    }
+                }
+            }
+        }
     }
 
     // .flyout-cart__dynamic
@@ -514,6 +531,21 @@
                 border: 1px solid #8b8c8e;
                 border-radius: 50%;
                 background: #f6f6f7;
+            }
+        }
+
+        &.holiday {
+            ul {
+                li {
+                    &.unlocked {
+                        background: #dcecff;
+
+                        span {
+                            border-color: #1f1fb0;
+                            background: #1f1fb0;
+                        }
+                    }
+                }
             }
         }
     }

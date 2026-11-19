@@ -10,8 +10,8 @@
             </span>
             <span class="countdown-message"></span>
         </div> --}}
-        <div class="flyout-cart__bf-countdown">
-            <p>Black Friday Sale Ends In:</p>
+        <div class="flyout-cart__bf-countdown holidays">
+            <p>Holiday Sale Ends In:</p>
             {{> e-countdown
                 start="2026-10-19"
                 days="46"
@@ -49,7 +49,7 @@
                         </li>
                     </ul>
                 </div> --}}
-                <div class="flyout-cart__unlocked">
+                <div class="flyout-cart__unlocked holiday">
                     <p>You’ve unlocked:</p>
                     <ul >
                         <li class="unlocked">
@@ -213,21 +213,21 @@
                     </div>
                     <ul class="cart-footer__summary">
                         <li>
-                            <div><div class="e-pill-save e-pill-save--bf">BLACK FRIDAY SAVINGS</div></div>
-                            <div class="e-price e-price--highlight">
+                            <div><div class="e-pill-save e-pill-save--holidays">HOLIDAY SAVINGS</div></div>
+                            <div class="e-price e-price--holidays">
                                 <div class="e-price__main">
                                     <div class="e-price__current">$287</div>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        {{!-- <li>
                             <div><div class="e-pill-save">Exclusive savings</div></div>
                             <div class="e-price e-price--highlight">
                                 <div class="e-price__main">
                                     <div class="e-price__current">$187</div>
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
                         <li>
                             <div>Savings:</div>
                             <div class="e-price e-price--profit">

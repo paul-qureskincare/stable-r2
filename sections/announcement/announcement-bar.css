@@ -208,6 +208,22 @@
 .announcement-bar .bf-reward-progress__countdown .e-countdown [data-key]:not(:first-child) {
   border-color: #dfe0e0;
 }
+.announcement-bar .bf-reward-progress--holidays .bf-reward-progress__unlocked ul li.unlocked {
+  background: #e9f1fb;
+}
+.announcement-bar .bf-reward-progress--holidays .bf-reward-progress__unlocked ul li.unlocked span {
+  border-color: #1f1fb0;
+  background: #1f1fb0;
+}
+.announcement-bar .bf-reward-progress--holidays .bf-reward-progress__unlocked ul div[style]:before {
+  background: #1f1fb0;
+}
+.announcement-bar .bf-reward-progress--holidays .e-countdown [data-key] {
+  color: #1f1fb0;
+}
+.announcement-bar .bf-reward-progress--holidays .e-countdown [data-key]:after {
+  color: #91baec;
+}
 body:has(.announcement-bar) {
   --height-bar: 50px;
 }

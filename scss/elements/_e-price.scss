@@ -70,7 +70,9 @@
         }
     }
 
-    &--special {
-
+    &--holidays {
+        #{$root}__current {
+            color: #1f1fb0;
+        }
     }
 }
