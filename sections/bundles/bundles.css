@@ -73,7 +73,7 @@
 .e-pill-save--bf {
   background: linear-gradient(75deg, #ff4e22, #ff4e22 65%, #ff8566 90%);
 }
-.e-pill-save--holidays {
+.holiday-theme .e-pill-save {
   background: linear-gradient(85deg, #91baec 22%, #1f1fb0 170%);
 }
 

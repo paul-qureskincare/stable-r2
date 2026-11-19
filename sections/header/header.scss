@@ -379,8 +379,7 @@
             }
         }
 
-        .bf-bundles,
-        .holidays-bundles {
+        .bf-bundles {
             display: none;
 
             @include md {
@@ -635,8 +634,7 @@
         -webkit-text-fill-color: transparent;
     }
 
-    .bf-bundles,
-    .holidays-bundles {
+    .bf-bundles {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -712,15 +710,15 @@
         --bundles-inset: 3px;
         --bundles-bg: #212428;
         --bundles-hover-bg: #ffeeea;
-    }
 
-    .holidays-bundles {
-        --bundles-color: #1f1fb0;
-        --bundles-border: #d5dcf4;
-        --bundles-glow: #7174cf;
-        --bundles-inset: 2px;
-        --bundles-bg: #e9f1fb;
-        --bundles-hover-bg: #e9f1fb;
+        .holiday-theme & {
+            --bundles-color: #1f1fb0;
+            --bundles-border: #d5dcf4;
+            --bundles-glow: #7174cf;
+            --bundles-inset: 2px;
+            --bundles-bg: #e9f1fb;
+            --bundles-hover-bg: #e9f1fb;
+        }
     }
 
     @keyframes bf-bundles-line {

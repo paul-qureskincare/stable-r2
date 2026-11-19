@@ -186,7 +186,7 @@ body:has(#announcement-bar) .header {
   width: 100%;
   max-width: 200px;
 }
-.header__content-title .bf-bundles,.header__content-title .holidays-bundles {
+.header__content-title .bf-bundles {
   display: none;
 }
 .header__content-cards {
@@ -310,7 +310,7 @@ body:has(#announcement-bar) .header {
   animation: flare 5s linear infinite;
   -webkit-text-fill-color: transparent;
 }
-.header .bf-bundles,.header .holidays-bundles {
+.header .bf-bundles {
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -321,7 +321,7 @@ body:has(#announcement-bar) .header {
   border-radius: 100px;
   background: var(--bundles-border);
 }
-.header .bf-bundles:before,.header .holidays-bundles:before {
+.header .bf-bundles:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -335,7 +335,7 @@ body:has(#announcement-bar) .header {
   content: "";
   offset-path: inset(1px round 100px);
 }
-.header .bf-bundles:after,.header .holidays-bundles:after {
+.header .bf-bundles:after {
   position: absolute;
   inset: var(--bundles-inset);
   z-index: -1;
@@ -343,14 +343,14 @@ body:has(#announcement-bar) .header {
   background: var(--bundles-bg);
   content: "";
 }
-.header .bf-bundles:active,.header .holidays-bundles:active {
+.header .bf-bundles:active {
   color: inherit;
   background: var(--bundles-hover-bg);
 }
-.header .bf-bundles:active:before,.header .holidays-bundles:active:before {
+.header .bf-bundles:active:before {
   opacity: 0;
 }
-.header .bf-bundles:active:after,.header .holidays-bundles:active:after {
+.header .bf-bundles:active:after {
   background: var(--bundles-hover-bg);
 }
 .header .bf-bundles {
@@ -361,7 +361,7 @@ body:has(#announcement-bar) .header {
   --bundles-bg: #212428;
   --bundles-hover-bg: #ffeeea;
 }
-.header .holidays-bundles {
+.holiday-theme .header .bf-bundles {
   --bundles-color: #1f1fb0;
   --bundles-border: #d5dcf4;
   --bundles-glow: #7174cf;
@@ -505,7 +505,7 @@ body:has(#announcement-bar) .header {
   .header__content-title .btn {
     display: none;
   }
-  .header__content-title .bf-bundles,.header__content-title .holidays-bundles {
+  .header__content-title .bf-bundles {
     display: block;
   }
   .header__content-cards li {
@@ -571,7 +571,7 @@ body:has(#announcement-bar) .header {
   .header__account-link,.header__shop-all-button {
     display: block;
   }
-  .header .bf-bundles,.header .holidays-bundles {
+  .header .bf-bundles {
     margin-top: 16px;
     padding: 20px 24px;
     font-size: 18px;
@@ -591,14 +591,14 @@ body:has(#announcement-bar) .header {
     text-decoration: none;
     background-color: #f2f2f2;
   }
-  .header .bf-bundles:hover,.header .holidays-bundles:hover {
+  .header .bf-bundles:hover {
     color: inherit;
     background: var(--bundles-hover-bg);
   }
-  .header .bf-bundles:hover:before,.header .holidays-bundles:hover:before {
+  .header .bf-bundles:hover:before {
     opacity: 0;
   }
-  .header .bf-bundles:hover:after,.header .holidays-bundles:hover:after {
+  .header .bf-bundles:hover:after {
     background: var(--bundles-hover-bg);
   }
 }

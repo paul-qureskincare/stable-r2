@@ -317,10 +317,10 @@
 .e-double-tag--pill {
   border-radius: 100px;
 }
-.e-double-tag--holidays {
+.holiday-theme .e-double-tag {
   background: #e9f1fb;
 }
-.e-double-tag--holidays strong {
+.holiday-theme .e-double-tag strong {
   background: #1f1fb0;
 }
 
