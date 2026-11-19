@@ -747,7 +747,11 @@
         }
 
         .flyout-cart__footer {
-            .e-price--bf {
+            .e-pill-save {
+                background: linear-gradient(85deg, #91baec 22%, #1f1fb0 170%);
+            }
+
+            .e-price--highlight {
                 .e-price__current {
                     color: #1f1fb0;
                 }
