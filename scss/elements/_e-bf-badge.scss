@@ -34,6 +34,10 @@
         border-radius: 50%;
         box-shadow: -3px 4px 6px 0 rgb(31 31 176 / 40%);
         background: #dcecff;
+
+        img {
+            display: none;
+        }
     }
 
     // .e-bf-badge__content
