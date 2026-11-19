@@ -382,8 +382,7 @@
             }
         }
 
-        // .bf-reward-progress--holidays
-        &--holidays {
+        .holiday-theme & {
             .bf-reward-progress__unlocked {
                 ul {
                     li {

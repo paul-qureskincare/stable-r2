@@ -343,32 +343,12 @@
                     }
                 }
             }
+        }
 
-            &.holidays {
-                padding: 12px 24px;
-                border: 1px solid #8181ff;
-                border-radius: 100px;
-                box-shadow: 0 0 15px 0 rgb(31 31 176 / 20%);
-
+        &:not(.d-sm-none) {
+            h1, .e-double-tag {
                 @include sm {
-                    padding-right: 15px;
-                    padding-left: 15px;
-                }
-
-                p {
-                    background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                .e-countdown {
-                    [data-key] {
-                        color: #1f1fb0;
-
-                        &::after {
-                            color: #91baec;
-                        }
-                    }
+                    display: none;
                 }
             }
         }
@@ -691,6 +671,36 @@
                 padding: 0;
                 border-radius: 0;
                 background: none;
+            }
+        }
+    }
+
+    .holiday-theme & {
+        #{$root}__bf-countdown {
+            padding: 12px 24px;
+            border: 1px solid #8181ff;
+            border-radius: 100px;
+            box-shadow: 0 0 15px 0 rgb(31 31 176 / 20%);
+
+            @include sm {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            p {
+                background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .e-countdown {
+                [data-key] {
+                    color: #1f1fb0;
+
+                    &::after {
+                        color: #91baec;
+                    }
+                }
             }
         }
     }

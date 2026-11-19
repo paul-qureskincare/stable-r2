@@ -314,24 +314,6 @@
                 }
             }
         }
-
-        &.holidays {
-            p {
-                background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .e-countdown {
-                [data-key] {
-                    color: #1f1fb0;
-
-                    &::after {
-                        color: #91baec;
-                    }
-                }
-            }
-        }
     }
 
     // .flyout-cart__dynamic
@@ -533,21 +515,6 @@
                 background: #f6f6f7;
             }
         }
-
-        &.holiday {
-            ul {
-                li {
-                    &.unlocked {
-                        background: #dcecff;
-
-                        span {
-                            border-color: #1f1fb0;
-                            background: #1f1fb0;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     // .flyout-cart__content
@@ -742,6 +709,49 @@
         @include sm {
             padding-right: 16px;
             padding-left: 16px;
+        }
+    }
+
+    .holiday-theme & {
+        .flyout-cart__bf-countdown {
+            p {
+                background: linear-gradient(80deg, #91baec 12%, #1f1fb0 85%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .e-countdown {
+                [data-key] {
+                    color: #1f1fb0;
+
+                    &::after {
+                        color: #91baec;
+                    }
+                }
+            }
+        }
+
+        .flyout-cart__unlocked {
+            ul {
+                li {
+                    &.unlocked {
+                        background: #dcecff;
+
+                        span {
+                            border-color: #1f1fb0;
+                            background: #1f1fb0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flyout-cart__footer {
+            .e-price--bf {
+                .e-price__current {
+                    color: #1f1fb0;
+                }
+            }
         }
     }
 }
