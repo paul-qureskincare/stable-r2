@@ -20,9 +20,9 @@
 
     &--bf {
         background: linear-gradient(75deg, #ff4e22 0%, #ff4e22 65%, #ff8566 90%);
-    }
 
-    .holiday-theme & {
-        background: linear-gradient(85deg, #91baec 22%, #1f1fb0 170%);
+        .holiday-theme & {
+            background: linear-gradient(85deg, #91baec 22%, #1f1fb0 170%);
+        }
     }
 }

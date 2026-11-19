@@ -28,8 +28,7 @@
         filter: drop-shadow(5px -3px 5px rgb(255 84 41 / 30%));
     }
 
-    // .e-bf-badge--holidays
-    &--holidays {
+    .holiday-theme & {
         aspect-ratio: 1 / 1;
         color: #1f1fb0;
         border-radius: 50%;

@@ -856,7 +856,10 @@
   border-color: #1f1fb0;
   background: #1f1fb0;
 }
-.holiday-theme .flyout-cart .flyout-cart__footer .e-price--bf .e-price__current {
+.holiday-theme .flyout-cart .flyout-cart__footer .e-pill-save {
+  background: linear-gradient(85deg, #91baec 22%, #1f1fb0 170%);
+}
+.holiday-theme .flyout-cart .flyout-cart__footer .e-price--highlight .e-price__current {
   color: #1f1fb0;
 }
 @media screen and (min-width:768px) {
