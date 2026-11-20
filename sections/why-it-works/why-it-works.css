@@ -213,6 +213,63 @@
   font-size: 14px;
   text-align: center;
 }
+.why-it-works--mi-pdrn .container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 549px;
+  gap: 16px 60px;
+  align-content: center;
+  text-align: left;
+}
+.why-it-works--mi-pdrn h2 {
+  margin-bottom: 0;
+}
+.why-it-works--mi-pdrn .why-it-works__main {
+  display: contents;
+}
+.why-it-works--mi-pdrn .why-it-works__according {
+  grid-row: 2;
+  grid-column: 1;
+}
+.why-it-works--mi-pdrn .why-it-works__according .c-accordion--lines .c-accordion__item {
+  font-size: 18px;
+  line-height: 22px;
+  border-bottom-color: #dfe0e0;
+}
+.why-it-works--mi-pdrn .why-it-works__according .c-accordion__summary {
+  gap: 12px;
+  min-height: 60px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.why-it-works--mi-pdrn .why-it-works__according .c-accordion__item[open] .c-accordion__summary {
+  font-weight: 500;
+}
+.why-it-works--mi-pdrn .why-it-works__according .c-accordion__content {
+  padding: 0 10px 20px;
+}
+.why-it-works--mi-pdrn .why-it-works__according .e-icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: #91baec;
+  font-size: 16px;
+  border-radius: 50%;
+  background: #f4f8fd;
+}
+.why-it-works--mi-pdrn .why-it-works__components {
+  grid-row: 1/span 2;
+  grid-column: 2;
+  align-self: center;
+}
+.why-it-works--mi-pdrn .why-it-works__components img {
+  width: 549px;
+}
 @media screen and (max-width:1120px) {
   .c-product-components--faucet-filter .e-component-pointer:has([href="#carbon-fiber"]) {
     --line-size: 290px;
@@ -248,6 +305,18 @@
   .why-it-works__main {
     grid-template-columns: auto;
     gap: 0;
+  }
+  .why-it-works--mi-pdrn .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .why-it-works--mi-pdrn .why-it-works__according {
+    order: 2;
+  }
+  .why-it-works--mi-pdrn .why-it-works__components {
+    order: 1;
+    align-self: center;
   }
 }
 @media screen and (max-width:767px) {
@@ -304,5 +373,33 @@
     padding-left: 6px;
     text-align: left;
     border-left: 1px solid #dfe0e0;
+  }
+  .why-it-works--mi-pdrn .container {
+    gap: 0;
+  }
+  .why-it-works--mi-pdrn h2 {
+    margin-bottom: 37px;
+    padding-top: 37px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .why-it-works--mi-pdrn .why-it-works__according .c-accordion--lines .c-accordion__item {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .why-it-works--mi-pdrn .why-it-works__according .c-accordion__summary {
+    gap: 7px;
+    min-height: 68px;
+    padding: 24px 0 20px 16px;
+  }
+  .why-it-works--mi-pdrn .why-it-works__according .c-accordion__item:first-child .c-accordion__summary {
+    min-height: 0;
+    padding-top: 0;
+  }
+  .why-it-works--mi-pdrn .why-it-works__according .c-accordion__content {
+    padding: 0 0 20px 16px;
+  }
+  .why-it-works--mi-pdrn .why-it-works__components img {
+    width: 347px;
   }
 }

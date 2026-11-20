@@ -13,7 +13,7 @@
     <div class="container">
         {{#if trustpilot }}{{> e-icon icon="qure"}}{{/if }}
         {{#if small-title }}<h6>{{ small-title }}</h6>{{/if }}
-        <h2>{{ title }}</h2>
+        <h2>{{#if title-mob }}<span class="d-none d-sm-inline">{{ title }}</span><span class="d-sm-none">{{ title-mob }}</span>{{ else }}{{ title }}{{/if }}</h2>
         {{#if trustpilot }}
             <div class="trustpilot-rating">
                 <div class="trustpilot-rating__stars">
