@@ -14,19 +14,20 @@
                 {{> e-logo }}
             </a>
             <ul class="header__menu">
-                <li>
+                {{!-- <li>
                     <a class="bf-bundles" href="page.exclusive-holiday-bundle-deal.html">
                         Holiday Bundles
                     </a>
                 </li>
-                <li><a href="javascript:;" data-target="shop_bestsellers"><span>Shop All Products</span></a></li>
+                <li><a href="javascript:;" data-target="shop_bestsellers"><span>Shop All Products</span></a></li> --}}
+                <li><a class="bf-bundles" href="javascript:;" data-target="shop_bestsellers"><span>Black Friday Bestsellers</span></a></li>
                 <li><a href="javascript:;" data-target="shop_benefits"><span>Shop by Benefits</span></a></li>
-                {{!-- <li>
-                    <a href="#">
+                <li>
+                    <a href="page.exclusive-holiday-bundle-deal.html">
                         <span>Bundle &amp; Save</span>
-                        <span class="e-pill-save">Save up to 55%</span>
+                        <span class="e-pill-save e-pill-save--bf">Save up to 57%</span>
                     </a>
-                </li> --}}
+                </li>
                 <li><a href="javascript:;" data-target="learn_more"><span>Learn More</span></a></li>
             </ul>
             <ul class="header__icons">
@@ -60,10 +61,15 @@
             </div>
             <div class="header__content" id="shop_bestsellers">
                 <div class="header__content-container container">
+                    {{> e-bf-badge silver=true value="70" before="up to" }}
                     <div class="header__content-title">
-                        <h3>Shop all</h3>
+                        {{!-- <h3>Shop all</h3>
                         <a class="btn btn--primary btn--md" href="collection.best-sellers.html">Shop all</a>
-                        <a class="bf-bundles" href="page.exclusive-holiday-bundle-deal.html">Holiday Bundles</a>
+                        <a class="bf-bundles" href="page.exclusive-holiday-bundle-deal.html">Holiday Bundles</a> --}}
+                        {{> e-bf-label md=true }}
+                        <h3>Shop Bestsellers</h3>
+                        <a class="btn btn--primary btn--md" href="collection.best-sellers.html">Shop All</a>
+                        <a class="bf-bundles" href="collection.best-sellers.html">Black Friday Bestsellers</a>
                     </div>
                     <ul class="header__content-cards">
                         <li>
@@ -76,15 +82,15 @@
                         <li>
                             <a href="product.all-in-one-serum.html">
                                 <span>All-In-One Serum</span>
-                                <span class="e-pill-badge e-pill-badge--fill">Support skin as it changes</span>
+                                <span class="e-pill-badge e-pill-badge--fill">Targets Aging &amp; Dark Spots</span>
                                 <img src="sections/header/images/header-promo-card-image-2.webp" alt="All-In-One Serum" />
                             </a>
                         </li>
                         <li>
                             <a href="product.q-rejuvalight-pro-facewear.html">
-                                <span>Red-Light Mask</span>
-                                <span class="e-pill-badge e-pill-badge--fill">Treat Wrinkles</span>
-                                <img src="sections/header/images/header-promo-card-image-3.webp" alt="Red-Light Mask" />
+                                <span>Q-Rejuvalight Facewear</span>
+                                <span class="e-pill-badge e-pill-badge--fill">Multi-Benefit Light Therapy</span>
+                                <img class="header__card-image-multiply" src="sections/header/images/header-promo-card-q-rejuvalight.webp" alt="Q-Rejuvalight Facewear" />
                             </a>
                         </li>
                         <li class="d-none d-md-block">

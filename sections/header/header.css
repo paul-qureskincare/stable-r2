@@ -73,11 +73,11 @@ body:has(#announcement-bar) .header {
   cursor: pointer;
   transition: color .2s linear;
 }
-.header__menu a[data-target] {
+.header__menu a[data-target]:not(.bf-bundles) {
   position: relative;
   padding-right: 16px;
 }
-.header__menu a[data-target]:after {
+.header__menu a[data-target]:not(.bf-bundles):after {
   position: absolute;
   top: 50%;
   right: 0;
@@ -97,10 +97,10 @@ body:has(#announcement-bar) .header {
   transition: all .2s linear;
   content: "\e900";
 }
-.header__menu a[data-target].active {
+.header__menu a[data-target]:not(.bf-bundles).active {
   color: #7c7e80;
 }
-.header__menu a[data-target].active:after {
+.header__menu a[data-target]:not(.bf-bundles).active:after {
   transform: rotate(-90deg);
 }
 .header__menu a:has(.e-pill-save) {
@@ -109,10 +109,35 @@ body:has(#announcement-bar) .header {
   align-items: center;
 }
 .header__menu .e-pill-save {
-  padding: 4px 8px;
+  padding: 4px 6px;
   font-size: 10px;
   text-transform: none;
   text-decoration: none;
+}
+.header__menu .bf-bundles span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  line-height: 20px;
+}
+.header__menu .bf-bundles span:after {
+  font-family: icomoon;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: top;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  speak: never;
+  font-size: 12px;
+  transform: rotate(90deg);
+  transition: all .2s linear;
+  content: "\e900";
+}
+.header__menu .bf-bundles.active span:after {
+  transform: rotate(-90deg);
 }
 .header__icons {
   display: flex;
@@ -164,6 +189,29 @@ body:has(#announcement-bar) .header {
 .header__mobile-top .e-icon-qure {
   font-size: 34px;
 }
+.header__content[id=shop_bestsellers] {
+  overflow: hidden;
+}
+.header__content[id=shop_bestsellers] .header__content-container {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.header__content[id=shop_bestsellers] .e-bf-badge {
+  position: absolute;
+  top: 160px;
+  left: -77px;
+  z-index: -1;
+  width: 195px;
+  color: hsla(0,0%,100%,.9);
+  transform: rotate(-24.26deg);
+}
+.holiday-theme .header__content[id=shop_bestsellers] .e-bf-badge {
+  color: #1f1fb0;
+}
+.header__content[id=shop_bestsellers] .e-bf-badge__content span {
+  font-size: 21cqw;
+}
 .header__content[id=learn_more] .header__content-container {
   gap: 0;
 }
@@ -176,8 +224,14 @@ body:has(#announcement-bar) .header {
   padding: 30px 16px;
 }
 .header__content-title {
+  position: relative;
   align-self: center;
   min-width: 23%;
+}
+.header__content-title .e-bf-label {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 0;
 }
 .header__content-title h3 {
   white-space: nowrap;
@@ -233,6 +287,9 @@ body:has(#announcement-bar) .header {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.header__content-cards li .header__card-image-multiply {
+  mix-blend-mode: multiply;
 }
 .header__content-cards li picture {
   position: absolute;
@@ -404,6 +461,15 @@ body:has(#announcement-bar) .header {
     pointer-events: all;
     opacity: 1;
   }
+  .header__content[id=shop_bestsellers] .header__content-title h3 {
+    margin-bottom: 16px;
+    line-height: 36px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .header__content[id=shop_bestsellers] .header__content-cards a span {
+    white-space: nowrap;
+  }
 }
 @media screen and (max-width:991px) {
   .header>.container {
@@ -456,6 +522,31 @@ body:has(#announcement-bar) .header {
   .header__mobile-top {
     display: flex;
   }
+  .header__content[id=shop_bestsellers] {
+    flex-shrink: 0;
+    overflow: visible;
+  }
+  .header__content[id=shop_bestsellers] .header__content-container {
+    gap: 24px;
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+  .header__content[id=shop_bestsellers] .header__content-title .bf-bundles {
+    margin-top: 24px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    line-height: 22px;
+  }
+  .header__content[id=shop_bestsellers] .e-bf-badge {
+    top: -12px;
+    right: -20px;
+    left: auto;
+    width: 103px;
+    transform: rotate(-26.03deg);
+  }
+  .header__content[id=shop_bestsellers] .e-bf-badge__content {
+    translate: 0 -12px;
+  }
   .header__content[id=shop_bestsellers] .header__content-cards {
     flex-direction: column;
     margin-bottom: 32px;
@@ -491,6 +582,9 @@ body:has(#announcement-bar) .header {
     flex-direction: column;
     gap: 16px;
     padding: 0 20px;
+  }
+  .header__content-title .e-bf-label {
+    display: none;
   }
   .header__content-title {
     align-self: start;

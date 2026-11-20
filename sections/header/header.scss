@@ -101,7 +101,7 @@
                 text-decoration: none;
             }
 
-            &[data-target] {
+            &[data-target]:not(.bf-bundles) {
                 position: relative;
                 padding-right: 16px;
 
@@ -134,10 +134,36 @@
         }
 
         .e-pill-save {
-            padding: 4px 8px;
+            padding: 4px 6px;
             font-size: 10px;
             text-transform: none;
             text-decoration: none;
+        }
+
+        // .header__menu .bf-bundles
+        .bf-bundles {
+            span {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                line-height: 20px;
+
+                &::after {
+                    @include icon;
+                    font-size: 12px;
+                    transform: rotate(90deg);
+                    @include transition;
+                    content: "\e900";
+                }
+            }
+
+            &.active {
+                span {
+                    &::after {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
         }
     }
 
@@ -270,6 +296,75 @@
         }
 
         &[id="shop_bestsellers"] {
+            overflow: hidden;
+
+            @include md {
+                flex-shrink: 0;
+                overflow: visible;
+            }
+
+            .header__content-container {
+                position: relative;
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                @include md {
+                    gap: 24px;
+                    padding-top: 16px;
+                    padding-bottom: 0;
+                }
+            }
+
+            .header__content-title {
+                h3 {
+                    @media screen and (min-width: 992px) {
+                        margin-bottom: 16px;
+                        line-height: 36px;
+                    }
+                }
+
+                .bf-bundles {
+                    @include md {
+                        margin-top: 24px;
+                        padding-top: 19px;
+                        padding-bottom: 19px;
+                        line-height: 22px;
+                    }
+                }
+            }
+
+            .e-bf-badge {
+                position: absolute;
+                top: 160px;
+                left: -77px;
+                z-index: -1;
+                width: 195px;
+                color: rgb(255 255 255 / 90%);
+                transform: rotate(-24.26deg);
+
+                @include md {
+                    top: -12px;
+                    right: -20px;
+                    left: auto;
+                    width: 103px;
+                    transform: rotate(-26.03deg);
+                }
+
+                .holiday-theme & {
+                    color: #1f1fb0;
+                }
+            }
+
+            .e-bf-badge__content {
+                @include md {
+                    translate: 0 -12px;
+                }
+
+                span {
+                    font-size: 21cqw;
+                }
+            }
+
             .header__content-cards {
                 @include md {
                     flex-direction: column;
@@ -277,6 +372,12 @@
                 }
 
                 a {
+                    span {
+                        @media screen and (min-width: 1200px) {
+                            white-space: nowrap;
+                        }
+                    }
+
                     @include md {
                         display: grid;
                         grid-template: repeat(2, auto) / 1fr auto;
@@ -351,8 +452,19 @@
 
     // .header__content-title
     &__content-title {
+        position: relative;
         align-self: center;
         min-width: 23%;
+
+        .e-bf-label {
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 0;
+
+            @include md {
+                display: none;
+            }
+        }
 
         @include md {
             align-self: start;
@@ -453,6 +565,11 @@
 
             img {
                 @include img-fluid;
+            }
+
+            // .header__card-image-multiply
+            .header__card-image-multiply {
+                mix-blend-mode: multiply;
             }
 
             picture {
