@@ -1,0 +1,187 @@
+// Sections styles on current page
+@use "@sections/hero-product/hero-product" as *;
+@use "@sections/why-it-works/why-it-works" as *;
+@use "@sections/progress-showcase/progress-showcase" as *;
+@use "@sections/expert-feature/expert-feature" as *;
+@use "@sections/trusted-reviews/trusted-reviews" as *;
+@use "@sections/mi-ingredients/mi-ingredients" as *;
+@use "@sections/mi-overview/mi-overview" as *;
+@use "@sections/experts-grid/experts-grid" as *;
+@use "@sections/press-reviews/press-reviews" as *;
+@use "@sections/set-up/set-up" as *;
+
+// Styles for current page only
+.c-benefit-grid {
+    &__icon {
+        background: #f4f8fd;
+    }
+
+    .e-icon {
+        color: #91baec;
+        font-size: 16px;
+    }
+}
+
+.hero-product {
+    // .hero-product__main h1 — the heading stays in the buy box on mobile too (hero-product hides it for pages with a separate mobile heading)
+    &__main:not(.d-sm-none) {
+        h1 {
+            max-width: 512px;
+
+            @include sm {
+                display: block;
+            }
+        }
+    }
+
+    &__extra {
+        // mobile order as in the mobile frame: quote, dermatologists, accordion, upsells, jump links
+        @include sm {
+            .e-quote-card {
+                order: 1;
+            }
+
+            .c-certified-box {
+                order: 2;
+            }
+
+            .c-accordion {
+                order: 3;
+            }
+
+            .hero-product__best-with {
+                order: 4;
+            }
+
+            .c-jump-to {
+                order: 5;
+            }
+        }
+
+        .e-quote-card {
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .c-certified-box {
+            max-width: none;
+            margin-top: -24px;
+
+            @include sm {
+                margin-top: -12px;
+            }
+        }
+
+        .c-benefit-grid__item {
+            max-width: 190px;
+        }
+
+        // .hero-product__extra .c-benefit-grid--sm — two columns on mobile too, as in the mobile frame
+        .c-benefit-grid--sm {
+            @include sm {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+.base-section {
+    article{
+        & > picture {
+            order: unset;
+        }
+    }
+}
+
+.progress-showcase {
+    .e-pill-badge {
+        padding: 7px 14px;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: none;
+
+        @include sm {
+            padding: 6px 12px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    h2 {
+        @media screen and (min-width: 768px) {
+            max-width: 549px;
+        }
+    }
+
+    // .progress-showcase__nav — round arrows and "1 / 4" in the middle, as in the PDRN design
+    &__nav {
+        gap: 20px;
+        justify-content: center;
+
+        button {
+            flex: 0 0 40px;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #212428;
+            border-radius: 50%;
+            background: #fff;
+
+            &:disabled {
+                border-color: #8b8c8e;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__nav-pagination {
+        gap: 4px;
+        width: auto;
+        color: #212428;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.expert-feature {
+    h2 {
+        @media screen and (min-width: 768px) {
+            max-width: 392px;
+        }
+    }
+}
+
+.mi-overview {
+    &__titles {
+        h6:first-child {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        h2 {
+            @media screen and (min-width: 768px) {
+                max-width: 435px;
+            }
+        }
+    }
+
+    &__features {
+        h3 {
+            font-size: 38px;
+            line-height: 42px;
+
+            @include md {
+                font-size: 28px;
+                line-height: 32px;
+            }
+
+            @include sm {
+                font-family: inherit;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: left;
+            }
+        }
+    }
+}
