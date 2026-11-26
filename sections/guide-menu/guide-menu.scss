@@ -46,6 +46,16 @@
             transform: translateY(-200px);
         }
 
+        // .guide-menu__select[data-show-after] — hidden until the page reaches the guide (guide-menu.js)
+        &[data-show-after] {
+            transition: opacity 200ms, visibility 200ms;
+
+            &:not(.is-visible) {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
         @at-root .has-guide-select {
             @include md {
                 padding-top: calc(var(--height-header) + 60px);
@@ -55,6 +65,19 @@
         @at-root .has-guide-select:has(#announcement-bar) {
             @include md {
                 padding-top: calc(var(--height-bar) + var(--height-header) + 60px);
+            }
+        }
+
+        // The deferred select does not reserve space on the first screen
+        @at-root .has-guide-select:has([data-show-after]) {
+            @include md {
+                padding-top: var(--height-header);
+            }
+        }
+
+        @at-root .has-guide-select:has(#announcement-bar):has([data-show-after]) {
+            @include md {
+                padding-top: calc(var(--height-bar) + var(--height-header));
             }
         }
 

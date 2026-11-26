@@ -333,7 +333,8 @@
 
             @at-root
             .page\.microinfusion-safety-guide #{$root}--reverse,
-            .page\.microinfusion-safety-guide-v15 #{$root}--reverse {
+            .page\.microinfusion-safety-guide-v15 #{$root}--reverse,
+            .page\.microinfusion-hair-guide #{$root}--reverse {
                 .container {
                     position: relative;
                 }

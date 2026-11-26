@@ -23,6 +23,13 @@
 .guide-menu__select.scroll-hiding {
   transform: translateY(-200px);
 }
+.guide-menu__select[data-show-after] {
+  transition: opacity .2s,visibility .2s;
+}
+.guide-menu__select[data-show-after]:not(.is-visible) {
+  visibility: hidden;
+  opacity: 0;
+}
 
 .guide-menu__select select {
   width: 100%;
@@ -109,6 +116,12 @@
   }
   .has-guide-select:has(#announcement-bar) {
     padding-top: calc(var(--height-bar) + var(--height-header) + 60px);
+  }
+  .has-guide-select:has([data-show-after]) {
+    padding-top: var(--height-header);
+  }
+  .has-guide-select:has(#announcement-bar):has([data-show-after]) {
+    padding-top: calc(var(--height-bar) + var(--height-header));
   }
   .guide-menu__list {
     display: none;
