@@ -453,22 +453,22 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner {
   max-width: 440px;
 }
 
-.page\.microinfusion-safety-guide .across-image-banner--reverse .container,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse .container {
+.page\.microinfusion-hair-guide .across-image-banner--reverse .container,.page\.microinfusion-safety-guide .across-image-banner--reverse .container,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse .container {
   position: relative;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article {
+.page\.microinfusion-hair-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article {
   max-width: 480px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p {
+.page\.microinfusion-hair-guide .across-image-banner--reverse article h1,.page\.microinfusion-hair-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p {
   max-width: 340px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+.page\.microinfusion-hair-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
   position: absolute;
   right: -40px;
   bottom: -60px;
   width: 210px;
 }
-.page\.microinfusion-safety-guide .across-image-banner--reverse figure img,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure img {
+.page\.microinfusion-hair-guide .across-image-banner--reverse figure img,.page\.microinfusion-safety-guide .across-image-banner--reverse figure img,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure img {
   max-width: 100%;
   height: auto;
 }
@@ -509,15 +509,15 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner {
   filter: brightness(.5);
 }
 @media screen and (max-width:1199px) {
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article {
+  .page\.microinfusion-hair-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article {
     max-width: 540px;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+  .page\.microinfusion-hair-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
     right: 16px;
   }
 }
 @media screen and (max-width:1120px) {
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+  .page\.microinfusion-hair-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
     bottom: -40px;
   }
 }
@@ -525,7 +525,7 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner {
   .e-discount-badge:after,.e-discount-badge:before {
     font-size: 14px;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
+  .page\.microinfusion-hair-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide .across-image-banner--reverse figure,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse figure {
     width: 120px;
   }
   .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article {
@@ -638,10 +638,10 @@ body[class*="page.exclusive-holiday-bundle-deal"] .across-image-banner {
     color: #fff;
     text-align: left;
   }
-  .page\.dermal-mist-brief .across-image-banner--reverse article,.page\.faucet-creative-brief .across-image-banner--reverse article,.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article {
+  .page\.dermal-mist-brief .across-image-banner--reverse article,.page\.faucet-creative-brief .across-image-banner--reverse article,.page\.micro-infusion-brief .across-image-banner--reverse article,.page\.microinfusion-hair-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide .across-image-banner--reverse article,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article,.page\.shower-creative-brief .across-image-banner--reverse article {
     max-width: none;
   }
-  .page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p {
+  .page\.microinfusion-hair-guide .across-image-banner--reverse article h1,.page\.microinfusion-hair-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide .across-image-banner--reverse article p,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article h1,.page\.microinfusion-safety-guide-v15 .across-image-banner--reverse article p {
     max-width: 210px;
   }
   .page\.all-in-one-face-serum-creative-content-guide .across-image-banner--reverse article,.page\.hairgrowth-helmet-brief .across-image-banner--reverse article,.page\.q-rejuvalight-pro-led-mask-guide .across-image-banner--reverse article {
